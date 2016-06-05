@@ -4,7 +4,7 @@ Theme URI: https://github.com/Vtrois/Kratos
 Author: Vtrois
 Author URI: http://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 1.0.1
+Version: 1.0.2
 License: Mozilla Public License Version 2.0
 Tags: black, white, blue, two-columns, right-sidebar
 */
@@ -1102,6 +1102,11 @@ color: #848484;
 	margin-bottom: 1em;
 	font-size: 16px;
 	color: #5a5a5a;
+}
+
+.kratos-post-content img {
+	max-width: 100%;
+    height: auto;
 }
 
 .kratos-entry-footer {
