@@ -1,0 +1,1709 @@
+/*
+Theme Name: Kratos
+Theme URI: http://www.vtrois.com/
+Author: Vtrois
+Author URI: http://www.vtrois.com/
+Description: A responsible theme for WordPress.
+Version: 1.0.0
+License: Mozilla Public License Version 2.0
+Tags: black, white, blue, two-columns, right-sidebar
+*/
+
+@charset "UTF-8";
+@font-face {
+	font-family: "FontKratos";
+	src: url('fonts/FontKratos.otf') format("opentype");
+	font-weight: normal
+}
+
+body {
+	font-family: FontKratos, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+	line-height: 1.8;
+	font-size: 16px;
+	background: #fff;
+	color: #848484;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+
+body.kratos-offcanvas {
+	overflow: hidden;
+}
+
+a {
+	color: #5BC0EB;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+a:hover {
+	text-decoration: none !important;
+	color: #5BC0EB !important;
+}
+
+p,ul,ol {
+	margin-bottom: 1em;
+	font-size: 16px;
+	color: #848484;
+	font-family: FontKratos, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #5a5a5a;
+	font-family: FontKratos, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+	font-weight: 400;
+	margin: 0 0 30px 0;
+}
+
+figure {
+	margin-bottom: 2em;
+}
+
+::-webkit-selection {
+	color: #fcfcfc;
+	background: #5BC0EB;
+}
+
+::-moz-selection {
+	color: #fcfcfc;
+	background: #5BC0EB;
+}
+
+::selection {
+	color: #fcfcfc;
+	background: #5BC0EB;
+}
+
+#kratos-blog,
+#kratos-host,
+#kratos-photos,
+#kratos-projects {
+	padding: 5em 0 3em
+}
+
+#kratos-blog-post {
+	padding: 2em 0 1em;
+}
+
+#kratos-subscribe {
+	background: #f9f9f9;
+	padding: 3em 0em;
+}
+
+@media screen and (max-width: 768px) {
+	#kratos-blog,
+	#kratos-host,
+	#kratos-photos,
+	#kratos-projects {
+		padding: 4em 0 3em
+	}
+	#kratos-blog-post {
+		padding: 2em 0 1em;
+	}
+}
+
+.kratos-page-default {
+	background: #fff;
+}
+
+.kratos-page-gray {
+	background: rgba(0, 0, 0, 0.04);
+}
+
+#kratos-header {
+	position: relative;
+	margin-bottom: 0;
+	z-index: 9999999;
+}
+
+.kratos-cover,
+.kratos-start {
+	position: relative;
+	height: 800px;
+}
+
+@media screen and (max-width: 768px) {
+	.kratos-cover,
+	.kratos-start {
+		height: 800px;
+	}
+}
+
+.kratos-cover.kratos-hero-2,
+.kratos-start.kratos-hero-2 {
+	height: 400px;
+}
+
+.kratos-start.kratos-post-header {
+	height: 100px;
+}
+
+.kratos-cover.kratos-hero-2 .kratos-overlay,
+.kratos-start.kratos-hero-2 .kratos-overlay {
+	position: absolute !important;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	background: rgba(66, 64, 64, 0.2);
+}
+
+.kratos-overlay {
+	position: absolute !important;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	background: rgba(66, 64, 64, 0.5);
+}
+
+.kratos-cover {
+	background-size: cover;
+	position: relative;
+}
+
+@media screen and (max-width: 768px) {
+	.kratos-cover {
+		height: inherit;
+		padding: 3em 0;
+	}
+}
+
+.kratos-cover .btn {
+	padding: 1em 5em;
+	opacity: .9;
+}
+
+.kratos-cover.kratos-cover_2 {
+	height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+	.kratos-cover.kratos-cover_2 {
+		height: inherit;
+		padding: 3em 0;
+	}
+}
+
+.kratos-cover .desc {
+	top: 50%;
+	position: absolute;
+	width: 100%;
+	margin-top: -120px;
+	z-index: 2;
+	color: #fff;
+}
+
+.kratos-cover .desc2 {
+	margin-top: -40px;
+}
+
+@media screen and (max-width: 768px) {
+	.kratos-cover .desc {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.kratos-cover .desc h2 {
+	color: #fff;
+	text-transform: none;
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.kratos-cover .desc h2 {
+		font-size: 30px;
+	}
+}
+
+.kratos-cover .desc span {
+	display: block;
+	margin-bottom: 30px;
+	font-size: 28px;
+	letter-spacing: 1px;
+}
+
+.kratos-cover .desc span a {
+	color: #fff;
+}
+
+.kratos-cover .desc span a:hover,
+.kratos-cover .desc span a:focus {
+	color: #fff !important;
+}
+
+.kratos-cover .desc span a:hover.btn,
+.kratos-cover .desc span a:focus.btn {
+	border: 2px solid #fff !important;
+	background: transparent !important;
+}
+
+.kratos-cover .desc span a.kratos-site-name {
+	padding-bottom: 2px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.sf-menu {
+	margin: 0 !important;
+}
+
+.sf-menu {
+	float: right;
+}
+
+.sf-menu ul {
+	box-shadow: none;
+	border: transparent;
+	min-width: 12em;
+	*width: 12em;
+}
+
+.sf-menu a {
+	color: rgba(255, 255, 255, 0.5);
+	padding: 0.75em 1em !important;
+	font-weight: normal;
+	border-left: none;
+	border-top: none;
+	border-top: none;
+	text-decoration: none;
+	zoom: 1;
+	font-size: 18px;
+	border-bottom: none !important;
+}
+
+.sf-menu a:hover,
+.sf-menu a:focus {
+	color: #fff !important;
+}
+
+.sf-menu li.active a:hover,
+.sf-menu li.active a:focus {
+	color: #fff;
+}
+
+.sf-menu li,
+.sf-menu ul li,
+.sf-menu ul ul li,
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+	background: transparent;
+}
+
+.sf-menu ul li a,
+.sf-menu ul ul li a {
+	text-transform: none;
+	padding: 0.25em 1em !important;
+	letter-spacing: 1px;
+}
+
+.sf-menu li:hover a,
+.sf-menu li.sfHover a,
+.sf-menu ul li:hover a,
+.sf-menu ul li.sfHover a,
+.sf-menu li.active a {
+	color: #fff;
+}
+
+.sf-menu ul li:hover,
+.sf-menu ul li.sfHover {
+	background: transparent;
+}
+
+.sf-menu ul li {
+	background: transparent;
+}
+
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em;
+}
+
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	border: 5px solid transparent;
+	border-top-color: #ccc;
+}
+
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: #ccc;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #ccc;
+}
+
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: #ccc;
+}
+
+#kratos-header-section {
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.nav-header {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+#kratos-logo {
+	position: relative;
+	z-index: 2;
+	font-size: 28px;
+	text-transform: none;
+	margin-top: 35px;
+	font-weight: 300;
+	float: left;
+}
+
+#kratos-logo span {
+	font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+	#kratos-logo {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+}
+
+#kratos-logo a {
+	color: #fff;
+}
+
+#kratos-logo a:hover,
+#kratos-logo a:focus {
+	color: #fff !important;
+}
+
+#kratos-menu-wrap {
+	position: relative;
+	z-index: 2;
+	display: block;
+	float: right;
+	margin-top: 22px;
+}
+
+#kratos-menu-wrap .sf-menu a {
+	padding: 1em .75em;
+}
+
+#kratos-primary-menu > li > ul li.active > a {
+	color: #5BC0EB !important;
+}
+
+#kratos-primary-menu > li > .sf-with-ul:after {
+	border: none !important;
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
+	float: right;
+	margin-right: -5px;
+	top: 50%;
+	margin-top: -7px;
+	content: "\e922";
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#kratos-primary-menu > li > ul li {
+	position: relative;
+}
+
+#kratos-primary-menu > li > ul li > .sf-with-ul:after {
+	border: none !important;
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
+	float: right;
+	margin-right: 10px;
+	top: 20px;
+	font-size: 16px;
+	content: "\e924";
+	color: rgba(0, 0, 0, 0.5);
+}
+
+#kratos-primary-menu .kratos-sub-menu {
+	padding: 10px 7px 10px;
+	background: #fff;
+	left: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#kratos-primary-menu .kratos-sub-menu > li > .kratos-sub-menu {
+	left: 100%;
+}
+
+#kratos-primary-menu .kratos-sub-menu:before {
+	position: absolute;
+	top: -9px;
+	left: 20px;
+	width: 0;
+	height: 0;
+	content: '';
+}
+
+#kratos-primary-menu .kratos-sub-menu:after {
+	position: absolute;
+	top: -8px;
+	left: 21px;
+	width: 0;
+	height: 0;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #fff;
+	border-bottom: 8px solid white;
+	border-left: 8px solid transparent;
+	content: '';
+}
+
+#kratos-primary-menu .kratos-sub-menu .kratos-sub-menu:before {
+	top: 6px;
+	left: 100%;
+}
+
+#kratos-primary-menu .kratos-sub-menu .kratos-sub-menu:after {
+	top: 7px;
+	right: 100%;
+	border: none !important;
+}
+
+.site-header.has-image #primary-menu .sub-menu {
+	border-color: #ebebeb;
+	-webkit-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+	-moz-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+	-ms-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+	-o-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+	box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+}
+
+.site-header.has-image #primary-menu .sub-menu:before {
+	display: none;
+}
+
+#kratos-primary-menu .kratos-sub-menu a {
+	letter-spacing: 0;
+	padding: 0 15px;
+	font-size: 18px;
+	line-height: 34px;
+	color: #575757 !important;
+	text-transform: none;
+	background: none;
+}
+
+#kratos-primary-menu .kratos-sub-menu a:hover {
+	color: #5BC0EB !important;
+}
+
+.heading-section {
+	padding-bottom: 1em;
+	margin-bottom: 5em;
+}
+
+.heading-section:after {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 50%;
+	width: 100px;
+	margin-left: -50px;
+	height: 2px;
+	background: #5BC0EB;
+}
+
+.heading-section h3 {
+	font-size: 30px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+#kratos-blog .kratos-post {
+	float: left;
+	width: 100%;
+	background: #fff;
+	position: relative;
+	margin-bottom: 30px;
+	-webkit-box-shadow: 0px 0px 20px #DFDFDF;
+	-moz-box-shadow: 0px 0px 20px #DFDFDF;
+	-ms-box-shadow: 0px 0px 20px #DFDFDF;
+	-o-box-shadow: 0px 0px 20px #DFDFDF;
+	box-shadow: 0px 0px 20px #DFDFDF;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-ms-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#kratos-blog .kratos-post img {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#kratos-blog .kratos-post:hover img,
+#kratos-blog .kratos-post:focus img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+#kratos-blog .kratos-post .kratos-post-image {
+	position: relative;
+	overflow: hidden;
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+}
+
+#kratos-blog .kratos-post .kratos-post-image .kratos-overlay {
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#kratos-blog .kratos-post .kratos-post-image .kratos-category {
+	margin: 10px 0 0 15px;
+	float: left;
+	z-index: 2;
+	position: absolute;
+}
+
+#kratos-blog .kratos-post .kratos-post-image .kratos-category > a {
+	font-size: 10px;
+	padding: 2px 10px;
+	line-height: 1.5;
+	text-transform: uppercase;
+	color: #fff;
+	border: 1px solid #f2f2f2;
+	margin: 0 4px 4px 0;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	border-radius: 30px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+#kratos-blog .kratos-post .kratos-post-image .kratos-category > a:hover {
+	color: #fff !important;
+	background: #5BC0EB;
+	border: 1px solid #5BC0EB;
+}
+
+#kratos-blog .kratos-post .kratos-post-image .kratos-category > a:hover,
+#kratos-blog .kratos-post .kratos-post-image .kratos-category > a:active,
+#kratos-blog .kratos-post .kratos-post-image .kratos-category > a:focus {
+	text-decoration: none;
+}
+
+#kratos-blog .kratos-post .kratos-post-text {
+	padding: 20px;
+}
+
+#kratos-blog .kratos-post .kratos-post-text h3 {
+	font-size: 17px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+
+#kratos-blog .kratos-post .kratos-post-text h3 a {
+	color: #000;
+}
+
+#kratos-blog .kratos-post .kratos-post-text h3 a:hover {
+	color: #1784fb;
+}
+
+#kratos-blog .kratos-post .kratos-post-text h3 a:hover,
+#kratos-blog .kratos-post .kratos-post-text h3 a:active,
+#kratos-blog .kratos-post .kratos-post-text h3 a:focus {
+	text-decoration: none;
+}
+
+#kratos-blog .kratos-post .kratos-post-text p {
+	font-size: 14px;
+	margin-bottom: 0;
+	color: #a6a6a6;
+}
+
+#kratos-blog .kratos-post .kratos-post-text p:last-child {
+	margin-bottom: 0 !important;
+}
+
+#kratos-blog .kratos-post .kratos-post-meta {
+	border-top: 1px solid #f0f0f0;
+	padding: 10px 20px;
+	font-weight: 400;
+}
+
+#kratos-blog .kratos-post .kratos-post-meta a {
+	font-size: 13px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	color: #b3b3b3;
+}
+
+#kratos-blog .kratos-post .kratos-post-meta a i {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#kratos-blog .kratos-post .kratos-post-meta a:hover,
+#kratos-blog .kratos-post .kratos-post-meta a:active,
+#kratos-blog .kratos-post .kratos-post-meta a:focus {
+	text-decoration: none;
+}
+
+#kratos-blog .kratos-post .kratos-post-meta a:hover {
+	color: #000;
+}
+
+#kratos-start-project-section {
+	padding: 7em 0;
+	background: #F64E8B;
+}
+
+#kratos-start-project-section h2 {
+	color: white;
+	font-size: 60px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+	#kratos-start-project-section h2 {
+		font-size: 30px;
+	}
+}
+
+#kratos-start-project-section a:hover,
+#kratos-start-project-section a:focus,
+#kratos-start-project-section a:active {
+	color: white !important;
+}
+
+.kratos-social-icons > a {
+	padding: 4px 14px;
+	color: #5BC0EB;
+}
+
+.kratos-social-icons > a i {
+	font-size: 30px;
+}
+
+.kratos-social-icons > a:hover,
+.kratos-social-icons > a:focus,
+.kratos-social-icons > a:active {
+	text-decoration: none;
+	color: #5a5a5a;
+}
+
+.form-control {
+	box-shadow: none;
+	background: transparent;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	height: 54px;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.comments-area {
+	margin-bottom: 60px;
+	margin-top: 15px;
+}
+.comments-title {
+	margin: 0;
+	font-size: 24px;
+	padding: 30px;
+	border: 1px solid #e0e0e0;
+	background-color: #fff;
+}
+.comments-area ol {
+	list-style: none;
+}
+.comments-area ol {
+	padding: 0;
+}
+.comments-area ol li {
+	margin-top: 15px;
+}
+.comments-area .children {
+	padding-left: 20px;
+}
+.comment-author .avatar {
+	position: absolute;
+	border-radius: 50%;
+}
+.comment-awaiting-moderation,
+.comment-author .fn,
+.commentmetadata {
+	margin-left: 80px;
+}
+.commentmetadata {
+	font-size: 12px;
+	margin-bottom: 30px;
+}
+.commentmetadata a{
+	color: #848484;
+}
+.comment-body {
+	padding: 20px 20px 15px 20px;
+	border: 1px solid #e0e0e0;
+	background-color: #fff;
+	margin-bottom: 15px;
+}
+.reply {
+	text-align: right;
+}
+.comment-reply-link {
+	padding: 5px;
+	background-color: #fff;
+	font-size: 12px;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;	
+}
+a.comment-reply-link {
+	text-decoration: none;
+}
+a.comment-reply-link:hover {
+	color: #000;
+	box-shadow: 0 0 1px #505050;
+}
+.comments-area a.url {
+	text-decoration: underline;
+}
+.comment-metadata a,
+.comments-area a.url {
+	color: #444;
+}
+
+.comment-respond {
+	margin-top: 60px;
+	    margin: 0 0 25px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0px;    padding: 20px 20px 15px 20px;
+}
+.comment-form .form-submit {
+	margin-top: 30px;
+}
+#respond .input-group-addon i{
+	width: 20px;
+}
+#respond .form-control {
+	box-shadow: none;
+	background: transparent;
+	border: 1px solid #ccc;
+	height: auto;
+	font-size: 14px;
+	font-weight: 300;
+	border-radius: 0;
+}
+#respond .input-group-addon {
+	border-radius: 0px;
+}
+.comment-form .form-control-feedback{
+	line-height: 40px;
+	color: #848484;
+}
+.comment-form .input-group{
+	width: 100%;
+	margin-top: 10px;
+}
+.comment-form .btn-primary{
+	width: 100%;
+ 	border-radius:0;
+}
+
+.comment-form .comment-author{
+	margin-top: 10px;
+}
+.comment-form .logged-in-as a{
+color: #848484;
+}
+
+#kratos-widget-area .widget {
+	margin: 0 0 25px;
+	padding: 30px;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 0px;
+}
+
+.widget a {
+	color: #4C4C4C;
+	text-decoration: none;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.widget a:hover {
+	color: #618EBA;
+	;
+}
+
+.widget ul {
+	padding: 0 0 0 20px;
+}
+
+.widget li {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.widget .children {
+	padding-left: 30px;
+}
+
+#kratos-widget-area .widget-title {
+	position: relative;
+	margin: 0 0 15px;
+	padding-bottom: 15px;
+}
+
+#kratos-widget-area .widget-title::after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	width: 40px;
+	background-color: #5BC0EB;
+	content: '';
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+.widget_recent_entries ul,
+.widget_archive ul,
+.widget_pages ul,
+.widget_recent_comments ul,
+.widget_categories ul {
+	list-style: none;
+	padding: 0;
+}
+
+.widget_recent_entries li::before,
+.widget_archive li::before,
+.widget_pages li::before,
+.widget_recent_comments li::before,
+.widget_categories li::before {
+	font-family: Fontawesome;
+	font-size: 15px;
+}
+
+.widget_recent_entries li::before {
+	content: '\f040';
+	margin-right: 5px;
+}
+
+.widget_archive li::before {
+	content: '\f133';
+	margin-right: 8px;
+}
+
+.widget_pages li::before {
+	content: '\f016';
+	margin-right: 8px;
+}
+
+.widget_recent_comments li::before {
+	content: '\f0e5';
+	margin-right: 8px;
+}
+
+.widget_categories li::before {
+	content: '\f114';
+	margin-right: 8px;
+}
+
+.tag_clouds a {
+	border: 1px solid #41474F;
+	padding: 5px;
+	font-size: 13px !important;
+	display: inline-block;
+	margin-bottom: 8px;
+	margin-right: 4px;
+}
+
+.amadeus_recent_posts_widget ul,
+.amadeus_recent_comments ul {
+	list-style: none;
+	padding: 0;
+}
+
+.recent-comment img {
+	margin-right: 15px;
+	float: left;
+}
+
+.amadeus_recent_posts_widget .recent-thumb {
+	padding-left: 0;
+}
+
+.amadeus_recent_posts_widget .col-md-9,
+.amadeus_recent_posts_widget .col-md-12 {
+	padding: 0;
+}
+
+.amadeus_recent_posts_widget .post-date,
+.widget_recent_entries .post-date {
+	color: #9d9d9d;
+	font-size: 12px;
+}
+
+.amadeus_recent_posts_widget h4 {
+	margin: 0 0 8px;
+}
+
+.amadeus_recent_comments .list-group-item,
+.amadeus_recent_posts_widget .list-group-item {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.amadeus_recent_comments .list-group-item:last-of-type,
+.amadeus_recent_posts_widget .list-group-item:last-of-type {
+	border-bottom: 0;
+}
+
+.amadeus_about {
+	margin-top: 90px !important;
+}
+
+.photo-wrapper {
+	display: table;
+	margin: -120px auto 30px;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	padding: 5px;
+	border-radius: 50%;
+}
+
+.photo-wrapper img {
+	max-height: 180px;
+	border-radius: 50%;
+}
+
+.amadeus_about p {
+	margin-bottom: 1em;
+	font-size: 16px;
+}
+
+.widget_categories ul {
+	margin-bottom: 1em;
+	font-size: 16px;
+}
+
+.widget_kratos_ad img {
+	max-width: 300px;
+	height: auto;
+}
+
+.kratos-hentry {
+	margin: 0 0 25px;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 0px;
+}
+
+.kratos-post-nav {
+	padding: 10px 20px 10px 20px;
+	;
+	color: #5a5a5a;
+}
+
+.kratos-post-nav a {
+	color: #5a5a5a;
+}
+
+.kratos-post-header-title {
+	color: #1c1c1c;
+	-webkit-transition: color 0.3s;
+	transition: 0.3s;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 20px;
+}
+
+.kratos-post-inner {
+	padding: 30px 15px 20px 15px;
+}
+
+.kratos-post-content {
+	margin: 10px 10px;
+}
+
+.kratos-post-content p {
+	margin-bottom: 1em;
+	font-size: 16px;
+	color: #5a5a5a;
+}
+
+.kratos-entry-footer {
+	color: #9d9d9d;
+	margin-top: 20px;
+	margin: 10px 10px;
+}
+
+.kratos-entry-footer .footer-tag a {
+	background-color: #aaa;
+	border-radius: 0px;
+	color: #fff;
+	display: inline-block;
+	font-size: 11px;
+	line-height: 13px;
+	margin: 0 0 2px 5px;
+	padding: 4px 7px 3px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.kratos-copyright img {
+	margin-top: 20px;
+}
+
+.kratos-copyright h5 {
+	margin: 10px 10px 20px 10px;
+}
+
+.kratos-copyright a {
+	color: #5a5a5a;
+}
+
+.kratos-entry-meta .byline {
+	display: inline;
+}
+
+.kratos-entry-meta .posted-on:after,
+.kratos-entry-meta .author:after {
+	content: '/';
+	margin: 0 15px;
+}
+
+.kratos-entry-meta .author {
+	margin-left: -2px;
+}
+
+.kratos-entry-meta,
+.kratos-entry-meta a {
+	color: #9d9d9d;
+	text-decoration: none;
+}
+
+.kratos-entry-meta a {
+	-webkit-transition: color 0.3s;
+	transition: 0.3s;
+}
+
+.kratos-entry-meta a:hover {
+	color: #618EBA;
+}
+
+.kratos-entry-content p {
+	font-size: 16px;
+}
+
+.kratos-entry-header {
+	margin-bottom: 20px;
+}
+
+.kratos-entry-title {
+	margin: 0 0 20px;
+}
+
+.kratos-entry-title a {
+	color: #1c1c1c;
+	-webkit-transition: color 0.3s;
+	transition: 0.3s;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+.kratos-entry-title a:hover {
+	color: #618EBA;
+}
+
+.kratos-entry-thumb {
+	text-align: center;
+	position: relative;
+}
+
+.kratos-entry-header .kratos-post-meta a {
+	font-size: 13px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	color: #b3b3b3;
+}
+
+.kratos-entry-thumb img {
+	height: auto;
+	max-width: 100%;
+}
+
+#nav-posts .page-numbers {
+	max-width: 50%;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	padding: 20px 30px;
+	border-radius: 0px;
+}
+
+@media screen and (max-width: 768px) {
+	#nav-posts .page-numbers {
+		max-width: 50%;
+		background-color: #fff;
+		border: 1px solid #e0e0e0;
+		padding: 8px 13px;
+		border-radius: 0px;
+	}
+}
+
+.post-navigation .nav-previous a{
+    color: #5a5a5a;
+  }
+
+.post-navigation .nav-next a{
+    color: #5a5a5a;
+}
+.post-navigation .nav-previous {
+    float: left;
+    max-width: 50%;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+}
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    max-width: 50%;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+}
+
+#kratos-subscribe h3 {
+	float: left;
+	width: 30%;
+	top: 10px;
+	font-size: 26px;
+	margin-bottom: 0;
+	position: relative
+}
+
+#kratos-subscribe h3 label {
+	font-weight: 300
+}
+
+@media screen and (max-width:992px) {
+	#kratos-subscribe h3 {
+		width: 100%;
+		margin-bottom: 30px
+	}
+}
+
+#kratos-subscribe form {
+	width: 60%;
+	float: right;
+	position: relative
+}
+
+@media screen and (max-width:992px) {
+	#kratos-subscribe form {
+		width: 100%
+	}
+}
+
+#kratos-subscribe form .kratos-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	left: 15px;
+	font-size: 20px
+}
+
+@media screen and (max-width:480px) {
+	#kratos-subscribe form .kratos-icon {
+		position: absolute;
+		top: 26px
+	}
+}
+
+#kratos-subscribe form input[type=email] {
+	width: 100%;
+	background: #ededed;
+	border: none;
+	padding-left: 50px;
+	padding-right: 170px
+}
+
+@media screen and (max-width:480px) {
+	#kratos-subscribe form input[type=email] {
+		margin-bottom: 10px;
+		padding-right: 50px
+	}
+}
+
+#kratos-subscribe form input[type=submit] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin-right: -4px;
+	height: 54px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	font-size: 20px;
+	font-weight: 300;
+	width: 160px
+}
+
+@media screen and (max-width:480px) {
+	#kratos-subscribe form input[type=submit] {
+		position: relative;
+		width: 100%;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px
+	}
+}
+
+#footer {
+	background: #222831;
+	padding: 40px 0 30px
+}
+
+#footer p {
+	color: rgba(255, 255, 255, .3);
+	letter-spacing: 1px;
+	font-size: 14px;
+	text-transform: uppercase
+}
+
+#footer p a {
+	color: rgba(255, 255, 255, .5)
+}
+
+.btn {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+.btn:active,
+.btn:focus,
+.btn:hover {
+	background: #393e46!important;
+	color: #fff;
+	outline: 0!important
+}
+
+.btn.btn-sm {
+	font-size: 14px
+}
+
+.btn.btn-primary {
+	background: #5BC0EB;
+	color: #fff;
+	border: none!important;
+	border: 2px solid transparent!important
+}
+
+.btn.btn-primary:active,
+.btn.btn-primary:focus,
+.btn.btn-primary:hover {
+	box-shadow: none;
+	background: #5BC0EB;
+	color: #fff!important
+}
+
+.btn.btn-star {
+	color: #fff;
+	border: 1.5px solid #fff
+}
+
+.btn.btn-star:active,
+.btn.btn-star:focus,
+.btn.btn-star:hover {
+	background: #5BC0EB!important;
+	border: 2px solid #5BC0EB;
+	color: #fff
+}
+.pagination>li>a{
+	color:  #5BC0EB;
+}
+.pagination>.active>a{
+    background-color: #5BC0EB;
+    border-color: #5BC0EB;
+}
+.view-more-1 {
+	margin-top: 3em;
+	padding: 1em 5em
+}
+
+.view-more-2 {
+	margin-top: -10px;
+	padding: 1em 5em
+}
+
+@media screen and (max-width:768px) {
+	.view-more-1 {
+		margin-top: 0;
+		padding: 1em 5em
+	}
+}
+
+.js .animate-box {
+	opacity: 0
+}
+
+#kratos-wrapper {
+	overflow-x: hidden;
+	position: relative
+}
+
+.kratos-offcanvas {
+	overflow: hidden
+}
+
+.kratos-offcanvas #kratos-wrapper {
+	overflow: hidden!important
+}
+
+#kratos-page {
+	position: relative;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s
+}
+
+.kratos-offcanvas #kratos-page {
+	-moz-transform: translateX(-240px);
+	-webkit-transform: translateX(-240px);
+	-ms-transform: translateX(-240px);
+	-o-transform: translateX(-240px);
+	transform: translateX(-240px)
+}
+
+@media screen and (max-width:768px) {
+	#kratos-menu-wrap {
+		display: none
+	}
+}
+
+#offcanvas-menu {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 99;
+	background: #222;
+	right: -240px;
+	width: 240px;
+	padding: 20px;
+	overflow-y: scroll!important
+}
+
+#offcanvas-menu ul {
+	padding: 0;
+	margin: 0
+}
+
+#offcanvas-menu ul li {
+	padding: 0;
+	margin: 0 0 10px 0;
+	list-style: none
+}
+
+#offcanvas-menu ul li a {
+	font-size: 18px;
+	color: rgba(255, 255, 255, .4)
+}
+
+#offcanvas-menu ul li a:hover {
+	color: #5BC0EB
+}
+
+#offcanvas-menu ul li>.kratos-sub-menu {
+	margin-top: 9px;
+	padding-left: 20px
+}
+
+#offcanvas-menu ul li.active>a {
+	color: #5BC0EB
+}
+
+#offcanvas-menu ul .kratos-sub-menu {
+	display: block!important
+}
+
+.kratos-nav-toggle {
+	cursor: pointer;
+	text-decoration: none
+}
+
+.kratos-nav-toggle.active i::after,
+.kratos-nav-toggle.active i::before {
+	background: #fff
+}
+
+.kratos-nav-toggle.dark.active i::after,
+.kratos-nav-toggle.dark.active i::before {
+	background: #fff
+}
+
+.kratos-nav-toggle:active,
+.kratos-nav-toggle:focus,
+.kratos-nav-toggle:hover {
+	outline: 0;
+	border-bottom: none!important
+}
+
+.kratos-nav-toggle i {
+	position: relative;
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom: 1;
+	width: 30px;
+	height: 2.5px;
+	color: #fff;
+	font: 700 14px/.4 Helvetica;
+	text-transform: uppercase;
+	text-indent: -55px;
+	background: #fff;
+	transition: all .2s ease-out
+}
+
+.kratos-nav-toggle i::after,
+.kratos-nav-toggle i::before {
+	content: '';
+	width: 30px;
+	height: 2.5px;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s
+}
+
+.kratos-nav-toggle.dark i {
+	position: relative;
+	color: #000;
+	background: #000;
+	transition: all .2s ease-out
+}
+
+.kratos-nav-toggle.dark i::after,
+.kratos-nav-toggle.dark i::before {
+	background: #000;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s
+}
+
+.kratos-nav-toggle i::before {
+	top: -7px
+}
+
+.kratos-nav-toggle i::after {
+	bottom: -7px
+}
+
+.kratos-nav-toggle:hover i::before {
+	top: -10px
+}
+
+.kratos-nav-toggle:hover i::after {
+	bottom: -10px
+}
+
+.kratos-nav-toggle.active i {
+	background: 0 0
+}
+
+.kratos-nav-toggle.active i::before {
+	top: 0;
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	transform: rotateZ(45deg)
+}
+
+.kratos-nav-toggle.active i::after {
+	bottom: 0;
+	-webkit-transform: rotateZ(-45deg);
+	-moz-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	-o-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg)
+}
+
+.kratos-nav-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	display: block;
+	margin: 0 auto;
+	display: none;
+	cursor: pointer
+}
+
+@media screen and (max-width:768px) {
+	.kratos-nav-toggle {
+		display: block;
+		top: 0;
+		margin-top: 2em
+	}
+}
+
+@media screen and (max-width:480px) {
+	.col-xxs-12 {
+		float: none;
+		width: 100%
+	}
+}
+
+.row-bottom-padded-lg {
+	padding-bottom: 7em
+}
+
+@media screen and (max-width:768px) {
+	.row-bottom-padded-lg {
+		padding-bottom: 2em
+	}
+}
+
+.row-top-padded-lg {
+	padding-top: 7em
+}
+
+@media screen and (max-width:768px) {
+	.row-top-padded-lg {
+		padding-top: 2em
+	}
+}
+
+.row-bottom-padded-md {
+	padding-bottom: 4em
+}
+
+@media screen and (max-width:768px) {
+	.row-bottom-padded-md {
+		padding-bottom: 2em
+	}
+}
+
+.row-top-padded-md {
+	padding-top: 4em
+}
+
+@media screen and (max-width:768px) {
+	.row-top-padded-md {
+		padding-top: 2em
+	}
+}
+
+.row-bottom-padded-sm {
+	padding-bottom: 2em
+}
+
+@media screen and (max-width:768px) {
+	.row-bottom-padded-sm {
+		padding-bottom: 2em
+	}
+}
+
+.row-top-padded-sm {
+	padding-top: 2em
+}
+
+@media screen and (max-width:768px) {
+	.row-top-padded-sm {
+		padding-top: 2em
+	}
+}
+
+.border-bottom {
+	border-bottom: 1px solid rgba(0, 0, 0, .06)
+}
+
+.lead {
+	line-height: 1.8
+}
+
+.no-js #loader {
+	display: none
+}
+
+.js #loader {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 0
+}
