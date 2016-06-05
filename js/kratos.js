@@ -2,22 +2,6 @@
 
 	'use strict';
 
-	// top-img
-	$(document).ready(function() {
-		var random_bg = Math.floor(Math.random() * 6 + 1);
-		var bg = 'url(http://127.0.0.1/blog/wp-content/themes/Kratos/images/bg-' + random_bg + '.jpg)';
-		$("#kratos-topimg").css("background-image", bg);
-	});
-
-	// top-Start
-	$(function() {
-		$('#top-Start').click(function() {
-			$('html,body').animate({
-				scrollTop: $('#kratos-photos').offset().top
-			}, 1000);
-		});
-	});
-
 	// iPad and iPod detection	
 	var isiPad = function() {
 		return (navigator.platform.indexOf("iPad") != -1);
