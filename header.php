@@ -18,7 +18,7 @@
 						<div class="container">
 							<div class="nav-header">
 								<a href="#" class="js-kratos-nav-toggle kratos-nav-toggle"><i></i></a>
-								<h1 id="kratos-logo"><a href="<?php echo get_option('home'); ?>">Vtrois<span>'s Zone</span></a></h1>
+								<h1 id="kratos-logo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
 								<?php $defaults = array('theme_location' => 'header_menu', 'container' => 'nav', 'container_id' => 'kratos-menu-wrap', 'menu_class' => 'sf-menu', 'menu_id' => 'kratos-primary-menu', ); ?>
 							 <?php wp_nav_menu($defaults); ?>
 							</div>

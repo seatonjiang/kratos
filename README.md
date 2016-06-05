@@ -77,7 +77,7 @@ kratos/
 
 ## Changelog
 
-- v1.0.0 - Initialize the project and say hello world
+- v1.0 - Initialize the project and say hello world
 
 ##License
 - The Kratos Html,CSS,JavaScript,and PHP files are licensed under the Mozilla Public License Version 2.0:
