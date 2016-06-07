@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '1.0.3' );
+define( '_KRATOS_VERSION', '1.0.4' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -191,8 +191,8 @@ function kratos_blog_thumbnail() {
 	if (has_post_thumbnail()) {
 		the_post_thumbnail(array(750, ), array('class' => 'kratos-entry-thumb'));
 	}else {}
-
 }
+add_theme_support( "post-thumbnails" );
 
 /**
  * 文章阅读量统计
