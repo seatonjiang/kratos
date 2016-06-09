@@ -4,6 +4,7 @@
 Kratos is a clean, simple and responsive blog theme of WordPress, based on [Bootstrap](https://github.com/twbs/bootstrap) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). Created and maintained by [Vtrois](http://www.vtrois.com).
  Stay up to date with the latest release and announcements on [Bulletin Board](http://www.vtrois.com/projects/theme-kratos.html).
 
+![Alt text](http://i4.buimg.com/a1f997c21957d3ea.png)
 ##Structure
 Within the download you'll find the following directories and files. You'll see something like this:
 
