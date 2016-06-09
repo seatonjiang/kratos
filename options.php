@@ -28,6 +28,12 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'textarea');
 	$options[] = array(
+		'name' => '站点统计',
+		'desc' => '提示：填写时需要去掉前面的 &lt;script 与后面的 &lt;/script&gt; ',
+		'id' => 'site_tongji',
+		'std' => '',
+		'type' => 'textarea');
+	$options[] = array(
 		'name' => '头部类型',
 		'desc' => '提示：选择您喜欢的头部类型并修改其对应选项',
 		'id' => 'background_mode',

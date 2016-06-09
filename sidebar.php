@@ -1,4 +1,4 @@
-<?php if ( ! dynamic_sidebar( 'sidebar' ) ) :
+<?php if ( ! dynamic_sidebar( 'sidebar_blog' ) ) :
 ?>
 <aside class="widget clearfix animate-box">
 	<div class="panel-heading">

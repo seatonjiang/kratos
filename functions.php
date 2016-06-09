@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '1.0.4' );
+define( '_KRATOS_VERSION', '1.0.5' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -79,8 +79,8 @@ function kratos_keywords(){
         elseif( is_category() ){ single_cat_title(); }
         elseif( is_single() ){
             echo trim(wp_title('',FALSE)).',';
-            if ( has_tag() ) {foreach((get_the_tags()) as $tag ) { echo $tag->name.','; } }//循环所有标签
-            foreach((get_the_category()) as $category) { echo $category->cat_name.','; } //循环所有分类目录
+            if ( has_tag() ) {foreach((get_the_tags()) as $tag ) { echo $tag->name.','; } }
+            foreach((get_the_category()) as $category) { echo $category->cat_name.','; } 
         }
         elseif( is_search() ){ the_search_query(); }
         else{ echo trim(wp_title('',FALSE)); }
@@ -277,11 +277,11 @@ function kratos_pages($range = 5){
 
 /**
  * 后台左侧页脚文字
- * @version 1.0
+ * @version 1.1
  * @package Vtrois
  */
 function kratos_admin_footer_text($text) {
-	$text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a> 进行创作，并使用 <a href="http://www.vtrois.com/projects/theme-kratos.html" target="_blank">Kratos</a> 主题样式。</span>';
+	   $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a> 进行创作，并使用 <a href="http://www.vtrois.com/projects/theme-kratos.html" target="_blank">Kratos</a> 主题样式，<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=b7fc2227eaa18a1ec540006ac6de1f3bbc1673fe1ce25ed14a9de68a832c379d">点击加入</a>主题讨论群。</span>';
 	return $text;
 }
 

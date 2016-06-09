@@ -10,5 +10,8 @@ switch (kratos_option('background_mode')) {
 			echo '<div class="kratos-start kratos-hero-2 kratos-post-header"><div class="kratos-overlay kratos-post" style="background:'.kratos_option('background_color').'"></div></div>';
 		}
 	break;
+	default:
+		echo '<div class="kratos-start kratos-hero-2 kratos-post-header"><div class="kratos-overlay kratos-post" style="background:#222831"></div></div>';
+	break;
 }
 ?>

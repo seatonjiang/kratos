@@ -11,7 +11,7 @@
 									<?php echo (!kratos_option('social_linkedin')) ? '' : '<a target="_blank" href="' . kratos_option('social_linkedin') . '"><i class="fa fa-linkedin-square"></i></a>'; ?>
 									<?php echo (!kratos_option('social_github')) ? '' : '<a target="_blank" href="' . kratos_option('social_github') . '"><i class="fa fa-github-alt"></i></a>'; ?>
 									</p>
-									<p>Copyright 2016 <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.<br>Theme: <a href="https://github.com/vtrois/kratos" target="_blank">Kratos</a> made by <a href="http://www.vtrois.com/" target="_blank" >Vtrois</a><br><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank"><?php echo get_option( 'zh_cn_l10n_icp_num' );?></a></p>
+									<p>Copyright 2016 <a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved.<br>Theme: <a href="https://github.com/vtrois/kratos" target="_blank">Kratos</a> made by <a href="http://www.vtrois.com/" target="_blank" >Vtrois</a><br><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank"><?php echo get_option( 'zh_cn_l10n_icp_num' );?></a><?php echo (!kratos_option('site_tongji')) ? '' : '<script ' . kratos_option('site_tongji') . '</script>'; ?></p>
 								</div>
 							</div>
 						</div>
