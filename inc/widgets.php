@@ -14,18 +14,18 @@ function kratos_widgets_init() {
 add_action( 'widgets_init', 'kratos_widgets_init' );
 
 function remove_default_widget() {
-      unregister_widget('WP_Widget_Recent_Posts');//移除近期文章
-      unregister_widget('WP_Widget_Recent_Comments');//移除近期评论
-      unregister_widget('WP_Widget_Meta');//移除站点功能
-      unregister_widget('WP_Widget_Tag_Cloud');//移除标签云
-      unregister_widget('WP_Widget_Text');//移除文本框
-      unregister_widget('WP_Widget_Archives');//移除文章归档
-      unregister_widget('WP_Widget_RSS');//移除RSS
-      unregister_widget('WP_Nav_Menu_Widget');//移除菜单
-      unregister_widget('WP_Widget_Pages');//移除页面
-      unregister_widget('WP_Widget_Calendar');//移除日历
-      unregister_widget('WP_Widget_Categories');//移除分类目录
- //   unregister_widget('WP_Widget_Search');//移除搜索
+ //    unregister_widget('WP_Widget_Recent_Posts');//移除近期文章
+ //    unregister_widget('WP_Widget_Recent_Comments');//移除近期评论
+       unregister_widget('WP_Widget_Meta');//移除站点功能
+       unregister_widget('WP_Widget_Tag_Cloud');//移除标签云
+ //    unregister_widget('WP_Widget_Text');//移除文本框
+ //    unregister_widget('WP_Widget_Archives');//移除文章归档
+ //    unregister_widget('WP_Widget_RSS');//移除RSS
+       unregister_widget('WP_Nav_Menu_Widget');//移除菜单
+ //    unregister_widget('WP_Widget_Pages');//移除页面
+       unregister_widget('WP_Widget_Calendar');//移除日历
+ //    unregister_widget('WP_Widget_Categories');//移除分类目录
+       unregister_widget('WP_Widget_Search');//移除搜索
 }
 add_action( 'widgets_init', 'remove_default_widget' );
 
@@ -43,14 +43,18 @@ class kratos_widget_ad extends WP_Widget {
     function widget( $args, $instance ) {
         extract( $args );
         $aurl = $instance['aurl'] ? $instance['aurl'] : '';
-        $adname = $instance['adname'] ? $instance['adname'] : '';
+        $title = $instance['title'] ? $instance['title'] : '';
         $imgurl = $instance['imgurl'] ? $instance['imgurl'] : '';
         echo $before_widget;
         ?>
-            <h4 class="widget-title"><?php echo $adname; ?></h4>
+            <?php if(!empty($title)) {?>
+            <h4 class="widget-title"><?php echo $title; ?></h4>
+            <?php }?>
+            <?php if(!empty($imgurl)) {?>
             <a href="<?php echo $aurl; ?>" target="_blank">
                 <img class="carousel-inner img-responsive img-rounded" src="<?php echo $imgurl; ?>" />
             </a>
+            <?php }?>
         <?php
         echo $after_widget;
     }
@@ -60,14 +64,14 @@ class kratos_widget_ad extends WP_Widget {
     }
 
     function form( $instance ) {
-        @$adname = esc_attr( $instance['adname'] );
+        @$title = esc_attr( $instance['title'] );
         @$aurl = esc_attr( $instance['aurl'] );
         @$imgurl = esc_attr( $instance['imgurl'] );
         ?>
             <p>
-                <label for="<?php echo $this->get_field_id( 'adname' ); ?>">
+                <label for="<?php echo $this->get_field_id( 'title' ); ?>">
                     标题：
-                    <input class="widefat" id="<?php echo $this->get_field_id( 'adname' ); ?>" name="<?php echo $this->get_field_name( 'adname' ); ?>" type="text" value="<?php echo $adname; ?>" />
+                    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
                 </label>
             </p>
             <p>
@@ -100,17 +104,23 @@ class kratos_widget_about extends WP_Widget {
     function widget( $args, $instance ) {
         extract( $args );
         $profile = $instance['profile'] ? $instance['profile'] : '';
-        $adname = $instance['adname'] ? $instance['adname'] : '';
+        $title = $instance['title'] ? $instance['title'] : '';
         $imgurl = $instance['imgurl'] ? $instance['imgurl'] : '';
         echo $before_widget;
         ?>
+                <?php if(!empty($imgurl)) {?>
                 <div class="photo-wrapper">
                     <img class="about-photo" src="<?php echo $imgurl; ?>" />
                 </div>
-                <h4 class="widget-title"><?php echo $adname; ?></h4>
+                <?php }?>
+                <?php if(!empty($title)) {?>
+                <h4 class="widget-title"><?php echo $title; ?></h4>
+                <?php }?>
+                <?php if(!empty($profile)) {?>
                 <div class="textwidget">
                     <p><?php echo $profile; ?></p>
                 </div>
+                <?php }?>
         <?php
         echo $after_widget;
     }
@@ -120,14 +130,14 @@ class kratos_widget_about extends WP_Widget {
     }
 
     function form( $instance ) {
-        @$adname = esc_attr( $instance['adname'] );
+        @$title = esc_attr( $instance['title'] );
         @$imgurl = esc_attr( $instance['imgurl'] );
         @$profile = esc_attr( $instance['profile'] );
         ?>
             <p>
-                <label for="<?php echo $this->get_field_id( 'adname' ); ?>">
+                <label for="<?php echo $this->get_field_id( 'title' ); ?>">
                     标题：
-                    <input class="widefat" id="<?php echo $this->get_field_id( 'adname' ); ?>" name="<?php echo $this->get_field_name( 'adname' ); ?>" type="text" value="<?php echo $adname; ?>" />
+                    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
                 </label>
             </p>
             <p>
@@ -231,10 +241,57 @@ class kratos_widget_tags extends WP_Widget {
     }
 }
 
+class kratos_widget_search extends WP_Widget {
+
+    function kratos_widget_search() {
+        $widget_ops = array(
+            'classname' => 'widget_kratos_search',
+            'name'        => '站点搜索',
+            'description' => 'Kratos主题特色组件 - 站点搜索'
+        );
+        parent::WP_Widget( false, false, $widget_ops );
+    }
+
+    function widget( $args, $instance ) {
+        extract( $args );
+        $title = $instance['title'] ? $instance['title'] : '';
+        echo $before_widget;
+        ?>
+        <?php if(!empty($title)) {?>
+        <h4 class="widget-title"><?php echo $title; ?></h4>
+        <?php }?>
+         <form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+            <div class="form-group">
+                 <input type="text" name='s' id='s' placeholder="Search…" class="form-control" placeholder="" x-webkit-speech>
+            </div>
+        </form>
+
+        <?php
+        echo $after_widget;
+    }
+
+    function update( $new_instance, $old_instance ) {
+        return $new_instance;
+    }
+
+    function form( $instance ) {
+        @$title = esc_attr( $instance['title'] );
+        ?>
+            <p>
+                <label for="<?php echo $this->get_field_id( 'title' ); ?>">
+                    标题：
+                    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+                </label>
+            </p>
+        <?php
+    }
+}
+
 function kratos_register_widgets(){
     register_widget('kratos_widget_ad'); 
     register_widget('kratos_widget_about'); 
     register_widget('kratos_widget_tags'); 
+    register_widget('kratos_widget_search'); 
 }
 add_action('widgets_init','kratos_register_widgets');
 ?>

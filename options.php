@@ -34,6 +34,11 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'textarea');
 	$options[] = array(
+		'name' => '站点Logo',
+		'desc' => '提示：不添加显示文字标题，推荐图片尺寸(200*50)',
+		'id' => 'site_logo',
+		'type' => 'upload');
+	$options[] = array(
 		'name' => '头部类型',
 		'desc' => '提示：选择您喜欢的头部类型并修改其对应选项',
 		'id' => 'background_mode',

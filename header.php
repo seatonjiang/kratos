@@ -20,7 +20,14 @@
 								<?php if ( has_nav_menu('header_menu') ) :?>
 									<a href="#" class="js-kratos-nav-toggle kratos-nav-toggle"><i></i></a>
 								<?php endif; ?>
+								<?php $site_logo = kratos_option('site_logo');?>
+								<?php if ( !empty( $site_logo ) ) {?>
+									<a href="<?php echo get_option('home'); ?>">
+									<img id="kratos-logo-img" src="<?php echo $site_logo; ?>">
+									</a>
+								<?php }else{?>
 									<h1 id="kratos-logo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
+								<?php }?>
 								<?php $defaults = array('theme_location' => 'header_menu', 'container' => 'nav', 'container_id' => 'kratos-menu-wrap', 'menu_class' => 'sf-menu', 'menu_id' => 'kratos-primary-menu', ); ?>
 							 <?php wp_nav_menu($defaults); ?>
 							</div>

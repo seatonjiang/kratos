@@ -27,7 +27,7 @@
 	</div>
 	<div class="kratos-hentry kratos-copyright text-center clearfix">
 		<img alt="知识共享许可协议" src="http://www.itfang.net/wp-content/themes/vtrois/images/licenses.png">
-		<h5>本作品采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+		<h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
 	</div>
 	<nav class="navigation post-navigation clearfix" role="navigation">
 		<?php
