@@ -34,6 +34,17 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'textarea');
 	$options[] = array(
+		'name' => '站点黑白',
+		'desc' => '提示：是否启用站点黑白功能(用于悼念日)',
+		'id' => 'site_bw',
+		'std' => '0',
+		'type' => 'select',
+		'class' => 'mini',
+		'options' => array(
+			'0' => '否',
+			'1' => '是')
+	);
+	$options[] = array(
 		'name' => '站点Logo',
 		'desc' => '提示：不添加显示文字标题，推荐图片尺寸(200*50)',
 		'id' => 'site_logo',

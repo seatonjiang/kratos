@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '1.0.7' );
+define( '_KRATOS_VERSION', '1.0.8' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -281,7 +281,7 @@ function kratos_pages($range = 5){
  * @package Vtrois
  */
 function kratos_admin_footer_text($text) {
-	   $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a> 进行创作，并使用 <a href="http://www.vtrois.com/projects/theme-kratos.html" target="_blank">Kratos</a> 主题样式，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=b7fc2227eaa18a1ec540006ac6de1f3bbc1673fe1ce25ed14a9de68a832c379d">点击加入</a>主题讨论群。</span>';
+	   $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a> 进行创作，并使用 <a href="http://www.vtrois.com/projects/theme-kratos.html" target="_blank">Kratos</a> 主题样式，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=b7fc2227eaa18a1ec540006ac6de1f3bbc1673fe1ce25ed14a9de68a832c379d">点击</a> 加入主题讨论群。</span>';
 	return $text;
 }
 
