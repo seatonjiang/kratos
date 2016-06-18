@@ -40,7 +40,7 @@ if ( post_password_required() ) {
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'amadeus' ); ?></p>
 	<?php endif; ?>
-
+	<?php include(TEMPLATEPATH . '/smiley.php');?>
 	<?php 
 		$fields =  array(
    			 'author' => '<div class="comment-form-author form-group has-feedback"><div class="input-group"><div class="input-group-addon"><i class="fa fa-user"></i></div><input class="form-control" placeholder="昵称" id="author" name="author" type="text" value="" ' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /><span class="form-control-feedback required">*</span></div></div>',
@@ -52,7 +52,7 @@ if ( post_password_required() ) {
 			'title_reply_after'  => '</h4>',
 			'fields' =>  $fields,
 			'class_submit' => 'btn btn-primary',
-			'comment_field' =>  '<div class="comment form-group has-feedback"><div class="input-group"><textarea class="form-control" id="comment" name="comment" rows="5" aria-required="true"></textarea></div></div>',
+			'comment_field' =>  '<div class="comment form-group has-feedback"><div class="input-group"><p>'.$smilies.'</p><textarea class="form-control" id="comment" placeholder=" " name="comment" rows="5" aria-required="true" required  onkeydown="if(event.ctrlKey){if(event.keyCode==13){document.getElementById(\'submit\').click();return false}};"></textarea></div></div>',
 		);
 		comment_form($args);
 	?>

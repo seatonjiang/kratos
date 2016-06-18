@@ -16,7 +16,16 @@
 			</div>
 		</header>
 		<div class="kratos-post-content"><?php the_content(); ?></div>
-		<footer class="kratos-entry-footer">
+		<footer class="kratos-entry-footer clearfix">
+			<?php switch (kratos_option('post_like_donate')) {case '0':?>
+			<div class="post-like-donate visible-lg text-center clearfix">
+    			<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="KratosLove btn btn-primary <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" >
+    				<i class="fa fa-heart-o"></i> 喜欢</a>
+    			<span class="post-like-donate-count">
+       				 	<?php if( get_post_meta($post->ID,'kratos_love',true) ){ echo get_post_meta($post->ID,'kratos_love',true); } else { echo '0'; }?></span>
+   				<a href="<?php echo kratos_option('donate_links');?>" class="KratosDonate btn btn-primary"><i class="fa fa-bitcoin"></i> 打赏</a>
+    		</div>
+    		<?php ;break;default:break;}?>		
 			<div class="footer-tag clearfix">
 				<div class="pull-left">
 				<i class="fa fa-tags"></i>
@@ -25,23 +34,25 @@
 		</div>					 
 		</footer>
 	</div>
+	<?php switch (kratos_option('post_cc')) {case '0':?>
 	<div class="kratos-hentry kratos-copyright text-center clearfix">
 		<img alt="知识共享许可协议" src="<?php echo get_template_directory_uri(); ?>/images/licenses.png">
 		<h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
 	</div>
+	<?php ;break;default:break;}?>
 	<nav class="navigation post-navigation clearfix" role="navigation">
 		<?php
 		$prev_post = get_previous_post(TRUE);
 		if(!empty($prev_post)):?>
 		<div class="nav-previous clearfix">
-			<a title="<?php echo $prev_post->post_title;?>" href="<?php echo get_permalink($prev_post->ID);?>">&lt; <?php echo $prev_post->post_title;?></a>
+			<a title="<?php echo $prev_post->post_title;?>" href="<?php echo get_permalink($prev_post->ID);?>">&lt; 上一篇</a>
 		</div>
 		<?php endif;?>
 		<?php
 		$next_post = get_next_post(TRUE);
 		if(!empty($next_post)):?>
 		<div class="nav-next">
-			<a title="<?php echo $next_post->post_title;?>" href="<?php echo get_permalink($next_post->ID);?>"><?php echo $next_post->post_title;?> &gt;</a>
+			<a title="<?php echo $next_post->post_title;?>" href="<?php echo get_permalink($next_post->ID);?>">下一篇 &gt;</a>
 		</div>
 		<?php endif;?>
 	</nav>

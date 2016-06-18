@@ -46,7 +46,7 @@ function optionsframework_options() {
 	);
 	$options[] = array(
 		'name' => '站点Logo',
-		'desc' => '提示：不添加显示文字标题，推荐图片尺寸(200*50)',
+		'desc' => '提示：不添加显示文字标题，推荐图片尺寸 200px*50px，保存成功则自动显示Logo图片',
 		'id' => 'site_logo',
 		'type' => 'upload');
 	$options[] = array(
@@ -86,6 +86,39 @@ function optionsframework_options() {
 		'std' => '#222831',
 		'class' => "background_color",
 		'type' => 'color' );
+
+	$options[] = array(
+		'name' => '文章页面',
+		'type' => 'heading');
+	$options[] = array(
+		'name' => '版权声明',
+		'desc' => '提示：是否启用 CC BY-SA 4.0 声明',
+		'id' => 'post_cc',
+		'std' => '0',
+		'type' => 'select',
+		'class' => 'mini',
+		'options' => array(
+			'0' => '是',
+			'1' => '否')
+	);
+	$options[] = array(
+		'name' => '点赞打赏',
+		'desc' => '提示：是否启用点赞打赏功能',
+		'id' => 'post_like_donate',
+		'std' => '0',
+		'type' => 'select',
+		'class' => 'mini',
+		'options' => array(
+			'0' => '是',
+			'1' => '否')
+	);
+	$options[] = array(
+		'name' => '打赏页面',
+		'desc' => '提示：输入您的打赏介绍页面的连接，若没开启点赞打赏功能该项无效',
+		'id' => 'donate_links',
+		'std' => '',
+		'type' => 'text'
+	);
 
 	$options[] = array(
 		'name' => '底部组件',

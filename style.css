@@ -4,7 +4,7 @@ Theme URI: https://github.com/Vtrois/Kratos
 Author: Vtrois
 Author URI: http://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 1.0.8
+Version: 1.1.0
 License: Mozilla Public License Version 2.0
 Tags: black, white, blue, two-columns, right-sidebar
 */
@@ -901,6 +901,11 @@ color: #848484;
 	border-radius: 0px;
 }
 
+.widget img{
+	max-width: 100%;
+    height: auto;
+}
+
 .widget a {
 	color: #4C4C4C;
 	text-decoration: none;
@@ -1142,9 +1147,63 @@ color: #848484;
 	font-size: 11px;
 	line-height: 13px;
 	margin: 0 0 2px 5px;
+	margin-top: 20px;
 	padding: 4px 7px 3px;
 	position: relative;
 	text-transform: uppercase;
+}
+
+.kratos-entry-footer .post-like-donate a{
+    width: 140px;
+    border: 0;
+    border-radius: 0px;
+    line-height: 20px;
+}
+
+.kratos-entry-footer .post-like-donate .KratosLove{
+	background: #E87461;
+}
+
+.kratos-entry-footer .post-like-donate .KratosDonate{
+	background: #7AC74F;
+}
+
+.kratos-entry-footer .post-like-donate .post-like-donate-count{
+	position: absolute;
+	color: #fff;
+    background: #5BC0EB;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 40px;
+    border: 4px solid #fff;
+    margin: -8px 0px 0px -26px;
+    border-radius: 40px;
+}
+
+img.wp-smiley {
+    width: 18px !important;
+    height: auto !important;
+    vertical-align: middle !important;
+    max-height: 2em !important;
+}
+img.size-smiley{
+	margin-top:0.5em;
+	width: 24px !important;
+    height: auto !important;
+    vertical-align: middle !important;
+    max-height: 2em !important;
+}
+.comment-form-comment .smilies {
+    margin: 5px 0;
+}
+.comment-form-comment .smilies a {
+    margin-right: 3px;
+}
+.comment-form-comment .smilies img.wp-smiley {
+    width: 24px !important;
+    height: auto !important;
 }
 
 .kratos-copyright img {
@@ -1369,6 +1428,36 @@ color: #848484;
 
 #footer p a {
 	color: rgba(255, 255, 255, .5)
+}
+
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #848484 url(images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.cd-top.cd-is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #5BC0EB;
+  opacity: 1;
 }
 
 .btn {
