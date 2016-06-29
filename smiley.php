@@ -34,7 +34,6 @@
 /* ]]> */
 </script>
 <?php $smilies = '
-<a href="javascript:grin(\':question:\')"><img src="'.get_bloginfo("template_url").'/images/smilies/icon_question.gif" alt="" class="size-smiley"/></a>
 <a href="javascript:grin(\':razz:\')"><img src="'.get_bloginfo("template_url").'/images/smilies/icon_razz.gif" alt="" class="size-smiley"/></a>
 <a href="javascript:grin(\':sad:\')"><img src="'.get_bloginfo("template_url").'/images/smilies/icon_sad.gif" alt="" class="size-smiley"/></a>
 <a href="javascript:grin(\':evil:\')"><img src="'.get_bloginfo("template_url").'/images/smilies/icon_evil.gif" alt="" class="size-smiley"/></a>

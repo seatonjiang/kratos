@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '1.1.0' );
+define( '_KRATOS_VERSION', '1.1.1' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -259,6 +259,61 @@ function kratos_get_post_views($before = '', $after = '', $echo = 1)
 }
 
 /**
+ * 轮播图片
+ * @version 1.0
+ * @package Vtrois
+ */
+function kratos_banner(){
+    if( !$output = get_option('kratos_banners') ){
+        $output = '';
+        $kratos_banner_on = kratos_option("kratos_banner") ? kratos_option("kratos_banner") : 0;
+        if($kratos_banner_on){
+            for($i=1; $i<6; $i++){
+                $kratos_banner{$i} = kratos_option("kratos_banner{$i}") ? kratos_option("kratos_banner{$i}") : "";
+                $kratos_banner_url{$i} = kratos_option("kratos_banner_url{$i}") ? kratos_option("kratos_banner_url{$i}") : "";
+                if($kratos_banner{$i} ){
+                    $banners[] = $kratos_banner{$i};
+                    $banners_url[] = $kratos_banner_url{$i};
+                }
+            }
+            $count = count($banners);
+            $output .= '<div id="slide" class="carousel slide animate-box" data-ride="carousel">';
+            $output .= '<ol class="carousel-indicators">';
+            for($i=0; $i<$count; $i++){
+                $output .= '<li data-target="#slide" data-slide-to="'.$i.'"';
+                if($i==0) $output .= 'class="active"';
+                $output .= '></li>';
+            };
+            $output .='</ol>';
+            $output .= '<div class="carousel-inner" role="listbox">';
+            for($i=0;$i<$count;$i++){
+                $output .= '<div class="item';
+                if($i==0) $output .= ' active';
+                $output .= '">';
+                if(!empty($banners_url[$i])){
+                    $output .= '<a href="'.$banners_url[$i].'"><img src="'.$banners[$i].'"/></a>';
+                }else{
+                    $output .= '<img src="'.$banners[$i].'"/>';
+                }
+                $output .= "</div>";
+            };
+            $output .= '</div>';
+            $output .= '<a class="left carousel-control" href="#slide" role="button" data-slide="prev">';
+            $output .= '<span class="fa fa-chevron-left glyphicon glyphicon-chevron-left"></span></a>';
+            $output .= '<a class="right carousel-control" href="#slide" role="button" data-slide="next">';
+            $output .= '<span class="fa fa-chevron-right glyphicon glyphicon-chevron-right"></span></a></div>';
+            update_option('kratos_banners', $output);
+        }
+    }
+    echo $output;
+}
+
+function clear_banner(){
+    update_option('kratos_banners', '');
+}
+add_action( 'optionsframework_after_validate', 'clear_banner' );
+
+/**
  * 文章点赞功能
  * @version 1.0
  * @package Vtrois
@@ -268,15 +323,15 @@ function kratos_love(){
     $id = $_POST["um_id"];
     $action = $_POST["um_action"];
     if ( $action == 'love'){
-        $specs_raters = get_post_meta($id,'kratos_love',true);
+        $kratos_raters = get_post_meta($id,'kratos_love',true);
         $expire = time() + 99999999;
         $domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false;
         setcookie('kratos_love_'.$id,$id,$expire,'/',$domain,false);
-        if (!$specs_raters || !is_numeric($specs_raters)) {
+        if (!$kratos_raters || !is_numeric($kratos_raters)) {
             update_post_meta($id, 'kratos_love', 1);
         } 
         else {
-            update_post_meta($id, 'kratos_love', ($specs_raters + 1));
+            update_post_meta($id, 'kratos_love', ($kratos_raters + 1));
         }
         echo get_post_meta($id,'kratos_love',true);
     } 
@@ -303,7 +358,6 @@ function smilies_reset() {
         return;
     $wpsmiliestrans = array(
     ':mrgreen:' => 'icon_mrgreen.gif',
-   ':question:' => 'icon_question.gif',
     ':exclaim:' => 'icon_exclaim.gif',
     ':neutral:' => 'icon_neutral.gif',
     ':twisted:' => 'icon_twisted.gif',

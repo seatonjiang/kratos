@@ -6,6 +6,7 @@
 			<div class="col-md-8">
 							<?php
 				if(is_home()){
+					kratos_banner();
 				}elseif(is_category()){
 			?>
 				<div class="kratos-hentry clearfix animate-box">

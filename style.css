@@ -4,7 +4,7 @@ Theme URI: https://github.com/Vtrois/Kratos
 Author: Vtrois
 Author URI: http://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 1.1.0
+Version: 1.1.1
 License: Mozilla Public License Version 2.0
 Tags: black, white, blue, two-columns, right-sidebar
 */
@@ -365,6 +365,61 @@ figure {
 	z-index: 2;
 }
 
+#kratos-header-section .sub-menu {
+  padding: 10px 7px 10px;
+  background: #fff;
+  left: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#kratos-header-section .sub-menu > li > .sub-menu {
+  left: 100%;
+}
+
+#kratos-header-section .sub-menu:before {
+  position: absolute;
+  top: -9px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  content: '';
+}
+
+#kratos-header-section .sub-menu:after {
+  position: absolute;
+  top: -8px;
+  left: 21px;
+  width: 0;
+  height: 0;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  border-bottom: 8px solid white;
+  border-left: 8px solid transparent;
+  content: '';
+}
+
+#kratos-header-section .sub-menu a {
+  letter-spacing: 0;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 34px;
+  color: #848484 !important;
+  text-transform: none;
+  background: none;
+}
+
+#kratos-header-section .sub-menu a:hover {
+  color: #5BC0EB !important;
+}
+
 .nav-header {
 	position: relative;
 	float: left;
@@ -424,10 +479,6 @@ figure {
 	padding: 1em .75em;
 }
 
-#kratos-primary-menu > li > ul li.active > a {
-	color: #5BC0EB !important;
-}
-
 #kratos-primary-menu > li > .sf-with-ul:after {
 	border: none !important;
 	font-family: 'icomoon';
@@ -444,7 +495,8 @@ figure {
 	margin-right: -5px;
 	top: 50%;
 	margin-top: -7px;
-	content: "\e922";
+	font-family: FontAwesome;
+	content:"\f107";
 	color: rgba(255, 255, 255, 0.5);
 }
 
@@ -549,6 +601,21 @@ figure {
 
 #kratos-primary-menu .kratos-sub-menu a:hover {
 	color: #5BC0EB !important;
+}
+
+#slide {
+    margin-bottom: 20px;
+}
+#slide .carousel-indicators li {
+    margin: 1px 5px;
+}
+#slide .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+}
+#slide .carousel-control.left, .carousel-control.right {
+    background: none;
+    background-image: none;
+    filter: none;
 }
 
 .heading-section {
