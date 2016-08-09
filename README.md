@@ -22,7 +22,6 @@ kratos/
 │   ├── jquery.stellar.min.js
 │   ├── jquery.waypoints.min.js
 │   ├── kratos.js
-│   ├── comments-ajax.js
 │   ├── modernizr.js
 │   ├── superfish.js
 │   └── bootstrap.min.js
