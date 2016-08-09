@@ -23,7 +23,6 @@ kratos/
 │   ├── jquery.waypoints.min.js
 │   ├── kratos.js
 │   ├── comments-ajax.js
-│   ├── hoverIntent.js
 │   ├── modernizr.js
 │   ├── superfish.js
 │   └── bootstrap.min.js
@@ -33,8 +32,7 @@ kratos/
 │   ├── fontawesome-webfont.svg
 │   ├── fontawesome-webfont.ttf
 │   ├── fontawesome-webfont.woff
-│   ├── fontawesome-webfont.woff2
-│   └── FontKratos.otf
+│   └── fontawesome-webfont.woff2
 ├── images/
 │   ├── smilies(has some emoji pic)
 │   ├── 404.jpg
@@ -82,6 +80,7 @@ kratos/
 
 ## Changelog
 
+- v2.0 - She grew up
 - v1.1 - She has grown up with everyone
 - v1.0 - Initialize the project and say hello world
 

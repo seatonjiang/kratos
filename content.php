@@ -1,4 +1,4 @@
-<article class="kratos-hentry clearfix animate-box">
+<article class="kratos-hentry clearfix">
 	<div class="kratos-entry-thumb clearfix"> 
 		<a href="<?php the_permalink() ?>"><?php kratos_blog_thumbnail() ?></a>
 	</div>	
@@ -15,6 +15,7 @@
 				</span>
 				<span class="pull-left">
 				<a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo kratos_get_post_views(); ?> Views</a>
+				<a href="<?php the_permalink() ?>"><i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'kratos_love',true) ){ echo get_post_meta($post->ID,'kratos_love',true); } else { echo '0'; }?> Times</a>
 				</span>
 			</div>
 		</header>

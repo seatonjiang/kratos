@@ -9,7 +9,7 @@
 					kratos_banner();
 				}elseif(is_category()){
 			?>
-				<div class="kratos-hentry clearfix animate-box">
+				<div class="kratos-hentry clearfix">
 					<h1 class="kratos-post-header-title">分类目录：<?php echo single_cat_title('', false); ?></h1>
 				</div>				
 			<?php
@@ -18,13 +18,13 @@
 			<?php
 				}elseif(is_tag()){
 			?>
-				<div class="kratos-hentry clearfix animate-box">
+				<div class="kratos-hentry clearfix">
 					<h1 class="kratos-post-header-title">标签目录：<?php echo single_cat_title('', false); ?></h1>
 				</div>
 			<?php
 				}elseif(is_search()){
 			?>
-				<div class="kratos-hentry clearfix animate-box">
+				<div class="kratos-hentry clearfix">
 					<h1 class="kratos-post-header-title">搜索结果：<?php the_search_query(); ?></h1>
 				</div>				
 			<?php
@@ -38,7 +38,7 @@
 					}
 				}else{
 			?>
-			<div class="kratos-hentry clearfix animate-box">
+			<div class="kratos-hentry clearfix">
 					<h1 class="kratos-post-header-title">很抱歉，没有找到任何内容。</h1>
 			</div>
 			<?php } ?>

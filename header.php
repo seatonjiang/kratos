@@ -26,7 +26,7 @@
 								<?php $site_logo = kratos_option('site_logo');?>
 								<?php if ( !empty( $site_logo ) ) {?>
 									<a href="<?php echo get_option('home'); ?>">
-									<img id="kratos-logo-img" src="<?php echo $site_logo; ?>">
+									<h1 id="kratos-logo-img"><img src="<?php echo $site_logo; ?>"></h1>
 									</a>
 								<?php }else{?>
 									<h1 id="kratos-logo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>

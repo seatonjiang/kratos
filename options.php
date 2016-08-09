@@ -102,8 +102,8 @@ function optionsframework_options() {
 			'1' => '否')
 	);
 	$options[] = array(
-		'name' => '点赞打赏',
-		'desc' => '提示：是否启用点赞打赏功能',
+		'name' => '文章打赏',
+		'desc' => '提示：是否启用文章打赏功能',
 		'id' => 'post_like_donate',
 		'std' => '0',
 		'type' => 'select',

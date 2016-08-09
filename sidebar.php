@@ -1,6 +1,6 @@
 <?php if ( ! dynamic_sidebar( 'sidebar_blog' ) ) :
 ?>
-<aside class="widget clearfix animate-box">
+<aside class="widget clearfix">
 	<div class="panel-heading">
 		<h4 class="widget-title">Message</h4>
 		<div class="textwidget">

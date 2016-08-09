@@ -5,7 +5,7 @@ function kratos_widgets_init() {
         'name' => __( 'Blog Page', 'kratos' ),
         'id' => 'sidebar_blog',
         'description' => __( '博客页面侧边栏', 'kratos' ),
-        'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix animate-box">',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="widget-title">',
         'after_title' => '</h4>'

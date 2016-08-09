@@ -1,31 +1,25 @@
-<article class="animate-box">
+<article>
 	<div class="kratos-hentry kratos-post-inner clearfix">
 		<header class="kratos-entry-header">
 			<h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>
 			<div class="kratos-post-meta text-center">
 				<span>
 				<a href="#"><i class="fa fa-calendar"></i> <?php the_time('Y/n/j') ?></a>
-				</span>
-				<span>
-				<?php $category = get_the_category(); echo '<a href="'.get_category_link($category[0]->term_id ).'"><i class="fa fa-folder-open-o"></i> '.$category[0]->cat_name.'</a>'; ?>
 				<?php comments_popup_link('<i class="fa fa-commenting-o"></i> 0 Comment', '<i class="fa fa-commenting-o"></i> 1 Comment', '<i class="fa fa-commenting-o"></i> % Comments', '', '<i class="fa fa-commenting-o"></i> 0 Comment'); ?>
-				</span>
-				<span>
 				<a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?> Views</a>
+				<a href="<?php the_permalink() ?>"><i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'kratos_love',true) ){ echo get_post_meta($post->ID,'kratos_love',true); } else { echo '0'; }?> Times</a>
 				</span>
 			</div>
 		</header>
 		<div class="kratos-post-content"><?php the_content(); ?></div>
 		<footer class="kratos-entry-footer clearfix">
-			<?php switch (kratos_option('post_like_donate')) {case '0':?>
 			<div class="post-like-donate visible-lg text-center clearfix">
-    			<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="KratosLove btn btn-primary <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" >
-    				<i class="fa fa-heart-o"></i> 喜欢</a>
-    			<span class="post-like-donate-count">
-       				 	<?php if( get_post_meta($post->ID,'kratos_love',true) ){ echo get_post_meta($post->ID,'kratos_love',true); } else { echo '0'; }?></span>
+				<?php switch (kratos_option('post_like_donate')) {case '0':?>
    				<a href="<?php echo kratos_option('donate_links');?>" class="KratosDonate btn btn-primary"><i class="fa fa-bitcoin"></i> 打赏</a>
+   				<?php ;break;default:break;}?>
+    			<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="KratosLove btn btn-primary <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" >
+    				<i class="fa fa-heart-o"></i> 喜欢</a>	
     		</div>
-    		<?php ;break;default:break;}?>		
 			<div class="footer-tag clearfix">
 				<div class="pull-left">
 				<i class="fa fa-tags"></i>

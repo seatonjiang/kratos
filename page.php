@@ -9,7 +9,7 @@ get_header('banner'); ?>
 		<div class="row">
 			<div class="col-md-8">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<article class="animate-box">
+			<article>
 				<div class="kratos-hentry kratos-post-inner clearfix">
 					<header class="kratos-entry-header">
 						<h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>

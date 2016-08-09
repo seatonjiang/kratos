@@ -4,20 +4,14 @@ Theme URI: https://github.com/Vtrois/Kratos
 Author: Vtrois
 Author URI: http://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 1.1.2
+Version: 2.0.0
 License: Mozilla Public License Version 2.0
 Tags: black, white, blue, two-columns, right-sidebar
 */
 
 @charset "UTF-8";
-@font-face {
-	font-family: "FontKratos";
-	src: url('fonts/FontKratos.otf') format("opentype");
-	font-weight: normal
-}
-
 body {
-	font-family: FontKratos, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+	font-family: 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
 	line-height: 1.8;
 	font-size: 16px;
 	background: #fff;
@@ -42,18 +36,31 @@ a:hover {
 	color: #5BC0EB !important;
 }
 
-p,ul,ol {
+p,
+ul,
+ol {
 	margin-bottom: 1em;
 	font-size: 16px;
-	color: #848484;
-	font-family: FontKratos, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+	color: #333;
+	font-family: 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	color: #5a5a5a;
-	font-family: FontKratos, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333;
+	font-family: 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
 	font-weight: 400;
 	margin: 0 0 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 30px;
+	}
 }
 
 figure {
@@ -73,6 +80,22 @@ figure {
 ::selection {
 	color: #fcfcfc;
 	background: #5BC0EB;
+}
+
+#wpadminbar {
+	position: fixed;
+}
+
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 
 #kratos-blog,
@@ -132,7 +155,7 @@ figure {
 
 .kratos-cover.kratos-hero-2,
 .kratos-start.kratos-hero-2 {
-	height: 400px;
+	height: 350px;
 }
 
 .kratos-start.kratos-post-header {
@@ -180,7 +203,7 @@ figure {
 }
 
 .kratos-cover.kratos-cover_2 {
-	height: 400px;
+	height: 350px;
 }
 
 @media screen and (max-width: 768px) {
@@ -200,7 +223,7 @@ figure {
 }
 
 .kratos-cover .desc2 {
-	margin-top: -40px;
+	margin-top: -30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -226,7 +249,7 @@ figure {
 .kratos-cover .desc span {
 	display: block;
 	margin-bottom: 30px;
-	font-size: 28px;
+	font-size: 25px;
 	letter-spacing: 1px;
 }
 
@@ -274,7 +297,7 @@ figure {
 	border-top: none;
 	text-decoration: none;
 	zoom: 1;
-	font-size: 18px;
+	font-size: 17px;
 	border-bottom: none !important;
 }
 
@@ -337,9 +360,9 @@ figure {
 	border-top-color: #ccc;
 }
 
-.sf-arrows > li > .sf-with-ul:focus:after,
-.sf-arrows > li:hover > .sf-with-ul:after,
-.sf-arrows > .sfHover > .sf-with-ul:after {
+.sf-arrows> li> .sf-with-ul:focus:after,
+.sf-arrows> li:hover> .sf-with-ul:after,
+.sf-arrows> .sfHover> .sf-with-ul:after {
 	border-top-color: #ccc;
 }
 
@@ -350,9 +373,9 @@ figure {
 	border-left-color: #ccc;
 }
 
-.sf-arrows ul li > .sf-with-ul:focus:after,
-.sf-arrows ul li:hover > .sf-with-ul:after,
-.sf-arrows ul .sfHover > .sf-with-ul:after {
+.sf-arrows ul li> .sf-with-ul:focus:after,
+.sf-arrows ul li:hover> .sf-with-ul:after,
+.sf-arrows ul .sfHover> .sf-with-ul:after {
 	border-left-color: #ccc;
 }
 
@@ -366,58 +389,58 @@ figure {
 }
 
 #kratos-header-section .sub-menu {
-  padding: 10px 7px 10px;
-  background: #fff;
-  left: 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	padding: 10px 7px 10px;
+	background: #fff;
+	left: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-#kratos-header-section .sub-menu > li > .sub-menu {
-  left: 100%;
+#kratos-header-section .sub-menu> li> .sub-menu {
+	left: 100%;
 }
 
 #kratos-header-section .sub-menu:before {
-  position: absolute;
-  top: -9px;
-  left: 20px;
-  width: 0;
-  height: 0;
-  content: '';
+	position: absolute;
+	top: -9px;
+	left: 20px;
+	width: 0;
+	height: 0;
+	content: '';
 }
 
 #kratos-header-section .sub-menu:after {
-  position: absolute;
-  top: -8px;
-  left: 21px;
-  width: 0;
-  height: 0;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #fff;
-  border-bottom: 8px solid white;
-  border-left: 8px solid transparent;
-  content: '';
+	position: absolute;
+	top: -8px;
+	left: 21px;
+	width: 0;
+	height: 0;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #fff;
+	border-bottom: 8px solid white;
+	border-left: 8px solid transparent;
+	content: '';
 }
 
 #kratos-header-section .sub-menu a {
-  letter-spacing: 0;
-  padding: 0 15px;
-  font-size: 15px;
-  line-height: 34px;
-  color: #848484 !important;
-  text-transform: none;
-  background: none;
+	letter-spacing: 0;
+	padding: 0 15px;
+	font-size: 15px;
+	line-height: 34px;
+	color: #848484 !important;
+	text-transform: none;
+	background: none;
 }
 
 #kratos-header-section .sub-menu a:hover {
-  color: #5BC0EB !important;
+	color: #5BC0EB !important;
 }
 
 .nav-header {
@@ -435,12 +458,20 @@ figure {
 	font-weight: 300;
 	float: left;
 }
+
 #kratos-logo-img {
-	width: 50px;
-	height: auto;
-	margin-top: 28px;
+	position: relative;
+	z-index: 2;
+	font-size: 28px;
+	text-transform: none;
+	margin-top: 17px;
+	font-weight: 300;
 	float: left;
-	}
+}
+
+#kratos-logo-img img {
+	width: 200px;
+}
 
 #kratos-logo span {
 	font-weight: 700;
@@ -479,7 +510,7 @@ figure {
 	padding: 1em .75em;
 }
 
-#kratos-primary-menu > li > .sf-with-ul:after {
+#kratos-primary-menu> li> .sf-with-ul:after {
 	border: none !important;
 	font-family: 'icomoon';
 	speak: none;
@@ -496,15 +527,15 @@ figure {
 	top: 50%;
 	margin-top: -7px;
 	font-family: FontAwesome;
-	content:"\f107";
+	content: "\f107";
 	color: rgba(255, 255, 255, 0.5);
 }
 
-#kratos-primary-menu > li > ul li {
+#kratos-primary-menu> li> ul li {
 	position: relative;
 }
 
-#kratos-primary-menu > li > ul li > .sf-with-ul:after {
+#kratos-primary-menu> li> ul li> .sf-with-ul:after {
 	border: none !important;
 	font-family: 'icomoon';
 	speak: none;
@@ -520,7 +551,8 @@ figure {
 	margin-right: 10px;
 	top: 20px;
 	font-size: 16px;
-	content: "\e924";
+	font-family: FontAwesome;
+	content: "\f105";
 	color: rgba(0, 0, 0, 0.5);
 }
 
@@ -539,7 +571,7 @@ figure {
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-#kratos-primary-menu .kratos-sub-menu > li > .kratos-sub-menu {
+#kratos-primary-menu .kratos-sub-menu> li> .kratos-sub-menu {
 	left: 100%;
 }
 
@@ -565,12 +597,12 @@ figure {
 	content: '';
 }
 
-#kratos-primary-menu .kratos-sub-menu .kratos-sub-menu:before {
+#kratos-primary-menu .sub-menu .sub-menu:before {
 	top: 6px;
 	left: 100%;
 }
 
-#kratos-primary-menu .kratos-sub-menu .kratos-sub-menu:after {
+#kratos-primary-menu .sub-menu .sub-menu:after {
 	top: 7px;
 	right: 100%;
 	border: none !important;
@@ -604,18 +636,23 @@ figure {
 }
 
 #slide {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
+
 #slide .carousel-indicators li {
-    margin: 1px 5px;
+	margin: 1px 5px;
 }
-#slide .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    width: 100%;
+
+#slide .carousel-inner> .item> img,
+.carousel-inner> .item> a> img {
+	width: 100%;
 }
-#slide .carousel-control.left, .carousel-control.right {
-    background: none;
-    background-image: none;
-    filter: none;
+
+#slide .carousel-control.left,
+.carousel-control.right {
+	background: none;
+	background-image: none;
+	filter: none;
 }
 
 .heading-section {
@@ -704,7 +741,7 @@ figure {
 	position: absolute;
 }
 
-#kratos-blog .kratos-post .kratos-post-image .kratos-category > a {
+#kratos-blog .kratos-post .kratos-post-image .kratos-category> a {
 	font-size: 10px;
 	padding: 2px 10px;
 	line-height: 1.5;
@@ -722,15 +759,15 @@ figure {
 	*display: inline;
 }
 
-#kratos-blog .kratos-post .kratos-post-image .kratos-category > a:hover {
+#kratos-blog .kratos-post .kratos-post-image .kratos-category> a:hover {
 	color: #fff !important;
 	background: #5BC0EB;
 	border: 1px solid #5BC0EB;
 }
 
-#kratos-blog .kratos-post .kratos-post-image .kratos-category > a:hover,
-#kratos-blog .kratos-post .kratos-post-image .kratos-category > a:active,
-#kratos-blog .kratos-post .kratos-post-image .kratos-category > a:focus {
+#kratos-blog .kratos-post .kratos-post-image .kratos-category> a:hover,
+#kratos-blog .kratos-post .kratos-post-image .kratos-category> a:active,
+#kratos-blog .kratos-post .kratos-post-image .kratos-category> a:focus {
 	text-decoration: none;
 }
 
@@ -820,18 +857,18 @@ figure {
 	color: white !important;
 }
 
-.kratos-social-icons > a {
+.kratos-social-icons> a {
 	padding: 4px 14px;
 	color: #5BC0EB;
 }
 
-.kratos-social-icons > a i {
+.kratos-social-icons> a i {
 	font-size: 30px;
 }
 
-.kratos-social-icons > a:hover,
-.kratos-social-icons > a:focus,
-.kratos-social-icons > a:active {
+.kratos-social-icons> a:hover,
+.kratos-social-icons> a:focus,
+.kratos-social-icons> a:active {
 	text-decoration: none;
 	color: #5a5a5a;
 }
@@ -849,6 +886,7 @@ figure {
 	margin-bottom: 60px;
 	margin-top: 15px;
 }
+
 .comments-title {
 	margin: 0;
 	font-size: 24px;
@@ -856,60 +894,84 @@ figure {
 	border: 1px solid #e0e0e0;
 	background-color: #fff;
 }
+
 .comments-area ol {
 	list-style: none;
 }
+
 .comments-area ol {
 	padding: 0;
 }
+
 .comments-area ol li {
 	margin-top: 15px;
 }
+
 .comments-area .children {
 	padding-left: 20px;
 }
+
 .comment-author .avatar {
 	position: absolute;
 	border-radius: 50%;
 }
+
 .comment-awaiting-moderation,
 .comment-author .fn,
 .commentmetadata {
-	margin-left: 80px;
+	margin-left: 60px;
 }
+
 .commentmetadata {
 	font-size: 12px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
-.commentmetadata a{
+
+.commentmetadata a {
 	color: #848484;
 }
+
+.comment-body p {
+	color: #848484;
+	margin-bottom: 0em;
+}
+
 .comment-body {
 	padding: 20px 20px 15px 20px;
 	border: 1px solid #e0e0e0;
 	background-color: #fff;
 	margin-bottom: 15px;
 }
+
+.says {
+	display: none;
+}
+
 .reply {
 	text-align: right;
 }
+
 .comment-reply-link {
 	padding: 5px;
 	background-color: #fff;
 	font-size: 12px;
 	-webkit-transition: all 0.4s;
-	transition: all 0.4s;	
+	transition: all 0.4s;
 }
+
 a.comment-reply-link {
 	text-decoration: none;
 }
+
 a.comment-reply-link:hover {
 	color: #000;
 	box-shadow: 0 0 1px #505050;
 }
+
 .comments-area a.url {
 	text-decoration: underline;
 }
+
 .comment-metadata a,
 .comments-area a.url {
 	color: #444;
@@ -917,17 +979,46 @@ a.comment-reply-link:hover {
 
 .comment-respond {
 	margin-top: 60px;
-	    margin: 0 0 25px;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 0px;    padding: 20px 20px 15px 20px;
+	margin: 0 0 25px;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 0px;
+	padding: 20px 20px 15px 20px;
 }
+
 .comment-form .form-submit {
 	margin-top: 30px;
 }
-#respond .input-group-addon i{
+
+#comments-nav {
+	text-align: center;
+	margin: 0 0 15px;
+}
+
+#comments-nav a {
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+}
+
+#comments-nav a:hover {
+	border: 1px solid #5BC0EB;
+	color: #5BC0EB;
+	background-color: #eee
+}
+
+#comments-nav span.current {
+	font-weight: 700;
+	border: 1px solid #5BC0EB;
+	background-color: #5BC0EB;
+	padding: 5px 10px;
+	color: #fff
+}
+
+#respond .input-group-addon i {
 	width: 20px;
 }
+
 #respond .form-control {
 	box-shadow: none;
 	background: transparent;
@@ -937,27 +1028,32 @@ a.comment-reply-link:hover {
 	font-weight: 300;
 	border-radius: 0;
 }
+
 #respond .input-group-addon {
 	border-radius: 0px;
 }
-.comment-form .form-control-feedback{
+
+.comment-form .form-control-feedback {
 	line-height: 40px;
 	color: #848484;
 }
-.comment-form .input-group{
+
+.comment-form .input-group {
 	width: 100%;
 	margin-top: 10px;
-}
-.comment-form .btn-primary{
-	width: 100%;
- 	border-radius:0;
 }
 
-.comment-form .comment-author{
+.comment-form .btn-primary {
+	width: 100%;
+	border-radius: 0;
+}
+
+.comment-form .comment-author {
 	margin-top: 10px;
 }
-.comment-form .logged-in-as a{
-color: #848484;
+
+.comment-form .logged-in-as a {
+	color: #848484;
 }
 
 #kratos-widget-area .widget {
@@ -968,9 +1064,9 @@ color: #848484;
 	border-radius: 0px;
 }
 
-.widget img{
+.widget img {
 	max-width: 100%;
-    height: auto;
+	height: auto;
 }
 
 .widget a {
@@ -1145,12 +1241,13 @@ color: #848484;
 	height: auto;
 }
 
-.widget_kratos_search input{
+.widget_kratos_search input {
 	height: 35px;
 	border: 1px solid #ccc;
 	border-radius: 0px;
 }
-.widget_kratos_search .form-group{
+
+.widget_kratos_search .form-group {
 	margin-bottom: 0px;
 }
 
@@ -1192,12 +1289,23 @@ color: #848484;
 .kratos-post-content p {
 	margin-bottom: 1em;
 	font-size: 16px;
-	color: #5a5a5a;
+	color: #333;
 }
 
 .kratos-post-content img {
 	max-width: 100%;
+	height: auto;
+}
+
+.kratos-post-content embed{
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	.kratos-post-content embed{
+    max-width: 100%;
     height: auto;
+	}
 }
 
 .kratos-entry-footer {
@@ -1220,57 +1328,61 @@ color: #848484;
 	text-transform: uppercase;
 }
 
-.kratos-entry-footer .post-like-donate a{
-    width: 140px;
-    border: 0;
-    border-radius: 0px;
-    line-height: 20px;
+.kratos-entry-footer .post-like-donate a {
+	width: 140px;
+	border: 0;
+	border-radius: 0px;
+	line-height: 20px;
 }
 
-.kratos-entry-footer .post-like-donate .KratosLove{
+.kratos-entry-footer .post-like-donate .KratosLove {
 	background: #E87461;
 }
 
-.kratos-entry-footer .post-like-donate .KratosDonate{
+.kratos-entry-footer .post-like-donate .KratosDonate {
 	background: #7AC74F;
 }
 
-.kratos-entry-footer .post-like-donate .post-like-donate-count{
+.kratos-entry-footer .post-like-donate .post-like-donate-count {
 	position: absolute;
 	color: #fff;
-    background: #5BC0EB;
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 40px;
-    border: 4px solid #fff;
-    margin: -8px 0px 0px -26px;
-    border-radius: 40px;
+	background: #5BC0EB;
+	width: 50px;
+	height: 50px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 40px;
+	border: 4px solid #fff;
+	margin: -8px 0px 0px -26px;
+	border-radius: 40px;
 }
 
 img.wp-smiley {
-    width: 18px !important;
-    height: auto !important;
-    vertical-align: middle !important;
-    max-height: 2em !important;
+	width: 18px !important;
+	height: auto !important;
+	vertical-align: middle !important;
+	max-height: 2em !important;
 }
-img.size-smiley{
-	margin-top:0.5em;
+
+img.size-smiley {
+	margin-top: 0.5em;
 	width: 24px !important;
-    height: auto !important;
-    vertical-align: middle !important;
-    max-height: 2em !important;
+	height: auto !important;
+	vertical-align: middle !important;
+	max-height: 2em !important;
 }
+
 .comment-form-comment .smilies {
-    margin: 5px 0;
+	margin: 5px 0;
 }
+
 .comment-form-comment .smilies a {
-    margin-right: 3px;
+	margin-right: 3px;
 }
+
 .comment-form-comment .smilies img.wp-smiley {
-    width: 24px !important;
-    height: auto !important;
+	width: 24px !important;
+	height: auto !important;
 }
 
 .kratos-copyright img {
@@ -1374,27 +1486,33 @@ img.size-smiley{
 	}
 }
 
-.post-navigation .nav-previous a{
-    color: #5a5a5a;
-  }
+.post-navigation {
+	margin-top: -10px;
+}
 
-.post-navigation .nav-next a{
-    color: #5a5a5a;
+.post-navigation .nav-previous a {
+	color: #5a5a5a;
 }
+
+.post-navigation .nav-next a {
+	color: #5a5a5a;
+}
+
 .post-navigation .nav-previous {
-    float: left;
-    max-width: 50%;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    padding: 15px;
+	float: left;
+	max-width: 50%;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	padding: 7px 18px;
 }
+
 .post-navigation .nav-next {
-    float: right;
-    text-align: right;
-    max-width: 50%;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    padding: 15px;
+	float: right;
+	text-align: right;
+	max-width: 50%;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	padding: 7px 18px;
 }
 
 #kratos-subscribe h3 {
@@ -1498,33 +1616,36 @@ img.size-smiley{
 }
 
 .cd-top {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  background: #848484 url(images/cd-top-arrow.svg) no-repeat center 50%;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	bottom: 40px;
+	right: 30px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	background: #848484 url(images/cd-top-arrow.svg) no-repeat center 50%;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
+
 .cd-top.cd-is-visible {
-  visibility: visible;
-  opacity: 1;
+	visibility: visible;
+	opacity: 1;
 }
+
 .cd-top.cd-fade-out {
-  opacity: .5;
+	opacity: .5;
 }
+
 .no-touch .cd-top:hover {
-  background-color: #5BC0EB;
-  opacity: 1;
+	background-color: #5BC0EB;
+	opacity: 1;
 }
 
 .btn {
@@ -1574,13 +1695,16 @@ img.size-smiley{
 	border: 2px solid #5BC0EB;
 	color: #fff
 }
-.pagination>li>a{
-	color:  #5BC0EB;
+
+.pagination>li>a {
+	color: #5BC0EB;
 }
-.pagination>.active>a{
-    background-color: #5BC0EB;
-    border-color: #5BC0EB;
+
+.pagination>.active>a {
+	background-color: #5BC0EB;
+	border-color: #5BC0EB;
 }
+
 .view-more-1 {
 	margin-top: 3em;
 	padding: 1em 5em
@@ -1660,7 +1784,7 @@ img.size-smiley{
 }
 
 #offcanvas-menu ul li a {
-	font-size: 18px;
+	font-size: 16px;
 	color: rgba(255, 255, 255, .4)
 }
 
@@ -1668,7 +1792,7 @@ img.size-smiley{
 	color: #5BC0EB
 }
 
-#offcanvas-menu ul li>.kratos-sub-menu {
+#offcanvas-menu ul li>.sub-menu {
 	margin-top: 9px;
 	padding-left: 20px
 }
@@ -1677,7 +1801,7 @@ img.size-smiley{
 	color: #5BC0EB
 }
 
-#offcanvas-menu ul .kratos-sub-menu {
+#offcanvas-menu ul .sub-menu {
 	display: block!important
 }
 
