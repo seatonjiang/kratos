@@ -4,7 +4,7 @@ Theme URI: https://github.com/Vtrois/Kratos
 Author: Vtrois
 Author URI: http://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 2.0.0
+Version: 2.0.1
 License: Mozilla Public License Version 2.0
 Tags: black, white, blue, two-columns, right-sidebar
 */
@@ -80,6 +80,37 @@ figure {
 ::selection {
 	color: #fcfcfc;
 	background: #5BC0EB;
+}
+
+blockquote {
+    margin: 12px 0px;
+    border-left: 5px solid #080808;
+    padding: 4px 0px 5px 10px;
+    background: #f1f1f1;
+}
+
+blockquote p:only-child{
+    font-size: 18px;
+    color: #080808;
+}
+
+code {
+	padding: 2px 4px;
+    font-size: 90%;
+    color: #333;
+    background-color: #f8f8f8;
+    border-radius: 0;
+    border: 1px solid #E1E1E1;
+    margin: 0 5px;
+}
+
+.panel {
+    border-radius: 0px;
+}
+
+.panel-heading {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 #wpadminbar {
@@ -932,7 +963,7 @@ figure {
 }
 
 .comment-body p {
-	color: #848484;
+	color: #333;
 	margin-bottom: 0em;
 }
 
@@ -1312,7 +1343,6 @@ a.comment-reply-link:hover {
 	color: #9d9d9d;
 	margin-top: 25px;
 	margin: 10px 10px;
-	border-top: 1px solid #e0e0e0;
 }
 
 .kratos-entry-footer .footer-tag a {
@@ -1349,9 +1379,6 @@ a.comment-reply-link:hover {
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
-    border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
 }
 
 .kratos-entry-footer .post-like-donate .KratosDonate {  
@@ -1376,7 +1403,7 @@ a.comment-reply-link:hover {
 	margin-right: 200px;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1200px) {
 	.kratos-entry-footer .post-like-donate .flt {
 	float: none;
 	margin-right: 0px;

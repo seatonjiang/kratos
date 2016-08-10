@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '2.0.0' );
+define( '_KRATOS_VERSION', '2.0.1' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -66,7 +66,7 @@ add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 function kratos_theme_scripts() {  
 	$dir = get_template_directory_uri(); 
     if ( !is_admin() ) {  
-        wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.css', array(), '4.6.2');
+        wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.css', array(), '4.6.3');
 		wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.css', array(), '3.3.6');
 		wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.css', array(), 'r7');
         wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), _KRATOS_VERSION); 
