@@ -52,6 +52,13 @@ function disable_open_sans( $translations, $text, $context, $domain )
 add_filter('gettext_with_context', 'disable_open_sans', 888, 4 );
 
 /**
+ * 友情链接
+ * @version 1.0
+ * @package Vtrois
+ */  
+add_filter( 'pre_option_link_manager_enabled', '__return_true' );
+
+/**
  * 加载脚本
  * @version 1.0
  * @package Vtrois

@@ -13,19 +13,22 @@
 		</header>
 		<div class="kratos-post-content"><?php the_content(); ?></div>
 		<footer class="kratos-entry-footer clearfix">
-			<div class="post-like-donate visible-lg text-center clearfix">
+			<div class="post-like-donate text-center clearfix">
 				<?php switch (kratos_option('post_like_donate')) {case '0':?>
-   				<a href="<?php echo kratos_option('donate_links');?>" class="KratosDonate btn btn-primary"><i class="fa fa-bitcoin"></i> 打赏</a>
-   				<?php ;break;default:break;}?>
-    			<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="KratosLove btn btn-primary <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" >
-    				<i class="fa fa-heart-o"></i> 喜欢</a>	
+   				<a href="<?php echo kratos_option('donate_links'); ?>" class="KratosDonate visible-lg"><i class="fa fa-bitcoin"></i> 打赏</a>
+   				<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="KratosLove flt <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" >
+    				<i class="fa fa-heart-o"></i> 喜欢</a>
+   				<?php ;break;case '1':?>
+   				<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="KratosLove btn btn-primary <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" >
+    				<i class="fa fa-heart-o"></i> 喜欢</a>
+   				<?php default:break;}?>
     		</div>
 			<div class="footer-tag clearfix">
 				<div class="pull-left">
 				<i class="fa fa-tags"></i>
 				<?php if ( get_the_tags() ) { the_tags('', ' ', ''); } else{ echo '<a>No Tag</a>';  }?>
 				</div>
-		</div>					 
+		</div>
 		</footer>
 	</div>
 	<?php switch (kratos_option('post_cc')) {case '0':?>

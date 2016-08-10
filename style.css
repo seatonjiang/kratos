@@ -1310,8 +1310,9 @@ a.comment-reply-link:hover {
 
 .kratos-entry-footer {
 	color: #9d9d9d;
-	margin-top: 20px;
+	margin-top: 25px;
 	margin: 10px 10px;
+	border-top: 1px solid #e0e0e0;
 }
 
 .kratos-entry-footer .footer-tag a {
@@ -1327,20 +1328,59 @@ a.comment-reply-link:hover {
 	position: relative;
 	text-transform: uppercase;
 }
-
-.kratos-entry-footer .post-like-donate a {
-	width: 140px;
-	border: 0;
-	border-radius: 0px;
-	line-height: 20px;
+.kratos-entry-footer .post-like-donate{
+	margin-top: 25px;
 }
 
-.kratos-entry-footer .post-like-donate .KratosLove {
+.kratos-entry-footer .post-like-donate a {
+	width: 130px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #E87461;
+    box-shadow: none;
+    background: #fff;
+    display: inline-block;
+    text-align: center;
+    margin: 0 2px;
+    color: #E87461;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 0;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.kratos-entry-footer .post-like-donate .KratosDonate {  
+	color: #3496E6;
+    border-color: #3496E6;
+	float: left;
+	margin-left: 200px;
+}
+
+.kratos-entry-footer .post-like-donate .KratosDonate:hover {  
+	color: #fff !important;
+	background-color: #3496E6;
+}
+
+.kratos-entry-footer .post-like-donate .KratosLove:hover {
+	color: #fff !important;
 	background: #E87461;
 }
 
-.kratos-entry-footer .post-like-donate .KratosDonate {
-	background: #7AC74F;
+.kratos-entry-footer .post-like-donate .flt {
+	float: right;
+	margin-right: 200px;
+}
+
+@media screen and (max-width: 970px) {
+	.kratos-entry-footer .post-like-donate .flt {
+	float: none;
+	margin-right: 0px;
+	}
 }
 
 .kratos-entry-footer .post-like-donate .post-like-donate-count {
