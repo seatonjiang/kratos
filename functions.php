@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '2.0.1' );
+define( '_KRATOS_VERSION', '2.0.2' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -70,9 +70,9 @@ function kratos_theme_scripts() {
 		wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.css', array(), '3.3.6');
 		wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.css', array(), 'r7');
         wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), _KRATOS_VERSION); 
-        wp_enqueue_script( 'modernizr', $dir . '/js/modernizr.js' , array(), '2.6.2');
         wp_enqueue_script( 'jquerys', $dir . '/js/jquery.js' , array(), '2.1.4');
         wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.js', array(), '1.3.0');
+        wp_enqueue_script( 'modernizr', $dir . '/js/modernizr.js' , array(), '2.6.2');
 		wp_enqueue_script( 'bootstrap', $dir . '/js/bootstrap.min.js', array(), '3.3.6');
 		wp_enqueue_script( 'waypoints', $dir . '/js/jquery.waypoints.min.js', array(), '4.0.0');
 		wp_enqueue_script( 'stellar', $dir . '/js/jquery.stellar.min.js', array(), '0.6.2');

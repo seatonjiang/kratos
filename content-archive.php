@@ -17,10 +17,10 @@
 				<?php switch (kratos_option('post_like_donate')) {case '0':?>
    				<a href="<?php echo kratos_option('donate_links'); ?>" class="KratosDonate visible-lg"><i class="fa fa-bitcoin"></i> 打赏</a>
    				<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="KratosLove flt <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" >
-    				<i class="fa fa-heart-o"></i> 喜欢</a>
+    				<i class="fa fa-thumbs-o-up"></i> 点赞</a>
    				<?php ;break;case '1':?>
-   				<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="KratosLove btn btn-primary <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" >
-    				<i class="fa fa-heart-o"></i> 喜欢</a>
+   				<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="KratosLove <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" >
+    				<i class="fa fa-thumbs-o-up"></i> 点赞</a>
    				<?php default:break;}?>
     		</div>
 			<div class="footer-tag clearfix">
