@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 默认模版
+Template Name: 无标题模版
 */
 get_header();
 get_header('banner'); ?>
@@ -11,9 +11,6 @@ get_header('banner'); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article>
 				<div class="kratos-hentry kratos-post-inner clearfix">
-					<header class="kratos-entry-header">
-						<h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>
-					</header>
 					<div class="kratos-post-content"><?php the_content(); ?></div>
 				</div>
 				<?php comments_template(); ?>

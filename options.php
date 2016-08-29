@@ -13,9 +13,54 @@ function optionsframework_option_name() {
 function optionsframework_options() {
 
 	$options = array();
+	$options[] = array(
+		'name' => '主页配置(需开启页面)',
+		'type' => 'heading');
+	$options[] = array(
+		'name' => '一级标题',
+		'id' => 'index_text1',
+		'std' => '赋予代码灵魂 , 追求极致性能',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '二级标题',
+		'id' => 'index_text2',
+		'std' => 'Welcome to my Home Page!',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '一屏内容-分类',
+		'id' => 'index_post1_num',
+		'desc' => '提示：每个需要显示的分类数字之间用英文逗号分割',
+		'std' => '1,2',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '一屏内容-标题',
+		'id' => 'index_post1_title',
+		'std' => '精品文章',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '一屏内容-简介',
+		'id' => 'index_post1_jj',
+		'std' => '我很喜欢创作，记录生活中点点滴滴的回忆，记录工作中前进路途的挫折，还会记录那些来自于世间万物的灵感',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '二屏内容-分类',
+		'id' => 'index_post2_num',
+		'desc' => '提示：每个需要显示的分类数字之间用英文逗号分割',
+		'std' => '1,2',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '二屏内容-标题',
+		'id' => 'index_post2_title',
+		'std' => '光的艺术',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '二屏内容-简介',
+		'id' => 'index_post2_jj',
+		'std' => '我喜欢摄影，往往是那些引人入胜的景色让人驻足，利用手中的一部国产手机作为摄影工具，将美好定格在那美妙的瞬间',
+		'type' => 'text');
 
 	$options[] = array(
-		'name' => '站点配置',
+		'name' => 'SEO配置',
 		'type' => 'heading');
 	$options[] = array(
 		'name' => '关键词',
@@ -33,6 +78,10 @@ function optionsframework_options() {
 		'id' => 'site_tongji',
 		'std' => '',
 		'type' => 'textarea');
+
+	$options[] = array(
+		'name' => '站点配置',
+		'type' => 'heading');
 	$options[] = array(
 		'name' => '站点黑白',
 		'desc' => '提示：是否启用站点黑白功能(用于悼念日)',
@@ -49,6 +98,17 @@ function optionsframework_options() {
 		'desc' => '提示：不添加显示文字标题，推荐图片尺寸 200px*50px，保存成功则自动显示Logo图片',
 		'id' => 'site_logo',
 		'type' => 'upload');
+	$options[] = array(
+		'name' => '背景颜色',
+		'desc' => '提示：针对整个站点背景颜色控制',
+		'id' => 'background_index_color',
+		'std' => '#f4f4f4',
+		'type' => 'color' );
+
+
+	$options[] = array(
+		'name' => '头部配置',
+		'type' => 'heading');
 	$options[] = array(
 		'name' => '头部类型',
 		'desc' => '提示：选择您喜欢的头部类型并修改其对应选项',
@@ -119,6 +179,25 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'text'
 	);
+	$options[] = array(
+		'name' => '404页面',
+		'type' => 'heading');
+	$options[] = array(
+		'name' => '页面标题',
+		'id' => 'error_text1',
+		'std' => '这里已经是废墟，什么东西都没有',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '简介说明',
+		'id' => 'error_text2',
+		'std' => 'That page can not be found',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '页面背景',
+		'id' => 'error_image',
+		'std' => get_template_directory_uri() . '/images/404.jpg',
+		'class' => 'error_image',
+		'type' => 'upload');
 
 	$options[] = array(
 		'name' => '轮播图片',

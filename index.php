@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 <?php get_header('banner'); ?>
-<div id="kratos-blog-post" class="kratos-page-gray">
+<div id="kratos-blog-post" style="background:<?php echo kratos_option('background_index_color'); ?>">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-							<?php
+			<?php
 				if(is_home()){
 					kratos_banner();
 				}elseif(is_category()){

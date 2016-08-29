@@ -1,8 +1,19 @@
 <?php
 
-define( '_KRATOS_VERSION', '2.0.2' );
+define( '_KRATOS_VERSION', '2.1.0' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
+
+/**
+ * 主题更新
+ * @version 1.0
+ * @package Vtrois
+ */
+require_once( get_template_directory() . '/inc/version.php' );
+$kratos_update_checker = new ThemeUpdateChecker(
+    'Kratos', 
+    'http://soft.vtrois.com/wordpress/theme/kratos/upgrade.json'
+);
 
 /**
  * 去除头部无用代码
@@ -50,6 +61,7 @@ function disable_open_sans( $translations, $text, $context, $domain )
     return $translations;
 }
 add_filter('gettext_with_context', 'disable_open_sans', 888, 4 );
+add_theme_support( 'post-formats', array( 'aside','gallery', 'video'));
 
 /**
  * 友情链接
@@ -64,23 +76,49 @@ add_filter( 'pre_option_link_manager_enabled', '__return_true' );
  * @package Vtrois
  */  
 function kratos_theme_scripts() {  
-	$dir = get_template_directory_uri(); 
+    $dir = get_template_directory_uri(); 
     if ( !is_admin() ) {  
-        wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.css', array(), '4.6.3');
-		wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.css', array(), '3.3.6');
-		wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.css', array(), 'r7');
-        wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), _KRATOS_VERSION); 
-        wp_enqueue_script( 'jquerys', $dir . '/js/jquery.js' , array(), '2.1.4');
-        wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.js', array(), '1.3.0');
+        wp_enqueue_style( 'animate-style', $dir . '/css/animate.css', array(), '3.5.1'); 
+        wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.css', array(), '4.6.2');
+        wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.css', array(), '3.3.6');
+        wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.css', array(), 'r7');
+        wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), _KRATOS_VERSION);
+        wp_enqueue_script( 'jquerys', $dir . '/js/jquery.min.js' , array(), '2.1.4');
+        wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.js', array(), '1.3.0'); 
         wp_enqueue_script( 'modernizr', $dir . '/js/modernizr.js' , array(), '2.6.2');
-		wp_enqueue_script( 'bootstrap', $dir . '/js/bootstrap.min.js', array(), '3.3.6');
-		wp_enqueue_script( 'waypoints', $dir . '/js/jquery.waypoints.min.js', array(), '4.0.0');
-		wp_enqueue_script( 'stellar', $dir . '/js/jquery.stellar.min.js', array(), '0.6.2');
-		wp_enqueue_script( 'superfish', $dir . '/js/superfish.js', array(), '1.0.0');
+        wp_enqueue_script( 'bootstrap', $dir . '/js/bootstrap.min.js', array(), '3.3.6');
+        wp_enqueue_script( 'waypoints', $dir . '/js/jquery.waypoints.min.js', array(), '4.0.0');
+        wp_enqueue_script( 'stellar', $dir . '/js/jquery.stellar.min.js', array(), '0.6.2');
+        wp_enqueue_script( 'hoverIntents', $dir . '/js/hoverIntent.js', array(), 'r7');
+        wp_enqueue_script( 'superfish', $dir . '/js/superfish.js', array(), '1.0.0');
         wp_enqueue_script( 'kratos', $dir . '/js/kratos.js', array(),  _KRATOS_VERSION);
     }  
 }  
 add_action('wp_enqueue_scripts', 'kratos_theme_scripts');
+
+/**
+ * 禁止字符转义
+ * @version 1.0
+ * @package Vtrois
+ */
+$qmr_work_tags = array('the_title','the_excerpt','single_post_title','comment_author','comment_text','link_description','bloginfo','wp_title', 'term_description','category_description','widget_title','widget_text');
+foreach ( $qmr_work_tags as $qmr_work_tag ) {
+  remove_filter ($qmr_work_tag, 'wptexturize');
+}
+
+/**
+ * 移除自动保存
+ * @version 1.0
+ * @package Vtrois
+ */
+wp_deregister_script('autosave');
+
+/**
+ * 移除修订版本
+ * @version 1.0
+ * @package Vtrois
+ */
+remove_action('post_updated','wp_save_post_revision' );
 
 /**
  * 替换Gravatar服务器
@@ -92,6 +130,18 @@ $avatar = preg_replace( "/http:\/\/(www|\d).gravatar.com/","http://cn.gravatar.c
 return $avatar;
 }
 add_filter( 'get_avatar', 'kratos_get_avatar' );
+
+/**
+ * 移除菜单的多余CSS选择器
+ * @version 1.0
+ * @package Vtrois
+ */
+add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
+function my_css_attributes_filter($var) {
+    return is_array($var) ? array_intersect($var, array('current-menu-item','current-post-ancestor','current-menu-ancestor','current-menu-parent')) : '';
+}
 
 /**
  * 关键词设置
@@ -111,6 +161,108 @@ function kratos_keywords(){
 }
 
 /**
+ * 评论邮件回复系统
+ * @version 1.0
+ * @package Vtrois
+ */
+add_action('comment_unapproved_to_approved', 'kratos_comment_approved');
+function kratos_comment_approved($comment) {
+    if(is_email($comment->comment_author_email)) {
+        $wp_email = 'no-reply@' . preg_replace('#^www\.#', '', strtolower($_SERVER['SERVER_NAME']));
+        $to = trim($comment->comment_author_email);
+        $post_link = get_permalink($comment->comment_post_ID);
+        $subject = '[通知]您的留言已经通过审核';
+        $message = '
+            <div style="background:#ececec;width: 100%;padding: 50px 0;text-align:center;">
+            <div style="background:#fff;width:750px;text-align:left;position:relative;margin:0 auto;font-size:14px;line-height:1.5;">
+                    <div style="zoom:1;padding:25px 40px;background:#518bcb; border-bottom:1px solid #467ec3;">
+                        <h1 style="color:#fff; font-size:25px;line-height:30px; margin:0;"><a href="' . get_option('home') . '" style="text-decoration: none;color: #FFF;">' . htmlspecialchars_decode(get_option('blogname'), ENT_QUOTES) . '</a></h1>
+                    </div>
+                <div style="padding:35px 40px 30px;">
+                    <h2 style="font-size:18px;margin:5px 0;">Hi ' . trim($comment->comment_author) . ':</h2>
+                    <p style="color:#313131;line-height:20px;font-size:15px;margin:20px 0;">您有一条留言通过了管理员的审核并显示在文章页面，摘要信息请见下表。</p>
+                        <table cellspacing="0" style="font-size:14px;text-align:center;border:1px solid #ccc;table-layout:fixed;width:500px;">
+                            <thead>
+                                <tr>
+                                    <th style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:normal;color:#a0a0a0;background:#eee;border-color:#dfdfdf;" width="280px;">文章</th>
+                                    <th style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:normal;color:#a0a0a0;background:#eee;border-color:#dfdfdf;" width="270px;">内容</th>
+                                    <th style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:normal;color:#a0a0a0;background:#eee;border-color:#dfdfdf;" width="110px;" >操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">《' . get_the_title($comment->comment_post_ID) . '》</td>
+                                    <td style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'. trim($comment->comment_content) . '</td>
+                                    <td style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><a href="'.get_comment_link( $comment->comment_ID ).'" style="color:#1E5494;text-decoration:none;vertical-align:middle;" target="_blank">查看留言</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                    <div style="font-size:13px;color:#a0a0a0;padding-top:10px">该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。</div>
+                    <div class="qmSysSign" style="padding-top:20px;font-size:12px;color:#a0a0a0;">
+                        <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;">' . htmlspecialchars_decode(get_option('blogname'), ENT_QUOTES) . '</p>
+                        <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;"><span style="border-bottom:1px dashed #ccc;" t="5" times="">' . date("Y年m月d日",time()) . '</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>';
+        $from = "From: \"" . htmlspecialchars_decode(get_option('blogname'), ENT_QUOTES) . "\" <$wp_email>";
+        $headers = "$from\nContent-Type: text/html; charset=" . get_option('blog_charset') . "\n";
+        wp_mail( $to, $subject, $message, $headers );
+    }
+}
+function comment_mail_notify($comment_id) {
+    $comment = get_comment($comment_id);
+    $parent_id = $comment->comment_parent ? $comment->comment_parent : '';
+    $spam_confirmed = $comment->comment_approved;
+    if (($parent_id != '') && ($spam_confirmed != 'spam')) {
+        $wp_email = 'no-reply@' . preg_replace('#^www\.#', '', strtolower($_SERVER['SERVER_NAME']));
+        $to = trim(get_comment($parent_id)->comment_author_email);
+        $subject = '[通知]您的留言有了新的回复';
+        $message = '
+            <div style="background:#ececec;width: 100%;padding: 50px 0;text-align:center;">
+            <div style="background:#fff;width:750px;text-align:left;position:relative;margin:0 auto;font-size:14px;line-height:1.5;">
+                    <div style="zoom:1;padding:25px 40px;background:#518bcb; border-bottom:1px solid #467ec3;">
+                        <h1 style="color:#fff; font-size:25px;line-height:30px; margin:0;"><a href="' . get_option('home') . '" style="text-decoration: none;color: #FFF;">' . htmlspecialchars_decode(get_option('blogname'), ENT_QUOTES) . '</a></h1>
+                    </div>
+                <div style="padding:35px 40px 30px;">
+                    <h2 style="font-size:18px;margin:5px 0;">Hi ' . trim(get_comment($parent_id)->comment_author) . ':</h2>
+                    <p style="color:#313131;line-height:20px;font-size:15px;margin:20px 0;">您有一条留言有了新的回复，摘要信息请见下表。</p>
+                        <table cellspacing="0" style="font-size:14px;text-align:center;border:1px solid #ccc;table-layout:fixed;width:500px;">
+                            <thead>
+                                <tr>
+                                    <th style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:normal;color:#a0a0a0;background:#eee;border-color:#dfdfdf;" width="235px;">原文</th>
+                                    <th style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:normal;color:#a0a0a0;background:#eee;border-color:#dfdfdf;" width="235px;">回复</th>
+                                    <th style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:normal;color:#a0a0a0;background:#eee;border-color:#dfdfdf;" width="100px;">作者</th>
+                                    <th style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:normal;color:#a0a0a0;background:#eee;border-color:#dfdfdf;" width="90px;" >操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' . trim(get_comment($parent_id)->comment_content) . '</td>
+                                    <td style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'. trim($comment->comment_content) . '</td>
+                                    <td style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' . trim($comment->comment_author) . '</td>
+                                    <td style="padding:5px 0;text-indent:8px;border:1px solid #eee;border-width:0 1px 1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><a href="'.get_comment_link( $comment->comment_ID ).'" style="color:#1E5494;text-decoration:none;vertical-align:middle;" target="_blank">查看回复</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                    <div style="font-size:13px;color:#a0a0a0;padding-top:10px">该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。</div>
+                    <div class="qmSysSign" style="padding-top:20px;font-size:12px;color:#a0a0a0;">
+                        <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;">' . htmlspecialchars_decode(get_option('blogname'), ENT_QUOTES) . '</p>
+                        <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;"><span style="border-bottom:1px dashed #ccc;" t="5" times="">' . date("Y年m月d日",time()) . '</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>';
+        $from = "From: \"" . htmlspecialchars_decode(get_option('blogname'), ENT_QUOTES) . "\" <$wp_email>";
+        $headers = "$from\nContent-Type: text/html; charset=" . get_option('blog_charset') . "\n";
+        wp_mail( $to, $subject, $message, $headers );
+    }
+}
+add_action('comment_post', 'comment_mail_notify');
+
+/**
  * 描述设置
  * @version 1.0
  * @package Vtrois
@@ -119,14 +271,14 @@ function kratos_description(){
         if( is_home() || is_front_page() ){ echo trim(kratos_option('site_description')); }
         elseif( is_category() ){ $description = strip_tags(category_description());echo trim($description);}
         elseif( is_single() ){ 
-		if(get_the_excerpt()){
-			echo get_the_excerpt();
-		}else{
-			global $post;
+        if(get_the_excerpt()){
+            echo get_the_excerpt();
+        }else{
+            global $post;
                         $description = trim( str_replace( array( "\r\n", "\r", "\n", "　", " "), " ", str_replace( "\"", "'", strip_tags( $post->post_content ) ) ) );
                         echo mb_substr( $description, 0, 220, 'utf-8' );
-		}
-	}
+        }
+    }
         elseif( is_search() ){ echo '“';the_search_query();echo '”为您找到结果 ';global $wp_query;echo $wp_query->found_posts;echo ' 个'; }
         elseif( is_tag() ){  $description = strip_tags(tag_description());echo trim($description); }
         else{ $description = strip_tags(term_description());echo trim($description); }
@@ -152,31 +304,20 @@ function kratos_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'kratos_wp_title', 10, 2 );
 
 /**
- * 主题更新
- * @version 1.0
- * @package Vtrois
- */
-require_once( get_template_directory() . '/inc/version.php' );
-$kratos_update_checker = new ThemeUpdateChecker(
-	'Kratos', 
-	'http://soft.vtrois.com/wordpress/theme/kratos/upgrade.json'
-);
-
-/**
  * 后台控制模块
  * @version 1.0
  * @package Vtrois
  */
 if (!function_exists('optionsframework_init')) {
-	define('OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/theme-options/');
-	require_once dirname(__FILE__) . '/inc/theme-options/options-framework.php';
-	$optionsfile = locate_template('options.php');
-	load_template($optionsfile);
+    define('OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/theme-options/');
+    require_once dirname(__FILE__) . '/inc/theme-options/options-framework.php';
+    $optionsfile = locate_template('options.php');
+    load_template($optionsfile);
 }
 function kratos_options_menu_filter( $menu ) {
   $menu['mode'] = 'menu';
   $menu['page_title'] = '主题设置';
-  $menu['menu_title'] = 'Kratos Options';
+  $menu['menu_title'] = '主题设置';
   $menu['menu_slug'] = 'kratos';
   return $menu;
 }
@@ -188,8 +329,8 @@ add_filter( 'optionsframework_menu', 'kratos_options_menu_filter' );
  * @package Vtrois
  */
 function kratos_register_nav_menu() {
-		register_nav_menus(array('header_menu' => '顶部菜单导航'));
-	}
+        register_nav_menus(array('header_menu' => '顶部菜单'));
+    }
 add_action('after_setup_theme', 'kratos_register_nav_menu');
 
 /**
@@ -198,9 +339,9 @@ add_action('after_setup_theme', 'kratos_register_nav_menu');
  * @package Vtrois
  */
 function kratos_active_menu_class($classes) {
-	if (in_array('current-menu-item', $classes) OR in_array('current-menu-ancestor', $classes))
-		$classes[] = 'active';
-	return $classes;
+    if (in_array('current-menu-item', $classes) OR in_array('current-menu-ancestor', $classes))
+        $classes[] = 'active';
+    return $classes;
 }
 add_filter('nav_menu_css_class', 'kratos_active_menu_class');
 
@@ -211,12 +352,34 @@ add_filter('nav_menu_css_class', 'kratos_active_menu_class');
  */
 function kratos_blog_thumbnail() {
 
-	global $post;
-	if (has_post_thumbnail()) {
-		the_post_thumbnail(array(750, ), array('class' => 'kratos-entry-thumb'));
-	}else {}
+    global $post;
+    if (has_post_thumbnail()) {
+        the_post_thumbnail(array(750, ), array('class' => 'kratos-entry-thumb'));
+    }else {}
 }
 add_theme_support( "post-thumbnails" );
+
+/**
+ * 首页缩略图
+ * @version 1.0
+ * @package Vtrois
+ */
+function kratos_index_thumbnail() {  
+  
+    global $post;  
+    if ( has_post_thumbnail() ) {  
+       the_post_thumbnail(array(750, ), array('class' => 'img-responsive'));
+    } else { 
+        $content = $post->post_content;  
+        preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);  
+        $n = count($strResult[1]);  
+        if($n > 0){ 
+            echo '<img src="'.$strResult[1][0].'" class="img-responsive" />';  
+        }else {
+            echo '<img src="'.get_bloginfo('template_url').'/images/default.jpg" class="img-responsive" />';  
+        }  
+    }  
+} 
 
 /**
  * 摘要长度及后缀
@@ -239,19 +402,19 @@ add_filter('excerpt_more', 'kratos_excerpt_more');
  */
 function kratos_set_post_views()
 {
-	if (is_singular())
-	{
-	  global $post;
-	  $post_ID = $post->ID;
-	  if($post_ID)
-	  {
-		  $post_views = (int)get_post_meta($post_ID, 'views', true);
-		  if(!update_post_meta($post_ID, 'views', ($post_views+1)))
-		  {
-			add_post_meta($post_ID, 'views', 1, true);
-		  }
-	  }
-	}
+    if (is_singular())
+    {
+      global $post;
+      $post_ID = $post->ID;
+      if($post_ID)
+      {
+          $post_views = (int)get_post_meta($post_ID, 'views', true);
+          if(!update_post_meta($post_ID, 'views', ($post_views+1)))
+          {
+            add_post_meta($post_ID, 'views', 1, true);
+          }
+      }
+    }
 }
 add_action('wp_head', 'kratos_set_post_views');
 function kratos_get_post_views($before = '', $after = '', $echo = 1)
@@ -396,7 +559,7 @@ function kratos_pages($range = 5){
     global $paged, $wp_query;
     if ( !$max_page ) {$max_page = $wp_query->max_num_pages;}
     if($max_page > 1){if(!$paged){$paged = 1;}
-	echo "<ul class='pagination pull-right'>";
+    echo "<ul class='pagination pull-right'>";
         if($paged != 1){
             echo "<li><a href='" . get_pagenum_link(1) . "' class='extend' title='首页'>&laquo;</a></li>";
         }
@@ -434,7 +597,7 @@ function kratos_pages($range = 5){
             echo "<li><a href='" . get_pagenum_link($max_page) . "' class='extend' title='尾页'>&raquo;</a></li>";
         }
         echo "</ul>";
-	}
+    }
 }
 
 /**
@@ -443,8 +606,8 @@ function kratos_pages($range = 5){
  * @package Vtrois
  */
 function kratos_admin_footer_text($text) {
-	   $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a> 进行创作，并使用 <a href="http://www.vtrois.com/projects/theme-kratos.html" target="_blank">Kratos</a> 主题样式，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=82c35be2134e64f296155ad2b2381e0744a994866ae2a0fa5379798edd926b3f">点击</a> 加入主题讨论群。</span>';
-	return $text;
+       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，并使用 <a href="https://www.vtrois.com/projects/theme-kratos.html" target="_blank">Kratos</a>主题样式，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=82c35be2134e64f296155ad2b2381e0744a994866ae2a0fa5379798edd926b3f">点击</a> 加入主题讨论群。</span>';
+    return $text;
 }
 
 add_filter('admin_footer_text', 'kratos_admin_footer_text');

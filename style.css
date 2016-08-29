@@ -1,10 +1,10 @@
 /*
 Theme Name: Kratos
-Theme URI: https://github.com/Vtrois/Kratos
+Theme URI: https://www.vtrois.com/projects/theme-kratos.html
 Author: Vtrois
-Author URI: http://www.vtrois.com/
+Author URI: https://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 2.0.2
+Version: 2.1.0
 License: Mozilla Public License Version 2.0
 Tags: black, white, blue, two-columns, right-sidebar
 */
@@ -108,10 +108,6 @@ code {
 	border-radius: 0px;
 }
 
-.panel {
-    border-radius: 0px;
-}
-
 .panel-heading {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -144,7 +140,7 @@ code {
 	padding: 2em 0 1em;
 }
 
-#kratos-blog-post p a{
+#kratos-blog-post a,span{
   word-break: break-all;
   word-wrap: break-word;
 }
@@ -201,7 +197,7 @@ code {
 @media screen and (max-width: 768px) {
 	.kratos-cover,
 	.kratos-start {
-		height: 800px;
+		height: 600px;
 	}
 }
 
@@ -358,8 +354,8 @@ code {
 	color: #fff !important;
 }
 
-.sf-menu li.active a:hover,
-.sf-menu li.active a:focus {
+.sf-menu li.current-menu-item a:hover,
+.sf-menu li.current-menu-item a:focus {
 	color: #fff;
 }
 
@@ -382,7 +378,7 @@ code {
 .sf-menu li.sfHover a,
 .sf-menu ul li:hover a,
 .sf-menu ul li.sfHover a,
-.sf-menu li.active a {
+.sf-menu li.current-menu-item a {
 	color: #fff;
 }
 
@@ -729,6 +725,399 @@ code {
 	text-transform: uppercase;
 	position: relative;
 }
+
+/*主页效果开始*/
+
+#kratos-photos .kratos-lead {
+	font-size: 50px;
+	font-weight: 300;
+	color: #484c50;
+	margin-bottom: 10px
+}
+
+@media screen and (max-width:768px) {
+	#kratos-photos .kratos-lead {
+		font-size: 35px
+	}
+}
+
+#kratos-photos .kratos-sub-lead {
+	font-size: 18px;
+	line-height: 32px;
+	font-weight: 300
+}
+
+#kratos-photos .kratos-photos-item {
+	display: block;
+	width: 100%;
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+	z-index: 9;
+	margin-bottom: 30px;
+	-webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
+	-ms-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
+	-o-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-ms-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s
+}
+
+#kratos-photos .kratos-photos-item img {
+	z-index: 8;
+	opacity: 1;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s
+}
+
+#kratos-photos .kratos-photos-item .kratos-text {
+	padding: 30px 10px 10px 20px;
+	text-align: center
+}
+
+#kratos-photos .kratos-photos-item .kratos-text h2,
+#kratos-photos .kratos-photos-item .kratos-text span {
+	text-decoration: none!important
+}
+
+#kratos-photos .kratos-photos-item .kratos-text h2 {
+	font-size: 18px;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+	color: #484c50
+}
+
+#kratos-photos .kratos-photos-item .kratos-text span {
+	color: #b3b3b3;
+	font-size: 16px;
+	font-weight: 400
+}
+
+#kratos-photos .kratos-photos-item .kratos-text p {
+	color: #85919d;
+	font-size: 1em;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s
+}
+
+#kratos-photos .kratos-photos-item:focus,
+#kratos-photos .kratos-photos-item:hover {
+	-webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, .1);
+	-ms-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, .1);
+	-o-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, .1);
+	box-shadow: 0 3px 20px 0 rgba(0, 0, 0, .1);
+	text-decoration: none
+}
+
+#kratos-photos .kratos-photos-item:focus img,
+#kratos-photos .kratos-photos-item:hover img {
+	opacity: .7
+}
+
+#kratos-photos .kratos-photos-item:focus h2,
+#kratos-photos .kratos-photos-item:focus span,
+#kratos-photos .kratos-photos-item:hover h2,
+#kratos-photos .kratos-photos-item:hover span {
+	text-decoration: none!important
+}
+
+#kratos-photos .kratos-photos-item:focus p,
+#kratos-photos .kratos-photos-item:hover p {
+	color: #484c50
+}
+
+#kratos-projects .kratos-label {
+	display: block
+}
+
+#kratos-projects .kratos-lead {
+	font-size: 50px;
+	font-weight: 300;
+	color: #484c50;
+	margin-bottom: 40px
+}
+
+@media screen and (max-width:768px) {
+	#kratos-projects .kratos-lead {
+		font-size: 35px
+	}
+}
+
+#kratos-projects .kratos-feature {
+	clear: both;
+	margin-bottom: 20px;
+	float: left;
+	width: 100%
+}
+
+#kratos-projects .kratos-feature h3 {
+	font-size: 24px;
+	color: #484c50;
+	margin-bottom: 10px;
+	font-weight: 300
+}
+
+#kratos-projects .kratos-btn-action {
+	width: 100%;
+	float: left
+}
+
+@media screen and (max-width:992px) {
+	#kratos-projects .kratos-btn-action {
+		width: 100%;
+		text-align: center
+	}
+	#kratos-projects .kratos-feature-image img {
+		max-width: 100%
+	}
+}
+
+#kratos-host .price-box {
+	background: #fff;
+	border: 2px solid #ECEEF0;
+	text-align: center;
+	font-size: 14px;
+	padding: 30px;
+	margin-bottom: 40px;
+	position: relative;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px
+}
+
+#kratos-host .price-box p {
+	font-size: 14px
+}
+
+#kratos-host .price-box a:hover {
+	text-decoration: none!important;
+	color: #fff!important
+}
+
+#kratos-host .price-box.popular {
+	border: 2px solid #5BC0EB
+}
+
+#kratos-host .price-box.popular .popular-text {
+	top: 0;
+	left: 55%;
+	margin-left: -54px;
+	margin-top: -2em;
+	position: absolute;
+	padding: 4px 20px;
+	background: #5BC0EB;
+	color: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px
+}
+
+#kratos-host .price-box.popular .popular-text:after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -10px;
+	border-top: 10px solid #000;
+	border-top-color: #5BC0EB;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent
+}
+
+#kratos-host .pricing-plan {
+	margin: 0 0 30px 0;
+	padding: 0;
+	font-size: 15px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 700
+}
+
+#kratos-host .price {
+	font-size: 50px;
+	color: #000;
+	line-height: 20px
+}
+
+#kratos-host hr {
+	margin-top: -10px
+}
+
+#kratos-host .price .currency {
+	font-size: 20px;
+	top: -1.2em
+}
+
+#kratos-host .price small {
+	font-size: 16px
+}
+
+#kratos-host .pricing-info {
+	padding: 0;
+	margin: 0 0 30px 0
+}
+
+#kratos-host .pricing-info li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 14px;
+	text-align: center
+}
+
+#kratos-faqs .kratos-faq-list {
+	margin: 0;
+	padding: 0
+}
+
+#kratos-faqs .kratos-faq-list li {
+	margin: 0 0 40px 0;
+	padding: 0;
+	line-height: 24px;
+	list-style: none
+}
+
+@media screen and (max-width:768px) {
+	#kratos-faqs .kratos-faq-list li {
+		margin: 0 0 20px 0
+	}
+}
+
+#kratos-faqs .kratos-faq-list li h2 {
+	font-size: 30px;
+	font-weight: 300;
+	margin-bottom: 15px
+}
+
+@media screen and (max-width:768px) {
+	#kratos-faqs .kratos-faq-list li h2 {
+		font-size: 26px
+	}
+}
+
+#kratos-contact .contact-info {
+	margin: 0;
+	padding: 0
+}
+
+#kratos-contact .contact-info li {
+	list-style: none;
+	margin: 0 0 20px 0;
+	position: relative;
+	padding-left: 40px
+}
+
+#kratos-contact .contact-info li i {
+	position: absolute;
+	top: .3em;
+	left: 0;
+	font-size: 22px;
+	color: rgba(0, 0, 0, .3)
+}
+
+#kratos-contact .contact-info li a {
+	font-weight: 400!important;
+	color: rgba(0, 0, 0, .3)
+}
+
+#kratos-contact .form-control {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	border: none;
+	border: 1px solid rgba(0, 0, 0, .1);
+	font-size: 18px;
+	font-weight: 400;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	border-radius: 0
+}
+
+#kratos-contact .form-control:active,
+#kratos-contact .form-control:focus {
+	border-bottom: 1px solid rgba(0, 0, 0, .5)
+}
+
+#kratos-contact input[type=text] {
+	height: 50px
+}
+
+#kratos-contact .form-group {
+	margin-bottom: 30px
+}
+
+.kratos-testimonial {
+	position: relative;
+	background: #fff;
+	padding: 4em 0;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 18px 88px -22px rgba(0, 0, 0, .58);
+	-moz-box-shadow: 0 18px 88px -22px rgba(0, 0, 0, .58);
+	box-shadow: 0 18px 88px -22px rgba(0, 0, 0, .58)
+}
+
+@media screen and (max-width:768px) {
+	.kratos-testimonial {
+		border-right: 0;
+		margin-bottom: 80px
+	}
+}
+
+.kratos-testimonial h2 {
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 50px
+}
+
+.kratos-testimonial figure {
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	margin-left: -44px;
+	margin-bottom: 20px;
+	background-size: cover
+}
+
+.kratos-testimonial figure img {
+	width: 88px;
+	height: 88px;
+	border: 10px solid #fff;
+	background-size: cover;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%
+}
+
+.kratos-testimonial blockquote {
+	border: none;
+	margin-bottom: 20px
+}
+
+.kratos-testimonial blockquote p {
+	font-style: italic;
+	font-size: 26px;
+	line-height: 1.6em;
+	color: #555
+}
+
+/*主页效果结束*/
 
 #kratos-blog .kratos-post {
 	float: left;
@@ -1547,7 +1936,7 @@ img.size-smiley {
 	font-size: 13px;
 	margin-right: 10px;
 	margin-bottom: 20px;
-	color: #b3b3b3;
+	color: #777676;
 }
 
 .kratos-entry-thumb img {
@@ -1785,10 +2174,10 @@ img.size-smiley {
 }
 
 .pagination>li>a {
-	color: #5BC0EB;
+	color: #626262;
 }
 
-.pagination>.active>a {
+.pagination>.current-menu-item>a {
 	background-color: #5BC0EB;
 	border-color: #5BC0EB;
 }
@@ -1885,7 +2274,7 @@ img.size-smiley {
 	padding-left: 20px
 }
 
-#offcanvas-menu ul li.active>a {
+#offcanvas-menu ul li.current-menu-item>a {
 	color: #5BC0EB
 }
 
@@ -1898,13 +2287,13 @@ img.size-smiley {
 	text-decoration: none
 }
 
-.kratos-nav-toggle.active i::after,
-.kratos-nav-toggle.active i::before {
+.kratos-nav-toggle.current-menu-item i::after,
+.kratos-nav-toggle.current-menu-item i::before {
 	background: #fff
 }
 
-.kratos-nav-toggle.dark.active i::after,
-.kratos-nav-toggle.dark.active i::before {
+.kratos-nav-toggle.dark.current-menu-item i::after,
+.kratos-nav-toggle.dark.current-menu-item i::before {
 	background: #fff
 }
 
@@ -1974,11 +2363,11 @@ img.size-smiley {
 	bottom: -10px
 }
 
-.kratos-nav-toggle.active i {
+.kratos-nav-toggle.current-menu-item i {
 	background: 0 0
 }
 
-.kratos-nav-toggle.active i::before {
+.kratos-nav-toggle.current-menu-item i::before {
 	top: 0;
 	-webkit-transform: rotateZ(45deg);
 	-moz-transform: rotateZ(45deg);
@@ -1987,7 +2376,7 @@ img.size-smiley {
 	transform: rotateZ(45deg)
 }
 
-.kratos-nav-toggle.active i::after {
+.kratos-nav-toggle.current-menu-item i::after {
 	bottom: 0;
 	-webkit-transform: rotateZ(-45deg);
 	-moz-transform: rotateZ(-45deg);

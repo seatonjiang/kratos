@@ -2,6 +2,22 @@
 
 	'use strict';
 
+	// top-img
+	$(document).ready(function() {
+		var random_bg = Math.floor(Math.random() * 6 + 1);
+		var bg = 'url(/wp-content/themes/Kratos/images/bg-' + random_bg + '.jpg)';
+		$("#kratos-topimg").css("background-image", bg);
+	});
+
+	// top-Start
+	$(function() {
+		$('#top-Start').click(function() {
+			$('html,body').animate({
+				scrollTop: $('#kratos-blog').offset().top
+			}, 1000);
+		});
+	});
+
 	// iPad and iPod detection	
 	var isiPad = function() {
 		return (navigator.platform.indexOf("iPad") != -1);
@@ -75,6 +91,28 @@
 		});
 	};
 
+	// Animations
+	var contentWayPoint = function() {
+		var i = 0;
+		$('.animate-box').waypoint(function(direction) {
+			if (direction === 'down' && !$(this.element).hasClass('animated')) {
+				i++;
+				$(this.element).addClass('item-animate');
+				setTimeout(function() {
+					$('body .animate-box.item-animate').each(function(k) {
+						var el = $(this);
+						setTimeout(function() {
+							el.addClass('fadeInUp animated');
+							el.removeClass('item-animate');
+						}, k * 200, 'easeInOutExpo');
+					});
+				}, 100);
+			}
+		}, {
+			offset: '85%'
+		});
+	};
+
 	//Show love
 	$.fn.postLike = function() {
 		if ($(this).hasClass('done')) {
@@ -128,6 +166,7 @@
 		parallax();
 		offcanvas();
 		mobileMenuOutsideClick();
+		contentWayPoint();
 	});
 
 }());
