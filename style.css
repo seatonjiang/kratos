@@ -4,12 +4,17 @@ Theme URI: https://www.vtrois.com/projects/theme-kratos.html
 Author: Vtrois
 Author URI: https://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 2.1.1
+Version: 2.2.0
 License: Mozilla Public License Version 2.0
 Tags: black, white, blue, two-columns, right-sidebar
 */
 
 @charset "UTF-8";
+
+@font-face {
+    font-weight:400;font-family:Din;src:url(fonts/Din.otf) format("opentype")
+}
+
 body {
 	font-family: 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
 	line-height: 1.8;
@@ -57,10 +62,18 @@ h6 {
 	margin: 0 0 30px 0;
 }
 
+cite {
+    font-style: normal;
+}
+
 @media screen and (max-width: 768px) {
 	h1 {
-		font-size: 30px;
+		font-size: 25px !important;
 	}
+}
+
+footer p,.kratos-post-meta {
+    font-family: Din,'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
 }
 
 figure {
@@ -90,7 +103,7 @@ blockquote {
 }
 
 blockquote p:only-child{
-    font-size: 18px;
+    font-size: 16px;
     color: #080808;
 }
 
@@ -102,6 +115,10 @@ code {
     border-radius: 0;
     border: 1px solid #E1E1E1;
     margin: 0 5px;
+}
+
+.post-pwd {
+    width: 55%;
 }
 
 .alert,.progress,.panel-group .panel,.panel{
@@ -127,6 +144,18 @@ code {
 .pagination>li:first-child>span {
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover {
+    border-color: #5bc0eb;
+    background-color: #5bc0eb;
+    color: #fff!important;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover {
+    border-color: #5bc0eb;
+    background-color: #fff;
+    color: #333;
 }
 
 #kratos-blog,
@@ -183,7 +212,7 @@ code {
 #kratos-header {
 	position: relative;
 	margin-bottom: 0;
-	z-index: 9999999;
+	z-index: 5;
 }
 
 .kratos-cover,
@@ -542,6 +571,7 @@ code {
 #kratos-logo a:hover,
 #kratos-logo a:focus {
 	color: #fff !important;
+    text-decoration: none;
 }
 
 #kratos-menu-wrap {
@@ -679,6 +709,10 @@ code {
 
 #kratos-primary-menu .kratos-sub-menu a:hover {
 	color: #5BC0EB !important;
+}
+
+article a {
+    color: #333;
 }
 
 #slide {
@@ -1322,7 +1356,7 @@ code {
 }
 
 .comments-area {
-	margin-bottom: 60px;
+	margin-bottom: -14px;
 	margin-top: 15px;
 }
 
@@ -1391,11 +1425,18 @@ code {
 }
 
 .comment-reply-link {
-	padding: 5px;
-	background-color: #fff;
-	font-size: 12px;
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
+    padding: 5px;
+    padding: .2em .5em .3em;
+    background-color: #999;
+    color: #fff;
+    font-size: 11px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+a.comment-reply-link:focus, a.comment-reply-link:hover {
+    background-color: #666;
+    color: #fff!important;
 }
 
 a.comment-reply-link {
@@ -1414,6 +1455,7 @@ a.comment-reply-link:hover {
 .comment-metadata a,
 .comments-area a.url {
 	color: #444;
+	text-decoration: none;
 }
 
 .comment-respond {
@@ -1436,14 +1478,15 @@ a.comment-reply-link:hover {
 
 #comments-nav a {
 	padding: 5px 10px;
-	border: 1px solid #ddd;
-	background-color: #fff;
+    border: 1px solid #eee;
+    background-color: #e3e3e3;
+    color: #777;
 }
 
 #comments-nav a:hover {
-	border: 1px solid #5BC0EB;
-	color: #5BC0EB;
-	background-color: #eee
+    border: 1px solid #5bc0eb;
+    background-color: #5bc0eb;
+    color: #fff!important;
 }
 
 #comments-nav span.current {
@@ -1520,10 +1563,6 @@ a.comment-reply-link:hover {
 	;
 }
 
-.widget ul {
-	padding: 0 0 0 20px;
-}
-
 .widget li {
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -1531,6 +1570,14 @@ a.comment-reply-link:hover {
 
 .widget .children {
 	padding-left: 30px;
+}
+
+.tab-content{
+	margin: 0 0 -18px;
+}
+
+.tab-content .list-group a:last-child, .widget_kratos_poststab .tab-content .list-group a:nth-last-child(2) {
+    border-bottom: none;
 }
 
 #kratos-widget-area .widget-title {
@@ -1597,12 +1644,20 @@ a.comment-reply-link:hover {
 }
 
 .tag_clouds a {
-	border: 1px solid #41474F;
-	padding: 5px;
-	font-size: 13px !important;
 	display: inline-block;
-	margin-bottom: 8px;
-	margin-right: 4px;
+    margin: 0 2px 4px 0;
+    padding: 4px 15px;
+    border: 1px solid #f0f0f0;
+    color: #666;
+    text-transform: uppercase;
+    line-height: 19px;
+    font-size: 13px !important
+}
+
+.widget_snape_tags a:focus, .widget_kratos_tags a:hover {
+    border-color: #666;
+    background: #666;
+    color: #fff!important;
 }
 
 .amadeus_recent_posts_widget ul,
@@ -1690,6 +1745,127 @@ a.comment-reply-link:hover {
 	margin-bottom: 0px;
 }
 
+#tabul li {
+    border-bottom: 3px solid #f2f2f2;
+    list-style: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.nav-tabs.nav-justified>li>a {
+    margin-right: 0;
+    border-bottom: none;
+    border-radius: 0;
+    color: #000
+}
+
+.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:hover {
+    border: none
+}
+
+@media (min-width:768px) {
+    .navbar-nav>li>a {
+        padding: 30px 15px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-weight: 600
+    }
+}
+
+#tabul .active {
+    position: relative;
+    border-bottom: 3px solid #5bc0eb;
+    background-color: #fff;
+    color: #000;
+    cursor: default
+}
+
+.nav-tabs>li>a:focus,.nav-tabs>li>a:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #000!important
+}
+
+.widget_snape_poststab {
+    padding: 23px 30px 1px!important
+}
+
+.tab-content .list-group a {
+    overflow: hidden;
+    border-bottom: 1px dashed #b4afaf;
+    color: #666;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: color .3s;
+    transition: color .3s
+}
+
+.tab-content .list-group a:last-child,.widget_snape_poststab .tab-content .list-group a:nth-last-child(2) {
+    border-bottom: none
+}
+
+.list-group-item i {
+    margin: 0 5px 0 0
+}
+
+.widget_snape_poststab ul {
+    padding: 0
+}
+
+.widget_snape_poststab li {
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+.list-group-item:first-child {
+    margin-top: 1px
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+    padding: 8px 0;
+    border: none;
+    background-color: #fff
+}
+
+a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,button.list-group-item:hover {
+    background-color: #fff;
+    color: #000!important
+}
+
+
+.kratos-post-meta span {
+    font-size: 13px;
+    color: #777777;
+}
+
+.kratos-post-meta span i:not(:first-child){
+    margin-left: 12px;
+}
+
+@media screen and (max-width:992px) {
+.kratos-post-meta span {
+    font-size: 12px;
+}
+.kratos-post-meta span i:not(:first-child){
+    margin-left: 10px;
+}
+}
+
+@media screen and (max-width:768px) {
+.kratos-post-meta span {
+    font-size: 9pt;
+}
+.kratos-post-meta span i:not(:first-child){
+    margin-left: 5px;
+}
+}
+
+
 .kratos-hentry {
 	margin: 0 0 25px;
 	background-color: #fff;
@@ -1766,70 +1942,323 @@ a.comment-reply-link:hover {
 	position: relative;
 	text-transform: uppercase;
 }
-.kratos-entry-footer .post-like-donate{
-	margin-top: 25px;
+.kratos-entry-footer {
+    margin: 10px;
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    color: #9d9d9d
+}
+
+.kratos-entry-footer .footer-tag a {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 2px 5px;
+    margin-top: 20px;
+    padding: 3px 7px;
+    border-radius: 0;
+    background-color: #aaa;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 13px
+}
+
+.kratos-entry-footer .footer-tag a:focus,.kratos-entry-footer .footer-tag a:hover {
+    color: #fff!important
+}
+
+.kratos-entry-footer .footer-tag a:hover {
+    background: #8d8d8d
+}
+
+.kratos-entry-footer .post-like-donate {
+    margin-top: 20px
 }
 
 .kratos-entry-footer .post-like-donate a {
-	width: 130px;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid #E87461;
-    box-shadow: none;
-    background: #fff;
     display: inline-block;
-    text-align: center;
     margin: 0 2px;
-    color: #E87461;
-    font-size: 14px;
-    text-decoration: none;
+    width: 130px;
+    height: 40px;
+    border: 1px solid #e87461;
     border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    color: #e87461;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14.5px;
+    line-height: 40px;
     -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    transition: all .3s ease
 }
 
-.kratos-entry-footer .post-like-donate .KratosDonate {  
-	color: #3496E6;
-    border-color: #3496E6;
-	float: left;
-	margin-left: 200px;
+.kratos-entry-footer .post-like-donate a:focus {
+    color: #e87461!important
 }
 
-.kratos-entry-footer .post-like-donate .KratosDonate:hover {  
-	color: #fff !important;
-	background-color: #3496E6;
+.kratos-entry-footer .post-like-donate .Donate {
+    margin-left: 10px;
+    border-color: #3496e6;
+    color: #3496e6
 }
 
-.kratos-entry-footer .post-like-donate .KratosLove:hover {
-	color: #fff !important;
-	background: #E87461;
+.kratos-entry-footer .post-like-donate .Donate:focus {
+    color: #3496e6!important
 }
 
-.kratos-entry-footer .post-like-donate .flt {
-	float: right;
-	margin-right: 200px;
+.kratos-entry-footer .post-like-donate .Donate:hover {
+    background-color: #3496e6;
+    color: #fff!important
 }
 
-@media screen and (max-width: 1200px) {
-	.kratos-entry-footer .post-like-donate .flt {
-	float: none;
-	margin-right: 0px;
-	}
+.kratos-entry-footer .post-like-donate .Love:hover {
+    background: #e87461;
+    color: #fff!important
+}
+
+.kratos-entry-footer .post-like-donate .Share {
+    border-color: #78ce79;
+    color: #78ce79
+}
+
+.kratos-entry-footer .post-like-donate .Share:focus {
+    color: #78ce79!important
+}
+
+.kratos-entry-footer .post-like-donate .Share:hover {
+    background-color: #78ce79;
+    color: #fff!important
+}
+
+.kratos-entry-footer .post-like-donate .weixin:focus {
+    color: #38ad5a!important
+}
+
+.kratos-entry-footer .post-like-donate .facebook:focus {
+    color: #3e569b!important
+}
+
+.kratos-entry-footer .post-like-donate .googleplus:focus {
+    color: #f63e28!important
+}
+
+.kratos-entry-footer .post-like-donate .twitter:focus {
+    color: #55acee!important
+}
+
+@media screen and (max-width:768px) {
+    .kratos-entry-footer .post-like-donate a {
+        width: 75pt;
+        height: 31px;
+        font-size: 13px;
+        line-height: 29px
+    }
+
+    .share-plain {
+        width: 30px!important;
+        height: 30px!important;
+        font-size: 14px
+    }
+
+    .share-plain .icon-wrap {
+        width: 29px;
+        height: 29px;
+        line-height: 29px
+    }
+}
+
+@media screen and (max-width:530px) {
+    .kratos-entry-footer .post-like-donate a {
+        width: 5pc
+    }
+
+    .kratos-entry-footer .footer-tag a {
+        padding: 2px 4px
+    }
+
+    .copyright h5 {
+        font-size: 13px
+    }
+}
+
+@media screen and (max-width:450px) {
+    .kratos-entry-footer .post-like-donate a {
+        width: 70px;
+        height: 31px;
+        font-size: 13px;
+        line-height: 29px
+    }
+}
+
+@media screen and (max-width:415px) {
+    .kratos-entry-footer .post-like-donate a {
+        width: 65px;
+        height: 31px;
+        font-size: 9pt;
+        line-height: 29px
+    }
 }
 
 .kratos-entry-footer .post-like-donate .post-like-donate-count {
-	position: absolute;
-	color: #fff;
-	background: #5BC0EB;
-	width: 50px;
-	height: 50px;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 40px;
-	border: 4px solid #fff;
-	margin: -8px 0px 0px -26px;
-	border-radius: 40px;
+    position: absolute;
+    margin: -8px 0 0 -26px;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #fff;
+    border-radius: 40px;
+    background: #5bc0eb;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 40px
+}
+
+.share-wrap {
+    display: block;
+    margin: 10px 0 -20px
+}
+
+.share-plain,.share-wrap {
+    position: relative;
+    text-align: center
+}
+
+.share-plain {
+    display: inline-block!important;
+    box-sizing: border-box;
+    margin: 4px 3px!important;
+    padding: 0;
+    width: 2pc!important;
+    height: 2pc!important;
+    border: 1px solid #bdc4d6;
+    border-radius: 30px!important;
+    color: #bdc4d6;
+    white-space: nowrap;
+    line-height: 30px!important;
+    cursor: pointer;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.share-plain .icon-wrap {
+    float: left;
+    width: 2pc;
+    height: 2pc;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 30px
+}
+
+.share-plain.weibo {
+    border-color: #e6162d!important;
+    color: #e6162d!important
+}
+
+.share-plain.twitter,.share-plain.weibo {
+    border-width: 1px!important;
+    background-color: transparent
+}
+
+.share-plain.twitter {
+    border-color: #55acee!important;
+    color: #55acee!important
+}
+
+.share-plain.facebook {
+    border-color: #3e569b!important;
+    color: #3e569b!important
+}
+
+.share-plain.facebook,.share-plain.googleplus {
+    border-width: 1px!important;
+    background-color: transparent
+}
+
+.share-plain.googleplus {
+    border-color: #f63e28!important;
+    color: #f63e28!important
+}
+
+.share-plain.weixin {
+    border-color: #38ad5a!important;
+    border-width: 1px!important;
+    background-color: transparent;
+    color: #38ad5a!important
+}
+
+.share-plain.pop:hover .share-int {
+    display: block;
+    opacity: 1
+}
+
+.share-plain .share-int {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    z-index: 8;
+    display: none;
+    margin-left: -110px;
+    padding: 10px;
+    width: 220px;
+    border: 1px solid #d8d8d8;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    color: #555;
+    text-align: center;
+    opacity: .2;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease
+}
+
+@media screen and (max-width:768px) {
+    .share-plain .share-int {
+        margin-left: -75px;
+        padding: 5px 15px;
+        width: 150px
+    }
+}
+
+.share-plain .share-int:after {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    display: block;
+    margin-left: -25px;
+    width: 50px;
+    height: 20px;
+    background: url(images/arrow.png) 0 0 no-repeat;
+    background-size: 50px 20px;
+    content: ''
+}
+
+.share-plain .share-int canvas,.share-plain .share-int img {
+    margin: 15px 0 -6px;
+    height: auto;
+    max-width: 100%
+}
+
+.share-plain .share-int p {
+    margin: 15px 0 0;
+    color: #676767;
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.5
+}
+
+@media screen and (max-width:768px) {
+    .share-plain .share-int p {
+        margin: 10px 0 5px;
+        font-size: 10px
+    }
 }
 
 img.wp-smiley {
@@ -1906,11 +2335,12 @@ img.size-smiley {
 }
 
 .kratos-entry-header {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 .kratos-entry-title {
-	margin: 0 0 20px;
+	margin: 0 0 15px;
+    font-size: 30px;
 }
 
 .kratos-entry-title a {
@@ -1941,6 +2371,41 @@ img.size-smiley {
 	height: auto;
 	max-width: 100%;
 	width: 750px;
+}
+
+.video-container:not(:first-child) {
+    margin-top: 15px
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 56.25%;
+    height: 0
+}
+
+.video-container embed,.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+@media (max-width: 992px){
+article h6 {
+    margin: 15px -23px;
+    padding: 0 18px;
+}
+}
+article h6 {
+    margin: 15px -25px;
+    padding: 0 25px;
+    border-left: 5px solid #51aded;
+    background-color: #f7f7f7;
+    font-size: 18px;
+    line-height: 40px;
 }
 
 #nav-posts .page-numbers {
@@ -2170,6 +2635,60 @@ img.size-smiley {
 	border: 2px solid #5BC0EB;
 	color: #fff
 }
+
+.downbtn {
+    padding: 10px 26px;
+    border: 1px solid #5bc0eb;
+    background: #5bc0eb;
+    color: #fff;
+    line-height: 3
+}
+
+.downbtn:focus {
+    background: #5bc0eb;
+    color: #fff!important
+}
+
+.downbtn:hover {
+    background: #4b9ec1;
+    color: #fff!important
+}
+
+.downbtn:not(:first-child) {
+    margin-left: 10px
+}
+
+.downcloud {
+    border: 1px solid #0ead69
+}
+
+.downcloud,.downcloud:focus {
+    background: #0ead69
+}
+
+.downcloud:hover {
+    background: #0c8e56
+}
+
+@media screen and (max-width:768px) {
+    .downbtn {
+        padding: 9px 1pc;
+        font-size: 14px
+    }
+}
+
+@media screen and (max-width:450px) {
+    .downbtn {
+        padding: 8px 1pc
+    }
+}
+
+@media screen and (max-width:415px) {
+    .downbtn {
+        padding: 8px 13px
+    }
+}
+
 
 .pagination>li>a {
 	color: #626262;

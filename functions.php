@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '2.1.1' );
+define( '_KRATOS_VERSION', '2.2.0' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -12,14 +12,52 @@ require_once( get_template_directory() . '/inc/widgets.php');
 require_once( get_template_directory() . '/inc/version.php' );
 $kratos_update_checker = new ThemeUpdateChecker(
     'Kratos', 
-    'http://soft.vtrois.com/wordpress/theme/kratos/upgrade.json'
+    'https://soft.vtrois.com/wordpress/theme/kratos/upgrade.json'
 );
 
 /**
- * 去除头部无用代码
+ * 替换Gravatar服务器
+ * @version 1.0
+ * @package Vtrois
+ */
+function kratos_get_avatar( $avatar ) {
+    $avatar = preg_replace( "/http:\/\/(www|\d).gravatar.com/", "http://cn.gravatar.com",$avatar );
+    return $avatar;
+}
+add_filter( 'get_avatar', 'kratos_get_avatar' );
+
+/**
+ * 加载脚本
  * @version 1.0
  * @package Vtrois
  */  
+function kratos_theme_scripts() {  
+    $dir = get_template_directory_uri(); 
+    if ( !is_admin() ) {  
+        wp_enqueue_style( 'animate-style', $dir . '/css/animate.css', array(), '3.5.1'); 
+        wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.css', array(), '4.6.2');
+        wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.css', array(), '3.3.6');
+        wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.css', array(), 'r7');
+        wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), _KRATOS_VERSION);
+        wp_enqueue_script( 'jquerys', $dir . '/js/jquery.min.js' , array(), '2.1.4');
+        wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.js', array(), '1.3.0'); 
+        wp_enqueue_script( 'qrcode', $dir . '/js/jquery.qrcode.min.js', array(), _KRATOS_VERSION);
+        wp_enqueue_script( 'modernizr', $dir . '/js/modernizr.js' , array(), '2.6.2');
+        wp_enqueue_script( 'bootstrap', $dir . '/js/bootstrap.min.js', array(), '3.3.6');
+        wp_enqueue_script( 'waypoints', $dir . '/js/jquery.waypoints.min.js', array(), '4.0.0');
+        wp_enqueue_script( 'stellar', $dir . '/js/jquery.stellar.min.js', array(), '0.6.2');
+        wp_enqueue_script( 'hoverIntents', $dir . '/js/hoverIntent.js', array(), 'r7');
+        wp_enqueue_script( 'superfish', $dir . '/js/superfish.js', array(), '1.0.0');
+        wp_enqueue_script( 'kratos', $dir . '/js/kratos.js', array(),  _KRATOS_VERSION);
+    }  
+}  
+add_action('wp_enqueue_scripts', 'kratos_theme_scripts');
+
+/**
+ * 移除头部代码
+ * @version 1.0
+ * @package Vtrois
+ */
 remove_action( 'wp_head', 'feed_links', 2 );   
 remove_action( 'wp_head', 'feed_links_extra', 3 );   
 remove_action( 'wp_head', 'rsd_link' );   
@@ -61,40 +99,6 @@ function disable_open_sans( $translations, $text, $context, $domain )
     return $translations;
 }
 add_filter('gettext_with_context', 'disable_open_sans', 888, 4 );
-add_theme_support( 'post-formats', array( 'aside','gallery', 'video'));
-
-/**
- * 友情链接
- * @version 1.0
- * @package Vtrois
- */  
-add_filter( 'pre_option_link_manager_enabled', '__return_true' );
-
-/**
- * 加载脚本
- * @version 1.0
- * @package Vtrois
- */  
-function kratos_theme_scripts() {  
-    $dir = get_template_directory_uri(); 
-    if ( !is_admin() ) {  
-        wp_enqueue_style( 'animate-style', $dir . '/css/animate.css', array(), '3.5.1'); 
-        wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.css', array(), '4.6.2');
-        wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.css', array(), '3.3.6');
-        wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.css', array(), 'r7');
-        wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), _KRATOS_VERSION);
-        wp_enqueue_script( 'jquerys', $dir . '/js/jquery.min.js' , array(), '2.1.4');
-        wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.js', array(), '1.3.0'); 
-        wp_enqueue_script( 'modernizr', $dir . '/js/modernizr.js' , array(), '2.6.2');
-        wp_enqueue_script( 'bootstrap', $dir . '/js/bootstrap.min.js', array(), '3.3.6');
-        wp_enqueue_script( 'waypoints', $dir . '/js/jquery.waypoints.min.js', array(), '4.0.0');
-        wp_enqueue_script( 'stellar', $dir . '/js/jquery.stellar.min.js', array(), '0.6.2');
-        wp_enqueue_script( 'hoverIntents', $dir . '/js/hoverIntent.js', array(), 'r7');
-        wp_enqueue_script( 'superfish', $dir . '/js/superfish.js', array(), '1.0.0');
-        wp_enqueue_script( 'kratos', $dir . '/js/kratos.js', array(),  _KRATOS_VERSION);
-    }  
-}  
-add_action('wp_enqueue_scripts', 'kratos_theme_scripts');
 
 /**
  * 禁止字符转义
@@ -103,7 +107,7 @@ add_action('wp_enqueue_scripts', 'kratos_theme_scripts');
  */
 $qmr_work_tags = array('the_title','the_excerpt','single_post_title','comment_author','comment_text','link_description','bloginfo','wp_title', 'term_description','category_description','widget_title','widget_text');
 foreach ( $qmr_work_tags as $qmr_work_tag ) {
-  remove_filter ($qmr_work_tag, 'wptexturize');
+    remove_filter ($qmr_work_tag, 'wptexturize');
 }
 
 /**
@@ -121,15 +125,19 @@ wp_deregister_script('autosave');
 remove_action('post_updated','wp_save_post_revision' );
 
 /**
- * 替换Gravatar服务器
+ * 短代码标签乱码问题
  * @version 1.0
  * @package Vtrois
  */
-function kratos_get_avatar( $avatar ) {
-$avatar = preg_replace( "/http:\/\/(www|\d).gravatar.com/","http://cn.gravatar.com",$avatar );
-return $avatar;
-}
-add_filter( 'get_avatar', 'kratos_get_avatar' );
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop' , 12);
+
+/**
+ * 友情链接功能
+ * @version 1.0
+ * @package Vtrois
+ */  
+add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 
 /**
  * 移除菜单的多余CSS选择器
@@ -142,6 +150,263 @@ add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
 function my_css_attributes_filter($var) {
     return is_array($var) ? array_intersect($var, array('current-menu-item','current-post-ancestor','current-menu-ancestor','current-menu-parent')) : '';
 }
+
+/**
+ * 短代码设置
+ * @version 1.0
+ * @package Vtrois
+ */
+function success($atts, $content=null, $code="") {
+    $return = '<div class="alert alert-success">';
+    $return .= $content;
+    $return .= '</div>';
+    return $return;
+}
+add_shortcode('success' , 'success' );
+
+function info($atts, $content=null, $code="") {
+    $return = '<div class="alert alert-info">';
+    $return .= $content;
+    $return .= '</div>';
+    return $return;
+}
+add_shortcode('info' , 'info' );
+
+function warning($atts, $content=null, $code="") {
+    $return = '<div class="alert alert-warning">';
+    $return .= $content;
+    $return .= '</div>';
+    return $return;
+}
+add_shortcode('warning' , 'warning' );
+
+function danger($atts, $content=null, $code="") {
+    $return = '<div class="alert alert-danger">';
+    $return .= $content;
+    $return .= '</div>';
+    return $return;
+}
+add_shortcode('danger' , 'danger' );
+
+function wymusic($atts, $content=null, $code="") {
+    $return = '<iframe class="" style="width:100%" frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 src="http://music.163.com/outchain/player?type=2&id=';
+    $return .= $content;
+    $return .= '&auto='. kratos_option('wy_music') .'&height=66"></iframe>';
+    return $return;
+}
+add_shortcode('music' , 'wymusic' );
+
+function bdbtn($atts, $content=null, $code="") {
+    $return = '<a class="downbtn" href="';
+    $return .= $content;
+    $return .= '" target="_blank"><i class="fa fa-download"></i> 本地下载</a>';
+    return $return;
+}
+add_shortcode('bdbtn' , 'bdbtn' );
+
+function ypbtn($atts, $content=null, $code="") {
+    $return = '<a class="downbtn downcloud" href="';
+    $return .= $content;
+    $return .= '" target="_blank"><i class="fa fa-cloud-download"></i> 云盘下载</a>';
+    return $return;
+}
+add_shortcode('ypbtn' , 'ypbtn' );
+
+function nrtitle($atts, $content=null, $code="") {
+    $return = '<h6>';
+    $return .= $content;
+    $return .= '</h6>';
+    return $return;
+}
+add_shortcode('title' , 'nrtitle' );
+
+function kbd($atts, $content=null, $code="") {
+    $return = '<kbd>';
+    $return .= $content;
+    $return .= '</kbd>';
+    return $return;
+}
+add_shortcode('kbd' , 'kbd' );
+
+function nrmark($atts, $content=null, $code="") {
+    $return = '<mark>';
+    $return .= $content;
+    $return .= '</mark>';
+    return $return;
+}
+add_shortcode('mark' , 'nrmark' );
+
+function striped($atts, $content=null, $code="") {
+    $return = '<div class="progress progress-striped active"><div class="progress-bar" style="width: ';
+    $return .= $content;
+    $return .= '%;"></div></div>';
+    return $return;
+}
+add_shortcode('striped' , 'striped' );
+
+function successbox($atts, $content=null, $code="") {
+    extract(shortcode_atts(array("title"=>'标题内容'),$atts));
+    $return = '<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title">';
+    $return .= $title;
+    $return .= '</h3></div><div class="panel-body">';
+    $return .= $content;
+    $return .= '</div></div>';
+    return $return;
+}
+add_shortcode('successbox' , 'successbox' );
+
+function infobox($atts, $content=null, $code="") {
+    extract(shortcode_atts(array("title"=>'标题内容'),$atts));
+    $return = '<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title">';
+    $return .= $title;
+    $return .= '</h3></div><div class="panel-body">';
+    $return .= $content;
+    $return .= '</div></div>';
+    return $return;
+}
+add_shortcode('infobox' , 'infobox' );
+
+function warningbox($atts, $content=null, $code="") {
+    extract(shortcode_atts(array("title"=>'标题内容'),$atts));
+    $return = '<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title">';
+    $return .= $title;
+    $return .= '</h3></div><div class="panel-body">';
+    $return .= $content;
+    $return .= '</div></div>';
+    return $return;
+}
+add_shortcode('warningbox' , 'warningbox' );
+
+function dangerbox($atts, $content=null, $code="") {
+    extract(shortcode_atts(array("title"=>'标题内容'),$atts));
+    $return = '<div class="panel panel-danger"><div class="panel-heading"><h3 class="panel-title">';
+    $return .= $title;
+    $return .= '</h3></div><div class="panel-body">';
+    $return .= $content;
+    $return .= '</div></div>';
+    return $return;
+}
+add_shortcode('dangerbox' , 'dangerbox' );
+
+function youku($atts, $content=null, $code="") {
+    $return = '<div class="video-container"><iframe height="498" width="750" src="http://player.youku.com/embed/';
+    $return .= $content;
+    $return .= '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+    return $return;
+}
+add_shortcode('youku' , 'youku' );
+
+function tudou($atts, $content=null, $code="") {
+    extract(shortcode_atts(array("code"=>'0'),$atts));
+    $return = '<div class="video-container"><iframe src="http://www.tudou.com/programs/view/html5embed.action?type=1&code=';
+    $return .= $content;
+    $return .= '&lcode=';
+    $return .= $code;
+    $return .= '&resourceId=0_06_05_99" allowtransparency="true" allowfullscreen="true" allowfullscreenInteractive="true" scrolling="no" border="0" frameborder="0"></iframe></div>';
+    return $return;
+}
+add_shortcode('tudou' , 'tudou' );
+
+function vqq($atts, $content=null, $code="") {
+    extract(shortcode_atts(array("auto"=>'0'),$atts));
+    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="http://v.qq.com/iframe/player.html?vid=';
+    $return .= $content;
+    $return .= '&tiny=0&auto=';
+    $return .= $auto;
+    $return .= '" allowfullscreen></iframe></div>';
+    return $return;
+}
+add_shortcode('vqq' , 'vqq' );
+
+function youtube($atts, $content=null, $code="") {
+    $return = '<div class="video-container"><iframe height="498" width="750" src="https://www.youtube.com/embed/';
+    $return .= $content;
+    $return .= '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>';
+    return $return;
+}
+add_shortcode('youtube' , 'youtube' );
+
+function pptv($atts, $content=null, $code="") {
+    $return = '<div class="video-container"><iframe src="http://player.pptv.com/iframe/index.html#id=';
+    $return .= $content;
+    $return .= '&ctx=o%3Dv_share" allowtransparency="true" width="640" height="400" scrolling="no" frameborder="0" ></iframe></div>';
+    return $return;
+}
+add_shortcode('pptv' , 'pptv' );
+
+function bilibili($atts, $content=null, $code="") {
+    $return = '<div class="video-container"><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=';
+    $return .= $content;
+    $return .= '&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></embed></div>';
+    return $return;
+}
+add_shortcode('bilibili' , 'bilibili' );
+
+add_action( 'admin_print_footer_scripts', 'shortcode_buttons', 100 );
+function shortcode_buttons() {?>
+    <script type="text/javascript">
+        QTags.addButton( 'title', '内容标题', '[title]标题内容[/title]');
+        QTags.addButton( 'kbd', '键盘文本', '[kbd]按键[/kbd]');
+        QTags.addButton( 'mark', '内容标记', '[mark]内容[/mark]');
+        QTags.addButton( 'striped', '进度条', '[striped]数值[/striped]');
+        QTags.addButton( 'bdbtn', '本地下载', '[bdbtn]本地下载地址[/bdbtn]');
+        QTags.addButton( 'ypbtn', '云盘下载', '[ypbtn]云盘下载地址[/ypbtn]');
+        QTags.addButton( 'music', '网易云音乐', '[music]音乐ID[/music]');
+        QTags.addButton( 'youku', '优酷', '[youku]视频ID[/youku]');
+        QTags.addButton( 'tudou', '土豆', '[tudou code=""]视频ID[/tudou]');
+        QTags.addButton( 'vqq', '腾讯视频', '[vqq auto="0"]视频ID[/vqq]');
+        QTags.addButton( 'youtube', 'YouTube', '[youtube]视频ID[/youtube]');
+        QTags.addButton( 'pptv', 'PPTV', '[pptv]视频ID[/pptv]');
+        QTags.addButton( 'bilibili', '哔哩哔哩', '[bilibili]视频ID[/bilibili]');
+        QTags.addButton( 'success', '绿色背景栏', '[success]正文内容[/success]');
+        QTags.addButton( 'info', '蓝色背景栏', '[info]正文内容[/info]');
+        QTags.addButton( 'warning', '黄色背景栏', '[warning]正文内容[/warning]');
+        QTags.addButton( 'danger', '红色背景栏', '[danger]正文内容[/danger]');
+        QTags.addButton( 'successbox', '绿色面板', '[successbox title="标题内容"]正文内容[/successbox]');
+        QTags.addButton( 'infobox', '蓝色面板', '[infobox title="标题内容"]正文内容[/infobox]');
+        QTags.addButton( 'warningbox', '黄色面板', '[warningbox title="标题内容"]正文内容[/warningbox]');
+        QTags.addButton( 'dangerbox', '红色面板', '[dangerbox title="标题内容"]正文内容[/dangerbox]');
+    </script>
+<?php }
+
+/**
+ * 热度文章
+ * @version 1.0
+ * @package Vtrois
+ */
+function most_comm_posts($days=30, $nums=5) {
+    global $wpdb;
+    date_default_timezone_set("PRC");
+    $today = date("Y-m-d H:i:s");
+    $daysago = date( "Y-m-d H:i:s", strtotime($today) - ($days * 24 * 60 * 60) );
+    $result = $wpdb->get_results("SELECT comment_count, ID, post_title, post_date FROM $wpdb->posts WHERE post_date BETWEEN '$daysago' AND '$today' and post_type='post' and post_status='publish' ORDER BY comment_count DESC LIMIT 0 , $nums");
+    $output = '';
+    if(empty($result)) {
+        $output = '<li>None data.</li>';
+    } else {
+        foreach ($result as $topten) {
+            $postid = $topten->ID;
+            $title = $topten->post_title;
+            $commentcount = $topten->comment_count;
+            if ($commentcount >= 0) {
+                $output .= '<a class="list-group-item visible-lg" title="'. $title .'" href="'.get_permalink($postid).'" rel="bookmark"><i class="fa  fa-book"></i> ';
+                    $output .= strip_tags($title);
+                $output .= '</a>';
+                $output .= '<a class="list-group-item visible-md" title="'. $title .'" href="'.get_permalink($postid).'" rel="bookmark"><i class="fa  fa-book"></i> ';
+                    $output .= strip_tags($title);
+                $output .= '</a>';
+            }
+        }
+    }
+    echo $output;
+}
+
+/**
+ * 添加文章形式
+ * @version 1.0
+ * @package Vtrois
+ */
+add_theme_support( 'post-formats', array('gallery','video') );
 
 /**
  * 关键词设置
@@ -159,6 +424,85 @@ function kratos_keywords(){
         elseif( is_search() ){ the_search_query(); }
         else{ echo trim(wp_title('',FALSE)); }
 }
+
+/**
+ * 描述设置
+ * @version 1.0
+ * @package Vtrois
+ */ 
+function kratos_description(){
+        if( is_home() || is_front_page() ){ echo trim(kratos_option('site_description')); }
+        elseif( is_category() ){ $description = strip_tags(category_description());echo trim($description);}
+        elseif( is_single() ){ 
+        if(get_the_excerpt()){
+            echo get_the_excerpt();
+        }else{
+            global $post;
+                        $description = trim( str_replace( array( "\r\n", "\r", "\n", "　", " "), " ", str_replace( "\"", "'", strip_tags( $post->post_content ) ) ) );
+                        echo mb_substr( $description, 0, 220, 'utf-8' );
+        }
+    }
+        elseif( is_search() ){ echo '“';the_search_query();echo '”为您找到结果 ';global $wp_query;echo $wp_query->found_posts;echo ' 个'; }
+        elseif( is_tag() ){  $description = strip_tags(tag_description());echo trim($description); }
+        else{ $description = strip_tags(term_description());echo trim($description); }
+    }
+
+/**
+ * 文章外链优化
+ * @version 1.0
+ * @package Vtrois
+ */
+function imgnofollow( $content ) {
+    $regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>";
+    if(preg_match_all("/$regexp/siU", $content, $matches, PREG_SET_ORDER)) {
+        if( !empty($matches) ) {
+            $srcUrl = get_option('siteurl');
+            for ($i=0; $i < count($matches); $i++)
+            {
+                $tag = $matches[$i][0];
+                $tag2 = $matches[$i][0];
+                $url = $matches[$i][0];
+                $noFollow = '';
+                $pattern = '/target\s*=\s*"\s*_blank\s*"/';
+                preg_match($pattern, $tag2, $match, PREG_OFFSET_CAPTURE);
+                if( count($match) < 1 )
+                    $noFollow .= ' target="_blank" ';
+                $pattern = '/rel\s*=\s*"\s*[n|d]ofollow\s*"/';
+                preg_match($pattern, $tag2, $match, PREG_OFFSET_CAPTURE);
+                if( count($match) < 1 )
+                    $noFollow .= ' rel="nofollow" ';
+                $pos = strpos($url,$srcUrl);
+                if ($pos === false) {
+                    $tag = rtrim ($tag,'>');
+                    $tag .= $noFollow.'>';
+                    $content = str_replace($tag2,$tag,$content);
+                }
+            }
+        }
+    }
+    $content = str_replace(']]>', ']]>', $content);
+    return $content;
+}
+add_filter( 'the_content', 'imgnofollow');
+
+/**
+ * 标题设置
+ * @version 1.0
+ * @package Vtrois
+ */
+function kratos_wp_title( $title, $sep ) {
+    global $paged, $page;
+    if ( is_feed() )
+        return $title;
+    $title .= get_bloginfo( 'name' );
+    $site_description = get_bloginfo( 'description', 'display' );
+    if ( $site_description && ( is_home() || is_front_page() ) )
+        $title = "$title $sep $site_description";
+    if ( $paged >= 2 || $page >= 2 )
+        $title = "$title $sep " . sprintf( __( 'Page %s', 'kratos' ), max( $paged, $page ) );
+    return $title;
+}
+add_filter( 'wp_title', 'kratos_wp_title', 10, 2 );
 
 /**
  * 评论邮件回复系统
@@ -262,46 +606,6 @@ function comment_mail_notify($comment_id) {
 }
 add_action('comment_post', 'comment_mail_notify');
 
-/**
- * 描述设置
- * @version 1.0
- * @package Vtrois
- */ 
-function kratos_description(){
-        if( is_home() || is_front_page() ){ echo trim(kratos_option('site_description')); }
-        elseif( is_category() ){ $description = strip_tags(category_description());echo trim($description);}
-        elseif( is_single() ){ 
-        if(get_the_excerpt()){
-            echo get_the_excerpt();
-        }else{
-            global $post;
-                        $description = trim( str_replace( array( "\r\n", "\r", "\n", "　", " "), " ", str_replace( "\"", "'", strip_tags( $post->post_content ) ) ) );
-                        echo mb_substr( $description, 0, 220, 'utf-8' );
-        }
-    }
-        elseif( is_search() ){ echo '“';the_search_query();echo '”为您找到结果 ';global $wp_query;echo $wp_query->found_posts;echo ' 个'; }
-        elseif( is_tag() ){  $description = strip_tags(tag_description());echo trim($description); }
-        else{ $description = strip_tags(term_description());echo trim($description); }
-    }
-
-/**
- * 标题设置
- * @version 1.0
- * @package Vtrois
- */
-function kratos_wp_title( $title, $sep ) {
-    global $paged, $page;
-    if ( is_feed() )
-        return $title;
-    $title .= get_bloginfo( 'name' );
-    $site_description = get_bloginfo( 'description', 'display' );
-    if ( $site_description && ( is_home() || is_front_page() ) )
-        $title = "$title $sep $site_description";
-    if ( $paged >= 2 || $page >= 2 )
-        $title = "$title $sep " . sprintf( __( 'Page %s', 'kratos' ), max( $paged, $page ) );
-    return $title;
-}
-add_filter( 'wp_title', 'kratos_wp_title', 10, 2 );
 
 /**
  * 后台控制模块
@@ -394,6 +698,29 @@ function kratos_excerpt_more($more) {
     return '……';
 }
 add_filter('excerpt_more', 'kratos_excerpt_more');
+
+/**
+ * 分享缩略图抓取
+ * @version 1.0
+ * @package Vtrois
+ */
+function share_post_image(){
+    global $post;
+    if (has_post_thumbnail($post->ID)) {
+        $post_thumbnail_id = get_post_thumbnail_id( $post_id );
+        $img = wp_get_attachment_image_src( $post_thumbnail_id, 'full' );
+        $img = $img[0];
+    }else{
+        $content = $post->post_content;
+        preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
+        if (!empty($strResult[1])) {
+            $img = $strResult[1][0];
+        }else{
+            $img = '';
+        }
+    }
+    return $img;
+}
 
 /**
  * 文章阅读量统计
@@ -507,6 +834,68 @@ function kratos_love(){
 }
 add_action('wp_ajax_nopriv_kratos_love', 'kratos_love');
 add_action('wp_ajax_kratos_love', 'kratos_love');
+
+/**
+ * 文章标题优化
+ * @version 1.0
+ * @package Vtrois
+ */
+add_filter( 'private_title_format', 'kratos_private_title_format' );
+add_filter( 'protected_title_format', 'kratos_private_title_format' );
+ 
+function kratos_private_title_format( $format ) {
+    return '%s';
+}
+
+/**
+ * 密码保护文章
+ * @version 1.0
+ * @package Vtrois
+ */
+add_filter( 'the_password_form', 'custom_password_form' );
+function custom_password_form() {
+    $url = get_option('siteurl');
+    global $post; $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID ); $o = '
+    <form class="protected-post-form" action="' . $url . '/wp-login.php?action=postpass" method="post">
+        <div class="panel panel-pwd">
+            <div class="panel-body text-center">
+                <img class="post-pwd" src="' . get_template_directory_uri() . '/images/fingerprint.png"><br />
+                <h4>这是一篇受保护的文章，请输入阅读密码！</h4>
+                <div class="input-group" id="respond">
+                    <div class="input-group-addon"><i class="fa fa-key"></i></div>
+                    <p><input class="form-control" placeholder="输入阅读密码" name="post_password" id="'.$label.'" type="password" size="20"></p>
+                </div>
+                <div class="comment-form" style="margin-top:15px;"><button id="generate" class="btn btn-primary btn-pwd" name="Submit" type="submit">确认</button></div>
+            </div>
+        </div>
+    </form>';
+return $o;
+}
+
+/**
+ * 文章评论量统计
+ * @version 1.0
+ * @package Vtrois
+ */
+function kratos_comments_users($postid=0,$which=0) {
+    $comments = get_comments('status=approve&type=comment&post_id='.$postid);
+    if ($comments) {
+        $i=0; $j=0; $commentusers=array();
+        foreach ($comments as $comment) {
+            ++$i;
+            if ($i==1) { $commentusers[] = $comment->comment_author_email; ++$j; }
+            if ( !in_array($comment->comment_author_email, $commentusers) ) {
+                $commentusers[] = $comment->comment_author_email;
+                ++$j;
+            }
+        }
+        $output = array($j,$i);
+        $which = ($which == 0) ? 0 : 1;
+        return $output[$which]; 
+    }
+    return 0; 
+}
+
 
 /**
  * 评论表情

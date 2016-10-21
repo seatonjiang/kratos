@@ -8,9 +8,10 @@
 		<meta name="description" content="<?php kratos_description(); ?>" />
 		<meta name="keywords" content="<?php kratos_keywords();?>" />
 		<?php wp_head(); ?>
-		<?php switch (kratos_option('site_bw')) {case '1':?>
-			<style type="text/css">html{filter: grayscale(100%);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter: gray;-webkit-filter: grayscale(1); }</style>
-		<?php ;break;default:break;}?>
+		<?php if ( kratos_option('site_bw')==1 ) : ?>
+			<style type="text/css">html{filter: grayscale(100%);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter: gray;-webkit-filter: grayscale(1); }
+			</style>
+		<?php endif; ?>
 	</head>
 	<?php flush(); ?>
 	<body>

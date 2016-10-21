@@ -82,7 +82,6 @@ get_header();?>
 				</a>
 			</div>
 			<?php endwhile;?>
-
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4 text-center animate-box">

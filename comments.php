@@ -16,7 +16,7 @@ if ( post_password_required() ) {
 		</ol>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<div id="comments-nav">
-<?php paginate_comments_links('prev_text=<&next_text=>');?>
+<?php paginate_comments_links('prev_text=上一页&next_text=下一页');?>
 </div>
 		<?php endif; ?>
 	<?php endif; ?>

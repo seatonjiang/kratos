@@ -9,18 +9,21 @@
 					kratos_banner();
 				}elseif(is_category()){
 			?>
+			<?php if ( kratos_option( 'show_head_cat' )==1 ) : ?>
 				<div class="kratos-hentry clearfix">
-					<h1 class="kratos-post-header-title">分类目录：<?php echo single_cat_title('', false); ?></h1>
-				</div>				
-			<?php
-				}elseif(is_date()){
-			?>	
+					<h1 class="kratos-post-header-title">分类：<?php echo single_cat_title('', false); ?></h1>
+					<h1 class="kratos-post-header-title"><?php echo category_description(); ?></h1>
+				</div>	
+			<?php endif; ?>			
 			<?php
 				}elseif(is_tag()){
 			?>
+			<?php if ( kratos_option( 'show_head_tag' )==1 ) : ?>
 				<div class="kratos-hentry clearfix">
-					<h1 class="kratos-post-header-title">标签目录：<?php echo single_cat_title('', false); ?></h1>
+					<h1 class="kratos-post-header-title">标签：<?php echo single_cat_title('', false); ?></h1>
+					<h1 class="kratos-post-header-title"><?php echo category_description(); ?></h1>
 				</div>
+			<?php endif; ?>	
 			<?php
 				}elseif(is_search()){
 			?>
@@ -47,7 +50,7 @@
 				<?php wp_reset_query(); ?>
 				</div>
 			<div id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-				<?php dynamic_sidebar('sidebar_blog'); ?>
+				<?php dynamic_sidebar('sidebar_home'); ?>
 			</div>
 		</div>
 	</div>

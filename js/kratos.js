@@ -2,13 +2,6 @@
 
 	'use strict';
 
-	// top-img
-	$(document).ready(function() {
-		var random_bg = Math.floor(Math.random() * 6 + 1);
-		var bg = 'url(/wp-content/themes/Kratos/images/bg-' + random_bg + '.jpg)';
-		$("#kratos-topimg").css("background-image", bg);
-	});
-
 	// top-Start
 	$(function() {
 		$('#top-Start').click(function() {
@@ -16,6 +9,21 @@
 				scrollTop: $('#kratos-blog').offset().top
 			}, 1000);
 		});
+	});
+
+	$(".Share").click(function() {
+		$(".share-wrap").fadeToggle("slow");
+	});
+
+	$('.qrcode').each(function(index, el) {
+		var url = $(this).data('url');
+		if ($.fn.qrcode) {
+			$(this).qrcode({
+				text: url,
+				width: 150,
+				height: 150,
+			});
+		}
 	});
 
 	// iPad and iPod detection	
@@ -135,7 +143,7 @@
 			return false;
 		}
 	};
-	$(document).on("click", ".KratosLove",
+	$(document).on("click", ".Love",
 		function() {
 			$(this).postLike();
 	});
@@ -169,4 +177,11 @@
 		contentWayPoint();
 	});
 
+	console.log("╔╦╗┬ ┬┌─┐┌┬┐┌─┐  ╦╔═┬─┐┌─┐┌┬┐┌─┐┌─┐  ╔╦╗┌─┐┌┬┐┌─┐  ╔╗ ┬ ┬  ╦  ╦┌┬┐┬─┐┌─┐┬┌─┐\n ║ ├─┤├┤ │││├┤   ╠╩╗├┬┘├─┤ │ │ │└─┐  ║║║├─┤ ││├┤   ╠╩╗└┬┘  ╚╗╔╝ │ ├┬┘│ ││└─┐\n ╩ ┴ ┴└─┘┴ ┴└─┘  ╩ ╩┴└─┴ ┴ ┴ └─┘└─┘  ╩ ╩┴ ┴─┴┘└─┘  ╚═╝ ┴    ╚╝  ┴ ┴└─└─┘┴└─┘\n");
+	console.log("Kratos 主题下载：https://github.com/Vtrois/Kratos");
+	console.log("Kratos 主题使用：https://www.vtrois.com/projects/kratos-faq.html");
+	console.log("Kratos 文章样式：https://www.vtrois.com/projects/kratos-article-style.html");
+
 }());
+
+

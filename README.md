@@ -19,6 +19,7 @@ kratos/
 ├── js/
 │   ├── jquery.min.js
 │   ├── jquery.easing.js
+│   ├── jquery.qrcode.js
 │   ├── jquery.stellar.min.js
 │   ├── jquery.waypoints.min.js
 │   ├── kratos.js
@@ -26,6 +27,7 @@ kratos/
 │   ├── superfish.js
 │   └── bootstrap.min.js
 ├── fonts/
+│   ├── Din.otf
 │   ├── FontAwesome.otf
 │   ├── fontawesome-webfont.eot
 │   ├── fontawesome-webfont.svg
@@ -35,6 +37,7 @@ kratos/
 ├── images/
 │   ├── smilies(has some emoji pic)
 │   ├── 404.jpg
+│   ├── arrow.png
 │   ├── background.jpg
 │   ├── default.jpg
 │   ├── bg-*.jpg(has some background-image pic)

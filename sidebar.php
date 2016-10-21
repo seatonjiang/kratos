@@ -1,4 +1,4 @@
-<?php if ( ! dynamic_sidebar( 'sidebar_blog' ) ) :
+<?php if ( ! dynamic_sidebar( 'sidebar_home' ) ) :
 ?>
 <aside class="widget clearfix">
 	<div class="panel-heading">

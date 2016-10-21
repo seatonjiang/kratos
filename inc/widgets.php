@@ -2,14 +2,32 @@
 
 function kratos_widgets_init() {
     register_sidebar( array(
-        'name' => __( 'Blog Page', 'kratos' ),
-        'id' => 'sidebar_blog',
-        'description' => __( '博客页面侧边栏', 'kratos' ),
+        'name' => __( '主页侧边栏', 'kratos' ),
+        'id' => 'sidebar_home',
+        'description' => __( '', 'kratos' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="widget-title">',
         'after_title' => '</h4>'
     ) );   
+    register_sidebar( array(
+        'name' => __( '文章侧边栏', 'kratos' ),
+        'id' => 'sidebar_single',
+        'description' => __( '文章页面侧边栏，仅当选择文章布局为“左、右边栏”时生效。', 'kratos' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>'
+    ) );
+    register_sidebar( array(
+        'name' => __( '页面侧边栏', 'kratos' ),
+        'id' => 'sidebar_page',
+        'description' => __( '模板页面侧边栏，仅当选择页面布局为“左、右边栏”时生效。', 'kratos' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>'
+    ) );
 }
 add_action( 'widgets_init', 'kratos_widgets_init' );
 
@@ -95,7 +113,7 @@ class kratos_widget_about extends WP_Widget {
     function kratos_widget_about() {
         $widget_ops = array(
             'classname' => 'amadeus_about',
-            'name'        => '个人简介',
+            'name'        => 'Kratos - 个人简介',
             'description' => 'Kratos主题特色组件 - 个人简介'
         );
         parent::WP_Widget( false, false, $widget_ops );
@@ -159,7 +177,7 @@ class kratos_widget_about extends WP_Widget {
 class kratos_widget_tags extends WP_Widget {
     function __construct(){
         $widget_ops = array(
-            'name'        => '标签云',
+            'name'        => 'Kratos - 标签云',
             'description' => 'Kratos主题特色组件 - 标签云'
         );
         parent::__construct(false, false, $widget_ops);
@@ -246,7 +264,7 @@ class kratos_widget_search extends WP_Widget {
     function kratos_widget_search() {
         $widget_ops = array(
             'classname' => 'widget_kratos_search',
-            'name'        => '站点搜索',
+            'name'        => 'Kratos - 站点搜索',
             'description' => 'Kratos主题特色组件 - 站点搜索'
         );
         parent::WP_Widget( false, false, $widget_ops );
@@ -287,11 +305,86 @@ class kratos_widget_search extends WP_Widget {
     }
 }
 
+class kratos_widget_posts extends WP_Widget{
+    function __construct(){
+        $widget_ops = array('description'=>'聚合显示热门文章、最新文章、随机文章');
+        parent::__construct('kratos_widget_posts' ,'Kratos - 文章聚合', $widget_ops);
+    }
+    function widget($args, $instance){
+        extract($args);
+        $result = '';
+        $number = (!empty($instance['number'])) ? intval($instance['number']) : 5;
+        ?>
+        <aside class="widget widget_kratos_poststab">
+            <ul id="tabul" class="nav nav-tabs nav-justified visible-lg">
+                <li><a href="#newest" data-toggle="tab"> 最新文章</a></li>
+                <li class="active"><a href="#hot" data-toggle="tab"> 热点文章</a></li>
+                <li><a href="#rand" data-toggle="tab">随机文章</a></li>
+            </ul>
+            <ul id="tabul" class="nav nav-tabs nav-justified visible-md">
+                <li><a href="#newest" data-toggle="tab"> 最新</a></li>
+                <li class="active"><a href="#hot" data-toggle="tab"> 热点</a></li>
+                <li><a href="#rand" data-toggle="tab">随机</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade" id="newest">
+                    <ul class="list-group">
+                        <?php $myposts = get_posts('numberposts='.$number.' & offset=0'); foreach($myposts as $post) : ?>
+                            <a class="list-group-item visible-lg" title="<?php echo $post->post_title;?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fa  fa-book"></i> <?php echo strip_tags($post->post_title) ?>
+                            </a>
+                            <a class="list-group-item visible-md" title="<?php echo $post->post_title;?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fa  fa-book"></i> <?php echo strip_tags($post->post_title) ?>
+                            </a>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <div class="tab-pane fade  in active" id="hot">
+                    <ul class="list-group">
+                        <?php if(function_exists('most_comm_posts')) most_comm_posts(60, $number); ?>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="rand">
+                    <ul class="list-group">
+                        <?php $myposts = get_posts('numberposts='.$number.' & offset=0 & orderby=rand');foreach($myposts as $post) :?>
+                            <a class="list-group-item visible-lg" title="<?php echo $post->post_title;?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fa  fa-book"></i> <?php echo strip_tags($post->post_title) ?>
+                            </a>
+                            <a class="list-group-item visible-md" title="<?php echo $post->post_title;?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="fa  fa-book"></i> <?php echo strip_tags($post->post_title) ?>
+                            </a>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <?php
+    }
+    function update($new_instance, $old_instance){
+        if (!isset($new_instance['submit'])) {
+            return false;
+        }
+        $instance = $old_instance;
+        $instance['number'] = intval($new_instance['number']);
+        return $instance;
+    }
+
+    function form($instance){
+        global $wpdb;
+        $instance = wp_parse_args((array) $instance, array('number'=>'5'));
+        $number = intval($instance['number']);
+        ?>
+
+        <p>
+            <label for='<?php echo $this->get_field_id("number");?>'>每项展示数量：<input type='text' name='<?php echo $this->get_field_name("number");?>' id='<?php echo $this->get_field_id("number");?>' value="<?php echo $number;?>"/></label>
+        </p>
+        <input type="hidden" id="<?php echo $this->get_field_id('submit'); ?>" name="<?php echo $this->get_field_name('submit'); ?>" value="1" />
+        <?php
+    }
+}
+
 function kratos_register_widgets(){
     register_widget('kratos_widget_ad'); 
     register_widget('kratos_widget_about'); 
     register_widget('kratos_widget_tags'); 
     register_widget('kratos_widget_search'); 
+    register_widget('kratos_widget_posts'); 
 }
 add_action('widgets_init','kratos_register_widgets');
 ?>
