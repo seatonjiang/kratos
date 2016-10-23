@@ -52,7 +52,7 @@ class kratos_widget_ad extends WP_Widget {
     function kratos_widget_ad() {
         $widget_ops = array(
             'classname' => 'widget_kratos_ad',
-            'name'        => '广告位',
+            'name'        => 'Kratos - 广告位',
             'description' => 'Kratos主题特色组件 - 广告位'
         );
         parent::WP_Widget( false, false, $widget_ops );
@@ -307,7 +307,7 @@ class kratos_widget_search extends WP_Widget {
 
 class kratos_widget_posts extends WP_Widget{
     function __construct(){
-        $widget_ops = array('description'=>'聚合显示热门文章、最新文章、随机文章');
+        $widget_ops = array('description'=>'Kratos主题特色组件 - 文章聚合');
         parent::__construct('kratos_widget_posts' ,'Kratos - 文章聚合', $widget_ops);
     }
     function widget($args, $instance){

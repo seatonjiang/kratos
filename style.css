@@ -4,7 +4,7 @@ Theme URI: https://www.vtrois.com/projects/theme-kratos.html
 Author: Vtrois
 Author URI: https://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 2.2.0
+Version: 2.2.1
 License: Mozilla Public License Version 2.0
 Tags: black, white, blue, two-columns, right-sidebar
 */
@@ -115,6 +115,162 @@ code {
     border-radius: 0;
     border: 1px solid #E1E1E1;
     margin: 0 5px;
+}
+
+cite {
+    font-style: normal
+}
+
+.alert,.btn,.progress,pre {
+    border-radius: 0
+}
+
+mark {
+    padding: .4px 4px;
+    background-color: #9e9e9e;
+    color: #000
+}
+
+kbd {
+    padding: 1px 6px;
+    background-color: #6c6c6c
+}
+
+article a{
+    color: #333;
+}
+
+.panel-body {
+    color: #000
+}
+
+.panel,.panel-heading {
+    border-radius: 0
+}
+
+.panel-danger {
+    border-color: #e15554
+}
+
+.panel-success {
+    border-color: #3bb273
+}
+
+.panel-info {
+    border-color: #4d9de0
+}
+
+.panel-pwd {
+    border: none;
+    box-shadow: none
+}
+
+.panel-warning {
+    border-color: #ffc320
+}
+
+.panel-warning>.panel-heading {
+    border-color: #ffc320;
+    background-color: #ffc320;
+    color: #fff
+}
+
+.panel-info>.panel-heading {
+    border-color: #4d9de0;
+    background-color: #4d9de0;
+    color: #fff
+}
+
+.panel-success>.panel-heading {
+    border-color: #3bb273;
+    background-color: #3bb273;
+    color: #fff
+}
+
+.panel-danger>.panel-heading {
+    border-color: #e15554;
+    background-color: #e15554;
+    color: #fff
+}
+
+.alert-success {
+    border-color: #3bb273;
+    background-color: #3bb273;
+    color: #fff
+}
+
+.alert-danger {
+    border-color: #e15554;
+    background-color: #e15554;
+    color: #fff
+}
+
+.alert-info {
+    border-color: #4d9de0;
+    background-color: #4d9de0;
+    color: #fff
+}
+
+.alert-warning {
+    border-color: #ffc320;
+    background-color: #ffc320;
+    color: #fff
+}
+
+.btn-primary {
+    border-color: #5bc0eb;
+    background-color: #5bc0eb;
+    color: #fff
+}
+
+.btn-primary:hover {
+    border-color: #15b9fa;
+    background-color: #15b9fa;
+    color: #fff
+}
+
+.btn-primary:active,.btn-primary:active:focus,.btn-primary:active:hover,.btn-primary:focus {
+    border-color: #0895cb;
+    background-color: #0895cb;
+    color: #fff
+}
+
+.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover {
+    border-color: #5bc0eb;
+    background-color: #5bc0eb;
+    color: #fff!important
+}
+
+.pagination>li:first-child>a {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0
+}
+
+.pagination>li:last-child>a {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.pagination>li>a {
+    color: #333
+}
+
+.next,.pagination .next,.prev {
+    font-family: Hiragino Sans GB,Microsoft Yahei,Arial,sans-serif
+}
+
+.pagination>li>a:focus,.pagination>li>a:hover {
+    border-color: #5bc0eb;
+    background-color: #fff;
+    color: #333
+}
+
+.pagination li a {
+    width: 35px
+}
+
+.pagination li:not(:first-child) {
+    margin-left: 3px
 }
 
 .post-pwd {
@@ -1646,7 +1802,7 @@ a.comment-reply-link:hover {
 .tag_clouds a {
 	display: inline-block;
     margin: 0 2px 4px 0;
-    padding: 4px 15px;
+    padding: 4px 12px;
     border: 1px solid #f0f0f0;
     color: #666;
     text-transform: uppercase;

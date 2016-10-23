@@ -101,7 +101,6 @@ get_header('banner'); ?>
 					</div>
 					<?php endif; ?>
 					<?php comments_template(); ?>
-				</div>
 			</article>
 		<?php endwhile;?>
 			</div>
