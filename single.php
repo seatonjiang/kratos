@@ -22,7 +22,7 @@
 								<i class="fa fa-calendar"></i> <?php the_time('Y/n/j') ?>
 				                <i class="fa fa-commenting-o"></i> <?php echo kratos_comments_users($post->ID); ?> Comments
 				                <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?> Views
-				                <i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'kratos_love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?> Times
+				                <i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'kratos_love',true) ){ echo get_post_meta($post->ID,'kratos_love',true); } else { echo '0'; }?> Times
 								</span>
 							</div>
 						</header>
