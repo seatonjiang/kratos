@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '2.2.2' );
+define( '_KRATOS_VERSION', '2.3.0' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -34,16 +34,16 @@ add_filter( 'get_avatar', 'kratos_get_avatar' );
 function kratos_theme_scripts() {  
     $dir = get_template_directory_uri(); 
     if ( !is_admin() ) {  
-        wp_enqueue_style( 'animate-style', $dir . '/css/animate.css', array(), '3.5.1'); 
-        wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.css', array(), '4.6.2');
-        wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.css', array(), '3.3.6');
-        wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.css', array(), 'r7');
-        wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), _KRATOS_VERSION);
+        wp_enqueue_style( 'animate-style', $dir . '/css/animate.min.css', array(), '3.5.1'); 
+        wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.min.css', array(), '4.7.0');
+        wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.min.css', array(), '3.3.7');
+        wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.min.css', array(), 'r7');
+        wp_enqueue_style( 'kratos-style', $dir . '/css/kratos.min.css', array(), _KRATOS_VERSION);
         wp_enqueue_script( 'jquerys', $dir . '/js/jquery.min.js' , array(), '2.1.4');
         wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.js', array(), '1.3.0'); 
         wp_enqueue_script( 'qrcode', $dir . '/js/jquery.qrcode.min.js', array(), _KRATOS_VERSION);
         wp_enqueue_script( 'modernizr', $dir . '/js/modernizr.js' , array(), '2.6.2');
-        wp_enqueue_script( 'bootstrap', $dir . '/js/bootstrap.min.js', array(), '3.3.6');
+        wp_enqueue_script( 'bootstrap', $dir . '/js/bootstrap.min.js', array(), '3.3.7');
         wp_enqueue_script( 'waypoints', $dir . '/js/jquery.waypoints.min.js', array(), '4.0.0');
         wp_enqueue_script( 'stellar', $dir . '/js/jquery.stellar.min.js', array(), '0.6.2');
         wp_enqueue_script( 'hoverIntents', $dir . '/js/hoverIntent.js', array(), 'r7');
@@ -197,17 +197,17 @@ function wymusic($atts, $content=null, $code="") {
 add_shortcode('music' , 'wymusic' );
 
 function bdbtn($atts, $content=null, $code="") {
-    $return = '<a class="downbtn" href="';
+    $return = '<span class="downbtn" href="';
     $return .= $content;
-    $return .= '" target="_blank"><i class="fa fa-download"></i> 本地下载</a>';
+    $return .= '" target="_blank"><i class="fa fa-download"></i> 本地下载</span>';
     return $return;
 }
 add_shortcode('bdbtn' , 'bdbtn' );
 
 function ypbtn($atts, $content=null, $code="") {
-    $return = '<a class="downbtn downcloud" href="';
+    $return = '<span class="downbtn downcloud" href="';
     $return .= $content;
-    $return .= '" target="_blank"><i class="fa fa-cloud-download"></i> 云盘下载</a>';
+    $return .= '" target="_blank"><i class="fa fa-cloud-download"></i> 云盘下载</span>';
     return $return;
 }
 add_shortcode('ypbtn' , 'ypbtn' );
@@ -654,36 +654,24 @@ add_filter('nav_menu_css_class', 'kratos_active_menu_class');
  * @version 1.0
  * @package Vtrois
  */
-function kratos_blog_thumbnail() {
 
-    global $post;
-    if (has_post_thumbnail()) {
-        the_post_thumbnail(array(750, ), array('class' => 'kratos-entry-thumb'));
-    }else {}
-}
-add_theme_support( "post-thumbnails" );
 
-/**
- * 首页缩略图
- * @version 1.0
- * @package Vtrois
- */
-function kratos_index_thumbnail() {  
-  
+if ( function_exists( 'add_image_size' ) ){  
+    add_image_size( 'kratos-thumb', 750);
+}  
+function kratos_blog_thumbnail() {    
     global $post;  
-    if ( has_post_thumbnail() ) {  
-       the_post_thumbnail(array(750, ), array('class' => 'img-responsive'));
-    } else { 
-        $content = $post->post_content;  
-        preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);  
-        $n = count($strResult[1]);  
-        if($n > 0){ 
-            echo '<img src="'.$strResult[1][0].'" class="img-responsive" />';  
-        }else {
-            echo '<img src="'.get_bloginfo('template_url').'/images/default.jpg" class="img-responsive" />';  
-        }  
+    $img_id = get_post_thumbnail_id();
+    $img_url = wp_get_attachment_image_src($img_id,'kratos-entry-thumb');
+    $img_url = $img_url[0];
+    if ( has_post_thumbnail() ) {
+        echo '<a href="'.get_permalink().'"><img class="kratos-entry-thumb" src="'.$img_url.'" /></a>';  
+    } else {
+        echo '<a href="'.get_permalink().'"><img class="kratos-entry-thumb" src="'. get_template_directory_uri().'/images/default.jpg" /></a>';  
     }  
-} 
+}  
+add_filter( 'add_image_size', create_function( '', 'return 1;' ) );
+add_theme_support( "post-thumbnails" );
 
 /**
  * 摘要长度及后缀
@@ -818,17 +806,17 @@ function kratos_love(){
     $id = $_POST["um_id"];
     $action = $_POST["um_action"];
     if ( $action == 'love'){
-        $kratos_raters = get_post_meta($id,'kratos_love',true);
+        $raters = get_post_meta($id,'love',true);
         $expire = time() + 99999999;
         $domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false;
-        setcookie('kratos_love_'.$id,$id,$expire,'/',$domain,false);
-        if (!$kratos_raters || !is_numeric($kratos_raters)) {
-            update_post_meta($id, 'kratos_love', 1);
+        setcookie('love_'.$id,$id,$expire,'/',$domain,false);
+        if (!$raters || !is_numeric($raters)) {
+            update_post_meta($id, 'love', 1);
         } 
         else {
-            update_post_meta($id, 'kratos_love', ($kratos_raters + 1));
+            update_post_meta($id, 'love', ($raters + 1));
         }
-        echo get_post_meta($id,'kratos_love',true);
+        echo get_post_meta($id,'love',true);
     } 
     die;
 }
@@ -896,7 +884,6 @@ function kratos_comments_users($postid=0,$which=0) {
     return 0; 
 }
 
-
 /**
  * 评论表情
  * @version 1.0
@@ -948,7 +935,7 @@ function kratos_pages($range = 5){
     global $paged, $wp_query;
     if ( !$max_page ) {$max_page = $wp_query->max_num_pages;}
     if($max_page > 1){if(!$paged){$paged = 1;}
-    echo "<ul class='pagination pull-right'>";
+    echo "<div class='text-center' id='page-footer'><ul class='pagination'>";
         if($paged != 1){
             echo "<li><a href='" . get_pagenum_link(1) . "' class='extend' title='首页'>&laquo;</a></li>";
         }
@@ -985,7 +972,7 @@ function kratos_pages($range = 5){
         if($paged != $max_page){
             echo "<li><a href='" . get_pagenum_link($max_page) . "' class='extend' title='尾页'>&raquo;</a></li>";
         }
-        echo "</ul>";
+        echo "</ul></div>";
     }
 }
 
@@ -995,7 +982,7 @@ function kratos_pages($range = 5){
  * @package Vtrois
  */
 function kratos_admin_footer_text($text) {
-       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，并使用 <a href="https://www.vtrois.com/projects/theme-kratos.html" target="_blank">Kratos</a>主题样式，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=82c35be2134e64f296155ad2b2381e0744a994866ae2a0fa5379798edd926b3f">点击</a> 加入主题讨论群。</span>';
+       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，并使用 <a href="https://blog.vtrois.com/theme-kratos.html" target="_blank">Kratos</a>主题样式，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">点击</a> 加入主题讨论群。</span>';
     return $text;
 }
 

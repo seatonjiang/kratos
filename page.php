@@ -7,11 +7,13 @@ get_header('banner'); ?>
 	<div class="container">
 		<div class="row">
 		<?php if($page_side_bar == 'left_side'){ ?>
-			<div id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-				<?php dynamic_sidebar('sidebar_page'); ?>
-			</div>
+			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
+                <div id="sidebar">
+                    <?php dynamic_sidebar('sidebar_page'); ?>
+                </div>
+            </aside>
 		<?php } ?>
-            <div class='<?php echo ($page_side_bar == 'single') ? 'col-md-12' : 'col-md-8'; ?>'>
+            <section id="main" class='<?php echo ($page_side_bar == 'single') ? 'col-md-12' : 'col-md-8'; ?>'>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article>
 				<div class="kratos-hentry kratos-post-inner clearfix">
@@ -93,7 +95,7 @@ get_header('banner'); ?>
 							</div>
 					</footer>
 					<?php }?>
-					</div>
+				</div>
 					<?php if ( kratos_option( 'page_cc' )==1 ) : ?>
 					<div class="kratos-hentry kratos-copyright text-center clearfix">
 						<img alt="知识共享许可协议" src="<?php echo get_template_directory_uri(); ?>/images/licenses.png">
@@ -102,15 +104,16 @@ get_header('banner'); ?>
 					<?php endif; ?>
 					<?php comments_template(); ?>
 			</article>
-		<?php endwhile;?>
-			</div>
+				<?php endwhile;?>
+			</section>
 			<?php if($page_side_bar == 'right_side'){ ?>
-			<div id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-				<?php dynamic_sidebar('sidebar_page'); ?>
-			</div>
+			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
+                <div id="sidebar">
+                    <?php dynamic_sidebar('sidebar_page'); ?>
+                </div>
+            </aside>
 			<?php } ?>
-		</div>
+		</section>
 	</div>
 </div>
-<?php get_footer('subscribe'); ?>
 <?php get_footer(); ?>

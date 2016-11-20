@@ -2,15 +2,6 @@
 
 	'use strict';
 
-	// top-Start
-	$(function() {
-		$('#top-Start').click(function() {
-			$('html,body').animate({
-				scrollTop: $('#kratos-blog').offset().top
-			}, 1000);
-		});
-	});
-
 	$(".Share").click(function() {
 		$(".share-wrap").fadeToggle("slow");
 	});
@@ -87,6 +78,22 @@
 		});
 	}
 
+	//Sidebar Affix 
+	if ($('#sidebar') == undefined){
+		if ($("#main").height() > $("#sidebar").height()) {
+			var footerHeight = 0;
+			if ($('#page-footer').length > 0) {
+				footerHeight = $('#page-footer').outerHeight(true);
+			}
+			$('#sidebar').affix({
+				offset: {
+					top: $('#sidebar').offset().top - 30,
+					bottom: $('#footer').outerHeight(true) + footerHeight + 6
+				}
+			});
+		}
+	}
+
 	// Click outside of the Mobile Menu
 	var mobileMenuOutsideClick = function() {
 		$(document).click(function(e) {
@@ -122,31 +129,29 @@
 	};
 
 	//Show love
+	$(document).on("click", ".Love", function() {
+		$(this).postLike()
+	});
 	$.fn.postLike = function() {
 		if ($(this).hasClass('done')) {
 			alert('您已赞过该文章');
-			return false;
+			return false
 		} else {
 			$(this).addClass('done');
 			var id = $(this).data("id"),
-			action = $(this).data('action'),
-			rateHolder = $(this).children('.count');
+				action = $(this).data('action'),
+				rateHolder = $(this).children('.count');
 			var ajax_data = {
-				action: "kratos_love",
+				action: "love",
 				um_id: id,
 				um_action: action
 			};
-			$.post("/wp-admin/admin-ajax.php", ajax_data,
-			function(data) {
-				$(rateHolder).html(data);
+			$.post("/wp-admin/admin-ajax.php", ajax_data, function(data) {
+				$(rateHolder).html(data)
 			});
-			return false;
+			return false
 		}
 	};
-	$(document).on("click", ".Love",
-		function() {
-			$(this).postLike();
-	});
 
 	//Go Top
 	var offset = 300,
@@ -179,9 +184,7 @@
 
 	console.log("╔╦╗┬ ┬┌─┐┌┬┐┌─┐  ╦╔═┬─┐┌─┐┌┬┐┌─┐┌─┐  ╔╦╗┌─┐┌┬┐┌─┐  ╔╗ ┬ ┬  ╦  ╦┌┬┐┬─┐┌─┐┬┌─┐\n ║ ├─┤├┤ │││├┤   ╠╩╗├┬┘├─┤ │ │ │└─┐  ║║║├─┤ ││├┤   ╠╩╗└┬┘  ╚╗╔╝ │ ├┬┘│ ││└─┐\n ╩ ┴ ┴└─┘┴ ┴└─┘  ╩ ╩┴└─┴ ┴ ┴ └─┘└─┘  ╩ ╩┴ ┴─┴┘└─┘  ╚═╝ ┴    ╚╝  ┴ ┴└─└─┘┴└─┘\n");
 	console.log("Kratos 主题下载：https://github.com/Vtrois/Kratos");
-	console.log("Kratos 主题使用：https://www.vtrois.com/projects/kratos-faq.html");
-	console.log("Kratos 文章样式：https://www.vtrois.com/projects/kratos-article-style.html");
+	console.log("Kratos 主题使用：https://blog.vtrois.com/kratos-faq.html");
+	console.log("Kratos 文章样式：https://blog.vtrois.com/kratos-article-style.html");
 
 }());
-
-

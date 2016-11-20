@@ -124,11 +124,27 @@ class kratos_widget_about extends WP_Widget {
         $profile = $instance['profile'] ? $instance['profile'] : '';
         $title = $instance['title'] ? $instance['title'] : '';
         $imgurl = $instance['imgurl'] ? $instance['imgurl'] : '';
+        $bkimgurl = $instance['bkimgurl'] ? $instance['bkimgurl'] : '';
         echo $before_widget;
         ?>
+                <?php if(!empty($bkimgurl)) {?>
+                <div class="photo-background">
+                    <div class="photo-background" style="background:url(<?php echo $bkimgurl;?>) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
+                </div>
+                <?php }else{?>
+                <div class="photo-background" style="background:url(<?php echo bloginfo('template_url'); ?>/images/about.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div>
+                <?php }?>
                 <?php if(!empty($imgurl)) {?>
-                <div class="photo-wrapper">
-                    <img class="about-photo" src="<?php echo $imgurl; ?>" />
+                <div class="photo-wrapper clearfix">
+                    <div class="photo-wrapper-tip text-center">
+                        <img class="about-photo" src="<?php echo $imgurl; ?>" />
+                    </div>
+                </div>
+                <?php }else{?>
+                <div class="photo-wrapper clearfix">
+                    <div class="photo-wrapper-tip text-center">
+                        <img class="about-photo" src="<?php echo bloginfo('template_url'); ?>/images/avatar.png" />
+                    </div>
                 </div>
                 <?php }?>
                 <?php if(!empty($title)) {?>
@@ -150,6 +166,7 @@ class kratos_widget_about extends WP_Widget {
     function form( $instance ) {
         @$title = esc_attr( $instance['title'] );
         @$imgurl = esc_attr( $instance['imgurl'] );
+        @$bkimgurl = esc_attr( $instance['bkimgurl'] );
         @$profile = esc_attr( $instance['profile'] );
         ?>
             <p>
@@ -170,6 +187,12 @@ class kratos_widget_about extends WP_Widget {
                     <textarea class="widefat" rows="4" id="<?php echo $this->get_field_id( 'profile' ); ?>" name="<?php echo $this->get_field_name( 'profile' ); ?>" ><?php echo $profile; ?></textarea>
                 </label>
             </p> 
+            <p>
+                <label for="<?php echo $this->get_field_id( 'bkimgurl' ); ?>">
+                    背景：
+                    <input class="widefat" id="<?php echo $this->get_field_id( 'bkimgurl' ); ?>" name="<?php echo $this->get_field_name( 'bkimgurl' ); ?>" type="text" value="<?php echo $bkimgurl; ?>" />
+                </label>
+            </p>
         <?php
     }
 }
@@ -177,8 +200,8 @@ class kratos_widget_about extends WP_Widget {
 class kratos_widget_tags extends WP_Widget {
     function __construct(){
         $widget_ops = array(
-            'name'        => 'Kratos - 标签云',
-            'description' => 'Kratos主题特色组件 - 标签云'
+            'name'        => 'Kratos - 标签聚合',
+            'description' => 'Kratos主题特色组件 - 标签聚合'
         );
         parent::__construct(false, false, $widget_ops);
     }
@@ -225,7 +248,7 @@ class kratos_widget_tags extends WP_Widget {
 
     function form($instance){
         global $wpdb;
-        $instance = wp_parse_args((array) $instance, array('title'=>'Tags','number'=>'20','orderby'=>'count','order'=>'RAND'));
+        $instance = wp_parse_args((array) $instance, array('title'=>'标签聚合','number'=>'20','orderby'=>'count','order'=>'RAND'));
         $title =  esc_attr($instance['title']);
         $number = intval($instance['number']);
         $orderby =  esc_attr($instance['orderby']);

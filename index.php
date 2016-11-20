@@ -1,9 +1,14 @@
 <?php get_header(); ?>
-<?php get_header('banner'); ?>
+<?php 
+if(is_category()){
+		get_header('abstract');
+	}else{
+		get_header('banner');
+	} ?>
 <div id="kratos-blog-post" style="background:<?php echo kratos_option('background_index_color'); ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<section id="main" class="col-md-8">
 			<?php
 				if(is_home()){
 					kratos_banner();
@@ -48,12 +53,13 @@
 
         		<?php kratos_pages(3);?>
 				<?php wp_reset_query(); ?>
-				</div>
-			<div id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-				<?php dynamic_sidebar('sidebar_home'); ?>
-			</div>
+			</section>
+			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
+                <div id="sidebar">
+                    <?php dynamic_sidebar('sidebar_home'); ?>
+                </div>
+            </aside>
 		</div>
 	</div>
 </div>
-<?php get_footer('subscribe'); ?>
 <?php get_footer(); ?>

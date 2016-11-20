@@ -7,11 +7,13 @@
 	<div class="container">
 		<div class="row">
 			<?php if($sidebar == 'left_side'){ ?>
-				<div id="widget-area" class="col-md-4 hidden-xs hidden-sm">
-					<?php dynamic_sidebar('sidebar_single'); ?>
-				</div>
+			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
+                <div id="sidebar">
+                    <?php dynamic_sidebar('sidebar_single'); ?>
+                </div>
+            </aside>
 			<?php } ?>
-            <div class='<?php echo ($sidebar == 'single') ? 'col-md-12' : 'col-md-8'; ?>'>
+            <section id="main" class='<?php echo ($sidebar == 'single') ? 'col-md-12' : 'col-md-8'; ?>'>
 				<?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
 				<article>
 					<div class="kratos-hentry kratos-post-inner clearfix">
@@ -22,7 +24,7 @@
 								<i class="fa fa-calendar"></i> <?php the_time('Y/n/j') ?>
 				                <i class="fa fa-commenting-o"></i> <?php echo kratos_comments_users($post->ID); ?> Comments
 				                <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?> Views
-				                <i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'kratos_love',true) ){ echo get_post_meta($post->ID,'kratos_love',true); } else { echo '0'; }?> Times
+				                <i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?> Times
 								</span>
 							</div>
 						</header>
@@ -40,7 +42,7 @@
 							<?php if ( kratos_option( 'post_like_donate' )==1 ) : ?>
 				   			<a href="<?php echo kratos_option('donate_links'); ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
 				   			<?php endif; ?>
-				   			<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['kratos_love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> 点赞</a>
+				   			<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> 点赞</a>
 							<?php if ( kratos_option( 'post_share' )==1 ) : ?>
 							<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
 							<div class="share-wrap" style="display: none;">
@@ -134,14 +136,15 @@
 					<?php comments_template(); ?>
 				</article>
 				<?php endif; ?>
-			</div>
+			</section>
 			<?php if($sidebar == 'right_side'){ ?>
-				<div id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-					<?php dynamic_sidebar('sidebar_single'); ?>
-				</div>
+				<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
+	                <div id="sidebar">
+	                    <?php dynamic_sidebar('sidebar_single'); ?>
+	                </div>
+	            </aside>
 			<?php } ?>
 		</div>
 	</div>
 </div>
-<?php get_footer('subscribe'); ?>
 <?php get_footer(); ?>

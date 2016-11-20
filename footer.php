@@ -1,6 +1,6 @@
 				<footer>
 					<div id="footer">
-					    <a class="cd-top visible-lg"></a>
+					    <a class="cd-top text-center cd-is-visible cd-fade-out"><span class="fa fa-chevron-up"></span></a>
 						<div class="container">
 							<div class="row">
 								<div class="col-md-6 col-md-offset-3 text-center">
@@ -22,12 +22,5 @@
 		</div>
 		<?php wp_footer();?>
 		<?php echo (!kratos_option('ad_code')) ? '' : '<script>' . kratos_option('ad_code') . '</script>'; ?>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				var random_bg = Math.floor(Math.random() * 6 + 1);
-				var bg = 'url(<?php echo get_template_directory_uri() ?>/images/bg-' + random_bg + '.jpg)';
-				$("#kratos-topimg").css("background-image", bg);
-			});
-		</script>
 	</body>
 </html>

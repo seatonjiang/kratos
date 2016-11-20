@@ -14,7 +14,7 @@
 		<?php endif; ?>
 	</head>
 	<?php flush(); ?>
-	<body>
+	<body data-spy="scroll" data-target=".scrollspy">
 		<div id="kratos-wrapper">
 			<div id="kratos-page">
 				<div id="kratos-header">
