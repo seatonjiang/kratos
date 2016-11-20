@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '2.3.0' );
+define( '_KRATOS_VERSION', '2.3.1' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 

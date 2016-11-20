@@ -79,7 +79,7 @@
 	}
 
 	//Sidebar Affix 
-	if ($('#sidebar') == undefined){
+	var sidebaraffix = function() {
 		if ($("#main").height() > $("#sidebar").height()) {
 			var footerHeight = 0;
 			if ($('#page-footer').length > 0) {
@@ -129,55 +129,64 @@
 	};
 
 	//Show love
-	$(document).on("click", ".Love", function() {
-		$(this).postLike()
-	});
-	$.fn.postLike = function() {
-		if ($(this).hasClass('done')) {
-			alert('您已赞过该文章');
-			return false
-		} else {
-			$(this).addClass('done');
-			var id = $(this).data("id"),
-				action = $(this).data('action'),
-				rateHolder = $(this).children('.count');
-			var ajax_data = {
-				action: "love",
-				um_id: id,
-				um_action: action
-			};
-			$.post("/wp-admin/admin-ajax.php", ajax_data, function(data) {
-				$(rateHolder).html(data)
-			});
-			return false
-		}
-	};
+	var showlove = function() {
+	    $.fn.postLike = function() {
+	        if ($(this).hasClass('done')) {
+	            alert('您已赞过该文章');
+	            return false;
+	        } else {
+	            $(this).addClass('done');
+	            var id = $(this).data("id"),
+	            action = $(this).data('action'),
+	            rateHolder = $(this).children('.count');
+	            var ajax_data = {
+	                action: "love",
+	                um_id: id,
+	                um_action: action
+	            };
+	            $.post("/wp-admin/admin-ajax.php", ajax_data,
+	            function(data) {
+	                $(rateHolder).html(data);
+	            });
+	            return false;
+	        }
+	    };
+	    $(document).on("click", ".Love",
+	        function() {
+	            $(this).postLike();
+	    });
+	}
 
 	//Go Top
-	var offset = 300,
-		offset_opacity = 1200,
-		scroll_top_duration = 700,
-		$back_to_top = $('.cd-top');
-	$(window).scroll(function(){
-		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-		if( $(this).scrollTop() > offset_opacity ) { 
-			$back_to_top.addClass('cd-fade-out');
-		}
-	});
+	var gotop = function() {
+		var offset = 300,
+			offset_opacity = 1200,
+			scroll_top_duration = 700,
+			$back_to_top = $('.cd-top');
+		$(window).scroll(function(){
+			( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+			if( $(this).scrollTop() > offset_opacity ) { 
+				$back_to_top.addClass('cd-fade-out');
+			}
+		});
 
-	$back_to_top.on('click', function(event){
-		event.preventDefault();
-		$('body,html').animate({
-			scrollTop: 0 ,
-		 	}, scroll_top_duration
-		);
-	});
+		$back_to_top.on('click', function(event){
+			event.preventDefault();
+			$('body,html').animate({
+				scrollTop: 0 ,
+			 	}, scroll_top_duration
+			);
+		});
+	}
 	
 	// Document on load.
 	$(function() {
 		mainMenu();
 		parallax();
 		offcanvas();
+		showlove();
+		gotop();
+		sidebaraffix();
 		mobileMenuOutsideClick();
 		contentWayPoint();
 	});

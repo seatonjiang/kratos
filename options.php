@@ -144,7 +144,6 @@ function optionsframework_options() {
 		'type' => "images",
 		'options' => array(
 			'left_side' => $imagepath . 'col-left.png',
-			'single' => $imagepath . 'col-one.png',
 			'right_side' => $imagepath . 'col-right.png')
 	);
 	$options[] = array(
@@ -179,7 +178,6 @@ function optionsframework_options() {
 		'type' => "images",
 		'options' => array(
 			'left_side' => $imagepath . 'col-left.png',
-			'single' => $imagepath . 'col-one.png',
 			'right_side' => $imagepath . 'col-right.png')
 	);	
 	$options[] = array(
