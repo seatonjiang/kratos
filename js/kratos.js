@@ -186,14 +186,13 @@
 		offcanvas();
 		showlove();
 		gotop();
-		sidebaraffix();
 		mobileMenuOutsideClick();
 		contentWayPoint();
 	});
 
 	console.log("╔╦╗┬ ┬┌─┐┌┬┐┌─┐  ╦╔═┬─┐┌─┐┌┬┐┌─┐┌─┐  ╔╦╗┌─┐┌┬┐┌─┐  ╔╗ ┬ ┬  ╦  ╦┌┬┐┬─┐┌─┐┬┌─┐\n ║ ├─┤├┤ │││├┤   ╠╩╗├┬┘├─┤ │ │ │└─┐  ║║║├─┤ ││├┤   ╠╩╗└┬┘  ╚╗╔╝ │ ├┬┘│ ││└─┐\n ╩ ┴ ┴└─┘┴ ┴└─┘  ╩ ╩┴└─┴ ┴ ┴ └─┘└─┘  ╩ ╩┴ ┴─┴┘└─┘  ╚═╝ ┴    ╚╝  ┴ ┴└─└─┘┴└─┘\n");
 	console.log("Kratos 主题下载：https://github.com/Vtrois/Kratos");
-	console.log("Kratos 主题使用：https://blog.vtrois.com/kratos-faq.html");
-	console.log("Kratos 文章样式：https://blog.vtrois.com/kratos-article-style.html");
+	console.log("Kratos 主题使用：https://www.vtrois.com/kratos-faq.html");
+	console.log("Kratos 文章样式：https://www.vtrois.com/kratos-article-style.html");
 
 }());

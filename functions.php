@@ -1,6 +1,6 @@
 <?php
 
-define( '_KRATOS_VERSION', '2.3.1' );
+define( '_KRATOS_VERSION', '2.3.2' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -197,17 +197,17 @@ function wymusic($atts, $content=null, $code="") {
 add_shortcode('music' , 'wymusic' );
 
 function bdbtn($atts, $content=null, $code="") {
-    $return = '<span class="downbtn" href="';
+    $return = '<a class="downbtn" href="';
     $return .= $content;
-    $return .= '" target="_blank"><i class="fa fa-download"></i> 本地下载</span>';
+    $return .= '" target="_blank"><i class="fa fa-download"></i> 本地下载</a>';
     return $return;
 }
 add_shortcode('bdbtn' , 'bdbtn' );
 
 function ypbtn($atts, $content=null, $code="") {
-    $return = '<span class="downbtn downcloud" href="';
+    $return = '<a class="downbtn downcloud" href="';
     $return .= $content;
-    $return .= '" target="_blank"><i class="fa fa-cloud-download"></i> 云盘下载</span>';
+    $return .= '" target="_blank"><i class="fa fa-cloud-download"></i> 云盘下载</a>';
     return $return;
 }
 add_shortcode('ypbtn' , 'ypbtn' );
@@ -666,9 +666,7 @@ function kratos_blog_thumbnail() {
     $img_url = $img_url[0];
     if ( has_post_thumbnail() ) {
         echo '<a href="'.get_permalink().'"><img class="kratos-entry-thumb" src="'.$img_url.'" /></a>';  
-    } else {
-        echo '<a href="'.get_permalink().'"><img class="kratos-entry-thumb" src="'. get_template_directory_uri().'/images/default.jpg" /></a>';  
-    }  
+    } 
 }  
 add_filter( 'add_image_size', create_function( '', 'return 1;' ) );
 add_theme_support( "post-thumbnails" );
@@ -820,8 +818,8 @@ function kratos_love(){
     } 
     die;
 }
-add_action('wp_ajax_nopriv_kratos_love', 'kratos_love');
-add_action('wp_ajax_kratos_love', 'kratos_love');
+add_action('wp_ajax_nopriv_love', 'kratos_love');
+add_action('wp_ajax_love', 'kratos_love');
 
 /**
  * 文章标题优化
@@ -901,27 +899,27 @@ function smilies_reset() {
     if ( !get_option( 'use_smilies' ) || $wp_version < 4.2)
         return;
     $wpsmiliestrans = array(
-    ':mrgreen:' => 'icon_mrgreen.gif',
-    ':exclaim:' => 'icon_exclaim.gif',
-    ':neutral:' => 'icon_neutral.gif',
-    ':twisted:' => 'icon_twisted.gif',
-      ':arrow:' => 'icon_arrow.gif',
-        ':eek:' => 'icon_eek.gif',
-      ':smile:' => 'icon_smile.gif',
-   ':confused:' => 'icon_confused.gif',
-       ':cool:' => 'icon_cool.gif',
-       ':evil:' => 'icon_evil.gif',
-    ':biggrin:' => 'icon_biggrin.gif',
-       ':idea:' => 'icon_idea.gif',
-    ':redface:' => 'icon_redface.gif',
-       ':razz:' => 'icon_razz.gif',
-   ':rolleyes:' => 'icon_rolleyes.gif',
-       ':wink:' => 'icon_wink.gif',
-        ':cry:' => 'icon_cry.gif',
-  ':surprised:' => 'icon_surprised.gif',
-        ':lol:' => 'icon_lol.gif',
-        ':mad:' => 'icon_mad.gif',
-        ':sad:' => 'icon_sad.gif',
+    ':mrgreen:' => 'icon_mrgreen.png',
+    ':exclaim:' => 'icon_exclaim.png',
+    ':neutral:' => 'icon_neutral.png',
+    ':twisted:' => 'icon_twisted.png',
+      ':arrow:' => 'icon_arrow.png',
+        ':eek:' => 'icon_eek.png',
+      ':smile:' => 'icon_smile.png',
+   ':confused:' => 'icon_confused.png',
+       ':cool:' => 'icon_cool.png',
+       ':evil:' => 'icon_evil.png',
+    ':biggrin:' => 'icon_biggrin.png',
+       ':idea:' => 'icon_idea.png',
+    ':redface:' => 'icon_redface.png',
+       ':razz:' => 'icon_razz.png',
+   ':rolleyes:' => 'icon_rolleyes.png',
+       ':wink:' => 'icon_wink.png',
+        ':cry:' => 'icon_cry.png',
+  ':surprised:' => 'icon_surprised.png',
+        ':lol:' => 'icon_lol.png',
+        ':mad:' => 'icon_mad.png',
+        ':sad:' => 'icon_sad.png',
     );
 }
 smilies_reset();
@@ -982,7 +980,7 @@ function kratos_pages($range = 5){
  * @package Vtrois
  */
 function kratos_admin_footer_text($text) {
-       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，并使用 <a href="https://blog.vtrois.com/theme-kratos.html" target="_blank">Kratos</a>主题样式，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">点击</a> 加入主题讨论群。</span>';
+       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，并使用 <a href="https://www.vtrois.com/theme-kratos.html" target="_blank">Kratos</a>主题样式，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">点击</a> 加入主题讨论群。</span>';
     return $text;
 }
 

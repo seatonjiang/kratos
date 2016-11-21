@@ -13,7 +13,6 @@ function kratos_widgets_init() {
     register_sidebar( array(
         'name' => __( '文章侧边栏', 'kratos' ),
         'id' => 'sidebar_single',
-        'description' => __( '文章页面侧边栏，仅当选择文章布局为“左、右边栏”时生效。', 'kratos' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="widget-title">',
@@ -22,7 +21,6 @@ function kratos_widgets_init() {
     register_sidebar( array(
         'name' => __( '页面侧边栏', 'kratos' ),
         'id' => 'sidebar_page',
-        'description' => __( '模板页面侧边栏，仅当选择页面布局为“左、右边栏”时生效。', 'kratos' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="widget-title">',
@@ -122,7 +120,6 @@ class kratos_widget_about extends WP_Widget {
     function widget( $args, $instance ) {
         extract( $args );
         $profile = $instance['profile'] ? $instance['profile'] : '';
-        $title = $instance['title'] ? $instance['title'] : '';
         $imgurl = $instance['imgurl'] ? $instance['imgurl'] : '';
         $bkimgurl = $instance['bkimgurl'] ? $instance['bkimgurl'] : '';
         echo $before_widget;
@@ -147,9 +144,6 @@ class kratos_widget_about extends WP_Widget {
                     </div>
                 </div>
                 <?php }?>
-                <?php if(!empty($title)) {?>
-                <h4 class="widget-title"><?php echo $title; ?></h4>
-                <?php }?>
                 <?php if(!empty($profile)) {?>
                 <div class="textwidget">
                     <p><?php echo $profile; ?></p>
@@ -164,32 +158,25 @@ class kratos_widget_about extends WP_Widget {
     }
 
     function form( $instance ) {
-        @$title = esc_attr( $instance['title'] );
         @$imgurl = esc_attr( $instance['imgurl'] );
         @$bkimgurl = esc_attr( $instance['bkimgurl'] );
         @$profile = esc_attr( $instance['profile'] );
         ?>
             <p>
-                <label for="<?php echo $this->get_field_id( 'title' ); ?>">
-                    标题：
-                    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
-                </label>
-            </p>
-            <p>
                 <label for="<?php echo $this->get_field_id( 'imgurl' ); ?>">
-                    头像：
+                    头像地址：
                     <input class="widefat" id="<?php echo $this->get_field_id( 'imgurl' ); ?>" name="<?php echo $this->get_field_name( 'imgurl' ); ?>" type="text" value="<?php echo $imgurl; ?>" />
                 </label>
             </p>
             <p>
                 <label for="<?php echo $this->get_field_id( 'profile' ); ?>">
-                    简介：
+                    简介内容：
                     <textarea class="widefat" rows="4" id="<?php echo $this->get_field_id( 'profile' ); ?>" name="<?php echo $this->get_field_name( 'profile' ); ?>" ><?php echo $profile; ?></textarea>
                 </label>
             </p> 
             <p>
                 <label for="<?php echo $this->get_field_id( 'bkimgurl' ); ?>">
-                    背景：
+                    卡片背景：
                     <input class="widefat" id="<?php echo $this->get_field_id( 'bkimgurl' ); ?>" name="<?php echo $this->get_field_name( 'bkimgurl' ); ?>" type="text" value="<?php echo $bkimgurl; ?>" />
                 </label>
             </p>

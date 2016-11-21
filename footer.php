@@ -1,6 +1,6 @@
 				<footer>
 					<div id="footer">
-					    <a class="cd-top text-center cd-is-visible cd-fade-out"><span class="fa fa-chevron-up"></span></a>
+					    <a class="cd-top visible-lg text-center cd-is-visible cd-fade-out"><span class="fa fa-chevron-up"></span></a>
 						<div class="container">
 							<div class="row">
 								<div class="col-md-6 col-md-offset-3 text-center">
@@ -22,5 +22,21 @@
 		</div>
 		<?php wp_footer();?>
 		<?php echo (!kratos_option('ad_code')) ? '' : '<script>' . kratos_option('ad_code') . '</script>'; ?>
+		<?php if ( kratos_option('site_sa')==1 ) : ?>
+		<script type="text/javascript">
+			if ($("#main").height() > $("#sidebar").height()) {
+				var footerHeight = 0;
+				if ($('#page-footer').length > 0) {
+					footerHeight = $('#page-footer').outerHeight(true);
+				}
+				$('#sidebar').affix({
+					offset: {
+						top: $('#sidebar').offset().top - 30,
+						bottom: $('#footer').outerHeight(true) + footerHeight + 6
+					}
+				});
+			}
+		</script>
+		<?php endif; ?>
 	</body>
 </html>

@@ -32,6 +32,13 @@ function optionsframework_options() {
 		'std' => '#f9f9f9',
 		'type' => 'color' );
 	$options[] = array(
+		'name' => '侧边栏随动',
+		'desc' => '是否启用侧边栏小工具随动功能',
+		'id' => 'site_sa',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+	$options[] = array(
 		'name' => '分类页面',
 		'desc' =>'是否启用分类页面的名称以及简介功能',
 		'id' => 'show_head_cat',

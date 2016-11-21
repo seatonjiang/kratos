@@ -1,8 +1,8 @@
 #Kratos
 ###A responsible blog theme for WordPress
 
-Kratos is a clean, simple and responsive blog theme of WordPress, based on [Bootstrap](https://github.com/twbs/bootstrap) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). Created and maintained by [Vtrois](https://blog.vtrois.com).
- Stay up to date with the latest release and announcements on [Bulletin Board](https://blog.vtrois.com/theme-kratos.html).
+Kratos is a clean, simple and responsive blog theme of WordPress, based on [Bootstrap](https://github.com/twbs/bootstrap) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). Created and maintained by [Vtrois](https://www.vtrois.com).
+ Stay up to date with the latest release and announcements on [Bulletin Board](https://www.vtrois.com/theme-kratos.html).
 
 ![Kratos Demo](https://dn-coding-net-production-pp.qbox.me/80ccac0c-665f-4520-b8c3-c9cd6f67d96f.png)
 
@@ -44,7 +44,6 @@ kratos/
 │   ├── about.png
 │   ├── avatar.png
 │   ├── background.jpg
-│   ├── default.jpg
 │   ├── fingerprint.png
 │   └── licenses.png
 ├── inc/
