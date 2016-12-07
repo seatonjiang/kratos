@@ -1,4 +1,10 @@
 <?php
+/**
+ * The template for displaying pages
+ *
+ * @package Vtrois
+ * @version 2.4
+ */
 $page_side_bar = kratos_option('page_side_bar');
 $page_side_bar = (empty($page_side_bar)) ? 'right_side' : $page_side_bar;
 get_header();
@@ -9,7 +15,7 @@ get_header('banner'); ?>
 			<?php if($page_side_bar == 'left_side'){ ?>
 				<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
 	                <div id="sidebar">
-	                    <?php dynamic_sidebar('sidebar_page'); ?>
+	                    <?php dynamic_sidebar('sidebar_tool'); ?>
 	                </div>
 	            </aside>
 			<?php } ?>
@@ -103,7 +109,7 @@ get_header('banner'); ?>
 			<?php if($page_side_bar == 'right_side'){ ?>
 			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                 <div id="sidebar">
-                    <?php dynamic_sidebar('sidebar_page'); ?>
+                    <?php dynamic_sidebar('sidebar_tool'); ?>
                 </div>
             </aside>
 			<?php } ?>

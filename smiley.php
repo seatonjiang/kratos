@@ -1,4 +1,11 @@
-<script type="text/javascript" language="javascript">
+<?php
+/**
+ * The template for Comments on the emoji
+ *
+ * @package Vtrois
+ * @version 1.0
+ */
+?><script type="text/javascript" language="javascript">
 /* <![CDATA[ */
     function grin(tag) {
         var myField;

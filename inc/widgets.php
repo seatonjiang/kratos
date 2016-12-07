@@ -2,30 +2,14 @@
 
 function kratos_widgets_init() {
     register_sidebar( array(
-        'name' => __( '主页侧边栏', 'kratos' ),
-        'id' => 'sidebar_home',
+        'name' => __( '侧边栏工具', 'kratos' ),
+        'id' => 'sidebar_tool',
         'description' => __( '', 'kratos' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="widget-title">',
         'after_title' => '</h4>'
     ) );   
-    register_sidebar( array(
-        'name' => __( '文章侧边栏', 'kratos' ),
-        'id' => 'sidebar_single',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h4 class="widget-title">',
-        'after_title' => '</h4>'
-    ) );
-    register_sidebar( array(
-        'name' => __( '页面侧边栏', 'kratos' ),
-        'id' => 'sidebar_page',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h4 class="widget-title">',
-        'after_title' => '</h4>'
-    ) );
 }
 add_action( 'widgets_init', 'kratos_widgets_init' );
 

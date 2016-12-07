@@ -1,4 +1,11 @@
-<!DOCTYPE HTML>
+<?php
+/**
+ * The template for displaying the header
+ *
+ * @package Vtrois
+ * @version 2.3
+ */
+?><!DOCTYPE HTML>
 <html class="no-js">
 	<head>
 		<title><?php wp_title( '-', true, 'right' ); ?></title>

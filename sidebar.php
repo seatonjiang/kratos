@@ -1,5 +1,12 @@
-<?php if ( ! dynamic_sidebar( 'sidebar_home' ) ) :
-?>
+<?php
+/**
+ * The sidebar containing the main widget area
+ *
+ * @package Vtrois
+ * @version 1.0
+ */
+
+if ( ! dynamic_sidebar( 'sidebar_tool' ) ) :?>
 <aside class="widget clearfix">
 	<div class="panel-heading">
 		<h4 class="widget-title">Message</h4>

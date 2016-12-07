@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The main template file
+ *
+ * @package Vtrois
+ * @version 2.3
+ */
+
+get_header(); ?>
 <?php 
 if(is_category()){
 		get_header('abstract');
@@ -56,7 +64,7 @@ if(is_category()){
 			</section>
 			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                 <div id="sidebar">
-                    <?php dynamic_sidebar('sidebar_home'); ?>
+                    <?php dynamic_sidebar('sidebar_tool'); ?>
                 </div>
             </aside>
 		</div>

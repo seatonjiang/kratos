@@ -86,6 +86,7 @@ kratos/
 
 ## Changelog
 
+- v2.4 - New posture
 - v2.3 - Attention to detail and reading
 - v2.1 - She has some new things
 - v2.0 - She grew up
@@ -93,8 +94,8 @@ kratos/
 - v1.0 - Initialize the project and say hello world
 
 ##License
-- The Kratos Html,CSS,JavaScript,and PHP files are licensed under the Mozilla Public License Version 2.0:
-  - https://www.mozilla.org/MPL/2.0/
+- The Kratos Html,CSS,JavaScript,and PHP files are licensed under the GNU General Public License v2:
+  - http://www.gnu.org/licenses/gpl-2.0.html
 
 - The Kratos documentation is licensed under the CC BY 4.0 License:
   - https://creativecommons.org/licenses/by/4.0

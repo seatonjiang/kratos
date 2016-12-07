@@ -1,15 +1,23 @@
-<?php $sidebar = kratos_option('side_bar');
-	  $sidebar = (empty($sidebar)) ? 'right_side' : $sidebar;
-	  $ad = kratos_option('ad_show');
- 	  get_header(); ?>
-<?php get_header('banner'); ?>
+<?php
+/**
+ * The template for displaying all single posts and attachments
+ *
+ * @package Vtrois
+ * @version 2.3
+ */
+
+$sidebar = kratos_option('side_bar');
+$sidebar = (empty($sidebar)) ? 'right_side' : $sidebar;
+$ad = kratos_option('ad_show');
+get_header();
+get_header('banner'); ?>
 <div id="kratos-blog-post" style="background:<?php echo kratos_option('background_index_color'); ?>">
 	<div class="container">
 		<div class="row">
 			<?php if($sidebar == 'left_side'){ ?>
 			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                 <div id="sidebar">
-                    <?php dynamic_sidebar('sidebar_single'); ?>
+                    <?php dynamic_sidebar('sidebar_tool'); ?>
                 </div>
             </aside>
 			<?php } ?>
@@ -140,7 +148,7 @@
 			<?php if($sidebar == 'right_side'){ ?>
 				<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
 	                <div id="sidebar">
-	                    <?php dynamic_sidebar('sidebar_single'); ?>
+	                    <?php dynamic_sidebar('sidebar_tool'); ?>
 	                </div>
 	            </aside>
 			<?php } ?>
