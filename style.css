@@ -4,7 +4,7 @@ Theme URI: https://www.vtrois.com/theme-kratos.html
 Author: Vtrois
 Author URI: https://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 2.4.0
+Version: 2.4.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, white, blue, light, dark, theme-options, two-columns, left-sidebar, right-sidebar
@@ -114,6 +114,11 @@ code {
 	border-radius: 0;
 	border: 1px solid #E1E1E1;
 	margin: 0 5px
+}
+
+pre code {
+	border: none;
+	margin: 0
 }
 
 cite {
@@ -2020,7 +2025,7 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 .kratos-post-inner-new{
 	margin-left: 255px;
 	height: 160px;
-	padding: 25px 20px 0 3px;;
+	padding: 21px 20px 0 3px;;
 }
 
 .kratos-post-inner-new header .label {
@@ -2560,7 +2565,7 @@ img.size-smiley {
 	position: relative;
     float: left;
     width: 240px;
-    height: 160px;
+    height: 145px;
     overflow: hidden;
     margin: 20px;
 }
@@ -2568,12 +2573,12 @@ img.size-smiley {
 .kratos-entry-thumb-new img {
 	padding: 2px;
     border: 1px solid #F3F3F3;
-	height: 160px;
+	height: 145px;
     width: 240px;
 }
 
 .kratos-post-meta-new a{
-	margin-right: 10px;
+	margin-right: 15px;
 }
 
 .kratos-post-meta-new .read-more{
@@ -2645,6 +2650,9 @@ img.size-smiley {
 	}
 	.kratos-entry-content-new{
 		height: auto;
+	}
+	.kratos-post-meta-new a {
+    margin-right: 10px;
 	}
 }
 
@@ -2729,7 +2737,7 @@ img.size-smiley {
 }
 
 #footer {
-	background: #222831;
+	background: #23282D;
 	padding: 40px 0 30px
 }
 

@@ -2,20 +2,23 @@
 
 	'use strict';
 
-	$(".Share").click(function() {
-		$(".share-wrap").fadeToggle("slow");
-	});
+	// Share Menu	
+	var shareMenu = function() {
+		$(".Share").click(function() {
+			$(".share-wrap").fadeToggle("slow");
+		});
 
-	$('.qrcode').each(function(index, el) {
-		var url = $(this).data('url');
-		if ($.fn.qrcode) {
-			$(this).qrcode({
-				text: url,
-				width: 150,
-				height: 150,
-			});
-		}
-	});
+		$('.qrcode').each(function(index, el) {
+			var url = $(this).data('url');
+			if ($.fn.qrcode) {
+				$(this).qrcode({
+					text: url,
+					width: 150,
+					height: 150,
+				});
+			}
+		});
+	}
 
 	// iPad and iPod detection	
 	var isiPad = function() {
@@ -182,6 +185,7 @@
 	// Document on load.
 	$(function() {
 		mainMenu();
+		shareMenu();
 		parallax();
 		offcanvas();
 		showlove();

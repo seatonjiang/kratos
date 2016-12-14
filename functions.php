@@ -6,7 +6,7 @@
  * @version 2.4
  */
 
-define( '_KRATOS_VERSION', '2.4.0' );
+define( '_KRATOS_VERSION', '2.4.1' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -28,6 +28,24 @@ function kratos_get_avatar( $avatar ) {
 }
 add_filter( 'get_avatar', 'kratos_get_avatar' );
 
+function my_formatter($content) {
+$new_content = '';
+$pattern_full = '{(\[raw\].*?\[/raw\])}is';
+$pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
+$pieces = preg_split($pattern_full, $content, -1, PREG_SPLIT_DELIM_CAPTURE);
+foreach ($pieces as $piece) {
+if (preg_match($pattern_contents, $piece, $matches)) {
+$new_content .= $matches[1];
+} else {
+$new_content .= wptexturize(wpautop($piece));
+}
+}
+return $new_content;
+}
+remove_filter('the_content', 'wpautop');
+remove_filter('the_content', 'wptexturize');
+add_filter('the_content', 'my_formatter', 99);
+
 /**
  * Load scripts
  */  
@@ -39,6 +57,7 @@ function kratos_theme_scripts() {
         wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.min.css', array(), '3.3.7');
         wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.min.css', array(), 'r7');
         wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), _KRATOS_VERSION);
+        wp_enqueue_style( 'kratos-diy-style', $dir . '/css/kratos.diy.css', array(), _KRATOS_VERSION);
         wp_enqueue_script( 'jquerys', $dir . '/js/jquery.min.js' , array(), '2.1.4');
         wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.js', array(), '1.3.0'); 
         wp_enqueue_script( 'qrcode', $dir . '/js/jquery.qrcode.min.js', array(), _KRATOS_VERSION);
@@ -49,6 +68,7 @@ function kratos_theme_scripts() {
         wp_enqueue_script( 'hoverIntents', $dir . '/js/hoverIntent.js', array(), 'r7');
         wp_enqueue_script( 'superfish', $dir . '/js/superfish.js', array(), '1.0.0');
         wp_enqueue_script( 'kratos', $dir . '/js/kratos.js', array(),  _KRATOS_VERSION);
+        wp_enqueue_script( 'kratos-diy', $dir . '/js/kratos.diy.js', array(),  _KRATOS_VERSION);
     }  
 }  
 add_action('wp_enqueue_scripts', 'kratos_theme_scripts');
@@ -104,6 +124,20 @@ add_filter('gettext_with_context', 'disable_open_sans', 888, 4 );
 $qmr_work_tags = array('the_title','the_excerpt','single_post_title','comment_author','comment_text','link_description','bloginfo','wp_title', 'term_description','category_description','widget_title','widget_text');
 foreach ( $qmr_work_tags as $qmr_work_tag ) {
     remove_filter ($qmr_work_tag, 'wptexturize');
+}
+remove_filter('the_content', 'wptexturize');
+
+/**
+ * Add the page html
+ */
+add_action('init', 'html_page_permalink', -1);
+function html_page_permalink() {
+    if (kratos_option('page_html')==1){
+        global $wp_rewrite;
+        if ( !strpos($wp_rewrite->get_page_permastruct(), '.html')){
+            $wp_rewrite->page_structure = $wp_rewrite->page_structure . '.html';
+        }
+    }
 }
 
 /**
@@ -326,32 +360,100 @@ function bilibili($atts, $content=null, $code="") {
 }
 add_shortcode('bilibili' , 'bilibili' );
 
-add_action( 'admin_print_footer_scripts', 'shortcode_buttons', 100 );
-function shortcode_buttons() {?>
-    <script type="text/javascript">
-        QTags.addButton( 'title', '内容标题', '[title]标题内容[/title]');
-        QTags.addButton( 'kbd', '键盘文本', '[kbd]按键[/kbd]');
-        QTags.addButton( 'mark', '内容标记', '[mark]内容[/mark]');
-        QTags.addButton( 'striped', '进度条', '[striped]数值[/striped]');
-        QTags.addButton( 'bdbtn', '本地下载', '[bdbtn]本地下载地址[/bdbtn]');
-        QTags.addButton( 'ypbtn', '云盘下载', '[ypbtn]云盘下载地址[/ypbtn]');
-        QTags.addButton( 'music', '网易云音乐', '[music]音乐ID[/music]');
-        QTags.addButton( 'youku', '优酷', '[youku]视频ID[/youku]');
-        QTags.addButton( 'tudou', '土豆', '[tudou code=""]视频ID[/tudou]');
-        QTags.addButton( 'vqq', '腾讯视频', '[vqq auto="0"]视频ID[/vqq]');
-        QTags.addButton( 'youtube', 'YouTube', '[youtube]视频ID[/youtube]');
-        QTags.addButton( 'pptv', 'PPTV', '[pptv]视频ID[/pptv]');
-        QTags.addButton( 'bilibili', '哔哩哔哩', '[bilibili]视频ID[/bilibili]');
-        QTags.addButton( 'success', '绿色背景栏', '[success]正文内容[/success]');
-        QTags.addButton( 'info', '蓝色背景栏', '[info]正文内容[/info]');
-        QTags.addButton( 'warning', '黄色背景栏', '[warning]正文内容[/warning]');
-        QTags.addButton( 'danger', '红色背景栏', '[danger]正文内容[/danger]');
-        QTags.addButton( 'successbox', '绿色面板', '[successbox title="标题内容"]正文内容[/successbox]');
-        QTags.addButton( 'infobox', '蓝色面板', '[infobox title="标题内容"]正文内容[/infobox]');
-        QTags.addButton( 'warningbox', '黄色面板', '[warningbox title="标题内容"]正文内容[/warningbox]');
-        QTags.addButton( 'dangerbox', '红色面板', '[dangerbox title="标题内容"]正文内容[/dangerbox]');
-    </script>
-<?php }
+/**
+ * Create precode function
+ */
+add_action('init', 'more_button_a');
+function more_button_a() {
+   if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') ) {
+     return;
+   }
+   if ( get_user_option('rich_editing') == 'true' ) {
+     add_filter( 'mce_external_plugins', 'add_plugin' );
+     add_filter( 'mce_buttons', 'register_button' );
+   }
+}
+
+add_action('init', 'more_button_b');
+function more_button_b() {
+   if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') ) {
+     return;
+   }
+   if ( get_user_option('rich_editing') == 'true' ) {
+     add_filter( 'mce_external_plugins', 'add_plugin_b' );
+     add_filter( 'mce_buttons_3', 'register_button_b' );
+   }
+}
+
+function register_button( $buttons ) {
+    array_push( $buttons, " ", "title" );
+    array_push( $buttons, " ", "kbd" );
+    array_push( $buttons, " ", "mark" );
+    array_push( $buttons, " ", "striped" );
+    array_push( $buttons, " ", "bdbtn" );
+    array_push( $buttons, " ", "ypbtn" );
+    array_push( $buttons, " ", "music" );
+    array_push( $buttons, " ", "youku" );
+    array_push( $buttons, " ", "tudou" );
+    array_push( $buttons, " ", "vqq" );
+    array_push( $buttons, " ", "youtube" );
+    array_push( $buttons, " ", "pptv" );
+    array_push( $buttons, " ", "bilibili" );
+    return $buttons;
+}
+
+function register_button_b( $buttons ) {
+    array_push( $buttons, " ", "success" );
+    array_push( $buttons, " ", "info" );
+    array_push( $buttons, " ", "warning" );
+    array_push( $buttons, " ", "danger" );
+    array_push( $buttons, " ", "successbox" );
+    array_push( $buttons, " ", "infoboxs" );
+    array_push( $buttons, " ", "warningbox" );
+    array_push( $buttons, " ", "dangerbox" );
+    return $buttons;
+}
+
+function add_plugin( $plugin_array ) {
+    $plugin_array['title'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['kbd'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['mark'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['striped'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['bdbtn'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['ypbtn'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['music'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['youku'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['tudou'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['vqq'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['youtube'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['pptv'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['bilibili'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    return $plugin_array;
+}
+
+function add_plugin_b( $plugin_array ) {
+    $plugin_array['success'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['info'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['warning'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['danger'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['successbox'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['infoboxs'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['warningbox'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    $plugin_array['dangerbox'] = get_bloginfo( 'template_url' ) . '/js/buttons/more.js';
+    return $plugin_array;
+}
+
+/**
+ * Add more buttons
+ */
+function add_more_buttons($buttons) {
+        $buttons[] = 'hr';
+        $buttons[] = 'fontselect';
+        $buttons[] = 'fontsizeselect';
+        $buttons[] = 'styleselect';
+    return $buttons;
+}
+add_filter("mce_buttons_2", "add_more_buttons");
 
 /**
  * The article heat
@@ -475,6 +577,28 @@ function kratos_wp_title( $title, $sep ) {
     return $title;
 }
 add_filter( 'wp_title', 'kratos_wp_title', 10, 2 );
+
+/**
+ * Mail smtp setting
+ */
+add_action('phpmailer_init', 'mail_smtp');
+function mail_smtp( $phpmailer ) {
+    $mail_name = kratos_option('mail_name');
+    $mail_host = kratos_option('mail_host');
+    $mail_port = kratos_option('mail_port');
+    $mail_username = kratos_option('mail_username');
+    $mail_passwd = kratos_option('mail_passwd');
+    $mail_smtpsecure = kratos_option('mail_smtpsecure');
+    $phpmailer->FromName = $mail_name ? $mail_name : 'Kratos'; 
+    $phpmailer->Host = $mail_host ? $mail_host : 'smtp.vtrois.com';
+    $phpmailer->Port = $mail_port ? $mail_port : '994';
+    $phpmailer->Username = $mail_username ? $mail_username : 'no_reply@vtrois.com';
+    $phpmailer->Password = $mail_passwd ? $mail_passwd : '123456789';
+    $phpmailer->From = $mail_username ? $mail_username : 'no_reply@vtrois.com';
+    $phpmailer->SMTPAuth = kratos_option('mail_smtpauth')==1 ? true : false ;
+    $phpmailer->SMTPSecure = $mail_smtpsecure ? $mail_smtpsecure : 'ssl';
+    $phpmailer->IsSMTP();
+}
 
 /**
  * Comments email response system

@@ -25,7 +25,6 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => '站点配置',
 		'type' => 'heading');
-
 	$options[] = array(
 		'name' => '站点Logo',
 		'desc' => '不添加显示文字标题，推荐图片尺寸 200px*50px，保存成功则自动显示Logo图片',
@@ -35,7 +34,7 @@ function optionsframework_options() {
 		'name' => '背景颜色',
 		'desc' => '针对整个站点背景颜色控制',
 		'id' => 'background_index_color',
-		'std' => '#f9f9f9',
+		'std' => '#f5f5f5',
 		'type' => 'color' );
 	$options[] = array(
 		'name' => '列表布局',
@@ -46,6 +45,13 @@ function optionsframework_options() {
 		'options' => array(
 			'old_layout' => $imagepath . 'old-layout.png',
 			'new_layout' => $imagepath . 'new-layout.png')
+	);
+	$options[] = array(
+		'name' => '页面伪静态',
+		'desc' => '是否启用自定义页面伪静态功能',
+		'id' => 'page_html',
+		'std' => '0',
+		'type' => 'checkbox'
 	);
 	$options[] = array(
 		'name' => '侧边栏随动',
@@ -322,6 +328,53 @@ function optionsframework_options() {
 		'desc' => '链接可以留空',
 		'id' => 'kratos_banner_url5',
 		'std' => '',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => '邮件配置',
+		'type' => 'heading');
+	$options[] = array(
+		'name' => '发信人',
+		'desc' => '请填写发件人姓名',
+		'id' => 'mail_name',
+		'std' => 'Kratos',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '邮件服务器',
+		'desc' => '请填写SMTP服务器地址',
+		'id' => 'mail_host',
+		'std' => 'smtp.vtrois.com',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '服务器端口',
+		'desc' => '请填写SMTP服务器端口',
+		'id' => 'mail_port',
+		'std' => '994',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '邮箱帐号',
+		'desc' => '请填写邮箱账号',
+		'id' => 'mail_username',
+		'std' => 'no_reply@vtrois.com',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '邮箱密码',
+		'desc' => '请填写邮箱密码',
+		'id' => 'mail_passwd',
+		'std' => '123456789',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '启用SMTPAuth服务',
+		'desc' => '是否启用SMTPAuth服务',
+		'id' => 'mail_smtpauth',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+	$options[] = array(
+		'name' => 'SMTPSecure设置',
+		'desc' => '若启用SMTPAuth服务则填写ssl，若不启用则留空',
+		'id' => 'mail_smtpsecure',
+		'std' => 'ssl',
 		'type' => 'text');
 
 	$options[] = array(
