@@ -3,7 +3,7 @@
  * The template for displaying 404 pages (not found)
  *
  * @package Vtrois
- * @version 1.0
+ * @version 2.4
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 		<div class="desc desc3">
 			<h2><?php echo kratos_option('error_text1'); ?></h2>
 			<span><?php echo kratos_option('error_text2'); ?></span>
-			<span><a href="javascript:history.go(-1)"><div class="btn btn-star">返回上页</div></a></span>
+			<span><a href="<?php echo home_url(); ?>"><div class="btn btn-star">返回首页</div></a></span>
 		</div>
 	</div>
 </div>

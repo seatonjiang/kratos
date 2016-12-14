@@ -6,7 +6,7 @@
  * @version 2.4
  */
 
-define( '_KRATOS_VERSION', '2.4.1' );
+define( '_KRATOS_VERSION', '2.4.2' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -466,7 +466,7 @@ function most_comm_posts($days=30, $nums=5) {
     $result = $wpdb->get_results("SELECT comment_count, ID, post_title, post_date FROM $wpdb->posts WHERE post_date BETWEEN '$daysago' AND '$today' and post_type='post' and post_status='publish' ORDER BY comment_count DESC LIMIT 0 , $nums");
     $output = '';
     if(empty($result)) {
-        $output = '<li>None data.</li>';
+        $output = '<li>暂时没有数据</li>';
     } else {
         foreach ($result as $topten) {
             $postid = $topten->ID;
@@ -583,21 +583,23 @@ add_filter( 'wp_title', 'kratos_wp_title', 10, 2 );
  */
 add_action('phpmailer_init', 'mail_smtp');
 function mail_smtp( $phpmailer ) {
-    $mail_name = kratos_option('mail_name');
-    $mail_host = kratos_option('mail_host');
-    $mail_port = kratos_option('mail_port');
-    $mail_username = kratos_option('mail_username');
-    $mail_passwd = kratos_option('mail_passwd');
-    $mail_smtpsecure = kratos_option('mail_smtpsecure');
-    $phpmailer->FromName = $mail_name ? $mail_name : 'Kratos'; 
-    $phpmailer->Host = $mail_host ? $mail_host : 'smtp.vtrois.com';
-    $phpmailer->Port = $mail_port ? $mail_port : '994';
-    $phpmailer->Username = $mail_username ? $mail_username : 'no_reply@vtrois.com';
-    $phpmailer->Password = $mail_passwd ? $mail_passwd : '123456789';
-    $phpmailer->From = $mail_username ? $mail_username : 'no_reply@vtrois.com';
-    $phpmailer->SMTPAuth = kratos_option('mail_smtpauth')==1 ? true : false ;
-    $phpmailer->SMTPSecure = $mail_smtpsecure ? $mail_smtpsecure : 'ssl';
-    $phpmailer->IsSMTP();
+    if(kratos_option('mail_smtps') == 1){
+        $mail_name = kratos_option('mail_name');
+        $mail_host = kratos_option('mail_host');
+        $mail_port = kratos_option('mail_port');
+        $mail_username = kratos_option('mail_username');
+        $mail_passwd = kratos_option('mail_passwd');
+        $mail_smtpsecure = kratos_option('mail_smtpsecure');
+        $phpmailer->FromName = $mail_name ? $mail_name : 'Kratos'; 
+        $phpmailer->Host = $mail_host ? $mail_host : 'smtp.vtrois.com';
+        $phpmailer->Port = $mail_port ? $mail_port : '994';
+        $phpmailer->Username = $mail_username ? $mail_username : 'no_reply@vtrois.com';
+        $phpmailer->Password = $mail_passwd ? $mail_passwd : '123456789';
+        $phpmailer->From = $mail_username ? $mail_username : 'no_reply@vtrois.com';
+        $phpmailer->SMTPAuth = kratos_option('mail_smtpauth')==1 ? true : false ;
+        $phpmailer->SMTPSecure = $mail_smtpsecure ? $mail_smtpsecure : 'ssl';
+        $phpmailer->IsSMTP();
+    }
 }
 
 /**

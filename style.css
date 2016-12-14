@@ -4,7 +4,7 @@ Theme URI: https://www.vtrois.com/theme-kratos.html
 Author: Vtrois
 Author URI: https://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 2.4.1
+Version: 2.4.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, white, blue, light, dark, theme-options, two-columns, left-sidebar, right-sidebar
@@ -20,7 +20,7 @@ body {
 	font-family: "Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
 	line-height: 1.8;
 	font-size: 16px;
-	background: #fff;
+	background: #f5f5f5;
 	color: #848484;
 	font-weight: 300;
 	overflow-x: hidden
@@ -114,11 +114,6 @@ code {
 	border-radius: 0;
 	border: 1px solid #E1E1E1;
 	margin: 0 5px
-}
-
-pre code {
-	border: none;
-	margin: 0
 }
 
 cite {
@@ -283,6 +278,10 @@ article a {
 
 .alert,.panel,.panel-group .panel,.progress {
 	border-radius: 0
+}
+
+.alert a,.alert a:hover{
+	color:white!important;
 }
 
 .panel-heading {
@@ -1482,6 +1481,11 @@ article a {
 	margin-top: 15px;
 	word-break: break-all;
 	word-wrap: break-word
+}
+
+.comments-area img {
+	max-width: 100%;
+    height: auto;
 }
 
 .comments-title {
@@ -2822,7 +2826,7 @@ img.size-smiley {
 
 .btn.btn-star {
 	color: #fff;
-	border: 1.5px solid #fff
+	border: 2px solid #fff
 }
 
 .btn.btn-star:active,.btn.btn-star:focus,.btn.btn-star:hover {

@@ -333,6 +333,14 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => '邮件配置',
 		'type' => 'heading');
+	
+	$options[] = array(
+		'name' => 'SMTP服务',
+		'desc' => '是否启用SMTP服务',
+		'id' => 'mail_smtps',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
 	$options[] = array(
 		'name' => '发信人',
 		'desc' => '请填写发件人姓名',
