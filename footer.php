@@ -8,7 +8,17 @@
 ?>
 				<footer>
 					<div id="footer">
-					    <a class="cd-top visible-lg text-center cd-is-visible cd-fade-out"><span class="fa fa-chevron-up"></span></a>
+						<div class="cd-tool visible-lg text-center">
+							<?php if ( kratos_option( 'cd_gb' )==1 && kratos_option( 'cd_weixin' )==1 ) { ?>
+						   		<a rel="nofollow" class="cd-gb-a" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
+						   	<?php } elseif( kratos_option( 'cd_gb' )==1 && kratos_option( 'cd_weixin' )==0 ){ ?>
+						   		<a rel="nofollow" class="cd-gb-b" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
+						   	<?php } ?>
+						   	<?php if ( kratos_option( 'cd_weixin' )==1 ) : ?>
+						   		<a id="weixin-img" class="cd-weixin"><span class="fa fa-weixin"></span><div id="weixin-pic"><img src="<?php echo kratos_option('weixin_image') ?>"></div></a>
+						   	<?php endif; ?>
+						    <a class="cd-top cd-is-visible cd-fade-out"><span class="fa fa-chevron-up"></span></a>
+						</div>
 						<div class="container">
 							<div class="row">
 								<div class="col-md-6 col-md-offset-3 text-center">

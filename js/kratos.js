@@ -2,7 +2,6 @@
 
 	'use strict';
 
-	// Share Menu	
 	var shareMenu = function() {
 		$(".Share").click(function() {
 			$(".share-wrap").fadeToggle("slow");
@@ -20,7 +19,6 @@
 		});
 	}
 
-	// iPad and iPod detection	
 	var isiPad = function() {
 		return (navigator.platform.indexOf("iPad") != -1);
 	};
@@ -31,7 +29,6 @@
 		);
 	};
 
-	// Main Menu Superfish
 	var mainMenu = function() {
 		$('#kratos-primary-menu').superfish({
 			delay: 0,
@@ -44,12 +41,10 @@
 		});
 	};
 
-	// Parallax
 	var parallax = function() {
 		$(window).stellar();
 	};
 
-	// Offcanvas and cloning of the main menu
 	var offcanvas = function() {
 		var $clone = $('#kratos-menu-wrap').clone();
 		$clone.attr({
@@ -60,8 +55,6 @@
 			'id': ''
 		});
 		$('#kratos-page').prepend($clone);
-
-		// click the burger
 		$('.js-kratos-nav-toggle').on('click', function() {
 			if ($('body').hasClass('kratos-offcanvas')) {
 				$('body').removeClass('kratos-offcanvas');
@@ -81,7 +74,6 @@
 		});
 	}
 
-	//Sidebar Affix 
 	var sidebaraffix = function() {
 		if ($("#main").height() > $("#sidebar").height()) {
 			var footerHeight = 0;
@@ -97,7 +89,6 @@
 		}
 	}
 
-	// Click outside of the Mobile Menu
 	var mobileMenuOutsideClick = function() {
 		$(document).click(function(e) {
 			var container = $("#offcanvas-menu, .js-kratos-nav-toggle");
@@ -109,7 +100,6 @@
 		});
 	};
 
-	// Animations
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.animate-box').waypoint(function(direction) {
@@ -131,7 +121,6 @@
 		});
 	};
 
-	//Show love
 	var showlove = function() {
 	    $.fn.postLike = function() {
 	        if ($(this).hasClass('done')) {
@@ -160,19 +149,21 @@
 	    });
 	}
 
-	//Go Top
 	var gotop = function() {
 		var offset = 300,
 			offset_opacity = 1200,
 			scroll_top_duration = 700,
-			$back_to_top = $('.cd-top');
+			$back_to_top = $('.cd-top'),
+			$cd_gb = $('.cd-gb'),
+			$cd_weixin = $('.cd-weixin');
 		$(window).scroll(function(){
 			( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
 			if( $(this).scrollTop() > offset_opacity ) { 
 				$back_to_top.addClass('cd-fade-out');
+				$cd_gb.addClass('cd-fade-out');
+				$cd_weixin.addClass('cd-fade-out');
 			}
 		});
-
 		$back_to_top.on('click', function(event){
 			event.preventDefault();
 			$('body,html').animate({
@@ -182,7 +173,22 @@
 		});
 	}
 	
-	// Document on load.
+	var weixinpic = function() {
+		$("#weixin-img").mouseout(function(){
+	        $("#weixin-pic")[0].style.display = 'none';
+	    })
+		$("#weixin-img").mouseover(function(){
+	        $("#weixin-pic")[0].style.display = 'block';
+	    })
+	}
+
+	var copyright = function() {
+		console.log("╔╦╗┬ ┬┌─┐┌┬┐┌─┐  ╦╔═┬─┐┌─┐┌┬┐┌─┐┌─┐  ╔╦╗┌─┐┌┬┐┌─┐  ╔╗ ┬ ┬  ╦  ╦┌┬┐┬─┐┌─┐┬┌─┐\n ║ ├─┤├┤ │││├┤   ╠╩╗├┬┘├─┤ │ │ │└─┐  ║║║├─┤ ││├┤   ╠╩╗└┬┘  ╚╗╔╝ │ ├┬┘│ ││└─┐\n ╩ ┴ ┴└─┘┴ ┴└─┘  ╩ ╩┴└─┴ ┴ ┴ └─┘└─┘  ╩ ╩┴ ┴─┴┘└─┘  ╚═╝ ┴    ╚╝  ┴ ┴└─└─┘┴└─┘\n");
+		console.log("Kratos 主题下载：https://github.com/Vtrois/Kratos");
+		console.log("Kratos 主题使用：https://www.vtrois.com/kratos-faq.html");
+		console.log("Kratos 文章样式：https://www.vtrois.com/kratos-article-style.html");
+	}
+
 	$(function() {
 		mainMenu();
 		shareMenu();
@@ -190,13 +196,36 @@
 		offcanvas();
 		showlove();
 		gotop();
+		weixinpic();
 		mobileMenuOutsideClick();
 		contentWayPoint();
+		copyright();
 	});
-
-	console.log("╔╦╗┬ ┬┌─┐┌┬┐┌─┐  ╦╔═┬─┐┌─┐┌┬┐┌─┐┌─┐  ╔╦╗┌─┐┌┬┐┌─┐  ╔╗ ┬ ┬  ╦  ╦┌┬┐┬─┐┌─┐┬┌─┐\n ║ ├─┤├┤ │││├┤   ╠╩╗├┬┘├─┤ │ │ │└─┐  ║║║├─┤ ││├┤   ╠╩╗└┬┘  ╚╗╔╝ │ ├┬┘│ ││└─┐\n ╩ ┴ ┴└─┘┴ ┴└─┘  ╩ ╩┴└─┴ ┴ ┴ └─┘└─┘  ╩ ╩┴ ┴─┴┘└─┘  ╚═╝ ┴    ╚╝  ┴ ┴└─└─┘┴└─┘\n");
-	console.log("Kratos 主题下载：https://github.com/Vtrois/Kratos");
-	console.log("Kratos 主题使用：https://www.vtrois.com/kratos-faq.html");
-	console.log("Kratos 文章样式：https://www.vtrois.com/kratos-article-style.html");
-
 }());
+
+function share(obj){
+	var qqShareURL="http://connect.qq.com/widget/shareqq/index.html?";
+	var weiboShareURL="http://service.weibo.com/share/share.php?";
+	var facebookShareURL="https://www.facebook.com/sharer/sharer.php?";
+	var twitterShareURL="https://twitter.com/intent/tweet?";
+	var googleplusShareURL="https://plus.google.com/share?";
+	var host_url="<?php the_permalink(); ?>";
+	var title="【<?php the_title(); ?>】";
+	var qqtitle="<?php the_title(); ?>";
+	var excerpt="<?php echo get_the_excerpt(); ?>";
+	var pic="<?php echo share_post_image(); ?>";
+	var appkey="<?php echo kratos_option('sina_appkey'); ?>";
+	var _URL;
+	if(obj=="qq"){
+		_URL=qqShareURL+"url="+host_url+"&title="+qqtitle+"&pics="+pic+"&desc=&summary="+excerpt+"&site=vtrois";
+	}else if(obj=="weibo"){
+		_URL=weiboShareURL+"url="+host_url+"&appkey="+appkey+"&title="+title+excerpt+"&pic="+pic;
+	}else if(obj=="facebook"){
+			_URL=facebookShareURL+"u="+host_url;
+	}else if(obj=="twitter"){
+			_URL=twitterShareURL+"text="+title+excerpt+"&url="+host_url;
+	}else if(obj=="googleplus"){
+			_URL=googleplusShareURL+"url="+host_url;
+	}
+	window.open(_URL);
+}

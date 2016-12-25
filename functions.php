@@ -6,7 +6,7 @@
  * @version 2.4
  */
 
-define( '_KRATOS_VERSION', '2.4.2' );
+define( 'KRATOS_VERSION', '2.4.3' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -23,24 +23,27 @@ $kratos_update_checker = new ThemeUpdateChecker(
  * Replace Gravatar server
  */
 function kratos_get_avatar( $avatar ) {
-    $avatar = preg_replace( "/http:\/\/(www|\d).gravatar.com/", "http://cn.gravatar.com",$avatar );
+    $avatar = preg_replace( "/http:\/\/(www|\d).gravatar.com/", "https://cn.gravatar.com/",$avatar );
     return $avatar;
 }
 add_filter( 'get_avatar', 'kratos_get_avatar' );
 
+/**
+ * Disable automatic formatting
+ */
 function my_formatter($content) {
-$new_content = '';
-$pattern_full = '{(\[raw\].*?\[/raw\])}is';
-$pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
-$pieces = preg_split($pattern_full, $content, -1, PREG_SPLIT_DELIM_CAPTURE);
+    $new_content = '';
+    $pattern_full = '{(\[raw\].*?\[/raw\])}is';
+    $pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
+    $pieces = preg_split($pattern_full, $content, -1, PREG_SPLIT_DELIM_CAPTURE);
 foreach ($pieces as $piece) {
-if (preg_match($pattern_contents, $piece, $matches)) {
-$new_content .= $matches[1];
-} else {
-$new_content .= wptexturize(wpautop($piece));
+    if (preg_match($pattern_contents, $piece, $matches)) {
+        $new_content .= $matches[1];
+    } else {
+        $new_content .= wptexturize(wpautop($piece));
+    }
 }
-}
-return $new_content;
+    return $new_content;
 }
 remove_filter('the_content', 'wpautop');
 remove_filter('the_content', 'wptexturize');
@@ -56,19 +59,19 @@ function kratos_theme_scripts() {
         wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.min.css', array(), '4.7.0');
         wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.min.css', array(), '3.3.7');
         wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.min.css', array(), 'r7');
-        wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), _KRATOS_VERSION);
-        wp_enqueue_style( 'kratos-diy-style', $dir . '/css/kratos.diy.css', array(), _KRATOS_VERSION);
+        wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), KRATOS_VERSION);
+        wp_enqueue_style( 'kratos-diy-style', $dir . '/css/kratos.diy.css', array(), KRATOS_VERSION);
         wp_enqueue_script( 'jquerys', $dir . '/js/jquery.min.js' , array(), '2.1.4');
         wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.js', array(), '1.3.0'); 
-        wp_enqueue_script( 'qrcode', $dir . '/js/jquery.qrcode.min.js', array(), _KRATOS_VERSION);
+        wp_enqueue_script( 'qrcode', $dir . '/js/jquery.qrcode.min.js', array(), KRATOS_VERSION);
         wp_enqueue_script( 'modernizr', $dir . '/js/modernizr.js' , array(), '2.6.2');
         wp_enqueue_script( 'bootstrap', $dir . '/js/bootstrap.min.js', array(), '3.3.7');
         wp_enqueue_script( 'waypoints', $dir . '/js/jquery.waypoints.min.js', array(), '4.0.0');
         wp_enqueue_script( 'stellar', $dir . '/js/jquery.stellar.min.js', array(), '0.6.2');
         wp_enqueue_script( 'hoverIntents', $dir . '/js/hoverIntent.js', array(), 'r7');
         wp_enqueue_script( 'superfish', $dir . '/js/superfish.js', array(), '1.0.0');
-        wp_enqueue_script( 'kratos', $dir . '/js/kratos.js', array(),  _KRATOS_VERSION);
-        wp_enqueue_script( 'kratos-diy', $dir . '/js/kratos.diy.js', array(),  _KRATOS_VERSION);
+        wp_enqueue_script( 'kratos', $dir . '/js/kratos.js', array(),  KRATOS_VERSION);
+        wp_enqueue_script( 'kratos-diy', $dir . '/js/kratos.diy.js', array(),  KRATOS_VERSION);
     }  
 }  
 add_action('wp_enqueue_scripts', 'kratos_theme_scripts');
@@ -76,8 +79,10 @@ add_action('wp_enqueue_scripts', 'kratos_theme_scripts');
 /**
  * Remove the head code
  */
-remove_action( 'wp_head', 'feed_links', 2 );   
-remove_action( 'wp_head', 'feed_links_extra', 3 );   
+add_filter('rest_enabled', '_return_false');
+add_filter('rest_jsonp_enabled', '_return_false');
+remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
 remove_action( 'wp_head', 'rsd_link' );   
 remove_action( 'wp_head', 'wlwmanifest_link' );   
 remove_action( 'wp_head', 'index_rel_link' );   
@@ -162,7 +167,7 @@ add_filter( 'the_content', 'wpautop' , 12);
 add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 
 /**
- * Remove the  excess CSS selectors
+ * Remove the excess CSS selectors
  */
 add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
 add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
@@ -760,15 +765,24 @@ add_theme_support( "post-thumbnails" );
 /**
  * Post Thumbnails New
  */
-function kratos_blog_thumbnail_new() {    
-    global $post;  
+function kratos_blog_thumbnail_new() {
+    global $post;
     $img_id = get_post_thumbnail_id();
     $img_url = wp_get_attachment_image_src($img_id,'kratos-entry-thumb');
     $img_url = $img_url[0];
     if ( has_post_thumbnail() ) {
-        echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" /></a>';  
+        echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" /></a>';
     } else {
-        echo '<a href="'.get_permalink().'"><img src="'. get_template_directory_uri().'/images/default.jpg" /></a>';  
+        $content = $post->post_content;
+        $img_preg = "/<img (.*?) src=\"(.+?)\".*?>/";
+        preg_match($img_preg,$content,$img_src);
+        $img_count=count($img_src)-1;
+        $img_val = $img_src[$img_count];
+        if(!empty($img_val)){
+            echo '<a href="'.get_permalink().'"><img src="'.$img_val.'" /></a>';
+        } else {
+             echo '<a href="'.get_permalink().'"><img src="'. kratos_option('default_image') .'" /></a>';
+        }
     }  
 }
 

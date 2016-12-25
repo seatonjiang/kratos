@@ -7,13 +7,11 @@
  */
 
 function optionsframework_option_name() {
-
 	$themename = wp_get_theme();
 	$themename = preg_replace("/\W/", "_", strtolower($themename) );
 	$optionsframework_settings = get_option( 'optionsframework' );
 	$optionsframework_settings['id'] = $themename;
 	update_option( 'optionsframework', $optionsframework_settings );
-	
 }
 
 function optionsframework_options() {
@@ -35,7 +33,7 @@ function optionsframework_options() {
 		'desc' => '针对整个站点背景颜色控制',
 		'id' => 'background_index_color',
 		'std' => '#f5f5f5',
-		'type' => 'color' );
+		'type' => 'color');
 	$options[] = array(
 		'name' => '列表布局',
 		'desc' => '选择你喜欢的列表布局，默认显示新式列表布局',
@@ -44,22 +42,13 @@ function optionsframework_options() {
 		'type' => "images",
 		'options' => array(
 			'old_layout' => $imagepath . 'old-layout.png',
-			'new_layout' => $imagepath . 'new-layout.png')
-	);
-	$options[] = array(
-		'name' => '页面伪静态',
-		'desc' => '是否启用自定义页面伪静态功能',
-		'id' => 'page_html',
-		'std' => '0',
-		'type' => 'checkbox'
-	);
+			'new_layout' => $imagepath . 'new-layout.png'));
 	$options[] = array(
 		'name' => '侧边栏随动',
 		'desc' => '是否启用侧边栏小工具随动功能',
 		'id' => 'site_sa',
 		'std' => '0',
-		'type' => 'checkbox'
-	);
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '分类页面',
 		'desc' =>'是否启用分类页面的名称以及简介功能',
@@ -77,45 +66,61 @@ function optionsframework_options() {
 		'desc' => '是否启用站点黑白功能(一般常用于悼念日)',
 		'id' => 'site_bw',
 		'std' => '0',
-		'type' => 'checkbox'
-	);
+		'type' => 'checkbox');
+	$options[] = array(
+		'name' => '打赏连接',
+		'desc' => '输入您的打赏介绍页面的连接，若没开启点赞打赏功能该项无效',
+		'id' => 'donate_links',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '组件配置',
+		'type' => 'heading');
+	$options[] = array(
+		'name' => '特色图片',
+		'desc' => '选择你喜欢的默认特色图片（仅针对新式布局）',
+		'id' => 'default_image',
+		'std' => get_template_directory_uri() . '/images/default.jpg',
+		'type' => 'upload');
+	$options[] = array(
+		'name' => '页面伪静态',
+		'desc' => '是否启用自定义页面伪静态功能',
+		'id' => 'page_html',
+		'std' => '0',
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '网易云音乐',
 		'desc' => '是否启用网易云音乐自动播放功能',
 		'id' => 'wy_music',
 		'std' => '0',
-		'type' => 'checkbox'
-	);
-	$options[] = array(
-		'name' => '打赏连接',
-		'desc' => '输入您的打赏介绍页面的连接，若没开启点赞打赏功能该项无效',
-		'id' => 'donate_links',
-		'type' => 'text'
-	);	
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '新浪分享AppKey',
 		'desc' => '输入您的新浪分享AppKey，若留空不会影响分享功能',
 		'id' => 'sina_appkey',
-		'type' => 'text'
-	);
+		'type' => 'text');
 	$options[] = array(
-		'name' => '工信部备案信息',
-		'desc' => '输入您的工信部备案号，针对国际版没有备案信息栏目的功能',
-		'id' => 'icp_num',
-		'type' => 'text'
-	);	
+		'name' => '访客留言',
+		'desc' => '是否启用访客留言按钮功能',
+		'id' => 'cd_gb',
+		'std' => '0',
+		'type' => 'checkbox');
 	$options[] = array(
-		'name' => '公安网备案信息',
-		'desc' => '输入您的公安网备案号',
-		'id' => 'gov_num',
-		'type' => 'text'
-	);	
+		'name' => '访客留言配置',
+		'desc' => '输入您的访客留言页面的连接，若没开启访客留言按钮该项无效',
+		'id' => 'guestbook_links',
+		'type' => 'text');
 	$options[] = array(
-		'name' => '公安网备案连接',
-		'desc' => '输入您的公安网备案的链接地址',
-		'id' => 'gov_link',
-		'type' => 'text'
-	);
+		'name' => '微信展示',
+		'desc' => '是否启用微信展示按钮功能',
+		'id' => 'cd_weixin',
+		'std' => '0',
+		'type' => 'checkbox');
+	$options[] = array(
+		'name' => '微信图片',
+		'desc' => '上传你的微信二维码图片，图片尺寸要大于150px',
+		'id' => 'weixin_image',
+		'std' => get_template_directory_uri() . '/images/weixin.png',
+		'type' => 'upload');
 	$options[] = array(
 		'name' => 'SEO配置',
 		'type' => 'heading');
@@ -135,7 +140,6 @@ function optionsframework_options() {
 		'id' => 'site_tongji',
 		'std' => '',
 		'type' => 'textarea');
-
 	$options[] = array(
 		'name' => '顶部配置',
 		'type' => 'heading');
@@ -148,14 +152,12 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'options' => array(
 			'image' => '图片',
-			'color' => '颜色')
-	);
+			'color' => '颜色'));
 	$options[] = array(
 		'name' => '图片样式',
 		'desc' => '只有在类型中选择“图片”才起作用',
 		'id' => 'background_image',
 		'std' => get_template_directory_uri() . '/images/background.jpg',
-		'class' => 'background_image',
 		'type' => 'upload');
 	$options[] = array(
 		'name' => '图片文字-1',
@@ -174,9 +176,7 @@ function optionsframework_options() {
 		'desc' => '只有在类型中选择“颜色”才起作用',
 		'id' => 'background_color',
 		'std' => '#222831',
-		'class' => "background_color",
-		'type' => 'color' );
-
+		'type' => 'color');
 	$options[] = array(
 		'name' => '内容页面',
 		'type' => 'heading');
@@ -188,29 +188,25 @@ function optionsframework_options() {
 		'type' => "images",
 		'options' => array(
 			'left_side' => $imagepath . 'col-left.png',
-			'right_side' => $imagepath . 'col-right.png')
-	);
+			'right_side' => $imagepath . 'col-right.png'));
 	$options[] = array(
 		'name' => '版权声明',
 		'desc' => '是否启用 CC BY-SA 4.0 声明',
 		'id' => 'post_cc',
 		'std' => '1',
-		'type' => 'checkbox'
-	);
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '分享按钮',
 		'desc' => '是否启用文章分享功能',
 		'id' => 'post_share',
 		'std' => '1',
-		'type' => 'checkbox'
-	);
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '打赏按钮',
 		'desc' => '是否启用文章打赏功能',
 		'id' => 'post_like_donate',
 		'std' => '0',
-		'type' => 'checkbox',
-	);
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '模板页面',
 		'type' => 'heading');
@@ -222,29 +218,25 @@ function optionsframework_options() {
 		'type' => "images",
 		'options' => array(
 			'left_side' => $imagepath . 'col-left.png',
-			'right_side' => $imagepath . 'col-right.png')
-	);	
+			'right_side' => $imagepath . 'col-right.png'));	
 	$options[] = array(
 		'name' => '版权声明',
 		'desc' => '是否启用 CC BY-SA 4.0 声明',
 		'id' => 'page_cc',
 		'std' => '0',
-		'type' => 'checkbox'
-	);
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '分享按钮',
 		'desc' => '是否启用文章分享功能',
 		'id' => 'page_share',
 		'std' => '0',
-		'type' => 'checkbox'
-	);
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '打赏按钮',
 		'desc' => '是否启用文章打赏功能',
 		'id' => 'page_like_donate',
 		'std' => '0',
-		'type' => 'checkbox',
-	);
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '404页面',
 		'type' => 'heading');
@@ -262,9 +254,7 @@ function optionsframework_options() {
 		'name' => '页面背景',
 		'id' => 'error_image',
 		'std' => get_template_directory_uri() . '/images/404.jpg',
-		'class' => 'error_image',
 		'type' => 'upload');
-
 	$options[] = array(
 		'name' => '轮播图片',
 		'type' => 'heading');
@@ -277,8 +267,7 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'options' => array(
 			'1' => '是',
-			'0' => '否')
-	);
+			'0' => '否'));
 	$options[] = array(
 		'name' => '轮播图片-1',
 		'id' => 'kratos_banner1',
@@ -329,18 +318,15 @@ function optionsframework_options() {
 		'id' => 'kratos_banner_url5',
 		'std' => '',
 		'type' => 'text');
-
 	$options[] = array(
 		'name' => '邮件配置',
 		'type' => 'heading');
-	
 	$options[] = array(
 		'name' => 'SMTP服务',
 		'desc' => '是否启用SMTP服务',
 		'id' => 'mail_smtps',
 		'std' => '0',
-		'type' => 'checkbox'
-	);
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '发信人',
 		'desc' => '请填写发件人姓名',
@@ -376,17 +362,33 @@ function optionsframework_options() {
 		'desc' => '是否启用SMTPAuth服务',
 		'id' => 'mail_smtpauth',
 		'std' => '1',
-		'type' => 'checkbox'
-	);
+		'type' => 'checkbox');
 	$options[] = array(
 		'name' => 'SMTPSecure设置',
 		'desc' => '若启用SMTPAuth服务则填写ssl，若不启用则留空',
 		'id' => 'mail_smtpsecure',
 		'std' => 'ssl',
 		'type' => 'text');
-
 	$options[] = array(
-		'name' => '底部组件',
+		'name' => '页脚配置',
+		'type' => 'heading');
+	$options[] = array(
+		'name' => '工信部备案信息',
+		'desc' => '输入您的工信部备案号，针对国际版没有备案信息栏目的功能',
+		'id' => 'icp_num',
+		'type' => 'text');	
+	$options[] = array(
+		'name' => '公安网备案信息',
+		'desc' => '输入您的公安网备案号',
+		'id' => 'gov_num',
+		'type' => 'text');	
+	$options[] = array(
+		'name' => '公安网备案连接',
+		'desc' => '输入您的公安网备案的链接地址',
+		'id' => 'gov_link',
+		'type' => 'text');
+	$options[] = array(
+		'name' => '社交组件',
 		'type' => 'heading');
 	$options[] = array(
 		'name' => '新浪微博',
@@ -412,7 +414,7 @@ function optionsframework_options() {
 		'id' => 'social_facebook',
 		'std' => '',
 		'type' => 'text');
-		$options[] = array(
+	$options[] = array(
 		'name' => 'LinkedIn',
 		'desc' => '连接前要带有 http:// 或者 https:// ',
 		'id' => 'social_linkedin',
@@ -432,8 +434,8 @@ function optionsframework_options() {
 		'desc' => '选择图片广告放置的位置',
 		'id' => 'ad_show',
 		'std' => array(
-				'top' => 0,
-				'footer' => 0),
+			'top' => 0,
+			'footer' => 0),
 		'type' => 'multicheck',
 		'options' => array(
 			'top' => '文章页顶部',

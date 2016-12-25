@@ -4,7 +4,7 @@ Theme URI: https://www.vtrois.com/theme-kratos.html
 Author: Vtrois
 Author URI: https://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 2.4.2
+Version: 2.4.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, white, blue, light, dark, theme-options, two-columns, left-sidebar, right-sidebar
@@ -2756,21 +2756,60 @@ img.size-smiley {
 	color: rgba(255,255,255,.5)
 }
 
-.cd-top {
+.cd-tool a{
 	position: fixed;
-	right: 30px;
-	bottom: 40px;
-	visibility: hidden;
-	overflow: hidden;
 	width: 50px;
 	height: 50px;
+	right: 30px;
+	opacity: .7;
 	background: #848484;
 	box-shadow: 0 0 10px rgba(0,0,0,.05);
 	white-space: nowrap;
-	opacity: 0;
 	-webkit-transition: all .3s;
 	transition: all .3s;
 	z-index: 2
+}
+
+.cd-gb-a{
+	bottom: 152px;
+}
+
+.cd-gb-b{
+	bottom: 96px;
+}
+
+.cd-gb-a span,.cd-gb-b span {
+	margin-top: 16px;
+	color: #fff;
+	font-size: 20px
+}
+
+.cd-weixin{
+	bottom: 96px;
+}
+
+.cd-weixin span {
+	margin-top: 16px;
+	color: #fff;
+	font-size: 20px
+}
+
+.cd-weixin img {
+	position: fixed;
+	right: 100px;
+	bottom: 45px;
+	width: 150px;
+    height: 150px;
+}
+
+#weixin-pic{
+	display: none;
+}
+
+.cd-top {
+	bottom: 40px;
+	visibility: hidden;
+	overflow: hidden;
 }
 
 .cd-top span {
@@ -2781,15 +2820,25 @@ img.size-smiley {
 
 .cd-top.cd-is-visible {
 	visibility: visible;
-	opacity: 1
+	opacity: .7
 }
 
-.cd-top.cd-fade-out {
-	opacity: .5
+.cd-top.cd-fade-out,.cd-gb.cd-fade-out,.cd-weixin.cd-fade-out {
+	opacity: .7
 }
 
 .no-touch .cd-top:hover {
 	background-color: #51aded;
+	opacity: 1
+}
+
+.no-touch .cd-weixin:hover {
+	background-color: #44B549;
+	opacity: 1
+}
+
+.no-touch .cd-gb-a:hover,.no-touch .cd-gb-b:hover {
+	background-color: #ED2A2F;
 	opacity: 1
 }
 

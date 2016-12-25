@@ -46,6 +46,7 @@ kratos/
 │   ├── avatar.png
 │   ├── background.jpg
 │   ├── fingerprint.png
+│   ├── weixin.png
 │   └── licenses.png
 ├── inc/
 │   ├── theme-options
@@ -95,6 +96,7 @@ kratos/
 - v1.0 - Initialize the project and say hello world
 
 ##License
+
 - The Kratos Html,CSS,JavaScript,and PHP files are licensed under the GNU General Public License v2:
   - http://www.gnu.org/licenses/gpl-2.0.html
 
