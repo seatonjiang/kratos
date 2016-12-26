@@ -202,30 +202,3 @@
 		copyright();
 	});
 }());
-
-function share(obj){
-	var qqShareURL="http://connect.qq.com/widget/shareqq/index.html?";
-	var weiboShareURL="http://service.weibo.com/share/share.php?";
-	var facebookShareURL="https://www.facebook.com/sharer/sharer.php?";
-	var twitterShareURL="https://twitter.com/intent/tweet?";
-	var googleplusShareURL="https://plus.google.com/share?";
-	var host_url="<?php the_permalink(); ?>";
-	var title="【<?php the_title(); ?>】";
-	var qqtitle="<?php the_title(); ?>";
-	var excerpt="<?php echo get_the_excerpt(); ?>";
-	var pic="<?php echo share_post_image(); ?>";
-	var appkey="<?php echo kratos_option('sina_appkey'); ?>";
-	var _URL;
-	if(obj=="qq"){
-		_URL=qqShareURL+"url="+host_url+"&title="+qqtitle+"&pics="+pic+"&desc=&summary="+excerpt+"&site=vtrois";
-	}else if(obj=="weibo"){
-		_URL=weiboShareURL+"url="+host_url+"&appkey="+appkey+"&title="+title+excerpt+"&pic="+pic;
-	}else if(obj=="facebook"){
-			_URL=facebookShareURL+"u="+host_url;
-	}else if(obj=="twitter"){
-			_URL=twitterShareURL+"text="+title+excerpt+"&url="+host_url;
-	}else if(obj=="googleplus"){
-			_URL=googleplusShareURL+"url="+host_url;
-	}
-	window.open(_URL);
-}
