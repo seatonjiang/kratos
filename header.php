@@ -33,9 +33,10 @@
 								<?php if ( has_nav_menu('header_menu') ) :?>
 									<a href="#" class="js-kratos-nav-toggle kratos-nav-toggle"><i></i></a>
 								<?php endif; ?>
-								<?php if ( !empty( kratos_option('site_logo') ) ) {?>
+								<?php $site_logo = kratos_option('site_logo');?>
+								<?php if ( !empty( $site_logo ) ) {?>
 									<a href="<?php echo get_option('home'); ?>">
-									<h1 id="kratos-logo-img"><img src="<?php echo kratos_option('site_logo') ?>"></h1>
+									<h1 id="kratos-logo-img"><img src="<?php echo $site_logo; ?>"></h1>
 									</a>
 								<?php }else{?>
 									<h1 id="kratos-logo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>

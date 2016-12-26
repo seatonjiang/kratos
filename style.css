@@ -4,7 +4,7 @@ Theme URI: https://www.vtrois.com/theme-kratos.html
 Author: Vtrois
 Author URI: https://www.vtrois.com/
 Description: A responsible theme for WordPress.
-Version: 2.4.3
+Version: 2.4.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, white, blue, light, dark, theme-options, two-columns, left-sidebar, right-sidebar
@@ -471,12 +471,15 @@ article a {
 		padding-left: 15px;
 		padding-right: 15px
 	}
+	.kratos-cover .desc2 {
+		margin-top: -15px
+	}
 }
 
 .kratos-cover .desc h2 {
 	color: #fff;
 	text-transform: none;
-	font-size: 50px;
+	font-size: 40px;
 	margin-bottom: 10px
 }
 
@@ -492,6 +495,12 @@ article a {
 	margin-bottom: 30px;
 	font-size: 25px;
 	letter-spacing: 1px
+}
+
+@media screen and (max-width:768px) {
+	.kratos-cover .desc p,.kratos-cover .desc span {
+		font-size: 21px;
+	}
 }
 
 .kratos-cover .desc span a {
@@ -2046,6 +2055,12 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
     position: relative;
     top: -2px;
     border-radius: 0px;
+}
+
+@media screen and (max-width:768px) {
+	.kratos-post-inner-new header .label {
+		display: none;
+	}
 }
 
 .kratos-post-inner-new header .label .label-arrow{

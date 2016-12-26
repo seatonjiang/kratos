@@ -95,6 +95,11 @@ kratos/
 - v1.1 - She has grown up with everyone
 - v1.0 - Initialize the project and say hello world
 
+## Update
+
+- The Kratos theme updated instructions:
+  - https://github.com/Vtrois/Kratos/wiki/Kratos-updated-instructions
+  
 ##License
 
 - The Kratos Html,CSS,JavaScript,and PHP files are licensed under the GNU General Public License v2:
