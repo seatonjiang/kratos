@@ -94,9 +94,15 @@ function optionsframework_options() {
 		'std' => '0',
 		'type' => 'checkbox');
 	$options[] = array(
-		'name' => '新浪分享AppKey',
-		'desc' => '输入您的新浪分享AppKey，若留空不会影响分享功能',
+		'name' => '新浪分享 AppKey',
+		'desc' => '输入您的新浪分享 AppKey ，若留空不会影响分享功能',
 		'id' => 'sina_appkey',
+		'type' => 'text');
+	$options[] = array(
+		'name' => 'Gravatar 服务器',
+		'desc' => '输入您的 Gravatar 服务器地址，默认为官方CN站点',
+		'std' => 'https://cn.gravatar.com',
+		'id' => 'gravatar_server',
 		'type' => 'text');
 	$options[] = array(
 		'name' => '访客留言',

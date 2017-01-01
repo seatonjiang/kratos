@@ -6,7 +6,7 @@
  * @version 2.4
  */
 
-define( 'KRATOS_VERSION', '2.4.4' );
+define( 'KRATOS_VERSION', '2.4.5' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -23,7 +23,7 @@ $kratos_update_checker = new ThemeUpdateChecker(
  * Replace Gravatar server
  */
 function kratos_get_avatar( $avatar ) {
-    $avatar = preg_replace( "/http:\/\/(www|\d).gravatar.com/", "https://cn.gravatar.com/",$avatar );
+    $avatar = preg_replace( "/http:\/\/(www|\d).gravatar.com/", kratos_option('gravatar_server'), $avatar );
     return $avatar;
 }
 add_filter( 'get_avatar', 'kratos_get_avatar' );
