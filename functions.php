@@ -23,7 +23,7 @@ $kratos_update_checker = new ThemeUpdateChecker(
  * Replace Gravatar server
  */
 function kratos_get_avatar( $avatar ) {
-    $avatar = preg_replace( "/http:\/\/(www|\d).gravatar.com/", kratos_option('gravatar_server'), $avatar );
+    $avatar = str_replace( array( 'www.gravatar.com', '0.gravatar.com', '1.gravatar.com', '2.gravatar.com', '3.gravatar.com', 'cn.gravatar.com', 'secure.gravatar.com' ), kratos_option('gravatar_server'), $avatar );
     return $avatar;
 }
 add_filter( 'get_avatar', 'kratos_get_avatar' );

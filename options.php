@@ -100,8 +100,8 @@ function optionsframework_options() {
 		'type' => 'text');
 	$options[] = array(
 		'name' => 'Gravatar 服务器',
-		'desc' => '输入您的 Gravatar 服务器地址，默认为官方CN站点',
-		'std' => 'https://cn.gravatar.com',
+		'desc' => '输入您的 Gravatar 服务器地址，默认为官方站点，不需要填写http或https',
+		'std' => 'cn.gravatar.com',
 		'id' => 'gravatar_server',
 		'type' => 'text');
 	$options[] = array(
