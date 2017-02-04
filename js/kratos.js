@@ -121,6 +121,46 @@
 		});
 	};
 
+	var showThumb = function(){
+		(function ($) {
+			$.extend({
+				tipsBox: function (options) {
+					options = $.extend({
+						obj: null,
+						str: "+1",
+						startSize: "10px",
+						endSize: "25px",
+						interval: 800,
+						color: "red",
+						callback: function () { }
+					}, options);
+					$("body").append("<span class='num'>" + options.str + "</span>");
+					var box = $(".num");
+					var left = options.obj.offset().left + options.obj.width() / 2;
+					var top = options.obj.offset().top - options.obj.height();
+					box.css({
+						"position": "absolute",
+						"left": left - 12 + "px",
+						"top": top + 9 + "px",
+						"z-index": 9999,
+						"font-size": options.startSize,
+						"line-height": options.endSize,
+						"color": options.color
+					});
+					box.animate({
+						"font-size": options.endSize,
+						"opacity": "0",
+						"top": top - parseInt(options.endSize) + "px"
+					}, options.interval, function () {
+						box.remove();
+						options.callback();
+					});
+				}
+			});
+		})(jQuery);
+
+	}
+
 	var showlove = function() {
 	    $.fn.postLike = function() {
 	        if ($(this).hasClass('done')) {
@@ -140,6 +180,12 @@
 	            function(data) {
 	                $(rateHolder).html(data);
 	            });
+				$.tipsBox({
+					obj: $(this),
+					str: "<i class='fa fa-thumbs-o-up'></i> + 1",
+					callback: function () {
+					}
+				});
 	            return false;
 	        }
 	    };
@@ -194,6 +240,7 @@
 		shareMenu();
 		parallax();
 		offcanvas();
+		showThumb();
 		showlove();
 		gotop();
 		weixinpic();

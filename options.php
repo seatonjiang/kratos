@@ -3,7 +3,7 @@
  * The template for Settings content control
  *
  * @package Vtrois
- * @version 2.4
+ * @version 2.5
  */
 
 function optionsframework_option_name() {
@@ -97,12 +97,6 @@ function optionsframework_options() {
 		'name' => '新浪分享 AppKey',
 		'desc' => '输入您的新浪分享 AppKey ，若留空不会影响分享功能',
 		'id' => 'sina_appkey',
-		'type' => 'text');
-	$options[] = array(
-		'name' => 'Gravatar 服务器',
-		'desc' => '输入您的 Gravatar 服务器地址，默认为官方站点，不需要填写http或https',
-		'std' => 'cn.gravatar.com',
-		'id' => 'gravatar_server',
 		'type' => 'text');
 	$options[] = array(
 		'name' => '访客留言',

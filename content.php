@@ -19,7 +19,7 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout;
 		<h2 class="kratos-entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 		<div class="kratos-post-meta">
 			<span class="pull-left">
-			<a href="#"><i class="fa fa-calendar"></i> <?php the_time('Y/n/j') ?></a>
+			<a href="#"><i class="fa fa-calendar"></i> <?php the_time('Y-m-d') ?></a>
 			</span>
 			<span class="visible-lg visible-md visible-sm pull-left">
 			<?php $category = get_the_category(); echo '<a href="' . get_category_link($category[0] -> term_id) . '"><i class="fa fa-folder-open-o"></i> ' . $category[0] -> cat_name . '</a>'; ?>
@@ -53,7 +53,7 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout;
 	</div>
 	<div class="kratos-post-meta-new">
 		<span class="visible-lg visible-md visible-sm pull-left">
-			<a href="#"><i class="fa fa-calendar"></i> <?php the_time('Y/n/j') ?></a>
+			<a href="<?php the_permalink() ?>"><i class="fa fa-calendar"></i> <?php the_time('Y-m-d') ?></a>
 			<a href="<?php the_permalink() ?>#respond"><i class="fa fa-commenting-o"></i> <?php echo kratos_comments_users($post->ID); ?> Comments</a>
 		</span>
 		<span class="pull-left">

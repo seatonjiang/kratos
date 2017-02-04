@@ -21,7 +21,7 @@
 						</div>
 						<div class="container">
 							<div class="row">
-								<div class="col-md-6 col-md-offset-3 text-center">
+								<div class="col-md-6 col-md-offset-3 footer-list text-center">
 									<p class="kratos-social-icons">
 									<?php echo (!kratos_option('social_weibo')) ? '' : '<a target="_blank" rel="nofollow" href="' . kratos_option('social_weibo') . '"><i class="fa fa-weibo"></i></a>'; ?>
 									<?php echo (!kratos_option('social_tweibo')) ? '' : '<a target="_blank" rel="nofollow" href="' . kratos_option('social_tweibo') . '"><i class="fa fa-tencent-weibo"></i></a>'; ?>
