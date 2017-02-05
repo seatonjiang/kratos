@@ -153,7 +153,6 @@
 						"top": top - parseInt(options.endSize) + "px"
 					}, options.interval, function () {
 						box.remove();
-						options.callback();
 					});
 				}
 			});
@@ -161,39 +160,38 @@
 
 	}
 
-	var showlove = function() {
-	    $.fn.postLike = function() {
-	        if ($(this).hasClass('done')) {
-	            alert('您已赞过该文章');
-	            return false;
-	        } else {
-	            $(this).addClass('done');
-	            var id = $(this).data("id"),
-	            action = $(this).data('action'),
-	            rateHolder = $(this).children('.count');
-	            var ajax_data = {
-	                action: "love",
-	                um_id: id,
-	                um_action: action
-	            };
-	            $.post("/wp-admin/admin-ajax.php", ajax_data,
-	            function(data) {
-	                $(rateHolder).html(data);
-	            });
-				$.tipsBox({
-					obj: $(this),
-					str: "<i class='fa fa-thumbs-o-up'></i> + 1",
-					callback: function () {
-					}
-				});
-	            return false;
-	        }
-	    };
-	    $(document).on("click", ".Love",
-	        function() {
-	            $(this).postLike();
-	    });
-	}
+    var showlove = function() {
+        $(document).on("click", ".Love", function() {
+            var $this = $(this);
+
+            if ($this.hasClass('done')) {
+                // alert('您已赞过该文章');
+                $.tipsBox({obj: $this, str: '您已赞过该文章，感谢支持！', color: 'blue', interval: 2000, startSize: '25px'});
+                return false;
+            }
+
+            $this.addClass('done');
+
+            var id = $this.data('id'),
+                action = $this.data('action');
+
+            $.post("/wp-admin/admin-ajax.php", {
+                action: 'love',
+                um_id: id,
+                um_action: action
+            }, function(data) {
+                $this.children('.love-count').html(data);
+            });
+
+            $.tipsBox({
+                obj: $this,
+                interval: 1500,
+                str: "<i class='fa fa-thumbs-o-up'></i> + 1"
+            });
+
+            return false;
+        });
+    }
 
 	var gotop = function() {
 		var offset = 300,
@@ -204,7 +202,7 @@
 			$cd_weixin = $('.cd-weixin');
 		$(window).scroll(function(){
 			( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-			if( $(this).scrollTop() > offset_opacity ) { 
+			if( $(this).scrollTop() > offset_opacity ) {
 				$back_to_top.addClass('cd-fade-out');
 				$cd_gb.addClass('cd-fade-out');
 				$cd_weixin.addClass('cd-fade-out');
@@ -218,7 +216,7 @@
 			);
 		});
 	}
-	
+
 	var weixinpic = function() {
 		$("#weixin-img").mouseout(function(){
 	        $("#weixin-pic")[0].style.display = 'none';

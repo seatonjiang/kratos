@@ -1,10 +1,8 @@
 <?php
 /**
- * The template for displaying pages
- *
- * @package Vtrois
- * @version 2.4
+ * Template Name: 归档(archives)
  */
+
 $page_side_bar = kratos_option('page_side_bar');
 $page_side_bar = (empty($page_side_bar)) ? 'right_side' : $page_side_bar;
 get_header();
@@ -26,7 +24,42 @@ get_header('banner'); ?>
                         <header class="kratos-entry-header">
                             <h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>
                         </header>
-                        <div class="kratos-post-content"><?php the_content(); ?></div>
+                        <div class="kratos-post-content">
+                            <div><?php the_content(); ?></div>
+                            <div class="archives">
+                                <?php
+                                $previous_year = $year = 0;
+                                $previous_month = $month = 0;
+                                $ul_open = false;
+
+                                $myposts = get_posts('numberposts=-1&orderby=post_date&order=DESC');
+
+                                foreach($myposts as $post) :
+                                    setup_postdata($post);
+
+                                    $year = mysql2date('Y', $post->post_date);
+                                    $month = mysql2date('n', $post->post_date);
+                                    $day = mysql2date('j', $post->post_date);
+
+                                    if($year != $previous_year || $month != $previous_month) :
+                                        if($ul_open == true) :
+                                            echo '</ul>';
+                                        endif;
+
+                                        echo '<h3 class="m-title">'; echo the_time('Y-m'); echo '</h3>';
+                                        echo '<ul class="archives-monthlisting">';
+                                        $ul_open = true;
+                                    endif;
+
+                                    $previous_year = $year; $previous_month = $month;
+                                ?>
+                                    <li style="background: none;">
+                                         <a href="<?php the_permalink(); ?>"><span>[<?php the_time('Y-m-j'); ?>]&nbsp;&nbsp;</span><span class="atitle"><?php the_title(); ?></span></a>
+                                    </li>
+                                <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
                         <?php if(kratos_option('page_like_donate')||kratos_option('page_share')) {?>
                         <footer class="kratos-entry-footer clearfix">
                                 <div class="post-like-donate text-center clearfix" id="post-like-donate">

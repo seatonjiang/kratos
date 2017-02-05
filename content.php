@@ -12,8 +12,8 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout;
 <article class="kratos-hentry clearfix">
 <?php if($listlayout == 'old_layout'){ ?>
 <div class="kratos-entry-thumb">
-	<?php kratos_blog_thumbnail() ?>
-</div>	
+	<?php kratos_blog_thumbnail_new() ?>
+</div>
 <div class="kratos-post-inner">
 	<header class="kratos-entry-header clearfix">
 		<h2 class="kratos-entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
