@@ -9,13 +9,13 @@ add_action( 'widgets_init', create_function('', 'return register_widget("kratos_
 class kratos_widget_author extends WP_Widget {
     function kratos_widget_author() {
         $widget_ops = array(
-            'classname' => 'amadeus_author',
+            'classname' => 'kratos_widget_author',
             'name'        => 'Kratos - 作者简介',
             'description' => 'Kratos主题特色组件 - 作者简介'
         );
-        parent::WP_Widget( false, false, $widget_ops );
-        // $widget_ops = array( 'classname' => 'kratos_widget_author', 'description' => '显示作者的信息机个人简介' );
-        // $this->__construct( 'kratos_widget_author', '作者信息', $widget_ops );
+        // parent::WP_Widget( false, false, $widget_ops );
+        // $widget_ops = array( 'classname' => 'kratos_widget_author', 'description' => '显示作者的信息简介' );
+        $this->__construct( false, '作者信息', $widget_ops );
     }
 
     function widget( $args, $instance ) {

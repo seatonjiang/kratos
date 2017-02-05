@@ -37,7 +37,7 @@ class kratos_widget_ad extends WP_Widget {
             'name'        => 'Kratos - 广告位',
             'description' => 'Kratos主题特色组件 - 广告位'
         );
-        parent::WP_Widget( false, false, $widget_ops );
+        $this->__construct( false, false, $widget_ops );
     }
 
     function widget( $args, $instance ) {
@@ -98,7 +98,7 @@ class kratos_widget_about extends WP_Widget {
             'name'        => 'Kratos - 个人简介',
             'description' => 'Kratos主题特色组件 - 个人简介'
         );
-        parent::WP_Widget( false, false, $widget_ops );
+        $this->__construct( false, false, $widget_ops );
     }
 
     function widget( $args, $instance ) {
@@ -261,7 +261,7 @@ class kratos_widget_search extends WP_Widget {
             'name'        => 'Kratos - 站点搜索',
             'description' => 'Kratos主题特色组件 - 站点搜索'
         );
-        parent::WP_Widget( false, false, $widget_ops );
+        $this->__construct( false, false, $widget_ops );
     }
 
     function widget( $args, $instance ) {
