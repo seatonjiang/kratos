@@ -160,20 +160,20 @@
 
 	}
 
+    // 点赞
     var showlove = function() {
         $(document).on("click", ".Love", function() {
-            var $this = $(this);
+            var $this = $(this),
+                id = $this.data('id'),
+                action = $this.data('action');
 
-            if ($this.hasClass('done')) {
+            if (document.cookie.indexOf('love_' + id + '=' + id) > -1) {
                 // alert('您已赞过该文章');
                 $.tipsBox({obj: $this, str: '您已赞过该文章，感谢支持！', color: 'blue', interval: 2000, startSize: '25px'});
                 return false;
             }
 
             $this.addClass('done');
-
-            var id = $this.data('id'),
-                action = $this.data('action');
 
             $.post("/wp-admin/admin-ajax.php", {
                 action: 'love',

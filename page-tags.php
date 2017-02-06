@@ -79,7 +79,7 @@ get_header('banner'); ?>
                                     var host_url="<?php the_permalink(); ?>";
                                     var title="【<?php the_title(); ?>】";
                                     var qqtitle="<?php the_title(); ?>";
-                                    var excerpt="<?php echo get_the_excerpt(); ?>";
+                                    var excerpt="<?php echo str_replace(array("\r\n", "\r", "\n"), "", get_the_excerpt()); ?>";
                                     var pic="<?php echo share_post_image(); ?>";
                                     var appkey="<?php echo kratos_option('sina_appkey'); ?>";
                                     var _URL;
