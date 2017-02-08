@@ -29,10 +29,10 @@ get_header('banner'); ?>
 							<h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>
 							<div class="kratos-post-meta text-center">
 								<span>
-								<i class="fa fa-calendar"></i> <?php the_time('Y-m-d') ?>
-				                <i class="fa fa-commenting-o"></i> <?php echo kratos_comments_users($post->ID); ?> Comments
-				                <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?> Views
-				                <i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?> Times
+                                    <i class="fa fa-calendar"></i> <?php the_time('Y-m-d') ?>
+                                    <i class="fa fa-commenting-o"></i> <?php echo kratos_comments_users($post->ID); ?> 条评论
+                                    <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?> 次阅读
+                                    <i class="fa fa-thumbs-o-up"></i> 被赞了 <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?> 次
 								</span>
 							</div>
 						</header>
@@ -50,7 +50,9 @@ get_header('banner'); ?>
 							<?php if ( kratos_option( 'post_like_donate' )==1 ) : ?>
 				   			<a href="<?php echo kratos_option('donate_links'); ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
 				   			<?php endif; ?>
-				   			<a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> 点赞</a>
+				   			<a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" >
+				   				<i class="fa fa-thumbs-o-up"></i> 点赞 (<span class="love-count"><?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?></span>)
+				   			</a>
 							<?php if ( kratos_option( 'post_share' )==1 ) : ?>
 							<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
 							<div class="share-wrap" style="display: none;">
@@ -95,7 +97,7 @@ get_header('banner'); ?>
 									var host_url="<?php the_permalink(); ?>";
 									var title="【<?php the_title(); ?>】";
 									var qqtitle="<?php the_title(); ?>";
-									var excerpt="<?php echo get_the_excerpt(); ?>";
+									var excerpt="<?php echo str_replace(array("\r\n", "\r", "\n"), "", get_the_excerpt()); ?>";
 									var pic="<?php echo share_post_image(); ?>";
 									var appkey="<?php echo kratos_option('sina_appkey'); ?>";
 									var _URL;

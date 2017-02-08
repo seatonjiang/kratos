@@ -9,7 +9,7 @@ function kratos_widgets_init() {
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="widget-title">',
         'after_title' => '</h4>'
-    ) );   
+    ) );
 }
 add_action( 'widgets_init', 'kratos_widgets_init' );
 
@@ -37,7 +37,7 @@ class kratos_widget_ad extends WP_Widget {
             'name'        => 'Kratos - 广告位',
             'description' => 'Kratos主题特色组件 - 广告位'
         );
-        parent::WP_Widget( false, false, $widget_ops );
+        $this->__construct( false, false, $widget_ops );
     }
 
     function widget( $args, $instance ) {
@@ -98,7 +98,7 @@ class kratos_widget_about extends WP_Widget {
             'name'        => 'Kratos - 个人简介',
             'description' => 'Kratos主题特色组件 - 个人简介'
         );
-        parent::WP_Widget( false, false, $widget_ops );
+        $this->__construct( false, false, $widget_ops );
     }
 
     function widget( $args, $instance ) {
@@ -157,7 +157,7 @@ class kratos_widget_about extends WP_Widget {
                     简介内容：
                     <textarea class="widefat" rows="4" id="<?php echo $this->get_field_id( 'profile' ); ?>" name="<?php echo $this->get_field_name( 'profile' ); ?>" ><?php echo $profile; ?></textarea>
                 </label>
-            </p> 
+            </p>
             <p>
                 <label for="<?php echo $this->get_field_id( 'bkimgurl' ); ?>">
                     卡片背景：
@@ -261,7 +261,7 @@ class kratos_widget_search extends WP_Widget {
             'name'        => 'Kratos - 站点搜索',
             'description' => 'Kratos主题特色组件 - 站点搜索'
         );
-        parent::WP_Widget( false, false, $widget_ops );
+        $this->__construct( false, false, $widget_ops );
     }
 
     function widget( $args, $instance ) {
@@ -374,11 +374,14 @@ class kratos_widget_posts extends WP_Widget{
 }
 
 function kratos_register_widgets(){
-    register_widget('kratos_widget_ad'); 
-    register_widget('kratos_widget_about'); 
-    register_widget('kratos_widget_tags'); 
-    register_widget('kratos_widget_search'); 
-    register_widget('kratos_widget_posts'); 
+    register_widget('kratos_widget_ad');
+    register_widget('kratos_widget_about');
+    register_widget('kratos_widget_tags');
+    register_widget('kratos_widget_search');
+    register_widget('kratos_widget_posts');
 }
 add_action('widgets_init','kratos_register_widgets');
+
+// 自定义作者信息
+include (TEMPLATEPATH . '/inc/widgets/author.php');
 ?>

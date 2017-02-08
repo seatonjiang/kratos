@@ -1,9 +1,6 @@
 <?php
 /**
- * The template for displaying pages
- *
- * @package Vtrois
- * @version 2.4
+ * Template Name: 标签模板
  */
 $page_side_bar = kratos_option('page_side_bar');
 $page_side_bar = (empty($page_side_bar)) ? 'right_side' : $page_side_bar;
@@ -26,7 +23,12 @@ get_header('banner'); ?>
                         <header class="kratos-entry-header">
                             <h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>
                         </header>
-                        <div class="kratos-post-content"><?php the_content(); ?></div>
+                        <div class="kratos-post-content">
+                            <div><?php the_content(); ?></div>
+                            <div class="tags-page" itemprop="description">
+                                <?php specs_show_tags(); ?>
+                            </div>
+                        </div>
                         <?php if(kratos_option('page_like_donate')||kratos_option('page_share')) {?>
                         <footer class="kratos-entry-footer clearfix">
                                 <div class="post-like-donate text-center clearfix" id="post-like-donate">

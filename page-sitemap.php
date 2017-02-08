@@ -1,10 +1,8 @@
 <?php
 /**
- * The template for displaying pages
- *
- * @package Vtrois
- * @version 2.4
+ * Template Name: 网站地图
  */
+
 $page_side_bar = kratos_option('page_side_bar');
 $page_side_bar = (empty($page_side_bar)) ? 'right_side' : $page_side_bar;
 get_header();
@@ -26,7 +24,70 @@ get_header('banner'); ?>
                         <header class="kratos-entry-header">
                             <h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>
                         </header>
-                        <div class="kratos-post-content"><?php the_content(); ?></div>
+                        <div class="kratos-post-content">
+                            <div><?php the_content(); ?></div>
+
+                            <div class="ordered-list">
+                                <h3>最近文章</h3>
+                                <ol>
+                                <?php
+                                    $myposts = get_posts('numberposts=20&orderby=post_date&order=DESC');
+                                    foreach($myposts as $post) :
+                                        setup_postdata($post);
+                                ?>
+                                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                                <?php
+                                    endforeach;
+                                ?>
+                                </ol>
+                            </div>
+
+                            <div class="ordered-list">
+                                <h3>按月浏览</h3>
+                                <ol>
+                                    <?php wp_get_archives(apply_filters('widget_archives_args', array('type' => 'monthly', 'limit' => 24))); ?>
+                                </ol>
+                            </div>
+
+                            <div class="ordered-list">
+                                <h3>按年浏览</h3>
+                                <ul>
+                                    <?php wp_get_archives(apply_filters('widget_archives_args', array('type' => 'yearly', 'limit' => 10))); ?>
+                                </ul>
+                            </div>
+
+                            <div class="ordered-list">
+                                <h3>分类</h3>
+                                <ul>
+                                <?php
+                                    $terms = get_terms('category', 'orderby=name&hide_empty=0' );
+                                    $count = count($terms);
+                                    if($count > 0){
+                                        foreach ($terms as $term) {
+                                            echo '<li><a href="'.get_term_link($term, $term->slug).'" title="'.$term->name.'">'.$term->name.'</a></li>';
+                                        }
+                                    }
+                                ?>
+                                </ul>
+                            </div>
+
+                            <div class="ordered-list">
+                                <h3>页面</h3>
+                                <ul>
+                                <?php
+                                    $myposts = get_posts('numberposts=-1&orderby=post_date&order=DESC&post_type=page');
+
+                                    foreach($myposts as $post) :
+                                        setup_postdata($post);
+                                ?>
+                                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                                <?php
+                                    endforeach;
+                                ?>
+                                </ul>
+                            </div>
+                        </div>
+
                         <?php if(kratos_option('page_like_donate')||kratos_option('page_share')) {?>
                         <footer class="kratos-entry-footer clearfix">
                                 <div class="post-like-donate text-center clearfix" id="post-like-donate">
@@ -77,7 +138,7 @@ get_header('banner'); ?>
                                     var host_url="<?php the_permalink(); ?>";
                                     var title="【<?php the_title(); ?>】";
                                     var qqtitle="<?php the_title(); ?>";
-                                    var excerpt="<?php echo str_replace(array("\r\n", "\r", "\n"), "", get_the_excerpt()); ?>";
+                                    var excerpt="<?php echo get_the_excerpt(); ?>";
                                     var pic="<?php echo share_post_image(); ?>";
                                     var appkey="<?php echo kratos_option('sina_appkey'); ?>";
                                     var _URL;

@@ -12,8 +12,8 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout;
 <article class="kratos-hentry clearfix">
 <?php if($listlayout == 'old_layout'){ ?>
 <div class="kratos-entry-thumb">
-	<?php kratos_blog_thumbnail() ?>
-</div>	
+	<?php echo kratos_blog_thumbnail_tim(240, 145, true); ?>
+</div>
 <div class="kratos-post-inner">
 	<header class="kratos-entry-header clearfix">
 		<h2 class="kratos-entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
@@ -39,7 +39,7 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout;
 <?php } if($listlayout == 'new_layout'){ ?>
 <div class="kratos-entry-border-new clearfix">
 	<div class="kratos-entry-thumb-new">
-		<?php kratos_blog_thumbnail_new() ?>
+		<?php echo kratos_blog_thumbnail_tim(240, 145, true); ?>
 	</div>
 	<div class="kratos-post-inner-new">
 		<header class="kratos-entry-header-new">
