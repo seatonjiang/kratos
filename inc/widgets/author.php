@@ -51,7 +51,7 @@ class kratos_widget_author extends WP_Widget {
                 <?php }?>
                 <?php if(!empty($profile)) {?>
                 <div class="textwidget">
-                    <p><?php echo $profile; ?></p>
+                    <?php echo $profile; ?>
                 </div>
                 <?php }?>
 
