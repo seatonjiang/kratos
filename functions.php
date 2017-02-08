@@ -57,6 +57,7 @@ add_filter('the_content', 'my_formatter', 99);
 function kratos_theme_scripts() {
     $dir = get_template_directory_uri();
     if ( !is_admin() ) {
+        wp_deregister_script('jquery');
         wp_enqueue_style( 'animate-style', $dir . '/css/animate.min.css', array(), '3.5.1');
         wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.min.css', array(), '4.7.0');
         wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.min.css', array(), '3.3.7');
