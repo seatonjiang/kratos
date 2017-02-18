@@ -6,7 +6,7 @@
  * @version 2.5
  */
 
-define( 'KRATOS_VERSION', '2.5.0' );
+define( 'KRATOS_VERSION', '2.5.1' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -743,6 +743,26 @@ function kratos_active_menu_class($classes) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'kratos_active_menu_class');
+
+/**
+ * Photo Thumbnails
+ */
+function kratos_photo_thumbnail() {  
+  
+    global $post;  
+    if ( has_post_thumbnail() ) {  
+       the_post_thumbnail(array(750, ), array('class' => 'img-responsive'));
+    } else { 
+        $content = $post->post_content;  
+        preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);  
+        $n = count($strResult[1]);  
+        if($n > 0){ 
+            echo '<img src="'.$strResult[1][0].'" class="img-responsive" />';  
+        }else {
+            echo '<img src="'.get_bloginfo('template_url').'/images/default.jpg" class="img-responsive" />';  
+        }  
+    }  
+}
 
 /**
  * Post Thumbnails

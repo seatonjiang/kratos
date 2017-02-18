@@ -118,13 +118,13 @@ class kratos_widget_about extends WP_Widget {
                 <?php if(!empty($imgurl)) {?>
                 <div class="photo-wrapper clearfix">
                     <div class="photo-wrapper-tip text-center">
-                        <img class="about-photo" src="<?php echo $imgurl; ?>" />
+                        <a href="<?php echo get_option('home'); ?>/wp-login.php"><img class="about-photo" src="<?php echo $imgurl; ?>" /></a>
                     </div>
                 </div>
                 <?php }else{?>
                 <div class="photo-wrapper clearfix">
                     <div class="photo-wrapper-tip text-center">
-                        <img class="about-photo" src="<?php echo bloginfo('template_url'); ?>/images/avatar.png" />
+                        <a href="<?php echo get_option('home'); ?>/wp-login.php"><img class="about-photo" src="<?php echo bloginfo('template_url'); ?>/images/avatar.png" /></a>
                     </div>
                 </div>
                 <?php }?>
