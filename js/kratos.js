@@ -19,9 +19,18 @@
 		});
 	}
 
+	var topStart = function() {
+		$('#top-Start').click(function() {
+			$('html,body').animate({
+				scrollTop: $('#kratos-blog').offset().top
+			}, 1000);
+		});
+	};
+
 	var isiPad = function() {
 		return (navigator.platform.indexOf("iPad") != -1);
 	};
+
 	var isiPhone = function() {
 		return (
 			(navigator.platform.indexOf("iPhone") != -1) ||
@@ -236,6 +245,7 @@
 	}
 
 	$(function() {
+		topStart();
 		mainMenu();
 		shareMenu();
 		parallax();
