@@ -1,12 +1,12 @@
-#Kratos
-###A responsible blog theme for WordPress
+# Kratos
+### A responsible blog theme for WordPress
 
 Kratos is a clean, simple and responsive blog theme of WordPress, based on [Bootstrap](https://github.com/twbs/bootstrap) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). Created and maintained by [Vtrois](https://www.vtrois.com).
  Stay up to date with the latest release and announcements on [Bulletin Board](https://www.vtrois.com/theme-kratos.html).
 
 ![Kratos Demo](https://dn-coding-net-production-pp.qbox.me/e6149dc5-5fd2-443f-9ab5-723c05ec7bbb.png) 
 
-##Structure
+## Structure
 Within the download you'll find the following directories and files. You'll see something like this:
 
 ```
@@ -102,7 +102,7 @@ kratos/
 - The Kratos theme updated instructions:
   - https://github.com/Vtrois/Kratos/wiki/Kratos-updated-instructions
   
-##License
+## License
 
 - The Kratos Html,CSS,JavaScript,and PHP files are licensed under the GNU General Public License v2:
   - http://www.gnu.org/licenses/gpl-2.0.html

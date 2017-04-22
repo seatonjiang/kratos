@@ -6,7 +6,7 @@
  * @version 2.5
  */
 
-define( 'KRATOS_VERSION', '2.5.2' );
+define( 'KRATOS_VERSION', '2.5.3' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -16,7 +16,7 @@ require_once( get_template_directory() . '/inc/widgets.php');
 require_once( get_template_directory() . '/inc/version.php' );
 $kratos_update_checker = new ThemeUpdateChecker(
     'Kratos', 
-    'https://soft.vtrois.com/wordpress/theme/kratos/upgrade.json'
+    'https://mirrors.vtrois.com/themes/kratos/upgrade.json'
 );
 
 /**
@@ -1088,6 +1088,23 @@ function kratos_pages($range = 5){
         echo "</ul></div>";
     }
 }
+
+/**
+ * Theme notice
+ */
+function Kratos_admin_notice() {
+    ?>
+    <style type="text/css">
+        .about-description a{
+            text-decoration:none;
+        }
+    </style>
+    <div class="notice notice-info">
+    <p class="about-description">嗨，欢迎使用 Kratos 主题开始创作，在正式使用前建议您参阅<a target="view_window" href="https://www.vtrois.com/kratos-faq.html">《主题使用说明》</a>与<a target="view_window" href="https://www.vtrois.com/kratos-article-style.html">《文章样式说明》</a>，同时欢迎您加入主题交流群：<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">51880737</a></p>
+    </div>
+    <?php
+}
+add_action( 'welcome_panel', 'Kratos_admin_notice' );
 
 /**
  * Admin footer text
