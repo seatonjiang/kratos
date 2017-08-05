@@ -97,11 +97,6 @@ kratos/
 - v2.0 - She grew up
 - v1.1 - She has grown up with everyone
 - v1.0 - Initialize the project and say hello world
-
-## Update
-
-- The Kratos theme updated instructions:
-  - https://github.com/Vtrois/Kratos/wiki/Kratos-updated-instructions
   
 ## License
 
