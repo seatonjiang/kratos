@@ -6,7 +6,7 @@
  * @version 2.5
  */
 
-define( 'KRATOS_VERSION', '2.5.3' );
+define( 'KRATOS_VERSION', '2.5' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -55,13 +55,13 @@ add_filter('the_content', 'my_formatter', 99);
 function kratos_theme_scripts() {  
     $dir = get_template_directory_uri(); 
     if ( !is_admin() ) {  
-        wp_enqueue_style( 'animate-style', $dir . '/css/animate.min.css', array(), '3.5.1'); 
-        wp_enqueue_style( 'awesome-style', $dir . '/css/font-awesome.min.css', array(), '4.7.0');
-        wp_enqueue_style( 'bootstrap-style', $dir . '/css/bootstrap.min.css', array(), '3.3.7');
-        wp_enqueue_style( 'superfish-style', $dir . '/css/superfish.min.css', array(), 'r7');
-        wp_enqueue_style( 'kratos-style', get_stylesheet_uri(), array(), KRATOS_VERSION);
-        wp_enqueue_style( 'kratos-diy-style', $dir . '/css/kratos.diy.css', array(), KRATOS_VERSION);
-        wp_enqueue_script( 'jquerys', $dir . '/js/jquery.min.js' , array(), '2.1.4');
+        wp_enqueue_style( 'animate', $dir . '/css/animate.min.css', array(), '3.5.1'); 
+        wp_enqueue_style( 'awesome', $dir . '/css/font-awesome.min.css', array(), '4.7.0');
+        wp_enqueue_style( 'bootstrap', $dir . '/css/bootstrap.min.css', array(), '3.3.7');
+        wp_enqueue_style( 'superfish', $dir . '/css/superfish.min.css', array(), 'r7');
+        wp_enqueue_style( 'kratos', get_stylesheet_uri(), array(), KRATOS_VERSION);
+        wp_enqueue_style( 'kratos-diy', $dir . '/css/kratos.diy.css', array(), KRATOS_VERSION);
+        wp_enqueue_script( 'jquery', $dir . '/js/jquery.min.js' , array(), '2.1.4');
         wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.min.js', array(), '1.3.0'); 
         wp_enqueue_script( 'qrcode', $dir . '/js/jquery.qrcode.min.js', array(), KRATOS_VERSION);
         wp_enqueue_script( 'modernizr', $dir . '/js/modernizr.min.js' , array(), '2.6.2');
@@ -98,6 +98,11 @@ remove_action( 'wp_head', 'rel_canonical' );
 remove_action( 'wp_footer', 'wp_print_footer_scripts' );   
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );   
 remove_action( 'template_redirect', 'wp_shortlink_header', 11, 0 ); 
+
+add_action( 'wp_enqueue_scripts', 'mt_enqueue_scripts', 1 );
+function mt_enqueue_scripts() {
+  wp_deregister_script('jquery');
+}
 
 function disable_emojis() {
     global $wp_version;
