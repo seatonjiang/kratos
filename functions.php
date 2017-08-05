@@ -217,7 +217,7 @@ function danger($atts, $content=null, $code="") {
 add_shortcode('danger' , 'danger' );
 
 function wymusic($atts, $content=null, $code="") {
-    $return = '<iframe class="" style="width:100%" frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 src="http://music.163.com/outchain/player?type=2&id=';
+    $return = '<iframe class="" style="width:100%" frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 src="//music.163.com/outchain/player?type=2&id=';
     $return .= $content;
     $return .= '&auto='. kratos_option('wy_music') .'&height=66"></iframe>';
     return $return;
@@ -337,7 +337,7 @@ add_shortcode('tudou' , 'tudou' );
 
 function vqq($atts, $content=null, $code="") {
     extract(shortcode_atts(array("auto"=>'0'),$atts));
-    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="http://v.qq.com/iframe/player.html?vid=';
+    $return = '<div class="video-container"><iframe frameborder="0" width="640" height="498" src="//v.qq.com/iframe/player.html?vid=';
     $return .= $content;
     $return .= '&tiny=0&auto=';
     $return .= $auto;
