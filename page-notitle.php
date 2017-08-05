@@ -73,12 +73,11 @@ get_header('banner'); ?>
 									var qqtitle="<?php the_title(); ?>";
 									var excerpt="<?php echo get_the_excerpt(); ?>";
 									var pic="<?php echo share_post_image(); ?>";
-									var appkey="<?php echo kratos_option('sina_appkey'); ?>";
 									var _URL;
 									if(obj=="qq"){
 										_URL=qqShareURL+"url="+host_url+"&title="+qqtitle+"&pics="+pic+"&desc=&summary="+excerpt+"&site=vtrois";
 									}else if(obj=="weibo"){
-										_URL=weiboShareURL+"url="+host_url+"&appkey="+appkey+"&title="+title+excerpt+"&pic="+pic;
+										_URL=weiboShareURL+"url="+host_url+"&title="+title+excerpt+"&pic="+pic;
 									}else if(obj=="facebook"){
 								 		_URL=facebookShareURL+"u="+host_url;
 									}else if(obj=="twitter"){

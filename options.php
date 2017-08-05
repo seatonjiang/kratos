@@ -94,11 +94,6 @@ function optionsframework_options() {
 		'std' => '0',
 		'type' => 'checkbox');
 	$options[] = array(
-		'name' => '新浪分享 AppKey',
-		'desc' => '输入您的新浪分享 AppKey ，若留空不会影响分享功能',
-		'id' => 'sina_appkey',
-		'type' => 'text');
-	$options[] = array(
 		'name' => '访客留言',
 		'desc' => '是否启用访客留言按钮功能',
 		'id' => 'cd_gb',
