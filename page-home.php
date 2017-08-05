@@ -36,8 +36,7 @@ get_header(); ?>
 					</div>
 					<div class="kratos-post-text">
 						<a href="<?php the_permalink() ?>"><h3 class="text-center"><?php the_title(); ?></h3></a>
-						<?php $excerptphoto = wp_trim_words(get_the_excerpt(), 60); ?>
-						<p><?php echo $excerptphoto ?></p>
+						<p><?php echo wp_trim_words(get_the_excerpt(), 60); ?></p>
 					</div>
 				</div>
 			</div>
@@ -74,8 +73,7 @@ get_header(); ?>
 					</div>
 					<div class="kratos-post-text">
 						<a href="<?php the_permalink() ?>"><h3 class="text-center"><?php the_title(); ?></h3></a>
-						<?php $excerptphoto = wp_trim_words(get_the_excerpt(), 60); ?>
-						<p><?php echo $excerptphoto ?></p>
+						<p><?php echo wp_trim_words(get_the_excerpt(), 60); ?></p>
 					</div>
 				</div>
 			</div>
@@ -112,8 +110,7 @@ get_header(); ?>
 					</div>
 					<div class="kratos-post-text">
 						<a href="<?php the_permalink() ?>"><h3 class="text-center"><?php the_title(); ?></h3></a>
-						<?php $excerptphoto = wp_trim_words(get_the_excerpt(), 60); ?>
-						<p><?php echo $excerptphoto ?></p>
+						<p><?php echo wp_trim_words(get_the_excerpt(), 60); ?></p>
 					</div>
 				</div>
 			</div>
