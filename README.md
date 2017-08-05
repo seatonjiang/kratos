@@ -83,6 +83,7 @@ kratos/
 ├── smiley.php
 ├── page.php
 ├── page-notitle.php
+├── page-home.php
 ├── functions.php
 └── screenshot.png
 ```
