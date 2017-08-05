@@ -2,9 +2,8 @@
 
 function kratos_widgets_init() {
     register_sidebar( array(
-        'name' => __( '侧边栏工具', 'kratos' ),
+        'name' => '侧边栏工具',
         'id' => 'sidebar_tool',
-        'description' => __( '', 'kratos' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
         'after_widget' => '</aside>',
         'before_title' => '<h4 class="widget-title">',
@@ -31,13 +30,13 @@ add_action( 'widgets_init', 'remove_default_widget' );
 
 class kratos_widget_ad extends WP_Widget {
 
-    function kratos_widget_ad() {
+    function __construct() {
         $widget_ops = array(
             'classname' => 'widget_kratos_ad',
             'name'        => 'Kratos - 广告位',
             'description' => 'Kratos主题特色组件 - 广告位'
         );
-        parent::WP_Widget( false, false, $widget_ops );
+        parent::__construct( false, false, $widget_ops );
     }
 
     function widget( $args, $instance ) {
@@ -92,13 +91,13 @@ class kratos_widget_ad extends WP_Widget {
 
 class kratos_widget_about extends WP_Widget {
 
-    function kratos_widget_about() {
+    function __construct() {
         $widget_ops = array(
             'classname' => 'amadeus_about',
             'name'        => 'Kratos - 个人简介',
             'description' => 'Kratos主题特色组件 - 个人简介'
         );
-        parent::WP_Widget( false, false, $widget_ops );
+        parent::__construct( false, false, $widget_ops );
     }
 
     function widget( $args, $instance ) {
@@ -255,13 +254,13 @@ class kratos_widget_tags extends WP_Widget {
 
 class kratos_widget_search extends WP_Widget {
 
-    function kratos_widget_search() {
+    function __construct(){
         $widget_ops = array(
             'classname' => 'widget_kratos_search',
             'name'        => 'Kratos - 站点搜索',
             'description' => 'Kratos主题特色组件 - 站点搜索'
         );
-        parent::WP_Widget( false, false, $widget_ops );
+        parent::__construct( false, false, $widget_ops );
     }
 
     function widget( $args, $instance ) {
@@ -300,10 +299,17 @@ class kratos_widget_search extends WP_Widget {
 }
 
 class kratos_widget_posts extends WP_Widget{
+
     function __construct(){
-        $widget_ops = array('description'=>'Kratos主题特色组件 - 文章聚合');
-        parent::__construct('kratos_widget_posts' ,'Kratos - 文章聚合', $widget_ops);
+        $widget_ops = array(
+        	
+        	'classname' => 'kratos_widget_posts',
+            'name'        => 'Kratos - 文章聚合',
+            'description'=>'Kratos主题特色组件 - 文章聚合'
+        );
+        parent::__construct( false, false, $widget_ops );
     }
+
     function widget($args, $instance){
         extract($args);
         $result = '';
