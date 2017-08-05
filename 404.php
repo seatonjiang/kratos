@@ -5,7 +5,6 @@
  * @package Vtrois
  * @version 2.4
  */
-
 get_header(); ?>
 <div class="kratos-start">
 	<div class="kratos-overlay"></div>
