@@ -1,8 +1,8 @@
-# :sparkles: :heart: Kratos :heart: :sparkles:
-### A responsible blog theme for WordPress :sparkling_heart:
+# Kratos
 
-Kratos is a clean, simple and responsive blog theme of WordPress, based on [Bootstrap](https://github.com/twbs/bootstrap) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). Created and maintained by [Vtrois](https://www.vtrois.com).
- Stay up to date with the latest release and announcements on [Bulletin Board](https://github.com/Vtrois/Kratos/issues).
+Kratos is a clean, simple and responsive blog theme of WordPress, based on [Bootstrap](https://github.com/twbs/bootstrap) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). Created and maintained by Vtrois. Stay up to date with the latest release and announcements on [Bulletin Board](https://github.com/Vtrois/Kratos/issues). 
+
+:point_right: Check them out at my home page: https://www.vtrois.com
 
 ![Kratos Demo](http://i2.bvimg.com/1949/649bfde164c5c8b1.png) 
 
@@ -87,16 +87,6 @@ kratos/
 ├── functions.php
 └── screenshot.png
 ```
-
-## Changelog
-
-- v2.5 - Happy New Year
-- v2.4 - New posture
-- v2.3 - Attention to detail and reading
-- v2.1 - She has some new things
-- v2.0 - She grew up
-- v1.1 - She has grown up with everyone
-- v1.0 - Initialize the project and say hello world
   
 ## License
 
