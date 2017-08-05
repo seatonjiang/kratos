@@ -105,8 +105,8 @@ kratos/
   
 ## License
 
-- The Kratos Html,CSS,JavaScript,and PHP files are licensed under the GNU General Public License v2:
-  - http://www.gnu.org/licenses/gpl-2.0.html
+- The Kratos Html,CSS,JavaScript,and PHP files are licensed under the GNU General Public License v3:
+  - http://www.gnu.org/licenses/gpl-3.0.html
 
 - The Kratos documentation is licensed under the CC BY 4.0 License:
   - https://creativecommons.org/licenses/by/4.0
