@@ -29,7 +29,7 @@ get_header('banner'); ?>
 							<h1 class="kratos-entry-title text-center"><?php the_title(); ?></h1>
 							<div class="kratos-post-meta text-center">
 								<span>
-								<i class="fa fa-calendar"></i> <?php the_time('Y-m-d') ?>
+								<i class="fa fa-calendar"></i> <?php echo get_the_date(); ?>
 				                <i class="fa fa-commenting-o"></i> <?php echo kratos_comments_users($post->ID); ?> Comments
 				                <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?> Views
 				                <i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?> Times
