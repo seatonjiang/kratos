@@ -22,7 +22,7 @@ if(is_category()){
 					kratos_banner();
 				}elseif(is_category()){
 			?>
-			<?php if ( kratos_option( 'show_head_cat' )==1 ) : ?>
+			<?php if ( kratos_option( 'show_head_cat' ) ) : ?>
 				<div class="kratos-hentry clearfix">
 					<h1 class="kratos-post-header-title">分类：<?php echo single_cat_title('', false); ?></h1>
 					<h1 class="kratos-post-header-title"><?php echo category_description(); ?></h1>
@@ -31,7 +31,7 @@ if(is_category()){
 			<?php
 				}elseif(is_tag()){
 			?>
-			<?php if ( kratos_option( 'show_head_tag' )==1 ) : ?>
+			<?php if ( kratos_option( 'show_head_tag' ) ) : ?>
 				<div class="kratos-hentry clearfix">
 					<h1 class="kratos-post-header-title">标签：<?php echo single_cat_title('', false); ?></h1>
 					<h1 class="kratos-post-header-title"><?php echo category_description(); ?></h1>
