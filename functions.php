@@ -174,6 +174,16 @@ add_filter( 'the_content', 'wpautop' , 12);
 add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 
 /**
+ * Auto post link
+ */  
+function kratos_auto_post_link($content) {
+  global $post;
+  $content = preg_replace('/<\s*img\s+[^>]*?src\s*=\s*(\'|\")(.*?)\\1[^>]*?\/?\s*>/i', "<img layer-src=\"$2\" src=\"$2\" alt=\"《".$post->post_title."》\" />", $content);
+  return $content;
+  }
+add_filter ('the_content', 'kratos_auto_post_link',0);
+
+/**
  * Remove the excess CSS selectors
  */
 add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);

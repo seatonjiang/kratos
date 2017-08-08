@@ -230,11 +230,15 @@
 	    })
 	}
 
+	var showPhotos = function() {
+		layer.photos({
+		  photos: '.kratos-post-content'
+		  ,anim: 0
+		}); 
+	}
+
 	var copyright = function() {
-		console.log("╔╦╗┬ ┬┌─┐┌┬┐┌─┐  ╦╔═┬─┐┌─┐┌┬┐┌─┐┌─┐  ╔╦╗┌─┐┌┬┐┌─┐  ╔╗ ┬ ┬  ╦  ╦┌┬┐┬─┐┌─┐┬┌─┐\n ║ ├─┤├┤ │││├┤   ╠╩╗├┬┘├─┤ │ │ │└─┐  ║║║├─┤ ││├┤   ╠╩╗└┬┘  ╚╗╔╝ │ ├┬┘│ ││└─┐\n ╩ ┴ ┴└─┘┴ ┴└─┘  ╩ ╩┴└─┴ ┴ ┴ └─┘└─┘  ╩ ╩┴ ┴─┴┘└─┘  ╚═╝ ┴    ╚╝  ┴ ┴└─└─┘┴└─┘\n");
-		console.log("主题下载：https://github.com/Vtrois/Kratos");
-		console.log("主题使用：https://www.vtrois.com/kratos-faq.html");
-		console.log("文章样式：https://www.vtrois.com/article-style.html");
+		console.log("项目托管：https://github.com/Vtrois/Kratos");
 	}
 
 	$(function() {
@@ -249,6 +253,7 @@
 		weixinpic();
 		mobileMenuOutsideClick();
 		contentWayPoint();
+		showPhotos();
 		copyright();
 	});
 }());
