@@ -14,6 +14,7 @@ kratos/
 │   ├── bootstrap.min.css
 │   ├── font-awesome.min.css
 │   ├── kratos.diy.css
+│   ├── layer.min.css
 │   └── superfish.min.css
 ├── js/
 │   ├── buttons(has some button pic)
@@ -25,8 +26,9 @@ kratos/
 │   ├── jquery.waypoints.min.js
 │   ├── kratos.js
 │   ├── kratos.diy.js
-│   ├── modernizr.js
+│   ├── layer.min.js
 │   ├── superfish.js
+│   ├── modernizr.min.js
 │   └── bootstrap.min.js
 ├── fonts/
 │   ├── Din.otf
