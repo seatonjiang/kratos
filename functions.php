@@ -1121,7 +1121,7 @@ function Kratos_admin_notice() {
         }
     </style>
     <div class="notice notice-info">
-    <p class="about-description">嗨，欢迎使用 Kratos 主题开始创作，在正式使用前建议您参阅<a target="view_window" href="https://www.vtrois.com/kratos-faq.html">《主题使用说明》</a>与<a target="view_window" href="https://www.vtrois.com/kratos-article-style.html">《文章样式说明》</a>，同时欢迎您加入主题交流群：<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">51880737</a></p>
+    <p class="about-description">嗨，欢迎使用 Kratos 主题开始创作，同时欢迎您加入主题交流群：<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">51880737</a></p>
     </div>
     <?php
 }
