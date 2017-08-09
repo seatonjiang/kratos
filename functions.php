@@ -184,6 +184,18 @@ function kratos_auto_post_link($content) {
 add_filter ('the_content', 'kratos_auto_post_link',0);
 
 /**
+ * Init theme
+ */
+add_action( 'load-themes.php', 'Init_theme' );
+function Init_theme(){
+  global $pagenow;
+  if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
+    wp_redirect( admin_url( 'themes.php?page=kratos' ) );
+    exit;
+  }
+}
+
+/**
  * Remove the excess CSS selectors
  */
 add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
