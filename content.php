@@ -7,8 +7,7 @@
  */
 
 $listlayout = kratos_option('list_layout');
-$listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout;
-?>
+$listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 <article class="kratos-hentry clearfix">
 <?php if($listlayout == 'old_layout'){ ?>
 <div class="kratos-entry-thumb">
