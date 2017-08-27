@@ -22,7 +22,7 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 			</span>
 			<span class="visible-lg visible-md visible-sm pull-left">
 			<?php $category = get_the_category(); echo '<a href="' . get_category_link($category[0] -> term_id) . '"><i class="fa fa-folder-open-o"></i> ' . $category[0] -> cat_name . '</a>'; ?>
-			<a href="<?php the_permalink() ?>#respond"><i class="fa fa-commenting-o"></i> <?php echo kratos_comments_users($post->ID); ?>条评论</a>
+			<a href="<?php the_permalink() ?>#respond"><i class="fa fa-commenting-o"></i> <?php comments_number('0', '1', '%'); ?>条评论</a>
 			</span>
 			<span class="pull-left">
 			<a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo kratos_get_post_views(); ?>次阅读</a>
@@ -51,7 +51,7 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 	<div class="kratos-post-meta-new">
 		<span class="visible-lg visible-md visible-sm pull-left">
 			<a href="<?php the_permalink() ?>"><i class="fa fa-calendar"></i> <?php echo get_the_date(); ?></a>
-			<a href="<?php the_permalink() ?>#respond"><i class="fa fa-commenting-o"></i> <?php echo kratos_comments_users($post->ID); ?>条评论</a>
+			<a href="<?php the_permalink() ?>#respond"><i class="fa fa-commenting-o"></i> <?php comments_number('0', '1', '%'); ?>条评论</a>
 		</span>
 		<span class="pull-left">
 			<a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo kratos_get_post_views(); ?>次阅读</a>
