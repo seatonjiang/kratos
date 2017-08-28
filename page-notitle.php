@@ -24,10 +24,10 @@ get_header('banner'); ?>
 						<?php if(kratos_option('page_like_donate')||kratos_option('page_share')) {?>
 						<footer class="kratos-entry-footer clearfix">
 								<div class="post-like-donate text-center clearfix" id="post-like-donate">
-								<?php if ( kratos_option( 'page_like_donate' )==1 ) : ?>
+								<?php if ( kratos_option( 'page_like_donate' ) ) : ?>
 					   			<a href="<?php echo kratos_option('donate_links'); ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
 					   			<?php endif; ?>
-								<?php if ( kratos_option( 'page_share' )==1 ) : ?>
+								<?php if ( kratos_option( 'page_share' ) ) : ?>
 								<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
 									<?php require_once( get_template_directory() . '/inc/share.php'); ?>
 								<?php endif; ?>
@@ -35,7 +35,7 @@ get_header('banner'); ?>
 						</footer>
 						<?php }?>
 					</div>
-						<?php if ( kratos_option( 'page_cc' )==1 ) : ?>
+						<?php if ( kratos_option( 'page_cc' ) ) : ?>
 						<div class="kratos-hentry kratos-copyright text-center clearfix">
 							<img alt="知识共享许可协议" src="<?php echo get_template_directory_uri(); ?>/images/licenses.png">
 							<h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>

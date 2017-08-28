@@ -47,11 +47,11 @@ get_header('banner'); ?>
 						</div>
 						<footer class="kratos-entry-footer clearfix">
 							<div class="post-like-donate text-center clearfix" id="post-like-donate">
-							<?php if ( kratos_option( 'post_like_donate' )==1 ) : ?>
+							<?php if ( kratos_option( 'post_like_donate' ) ) : ?>
 				   			<a href="<?php echo kratos_option('donate_links'); ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
 				   			<?php endif; ?>
 				   			<a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> 点赞</a>
-							<?php if ( kratos_option( 'post_share' )==1 ) : ?>
+							<?php if ( kratos_option( 'post_share' ) ) : ?>
 							<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
 								<?php require_once( get_template_directory() . '/inc/share.php'); ?>
 							<?php endif; ?>
