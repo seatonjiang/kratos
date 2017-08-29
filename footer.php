@@ -9,12 +9,12 @@
 				<footer>
 					<div id="footer">
 						<div class="cd-tool visible-lg text-center">
-							<?php if ( kratos_option( 'cd_gb' )==1 && kratos_option( 'cd_weixin' )==1 ) { ?>
+							<?php if ( kratos_option( 'cd_gb' ) && kratos_option( 'cd_weixin' ) ) { ?>
 						   		<a rel="nofollow" class="cd-gb-a" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
-						   	<?php } elseif( kratos_option( 'cd_gb' )==1 && kratos_option( 'cd_weixin' )==0 ){ ?>
+						   	<?php } elseif( kratos_option( 'cd_gb' ) && !kratos_option( 'cd_weixin' ) ){ ?>
 						   		<a rel="nofollow" class="cd-gb-b" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
 						   	<?php } ?>
-						   	<?php if ( kratos_option( 'cd_weixin' )==1 ) : ?>
+						   	<?php if ( kratos_option( 'cd_weixin' ) ) : ?>
 						   		<a id="weixin-img" class="cd-weixin"><span class="fa fa-weixin"></span><div id="weixin-pic"><img src="<?php echo kratos_option('weixin_image') ?>"></div></a>
 						   	<?php endif; ?>
 						    <a class="cd-top cd-is-visible cd-fade-out"><span class="fa fa-chevron-up"></span></a>
@@ -40,8 +40,8 @@
 			</div>
 		</div>
 		<?php wp_footer();?>
-		<?php echo (!kratos_option('ad_code')) ? '' : '<script>' . kratos_option('ad_code') . '</script>'; ?>
-		<?php if ( kratos_option('site_sa')==1 ) : ?>
+		<?php echo (!kratos_option('ad_code')) ? '' : '<div class="kratos-ad">' . kratos_option('ad_code') . '</div>'; ?>
+		<?php if ( kratos_option('site_sa') ) : ?>
 		<script type="text/javascript">
 			if ($("#main").height() > $("#sidebar").height()) {
 				var footerHeight = 0;
