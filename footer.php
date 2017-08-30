@@ -40,7 +40,6 @@
 			</div>
 		</div>
 		<?php wp_footer();?>
-		<?php echo (!kratos_option('ad_code')) ? '' : '<div class="kratos-ad">' . kratos_option('ad_code') . '</div>'; ?>
 		<?php if ( kratos_option('site_sa') ) : ?>
 		<script type="text/javascript">
 			if ($("#main").height() > $("#sidebar").height()) {

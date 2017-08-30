@@ -507,7 +507,8 @@ function optionsframework_options() {
 		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '顶部广告图片',
-		'desc' => '图片宽度大于750px',
+		'desc' => '图片尺寸750x80',
+		'std' => get_template_directory_uri() . '/images/ad.png',
 		'id' => 'ad_img_1',
 		'type' => 'upload');
 	$options[] = array(
@@ -524,7 +525,8 @@ function optionsframework_options() {
 		'type' => 'checkbox');
 	$options[] = array(
 		'name' => '底部广告图片',
-		'desc' => '图片宽度大于750px',
+		'desc' => '图片尺寸750x80',
+		'std' => get_template_directory_uri() . '/images/ad.png',
 		'id' => 'ad_img_2',
 		'type' => 'upload');
 	$options[] = array(
@@ -532,12 +534,6 @@ function optionsframework_options() {
 		'desc' => '图片广告指向的地址',
 		'id' => 'ad_link_2',
 		'std' => '',
-		'type' => 'text');	
-	$options[] = array(
-		'name' => '浮动广告代码',
-		'desc' => '可放置浮动广告HTML代码',
-		'id' => 'ad_code',
-		'std' => '',
-		'type' => 'textarea');
+		'type' => 'text');
 	return $options;
 }
