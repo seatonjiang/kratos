@@ -81,54 +81,34 @@ add_action('wp_enqueue_scripts', 'kratos_theme_scripts');
 /**
  * Remove the head code
  */
-add_filter('rest_enabled', '_return_false');
-add_filter('rest_jsonp_enabled', '_return_false');
-remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
-remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
-remove_action( 'wp_head', 'rsd_link' );   
-remove_action( 'wp_head', 'wlwmanifest_link' );   
-remove_action( 'wp_head', 'index_rel_link' );   
-remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );   
-remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );   
-remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );   
-remove_action( 'wp_head', 'locale_stylesheet' );   
-remove_action( 'publish_future_post', 'check_and_publish_future_post', 10, 1 );   
-remove_action( 'wp_head', 'noindex', 1 );   
-remove_action( 'wp_head', 'wp_print_head_scripts', 9 );   
-remove_action( 'wp_head', 'wp_generator' );   
-remove_action( 'wp_head', 'rel_canonical' );   
-remove_action( 'wp_footer', 'wp_print_footer_scripts' );   
-remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );   
-remove_action( 'template_redirect', 'wp_shortlink_header', 11, 0 ); 
+remove_filter('the_content', 'wptexturize'); 
+remove_action( 'wp_head', 'wp_print_head_scripts', 9 );
+remove_action( 'wp_head', 'wp_generator' );
+add_filter( 'show_admin_bar', '__return_false' );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'index_rel_link' );
+remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
+remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
+remove_action( 'wp_head', 'rel_canonical' );
+remove_action( 'wp_head', 'feed_links', 2 );
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('admin_print_styles', 'print_emoji_styles');
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('embed_head', 'print_emoji_detection_script');
+remove_filter('the_content_feed', 'wp_staticize_emoji');
+remove_filter('comment_text_rss', 'wp_staticize_emoji');
+remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+add_filter( 'emoji_svg_url', '__return_false' );
+
 
 add_action( 'wp_enqueue_scripts', 'mt_enqueue_scripts', 1 );
 function mt_enqueue_scripts() {
   wp_deregister_script('jquery');
 }
-
-function disable_emojis() {
-    global $wp_version;
-    if ($wp_version >= 4.2) {
-        remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-        remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-        remove_action( 'wp_print_styles', 'print_emoji_styles' );
-        remove_action( 'admin_print_styles', 'print_emoji_styles' );
-        remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-        remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-        remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-        add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
-    }
-}
-add_action( 'init', 'disable_emojis' );
-
-function disable_open_sans( $translations, $text, $context, $domain )
-{
-    if ( 'Open Sans font: on or off' == $context && 'on' == $text ) {
-        $translations = 'off';
-    }
-    return $translations;
-}
-add_filter('gettext_with_context', 'disable_open_sans', 888, 4 );
 
 /**
  * Prohibit character escaping
@@ -151,11 +131,6 @@ function html_page_permalink() {
         }
     }
 }
-
-/**
- * Remove automatically saved
- */
-wp_deregister_script('autosave');
 
 /**
  * Remove the revision
@@ -826,6 +801,7 @@ function kratos_blog_thumbnail_new() {
         $img_preg = "/<img (.*?) src=\"(.+?)\".*?>/";
         preg_match($img_preg,$content,$img_src);
         $img_count=count($img_src)-1;
+        if (isset($img_src[$img_count]))
         $img_val = $img_src[$img_count];
         if(!empty($img_val)){
             echo '<a href="'.get_permalink().'"><img src="'.$img_val.'" /></a>';
@@ -1056,7 +1032,7 @@ smilies_reset();
  * Paging
  */
 function kratos_pages($range = 5){
-    global $paged, $wp_query;
+    global $paged, $wp_query,$max_page;
     if ( !$max_page ) {$max_page = $wp_query->max_num_pages;}
     if($max_page > 1){if(!$paged){$paged = 1;}
     echo "<div class='text-center' id='page-footer'><ul class='pagination'>";
@@ -1103,19 +1079,19 @@ function kratos_pages($range = 5){
 /**
  * Theme notice
  */
-function Kratos_admin_notice() {
-    ?>
-    <style type="text/css">
-        .about-description a{
-            text-decoration:none;
-        }
-    </style>
-    <div class="notice notice-info">
-    <p class="about-description">嗨，欢迎使用 Kratos 主题开始创作，同时欢迎您加入主题交流群：<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">51880737</a></p>
-    </div>
-    <?php
-}
 add_action( 'welcome_panel', 'Kratos_admin_notice' );
+function Kratos_admin_notice() {
+  ?>
+  <style type="text/css">
+    .about-description a{
+      text-decoration:none;
+    }
+  </style>
+  <div class="notice notice-info">
+  <p class="about-description">嗨，欢迎使用 Kratos 主题开始创作，同时欢迎您加入主题交流群：<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">51880737</a></p>
+  </div>
+  <?php
+}
 
 /**
  * Admin footer text

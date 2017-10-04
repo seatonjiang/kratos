@@ -131,7 +131,6 @@ function optionsframework_options() {
 		'type' => 'textarea');
 	$options[] = array(
 		'name' => '站点统计',
-		'desc' => '填写时需要去掉&lt;script&gt;与&lt;/script&gt;标签',
 		'id' => 'site_tongji',
 		'std' => '',
 		'type' => 'textarea');

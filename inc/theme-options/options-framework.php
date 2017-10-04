@@ -92,3 +92,24 @@ function kratos_option( $name, $default = false ) {
 	return $default;
 }
 endif;
+
+add_action('admin_init','optionscheck_change_santiziation', 100);
+function optionscheck_change_santiziation() {
+    remove_filter( 'of_sanitize_textarea', 'of_sanitize_textarea' );
+    add_filter( 'of_sanitize_textarea', 'custom_sanitize_textarea' );
+}
+function custom_sanitize_textarea($input) {
+    global $allowedposttags;
+    $custom_allowedtags["embed"] = array(
+        "src" => array(),
+        "type" => array(),
+        "allowfullscreen" => array(),
+        "allowscriptaccess" => array(),
+        "height" => array(),
+        "width" => array()
+      );
+    $custom_allowedtags["script"] = array( "type" => array(),"src" => array() );
+    $custom_allowedtags = array_merge($custom_allowedtags, $allowedposttags);
+    $output = wp_kses( $input, $custom_allowedtags);
+    return $output;
+}
