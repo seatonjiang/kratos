@@ -1,11 +1,10 @@
 <?php
 /**
  * The template for Settings content control
- *
- * @package Vtrois
- * @version 2.5
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
-
 function optionsframework_option_name() {
 	$themename = wp_get_theme();
 	$themename = preg_replace("/\W/", "_", strtolower($themename) );
@@ -78,6 +77,7 @@ function optionsframework_options() {
 		'id' => 'post_trim',
 		'std' => '110',
 		'type' => 'text');
+
 	$options[] = array(
 		'name' => '组件配置',
 		'type' => 'heading');
@@ -122,6 +122,7 @@ function optionsframework_options() {
 		'id' => 'weixin_image',
 		'std' => get_template_directory_uri() . '/images/weixin.png',
 		'type' => 'upload');
+
 	$options[] = array(
 		'name' => 'SEO配置',
 		'type' => 'heading');
@@ -140,6 +141,7 @@ function optionsframework_options() {
 		'id' => 'site_tongji',
 		'std' => '',
 		'type' => 'textarea');
+
 	$options[] = array(
 		'name' => '顶部配置',
 		'type' => 'heading');
@@ -177,6 +179,7 @@ function optionsframework_options() {
 		'id' => 'background_color',
 		'std' => '#222831',
 		'type' => 'color');
+
 	$options[] = array(
 		'name' => '内容页面',
 		'type' => 'heading');
@@ -207,6 +210,7 @@ function optionsframework_options() {
 		'id' => 'post_like_donate',
 		'std' => '0',
 		'type' => 'checkbox');
+
 	$options[] = array(
 		'name' => '模板页面',
 		'type' => 'heading');
@@ -237,6 +241,7 @@ function optionsframework_options() {
 		'id' => 'page_like_donate',
 		'std' => '0',
 		'type' => 'checkbox');
+
 	$options[] = array(
 		'name' => '主页配置',
 		'type' => 'heading');
@@ -312,6 +317,7 @@ function optionsframework_options() {
 		'name' => '四屏连接',
 		'id' => 'krsort_hm_tx11',
 		'type' => 'text');	
+
 	$options[] = array(
 		'name' => '404页面',
 		'type' => 'heading');
@@ -330,6 +336,7 @@ function optionsframework_options() {
 		'id' => 'error_image',
 		'std' => get_template_directory_uri() . '/images/404.jpg',
 		'type' => 'upload');
+
 	$options[] = array(
 		'name' => '轮播图片',
 		'type' => 'heading');
@@ -393,6 +400,7 @@ function optionsframework_options() {
 		'id' => 'kratos_banner_url5',
 		'std' => '',
 		'type' => 'text');
+
 	$options[] = array(
 		'name' => '邮件配置',
 		'type' => 'heading');
@@ -444,6 +452,7 @@ function optionsframework_options() {
 		'id' => 'mail_smtpsecure',
 		'std' => 'ssl',
 		'type' => 'text');
+
 	$options[] = array(
 		'name' => '页脚配置',
 		'type' => 'heading');
@@ -462,6 +471,7 @@ function optionsframework_options() {
 		'desc' => '输入您的公安网备案的链接地址',
 		'id' => 'gov_link',
 		'type' => 'text');
+
 	$options[] = array(
 		'name' => '社交组件',
 		'type' => 'heading');
@@ -501,6 +511,7 @@ function optionsframework_options() {
 		'id' => 'social_github',
 		'std' => '',
 		'type' => 'text');
+		
 	$options[] = array(
 		'name' => '广告配置',
 		'type' => 'heading');

@@ -34,7 +34,7 @@ a {
 
 a:hover {
 	text-decoration: none;
-	color: #00a2ff!important
+	color: #0097ee!important
 }
 
 a:focus {
@@ -125,7 +125,7 @@ kbd {
 }
 
 article a {
-	color: #333
+	color: #00a2ff
 }
 
 table,table tbody tr th {
@@ -863,10 +863,6 @@ table,table tbody tr th {
 
 #kratos-primary-menu .kratos-sub-menu a:hover {
 	color: #00a2ff!important
-}
-
-article a {
-	color: #333
 }
 
 #slide {
