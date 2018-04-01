@@ -1,1 +1,0 @@
-/* Kratos Javascript Plus */
