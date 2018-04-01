@@ -1,9 +1,9 @@
 <?php
 /**
  * The template for displaying pages
- *
- * @package Vtrois
- * @version 2.4
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
 $page_side_bar = kratos_option('page_side_bar');
 $page_side_bar = (empty($page_side_bar)) ? 'right_side' : $page_side_bar;

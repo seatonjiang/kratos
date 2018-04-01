@@ -1,9 +1,9 @@
 <?php
 /**
  * The template for displaying 404 pages (not found)
- *
- * @package Vtrois
- * @version 2.4
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
 get_header(); ?>
 <div class="kratos-start">

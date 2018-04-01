@@ -2,64 +2,62 @@
 
 A clean, simple and responsive blog theme of WordPress, based on [Bootstrap](https://github.com/twbs/bootstrap) and [Font Awesome](https://github.com/FortAwesome/Font-Awesome). Created and maintained by Vtrois.
 
-![Kratos Demo](http://i2.bvimg.com/1949/649bfde164c5c8b1.png) 
+![Kratos Demo](https://s1.ax1x.com/2018/04/01/9zYjNn.png) 
 
 ## Structure
 Within the download you'll find the following directories and files. You'll see something like this :point_down:
 
 ```
-kratos/
-├── css/
+kratos
+├── 404.php
+├── LICENSE
+├── comments.php
+├── content.php
+├── css
 │   ├── animate.min.css
 │   ├── bootstrap.min.css
 │   ├── font-awesome.min.css
-│   ├── kratos.diy.css
 │   ├── layer.min.css
 │   └── superfish.min.css
-├── js/
-│   ├── buttons(has some button pic)
-│   ├── jquery.min.js
-│   ├── jquery.easing.js
-│   ├── jquery.qrcode.js
-│   ├── jquery.qrcode.min.js
-│   ├── jquery.stellar.min.js
-│   ├── jquery.waypoints.min.js
-│   ├── kratos.js
-│   ├── kratos.diy.js
-│   ├── layer.min.js
-│   ├── superfish.js
-│   ├── modernizr.min.js
-│   └── bootstrap.min.js
-├── fonts/
-│   ├── Din.otf
+├── fonts
 │   ├── FontAwesome.otf
 │   ├── fontawesome-webfont.eot
 │   ├── fontawesome-webfont.svg
 │   ├── fontawesome-webfont.ttf
 │   ├── fontawesome-webfont.woff
 │   └── fontawesome-webfont.woff2
-├── images/
-│   ├── options(has some options pic)
-│   ├── smilies(has some emoji pic)
+├── footer.php
+├── functions.php
+├── header-abstract.php
+├── header-banner.php
+├── header.php
+├── images
 │   ├── 404.jpg
+│   ├── about.jpg
+│   ├── ad.png
 │   ├── arrow.png
-│   ├── about.png
 │   ├── avatar.png
 │   ├── background.jpg
+│   ├── default.jpg
 │   ├── fingerprint.png
-│   ├── weixin.png
-│   └── licenses.png
-├── inc/
+│   ├── icon-ext.png
+│   ├── icon-police.png
+│   ├── icon.png
+│   ├── licenses.png
+│   ├── options(has some options pic)
+│   ├── smilies(has some emoji pic)
+│   ├── ul-li.png
+│   └── weixin.png
+├── inc
+│   ├── share.php
 │   ├── theme-options
 │   │   ├── css
 │   │   │   └── optionsframework.css
 │   │   ├── images
 │   │   │   └── ico-delete.png
-│   │   ├── theme-options
-│   │   │   └── ico-delete.png
 │   │   ├── includes
-│   │   │   ├── class-options-framework.php
 │   │   │   ├── class-options-framework-admin.php
+│   │   │   ├── class-options-framework.php
 │   │   │   ├── class-options-interface.php
 │   │   │   ├── class-options-media-uploader.php
 │   │   │   └── class-options-sanitization.php
@@ -69,23 +67,29 @@ kratos/
 │   │   └── options-framework.php
 │   ├── version.php
 │   └── widgets.php
-├── 404.php
-├── style.css
 ├── index.php
-├── header.php
-├── header-banner.php
-├── footer.php
-├── comments.php
-├── content.php
+├── js
+│   ├── bootstrap.min.js
+│   ├── buttons(has some button pic)
+│   │   └── more.js
+│   ├── hoverIntent.min.js
+│   ├── jquery.easing.min.js
+│   ├── jquery.min.js
+│   ├── jquery.qrcode.min.js
+│   ├── jquery.stellar.min.js
+│   ├── jquery.waypoints.min.js
+│   ├── kratos.js
+│   ├── layer.min.js
+│   ├── modernizr.min.js
+│   └── superfish.js
 ├── options.php
-├── sidebar.php
+├── page-home.php
+├── page-notitle.php
+├── page.php
+├── screenshot.png
 ├── single.php
 ├── smiley.php
-├── page.php
-├── page-notitle.php
-├── page-home.php
-├── functions.php
-└── screenshot.png
+└── style.css
 ```
   
 ## License

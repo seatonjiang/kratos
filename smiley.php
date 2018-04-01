@@ -1,9 +1,9 @@
 <?php
 /**
  * The template for Comments on the emoji
- *
- * @package Vtrois
- * @version 1.0
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
 ?><script type="text/javascript" language="javascript">
 /* <![CDATA[ */

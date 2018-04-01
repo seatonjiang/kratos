@@ -1,11 +1,10 @@
 <?php
 /**
  * The template for displaying all single posts and attachments
- *
- * @package Vtrois
- * @version 2.3
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
-
 $sidebar = kratos_option('side_bar');
 $sidebar = (empty($sidebar)) ? 'right_side' : $sidebar;
 get_header();

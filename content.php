@@ -1,11 +1,10 @@
 <?php
 /**
  * The default template for displaying content
- *
- * @package Vtrois
- * @version 2.4
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
-
 $listlayout = kratos_option('list_layout');
 $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 <article class="kratos-hentry clearfix">

@@ -1,11 +1,10 @@
 <?php
 /**
  * The template for displaying the header
- *
- * @package Vtrois
- * @version 2.3
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
-
 switch (kratos_option('background_mode')) {
 	case 'image':
 		if(kratos_option('background_image')){

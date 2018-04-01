@@ -1,11 +1,10 @@
 <?php
 /**
  * The template for displaying comments
- *
- * @package Vtrois
- * @version 2.1
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
-
 if ( post_password_required() ) {
 	return;
 }

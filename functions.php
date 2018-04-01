@@ -19,7 +19,7 @@ require_once( get_template_directory() . '/inc/widgets.php');
 require_once( get_template_directory() . '/inc/version.php' );
 $kratos_update_checker = new ThemeUpdateChecker(
     'Kratos', 
-    'https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/upgrade.json'
+    'https://mirrors.vtrois.com/kratos/upgrade.json'
 );
 
 /**

@@ -1,11 +1,10 @@
 <?php
 /**
  * The main template file
- *
- * @package Vtrois
- * @version 2.3
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
-
 get_header(); ?>
 <?php 
 if(is_category()){
