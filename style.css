@@ -2593,7 +2593,13 @@ img.size-smiley {
 }
 
 .kratos-entry-header-new {
-	margin: 3px 0 6px
+	margin: 3px 0 6px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    max-height: 25px;
 }
 
 .kratos-entry-thumb img {
