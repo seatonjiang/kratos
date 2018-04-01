@@ -1,21 +1,21 @@
 <?php
 /**
  * The template for displaying the footer
- *
- * @package Vtrois
- * @version 2.4
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
 ?>
 				<footer>
 					<div id="footer">
-						<div class="cd-tool visible-lg text-center">
+						<div class="cd-tool visible text-center">
 							<?php if ( kratos_option( 'cd_gb' ) && kratos_option( 'cd_weixin' ) ) { ?>
-						   		<a rel="nofollow" class="cd-gb-a" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
+						   		<a rel="nofollow" class="cd-gb-a visible-lg" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
 						   	<?php } elseif( kratos_option( 'cd_gb' ) && !kratos_option( 'cd_weixin' ) ){ ?>
-						   		<a rel="nofollow" class="cd-gb-b" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
+						   		<a rel="nofollow" class="cd-gb-b visible-lg" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
 						   	<?php } ?>
 						   	<?php if ( kratos_option( 'cd_weixin' ) ) : ?>
-						   		<a id="weixin-img" class="cd-weixin"><span class="fa fa-weixin"></span><div id="weixin-pic"><img src="<?php echo kratos_option('weixin_image') ?>"></div></a>
+						   		<a id="weixin-img" class="cd-weixin visible-lg"><span class="fa fa-weixin"></span><div id="weixin-pic"><img src="<?php echo kratos_option('weixin_image') ?>"></div></a>
 						   	<?php endif; ?>
 						    <a class="cd-top cd-is-visible cd-fade-out"><span class="fa fa-chevron-up"></span></a>
 						</div>

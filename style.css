@@ -2773,6 +2773,14 @@ img.size-smiley {
 	z-index: 2
 }
 
+@media screen and (max-width:768px) {
+	.cd-tool a {
+		width: 45px;
+		height: 45px;
+		right: 20px;
+	}
+}
+
 .cd-gb-a {
 	bottom: 152px
 }
@@ -2925,6 +2933,9 @@ img.size-smiley {
 	.downbtn {
 		padding: 9px 1pc;
 		font-size: 14px
+	}
+	.cd-top span {
+		margin-top: 13px;
 	}
 }
 
