@@ -4,7 +4,7 @@ Theme URI: https://github.com/Vtrois/Kratos
 Author: Vtrois
 Author URI: https://www.vtrois.com/
 Description: Kratos 是一款专注于个人博客的主题，提供了一套可自定义的积木式页面配置组件，可以通过使用小工具、导航、社交组件、站点标识、自定颜色等来个性化你的站点。
-Version: 2.5.8
+Version: 2.6.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: 简约, 紧凑, 优雅, 情怀, 多栏, 自适应, 响应式, 小工具, 灵活顶部, 主题选项, 打赏组件, 收录优化, 文章分享, 轮播图片, 邮件功能, 社交组件, 广告栏目, 特色图像, 随动边栏, 嵌套评论, 页脚挂件, 自定义边栏, 自定义颜色, 自定义背景, 自定义布局
@@ -26,7 +26,7 @@ body.kratos-offcanvas {
 }
 
 a {
-	color: #51aded;
+	color: #00a2ff;
 	-webkit-transition: .5s;
 	-o-transition: .5s;
 	transition: .5s
@@ -34,7 +34,7 @@ a {
 
 a:hover {
 	text-decoration: none;
-	color: #51aded!important
+	color: #00a2ff!important
 }
 
 a:focus {
@@ -70,12 +70,12 @@ figure {
 
 ::-webkit-selection {
 	color: #fcfcfc;
-	background: #51aded
+	background: #00a2ff
 }
 
 ::-moz-selection {
 	color: #fcfcfc;
-	background: #51aded
+	background: #00a2ff
 }
 
 ::selection {
@@ -210,8 +210,8 @@ table,table tbody tr th {
 }
 
 .btn-primary {
-	border-color: #51aded;
-	background-color: #51aded;
+	border-color: #00a2ff;
+	background-color: #00a2ff;
 	color: #fff
 }
 
@@ -228,8 +228,8 @@ table,table tbody tr th {
 }
 
 .pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover {
-	border-color: #51aded;
-	background-color: #51aded;
+	border-color: #00a2ff;
+	background-color: #00a2ff;
 	color: #fff!important
 }
 
@@ -252,7 +252,7 @@ table,table tbody tr th {
 }
 
 .pagination>li>a:focus,.pagination>li>a:hover {
-	border-color: #51aded;
+	border-color: #00a2ff;
 	background-color: #fff;
 	color: #333
 }
@@ -308,14 +308,14 @@ table,table tbody tr th {
 }
 
 .pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover {
-	border-color: #51aded;
-	background-color: #51aded;
+	border-color: #00a2ff;
+	background-color: #00a2ff;
 	color: #fff!important
 }
 
 .pagination>li>a:focus,.pagination>li>a:hover {
-	border-color: #51aded;
-	background-color: #51aded;
+	border-color: #00a2ff;
+	background-color: #00a2ff;
 	color: #fff!important
 }
 
@@ -664,7 +664,7 @@ table,table tbody tr th {
 }
 
 #kratos-header-section .sub-menu a:hover {
-	color: #51aded!important
+	color: #00a2ff!important
 }
 
 #kratos-header-section .sub-menu li a {
@@ -862,7 +862,7 @@ table,table tbody tr th {
 }
 
 #kratos-primary-menu .kratos-sub-menu a:hover {
-	color: #51aded!important
+	color: #00a2ff!important
 }
 
 article a {
@@ -900,7 +900,7 @@ article a {
 	width: 100px;
 	margin-left: -50px;
 	height: 2px;
-	background: #51aded
+	background: #00a2ff
 }
 
 .heading-section h3 {
@@ -1081,7 +1081,7 @@ article a {
 }
 
 #kratos-host .price-box.popular {
-	border: 2px solid #51aded
+	border: 2px solid #00a2ff
 }
 
 #kratos-host .price-box.popular .popular-text {
@@ -1091,7 +1091,7 @@ article a {
 	margin-top: -2em;
 	position: absolute;
 	padding: 4px 20px;
-	background: #51aded;
+	background: #00a2ff;
 	color: #fff;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -1106,7 +1106,7 @@ article a {
 	left: 50%;
 	margin-left: -10px;
 	border-top: 10px solid #000;
-	border-top-color: #51aded;
+	border-top-color: #00a2ff;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent
 }
@@ -1373,8 +1373,8 @@ article a {
 
 #kratos-blog .kratos-post .kratos-post-image .kratos-category>a:hover {
 	color: #fff!important;
-	background: #51aded;
-	border: 1px solid #51aded
+	background: #00a2ff;
+	border: 1px solid #00a2ff
 }
 
 #kratos-blog .kratos-post .kratos-post-image .kratos-category>a:active,#kratos-blog .kratos-post .kratos-post-image .kratos-category>a:focus,#kratos-blog .kratos-post .kratos-post-image .kratos-category>a:hover {
@@ -1463,7 +1463,7 @@ article a {
 
 .kratos-social-icons>a {
 	padding: 4px 14px;
-	color: #51aded
+	color: #00a2ff
 }
 
 .kratos-social-icons>a i {
@@ -1617,15 +1617,15 @@ a.comment-reply-link:hover {
 }
 
 #comments-nav a:hover {
-	border: 1px solid #51aded;
-	background-color: #51aded;
+	border: 1px solid #00a2ff;
+	background-color: #00a2ff;
 	color: #fff!important
 }
 
 #comments-nav span.current {
 	font-weight: 700;
-	border: 1px solid #51aded;
-	background-color: #51aded;
+	border: 1px solid #00a2ff;
+	background-color: #00a2ff;
 	padding: 5px 10px;
 	color: #fff
 }
@@ -1733,7 +1733,7 @@ a.comment-reply-link:hover {
 	bottom: 0;
 	height: 2.5px!important;
 	width: 73px;
-	background-color: #51aded;
+	background-color: #00a2ff;
 	content: ''
 }
 
@@ -1903,7 +1903,7 @@ a.comment-reply-link:hover {
 
 #tabul .active {
 	position: relative;
-	border-bottom: 3px solid #51aded;
+	border-bottom: 3px solid #00a2ff;
 	background-color: #fff;
 	color: #000;
 	cursor: default
@@ -2026,7 +2026,7 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	color: #fff;
 	vertical-align: baseline;
 	white-space: nowrap;
-	background-color: #51aded;
+	background-color: #00a2ff;
 	margin-right: 5px;
 	position: relative;
 	top: -2px;
@@ -2047,7 +2047,7 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	content: "";
 	top: 6px;
 	right: -4px;
-	border-left: 4px solid #51aded;
+	border-left: 4px solid #00a2ff;
 	border-top: 4px solid transparent;
 	border-bottom: 4px solid transparent
 }
@@ -2271,7 +2271,7 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	height: 50px;
 	border: 4px solid #fff;
 	border-radius: 40px;
-	background: #51aded;
+	background: #00a2ff;
 	color: #fff;
 	font-weight: 600;
 	font-size: 18px;
@@ -2687,7 +2687,7 @@ img.size-smiley {
 .kratos-post-content h2 {
 	margin: 15px -25px;
 	padding: 0 25px;
-	border-left: 5px solid #51aded;
+	border-left: 5px solid #00a2ff;
 	background-color: #f7f7f7;
 	font-size: 18px;
 	line-height: 40px
@@ -2825,7 +2825,7 @@ img.size-smiley {
 }
 
 .no-touch .cd-top:hover {
-	background-color: #51aded;
+	background-color: #00a2ff;
 	opacity: 1
 }
 
@@ -2848,7 +2848,7 @@ img.size-smiley {
 }
 
 .btn:active,.btn:focus,.btn:hover {
-	background: #393e46!important;
+	background: #0097ee!important;
 	color: #fff;
 	outline: 0!important
 }
@@ -2858,7 +2858,7 @@ img.size-smiley {
 }
 
 .btn.btn-primary {
-	background: #51aded;
+	background: #00a2ff;
 	color: #fff;
 	border: none!important;
 	border: 2px solid transparent!important
@@ -2866,7 +2866,7 @@ img.size-smiley {
 
 .btn.btn-primary:active,.btn.btn-primary:focus,.btn.btn-primary:hover {
 	box-shadow: none;
-	background: #51aded;
+	background: #00a2ff;
 	color: #fff!important
 }
 
@@ -2876,8 +2876,8 @@ img.size-smiley {
 }
 
 .btn.btn-star:active,.btn.btn-star:focus,.btn.btn-star:hover {
-	background: #51aded!important;
-	border: 2px solid #51aded;
+	background: #00a2ff!important;
+	border: 2px solid #00a2ff;
 	color: #fff
 }
 
@@ -2939,8 +2939,8 @@ img.size-smiley {
 }
 
 .pagination>.current-menu-item>a {
-	background-color: #51aded;
-	border-color: #51aded
+	background-color: #00a2ff;
+	border-color: #00a2ff
 }
 
 .view-more-1 {
@@ -3027,7 +3027,7 @@ img.size-smiley {
 }
 
 #offcanvas-menu ul li a:hover {
-	color: #51aded
+	color: #00a2ff
 }
 
 #offcanvas-menu ul li>.sub-menu {
@@ -3036,7 +3036,7 @@ img.size-smiley {
 }
 
 #offcanvas-menu ul li.current-menu-item>a {
-	color: #51aded
+	color: #00a2ff
 }
 
 #offcanvas-menu ul .sub-menu {
@@ -3380,7 +3380,7 @@ img.size-smiley {
 }
 
 .btn.btn-star:active,.btn.btn-star:focus,.btn.btn-star:hover {
-	border: 1px solid #51aded
+	border: 1px solid #00a2ff
 }
 
 #kratos-blog .kratos-post .kratos-post-text p {
