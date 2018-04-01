@@ -1,9 +1,9 @@
 <?php
 /**
  * The template for displaying the header
- *
- * @package Vtrois
- * @version 2.3
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
  */
 ?><!DOCTYPE HTML>
 <html class="no-js">
@@ -11,9 +11,13 @@
 		<title><?php wp_title( '-', true, 'right' ); ?></title>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="robots" content="index,follow">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telphone=no, email=no">
 		<meta name="description" content="<?php kratos_description(); ?>" />
 		<meta name="keywords" content="<?php kratos_keywords();?>" />
+		<meta itemprop="image" content="<?php echo kratos_thumbnail_url(); ?>"/>
+		<meta name="description" itemprop="description" content="<?php kratos_description(); ?>" />
 		<?php wp_head(); ?>
 		<?php wp_print_scripts('jquery'); ?>
 		<?php if ( kratos_option('site_bw')==1 ) : ?>
