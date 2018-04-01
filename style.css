@@ -125,7 +125,7 @@ kbd {
 }
 
 article a {
-	color: #00a2ff
+	color: #333;
 }
 
 table,table tbody tr th {
@@ -2056,6 +2056,10 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	margin: 10px 10px
 }
 
+.kratos-post-content a{
+	color: #00a2ff
+}
+
 .kratos-post-content p {
 	margin-bottom: 1em;
 	font-size: 16px;
@@ -2139,7 +2143,7 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	display: inline-block;
 	margin: 0 2px;
 	width: 130px;
-	height: 40px;
+	height: 35px;
 	border: 1px solid #e87461;
 	border-radius: 0;
 	background: #fff;
@@ -2148,7 +2152,7 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	text-align: center;
 	text-decoration: none;
 	font-size: 14.5px;
-	line-height: 40px;
+	line-height: 34px;
 	-webkit-transition: all .3s ease;
 	transition: all .3s ease
 }
