@@ -31,7 +31,7 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 		</div>
 	</header>
 	<div class="kratos-entry-content clearfix">
-	<p><?php echo wp_trim_words(get_the_excerpt(), 110); ?></p>
+	<p><?php echo wp_trim_words(get_the_excerpt(), kratos_option('post_trim')); ?></p>
 	</div>
 </div>
 <?php } if($listlayout == 'new_layout'){ ?>
@@ -45,7 +45,7 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 			<h2 class="kratos-entry-title-new"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 		</header>
 		<div class="kratos-entry-content-new">
-			<p><?php echo wp_trim_words(get_the_excerpt(), 110); ?></p>
+			<p><?php echo wp_trim_words(get_the_excerpt(), kratos_option('post_trim')); ?></p>
 		</div>
 	</div>
 	<div class="kratos-post-meta-new">

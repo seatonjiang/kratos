@@ -73,6 +73,12 @@ function optionsframework_options() {
 		'id' => 'donate_links',
 		'type' => 'text');
 	$options[] = array(
+		'name' => '简介缩略',
+		'desc' => '输入您需要的文章简介文字缩略个数，英文字母算一个字',
+		'id' => 'post_trim',
+		'std' => '110',
+		'type' => 'text');
+	$options[] = array(
 		'name' => '组件配置',
 		'type' => 'heading');
 	$options[] = array(
