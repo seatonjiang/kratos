@@ -1272,7 +1272,7 @@ add_filter('admin_footer_text', 'kratos_admin_footer_text');
 	//Login Page Footer
 	function custom_html() {
 		echo '<div class="footer">'."\n";
-		echo '<p>Copyright &copy; '.date('Y').' All Rights Reserved!<a href="http://aiuyo.com/wordpress" target="_blank">王显锋</a></p>'."\n";
+		echo '<p>Copyright &copy; '.date('Y').' All Rights Reserved!&nbsp;&nbsp;<a href="'.esc_url( home_url('/') ).'" target="_blank">'.get_bloginfo('name').'</a></p>'."\n";
 		echo '</div>'."\n";
 		echo '<script type="text/javascript" src="'.get_bloginfo('template_directory').'/js/resizeBg.js"></script>'."\n";
 		echo '<script type="text/javascript">'."\n";

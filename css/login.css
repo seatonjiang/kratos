@@ -119,7 +119,7 @@ body { background:none !important; overflow:hidden; }
 
 /* footer */
 .footer { font-size:13px; font-family:"Microsoft Yahei"; position:absolute; left:0px; bottom:10px; height:30px; padding:0px 20px; line-height:30px; color:#FFF; text-shadow:1px 1px 0px #000; }
-.footer a { text-decoration:underline; color:#FFF; }
+.footer a { text-decoration:none; color:#FFF; }
 
 /* loading */
 .loading { position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:99; overflow:hidden; background:#000; }
