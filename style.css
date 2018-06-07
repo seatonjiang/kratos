@@ -526,7 +526,9 @@ table,table tbody tr th {
 .sf-menu ul {
 	box-shadow: none;
 	border: transparent;
-	min-width: 10em
+	min-width: 10em;
+	width:-moz-fit-content;
+	width:-webkit-fit-content
 }
 
 .sf-menu a {
