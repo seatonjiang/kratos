@@ -1,4 +1,5 @@
-﻿/*
+@charset "UTF-8";
+/*
 Theme Name: Kratos
 Theme URI: https://github.com/Vtrois/Kratos
 Author: Vtrois
@@ -9,7 +10,6 @@ License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: 简约, 紧凑, 优雅, 情怀, 多栏, 自适应, 响应式, 小工具, 灵活顶部, 主题选项, 打赏组件, 收录优化, 文章分享, 轮播图片, 邮件功能, 社交组件, 广告栏目, 特色图像, 随动边栏, 嵌套评论, 页脚挂件, 自定义边栏, 自定义颜色, 自定义背景, 自定义布局
 */
-@charset "UTF-8";
 
 body {
 	font-family: -apple-system,BlinkMacSystemFont,opensans,Optima,"Microsoft Yahei",sans-serif;
@@ -537,7 +537,6 @@ table,table tbody tr th {
 	font-weight: 400;
 	border-left: none;
 	border-top: none;
-	border-top: none;
 	text-decoration: none;
 	zoom: 1;
 	font-size: 17px;
@@ -823,7 +822,6 @@ table,table tbody tr th {
 	width: 0;
 	height: 0;
 	border-right: 8px solid transparent;
-	border-bottom: 8px solid #fff;
 	border-bottom: 8px solid #fff;
 	border-left: 8px solid transparent;
 	content: ''
