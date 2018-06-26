@@ -269,7 +269,7 @@ function ypbtn($atts, $content=null, $code="") {
 add_shortcode('ypbtn' , 'ypbtn' );
 
 function nrtitle($atts, $content=null, $code="") {
-    $return = '<h2>';
+    $return = '<h2 class="title-h2">';
     $return .= $content;
     $return .= '</h2>';
     return $return;
