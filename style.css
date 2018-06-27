@@ -55,6 +55,15 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0 0 30px 0
 }
 
+h2.title-h2 {
+	margin: 15px -20px;
+	padding: 0 20px;
+	border-left: 5px solid #51aded;
+	background-color: rgba(243,243,243,.7);
+	font-size: 20px;
+	line-height: 40px
+}
+
 cite {
 	font-style: normal
 }
@@ -126,7 +135,7 @@ kbd {
 }
 
 article a {
-	color: #333;
+	color: #333
 }
 
 table,table tbody tr th {
@@ -342,7 +351,7 @@ table,table tbody tr th {
 	list-style: url(images/ul-li.png) outside circle
 }
 
-.kratos-post-content {
+.kratos-post-content,.kratos-post-content-l {
 	word-break: break-all;
 	word-wrap: break-word
 }
@@ -528,8 +537,8 @@ table,table tbody tr th {
 	box-shadow: none;
 	border: transparent;
 	min-width: 10em;
-	width:-moz-fit-content;
-	width:-webkit-fit-content
+	width: -moz-fit-content;
+	width: -webkit-fit-content
 }
 
 .sf-menu a {
@@ -1962,6 +1971,11 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	.kratos-post-meta span i:not(:first-child) {
 		margin-left: 10px
 	}
+
+	.title-h2 {
+		padding: 0 15px;
+		font-size: 18px
+	}
 }
 
 @media screen and (max-width:768px) {
@@ -2053,11 +2067,11 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	color: #fff!important
 }
 
-.kratos-post-content {
+.kratos-post-content,.kratos-post-content-l {
 	margin: 10px 10px
 }
 
-.kratos-post-content a{
+.kratos-post-content a {
 	color: #00a2ff
 }
 
@@ -2596,11 +2610,11 @@ img.size-smiley {
 .kratos-entry-header-new {
 	margin: 3px 0 6px;
 	overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    max-height: 25px;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	max-height: 25px
 }
 
 .kratos-entry-thumb img {
@@ -2778,7 +2792,7 @@ img.size-smiley {
 	.cd-tool a {
 		width: 45px;
 		height: 45px;
-		right: 20px;
+		right: 20px
 	}
 }
 
@@ -2900,7 +2914,7 @@ img.size-smiley {
 	padding: 10px 26px;
 	border: 1px solid #3e92cc;
 	background: #3e92cc;
-	color: #fff;
+	color: #fff!important;
 	line-height: 3
 }
 
@@ -2935,8 +2949,9 @@ img.size-smiley {
 		padding: 9px 1pc;
 		font-size: 14px
 	}
+
 	.cd-top span {
-		margin-top: 13px;
+		margin-top: 13px
 	}
 }
 
@@ -3455,5 +3470,86 @@ img.size-smiley {
 @media (min-width:1200px) {
 	#kratos-photos .kratos-photos-item img,.kratos-post-image img {
 		height: 190px
+	}
+}
+
+.linkpage ul:after {
+	content: " ";
+	clear: both;
+	display: block
+}
+
+.linkpage li {
+	float: left;
+	width: 48%;
+	position: relative;
+	transition: all .3s ease-out;
+	border-radius: 5px;
+	line-height: 1.3;
+	height: 90px;
+	list-style: none
+}
+
+.linkpage h3 {
+	margin: 15px -25px;
+	padding: 0 25px;
+	border-left: 5px solid #51aded;
+	background-color: #f7f7f7;
+	font-size: 25px;
+	line-height: 40px
+}
+
+.linkpage li:hover {
+	background: rgba(230,244,250,.5);
+	cursor: pointer
+}
+
+.linkpage li a {
+	padding: 0 10px 0 90px
+}
+
+.linkpage li a img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	cursor: pointer
+}
+
+.linkpage li a h4 {
+	color: #333;
+	font-size: 18px;
+	margin: 0 0 7px 0;
+	padding-left: 90px;
+	transition: .5s
+}
+
+.linkpage li a h4:hover {
+	color: #51aded
+}
+
+.linkpage li a h4,.linkpage li a p {
+	cursor: pointer;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 1.4
+}
+
+.linkpage li a p {
+	font-size: 12px;
+	color: #999;
+	padding-left: 90px
+}
+
+@media(max-width:460px) {
+	.linkpage li {
+		width: 97%
+	}
+
+	.linkpage ul {
+		padding-left: 5px
 	}
 }
