@@ -20,7 +20,7 @@ get_header('banner'); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
                 <article>
                     <div class="kratos-hentry kratos-post-inner clearfix">
-                        <div class="kratos-post-content-l">、
+                        <div class="kratos-post-content-l">
                         <div class="linkpage">
                             <hr/>
                             <ul><?php
