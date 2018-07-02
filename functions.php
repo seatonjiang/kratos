@@ -11,18 +11,6 @@ define( 'KRATOS_VERSION', '2.6' );
 require_once( get_template_directory() . '/inc/widgets.php');
 
 /**
- * Theme updating
- * 
- * @author Vtrois <seaton@vtrois.com>
- * @license GPL-3.0
- */
-require_once( get_template_directory() . '/inc/version.php' );
-$kratos_update_checker = new ThemeUpdateChecker(
-    'Kratos', 
-    'https://mirrors.vtrois.com/kratos/upgrade.json'
-);
-
-/**
  * Replace Gravatar server
  * 
  * @author Vtrois <seaton@vtrois.com>
