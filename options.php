@@ -43,6 +43,12 @@ function optionsframework_options() {
 			'old_layout' => $imagepath . 'old-layout.png',
 			'new_layout' => $imagepath . 'new-layout.png'));
 	$options[] = array(
+		'name'=>'使用密码注册',
+		'desc'=>'是否允许用户输入密码注册(免邮箱验证)',
+		'id'=>'mail_reg',
+		'std'=>'0',
+		'type'=>'checkbox');
+	$options[] = array(
 		'name' => '侧边栏随动',
 		'desc' => '是否启用侧边栏小工具随动功能',
 		'id' => 'site_sa',

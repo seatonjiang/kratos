@@ -782,6 +782,84 @@ function comment_mail_notify($comment_id) {
 }
 add_action('comment_post', 'comment_mail_notify');
 
+/**
+ * Fix the password reset url error
+ * 
+ * @author MoeDog <xb@fczbl.vip>
+ * @license GPL-3.0
+ */
+add_filter('retrieve_password_message','kratos_reset_password_message',null,2);
+function kratos_reset_password_message($message,$key){
+    add_filter('wp_mail_content_type',create_function('','return "text/html";'));
+    if(strpos($_POST['user_login'],'@')){
+        $user_data = get_user_by('email',trim($_POST['user_login']));
+    }else{
+        $login = trim($_POST['user_login']);
+        $user_data = get_user_by('login',$login);
+    }
+    $msg = '<div class="emailcontent" style="width:100%;max-width:720px;text-align:left;margin:0 auto;padding-top:80px;padding-bottom:20px"><div class="emailtitle"><h1 style="color:#fff;background:#51a0e3;line-height:70px;font-size:24px;font-weight:400;padding-left:40px;margin:0">密码重设通知</h1><div class="emailtext" style="background:#fff;padding:20px 32px 20px"><div style="padding:0;font-weight:700;color:#6e6e6e;font-size:16px">尊敬的'.$user_data->display_name.',您好！</div><p style="color:#6e6e6e;font-size:13px;line-height:24px">有人要求重设您在['.get_option('blogname').']的密码，若不是您本人请求，请忽略本邮件。</p><table cellpadding="0" cellspacing="0" border="0" style="width:100%;border-top:1px solid #eee;border-left:1px solid #eee;color:#6e6e6e;font-size:16px;font-weight:normal"><thead><tr><th colspan="2" style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;background:#f8f8f8">密码重设信息</th></tr></thead><tbody><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;width:100px">用户名</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px">'.$user_data->user_login.'</td></tr><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;width:100px">登录邮箱</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px">'.$user_data->user_email.'</td></tr><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center">密码重设地址</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px"><a href="'.network_site_url("wp-login.php?action=rp&key=$key&login=".rawurlencode($user_data->user_login),'login').'">单击访问</a></td></tr></tbody></table><p style="color:#6e6e6e;font-size:13px;line-height:24px">如果您的账号有异常，请您在第一时间和我们取得联系哦，联系邮箱：'.get_bloginfo('admin_email').'</p></div></div></div>';
+    return $msg;
+}
+
+add_filter('password_change_email','__return_false');
+add_action('user_register','kratos_pwd_register_mail',101);
+add_filter('wp_new_user_notification_email','__return_false');
+function kratos_pwd_register_mail($user_id){
+    $user = get_user_by('id',$user_id);
+    $blogname = get_option('blogname');
+    if(kratos_option('mail_reg')){
+        $message = '<div class="emailcontent" style="width:100%;max-width:720px;text-align:left;margin:0 auto;padding-top:80px;padding-bottom:20px"><div class="emailtitle"><h1 style="color:#fff;background:#51a0e3;line-height:70px;font-size:24px;font-weight:400;padding-left:40px;margin:0">注册成功通知</h1><div class="emailtext" style="background:#fff;padding:20px 32px 20px"><div style="padding:0;font-weight:700;color:#6e6e6e;font-size:16px">尊敬的'.$user->nickname.',您好！</div><p style="color:#6e6e6e;font-size:13px;line-height:24px">欢迎您注册['.$blogname.']，下面是您的账号信息，请妥善保管！</p><table cellpadding="0" cellspacing="0" border="0" style="width:100%;border-top:1px solid #eee;border-left:1px solid #eee;color:#6e6e6e;font-size:16px;font-weight:normal"><thead><tr><th colspan="2" style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;background:#f8f8f8">您的详细注册信息</th></tr></thead><tbody><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;width:100px">用户名</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px">'.$user->user_login.'</td></tr><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;width:100px">登录邮箱</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px">'.$user->user_email.'</td></tr><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center">登录密码</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px">您设定的密码</td></tr></tbody></table><p style="color:#6e6e6e;font-size:13px;line-height:24px">如果您的账号有异常，请您在第一时间和我们取得联系哦，联系邮箱：'.get_bloginfo('admin_email').'</p></div></div></div>';
+    }else{
+        $pwd = wp_generate_password(10,false);
+        $user->user_pass = $pwd;
+        $new_user_id = wp_update_user($user);
+        $message = '<div class="emailcontent" style="width:100%;max-width:720px;text-align:left;margin:0 auto;padding-top:80px;padding-bottom:20px"><div class="emailtitle"><h1 style="color:#fff;background:#51a0e3;line-height:70px;font-size:24px;font-weight:400;padding-left:40px;margin:0">注册成功通知</h1><div class="emailtext" style="background:#fff;padding:20px 32px 20px"><div style="padding:0;font-weight:700;color:#6e6e6e;font-size:16px">尊敬的'.$user->nickname.',您好！</div><p style="color:#6e6e6e;font-size:13px;line-height:24px">欢迎您注册['.$blogname.']，请使用下面的信息登录并修改密码！</p><table cellpadding="0" cellspacing="0" border="0" style="width:100%;border-top:1px solid #eee;border-left:1px solid #eee;color:#6e6e6e;font-size:16px;font-weight:normal"><thead><tr><th colspan="2" style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;background:#f8f8f8">您的注册信息</th></tr></thead><tbody><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;width:100px">用户名</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px">'.$user->user_login.'</td></tr><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;width:100px">登录邮箱</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px">'.$user->user_email.'</td></tr><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center">临时密码</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px">'.$pwd.'</td></tr><tr><td style="padding:10px 0;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align:center;width:100px">登录地址</td><td style="padding:10px 20px 10px 30px;border-right:1px solid #eee;border-bottom:1px solid #eee;line-height:30px"><a href="'.wp_login_url().'">单击访问</a></td></tr></tbody></table><p style="color:#6e6e6e;font-size:13px;line-height:24px">如果您的账号有异常，请您在第一时间和我们取得联系哦，联系邮箱：'.get_bloginfo('admin_email').'</p></div></div></div>';
+    }
+    $headers = "Content-Type:text/html;charset=UTF-8\n";
+    wp_mail($user->user_email,'['.$blogname.']欢迎注册',$message,$headers);
+}
+
+/**
+ * Add extra register fields
+ * 
+ * @author MoeDog <xb@fczbl.vip>
+ * @license GPL-3.0
+ */
+add_action('register_form','kratos_show_extra_register_fields');
+add_action('register_post','kratos_check_extra_register_fields',10,3);
+add_action('user_register','kratos_register_extra_fields',100);
+function kratos_show_extra_register_fields(){ ?>
+    <p>
+        <label for="nickname">昵称<br/>
+            <input id="nickname" class="input" type="text" name="nickname" value="" size="20" />
+        </label>
+    </p>
+    <?php if(kratos_option('mail_reg')){ ?>
+    <p>
+        <label for="password">密码<br/>
+            <input id="password" class="input" type="password" name="password" value="" size="25" />
+        </label>
+    </p>
+    <p>
+        <label for="repeat_password">重复密码<br/>
+            <input id="repeat_password" class="input" type="password" name="repeat_password" value="" size="25" />
+        </label>
+    </p><?php
+    }
+}
+function kratos_check_extra_register_fields($login,$email,$errors){
+    if($_POST['nickname']=='') $errors->add('no_nickname',"<strong>错误</strong>：昵称一栏不能为空。");
+    if($_POST['password']!==$_POST['repeat_password']&&kratos_option('mail_reg')) $errors->add('passwords_not_matched',"<strong>错误</strong>：两次输入的密码不一致。");
+    if(strlen($_POST['password'])<6&&kratos_option('mail_reg')) $errors->add('password_too_short',"<strong>错误</strong>：密码长度必须大于6位。");
+}
+function kratos_register_extra_fields($user_id){
+    $userdata = array();
+    $userdata['ID'] = $user_id;
+    if(kratos_option('mail_reg')) $userdata['user_pass'] = $_POST['password'];
+    $userdata['nickname'] = $_POST['nickname'];
+    $userdata['display_name'] = $_POST['nickname'];
+    $new_user_id = wp_update_user($userdata);
+}
 
 /**
  * The admin control module
@@ -904,7 +982,7 @@ function kratos_blog_thumbnail_new() {
         echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" /></a>';
     } else {
         $content = $post->post_content;
-        $img_preg = "/<img (.*?) src=\"(.+?)\".*?>/";
+        $img_preg = "/<img (.*?)src=\"(.+?)\".*?>/";
         preg_match($img_preg,$content,$img_src);
         $img_count=count($img_src)-1;
         if (isset($img_src[$img_count]))
