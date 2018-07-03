@@ -27,6 +27,15 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 			<a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo kratos_get_post_views(); ?>次阅读</a>
 			<a href="<?php the_permalink() ?>"><i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?>人点赞</a>
 			</span>
+			<span class="pull-left">
+				<?php 
+					edit_post_link(
+						'编辑',
+						'<span><i class="fa fa-edit"></i>&nbsp;',
+						'</span>'
+					);
+				?>
+			</span>
 		</div>
 	</header>
 	<div class="kratos-entry-content clearfix">
@@ -55,6 +64,15 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 		<span class="pull-left">
 			<a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo kratos_get_post_views(); ?>次阅读</a>
 			<a href="<?php the_permalink() ?>"><i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?>人点赞</a>
+		</span>
+		<span class="pull-left">
+			<?php 
+				edit_post_link(
+					'编辑',
+					'<span><i class="fa fa-edit"></i>&nbsp;',
+					'</span>'
+				);
+			?>
 		</span>
 		<span class="pull-right">
 			<a class="read-more" href="<?php the_permalink() ?>" title="阅读全文">阅读全文 <i class="fa fa-chevron-circle-right"></i></a>

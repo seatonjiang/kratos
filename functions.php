@@ -1307,3 +1307,47 @@ function kratos_admin_footer_text($text) {
 }
 
 add_filter('admin_footer_text', 'kratos_admin_footer_text');
+
+
+/**
+ * @Author M.J
+ * @Date 2013-12-24
+ */
+
+	//将以下代码添加到 functions.php 主题文件里即可
+	
+	//Login Page
+	function custom_login() {
+		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_directory') . '/css/login.css" />'."\n";
+		echo '<script type="text/javascript" src="'.get_bloginfo('template_directory').'/js/jquery.min.js"></script>'."\n";
+	}
+	add_action('login_head', 'custom_login');
+
+	//Login Page Title
+	function custom_headertitle ( $title ) {
+		return get_bloginfo('name');
+	}
+	add_filter('login_headertitle','custom_headertitle');
+
+	//Login Page Link
+	function custom_loginlogo_url($url) {
+		return esc_url( home_url('/') );
+	}
+	add_filter( 'login_headerurl', 'custom_loginlogo_url' );
+
+	//Login Page Footer
+	function custom_html() {
+		echo '<div class="footer">'."\n";
+		echo '<p>Copyright &copy; '.date('Y').' All Rights Reserved!&nbsp;&nbsp;<a href="'.esc_url( home_url('/') ).'" target="_blank">'.get_bloginfo('name').'</a></p>'."\n";
+		echo '</div>'."\n";
+		echo '<script type="text/javascript" src="'.get_bloginfo('template_directory').'/js/resizeBg.js"></script>'."\n";
+		echo '<script type="text/javascript">'."\n";
+		echo 'jQuery("body").prepend("<div class=\"loading\"><img src=\"'.get_bloginfo('template_directory').'/images/login_loading.gif\" width=\"58\" height=\"10\"></div><div id=\"bg\"><img /></div>");'."\n";
+		echo 'jQuery(\'#bg\').children(\'img\').attr(\'src\', \''.get_bloginfo('template_directory').'/images/login_bg.jpg\').load(function(){'."\n";
+		echo '	resizeImage(\'bg\');'."\n";
+		echo '	jQuery(window).bind("resize", function() { resizeImage(\'bg\'); });'."\n";
+		echo '	jQuery(\'.loading\').fadeOut();'."\n";
+		echo '});';
+		echo '</script>'."\n";
+	}
+	add_action('login_footer', 'custom_html');

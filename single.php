@@ -31,6 +31,13 @@ get_header('banner'); ?>
 				                <i class="fa fa-commenting-o"></i> <?php comments_number('0', '1', '%'); ?>条评论
 				                <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?>次阅读
 				                <i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?>人点赞
+									<?php 
+										edit_post_link(
+											'编辑',
+											'<i class="fa fa-edit"></i>&nbsp;',
+											''
+										);
+									?>
 								</span>
 							</div>
 						</header>
