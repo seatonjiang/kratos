@@ -6,7 +6,10 @@
  * @license GPL-3.0
  */
 
-define( 'KRATOS_VERSION', '2.6' );
+define( 'KRATOS_VERSION', '2.7' );
+
+include_once('inc/xianjian/xianjian_menu.php');
+include_once('inc/xianjian/xianjian_token.php');
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -21,6 +24,18 @@ function kratos_get_avatar( $avatar ) {
     return $avatar;
 }
 add_filter( 'get_avatar', 'kratos_get_avatar' );
+
+/**
+ * Theme updating
+ * 
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
+ */
+require_once( get_template_directory() . '/inc/version.php' );
+$kratos_update_checker = new ThemeUpdateChecker(
+    'Kratos', 
+    'https://mirrors.vtrois.com/themes/kratos/upgrade.json'
+);
 
 /**
  * Disable automatic formatting
@@ -1302,7 +1317,7 @@ function Kratos_admin_notice() {
  * @license GPL-3.0
  */
 function kratos_admin_footer_text($text) {
-       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">点击</a> 加入主题讨论群。</span>';
+       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">点击</a> 加入主题讨论群，<a target="_blank" rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=937771886">点击</a> 咨询智能推荐功能。</span>';
     return $text;
 }
 

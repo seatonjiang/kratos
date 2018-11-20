@@ -60,9 +60,11 @@ if(is_category()){
 
         		<?php kratos_pages(3);?>
 				<?php wp_reset_query(); ?>
+				<?php include_once('inc/xianjian/xianjian_home_bottom.php'); ?>
 			</section>
 			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                 <div id="sidebar">
+				<?php include_once('inc/xianjian/xianjian_sidebar.php'); ?>
                     <?php dynamic_sidebar('sidebar_tool'); ?>
                 </div>
             </aside>
