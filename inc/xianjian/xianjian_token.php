@@ -7,6 +7,7 @@ include_once('xianjian_utility.php');
 include_once('xianjian_item.php');
 
 add_action( 'wp_loaded', 'xianjian_setup');
+add_action( 'admin_enqueue_scripts', 'xianjian_theme_jc001_adapter');
 
 function xianjian_setup() {
 	xianjian_token_verify();
@@ -15,16 +16,6 @@ function xianjian_setup() {
 }
 
 function xianjian_token_verify() {
-	echo '<script> 
-        const xianjian_title_font=".paradigm-article-title {font-weight:320 !important;}"
-        const $xianjian_title_font_style = document.createElement("style");
-        $xianjian_title_font_style.type = "text/css";
-        document
-          .getElementsByTagName("HEAD")
-          .item(0)
-          .appendChild($xianjian_title_font_style);
-        $xianjian_title_font_style.innerHTML =xianjian_title_font;</script>';
-	
 	$site_id_key="paradigm_site_id";
 	$site_token_key = "paradigm_site_token";
 	$site_token = get_option($site_token_key);
@@ -198,6 +189,11 @@ function xianjian_check_item() {
 	}
 	$new_time = time();
 	update_option($xianjian_last_upload_timestamp_key, $new_time);
+}
+
+function xianjian_theme_jc001_adapter() {
+	global $xianjian_version;
+	wp_enqueue_style('xianjian_theme_jc001_title_adapter', plugins_url('xianjian_title_adapter.css', __FILE__), array(), $xianjian_version);
 }
 
 ?>

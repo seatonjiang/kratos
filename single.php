@@ -15,8 +15,8 @@ get_header('banner'); ?>
 			<?php if($sidebar == 'left_side'){ ?>
 			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                 <div id="sidebar">
-				<?php include_once('inc/xianjian/xianjian_sidebar.php'); ?>
                     <?php dynamic_sidebar('sidebar_tool'); ?>
+                    <?php include_once('inc/xianjian/xianjian_sidebar.php'); ?>
                 </div>
             </aside>
 			<?php } ?>
@@ -95,8 +95,8 @@ get_header('banner'); ?>
 			<?php if($sidebar == 'right_side'){ ?>
 				<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
 	                <div id="sidebar">
-					<?php include_once('inc/xianjian/xianjian_sidebar.php'); ?>
 	                    <?php dynamic_sidebar('sidebar_tool'); ?>
+	                    <?php include_once('inc/xianjian/xianjian_sidebar.php'); ?>
 	                </div>
 	            </aside>
 			<?php } ?>
