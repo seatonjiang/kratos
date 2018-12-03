@@ -64,8 +64,8 @@ if(is_category()){
 			</section>
 			<aside id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm scrollspy">
                 <div id="sidebar">
-				<?php include_once('inc/xianjian/xianjian_sidebar.php'); ?>
                     <?php dynamic_sidebar('sidebar_tool'); ?>
+                    <?php include_once('inc/xianjian/xianjian_sidebar.php'); ?>
                 </div>
             </aside>
 		</div>
