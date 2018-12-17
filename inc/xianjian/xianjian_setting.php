@@ -1,16 +1,16 @@
 <?php
 if (!defined('ABSPATH')) exit;
-if ($_POST['xianjian-input'] == "true") {
+if ($_POST['Kratos_xianjian-input'] == "true") {
 	if (current_user_can('manage_options')) {
-		$xianjian_config_key = "paradigm_render_config";
+		$Kratos_xianjian_config_key = "paradigm_render_config";
 
-		$new_config_str = $_POST['xianjian-config'];
+		$new_config_str = $_POST['Kratos_xianjian-config'];
 		$new_config_str = sanitize_text_field($new_config_str);
 		if (is_string($new_config_str)) {
 			$new_config_str = stripslashes($new_config_str);
 
 			$new_config = json_decode($new_config_str, true);
-			$original_config_str = get_option($xianjian_config_key);
+			$original_config_str = get_option($Kratos_xianjian_config_key);
 			$original_config = null;
 			if ($original_config_str == '') {
 				$original_config = array();
@@ -18,21 +18,22 @@ if ($_POST['xianjian-input'] == "true") {
 				$original_config = json_decode($original_config_str, true);
 			}
 			$scene_id = $new_config['sceneId'];
-			if (in_array('delete', $new_config)) {
+			$type = $new_config['type'];
+			if (strcmp('delete', $type) == 0) {
 				$delete_arr = array($scene_id => "1" );
 				$original_config = array_diff_key($original_config,	$delete_arr);
-			} elseif (in_array('modify', $new_config)) {
+			} elseif (strcmp('modify', $type) == 0) {
 				$original_config[$scene_id] = $new_config;
 			}
 			$total_config_str = json_encode($original_config);
 			if (strlen($total_config_str) > 5) {
-				update_option($xianjian_config_key,$total_config_str);
+				update_option($Kratos_xianjian_config_key,$total_config_str);
 			}
 		}
 	}
 }
 ?>
-<iframe name="xianjian-hidden-iframe" id="xianjian-hidden-iframe" style="display:none;"></iframe>
+<iframe name="Kratos_xianjian-hidden-iframe" id="Kratos_xianjian-hidden-iframe" style="display:none;"></iframe>
 <script type="text/javascript">
 	 window.addEventListener('message',function(event){	
     if(event.origin == 'https://nbrecsys.4paradigm.com'){
@@ -46,21 +47,21 @@ if ($_POST['xianjian-input'] == "true") {
 			return;
 		}
 		var form = document.createElement('form');
-		form.id = "xianjian-form";
+		form.id = "Kratos_xianjian-form";
 		form.name = "setting";
 		form.method = "post";
 		form.action = "";
-		form.target = "xianjian-hidden-iframe";
+		form.target = "Kratos_xianjian-hidden-iframe";
 
 		var input = document.createElement('input');
 		input.type = "hidden";
-		input.name = "xianjian-input";
+		input.name = "Kratos_xianjian-input";
 		input.value = "true";
 		form.appendChild(input);
 
 		var input_config = document.createElement('input');
 		input_config.type = "hidden";
-		input_config.name = "xianjian-config";
+		input_config.name = "Kratos_xianjian-config";
 		input_config.value = dic;
 		form.appendChild(input_config);
 

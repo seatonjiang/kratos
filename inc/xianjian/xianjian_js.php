@@ -3,50 +3,49 @@ if (!defined('ABSPATH')) exit;
 
 include_once('xianjian_consts.php');
 
-
-function xianjian_set_render_js_code($render_div_id, $config) {
-	global $xianjian_js_code_map,$xianjian_host,$xianjian_sdk_obj;
-	$xianjian_js_code = "<div id='".$render_div_id."_".$config['sceneId']."'><script charset='utf-8' id='ParadigmSDKv3' src='".$xianjian_host."/sdk/js/ParadigmSDK_v3.js'></script><script>".$xianjian_sdk_obj.".init('".$config['clientToken']."',{ isDisableArticleFetch: true });".$xianjian_sdk_obj.".renderArticle('".$render_div_id."_".$config['sceneId']."',".$config['itemSetId'].",".$config['sceneId'].");</script></div>";
-	$pre_js_code = $xianjian_js_code_map[$render_div_id];
-	$total_js_code = $pre_js_code.$xianjian_js_code;
-	$xianjian_js_code_map[$render_div_id] = $total_js_code;
+function Kratos_xianjian_set_render_js_code($render_div_id, $config) {
+	global $Kratos_xianjian_js_code_map,$Kratos_xianjian_host,$Kratos_xianjian_sdk_obj;
+	$Kratos_xianjian_js_code = "<div id='".$render_div_id."_".$config['sceneId']."'></div><script charset='utf-8' id='ParadigmSDKv3' src='".$Kratos_xianjian_host."/sdk/js/ParadigmSDK_v3.js'></script><script>try{var paradigmSession = window.paradigmSession;if(!paradigmSession || typeof(paradigmSession)==undefined){window.paradigmSession={};paradigmSession=window.paradigmSession}    paradigmValue=paradigmSession['".$render_div_id."_".$config['sceneId']."'];if(!paradigmValue || typeof(paradigmValue)==undefined){".$Kratos_xianjian_sdk_obj.".init('".$config['clientToken']."',{ isDisableArticleFetch: true });".$Kratos_xianjian_sdk_obj.".renderArticle('".$render_div_id."_".$config['sceneId']."',".$config['itemSetId'].",".$config['sceneId'].");paradigmSession['".$render_div_id."_".$config['sceneId']."']='true';}}catch(e){}</script>";
+	$pre_js_code = $Kratos_xianjian_js_code_map[$render_div_id];
+	$total_js_code = $pre_js_code.$Kratos_xianjian_js_code;
+	$Kratos_xianjian_js_code_map[$render_div_id] = $total_js_code;
 }
 
-function xianjian_set_side_render_js_code($render_div_id, $config) {
-	global $xianjian_side_js_code_map,$xianjian_host,$xianjian_sdk_obj;
-	$xianjian_js_code = "<div id='".$render_div_id."_".$config['sceneId']."'><script charset='utf-8' id='ParadigmSDKv3' src='".$xianjian_host."/sdk/js/ParadigmSDK_v3.js'></script><script>".$xianjian_sdk_obj.".init('".$config['clientToken']."',{ isDisableArticleFetch: true });".$xianjian_sdk_obj.".renderArticle('".$render_div_id."_".$config['sceneId']."',".$config['itemSetId'].",".$config['sceneId'].");</script></div>";
+function Kratos_xianjian_set_side_render_js_code($render_div_id, $config) {
+	global $Kratos_xianjian_side_js_code_map,$Kratos_xianjian_host,$Kratos_xianjian_sdk_obj;
+	$Kratos_xianjian_js_code = "<div id='".$render_div_id."_".$config['sceneId']."'></div><script charset='utf-8' id='ParadigmSDKv3' src='".$Kratos_xianjian_host."/sdk/js/ParadigmSDK_v3.js'></script><script>try{var paradigmSession = window.paradigmSession;if(!paradigmSession || typeof(paradigmSession)==undefined){window.paradigmSession={};paradigmSession=window.paradigmSession}    paradigmValue=paradigmSession['".$render_div_id."_".$config['sceneId']."'];if(!paradigmValue || typeof(paradigmValue)==undefined){".$Kratos_xianjian_sdk_obj.".init('".$config['clientToken']."',{ isDisableArticleFetch: true });".$Kratos_xianjian_sdk_obj.".renderArticle('".$render_div_id."_".$config['sceneId']."',".$config['itemSetId'].",".$config['sceneId'].");paradigmSession['".$render_div_id."_".$config['sceneId']."']='true';}}catch(e){}</script>";
 	$code_dic = array();
 	$code_dic['used'] = false;
-	$code_dic['code'] = $xianjian_js_code;
+	$code_dic['code'] = $Kratos_xianjian_js_code;
 	$code_dic['title'] = $config['recomTitle'];
-	$xianjian_side_js_code_map[$config['sceneId']] = $code_dic;
+	$Kratos_xianjian_side_js_code_map[$config['sceneId']] = $code_dic;
 }
 
-function xianjian_set_home_side_render_js_code($render_div_id, $config) {
-	global $xianjian_home_side_js_code_map,$xianjian_host,$xianjian_sdk_obj;
-	$xianjian_js_code = "<div id='".$render_div_id."_".$config['sceneId']."'><script charset='utf-8' id='ParadigmSDKv3' src='".$xianjian_host."/sdk/js/ParadigmSDK_v3.js'></script><script>".$xianjian_sdk_obj.".init('".$config['clientToken']."',{ isDisableArticleFetch: true });".$xianjian_sdk_obj.".renderArticle('".$render_div_id."_".$config['sceneId']."',".$config['itemSetId'].",".$config['sceneId'].");</script></div>";
+function Kratos_xianjian_set_home_side_render_js_code($render_div_id, $config) {
+	global $Kratos_xianjian_home_side_js_code_map,$Kratos_xianjian_host,$Kratos_xianjian_sdk_obj;
+	$Kratos_xianjian_js_code = "<div id='".$render_div_id."_".$config['sceneId']."'></div><script charset='utf-8' id='ParadigmSDKv3' src='".$Kratos_xianjian_host."/sdk/js/ParadigmSDK_v3.js'></script><script>try{var paradigmSession = window.paradigmSession;if(!paradigmSession || typeof(paradigmSession)==undefined){window.paradigmSession={};paradigmSession=window.paradigmSession}    paradigmValue=paradigmSession['".$render_div_id."_".$config['sceneId']."'];if(!paradigmValue || typeof(paradigmValue)==undefined){".$Kratos_xianjian_sdk_obj.".init('".$config['clientToken']."',{ isDisableArticleFetch: true });".$Kratos_xianjian_sdk_obj.".renderArticle('".$render_div_id."_".$config['sceneId']."',".$config['itemSetId'].",".$config['sceneId'].");paradigmSession['".$render_div_id."_".$config['sceneId']."']='true';}}catch(e){}</script>";
 	$code_dic = array();
 	$code_dic['used'] = false;
-	$code_dic['code'] = $xianjian_js_code;
+	$code_dic['code'] = $Kratos_xianjian_js_code;
 	$code_dic['title'] = $config['recomTitle'];
-	$xianjian_home_side_js_code_map[$config['sceneId']] = $code_dic;
+	$Kratos_xianjian_home_side_js_code_map[$config['sceneId']] = $code_dic;
 }
 
-function insert_xianjian_js($args, $render_div_id) {
-	global $xianjian_js_code_map;
+function insert_Kratos_xianjian_js($args, $render_div_id) {
+	global $Kratos_xianjian_js_code_map;
 	extract($args);
 	echo $before_widget;
-	echo $before_title . __('先荐', 'xianjian') . $after_title;
-	echo $xianjian_js_code_map[$render_div_id];
+	echo $before_title . __('先荐', 'Kratos_xianjian') . $after_title;
+	echo $Kratos_xianjian_js_code_map[$render_div_id];
 	echo $after_widget;
 }
 
-function insert_xianjian_side_js($args, $render_div_id) {
-	global $xianjian_side_js_code_map;
+function insert_Kratos_xianjian_side_js($args, $render_div_id) {
+	global $Kratos_xianjian_side_js_code_map;
 	$current_key = null;
 	$current_arr = array();
-	if (is_array($xianjian_side_js_code_map) && !empty($xianjian_side_js_code_map)) {
-		foreach ($xianjian_side_js_code_map as $key => $code_dic) {
+	if (is_array($Kratos_xianjian_side_js_code_map) && !empty($Kratos_xianjian_side_js_code_map)) {
+		foreach ($Kratos_xianjian_side_js_code_map as $key => $code_dic) {
 			if ($code_dic['used']) {
 				
 			} else {
@@ -64,20 +63,20 @@ function insert_xianjian_side_js($args, $render_div_id) {
 	$title = $current_arr['title'];
 	$code = $current_arr['code'];
 	$current_arr['used'] = true;
-	$xianjian_side_js_code_map[$current_key] = $current_arr;
+	$Kratos_xianjian_side_js_code_map[$current_key] = $current_arr;
 	extract($args);
 	echo $before_widget;
-	echo $before_title . __($title, 'xianjian') . $after_title;
+	echo $before_title . __($title, 'Kratos_xianjian') . $after_title;
 	echo $code;
 	echo $after_widget;
 }
 
-function insert_xianjian_home_side_js($args, $render_div_id) {
-	global $xianjian_home_side_js_code_map;
+function insert_Kratos_xianjian_home_side_js($args, $render_div_id) {
+	global $Kratos_xianjian_home_side_js_code_map;
 	$current_key = null;
 	$current_arr = array();
-	if (is_array($xianjian_home_side_js_code_map) && !empty($xianjian_home_side_js_code_map)) {
-		foreach ($xianjian_home_side_js_code_map as $key => $code_dic) {
+	if (is_array($Kratos_xianjian_home_side_js_code_map) && !empty($Kratos_xianjian_home_side_js_code_map)) {
+		foreach ($Kratos_xianjian_home_side_js_code_map as $key => $code_dic) {
 			if ($code_dic['used']) {
 				
 			} else {
@@ -95,10 +94,10 @@ function insert_xianjian_home_side_js($args, $render_div_id) {
 	$title = $current_arr['title'];
 	$code = $current_arr['code'];
 	$current_arr['used'] = true;
-	$xianjian_home_side_js_code_map[$current_key] = $current_arr;
+	$Kratos_xianjian_home_side_js_code_map[$current_key] = $current_arr;
 	extract($args);
 	echo $before_widget;
-	echo $before_title . __($title, 'xianjian') . $after_title;
+	echo $before_title . __($title, 'Kratos_xianjian') . $after_title;
 	echo $code;
 	echo $after_widget;
 }

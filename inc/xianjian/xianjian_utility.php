@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) exit;
 include_once('xianjian_js.php');
 include_once('xianjian_consts.php');
 
-function xianjian_random_str($length) {
+function Kratos_xianjian_random_str($length) {
 	$characters = "0123456789abcdefghijklmnopqrstuvwxyz"; 
 	$result = "";
 	for( $i=0; $i<$length; $i++) {
@@ -14,7 +14,7 @@ function xianjian_random_str($length) {
 	return $result;
 }
 
-function xianjian_check_night_time() {
+function Kratos_xianjian_check_night_time() {
 	$timezone_out = date_default_timezone_get();
 	date_default_timezone_set('PRC');
 	$china_time = date('H');
@@ -36,98 +36,99 @@ function xianjian_check_night_time() {
 	}
 }
 
-function xianjian_check_render_config() {
-	global $xianjian_config_key,$xianjian_config_loaded;
-	if ($xianjian_config_loaded) {
+function Kratos_xianjian_check_render_config() {
+	global $Kratos_xianjian_config_key,$Kratos_xianjian_config_loaded;
+	if ($Kratos_xianjian_config_loaded) {
 		return;
 	}
-	$config_str = get_option($xianjian_config_key);
+	$config_str = get_option($Kratos_xianjian_config_key);
 	$total_config = json_decode($config_str,true);
 
-	global $xianjian_access_token;
+	global $Kratos_xianjian_access_token;
 	if (is_array($total_config) && !empty($total_config)) {
 
 		foreach ($total_config as $config) {
-			if (strlen($xianjian_access_token) == 0) {
-				$xianjian_access_token = $config['accessToken'];
-				if (strlen($xianjian_access_token) == 0) {
-					$xianjian_access_token = $config['acessToken'];
+			if (strlen($Kratos_xianjian_access_token) == 0) {
+				$Kratos_xianjian_access_token = $config['accessToken'];
+				if (strlen($Kratos_xianjian_access_token) == 0) {
+					$Kratos_xianjian_access_token = $config['acessToken'];
 				}
 			}
 			if (strcmp($config['recomLocation'], 'TXT') == 0) {
-				xianjian_content_page($config);
+				Kratos_xianjian_content_page($config);
 			} elseif (strcmp($config['recomLocation'], 'HOME') == 0) {
-				xianjian_home_page($config);
+				Kratos_xianjian_home_page($config);
 			}
 		}
 	}
-	$xianjian_config_loaded = true;
+	$Kratos_xianjian_config_loaded = true;
 }
 
-function xianjian_content_page($content_config) {
+function Kratos_xianjian_content_page($content_config) {
 	$content_count = 0;
+	global $Kratos_xianjian_content_side_id_key;
 	if (strcmp($content_config['pageLocation'], 'A_B') == 0) {
-		global $xianjian_render_content_append_id,$xianjian_is_theme;
-		xianjian_set_render_js_code($xianjian_render_content_append_id,$content_config);
-		if (!$xianjian_is_theme) {
-			add_filter('the_content','xianjian_content_append_rec');	
+		global $Kratos_xianjian_render_content_append_id,$Kratos_xianjian_is_theme;
+		Kratos_xianjian_set_render_js_code($Kratos_xianjian_render_content_append_id,$content_config);
+		if (!$Kratos_xianjian_is_theme) {
+			add_filter('the_content','Kratos_xianjian_content_append_rec');	
 		}
 	} elseif (strcmp($content_config['pageLocation'], 'C_T') == 0) {
-		global $xianjian_render_content_comment_id;
-		xianjian_set_render_js_code($xianjian_render_content_comment_id,$content_config);
-		add_filter('comments_array','xianjian_content_comment_rec');
+		global $Kratos_xianjian_render_content_comment_id;
+		Kratos_xianjian_set_render_js_code($Kratos_xianjian_render_content_comment_id,$content_config);
+		add_action('comments_array','Kratos_xianjian_content_comment_rec');
 	} elseif (strcmp($content_config['pageLocation'], 'C_B') == 0) {
-		global $xianjian_render_content_comment_bottom_id;
-		xianjian_set_render_js_code($xianjian_render_content_comment_bottom_id,$content_config);
-		add_action('comment_form','xianjian_content_comment_bottom_rec');
+		global $Kratos_xianjian_render_content_comment_bottom_id;
+		Kratos_xianjian_set_render_js_code($Kratos_xianjian_render_content_comment_bottom_id,$content_config);
+		add_action('comment_form_after','Kratos_xianjian_content_comment_bottom_rec');
 	} elseif (strcmp($content_config['pageLocation'], 'S') == 0) {
-		global $xianjian_content_side,$xianjian_render_content_side_id;
-		xianjian_set_side_render_js_code($xianjian_render_content_side_id,$content_config);
-		$xianjian_content_side = true;
+		global $Kratos_xianjian_content_side,$Kratos_xianjian_render_content_side_id;
+		Kratos_xianjian_set_side_render_js_code($Kratos_xianjian_render_content_side_id,$content_config);
+		$Kratos_xianjian_content_side = true;
 		$content_count ++;
 	}
-	update_option($xianjian_content_side_id_key,$content_count);
+	update_option($Kratos_xianjian_content_side_id_key,$content_count);
 }
 
-function xianjian_content_append_rec($content) {
+function Kratos_xianjian_content_append_rec($content) {
 	if (is_single()) {
-		global $xianjian_js_code_map,$xianjian_render_content_append_id;
-		$content .= $xianjian_js_code_map[$xianjian_render_content_append_id];
+		global $Kratos_xianjian_js_code_map,$Kratos_xianjian_render_content_append_id;
+		$content .= $Kratos_xianjian_js_code_map[$Kratos_xianjian_render_content_append_id];
 	}
 	return $content;
 }
 
-function xianjian_content_comment_rec($comments) {
+function Kratos_xianjian_content_comment_rec($comments) {
 	if (is_single()) {
-		global $xianjian_js_code_map,$xianjian_render_content_comment_id;
+		global $Kratos_xianjian_js_code_map,$Kratos_xianjian_render_content_comment_id;
 		echo '<div style="margin-top:15px">';
-		echo $xianjian_js_code_map[$xianjian_render_content_comment_id];
+		echo $Kratos_xianjian_js_code_map[$Kratos_xianjian_render_content_comment_id];
 		echo '</div>';
 	}
 	return $comments;
 }
 
-function xianjian_content_comment_bottom_rec($post_id) {
+function Kratos_xianjian_content_comment_bottom_rec($post_id) {
 	if (is_single()) {
-		global $xianjian_js_code_map,$xianjian_render_content_comment_bottom_id;
-		echo $xianjian_js_code_map[$xianjian_render_content_comment_bottom_id];
+		global $Kratos_xianjian_js_code_map,$Kratos_xianjian_render_content_comment_bottom_id;
+		echo $Kratos_xianjian_js_code_map[$Kratos_xianjian_render_content_comment_bottom_id];
 	}
 }
 
-function xianjian_home_page($home_config) {
+function Kratos_xianjian_home_page($home_config) {
 	if (strcmp($home_config['pageLocation'], 'A_L_B') == 0) {
-		global $xianjian_home_bottom,$xianjian_render_home_bottom_id;
-		xianjian_set_render_js_code($xianjian_render_home_bottom_id,$home_config);
-		$xianjian_home_bottom = true;
+		global $Kratos_xianjian_home_bottom,$Kratos_xianjian_render_home_bottom_id;
+		Kratos_xianjian_set_render_js_code($Kratos_xianjian_render_home_bottom_id,$home_config);
+		$Kratos_xianjian_home_bottom = true;
 	}
 	if (strcmp($home_config['pageLocation'], 'S') == 0) {
-		global $xianjian_home_side,$xianjian_render_home_side_id;
-		xianjian_set_home_side_render_js_code($xianjian_render_home_side_id,$home_config);
-		$xianjian_home_side = true;
+		global $Kratos_xianjian_home_side,$Kratos_xianjian_render_home_side_id;
+		Kratos_xianjian_set_home_side_render_js_code($Kratos_xianjian_render_home_side_id,$home_config);
+		$Kratos_xianjian_home_side = true;
 	}
 }
 
-function xianjian_upload_material($post,$update_last_upload_id,$access_token) {
+function Kratos_xianjian_upload_material($post,$update_last_upload_id,$access_token) {
 
 	global $wpdb;
 
@@ -283,8 +284,8 @@ function xianjian_upload_material($post,$update_last_upload_id,$access_token) {
 		'timeout' => '8'
 	);
 
-	global $xianjian_host;
-	$remote_url = $xianjian_host.'/business/items?accessToken='.$access_token.'&source=1';
+	global $Kratos_xianjian_host;
+	$remote_url = $Kratos_xianjian_host.'/business/items?accessToken='.$access_token.'&source=1';
 	$response = wp_remote_post($remote_url,$args);
 	$response_body = wp_remote_retrieve_body($response);
 	$response_obj = json_decode($response_body,true);
