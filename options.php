@@ -43,7 +43,13 @@ function optionsframework_options() {
 			'old_layout' => $imagepath . 'old-layout.png',
 			'new_layout' => $imagepath . 'new-layout.png'));
 	$options[] = array(
-		'name'=>'使用密码注册',
+		'name'=>'Gutenberg 编辑器',
+		'desc'=>'是否使用 Gutenberg 编辑器',
+		'id'=>'use_gutenberg',
+		'std'=>'1',
+		'type'=>'checkbox');
+	$options[] = array(
+		'name'=>'密码注册',
 		'desc'=>'是否允许用户输入密码注册(免邮箱验证)',
 		'id'=>'mail_reg',
 		'std'=>'0',

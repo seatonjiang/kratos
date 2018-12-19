@@ -1311,6 +1311,17 @@ function Kratos_admin_notice() {
 }
 
 /**
+ * Use Gutenberg Editor
+ *
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
+ */
+if (!kratos_option('use_gutenberg')) {
+    add_filter('use_block_editor_for_post', '__return_false');
+    remove_action( 'wp_enqueue_scripts', 'wp_common_block_scripts_and_styles' );
+}
+
+/**
  * Support svg file upload
  *
  * @author Vtrois <seaton@vtrois.com>
@@ -1318,8 +1329,8 @@ function Kratos_admin_notice() {
  */
 add_filter('upload_mimes','upload_svg');
 function upload_svg ( $existing_mimes=array() ) {
-  $existing_mimes['svg']='image/svg+xml';
-  return $existing_mimes;
+    $existing_mimes['svg']='image/svg+xml';
+    return $existing_mimes;
 }
 
 /**
