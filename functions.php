@@ -1311,6 +1311,18 @@ function Kratos_admin_notice() {
 }
 
 /**
+ * Support svg file upload
+ *
+ * @author Vtrois <seaton@vtrois.com>
+ * @license GPL-3.0
+ */
+add_filter('upload_mimes','upload_svg');
+function upload_svg ( $existing_mimes=array() ) {
+  $existing_mimes['svg']='image/svg+xml';
+  return $existing_mimes;
+}
+
+/**
  * Admin footer text
  * 
  * @author Vtrois <seaton@vtrois.com>
