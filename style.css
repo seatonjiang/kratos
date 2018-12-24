@@ -2521,11 +2521,13 @@ img.size-smiley {
 }
 
 .kratos-entry-content p {
-	font-size: 16px
+	font-size: 16px;
+	word-break: break-all;
 }
 
 .kratos-entry-content-new p {
-	font-size: 15px
+	font-size: 15px;
+	word-break: break-all;
 }
 
 .kratos-entry-header {
