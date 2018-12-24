@@ -11,7 +11,7 @@ add_action( 'admin_enqueue_scripts', 'Kratos_xianjian_custom_scripts');
 
 function Kratos_xianjian_custom_scripts() {
 	global $Kratos_xianjian_version;
-	wp_enqueue_style('kratos_plugin', plugins_url('xianjian_title_adapter.css', __FILE__), array(), $Kratos_xianjian_version);
+	wp_enqueue_style('kratos_plugin', get_template_directory_uri() . '/inc/xianjian/xianjian_title_adapter.css', array(), $Kratos_xianjian_version);
 }
 
 function Kratos_xianjian_setup() {
