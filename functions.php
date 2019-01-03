@@ -1340,7 +1340,7 @@ function upload_svg ( $existing_mimes=array() ) {
  * @license GPL-3.0
  */
 function kratos_admin_footer_text($text) {
-       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=182bd07a135c085c88ab7e3de38f2b2d9a86983292355a4708926b99dcd5b89f">点击</a> 加入主题讨论群，<a target="_blank" rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=937771886">点击</a> 咨询智能推荐功能。</span>';
+       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=428f6d706b4a5fc52d4bee3d4ef13e909ef3692a3aec40682d0fedface66567f">点击</a> 加入主题讨论群，<a target="_blank" rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=937771886">点击</a> 咨询智能推荐功能。</span>';
     return $text;
 }
 
