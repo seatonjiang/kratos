@@ -793,7 +793,7 @@ add_action('comment_post', 'comment_mail_notify');
  */
 add_filter('retrieve_password_message','kratos_reset_password_message',null,2);
 function kratos_reset_password_message($message,$key){
-    add_filter('wp_mail_content_type',create_function('','return "text/html";'));
+    add_filter('wp_mail_content_type',function(){return "text/html";});
     if(strpos($_POST['user_login'],'@')){
         $user_data = get_user_by('email',trim($_POST['user_login']));
     }else{
@@ -966,8 +966,8 @@ function kratos_blog_thumbnail() {
     if ( has_post_thumbnail() ) {
         echo '<a href="'.get_permalink().'"><img src="'.$img_url.'" /></a>';  
     } 
-}  
-add_filter( 'add_image_size', create_function( '', 'return 1;' ) );
+}
+add_filter( 'add_image_size', function() {return 1;} );
 add_theme_support( "post-thumbnails" );
 
 /**
