@@ -6,7 +6,7 @@
  * @license GPL-3.0
  */
 
-define( 'KRATOS_VERSION', '2.7' );
+define( 'KRATOS_VERSION', '2.8' );
 
 require_once( get_template_directory() . '/inc/widgets.php');
 
@@ -30,11 +30,16 @@ add_filter('get_avatar', 'kratos_get_https_avatar');
  * @author Vtrois <seaton@vtrois.com>
  * @license GPL-3.0
  */
-require_once( get_template_directory() . '/inc/version.php' );
-$kratos_update_checker = new ThemeUpdateChecker(
-    'Kratos', 
-    'https://mirrors.vtrois.com/themes/kratos/upgrade.json'
+require_once( get_template_directory() . '/inc/update-checker/update-checker.php' );
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/Vtrois/kratos',
+	__FILE__,
+	'Kratos'
 );
+
+//Optional: Set the branch that contains the stable release.
+// $myUpdateChecker->setBranch('stable-branch-name');
+
 
 /**
  * Disable automatic formatting
