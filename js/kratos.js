@@ -186,7 +186,7 @@
 						um_id: id,
 						um_action: action
 					};
-					$.post("/wp-admin/admin-ajax.php", ajax_data, function(data) {
+					$.post(kratos.site + "/wp-admin/admin-ajax.php", ajax_data, function(data) {
 						$(rateHolder).html(data);
 					});
 					return false;

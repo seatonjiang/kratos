@@ -59,12 +59,12 @@ class Options_Framework_Media_Uploader {
 		if ( $value ) {
 			$class = ' has-file';
 		}
-		$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="' . __('No file chosen', 'theme-textdomain') .'" />' . "\n";
+		$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="' . __('没有选择任何文件', 'theme-textdomain') .'" />' . "\n";
 		if ( function_exists( 'wp_enqueue_media' ) ) {
 			if ( ( $value == '' ) ) {
-				$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( 'Upload', 'theme-textdomain' ) . '" />' . "\n";
+				$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( '上传', 'theme-textdomain' ) . '" />' . "\n";
 			} else {
-				$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="' . __( 'Remove', 'theme-textdomain' ) . '" />' . "\n";
+				$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="' . __( '删除', 'theme-textdomain' ) . '" />' . "\n";
 			}
 		} else {
 			$output .= '<p><i>' . __( 'Upgrade your version of WordPress for full media support.', 'theme-textdomain' ) . '</i></p>';
@@ -77,7 +77,7 @@ class Options_Framework_Media_Uploader {
 		$output .= '<div class="screenshot" id="' . $id . '-image">' . "\n";
 
 		if ( $value != '' ) {
-			$remove = '<a class="remove-image">Remove</a>';
+			$remove = '<a class="remove-image">删除</a>';
 			$image = preg_match( '/(^.*\.jpg|jpeg|png|gif|ico*)/i', $value );
 			if ( $image ) {
 				$output .= '<img src="' . $value . '" alt="" />' . $remove;
@@ -115,8 +115,8 @@ class Options_Framework_Media_Uploader {
 		wp_register_script( 'of-media-uploader', OPTIONS_FRAMEWORK_DIRECTORY .'js/media-uploader.js', array( 'jquery' ), Options_Framework::VERSION );
 		wp_enqueue_script( 'of-media-uploader' );
 		wp_localize_script( 'of-media-uploader', 'optionsframework_l10n', array(
-			'upload' => __( 'Upload', 'theme-textdomain' ),
-			'remove' => __( 'Remove', 'theme-textdomain' )
+			'upload' => __( '上传', 'theme-textdomain' ),
+			'remove' => __( '删除', 'theme-textdomain' )
 		) );
 	}
 }

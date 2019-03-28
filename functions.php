@@ -84,6 +84,12 @@ function kratos_theme_scripts() {
         wp_enqueue_script( 'hoverIntents', $dir . '/js/hoverIntent.min.js', array(), 'r7');
         wp_enqueue_script( 'superfish', $dir . '/js/superfish.js', array(), '1.0.0');
         wp_enqueue_script( 'kratos', $dir . '/js/kratos.js', array(),  KRATOS_VERSION);
+        
+        $data = array(
+            'site' => home_url(),
+        );
+    
+        wp_localize_script( 'kratos', 'kratos', $data );
     }  
 }  
 add_action('wp_enqueue_scripts', 'kratos_theme_scripts');
