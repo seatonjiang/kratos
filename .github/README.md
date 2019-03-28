@@ -49,17 +49,6 @@ kratos
 │   ├── ul-li.png
 │   └── weixin.png
 ├── inc
-│   ├── xianjian
-│   │   ├── xianjian_article_bottom.php
-│   │   ├── xianjian_consts.php
-│   │   ├── xianjian_home_bottom.php
-│   │   ├── xianjian_item.php
-│   │   ├── xianjian_js.php
-│   │   ├── xianjian_menu.php
-│   │   ├── xianjian_setting.php
-│   │   ├── xianjian_sidebar.php
-│   │   ├── xianjian_token.php
-│   │   └── xianjian_utility.php
 │   ├── theme-options
 │   │   ├── css
 │   │   │   └── optionsframework.css

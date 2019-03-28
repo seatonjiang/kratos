@@ -8,9 +8,6 @@
 
 define( 'KRATOS_VERSION', '2.7' );
 
-include_once('inc/xianjian/xianjian_menu.php');
-include_once('inc/xianjian/xianjian_token.php');
-
 require_once( get_template_directory() . '/inc/widgets.php');
 
 /**
