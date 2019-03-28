@@ -15,7 +15,7 @@
 						   		<a rel="nofollow" class="cd-gb-b visible-lg" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
 						   	<?php } ?>
 						   	<?php if ( kratos_option( 'cd_weixin' ) ) : ?>
-						   		<a id="weixin-img" class="cd-weixin visible-lg"><span class="fa fa-weixin"></span><div id="weixin-pic"><img src="<?php echo kratos_option('weixin_image') ?>"></div></a>
+						   		<a id="weixin-img" class="cd-weixin visible-lg"><span class="fa fa-weixin"></span><div id="weixin-pic"><img src="<?php echo kratos_option('weixin_image', get_template_directory_uri() . '/images/weixin.png') ?>"></div></a>
 						   	<?php endif; ?>
 						    <a class="cd-top cd-is-visible cd-fade-out"><span class="fa fa-chevron-up"></span></a>
 						</div>

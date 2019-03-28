@@ -990,7 +990,7 @@ function kratos_blog_thumbnail_new() {
         if(!empty($img_val)){
             echo '<a href="'.get_permalink().'"><img src="'.$img_val.'" /></a>';
         } else {
-             echo '<a href="'.get_permalink().'"><img src="'. kratos_option('default_image') .'" /></a>';
+             echo '<a href="'.get_permalink().'"><img src="'. kratos_option('default_image', get_template_directory_uri() . '/images/default.jpg') .'" /></a>';
         }
     }  
 }
@@ -1302,7 +1302,7 @@ function Kratos_admin_notice() {
     }
   </style>
   <div class="notice notice-info">
-  <p class="about-description">嗨，欢迎使用 Kratos 主题开始创作，同时欢迎您加入主题交流群：<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=428f6d706b4a5fc52d4bee3d4ef13e909ef3692a3aec40682d0fedface66567f">734508</a></p>
+  <p class="about-description">嗨，欢迎使用 Kratos 主题开始文章创作，欢迎您加入主题 QQ 交流群：<a target="_blank" rel="nofollow" href="//shang.qq.com/wpa/qunwpa?idkey=6ee0cc94b247fe4a068be7442b38fce2850485422ec9d655f0a60563ae00bdd2">734508</a> ，如果发现任何 BUG 或者您有什么好的建议，请按照页面给出的提示提交<a target="_blank" rel="nofollow" href="https://github.com/Vtrois/Kratos/issues/new"> Issues </a>。</p>
   </div>
   <?php
 }
@@ -1313,7 +1313,7 @@ function Kratos_admin_notice() {
  * @author Vtrois <seaton@vtrois.com>
  * @license GPL-3.0
  */
-if (!kratos_option('use_gutenberg')) {
+if (kratos_option('use_gutenberg', true)) {
     add_filter('use_block_editor_for_post', '__return_false');
     remove_action( 'wp_enqueue_scripts', 'wp_common_block_scripts_and_styles' );
 }
@@ -1337,7 +1337,7 @@ function upload_svg ( $existing_mimes=array() ) {
  * @license GPL-3.0
  */
 function kratos_admin_footer_text($text) {
-       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，<a target="_blank" rel="nofollow" href="http://shang.qq.com/wpa/qunwpa?idkey=428f6d706b4a5fc52d4bee3d4ef13e909ef3692a3aec40682d0fedface66567f">点击</a> 加入主题讨论群，<a target="_blank" rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=937771886">点击</a> 咨询智能推荐功能。</span>';
+       $text = '<span id="footer-thankyou">感谢使用 <a href=http://cn.wordpress.org/ target="_blank">WordPress</a>进行创作，<a target="_blank" rel="nofollow" href="//shang.qq.com/wpa/qunwpa?idkey=6ee0cc94b247fe4a068be7442b38fce2850485422ec9d655f0a60563ae00bdd2">点击</a> 加入站长交流群。</span>';
     return $text;
 }
 

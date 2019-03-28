@@ -9,7 +9,7 @@ $sidebar = kratos_option('side_bar');
 $sidebar = (empty($sidebar)) ? 'right_side' : $sidebar;
 get_header();
 get_header('banner'); ?>
-<div id="kratos-blog-post" style="background:<?php echo kratos_option('background_index_color'); ?>">
+<div id="kratos-blog-post" style="background:<?php echo kratos_option('background_index_color', '#f5f5f5'); ?>">
 	<div class="container">
 		<div class="row">
 			<?php if($sidebar == 'left_side'){ ?>
@@ -35,39 +35,39 @@ get_header('banner'); ?>
 							</div>
 						</header>
 						<div class="kratos-post-content">
-						<?php if ( kratos_option('ad_show_1') ): ?>
-							<a href="<?php echo kratos_option('ad_link_1'); ?>"><img src="<?php echo kratos_option('ad_img_1')?>"></a>
-	                    <?php endif ?>
+						<?php if ( kratos_option('ad_show_1') ){ ?>
+							<a href="<?php echo kratos_option('ad_link_1'); ?>"><img src="<?php echo kratos_option('ad_img_1', get_template_directory_uri() . '/images/ad.png')?>"></a>
+	                    <?php } ?>
                         <?php the_content(); ?>
-						<?php if ( kratos_option('ad_show_2') ): ?>
-							<a href="<?php echo kratos_option('ad_link_2'); ?>"><img src="<?php echo kratos_option('ad_img_2')?>"></a>
-	                    <?php endif ?>
+						<?php if ( kratos_option('ad_show_2') ){ ?>
+							<a href="<?php echo kratos_option('ad_link_2'); ?>"><img src="<?php echo kratos_option('ad_img_2', get_template_directory_uri() . '/images/ad.png')?>"></a>
+	                    <?php } ?>
 						</div>
 						<footer class="kratos-entry-footer clearfix">
 							<div class="post-like-donate text-center clearfix" id="post-like-donate">
-							<?php if ( kratos_option( 'post_like_donate' ) ) : ?>
+							<?php if ( kratos_option( 'post_like_donate' ) ) { ?>
 				   			<a href="<?php echo kratos_option('donate_links'); ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
-				   			<?php endif; ?>
+							<?php } ?>
 				   			<a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> 点赞</a>
-							<?php if ( kratos_option( 'post_share' ) ) : ?>
+							<?php if ( kratos_option( 'post_share', true ) ) { ?>
 							<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
 								<?php require_once( get_template_directory() . '/inc/share.php'); ?>
-							<?php endif; ?>
+							<?php } ?>
 				    		</div>
 							<div class="footer-tag clearfix">
 								<div class="pull-left">
 								<i class="fa fa-tags"></i>
-								<?php if ( get_the_tags() ) { the_tags('', ' ', ''); } else{ echo '<a>No Tag</a>';  }?>
+								<?php if ( get_the_tags() ) { the_tags('', ' ', ''); } ?>
 								</div>
 							</div>
 						</footer>
 					</div>
-					<?php if ( kratos_option( 'post_cc' )==1 ) : ?>
+					<?php if ( kratos_option( 'post_cc', true ) ) { ?>
 					<div class="kratos-hentry kratos-copyright text-center clearfix">
 						<img alt="知识共享许可协议" src="<?php echo get_template_directory_uri(); ?>/images/licenses.png">
 						<h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
 					</div>
-					<?php endif; ?>
+					<?php } ?>
 					<nav class="navigation post-navigation clearfix" role="navigation">
 						<?php
 						$prev_post = get_previous_post(TRUE);

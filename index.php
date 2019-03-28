@@ -12,7 +12,7 @@ if(is_category()){
 	}else{
 		get_header('banner');
 	} ?>
-<div id="kratos-blog-post" style="background:<?php echo kratos_option('background_index_color'); ?>">
+<div id="kratos-blog-post" style="background:<?php echo kratos_option('background_index_color', '#f5f5f5'); ?>">
 	<div class="container">
 		<div class="row">
 			<section id="main" class="col-md-8">

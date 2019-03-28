@@ -6,7 +6,7 @@ $page_side_bar = kratos_option('page_side_bar');
 $page_side_bar = (empty($page_side_bar)) ? 'right_side' : $page_side_bar;
 get_header();
 get_header('banner'); ?>
-<div id="kratos-blog-post" style="background:<?php echo kratos_option('background_index_color'); ?>">
+<div id="kratos-blog-post" style="background:<?php echo kratos_option('background_index_color', '#f5f5f5'); ?>">
 	<div class="container">
 		<div class="row">
 			<?php if( $page_side_bar == 'left_side' ){ ?>
