@@ -16,11 +16,13 @@ require_once( get_template_directory() . '/inc/widgets.php');
  * @author Vtrois <seaton@vtrois.com>
  * @license GPL-3.0
  */
-function kratos_get_avatar( $avatar ) {
-    $avatar = str_replace( array( 'www.gravatar.com', '0.gravatar.com', '1.gravatar.com', '2.gravatar.com', '3.gravatar.com', 'secure.gravatar.com' ), 'cn.gravatar.com', $avatar );
+function kratos_get_https_avatar($avatar)
+{
+    $avatar = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com", "3.gravatar.com", "cn.gravatar.com"), "secure.gravatar.com", $avatar);
+    $avatar = str_replace("http://", "https://", $avatar);
     return $avatar;
 }
-add_filter( 'get_avatar', 'kratos_get_avatar' );
+add_filter('get_avatar', 'kratos_get_https_avatar');
 
 /**
  * Theme updating
