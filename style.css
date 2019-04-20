@@ -2774,98 +2774,112 @@ img.size-smiley {
 	color: rgba(255,255,255,.5)
 }
 
-.cd-tool a {
+.cd-tool>div:hover {
+	cursor: url(../images/pointer.cur),auto
+}
+
+.cd-tool>div {
 	position: fixed;
-	width: 50px;
-	height: 50px;
-	right: 30px;
-	opacity: .7;
-	background: #848484;
-	box-shadow: 0 0 10px rgba(0,0,0,.05);
-	white-space: nowrap;
-	-webkit-transition: all .3s;
-	transition: all .3s;
-	z-index: 2
+	right: 20px;
+	z-index: 999
 }
 
-@media screen and (max-width:768px) {
-	.cd-tool a {
-		width: 45px;
-		height: 45px;
-		right: 20px
-	}
-}
-
-.cd-gb-a {
-	bottom: 152px
-}
-
-.cd-gb-b {
-	bottom: 96px
-}
-
-.cd-gb-a span,.cd-gb-b span {
-	margin-top: 16px;
+.cd-tool span {
+	display: table-cell;
+	vertical-align: middle;
 	color: #fff;
-	font-size: 20px
-}
-
-.cd-weixin {
-	bottom: 96px
-}
-
-.cd-weixin span {
-	margin-top: 16px;
-	color: #fff;
-	font-size: 20px
-}
-
-.cd-weixin img {
-	position: fixed;
-	right: 100px;
-	bottom: 45px;
-	width: 150px;
-	height: 150px
-}
-
-#weixin-pic {
-	display: none
-}
-
-.cd-top {
-	bottom: 40px;
-	visibility: hidden;
-	overflow: hidden
-}
-
-.cd-top span {
-	margin-top: 15px;
-	color: #fff;
+	width: 40px;
+	height: 40px;
 	font-size: 18px
 }
 
-.cd-top.cd-is-visible {
+.edit-box {
+	bottom: 130px;
+	background: #848484;
+	opacity: .7
+}
+
+.edit-box.edit-box2 {
+	bottom: 180px
+}
+
+.gotop-box {
+	bottom: 80px;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: .5s;
+	transition: .5s
+}
+
+.gotop-box.gotop-box2 {
+	bottom: 130px
+}
+
+.gotop-box.active {
 	visibility: visible;
 	opacity: .7
 }
 
-.cd-gb.cd-fade-out,.cd-top.cd-fade-out,.cd-weixin.cd-fade-out {
+.gotop-box .gotop-btn {
+	display: table;
+	background: #848484;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	text-align: center
+}
+
+.search-box {
+	bottom: 30px;
+	background: #848484;
+	display: table;
 	opacity: .7
 }
 
-.no-touch .cd-top:hover {
-	background-color: #00a2ff;
+.search-box input {
+	width: 100%;
+	height: 40px;
+	border: 0;
+	background: 0 0;
+	color: #fff;
+	font-size: 17px
+}
+
+.search-box input:-moz-placeholder,.search-box input::-moz-placeholder {
+	color: #eee;
 	opacity: 1
 }
 
-.no-touch .cd-weixin:hover {
-	background-color: #44B549;
+.search-box input:-ms-input-placeholder {
+	color: #eee;
 	opacity: 1
 }
 
-.no-touch .cd-gb-a:hover,.no-touch .cd-gb-b:hover {
-	background-color: #ED2A2F;
+.search-box input::-webkit-input-placeholder {
+	color: #eee;
 	opacity: 1
+}
+
+.search-box .search-form {
+	width: 0
+}
+
+.wechat-img {
+	bottom: 80px;
+	background: #848484;
+	opacity: .7
+}
+
+.wechat-img #wechat-pic {
+	display: none
+}
+
+.wechat-img img {
+	position: absolute;
+	right: 55px;
+	bottom: -55px;
+	width: 150px;
+	height: 150px
 }
 
 .btn {

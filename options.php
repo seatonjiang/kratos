@@ -131,21 +131,6 @@ function optionsframework_options()
 	);
 
     $options[] = array(
-        'name' => '访客留言',
-        'desc' => '是否启用访客留言按钮功能',
-        'id' => 'cd_gb',
-        'std' => '0',
-		'type' => 'checkbox'
-	);
-
-    $options[] = array(
-        'name' => '访客留言配置',
-        'desc' => '输入您的访客留言页面的连接，若没开启访客留言按钮该项无效',
-        'id' => 'guestbook_links',
-		'type' => 'text'
-	);
-
-    $options[] = array(
         'name' => '微信展示',
         'desc' => '是否启用微信展示按钮功能',
         'id' => 'cd_weixin',

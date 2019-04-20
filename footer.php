@@ -8,17 +8,17 @@
 ?>
 				<footer>
 					<div id="footer">
-						<div class="cd-tool visible text-center">
-							<?php if ( kratos_option( 'cd_gb' ) && kratos_option( 'cd_weixin' ) ) { ?>
-						   		<a rel="nofollow" class="cd-gb-a visible-lg" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
-						   	<?php } elseif( kratos_option( 'cd_gb' ) && !kratos_option( 'cd_weixin' ) ){ ?>
-						   		<a rel="nofollow" class="cd-gb-b visible-lg" href="<?php echo kratos_option('guestbook_links'); ?>"><span class="fa fa-book"></span></a>	
-						   	<?php } ?>
-						   	<?php if ( kratos_option( 'cd_weixin' ) ) : ?>
-						   		<a id="weixin-img" class="cd-weixin visible-lg"><span class="fa fa-weixin"></span><div id="weixin-pic"><img src="<?php echo kratos_option('weixin_image', get_template_directory_uri() . '/images/weixin.png') ?>"></div></a>
-						   	<?php endif; ?>
-						    <a class="cd-top cd-is-visible cd-fade-out"><span class="fa fa-chevron-up"></span></a>
-						</div>
+                        <div class="cd-tool text-center">
+                            <?php if(current_user_can('manage_options')&&is_single()||is_page()){ ?><div class="cd-tool text-center"><div class="<?php if(kratos_option('cd_weixin')) echo 'edit-box2 '; ?>edit-box"><?php echo edit_post_link('<span class="fa fa-pencil"></span>'); ?></div></div><?php } ?>
+                            <div class="<?php if(kratos_option('cd_weixin')) echo 'gotop-box2 '; ?>gotop-box"><div class="gotop-btn"><span class="fa fa-chevron-up"></span></div></div>
+                            <?php if(kratos_option('cd_weixin')) echo '<div id="wechat-img" class="wechat-img"><span class="fa fa-weixin"></span><div id="wechat-pic"><img src="'.kratos_option('weixin_image').'"></div></div>'; ?>
+                            <div class="search-box">
+                                <span class="fa fa-search"></span>
+                                <form class="search-form" role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
+                                    <input type="text" name="s" id="search" placeholder="Search..." style="display:none"/>
+                                </form>
+                            </div>
+                        </div>
 						<div class="container">
 							<div class="row">
 								<div class="col-md-6 col-md-offset-3 footer-list text-center">
