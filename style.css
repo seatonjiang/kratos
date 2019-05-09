@@ -252,7 +252,8 @@ table,table tbody tr th {
 }
 
 .pagination>li>a {
-	color: #333
+	color: #333;
+	padding: 6px 0px
 }
 
 .next,.pagination .next,.prev {
