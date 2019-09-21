@@ -74,22 +74,22 @@ add_filter('the_content', 'my_formatter', 99);
 function kratos_theme_scripts() {  
     $dir = get_template_directory_uri(); 
     if ( !is_admin() ) {  
-        wp_enqueue_style( 'animate', $dir . '/css/animate.min.css', array(), '3.5.1'); 
-        wp_enqueue_style( 'awesome', $dir . '/css/font-awesome.min.css', array(), '4.7.0');
-        wp_enqueue_style( 'bootstrap', $dir . '/css/bootstrap.min.css', array(), '3.3.7');
-        wp_enqueue_style( 'superfish', $dir . '/css/superfish.min.css', array(), 'r7');
-        wp_enqueue_style( 'layer', $dir . '/css/layer.min.css', array(), KRATOS_VERSION);
+        wp_enqueue_style( 'animate', 'https://cdn.bootcss.com/animate.css/3.5.1/animate.min.css', array(), '3.5.1'); 
+        wp_enqueue_style( 'awesome', 'https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0');
+        wp_enqueue_style( 'bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7');
+        wp_enqueue_style( 'superfish', 'https://cdn.bootcss.com/superfish/1.7.10/css/megafish.min.css', array(), 'r7');
+        wp_enqueue_style( 'layer', 'https://cdn.bootcss.com/layer/2.3/skin/layer.css', array(), '2.3');
         wp_enqueue_style( 'kratos', get_stylesheet_uri(), array(), KRATOS_VERSION);
-        wp_enqueue_script( 'jquery', $dir . '/js/jquery.min.js' , array(), '2.1.4');
-        wp_enqueue_script( 'easing', $dir . '/js/jquery.easing.min.js', array(), '1.3.0'); 
-        wp_enqueue_script( 'qrcode', $dir . '/js/jquery.qrcode.min.js', array(), KRATOS_VERSION);
-        wp_enqueue_script( 'layer', $dir . '/js/layer.min.js', array(), '3.0.3');
-        wp_enqueue_script( 'modernizr', $dir . '/js/modernizr.min.js' , array(), '2.6.2');
-        wp_enqueue_script( 'bootstrap', $dir . '/js/bootstrap.min.js', array(), '3.3.7');
-        wp_enqueue_script( 'waypoints', $dir . '/js/jquery.waypoints.min.js', array(), '4.0.0');
-        wp_enqueue_script( 'stellar', $dir . '/js/jquery.stellar.min.js', array(), '0.6.2');
-        wp_enqueue_script( 'hoverIntents', $dir . '/js/hoverIntent.min.js', array(), 'r7');
-        wp_enqueue_script( 'superfish', $dir . '/js/superfish.js', array(), '1.0.0');
+        wp_enqueue_script( 'jquery', 'https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js' , array(), '2.1.4');
+        wp_enqueue_script( 'easing', 'https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js', array(), '1.3.0'); 
+        wp_enqueue_script( 'qrcode', 'https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js', array(), KRATOS_VERSION);
+        wp_enqueue_script( 'layer', 'https://cdn.bootcss.com/layer/2.3/layer.js', array(), '2.3');
+        wp_enqueue_script( 'modernizr', 'https://cdn.bootcss.com/modernizr/2.6.2/modernizr.min.js' , array(), '2.6.2');
+        wp_enqueue_script( 'bootstrap', 'https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js', array(), '3.3.7');
+        wp_enqueue_script( 'waypoints', 'https://cdn.bootcss.com/waypoints/4.0.0/jquery.waypoints.min.js', array(), '4.0.0');
+        wp_enqueue_script( 'stellar', 'https://cdn.bootcss.com/stellar.js/0.6.2/jquery.stellar.min.js', array(), '0.6.2');
+        wp_enqueue_script( 'hoverIntents', 'https://cdn.bootcss.com/jquery.hoverintent/2013.03.11/hoverintent.min.js', array(), 'r7');
+        wp_enqueue_script( 'superfish', 'https://cdn.bootcss.com/superfish/1.7.10/js/superfish.js', array(), '1.0.0');
         wp_enqueue_script( 'kratos', $dir . '/js/kratos.js', array(),  KRATOS_VERSION);
         
         $data = array(

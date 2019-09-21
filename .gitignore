@@ -18,6 +18,7 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+.gitignore
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -25,3 +26,5 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+.github
+.vscode
