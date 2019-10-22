@@ -3,9 +3,7 @@ daysUntilClose: 7
 exemptLabels:
   - pinned
   - security
-staleLabel: wontfix
+staleLabel: 无响应
 markComment: >
-  This issue has been automatically marked as stale because it has not had
-  recent activity. It will be closed if no further activity occurs. Thank you
-  for your contributions.
-closeComment: false
+由于这个问题最近没有响应，因此已被机器人自动标记为「无响应」状态。如果长时间没有响应，问题将被自动关闭。十分感谢您对 Kratos 的支持与贡献！
+closeComment: true
