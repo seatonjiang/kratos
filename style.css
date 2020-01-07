@@ -2585,8 +2585,9 @@ img.size-smiley {
 .kratos-entry-thumb-new img {
 	padding: 2px;
 	border: 1px solid #F3F3F3;
-	height: 145px;
-	width: 240px
+	height: 100%;
+	width: 100%;
+	object-fit:cover; 
 }
 
 .kratos-post-meta-new a {
