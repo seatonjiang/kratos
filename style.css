@@ -2646,7 +2646,7 @@ img.size-smiley {
 		position: relative;
 		float: none;
 		width: auto;
-		height: auto;
+		height: 240px;
 		overflow: hidden;
 		padding: 0;
 		margin: 0;
