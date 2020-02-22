@@ -38,6 +38,9 @@ function theme_autoload()
         wp_enqueue_style('bootstrap', $dir . '/assets/css/bootstrap.min.css', array(), '4.4.1');
         wp_enqueue_style('kicon', $dir . '/assets/css/iconfont.min.css', array(), THEME_VERSION);
         wp_enqueue_style('layer', $dir . '/assets/css/layer.min.css', array(), '3.1.1');
+        if(kratos_option('g_animate',false)){
+            wp_enqueue_style('animate', $dir . '/assets/css/animate.min.css', array(), '3.7.2');
+        }
         wp_enqueue_style('kratos', $dir . '/assets/css/kratos.min.css', array(), THEME_VERSION);
         wp_enqueue_style('custom', get_template_directory_uri() . '/custom/custom.css', array(), THEME_VERSION);
         // js

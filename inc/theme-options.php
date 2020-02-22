@@ -66,6 +66,14 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('CSS 动画库', 'kratos'),
+        'desc' => __('开启 animate.css 效果', 'kratos'),
+        'std' => '0',
+        'id' => 'g_animate',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
         'name' => __('静态资源加速', 'kratos'),
         'desc' => __('开启静态资源加速（CSS、JS、Font）', 'kratos'),
         'std' => '0',

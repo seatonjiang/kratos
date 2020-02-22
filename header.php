@@ -63,7 +63,7 @@
                 $img = kratos_option('top_img', get_template_directory_uri() . '/assets/img/background.png');
             }
             echo $img; ?>);">
-            <div class="introduce">
+            <div class="introduce animated fadeInUp">
                 <?php
                     if (is_category() || is_tag()) {
                         echo '<div class="title">' . single_cat_title('', false) . '</div>';
