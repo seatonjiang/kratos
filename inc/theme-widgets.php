@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.02.22
  */
 
 // 添加小工具
@@ -22,7 +22,6 @@ function widgets_init()
         'WP_Widget_Pages',
         'WP_Widget_Calendar',
         'WP_Widget_Archives',
-        'WP_Widget_Links',
         'WP_Widget_Media_Audio',
         'WP_Widget_Media_Image',
         'WP_Widget_Media_Gallery',
@@ -36,7 +35,6 @@ function widgets_init()
         'WP_Widget_RSS',
         'WP_Widget_Tag_Cloud',
         'WP_Nav_Menu_Widget',
-        'WP_Widget_Custom_HTML',
     );
 
     foreach ($wp_widget as $wp_widget) {

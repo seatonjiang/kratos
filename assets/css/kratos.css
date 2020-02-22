@@ -1421,14 +1421,14 @@ button:focus {
 
 .k-main .sidebar .widget {
 	margin: 0 0 23px;
-	padding: 0px;
+	padding: 15px 30px;
 	border-radius: 0;
 	background-color: #fff;
 	box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
 
-.k-main .sidebar .w-recommended, .k-main .sidebar .w-tags {
-	padding: 15px 30px;
+.k-main .sidebar .w-about, .k-main .sidebar .w-ad {
+	padding: 0;
 }
 
 .k-main .sidebar>div:last-child {
@@ -1496,16 +1496,16 @@ button:focus {
 	margin-right: 8px;
 }
 
-.k-main .sidebar .w-tags .title {
+.k-main .sidebar .title {
 	position: relative;
 	margin: 0 0 15px;
 	padding-bottom: 7px;
 	border-bottom: 1px solid #e7e7e7;
-	font-size: 18px;
+	font-size: 17px;
 	cursor: default;
 }
 
-.k-main .sidebar .w-tags .title::after {
+.k-main .sidebar .title::after {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -1515,8 +1515,9 @@ button:focus {
 	content: '';
 }
 
-.k-main .sidebar .w-tags .item a {
+.k-main .sidebar .w-tags .item a,.k-main .sidebar .widget_links ul li {
 	display: inline-block;
+	list-style: none;
 	margin: 0 2px 4px 0;
 	padding: 2px 0;
 	width: 140px;
@@ -1527,7 +1528,7 @@ button:focus {
 	font-size: 14px;
 }
 
-.k-main .sidebar .w-tags .item a:hover {
+.k-main .sidebar .w-tags .item a:hover,.k-main .sidebar .widget_links ul li:hover {
 	background-color: #eeeeee;
 }
 
@@ -1551,8 +1552,17 @@ button:focus {
 	border-bottom: none;
 }
 
+.k-main .sidebar .widget_links ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.k-main .sidebar .widget_links ul li a{
+    color: #333;
+}
+
 @media screen and (max-width:1200px) {
-	.k-main .sidebar .w-tags .item a {
+	.k-main .sidebar .w-tags .item a,.k-main .sidebar .widget_links ul li {
 		width: 110px;
 	}
 }
