@@ -56,7 +56,7 @@
     </nav><!-- .k-nav -->
     <div class="banner">
         <div class="overlay"></div>
-        <div class="content text-center" style="background-image: url(<?php 
+        <div class="content text-center" style="background-image: url(<?php
             if(!kratos_option('top_img')){
                 $img = get_template_directory_uri() . '/assets/img/background.png';
             } else {
@@ -70,7 +70,7 @@
                         echo '<div class="mate">' . strip_tags(category_description()) . '</div>';
                     } else {
                         echo '<div class="title">' . kratos_option('top_title', 'Kratos') . '</div>';
-                        echo '<div class="mate">' . kratos_option('top_describe', '一款专注于用户阅读体验的响应式博客主题') . '</div>';
+                        echo '<div class="mate">' . kratos_option('top_describe', __('一款专注于用户阅读体验的响应式博客主题', 'kratos')) . '</div>';
                     }
                 ?>
             </div>

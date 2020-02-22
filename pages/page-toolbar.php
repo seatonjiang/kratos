@@ -10,7 +10,7 @@
     <div class="meta float-md-left">
 		<img src="<?php echo kratos_option('a_gravatar', get_template_directory_uri() . '/assets/img/gravatar.png'); ?>">
 		<p class="name"><?php echo kratos_option('a_nickname','Kratos'); ?></p>
-		<p class="motto mb-0"><?php echo kratos_option('a_about','保持饥渴的专注，追求最佳的品质'); ?></p>
+		<p class="motto mb-0"><?php echo kratos_option('a_about', __('保持饥渴的专注，追求最佳的品质', 'kratos')); ?></p>
 	</div>
 	<div class="share float-md-right text-center">
         <?php if(kratos_option('g_donate',false)){ ?>

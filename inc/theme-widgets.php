@@ -160,7 +160,7 @@ class widget_about extends WP_Widget
 
     public function widget($args, $instance)
     {
-        $introduce = kratos_option('a_about', '保持饥渴的专注，追求最佳的品质');
+        $introduce = kratos_option('a_about', __('保持饥渴的专注，追求最佳的品质', 'kratos'));
         $avatar = kratos_option('a_gravatar', get_template_directory_uri() . '/assets/img/gravatar.png');
         $background = !empty($instance['background']) ? $instance['background'] : get_stylesheet_directory_uri() . '/assets/img/about-background.png';
 
