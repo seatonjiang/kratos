@@ -36,6 +36,11 @@ function kratos_options()
         'six' => __('知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议', 'kratos'),
     );
 
+	$top_array = array(
+		'banner' => __( '图片导航', 'kratos' ),
+		'color' => __( '颜色导航', 'kratos' ),
+	);
+
     $options = array();
 
     $options[] = array(
@@ -98,7 +103,7 @@ function kratos_options()
     );
 
     $options[] = array(
-        'name' => __('导航栏颜色', 'kratos'),
+        'name' => __('Chrome 导航栏颜色', 'kratos'),
         'desc' => __('Chrome 移动端浏览器导航栏的颜色', 'kratos'),
         'id' => 'g_chrome',
         'std' => '#282a2c',
@@ -345,10 +350,28 @@ function kratos_options()
         'type' => 'heading',
     );
 
+	$options[] = array(
+        'name' => __( '顶部样式', 'kratos' ),
+        'desc' => __('请选择顶部样式（颜色导航或图片导航）', 'kratos'),
+		'id' => 'top_select',
+		'std' => 'banner',
+		'type' => 'select',
+		'options' => $top_array
+	);
+
     $options[] = array(
-        'name' => __('顶部图片', 'kratos'),
+        'name' => __('颜色导航', 'kratos'),
+        'id' => 'top_color',
+        'std' => '#24292e',
+        'class' => 'hidden',
+        'type' => 'color',
+    );
+
+    $options[] = array(
+        'name' => __('图片导航', 'kratos'),
         'id' => 'top_img',
         'std' => get_template_directory_uri() . '/assets/img/background.png',
+        'class' => 'hidden',
         'type' => 'upload',
     );
 
@@ -356,6 +379,7 @@ function kratos_options()
         'name' => __('副标题', 'kratos'),
         'id' => 'top_title',
         'std' => 'Kratos',
+        'class' => 'hidden',
         'type' => 'text',
     );
 
@@ -363,6 +387,7 @@ function kratos_options()
         'name' => __('标题描述', 'kratos'),
         'std' => __('一款专注于用户阅读体验的响应式博客主题', 'kratos'),
         'id' => 'top_describe',
+        'class' => 'hidden',
         'type' => 'text',
     );
 

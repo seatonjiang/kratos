@@ -136,6 +136,22 @@ button:focus {
 	padding: 23px 0;
 }
 
+.k-main.color {
+	padding-top: 103px;
+}
+
+@media only screen and (max-width: 992px) {
+	.k-main.color {
+		padding-top: 92px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.k-main.color {
+		padding-top: 83px;
+	}
+}
+
 /*--------------------------------------------------------------
 2. 导航
 --------------------------------------------------------------*/
@@ -1517,12 +1533,12 @@ button:focus {
 
 .k-main .sidebar .w-tags .item a {
 	display: inline-block;
-	list-style: none;
 	margin: 0 2px 4px 0;
 	padding: 2px 0;
 	width: 140px;
 	border: 1px solid #eeeeee;
 	color: #333;
+	list-style: none;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -1530,18 +1546,18 @@ button:focus {
 
 .k-main .sidebar .widget_links ul li {
 	display: inline-block;
-	list-style: none;
 	margin: 0 2px 4px 0;
 	padding: 2px 0;
 	width: 140px;
 	color: #333;
+	list-style: none;
 	font-size: 15px;
 }
 
 .k-main .sidebar .widget_links ul li img {
+	margin-top: -3px;
 	width: 25px;
 	height: 25px;
-	margin-top: -3px;
 	border-radius: 50%;
 }
 
@@ -1587,9 +1603,9 @@ button:focus {
 }
 
 .k-main .sidebar tbody tr {
-	font-family: arial;
 	font-weight: 400;
 	font-size: 14px;
+	font-family: arial;
 }
 
 .k-main .sidebar tbody a {

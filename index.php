@@ -3,11 +3,11 @@
  * 首页模板
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.02.23
  */
 
 get_header(); ?>
-<div class="k-main" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
+<div class="k-main <?php echo kratos_option('top_select', 'banner'); ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 board">

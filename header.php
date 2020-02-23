@@ -3,7 +3,7 @@
  * 主题页眉
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.02.23
  */
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
 <?php flush(); ?>
 <body>
 <div class="k-header">
-    <nav class="k-nav navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="k-nav navbar navbar-expand-lg navbar-light fixed-top" <?php if(kratos_option('top_select', 'banner') !== 'banner'){ echo 'style="background:' . kratos_option('top_color', '#24292e') .'"';} ?>>
         <div class="container">
             <a class="navbar-brand" href="<?php echo get_option('home'); ?>">
                 <?php
@@ -54,6 +54,7 @@
             ?>
         </div>
     </nav><!-- .k-nav -->
+    <?php if(kratos_option('top_select', 'banner') == 'banner'){ ?>
     <div class="banner">
         <div class="overlay"></div>
         <div class="content text-center" style="background-image: url(<?php 
@@ -76,4 +77,5 @@
             </div>
         </div>
     </div><!-- .banner -->
+    <?php } ?>
 </div><!-- .k-header -->

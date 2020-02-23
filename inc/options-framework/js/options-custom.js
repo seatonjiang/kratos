@@ -44,6 +44,32 @@ jQuery(document).ready(function($) {
 		jQuery('#section-m_sendmail').show();
 	}
 
+	jQuery('#top_select').change(function() {
+		if (jQuery("#top_select").val() == 'color'){
+			jQuery('#section-top_color').fadeIn(400);
+			jQuery('#section-top_img').fadeOut(400);
+			jQuery('#section-top_title').fadeOut(400);
+			jQuery('#section-top_describe').fadeOut(400);
+		}else{
+			jQuery('#section-top_color').fadeOut(400);
+			jQuery('#section-top_img').fadeIn(400);
+			jQuery('#section-top_title').fadeIn(400);
+			jQuery('#section-top_describe').fadeIn(400);
+		}
+	});
+
+	if (jQuery('#top_select').val() == 'color') {
+		jQuery('#section-top_color').show();
+		jQuery('#section-top_img').hide();
+		jQuery('#section-top_title').hide();
+		jQuery('#section-top_describe').hide();
+	}else{
+		jQuery('#section-top_color').hide();
+		jQuery('#section-top_img').show();
+		jQuery('#section-top_title').show();
+		jQuery('#section-top_describe').show();
+	}
+
 	// Loads the color pickers
 	$('.of-color').wpColorPicker();
 
