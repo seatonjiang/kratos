@@ -82,6 +82,14 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('Gutenberg 编辑器', 'kratos'),
+        'desc' => __('开启 Gutenberg 编辑器', 'kratos'),
+        'std' => '0',
+        'id' => 'g_gutenberg',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
         'name' => __('Gravatar 加速', 'kratos'),
         'desc' => __('开启 Gravatar 头像加速', 'kratos'),
         'std' => '0',
