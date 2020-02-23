@@ -1561,6 +1561,28 @@ button:focus {
     color: #333;
 }
 
+.k-main .sidebar #wp-calendar {
+    width: 100%;
+}
+
+.k-main .sidebar caption,.k-main .sidebar tfoot{
+    display:none;
+}
+
+.k-main .sidebar tbody tr{
+    font-family:arial;
+	font-weight:400;
+	font-size:14px;
+}
+.k-main .sidebar tbody a {
+    display: block;
+    border: 1px solid #00a2ff;
+    background: #edf8ff;
+}
+.k-main .sidebar tbody tr td,.k-main .sidebar thead tr th{
+	text-align:center;
+}
+
 @media screen and (max-width:1200px) {
 	.k-main .sidebar .w-tags .item a,.k-main .sidebar .widget_links ul li {
 		width: 110px;

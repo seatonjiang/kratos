@@ -20,15 +20,9 @@ function widgets_init()
     // 去掉默认小工具
     $wp_widget = array(
         'WP_Widget_Pages',
-        'WP_Widget_Calendar',
         'WP_Widget_Archives',
-        'WP_Widget_Media_Audio',
-        'WP_Widget_Media_Image',
-        'WP_Widget_Media_Gallery',
-        'WP_Widget_Media_Video',
         'WP_Widget_Meta',
         'WP_Widget_Search',
-        'WP_Widget_Text',
         'WP_Widget_Categories',
         'WP_Widget_Recent_Posts',
         'WP_Widget_Recent_Comments',
