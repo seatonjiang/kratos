@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://camo.githubusercontent.com/9da13920699b57a32ac7a6cf5debec0b1efc7e1e/68747470733a2f2f73322e617831782e636f6d2f323032302f30322f31362f33396e4734532e706e67">
+<img src="https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/options-framework/images/about.png">
 </p>
 
 <p align="center">
@@ -179,7 +179,7 @@ Detailed changes for each release are documented in the [release notes](https://
 If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
-<img width="650" src="https://camo.githubusercontent.com/45c296e69d4aa7275d4f7c8971afd8bb8011209f/68747470733a2f2f73322e617831782e636f6d2f323032302f30322f31362f3339314e67552e706e67">
+<img width="650" src="https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/options-framework/images/donate.png">
 </p>
 
 ## License
