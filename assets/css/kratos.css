@@ -1515,7 +1515,7 @@ button:focus {
 	content: '';
 }
 
-.k-main .sidebar .w-tags .item a,.k-main .sidebar .widget_links ul li {
+.k-main .sidebar .w-tags .item a {
 	display: inline-block;
 	list-style: none;
 	margin: 0 2px 4px 0;
@@ -1526,6 +1526,23 @@ button:focus {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 14px;
+}
+
+.k-main .sidebar .widget_links ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 2px 4px 0;
+	padding: 2px 0;
+	width: 140px;
+	color: #333;
+	font-size: 15px;
+}
+
+.k-main .sidebar .widget_links ul li img {
+	width: 25px;
+	height: 25px;
+	margin-top: -3px;
+	border-radius: 50%;
 }
 
 .k-main .sidebar .w-tags .item a:hover,.k-main .sidebar .widget_links ul li:hover {
@@ -1553,34 +1570,37 @@ button:focus {
 }
 
 .k-main .sidebar .widget_links ul {
-    margin-bottom: 0;
-    padding-left: 0;
+	margin-bottom: 0;
+	padding-left: 0;
 }
 
-.k-main .sidebar .widget_links ul li a{
-    color: #333;
+.k-main .sidebar .widget_links ul li a {
+	color: #333;
 }
 
 .k-main .sidebar #wp-calendar {
-    width: 100%;
+	width: 100%;
 }
 
-.k-main .sidebar caption,.k-main .sidebar tfoot{
-    display:none;
+.k-main .sidebar caption,.k-main .sidebar tfoot {
+	display: none;
 }
 
-.k-main .sidebar tbody tr{
-    font-family:arial;
-	font-weight:400;
-	font-size:14px;
+.k-main .sidebar tbody tr {
+	font-family: arial;
+	font-weight: 400;
+	font-size: 14px;
 }
+
 .k-main .sidebar tbody a {
-    display: block;
-    border: 1px solid #00a2ff;
-    background: #edf8ff;
+	display: block;
+	border: 1px solid #00a2ff;
+	background: #edf8ff;
 }
-.k-main .sidebar tbody tr td,.k-main .sidebar thead tr th{
-	text-align:center;
+
+.k-main .sidebar tbody tr td,.k-main .sidebar thead tr th {
+	text-align: center;
+	cursor: default;
 }
 
 @media screen and (max-width:1200px) {
