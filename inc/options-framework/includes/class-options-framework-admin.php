@@ -62,6 +62,7 @@ class Options_Framework_Admin {
 		// Displays notice after options save
 		add_action( 'optionsframework_after_validate', array( $this, 'save_options_notice' ) );
 
+		add_action( 'optionsframework_after_sendmail', array( $this, 'send_mail_notice' ) );
     }
 
 	public function add_top_options_page()
@@ -252,18 +253,25 @@ class Options_Framework_Admin {
 			}
 		}
 
-		// Hook to run after validation
-		do_action( 'optionsframework_after_validate', $clean );
-
-		return $clean;
+		if ( isset( $_POST['sendmail'] ) ) {
+			wp_mail( get_bloginfo( 'admin_email' ) ,__('[测试]邮件服务配置成功', 'kratos'),__('恭喜您 SMTP 邮件服务配置成功！', 'kratos'));
+			do_action( 'optionsframework_after_sendmail', $clean );
+			return $clean;
+		} else {
+			do_action( 'optionsframework_after_validate', $clean );
+			return $clean;
+		}
 	}
 
 	/**
 	 * Display message when options have been saved
 	 */
-
 	function save_options_notice() {
 		add_settings_error( 'options-framework', 'save_options', __( '保存成功', 'kratos' ), 'updated fade' );
+	}
+
+	function send_mail_notice() {
+		add_settings_error( 'options-framework', 'send_mail', __( '发送完成，请留意邮箱：' . get_bloginfo( 'admin_email' ), 'kratos' ), 'updated fade' );
 	}
 
 	/**

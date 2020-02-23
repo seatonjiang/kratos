@@ -32,6 +32,7 @@ jQuery(document).ready(function($) {
 		jQuery('#section-m_port').fadeToggle(400);
 		jQuery('#section-m_username').fadeToggle(400);
 		jQuery('#section-m_passwd').fadeToggle(400);
+		jQuery('#section-m_sendmail').fadeToggle(400);
 	});
 
 	if (jQuery('#m_smtp:checked').val() !== undefined) {
@@ -40,6 +41,7 @@ jQuery(document).ready(function($) {
 		jQuery('#section-m_port').show();
 		jQuery('#section-m_username').show();
 		jQuery('#section-m_passwd').show();
+		jQuery('#section-m_sendmail').show();
 	}
 
 	// Loads the color pickers

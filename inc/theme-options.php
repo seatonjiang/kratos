@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.02.23
  */
 
 function getrobots()
@@ -324,6 +324,12 @@ function kratos_options()
         'id' => 'm_passwd',
         'class' => 'hidden',
         'type' => 'password',
+    );
+
+    $options[] = array(
+        'id' => 'm_sendmail',
+        'class' => 'hidden',
+        'type' => 'sendmail',
     );
 
     $options[] = array(
