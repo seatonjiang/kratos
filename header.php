@@ -70,7 +70,7 @@
                         echo '<div class="mate">' . strip_tags(category_description()) . '</div>';
                     } else {
                         echo '<div class="title">' . kratos_option('top_title', 'Kratos') . '</div>';
-                        echo '<div class="mate">' . kratos_option('top_describe', '一款专注于用户阅读体验的响应式博客主题') . '</div>';
+                        echo '<div class="mate">' . kratos_option('top_describe', __('一款专注于用户阅读体验的响应式博客主题', 'kratos')) . '</div>';
                     }
                 ?>
             </div>

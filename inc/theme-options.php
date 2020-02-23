@@ -269,8 +269,8 @@ function kratos_options()
 
     $options[] = array(
         'name' => __('个人简介', 'kratos'),
+        'std' => __('保持饥渴的专注，追求最佳的品质', 'kratos'),
         'id' => 'a_about',
-        'std' => '保持饥渴的专注，追求最佳的品质',
         'type' => 'textarea',
     );
 
@@ -353,8 +353,8 @@ function kratos_options()
 
     $options[] = array(
         'name' => __('标题描述', 'kratos'),
+        'std' => __('一款专注于用户阅读体验的响应式博客主题', 'kratos'),
         'id' => 'top_describe',
-        'std' => '一款专注于用户阅读体验的响应式博客主题',
         'type' => 'text',
     );
 
