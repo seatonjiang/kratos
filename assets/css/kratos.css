@@ -749,12 +749,23 @@ button:focus {
 	margin-bottom: -3px;
 }
 
-.k-main .details .article .content ul {
+.k-main .details .article .content ul,
+.k-main .details .article .content ol {
+	margin: 0 0 16px;
 	padding-left: 16px;
-	list-style-type: square;
 }
 
-.k-main .details .article .content li {
+.k-main .details .article .content ol > li {
+	margin-bottom: 6px;
+	padding-left: 2px;
+	list-style: decimal;
+	line-height: 22px;
+}
+
+.k-main .details .article .content ul > li {
+	margin-bottom: 6px;
+	padding-left: 2px;
+	list-style: circle;
 	line-height: 22px;
 }
 
@@ -800,16 +811,6 @@ button:focus {
 	white-space: nowrap;
 	font-size: 10px;
 	line-height: 1.5;
-}
-
-.k-main .details .article .content li {
-	margin-bottom: 6px;
-	list-style: circle;
-}
-
-.k-main .details .article .content ol,
-.k-main .details .article .content ul {
-	margin: 0;
 }
 
 .k-main .details .article .content pre code {
