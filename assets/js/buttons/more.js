@@ -1,4 +1,20 @@
 (function() {
+    tinymce.create('tinymce.plugins.h2title', {
+        init : function(ed, url) {
+            ed.addButton('h2title', {
+                title : '特色标题',
+                image : url+'/images/title.png',
+                onclick : function() {
+                     ed.selection.setContent('[h2title]' + ed.selection.getContent() + '[/h2title]');
+                }
+            });
+        },
+        createControl : function(n, cm) {
+            return null;
+        },
+    });
+    tinymce.PluginManager.add('h2title', tinymce.plugins.h2title);
+
     tinymce.create('tinymce.plugins.success', {
         init : function(ed, url) {
             ed.addButton('success', {

@@ -607,9 +607,9 @@ button:focus {
 		margin-bottom: 10px;
 	}
 
-    .k-main .board .article-panel .a-post.a-none .content{
-        margin-bottom: 0;
-    }
+	.k-main .board .article-panel .a-post.a-none .content {
+		margin-bottom: 0;
+	}
 
 	.k-main .board .article-panel .a-meta {
 		padding: 5px 12px;
@@ -716,6 +716,15 @@ button:focus {
 	font-size: 24px;
 }
 
+.k-main .details .article .content h2.title {
+	font-size: 20px;
+	padding: 0 10px;
+	border-left: 5px solid #00a2ff;
+	background-color: rgba(243,243,243,.7);
+	line-height: 41px;
+	margin: 16px -16px;
+}
+
 .k-main .details .article .content h3 {
 	font-size: 20px;
 }
@@ -733,7 +742,7 @@ button:focus {
 }
 
 .k-main .details .article .content p {
-	color: #4a4a4a;
+	color: #151515;
 	white-space: pre-line;
 	line-height: 30px;
 }

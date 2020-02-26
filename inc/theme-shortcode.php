@@ -3,8 +3,17 @@
  * 文章短代码
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.02.26
  */
+
+function h2title($atts, $content = null, $code = "")
+{
+    $return = '<h2 class="title">';
+    $return .= $content;
+    $return .= '</h2>';
+    return $return;
+}
+add_shortcode('h2title', 'h2title');
 
 function success($atts, $content = null, $code = "")
 {
@@ -183,6 +192,7 @@ function more_button()
 
 function register_button($buttons)
 {
+    array_push($buttons, " ", "h2title");
     array_push($buttons, " ", "kbd");
     array_push($buttons, " ", "mark");
     array_push($buttons, " ", "striped");
@@ -195,7 +205,6 @@ function register_button($buttons)
     array_push($buttons, " ", "info");
     array_push($buttons, " ", "warning");
     array_push($buttons, " ", "danger");
-
     array_push($buttons, " ", "successbox");
     array_push($buttons, " ", "infoboxs");
     array_push($buttons, " ", "warningbox");
@@ -205,6 +214,7 @@ function register_button($buttons)
 
 function add_plugin($plugin_array)
 {
+    $plugin_array['h2title'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
     $plugin_array['kbd'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
     $plugin_array['mark'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
     $plugin_array['striped'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
@@ -217,7 +227,6 @@ function add_plugin($plugin_array)
     $plugin_array['info'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
     $plugin_array['warning'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
     $plugin_array['danger'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-
     $plugin_array['successbox'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
     $plugin_array['infoboxs'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
     $plugin_array['warningbox'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
