@@ -55,6 +55,25 @@ ol,p,ul {
 	font-size: 16px;
 }
 
+ul,ol {
+	margin: 0 0 16px;
+	padding-left: 16px;
+}
+
+ol > li {
+	margin-bottom: 6px;
+	padding-left: 2px;
+	list-style: decimal;
+	line-height: 22px;
+}
+
+ul > li {
+	margin-bottom: 6px;
+	padding-left: 2px;
+	list-style: circle;
+	line-height: 22px;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	margin: 0 0 30px 0;
 	color: #333;
@@ -657,6 +676,13 @@ button:focus {
 	font-size: 13px;
 }
 
+.k-main .details .article .breadcrumb-box .breadcrumb li {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+	line-height: auto;
+}
+
 .k-main .details .article .breadcrumb-box .breadcrumb-item.active {
 	cursor: default;
 }
@@ -766,26 +792,6 @@ button:focus {
 
 .k-main .details .article .content blockquote p {
 	margin-bottom: -3px;
-}
-
-.k-main .details .article .content ul,
-.k-main .details .article .content ol {
-	margin: 0 0 16px;
-	padding-left: 16px;
-}
-
-.k-main .details .article .content ol > li {
-	margin-bottom: 6px;
-	padding-left: 2px;
-	list-style: decimal;
-	line-height: 22px;
-}
-
-.k-main .details .article .content ul > li {
-	margin-bottom: 6px;
-	padding-left: 2px;
-	list-style: circle;
-	line-height: 22px;
 }
 
 .k-main .details .article .content hr {
@@ -1572,6 +1578,7 @@ button:focus {
 	color: #333;
 	list-style: none;
 	font-size: 15px;
+	line-height: inherit;
 }
 
 .k-main .sidebar .widget_links ul li img {
