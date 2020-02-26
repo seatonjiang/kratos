@@ -44,6 +44,14 @@ jQuery(document).ready(function($) {
 		jQuery('#section-m_sendmail').show();
 	}
 
+	jQuery('#g_thumbnail').click(function() {
+		jQuery('#section-g_postthumbnail').fadeToggle(400);
+	});
+
+	if (jQuery('#g_thumbnail:checked').val() !== undefined) {
+		jQuery('#section-g_postthumbnail').show();
+	}
+
 	jQuery('#top_select').change(function() {
 		if (jQuery("#top_select").val() == 'color'){
 			jQuery('#section-top_color').fadeIn(400);

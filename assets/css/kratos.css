@@ -435,6 +435,12 @@ button:focus {
 	height: 160px;
 }
 
+.k-main .board .article-panel .a-post.a-none {
+	margin-left: 0;
+	padding: 20px;
+	height: auto;
+}
+
 .k-main .board .article-panel .a-post .header {
 	display: -webkit-box;
 	overflow: hidden;
@@ -600,6 +606,10 @@ button:focus {
 	.k-main .board .article-panel .a-post .content {
 		margin-bottom: 10px;
 	}
+
+    .k-main .board .article-panel .a-post.a-none .content{
+        margin-bottom: 0;
+    }
 
 	.k-main .board .article-panel .a-meta {
 		padding: 5px 12px;

@@ -3,16 +3,18 @@
  * 文章列表
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.02.26
  */
 ?>
 <div class="article-panel">
+    <?php if (kratos_option('g_thumbnail',true)) { ?>
     <div class="a-thumb">
         <a href="<?php the_permalink(); ?>">
             <?php post_thumbnail(); ?>
         </a>
     </div>
-    <div class="a-post">
+    <?php }?>
+    <div class="a-post <?php if (!kratos_option('g_thumbnail',true)) { echo 'a-none'; } ?>">
         <div class="header">
             <?php $category = get_the_category(); echo '<a class="label" href="'. get_category_link($category[0]->term_id) . '">' . $category[0]->cat_name . '<i class="label-arrow"></i></a>'; ?>
             <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

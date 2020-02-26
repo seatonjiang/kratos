@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.23
+ * @version 2020.02.26
  */
 
 function getrobots()
@@ -200,9 +200,18 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('特色图片', 'kratos'),
+        'desc' => __('开启站点首页特色图片功能', 'kratos'),
+        'std' => '1',
+        'id' => 'g_thumbnail',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
         'name' => __('默认特色图', 'kratos'),
         'desc' => __('当文章中没有图片并且没有设置特色图时在首页显示', 'kratos'),
         'id' => 'g_postthumbnail',
+        'class' => 'hidden',
         'std' => get_template_directory_uri() . '/assets/img/default.jpg',
         'type' => 'upload',
     );
