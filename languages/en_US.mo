@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-02-26 21:34+0800\n"
-"PO-Revision-Date: 2020-02-27 13:18\n"
+"PO-Revision-Date: 2020-02-27 13:26\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -623,7 +623,7 @@ msgstr ""
 
 #: inc/theme-options.php:524
 msgid "Github"
-msgstr ""
+msgstr "Github"
 
 #: inc/theme-options.php:537
 msgid "Stack Overflow"
