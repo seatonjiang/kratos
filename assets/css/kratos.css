@@ -720,6 +720,12 @@ button:focus {
 	word-break: break-all;
 }
 
+.k-main .details .article .content::after,.k-main .details .article .content p::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
 .k-main .details .article h1,
 .k-main .details .article .content h2,
 .k-main .details .article .content h3,
@@ -851,6 +857,10 @@ button:focus {
 	list-style: none;
 }
 
+.k-main .details .article .content .wp-caption{
+    max-width: 100%;
+}
+
 .k-main .details .article .content img {
 	height: auto;
 	max-width: 100%;
@@ -877,10 +887,20 @@ button:focus {
 	background-color: #f8f8f8;
 }
 
+.k-main .details .article .content .alignleft {
+    display: block;
+    float:left;
+}
+
 .k-main .details .article .content .aligncenter {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.k-main .details .article .content .alignright {
+    display: block;
+    float:right;
 }
 
 .k-main .details .article .content .alert,.k-main .details .article .content .card,.card-header:first-child {
