@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-02-26 21:34+0800\n"
-"PO-Revision-Date: 2020-02-27 13:08\n"
+"PO-Revision-Date: 2020-02-28 12:39\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -394,7 +394,7 @@ msgstr "robots.txt 設定"
 
 #: inc/theme-options.php:170
 msgid "- 需要 "
-msgstr ""
+msgstr "- 需要 "
 
 #: inc/theme-options.php:170
 msgid " 是开启的状态，下面的配置才会生效"
@@ -426,11 +426,11 @@ msgstr "開啟網站首頁黑白功能（用於 R.I.P.）"
 
 #: inc/theme-options.php:203
 msgid "特色图片"
-msgstr ""
+msgstr "特色圖片"
 
 #: inc/theme-options.php:204
 msgid "开启站点首页特色图片功能"
-msgstr ""
+msgstr "開啟站點首頁特色圖片功能"
 
 #: inc/theme-options.php:211
 msgid "默认特色图"
@@ -587,7 +587,7 @@ msgstr "中國大陸平台"
 
 #: inc/theme-options.php:415
 msgid "新浪微博"
-msgstr ""
+msgstr "新浪微博"
 
 #: inc/theme-options.php:428
 msgid "哔哩哔哩"
@@ -631,7 +631,7 @@ msgstr "Stack Overflow"
 
 #: inc/theme-options.php:550
 msgid "其他"
-msgstr ""
+msgstr "其他"
 
 #: inc/theme-options.php:555
 msgid "电子邮箱"
@@ -693,7 +693,7 @@ msgstr "[通知] 您的留言已經通過審核"
 
 #: inc/theme-smtp.php:46 inc/theme-smtp.php:96
 msgid "您好，"
-msgstr ""
+msgstr "您好，"
 
 #: inc/theme-smtp.php:47
 msgid "您的留言已经通过了管理员的审核，摘要信息如下："
@@ -701,7 +701,7 @@ msgstr "您的留言已經通過了管理員的審核，摘要資訊如下："
 
 #: inc/theme-smtp.php:51
 msgid "文章"
-msgstr ""
+msgstr "文章"
 
 #: inc/theme-smtp.php:52
 msgid "内容"
@@ -709,7 +709,7 @@ msgstr "內容"
 
 #: inc/theme-smtp.php:53 inc/theme-smtp.php:104
 msgid "操作"
-msgstr ""
+msgstr "操作"
 
 #: inc/theme-smtp.php:65 inc/theme-smtp.php:117
 msgid "该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。"
@@ -725,11 +725,11 @@ msgstr "您的留言有了新的回覆，摘要資訊如下："
 
 #: inc/theme-smtp.php:101
 msgid "原文"
-msgstr ""
+msgstr "原文"
 
 #: inc/theme-smtp.php:103
 msgid "作者"
-msgstr ""
+msgstr "作者"
 
 #: inc/theme-smtp.php:112
 msgid "查看回复"
@@ -814,7 +814,7 @@ msgstr "顯示最熱門、隨機、最新文章的工具"
 
 #: inc/theme-widgets.php:284 inc/theme-widgets.php:289
 msgid "最新"
-msgstr ""
+msgstr "最新"
 
 #: inc/theme-widgets.php:285 inc/theme-widgets.php:290
 msgid "热点"
@@ -843,12 +843,12 @@ msgstr "檢查更新"
 #: inc/update-checker/Puc/v4p9/Plugin/Ui.php:213
 #, php-format
 msgid "%s 是最新版本"
-msgstr ""
+msgstr "%s 是最新版本"
 
 #: inc/update-checker/Puc/v4p9/Plugin/Ui.php:215
 #, php-format
 msgid "%s 有新版本了"
-msgstr ""
+msgstr "%s 有新版本了"
 
 #: inc/update-checker/Puc/v4p9/Plugin/Ui.php:217
 msgid "无法确定更新能否用于 ％s"
@@ -901,7 +901,7 @@ msgstr "首頁"
 
 #: single.php:27
 msgid "正文"
-msgstr ""
+msgstr "正文"
 
 #: single.php:37
 msgid "编辑文章"
@@ -926,11 +926,11 @@ msgstr "最後更新："
 
 #: single.php:96
 msgid "< 上一篇"
-msgstr ""
+msgstr "< 前篇"
 
 #: single.php:100
 msgid "下一篇 >"
-msgstr ""
+msgstr "後篇 >"
 
 #. Theme Name of the plugin/theme
 msgid "Kratos"
