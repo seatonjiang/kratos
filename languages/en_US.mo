@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-02-26 21:34+0800\n"
-"PO-Revision-Date: 2020-02-27 13:26\n"
+"PO-Revision-Date: 2020-02-28 12:39\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -270,11 +270,11 @@ msgstr "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International 
 
 #: inc/theme-options.php:40 inc/theme-options.php:380
 msgid "图片导航"
-msgstr ""
+msgstr "Image navigation"
 
 #: inc/theme-options.php:41 inc/theme-options.php:372
 msgid "颜色导航"
-msgstr ""
+msgstr "Color navigation"
 
 #: inc/theme-options.php:47
 msgid "全站配置"
@@ -322,11 +322,11 @@ msgstr "Enable static resource acceleration(CSS,JS,Font)"
 
 #: inc/theme-options.php:90
 msgid "Gutenberg 编辑器"
-msgstr ""
+msgstr "Gutenberg editor"
 
 #: inc/theme-options.php:91
 msgid "开启 Gutenberg 编辑器"
-msgstr ""
+msgstr "Open Gutenberg editor"
 
 #: inc/theme-options.php:98
 msgid "Gravatar 加速"
@@ -338,7 +338,7 @@ msgstr "Turn on Gravatar to speed up"
 
 #: inc/theme-options.php:106
 msgid "Chrome 导航栏颜色"
-msgstr ""
+msgstr "Chrome navigation bar color"
 
 #: inc/theme-options.php:107
 msgid "Chrome 移动端浏览器导航栏的颜色"
@@ -426,11 +426,11 @@ msgstr "Enable the black and white function on the homepage of the site (for R.I
 
 #: inc/theme-options.php:203
 msgid "特色图片"
-msgstr ""
+msgstr "Featured image"
 
 #: inc/theme-options.php:204
 msgid "开启站点首页特色图片功能"
-msgstr ""
+msgstr "Open featured images on site homepage"
 
 #: inc/theme-options.php:211
 msgid "默认特色图"
@@ -559,11 +559,11 @@ msgstr "Top Config"
 
 #: inc/theme-options.php:363
 msgid "顶部样式"
-msgstr ""
+msgstr "Top style"
 
 #: inc/theme-options.php:364
 msgid "请选择顶部样式（颜色导航或图片导航）"
-msgstr ""
+msgstr "Please select the top style (color navigation or image navigation)"
 
 #: inc/theme-options.php:388
 msgid "副标题"
@@ -595,7 +595,7 @@ msgstr "bilibili"
 
 #: inc/theme-options.php:441
 msgid "CODING"
-msgstr ""
+msgstr "CODING"
 
 #: inc/theme-options.php:454
 msgid "码云 Gitee"
@@ -607,19 +607,19 @@ msgstr "Global platform"
 
 #: inc/theme-options.php:472
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: inc/theme-options.php:485
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: inc/theme-options.php:498
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: inc/theme-options.php:511
 msgid "YouTube"
-msgstr ""
+msgstr "YouTube"
 
 #: inc/theme-options.php:524
 msgid "Github"
@@ -627,7 +627,7 @@ msgstr "Github"
 
 #: inc/theme-options.php:537
 msgid "Stack Overflow"
-msgstr ""
+msgstr "Stack Overflow"
 
 #: inc/theme-options.php:550
 msgid "其他"
@@ -934,11 +934,11 @@ msgstr "Next >"
 
 #. Theme Name of the plugin/theme
 msgid "Kratos"
-msgstr ""
+msgstr "Kratos"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/Vtrois/Kratos"
-msgstr ""
+msgstr "https://github.com/Vtrois/Kratos"
 
 #. Description of the plugin/theme
 msgid "主题提供了多种针对自媒体博客需求的侧栏工具，删繁就简专注于用户的阅读体验，优化的邮件中心为你的网站留存加分添彩。"
@@ -946,9 +946,9 @@ msgstr "Theme provides a variety of widgets to meet the needs of self-service me
 
 #. Author of the plugin/theme
 msgid "Seaton Jiang"
-msgstr ""
+msgstr "Seaton Jiang"
 
 #. Author URI of the plugin/theme
 msgid "https://www.vtrois.com/"
-msgstr ""
+msgstr "https://www.vtrois.com/"
 
