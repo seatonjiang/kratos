@@ -721,9 +721,9 @@ button:focus {
 }
 
 .k-main .details .article .content::after,.k-main .details .article .content p::after {
-    display: block;
-    clear: both;
-    content: "";
+	clear: both;
+	display: block;
+	content: "";
 }
 
 .k-main .details .article h1,
@@ -749,12 +749,12 @@ button:focus {
 }
 
 .k-main .details .article .content h2.title {
-	font-size: 20px;
+	margin: 16px -16px;
 	padding: 0 10px;
 	border-left: 5px solid #00a2ff;
 	background-color: rgba(243,243,243,.7);
+	font-size: 20px;
 	line-height: 41px;
-	margin: 16px -16px;
 }
 
 .k-main .details .article .content h3 {
@@ -857,8 +857,8 @@ button:focus {
 	list-style: none;
 }
 
-.k-main .details .article .content .wp-caption{
-    max-width: 100%;
+.k-main .details .article .content .wp-caption {
+	max-width: 100%;
 }
 
 .k-main .details .article .content img {
@@ -888,19 +888,18 @@ button:focus {
 }
 
 .k-main .details .article .content .alignleft {
-    display: block;
-    float:left;
+	float: left;
+	display: block;
 }
 
 .k-main .details .article .content .aligncenter {
-	display: block;
 	margin-right: auto;
 	margin-left: auto;
 }
 
 .k-main .details .article .content .alignright {
-    display: block;
-    float:right;
+	float: right;
+	display: block;
 }
 
 .k-main .details .article .content .alert,.k-main .details .article .content .card,.card-header:first-child {
@@ -993,6 +992,10 @@ button:focus {
 	background-color: #a9a9a9;
 	color: #fff;
 	font-size: 13px;
+}
+
+.wp-block-image figcaption {
+	text-align: center;
 }
 
 @media screen and (max-width: 768px) {
