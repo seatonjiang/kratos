@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-02-26 21:34+0800\n"
-"PO-Revision-Date: 2020-02-29 12:52\n"
+"PO-Revision-Date: 2020-03-10 00:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -426,11 +426,11 @@ msgstr "開啟網站首頁黑白功能（用於 R.I.P.）"
 
 #: inc/theme-options.php:203
 msgid "特色图片"
-msgstr "特色圖片"
+msgstr "精選圖片"
 
 #: inc/theme-options.php:204
 msgid "开启站点首页特色图片功能"
-msgstr "開啟站點首頁特色圖片功能"
+msgstr "開啟網站首頁精選圖片功能"
 
 #: inc/theme-options.php:211
 msgid "默认特色图"
