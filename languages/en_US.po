@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
-"POT-Creation-Date: 2020-02-26 21:34+0800\n"
-"PO-Revision-Date: 2020-03-02 08:59+0800\n"
-"Last-Translator: Seaton Jiang <seaton@vtrois.com>\n"
+"POT-Creation-Date: 2020-03-10 19:01+0800\n"
+"PO-Revision-Date: 2020-03-10 11:04\n"
+"Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,12 +15,12 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Crowdin-Project: 87f769374581b4e7ec717067bc809033\n"
 "X-Crowdin-Language: en\n"
 "X-Crowdin-File: /master/languages/kratos.pot\n"
 "Language: en_US\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: 404.php:24
 msgid "很抱歉，你访问的页面不存在"
@@ -589,17 +589,33 @@ msgstr "China platform"
 msgid "新浪微博"
 msgstr "Weibo"
 
+#: inc/theme-options.php:422
+msgid "例如：https://weibo.com/xxxxx"
+msgstr ""
+
 #: inc/theme-options.php:428
 msgid "哔哩哔哩"
 msgstr "bilibili"
+
+#: inc/theme-options.php:435
+msgid "例如：https://space.bilibili.com/xxxxx"
+msgstr ""
 
 #: inc/theme-options.php:441
 msgid "CODING"
 msgstr "CODING"
 
+#: inc/theme-options.php:448
+msgid "例如：https://xxxxx.coding.net/u/xxxxx"
+msgstr ""
+
 #: inc/theme-options.php:454
 msgid "码云 Gitee"
 msgstr "Gitee"
+
+#: inc/theme-options.php:461
+msgid "例如：https://gitee.com/xxxxx"
+msgstr ""
 
 #: inc/theme-options.php:467
 msgid "海外平台"
@@ -609,25 +625,49 @@ msgstr "Global platform"
 msgid "Twitter"
 msgstr "Twitter"
 
+#: inc/theme-options.php:479
+msgid "例如：https://twitter.com/xxxxx"
+msgstr ""
+
 #: inc/theme-options.php:485
 msgid "Telegram"
 msgstr "Telegram"
+
+#: inc/theme-options.php:492
+msgid "例如：https://t.me/xxxxx"
+msgstr ""
 
 #: inc/theme-options.php:498
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
+#: inc/theme-options.php:505
+msgid "例如：https://www.linkedin.com/in/xxxxx"
+msgstr ""
+
 #: inc/theme-options.php:511
 msgid "YouTube"
 msgstr "YouTube"
+
+#: inc/theme-options.php:518
+msgid "例如：https://www.youtube.com/channel/xxxxx"
+msgstr ""
 
 #: inc/theme-options.php:524
 msgid "Github"
 msgstr "Github"
 
+#: inc/theme-options.php:531
+msgid "例如：https://github.com/xxxxx"
+msgstr ""
+
 #: inc/theme-options.php:537
 msgid "Stack Overflow"
 msgstr "Stack Overflow"
+
+#: inc/theme-options.php:544
+msgid "例如：https://stackoverflow.com/users/xxxxx"
+msgstr ""
 
 #: inc/theme-options.php:550
 msgid "其他"
@@ -637,17 +677,33 @@ msgstr "Other"
 msgid "电子邮箱"
 msgstr "Email address"
 
+#: inc/theme-options.php:562
+msgid "例如：mailto:xxxxx@gmail.com"
+msgstr ""
+
 #: inc/theme-options.php:568
 msgid "工信部备案信息"
 msgstr "Filing the ICP information"
+
+#: inc/theme-options.php:570
+msgid "例如：京ICP证xxxxxx号"
+msgstr ""
 
 #: inc/theme-options.php:575
 msgid "公安网备案信息"
 msgstr "Public security network filing information"
 
+#: inc/theme-options.php:577
+msgid "例如：京公网安备 xxxxxxxxxxxx号"
+msgstr ""
+
 #: inc/theme-options.php:582
 msgid "公安网备案连接"
 msgstr "Public security network record connection"
+
+#: inc/theme-options.php:584
+msgid "例如：http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
+msgstr ""
 
 #: inc/theme-options.php:589
 msgid "版权信息"
@@ -682,8 +738,8 @@ msgstr "About Theme"
 msgid "第 %s 页"
 msgstr "Page %s"
 
-#: inc/theme-shortcode.php:96 inc/theme-shortcode.php:108
-#: inc/theme-shortcode.php:120 inc/theme-shortcode.php:132
+#: inc/theme-shortcode.php:105 inc/theme-shortcode.php:117
+#: inc/theme-shortcode.php:129 inc/theme-shortcode.php:141
 msgid "标题内容"
 msgstr "Title Content"
 
@@ -951,3 +1007,4 @@ msgstr "Seaton Jiang"
 #. Author URI of the plugin/theme
 msgid "https://www.vtrois.com/"
 msgstr "https://www.vtrois.com/"
+
