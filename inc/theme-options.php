@@ -419,7 +419,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_sina_url',
-        'placeholder' => '例如：https://weibo.com/xxxxx',
+        'placeholder' => __('例如：https://weibo.com/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -432,7 +432,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_bilibili_url',
-        'placeholder' => '例如：https://space.bilibili.com/xxxxx',
+        'placeholder' => __('例如：https://space.bilibili.com/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -445,7 +445,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_coding_url',
-        'placeholder' => '例如：https://xxxxx.coding.net/u/xxxxx',
+        'placeholder' => __('例如：https://xxxxx.coding.net/u/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -458,7 +458,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_gitee_url',
-        'placeholder' => '例如：https://gitee.com/xxxxx',
+        'placeholder' => __('例如：https://gitee.com/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -476,7 +476,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_twitter_url',
-        'placeholder' => '例如：https://twitter.com/xxxxx',
+        'placeholder' => __('例如：https://twitter.com/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -489,7 +489,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_telegram_url',
-        'placeholder' => '例如：https://t.me/xxxxx',
+        'placeholder' => __('例如：https://t.me/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -502,7 +502,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_linkedin_url',
-        'placeholder' => '例如：https://www.linkedin.com/in/xxxxx',
+        'placeholder' => __('例如：https://www.linkedin.com/in/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -515,7 +515,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_youtube_url',
-        'placeholder' => '例如：https://www.youtube.com/channel/xxxxx',
+        'placeholder' => __('例如：https://www.youtube.com/channel/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -528,7 +528,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_github_url',
-        'placeholder' => '例如：https://github.com/xxxxx',
+        'placeholder' => __('例如：https://github.com/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -541,7 +541,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_stackflow_url',
-        'placeholder' => '例如：https://stackoverflow.com/users/xxxxx',
+        'placeholder' => __('例如：https://stackoverflow.com/users/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -559,7 +559,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_email_url',
-        'placeholder' => 'mailto:xxxxx@gmail.com',
+        'placeholder' => __('例如：mailto:xxxxx@gmail.com', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -567,21 +567,21 @@ function kratos_options()
     $options[] = array(
         'name' => __('工信部备案信息', 'kratos'),
         'id' => 's_icp',
-        'placeholder' => '例如：京ICP证xxxxxx号',
+        'placeholder' => __('例如：京ICP证xxxxxx号', 'kratos'),
         'type' => 'text',
     );
 
     $options[] = array(
         'name' => __('公安网备案信息', 'kratos'),
         'id' => 's_gov',
-        'placeholder' => '例如：京公网安备 xxxxxxxxxxxx号',
+        'placeholder' => __('例如：京公网安备 xxxxxxxxxxxx号', 'kratos'),
         'type' => 'text',
     );
 
     $options[] = array(
         'name' => __('公安网备案连接', 'kratos'),
         'id' => 's_gov_link',
-        'placeholder' => '例如：http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx',
+        'placeholder' => __('例如：http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx', 'kratos'),
         'type' => 'text',
     );
 
