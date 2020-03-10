@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-03-10 19:01+0800\n"
-"PO-Revision-Date: 2020-03-10 11:04\n"
+"PO-Revision-Date: 2020-03-10 12:03\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -591,7 +591,7 @@ msgstr "新浪微博"
 
 #: inc/theme-options.php:422
 msgid "例如：https://weibo.com/xxxxx"
-msgstr ""
+msgstr "例如：https://weibo.com/xxxxx"
 
 #: inc/theme-options.php:428
 msgid "哔哩哔哩"
@@ -599,7 +599,7 @@ msgstr "嗶哩嗶哩"
 
 #: inc/theme-options.php:435
 msgid "例如：https://space.bilibili.com/xxxxx"
-msgstr ""
+msgstr "例如：https://space.bilibili.com/xxxxx"
 
 #: inc/theme-options.php:441
 msgid "CODING"
@@ -607,7 +607,7 @@ msgstr "CODING"
 
 #: inc/theme-options.php:448
 msgid "例如：https://xxxxx.coding.net/u/xxxxx"
-msgstr ""
+msgstr "例如：https://xxxxx.coding.net/u/xxxxx"
 
 #: inc/theme-options.php:454
 msgid "码云 Gitee"
@@ -615,7 +615,7 @@ msgstr "碼雲 Gitee"
 
 #: inc/theme-options.php:461
 msgid "例如：https://gitee.com/xxxxx"
-msgstr ""
+msgstr "例如：https://gitee.com/xxxxx"
 
 #: inc/theme-options.php:467
 msgid "海外平台"
@@ -627,7 +627,7 @@ msgstr "Twitter"
 
 #: inc/theme-options.php:479
 msgid "例如：https://twitter.com/xxxxx"
-msgstr ""
+msgstr "例如：https://twitter.com/xxxxx"
 
 #: inc/theme-options.php:485
 msgid "Telegram"
@@ -635,7 +635,7 @@ msgstr "Telegram"
 
 #: inc/theme-options.php:492
 msgid "例如：https://t.me/xxxxx"
-msgstr ""
+msgstr "例如：https://t.me/xxxxx"
 
 #: inc/theme-options.php:498
 msgid "LinkedIn"
@@ -643,7 +643,7 @@ msgstr "LinkedIn"
 
 #: inc/theme-options.php:505
 msgid "例如：https://www.linkedin.com/in/xxxxx"
-msgstr ""
+msgstr "例如：https://www.linkedin.com/in/xxxxx"
 
 #: inc/theme-options.php:511
 msgid "YouTube"
@@ -651,7 +651,7 @@ msgstr "YouTube"
 
 #: inc/theme-options.php:518
 msgid "例如：https://www.youtube.com/channel/xxxxx"
-msgstr ""
+msgstr "例如：https://www.youtube.com/channel/xxxxx"
 
 #: inc/theme-options.php:524
 msgid "Github"
@@ -659,7 +659,7 @@ msgstr "Github"
 
 #: inc/theme-options.php:531
 msgid "例如：https://github.com/xxxxx"
-msgstr ""
+msgstr "例如：https://github.com/xxxxx"
 
 #: inc/theme-options.php:537
 msgid "Stack Overflow"
@@ -667,7 +667,7 @@ msgstr "Stack Overflow"
 
 #: inc/theme-options.php:544
 msgid "例如：https://stackoverflow.com/users/xxxxx"
-msgstr ""
+msgstr "例如：https://stackoverflow.com/users/xxxxx"
 
 #: inc/theme-options.php:550
 msgid "其他"
@@ -679,7 +679,7 @@ msgstr "電子郵件"
 
 #: inc/theme-options.php:562
 msgid "例如：mailto:xxxxx@gmail.com"
-msgstr ""
+msgstr "例如：mailto:xxxxx@gmail.com"
 
 #: inc/theme-options.php:568
 msgid "工信部备案信息"
@@ -687,7 +687,7 @@ msgstr "工信部備案資訊"
 
 #: inc/theme-options.php:570
 msgid "例如：京ICP证xxxxxx号"
-msgstr ""
+msgstr "例如：京 ICP 證 xxxxxx 號"
 
 #: inc/theme-options.php:575
 msgid "公安网备案信息"
@@ -695,7 +695,7 @@ msgstr "公安網備案資訊"
 
 #: inc/theme-options.php:577
 msgid "例如：京公网安备 xxxxxxxxxxxx号"
-msgstr ""
+msgstr "例如：京公網安備 xxxxxxxxxxxx 號"
 
 #: inc/theme-options.php:582
 msgid "公安网备案连接"
@@ -703,7 +703,7 @@ msgstr "公安網備案連結"
 
 #: inc/theme-options.php:584
 msgid "例如：http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
-msgstr ""
+msgstr "例如：http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
 
 #: inc/theme-options.php:589
 msgid "版权信息"
