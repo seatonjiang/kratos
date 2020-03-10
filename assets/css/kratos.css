@@ -854,8 +854,46 @@ button:focus {
 	list-style: none;
 }
 
-.k-main .details .article .content .wp-caption {
-	max-width: 100%;
+.k-main .details .article .content .wp-caption-text {
+	margin-bottom: 0;
+	font-size: 14px;
+}
+
+.k-main .details .article .content .wp-block-image {
+	margin-bottom: 0;
+}
+
+.k-main .details .article .content .wp-block-image figcaption {
+	font-size: 14px;
+}
+
+.k-main .details .article .content figure {
+	margin: 0;
+}
+
+.k-main .details .article .content .alignleft::after, .k-main .details .article .content .aligncenter::after, .k-main .details .article .content .alignright::after {
+	clear: both;
+	display: block;
+	content: "";
+}
+
+.k-main .details .article .content .alignleft {
+	float: left;
+	margin-right: 16px;
+}
+
+.k-main .details .article .content p>img {
+	display: block;
+}
+
+.k-main .details .article .content .aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.k-main .details .article .content .alignright {
+	float: right;
+	margin-left: 16px;
 }
 
 .k-main .details .article .content img {
@@ -882,21 +920,6 @@ button:focus {
 
 .k-main .details .article .content table tr:nth-child(2n) {
 	background-color: #f8f8f8;
-}
-
-.k-main .details .article .content .alignleft {
-	float: left;
-	display: block;
-}
-
-.k-main .details .article .content .aligncenter {
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.k-main .details .article .content .alignright {
-	float: right;
-	display: block;
 }
 
 .k-main .details .article .content .alert,.k-main .details .article .content .card,.card-header:first-child {
@@ -989,10 +1012,6 @@ button:focus {
 	background-color: #a9a9a9;
 	color: #fff;
 	font-size: 13px;
-}
-
-.wp-block-image figcaption {
-	text-align: center;
 }
 
 @media screen and (max-width: 768px) {
