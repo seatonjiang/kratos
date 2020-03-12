@@ -3,7 +3,7 @@
  * 评论模板
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.03.12
  */
 
 if (isset($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) {
@@ -26,7 +26,7 @@ if (comments_open()) { ?>
 			</div>
 		<?php else: ?>
 		<form id="commentform" name="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
-			<div class="comment-from">
+			<div class="comment-form">
 				<?php if (!is_user_logged_in()): ?>
 				<div class="comment-info mb-3 row">
 					<div class="col-md-6 comment-form-author">
