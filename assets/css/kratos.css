@@ -417,6 +417,31 @@ button:focus {
 	color: #444;
 }
 
+.k-main .details .article .content .paginations {
+	padding-top: 20px;
+	width: 100%;
+	font-size: 14px;
+}
+
+.k-main .details .article .content .paginations a {
+	margin: 0 3px;
+}
+
+.k-main .details .article .content .paginations a span {
+	padding: 7px 12px;
+	border: solid 1px #00a2ff;
+	background-color: #f0f8ff;
+	color: #00a2ff;
+}
+
+.k-main .details .article .content .paginations .current span,.k-main .details .article .content .paginations a span:hover {
+	padding: 7px 12px;
+	border: solid 1px #00a2ff;
+	background: #00a2ff;
+	color: #ffffff;
+	font-weight: 400;
+}
+
 /*--------------------------------------------------------------
 5. 文章列表
 --------------------------------------------------------------*/
