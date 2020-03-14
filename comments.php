@@ -34,7 +34,7 @@ if (comments_open()) {?>
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="kicon i-user"></i></span>
 							</div>
-							<input class="form-control" id="author" placeholder="昵称" name="author" type="text" value="<?php echo esc_attr($commenter['comment_author']); ?>" required="required">
+							<input class="form-control" id="author" placeholder="<?php _e('昵称', 'kratos'); ?>" name="author" type="text" value="<?php echo esc_attr($commenter['comment_author']); ?>" required="required">
 						</div>
 					</div>
 					<div class="col-md-6 mt-3 mt-md-0 comment-form-email">
@@ -42,7 +42,7 @@ if (comments_open()) {?>
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="kicon i-cemail"></i></span>
 							</div>
-							<input id="email" class="form-control" name="email" placeholder="邮箱" type="email" value="<?php echo esc_attr($commenter['comment_author_email']); ?>" required="required">
+							<input id="email" class="form-control" name="email" placeholder="<?php _e('邮箱', 'kratos'); ?>" type="email" value="<?php echo esc_attr($commenter['comment_author_email']); ?>" required="required">
 						</div>
 					</div>
 					<div class="col-md-6 mt-3 comment-form-author">
@@ -50,7 +50,7 @@ if (comments_open()) {?>
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="kicon i-url"></i></span>
 							</div>
-							<input class="form-control" id="author" placeholder="网址" name="url" type="url" value="<?php echo esc_attr($commenter['comment_author_url']); ?>">
+							<input class="form-control" id="author" placeholder="<?php _e('网址', 'kratos'); ?>" name="url" type="url" value="<?php echo esc_attr($commenter['comment_author_url']); ?>">
 						</div>
 					</div>
 				</div>
