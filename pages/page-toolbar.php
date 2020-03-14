@@ -3,7 +3,7 @@
  * 文章工具栏
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.03.14
  */
 ?>
 <div class="toolbar clearfix">
@@ -18,4 +18,4 @@
         <?php } ?>
 		    <a href="javascript:;" id="thumbs" data-action="love" data-id="<?php the_ID(); ?>" role="button" class="btn btn-thumbs <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done'; ?>" ><i class="kicon i-like"></i><span class="ml-1"><?php _e('点赞','kratos'); ?></span></a>
 	</div>
-</div><!-- .toolbar -->
+</div>

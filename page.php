@@ -3,7 +3,7 @@
  * 页面模板
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.23
+ * @version 2020.03.14
  */
 
 get_header(); ?>
@@ -15,18 +15,18 @@ get_header(); ?>
                     <div class="article py-4">
                         <div class="header text-center">
                             <h1 class="title m-0"><?php the_title(); ?></h1>
-                        </div><!-- .header -->
+                        </div>
                         <div class="content">
                             <?php the_content(); ?>
-                        </div><!-- .content -->
-                    </div><!-- .article -->
+                        </div>
+                    </div>
                 <?php endif; ?>
                 <?php comments_template(); ?>
-            </div><!-- .details -->
+            </div>
             <div class="col-lg-4 sidebar d-none d-lg-block">
                 <?php dynamic_sidebar('sidebar_tool'); ?>
-            </div><!-- .sidebar -->
+            </div>
         </div>
     </div>
-</div><!-- .k-main -->
+</div>
 <?php get_footer(); ?>

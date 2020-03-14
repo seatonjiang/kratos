@@ -3,7 +3,7 @@
  * 404 模板
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.23
+ * @version 2020.03.14
  */
 
 get_header(); ?>
@@ -28,8 +28,8 @@ get_header(); ?>
                         <a href="<?php echo get_option('home'); ?>" class="btn btn-outline-primary ml-3 back-index"><?php _e('返回主页', 'kratos'); ?></a>
                     </div>
                 </div>
-            </div><!-- .page404 -->
+            </div>
         </div>
     </div>
-</div><!-- .k-main -->
+</div>
 <?php get_footer(); ?>

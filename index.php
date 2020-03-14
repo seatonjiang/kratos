@@ -3,7 +3,7 @@
  * 首页模板
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.23
+ * @version 2020.03.14
  */
 
 get_header(); ?>
@@ -37,11 +37,11 @@ get_header(); ?>
                 <?php } 
                 pagelist();
                 wp_reset_query(); ?>
-            </div><!-- .board -->
+            </div>
             <div class="col-lg-4 sidebar d-none d-lg-block">
                 <?php dynamic_sidebar('sidebar_tool'); ?>
-            </div><!-- .sidebar -->
+            </div>
         </div>
     </div>
-</div><!-- .k-main -->
+</div>
 <?php get_footer(); ?>

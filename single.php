@@ -3,7 +3,7 @@
  * 文章内容
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.23
+ * @version 2020.03.14
  */
 
 get_header(); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page"> <?php _e('正文' , 'kratos'); ?></li>
                             </ol>
-                        </div><!-- .breadcrumb-box -->
+                        </div>
                         <div class="header">
                             <h1 class="title"><?php the_title(); ?></h1>
                             <div class="meta">
@@ -36,7 +36,7 @@ get_header(); ?>
                             <span><?php comments_number('0', '1', '%'); _e('条评论', 'kratos'); ?></span>
                             <?php if (current_user_can('edit_posts')){ echo '<span>'; edit_post_link(__('编辑文章', 'kratos')); echo '</span>'; }; ?>
                             </div>
-                        </div><!-- .header -->
+                        </div>
                         <div class="content">
                             <?php
                             if(kratos_option('s_singletop',false)){
@@ -59,7 +59,7 @@ get_header(); ?>
                                 }
                             }
                             ?>
-                        </div><!-- .content -->
+                        </div>
                         <div class="copyright">
                             <span class="text-center">
                                 <?php 
@@ -74,7 +74,7 @@ get_header(); ?>
                                     $select_cc = $cc_array[kratos_option('g_cc', 'one')];
                                     printf( __( '本作品采用 %s 进行许可','kratos' ) , $select_cc );?>
                             </span>
-                        </div><!-- .copyright -->
+                        </div>
                         <div class="footer clearfix">
                             <div class="tags float-left">
                                 <span><?php _e('标签：' , 'kratos'); ?></span>
@@ -85,8 +85,8 @@ get_header(); ?>
                                     <span><?php _e('最后更新：','kratos'); ?><?php the_modified_date('Y年m月d日'); ?></span>
                                 </div>
                             </div>
-                        </div><!-- .footer -->
-                    </div><!-- .article -->
+                        </div>
+                    </div>
                 <?php endif; ?>
                 <?php require get_template_directory() . '/pages/page-toolbar.php'; ?>
                 <nav class="navigation post-navigation clearfix" role="navigation">
@@ -101,11 +101,11 @@ get_header(); ?>
                     }?>
                 </nav>
                 <?php comments_template(); ?>
-            </div><!-- .details -->
+            </div>
             <div class="col-lg-4 sidebar d-none d-lg-block">
                 <?php dynamic_sidebar('sidebar_tool'); ?>
-            </div><!-- .sidebar -->
+            </div>
         </div>
     </div>
-</div><!-- .k-main -->
+</div>
 <?php get_footer(); ?>

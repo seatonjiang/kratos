@@ -3,7 +3,7 @@
  * 主题页脚
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.03.14
  */
 ?>
 <div class="k-footer">
@@ -56,7 +56,7 @@
             </div>
         </div>
     </div>
-</div><!-- .k-footer -->
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

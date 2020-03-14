@@ -3,7 +3,7 @@
  * 主题页眉
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.23
+ * @version 2020.03.14
  */
 ?>
 <!DOCTYPE html>
@@ -53,7 +53,7 @@
                 ) );
             ?>
         </div>
-    </nav><!-- .k-nav -->
+    </nav>
     <?php if(kratos_option('top_select', 'banner') == 'banner'){ ?>
     <div class="banner">
         <div class="overlay"></div>
@@ -76,6 +76,6 @@
                 ?>
             </div>
         </div>
-    </div><!-- .banner -->
+    </div>
     <?php } ?>
-</div><!-- .k-header -->
+</div>

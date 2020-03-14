@@ -3,7 +3,7 @@
  * 文章列表
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.26
+ * @version 2020.03.14
  */
 ?>
 <div class="article-panel">
@@ -36,4 +36,4 @@
             <a href="<?php the_permalink(); ?>"><?php _e('阅读全文', 'kratos'); ?><i class="kicon i-rightbutton"></i></a>
         </span>
     </div>
-</div><!-- .article-panel -->
+</div>
