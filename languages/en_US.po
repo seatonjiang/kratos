@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
-"POT-Creation-Date: 2020-03-10 19:01+0800\n"
-"PO-Revision-Date: 2020-03-14 01:03\n"
+"POT-Creation-Date: 2020-03-14 09:16+0800\n"
+"PO-Revision-Date: 2020-03-14 02:02\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -55,11 +55,23 @@ msgstr "Load more"
 msgid "您需要 <a href=\"%s\">登录</a> 之后才可以评论"
 msgstr "You need to <a href=\"%s\">sign in</a> to comment"
 
-#: comments.php:62
+#: comments.php:37
+msgid "昵称"
+msgstr ""
+
+#: comments.php:45
+msgid "邮箱"
+msgstr ""
+
+#: comments.php:53
+msgid "网址"
+msgstr ""
+
+#: comments.php:70
 msgid "取消回复"
 msgstr "Cancel reply"
 
-#: comments.php:63
+#: comments.php:71
 msgid "提交评论"
 msgstr "Submit"
 
