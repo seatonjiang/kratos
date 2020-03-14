@@ -1,5 +1,5 @@
 /*!
- * Kratos v3.0.4
+ * Kratos v3.0.5
  * Seaton Jiang <seaton@vtrois.com>
  */
 ;(function() {
