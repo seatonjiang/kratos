@@ -3,7 +3,7 @@
  * 文章短代码
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.26
+ * @version 2020.03.14
  */
 
 function h2title($atts, $content = null, $code = "")
@@ -189,6 +189,15 @@ function more_button()
         add_filter('mce_buttons', 'register_button');
     }
 }
+
+function add_more_buttons($buttons) {
+    $buttons[] = 'hr';
+    $buttons[] = 'wp_page';
+    $buttons[] = 'fontsizeselect';
+    $buttons[] = 'styleselect';
+return $buttons;
+}
+add_filter("mce_buttons", "add_more_buttons");
 
 function register_button($buttons)
 {
