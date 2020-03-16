@@ -226,8 +226,8 @@ class Options_Framework_Interface
                     global $wp_version;
                     $version = $wp_version;
                     $output .= '<div class="about-content">
-					<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION. '/inc/options-framework/images/about.png">
-					<h4>' . __('基础信息', 'kratos') . '</h3>
+					<img src="https://n3.cdn.vtrois.com/kratos/' . THEME_VERSION . '/inc/options-framework/images/about.png">
+					<h4>' . __('基础信息', 'kratos') . '</h4>
 					<ul>
 						<li>' . __('PHP 版本：', 'kratos') . PHP_VERSION . '</li>
 						<li>' . __('Kratos 版本：', 'kratos') . THEME_VERSION . '</li>
@@ -235,20 +235,22 @@ class Options_Framework_Interface
 						<li>' . __('User Agent 信息：', 'kratos') . $_SERVER['HTTP_USER_AGENT'] . '</li>
 					</ul>
 					<p class="notices">' . __('提示：在提交主题相关问题反馈时，请将上面「基础信息」中的内容复制到环境信息中。', 'kratos') . '</p>
-					<h4>' . __('资料文档', 'kratos') . '</h3>
+					<h4>' . __('资料文档', 'kratos') . '</h4>
 					<ul>
 						<li>' . __('说明文档：', 'kratos') . '<a href="https://www.vtrois.com/" target="_blank">https://www.vtrois.com/</a></li>
 						<li>' . __('代码托管：', 'kratos') . '<a href="https://github.com/vtrois/kratos" target="_blank">https://github.com/vtrois/kratos</a></li>
 						<li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/vtrois/kratos/issues" target="_blank">https://github.com/vtrois/kratos/issues</a></li>
 						<li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/vtrois/kratos/releases" target="_blank">https://github.com/vtrois/kratos/releases</a></li>
 					</ul>
-					<h4>' . __('讨论交流', 'kratos') . '</h3>
+					<h4>' . __('讨论交流', 'kratos') . '</h4>
 					<p>' . __('欢迎使用 Kratos 主题开始文章创作，诚邀您加入主题交流 QQ 群：<a href="https://shang.qq.com/wpa/qunwpa?idkey=18a1de727037e3e8b9b49bfc7a410139e5db736106ef07292f07a62ff5eef9a2" target="_blank">734508</a>', 'kratos') . '</p>
-					<h4>' . __('版权声明', 'kratos') . '</h3>
+					<h4>' . __('版权声明', 'kratos') . '</h4>
 					<p>' . __('主题源码使用 <a href="https://github.com/Vtrois/Kratos/blob/master/LICENSE" target="_blank">MIT 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos') . '</p>
-					<h4>' . __('打赏支持', 'kratos') . '</h3>
-					<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION. '/inc/options-framework/images/donate.png">
-					<p class="tips">' . __('项目的发展需要您的支持和鼓励，打赏时请确认作者姓名为<b>姜学栋</b>', 'kratos') . '</p>
+					<h4>' . __('打赏支持', 'kratos') . '</h4>
+					<img src="https://n3.cdn.vtrois.com/kratos/' . THEME_VERSION . '/inc/options-framework/images/donate.png">
+                    <p class="tips">' . __('项目的发展需要您的支持和鼓励，打赏时请确认作者姓名为<b>姜学栋</b>', 'kratos') . '</p>
+                    <h4>' . __('赞助商', 'kratos') . '</h4>
+                    <a href="https://www.maoyuncloud.com/" target="_blank"><img class="maocloud" src="https://n3.cdn.vtrois.com/kratos/' . THEME_VERSION . '/inc/options-framework/images/maocloud.png"></a>
 				    </div>';
                     break;
 

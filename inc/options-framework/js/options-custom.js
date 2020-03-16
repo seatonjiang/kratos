@@ -16,6 +16,14 @@ jQuery(document).ready(function($) {
 		$('#section-'+id+'_links').show();
 	}
 
+	jQuery('#g_cdn').click(function() {
+		jQuery('#section-g_cdn_n3').fadeToggle(400);
+	});
+
+	if (jQuery('#g_cdn:checked').val() !== undefined) {
+		jQuery('#section-g_cdn_n3').show();
+	}
+
 	jQuery('#g_cc_switch').click(function() {
 		jQuery('#section-g_cc').fadeToggle(400);
 	});

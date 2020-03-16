@@ -41,6 +41,11 @@ function kratos_options()
 		'color' => __( '颜色导航', 'kratos' ),
 	);
 
+	$cdn_array = array(
+        'maocloud' => __( '猫云', 'kratos' ),
+		'jsdelivr' => __( 'jsDelivr', 'kratos' ),
+	);
+
     $options = array();
 
     $options[] = array(
@@ -84,6 +89,15 @@ function kratos_options()
         'std' => '0',
         'id' => 'g_cdn',
         'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'desc' => __('选择 CDN 加速节点', 'kratos'),
+        'id' => 'g_cdn_n3',
+        'std' => 'maocloud',
+        'type' => 'select',
+        'class' => 'hidden',
+        'options' => $cdn_array,
     );
 
     $options[] = array(

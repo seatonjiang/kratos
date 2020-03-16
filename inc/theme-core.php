@@ -28,7 +28,11 @@ add_action('after_setup_theme', 'theme_languages');
 function theme_autoload()
 {
     if (kratos_option('g_cdn', false)) {
-        $dir = 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION;
+        $cdn_array = array(
+            'maocloud' => 'https://n3.cdn.vtrois.com/kratos/' . THEME_VERSION,
+            'jsdelivr' => 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION,
+        );
+        $dir = $cdn_array[kratos_option('g_cdn_n3', 'maocloud')];
     } else {
         $dir = get_template_directory_uri();
     }
