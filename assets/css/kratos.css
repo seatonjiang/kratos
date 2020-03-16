@@ -907,7 +907,7 @@ button:focus {
 	margin-right: 16px;
 }
 
-.k-main .details .article .content p>img {
+.k-main .details .article .content p>img, .k-main .details .article .content p a>img {
 	display: block;
 }
 
