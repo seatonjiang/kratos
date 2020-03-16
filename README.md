@@ -5,8 +5,8 @@
 <p align="center">
 <img src="https://img.shields.io/badge/php-%3E%3D7.0.0-blue">
 <img src="https://img.shields.io/badge/wordpress-v5.2.3%20tested-%234c1">
-<a href="https://vtrois.crowdin.com/kratos"><img src="https://badges.crowdin.net/e/f1d1a7eaa6af337dba7aa4a39b28e67c/localized.svg"></a>
-<a href="https://www.jsdelivr.com/package/gh/vtrois/kratos"><img src="https://data.jsdelivr.com/v1/package/gh/vtrois/kratos/badge?style=rounded"></a>
+<a href="https://vtrois.crowdin.com/kratos" target="_blank"><img src="https://badges.crowdin.net/e/f1d1a7eaa6af337dba7aa4a39b28e67c/localized.svg"></a>
+<a href="https://www.jsdelivr.com/package/gh/vtrois/kratos" target="_blank"><img src="https://data.jsdelivr.com/v1/package/gh/vtrois/kratos/badge?style=rounded"></a>
 <img src="https://img.shields.io/github/license/Vtrois/Kratos?color=%234c1">
 </p>
 
@@ -181,6 +181,14 @@ If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
 <img width="650" src="https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/options-framework/images/donate.png">
+</p>
+
+## Sponsors
+
+Special thanks to the generous sponsorship by:
+
+<p>
+<a width="200" href="https://www.maoyuncloud.com/" target="_blank"><img src="https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/options-framework/images/maocloud.png"></a>
 </p>
 
 ## License
