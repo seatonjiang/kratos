@@ -231,10 +231,17 @@ function kratos_options()
 
     $options[] = array(
         'name' => __('知识共享协议', 'kratos'),
+        'desc' => __('开启文章知识共享协议', 'kratos'),
+        'id' => 'g_cc_switch',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
         'desc' => __('选择文章的知识共享协议', 'kratos'),
         'id' => 'g_cc',
         'std' => 'one',
         'type' => 'select',
+        'class' => 'hidden',
         'options' => $cc_array,
     );
 
