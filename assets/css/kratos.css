@@ -930,7 +930,8 @@ button:focus {
 	display: table;
 	overflow: auto;
 	width: 100%;
-	word-break: keep-all;
+	table-layout: fixed;
+	word-break: break-all;
 }
 
 .k-main .details .article .content table th,
@@ -1056,6 +1057,11 @@ button:focus {
 
 	.k-main .details .article .content p {
 		font-size: 15px;
+	}
+
+	.k-main .details .article .content table {
+		display: block;
+		word-break: keep-all;
 	}
 
 	.k-main .details .article .header .meta span:not(:first-child) {
