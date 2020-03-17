@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-03-16 13:21+0800\n"
-"PO-Revision-Date: 2020-03-16 05:52\n"
+"PO-Revision-Date: 2020-03-17 05:22\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -192,7 +192,7 @@ msgstr "專案的發展需要您的支持和鼓勵，打賞時請確認作者姓
 
 #: inc/options-framework/includes/class-options-interface.php:252
 msgid "赞助商"
-msgstr ""
+msgstr "贊助商"
 
 #: inc/options-framework/includes/class-options-interface.php:258
 msgid "测试邮件"
@@ -294,11 +294,11 @@ msgstr "顏色導覽"
 
 #: inc/theme-options.php:45
 msgid "猫云"
-msgstr ""
+msgstr "貓雲"
 
 #: inc/theme-options.php:46
 msgid "jsDelivr"
-msgstr ""
+msgstr "jsDelivr"
 
 #: inc/theme-options.php:52
 msgid "全站配置"
@@ -346,7 +346,7 @@ msgstr "開啟靜態資源加速（CSS、JS、Font）"
 
 #: inc/theme-options.php:95
 msgid "选择 CDN 加速节点"
-msgstr ""
+msgstr "選擇 CDN 加速節點"
 
 #: inc/theme-options.php:104
 msgid "Gutenberg 编辑器"
@@ -486,7 +486,7 @@ msgstr "創用 CC 授權條款"
 
 #: inc/theme-options.php:248
 msgid "开启文章知识共享协议"
-msgstr ""
+msgstr "開啟創用 CC 授權條款"
 
 #: inc/theme-options.php:254
 msgid "选择文章的知识共享协议"
@@ -961,11 +961,11 @@ msgstr "很抱歉，沒有找到任何內容"
 
 #: page.php:27 single.php:57
 msgid "<span>上一页</span>"
-msgstr ""
+msgstr "<span>上一頁</span>"
 
 #: page.php:46 single.php:76
 msgid "<span>下一页</span>"
-msgstr ""
+msgstr "<span>下一頁</span>"
 
 #: pages/page-content.php:29 single.php:36
 msgid "条评论"
