@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.03.17
  */
 
 // 自动跳转主题设置
@@ -42,7 +42,7 @@ function theme_autoload()
         wp_enqueue_style('bootstrap', $dir . '/assets/css/bootstrap.min.css', array(), '4.4.1');
         wp_enqueue_style('kicon', $dir . '/assets/css/iconfont.min.css', array(), THEME_VERSION);
         wp_enqueue_style('layer', $dir . '/assets/css/layer.min.css', array(), '3.1.1');
-        if(kratos_option('g_animate',false)){
+        if (kratos_option('g_animate', false)) {
             wp_enqueue_style('animate', $dir . '/assets/css/animate.min.css', array(), '3.7.2');
         }
         wp_enqueue_style('kratos', $dir . '/assets/css/kratos.min.css', array(), THEME_VERSION);
@@ -168,3 +168,16 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     get_template_directory() . '/functions.php',
     'Kratos'
 );
+
+// 禁止生成多种尺寸图片
+if (kratos_option('g_removeimgsize', false)) {
+    function remove_default_images($sizes)
+    {
+        unset($sizes['thumbnail']);
+        unset($sizes['medium']);
+        unset($sizes['large']);
+        unset($sizes['medium_large']);
+        return $sizes;
+    }
+    add_filter('intermediate_image_sizes_advanced', 'remove_default_images');
+}

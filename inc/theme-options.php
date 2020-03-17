@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.26
+ * @version 2020.03.17
  */
 
 function getrobots()
@@ -98,6 +98,14 @@ function kratos_options()
         'type' => 'select',
         'class' => 'hidden',
         'options' => $cdn_array,
+    );
+
+    $options[] = array(
+        'name' => __('禁止生成缩略图', 'kratos'),
+        'desc' => __('是否禁止生成多种尺寸图片资源', 'kratos'),
+        'id' => 'g_removeimgsize',
+        'std' => '0',
+        'type' => 'checkbox',
     );
 
     $options[] = array(
