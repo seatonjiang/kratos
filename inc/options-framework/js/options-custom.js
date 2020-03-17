@@ -16,6 +16,20 @@ jQuery(document).ready(function($) {
 		$('#section-'+id+'_links').show();
 	}
 
+	jQuery('#g_cos').click(function() {
+		jQuery('#section-g_cos_bucketname').fadeToggle(400);
+		jQuery('#section-g_cos_url').fadeToggle(400);
+		jQuery('#section-g_cos_accesskey').fadeToggle(400);
+		jQuery('#section-g_cos_secretkey').fadeToggle(400);
+	});
+
+	if (jQuery('#g_cos:checked').val() !== undefined) {
+		jQuery('#section-g_cos_bucketname').show();
+		jQuery('#section-g_cos_url').show();
+		jQuery('#section-g_cos_accesskey').show();
+		jQuery('#section-g_cos_secretkey').show();
+	}
+
 	jQuery('#g_cdn').click(function() {
 		jQuery('#section-g_cdn_n3').fadeToggle(400);
 	});

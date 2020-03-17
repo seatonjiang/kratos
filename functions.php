@@ -32,6 +32,9 @@ require get_template_directory() . '/inc/theme-shortcode.php';
 // 添加导航目录
 require get_template_directory() . '/inc/theme-navwalker.php';
 
+// 对象存储配置
+require get_template_directory() . '/inc/theme-dogecloud.php';
+
 // SMTP 配置
 require get_template_directory() . '/inc/theme-smtp.php';
 

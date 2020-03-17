@@ -109,6 +109,43 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('媒体资源托管', 'kratos'),
+        'desc' => __('是否将媒体资源托管到 DogeCloud 存储', 'kratos'),
+        'id' => 'g_cos',
+        'std' => '0',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'name' => __('存储空间名称', 'kratos'),
+        'id' => 'g_cos_bucketname',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('加速域名', 'kratos'),
+        'id' => 'g_cos_url',
+        'placeholder' => __('例如：https://cdn.xxx.com', 'kratos'),
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('AccessKey', 'kratos'),
+        'id' => 'g_cos_accesskey',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('SecretKey', 'kratos'),
+        'id' => 'g_cos_secretkey',
+        'class' => 'hidden',
+        'type' => 'password',
+    );
+
+    $options[] = array(
         'name' => __('Gutenberg 编辑器', 'kratos'),
         'desc' => __('开启 Gutenberg 编辑器', 'kratos'),
         'std' => '0',
