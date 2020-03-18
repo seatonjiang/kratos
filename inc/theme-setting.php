@@ -3,7 +3,7 @@
  * 站点相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2020.03.18
  */
 
 // 标题配置
@@ -31,9 +31,11 @@ function keywords()
     if (is_home() || is_front_page()) {
         echo kratos_option('seo_keywords');
     } elseif (is_category()) {
+        echo kratos_option('seo_keywords') . ',';
         single_cat_title();
     } elseif (is_single()) {
         echo trim(wp_title('', false)) . ',';
+        echo kratos_option('seo_keywords') . ',';
         if (has_tag()) {
             foreach (get_the_tags() as $tag) {
                 echo $tag->name . ',';
@@ -43,8 +45,10 @@ function keywords()
             echo $category->cat_name . ',';
         }
     } elseif (is_search()) {
+        echo kratos_option('seo_keywords') . ',';
         the_search_query();
     } else {
+        echo kratos_option('seo_keywords') . ',';
         echo trim(wp_title('', false));
     }
 }
