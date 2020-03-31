@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-03-16 13:21+0800\n"
-"PO-Revision-Date: 2020-03-16 05:52\n"
+"PO-Revision-Date: 2020-03-31 08:50\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -965,7 +965,7 @@ msgstr ""
 
 #: page.php:46 single.php:76
 msgid "<span>下一页</span>"
-msgstr ""
+msgstr "next page"
 
 #: pages/page-content.php:29 single.php:36
 msgid "条评论"
