@@ -84,6 +84,14 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('Font Awesome', 'kratos'),
+        'desc' => __('开启 Font Awesome 字体', 'kratos'),
+        'std' => '0',
+        'id' => 'g_fontawesome',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
         'name' => __('静态资源加速', 'kratos'),
         'desc' => __('开启静态资源加速（CSS、JS、Font）', 'kratos'),
         'std' => '0',

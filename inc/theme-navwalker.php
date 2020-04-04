@@ -264,7 +264,7 @@ if (!class_exists('WP_Bootstrap_Navwalker')) {
             }
 
             /** This filter is documented in wp-includes/post-template.php */
-            $title = apply_filters('the_title', esc_html($item->title), $item->ID);
+            $title = apply_filters('the_title', $item->title, $item->ID);
 
             /**
              * Filters a menu item's title.
@@ -381,7 +381,7 @@ if (!class_exists('WP_Bootstrap_Navwalker')) {
                 if ($menu_class) {
                     $fallback_output .= ' class="' . esc_attr($menu_class) . '"';}
                 $fallback_output .= '>';
-                $fallback_output .= '<li class="nav-item"><a href="' . esc_url(admin_url('nav-menus.php')) . '" class="nav-link">' . esc_html__('添加导航', 'kratos') . '</a></li>';
+                $fallback_output .= '<li class="nav-item"><a href="' . esc_url(admin_url('nav-menus.php')) . '" class="nav-link">' . _e('添加导航', 'kratos') . '</a></li>';
                 $fallback_output .= '</ul>';
                 if ($container) {
                     $fallback_output .= '</' . esc_attr($container) . '>';
