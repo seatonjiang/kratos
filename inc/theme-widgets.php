@@ -22,7 +22,6 @@ function widgets_init()
         'WP_Widget_Pages',
         'WP_Widget_Archives',
         'WP_Widget_Meta',
-        'WP_Widget_Search',
         'WP_Widget_Categories',
         'WP_Widget_Recent_Posts',
         'WP_Widget_Recent_Comments',

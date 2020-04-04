@@ -1722,9 +1722,42 @@ button:focus {
 	cursor: default;
 }
 
+.k-main .sidebar .widget_search .screen-reader-text {
+	display: none;
+}
+
+.searchform input[type=text] {
+	width: 205px;
+}
+
+.searchform input[type=submit] {
+	padding: .375rem .75rem;
+	width: 80px;
+	border: none;
+	border-radius: 3px;
+	background-color: #00a2ff;
+	color: #fff;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.7;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 @media screen and (max-width:1200px) {
 	.k-main .sidebar .w-tags .item a,.k-main .sidebar .widget_links ul li {
 		width: 110px;
+	}
+
+	.searchform input[type=text] {
+		width: 160px;
+	}
+
+	.searchform input[type=submit] {
+		width: 65px;
 	}
 }
 
