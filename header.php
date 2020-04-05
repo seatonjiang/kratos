@@ -44,7 +44,7 @@
             <?php }
                 wp_nav_menu( array(
                     'theme_location'  => 'header_menu',
-                    'depth'           => 1,
+                    'depth'           => 2,
                     'container'       => 'div',
                     'container_class' => 'collapse navbar-collapse',
                     'container_id'    => 'navbarResponsive',

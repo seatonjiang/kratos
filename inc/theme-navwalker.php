@@ -183,7 +183,11 @@ if (!class_exists('WP_Bootstrap_Navwalker')) {
             $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth);
             $id = $id ? ' id="' . esc_attr($id) . '"' : '';
 
-            $output .= $indent;
+            if ($args->has_children) {
+                $output .= $indent . '<li' . $id . ' class="nav-item dropdown" ' . '>';
+            } else {
+                $output .= $indent . '<li' . $id . ' class="nav-item" ' . '>';
+            }
 
             // Initialize array for holding the $atts for the link item.
             $atts = array();
@@ -381,7 +385,7 @@ if (!class_exists('WP_Bootstrap_Navwalker')) {
                 if ($menu_class) {
                     $fallback_output .= ' class="' . esc_attr($menu_class) . '"';}
                 $fallback_output .= '>';
-                $fallback_output .= '<li class="nav-item"><a href="' . esc_url(admin_url('nav-menus.php')) . '" class="nav-link">' . _e('添加导航', 'kratos') . '</a></li>';
+                $fallback_output .= '<li class="nav-item"><a href="' . esc_url(admin_url('nav-menus.php')) . '" class="nav-link">' . esc_attr__('添加导航', 'kratos') . '</a></li>';
                 $fallback_output .= '</ul>';
                 if ($container) {
                     $fallback_output .= '</' . esc_attr($container) . '>';
