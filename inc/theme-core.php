@@ -167,7 +167,7 @@ add_filter('get_avatar', 'get_https_avatar');
 
 // 主题更新检测
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/Vtrois/Kratos/',
+    'https://n3.cdn.vtrois.com/kratos/version.json',
     get_template_directory() . '/functions.php',
     'Kratos'
 );
