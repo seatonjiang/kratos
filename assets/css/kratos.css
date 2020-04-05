@@ -1700,7 +1700,6 @@ button:focus {
 	color: #333;
 	list-style: none;
 	text-align: center;
-	text-transform: uppercase;
 	font-size: 14px;
 }
 
@@ -1722,7 +1721,7 @@ button:focus {
 	border-radius: 50%;
 }
 
-.k-main .sidebar .w-tags .item a:hover,.k-main .sidebar .widget_links ul li:hover {
+.k-main .sidebar .w-tags .item a:hover,.k-main .sidebar .widget_links ul li:hover,.k-main .sidebar .widget_categories .cat-item:hover {
 	background-color: #eeeeee;
 }
 
@@ -1805,6 +1804,33 @@ button:focus {
 	user-select: none;
 }
 
+.k-main .sidebar .widget_categories ul {
+	margin: 0;
+	padding-left: 0;
+}
+
+.k-main .sidebar .widget_categories .cat-item {
+	display: inline-block;
+	overflow: hidden;
+	margin: 0 2px 4px 0;
+	padding: 4px 0;
+	width: 140px;
+	border: 1px solid #eeeeee;
+	list-style: none;
+	text-align: center;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
+.k-main .sidebar .widget_categories .cat-item a {
+	color: #333;
+}
+
 @media screen and (max-width:1200px) {
 	.k-main .sidebar .w-tags .item a,.k-main .sidebar .widget_links ul li {
 		width: 110px;
@@ -1817,9 +1843,14 @@ button:focus {
 	.searchform input[type=submit] {
 		width: 65px;
 	}
+
+	.k-main .sidebar .widget_categories .cat-item {
+		width: 110px;
+	}
 }
 
 @media (min-width: 992px) {
+
 	.navbar-expand-lg .navbar-nav .nav-link {
 		padding-right: 0;
 		padding-left: 32px;
