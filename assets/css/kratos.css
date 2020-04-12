@@ -975,6 +975,10 @@ button:focus {
 	display: block;
 }
 
+.k-main .details .article .content .wp-smiley {
+	display: inline;
+}
+
 .k-main .details .article .content .aligncenter {
 	margin-right: auto;
 	margin-left: auto;
