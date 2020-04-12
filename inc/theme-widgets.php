@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.23
+ * @version 2020.04.12
  */
 
 // 添加小工具
@@ -77,8 +77,8 @@ class widget_ad extends WP_Widget
     {
         wp_enqueue_script('media-upload');
         wp_enqueue_media();
-        wp_enqueue_script('widget_scripts', get_template_directory_uri() . '/assets/js/widget.min.js', array('jquery'));
-        wp_enqueue_style('widget_css', get_template_directory_uri() . '/assets/css/widget.min.css', array());
+        wp_enqueue_script('widget_scripts', ASSET_PATH . '/assets/js/widget.min.js', array('jquery'));
+        wp_enqueue_style('widget_css', ASSET_PATH . '/assets/css/widget.min.css', array());
     }
 
     public function widget($args, $instance)
@@ -146,15 +146,15 @@ class widget_about extends WP_Widget
     {
         wp_enqueue_script('media-upload');
         wp_enqueue_media();
-        wp_enqueue_script('widget_scripts', get_template_directory_uri() . '/assets/js/widget.min.js', array('jquery'));
-        wp_enqueue_style('widget_css', get_template_directory_uri() . '/assets/css/widget.min.css', array());
+        wp_enqueue_script('widget_scripts', ASSET_PATH . '/assets/js/widget.min.js', array('jquery'));
+        wp_enqueue_style('widget_css', ASSET_PATH . '/assets/css/widget.min.css', array());
     }
 
     public function widget($args, $instance)
     {
         $introduce = kratos_option('a_about', __('保持饥渴的专注，追求最佳的品质', 'kratos'));
-        $avatar = kratos_option('a_gravatar', get_template_directory_uri() . '/assets/img/gravatar.png');
-        $background = !empty($instance['background']) ? $instance['background'] : get_stylesheet_directory_uri() . '/assets/img/about-background.png';
+        $avatar = kratos_option('a_gravatar', ASSET_PATH . '/assets/img/gravatar.png');
+        $background = !empty($instance['background']) ? $instance['background'] : ASSET_PATH . '/assets/img/about-background.png';
 
         echo '<div class="widget w-about">';
         echo '<div class="background" style="background:url(' . $background . ') no-repeat center center;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div><div class="wrapper text-center">';
@@ -179,7 +179,7 @@ class widget_about extends WP_Widget
 
     public function form($instance)
     {
-        $background = !empty($instance['background']) ? $instance['background'] : get_stylesheet_directory_uri() . '/assets/img/about-background.png';
+        $background = !empty($instance['background']) ? $instance['background'] : ASSET_PATH . '/assets/img/about-background.png';
         ?>
         <div class="media-widget-control">
             <p>

@@ -3,7 +3,7 @@
  * 404 模板
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.14
+ * @version 2020.04.12
  */
 
 get_header(); ?>
@@ -13,9 +13,9 @@ get_header(); ?>
             <div class="col-12 page404">
                 <div class="thumbnail" style="background-image: url(<?php
                 if(!kratos_option('g_404')){
-                    $img = get_template_directory_uri() . '/assets/img/404.jpg';
+                    $img = ASSET_PATH . '/assets/img/404.jpg';
                 } else {
-                    $img = kratos_option('g_404', get_template_directory_uri() . '/assets/img/404.jpg');
+                    $img = kratos_option('g_404', ASSET_PATH . '/assets/img/404.jpg');
                 }
                 echo $img; ?>">
 					<div class="overlay"></div>

@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.17
+ * @version 2020.04.12
  */
 
 function getrobots()
@@ -94,7 +94,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('静态资源加速', 'kratos'),
         'desc' => __('开启静态资源加速（CSS、JS、Font）', 'kratos'),
-        'std' => '0',
+        'std' => '1',
         'id' => 'g_cdn',
         'type' => 'checkbox',
     );
@@ -186,7 +186,7 @@ function kratos_options()
 
     $options[] = array(
         'id' => 's_wechat_url',
-        'std' => get_template_directory_uri() . '/assets/img/wechat.png',
+        'std' => ASSET_PATH . '/assets/img/wechat.png',
         'type' => 'upload',
         'class' => 'hidden',
         'type' => 'upload',
@@ -195,7 +195,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('404 页面图片', 'kratos'),
         'id' => 'g_404',
-        'std' => get_template_directory_uri() . '/assets/img/404.jpg',
+        'std' => ASSET_PATH . '/assets/img/404.jpg',
         'type' => 'upload',
     );
 
@@ -208,7 +208,7 @@ function kratos_options()
         'name' => __('分享图片', 'kratos'),
         'desc' => __('搜索引擎或者社交工具分享首页时抓取的图片', 'kratos'),
         'id' => 'seo_shareimg',
-        'std' => get_template_directory_uri() . '/assets/img/default.jpg',
+        'std' => ASSET_PATH . '/assets/img/default.jpg',
         'type' => 'upload',
     );
 
@@ -279,7 +279,7 @@ function kratos_options()
         'desc' => __('当文章中没有图片并且没有设置特色图时在首页显示', 'kratos'),
         'id' => 'g_postthumbnail',
         'class' => 'hidden',
-        'std' => get_template_directory_uri() . '/assets/img/default.jpg',
+        'std' => ASSET_PATH . '/assets/img/default.jpg',
         'type' => 'upload',
     );
 
@@ -287,7 +287,7 @@ function kratos_options()
         'name' => __('无内容图片', 'kratos'),
         'desc' => __('当搜索不到文章或文章分类中没有文章时显示', 'kratos'),
         'id' => 'g_nothing',
-        'std' => get_template_directory_uri() . '/assets/img/nothing.svg',
+        'std' => ASSET_PATH . '/assets/img/nothing.svg',
         'type' => 'upload',
     );
 
@@ -329,7 +329,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('支付宝二维码', 'kratos'),
         'id' => 'g_donate_alipay',
-        'std' => get_template_directory_uri() . '/assets/img/donate.png',
+        'std' => ASSET_PATH . '/assets/img/donate.png',
         'type' => 'upload',
         'class' => 'hidden',
         'type' => 'upload',
@@ -338,7 +338,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('微信二维码', 'kratos'),
         'id' => 'g_donate_wechat',
-        'std' => get_template_directory_uri() . '/assets/img/donate.png',
+        'std' => ASSET_PATH . '/assets/img/donate.png',
         'type' => 'upload',
         'class' => 'hidden',
         'type' => 'upload',
@@ -352,7 +352,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('个人头像', 'kratos'),
         'id' => 'a_gravatar',
-        'std' => get_template_directory_uri() . '/assets/img/gravatar.png',
+        'std' => ASSET_PATH . '/assets/img/gravatar.png',
         'type' => 'upload',
     );
 
@@ -453,7 +453,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('图片导航', 'kratos'),
         'id' => 'top_img',
-        'std' => get_template_directory_uri() . '/assets/img/background.png',
+        'std' => ASSET_PATH . '/assets/img/background.png',
         'class' => 'hidden',
         'type' => 'upload',
     );
@@ -681,7 +681,7 @@ function kratos_options()
     $options[] = array(
         'id' => 's_singletop_url',
         'class' => 'hidden',
-        'std' => get_template_directory_uri() . '/assets/img/ad.png',
+        'std' => ASSET_PATH . '/assets/img/ad.png',
         'type' => 'upload',
     );
 
@@ -701,7 +701,7 @@ function kratos_options()
     $options[] = array(
         'id' => 's_singledown_url',
         'class' => 'hidden',
-        'std' => get_template_directory_uri() . '/assets/img/ad.png',
+        'std' => ASSET_PATH . '/assets/img/ad.png',
         'type' => 'upload',
     );
 

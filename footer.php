@@ -3,7 +3,7 @@
  * 主题页脚
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.17
+ * @version 2020.04.12
  */
 ?>
 <div class="k-footer">
@@ -17,7 +17,7 @@
         <div class="wechat">
             <span class="kicon i-wechat"></span>
             <div class="wechat-pic">
-                <img src="<?php echo kratos_option('s_wechat_url', get_template_directory_uri() . '/assets/img/wechat.png'); ?>">
+                <img src="<?php echo kratos_option('s_wechat_url', ASSET_PATH . '/assets/img/wechat.png'); ?>">
             </div>
         </div>
         <?php } ?>

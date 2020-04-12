@@ -3,7 +3,7 @@
  * 首页模板
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.14
+ * @version 2020.04.12
  */
 
 get_header(); ?>
@@ -26,9 +26,9 @@ get_header(); ?>
                         <div class="nothing">
                             <img src="<?php 
                             if(!kratos_option('g_nothing')){
-                                $img = get_template_directory_uri() . '/assets/img/nothing.svg';
+                                $img = ASSET_PATH . '/assets/img/nothing.svg';
                             } else {
-                                $img = kratos_option('g_nothing', get_template_directory_uri() . '/assets/img/nothing.svg');
+                                $img = kratos_option('g_nothing', ASSET_PATH . '/assets/img/nothing.svg');
                             }
                             echo $img; ?>">
                             <div class="sorry"><?php _e('很抱歉，没有找到任何内容', 'kratos'); ?></div>

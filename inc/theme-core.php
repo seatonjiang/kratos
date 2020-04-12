@@ -3,8 +3,19 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.17
+ * @version 2020.04.12
  */
+
+if (kratos_option('g_cdn', false)) {
+    $cdn_array = array(
+        'maocloud' => 'https://n3.cdn.vtrois.com/kratos/' . THEME_VERSION,
+        'jsdelivr' => 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION,
+    );
+    $asset_path = $cdn_array[kratos_option('g_cdn_n3', 'maocloud')];
+} else {
+    $asset_path = get_template_directory_uri();
+}
+define('ASSET_PATH', $asset_path);
 
 // 自动跳转主题设置
 function init_theme()
@@ -27,42 +38,32 @@ add_action('after_setup_theme', 'theme_languages');
 // 资源加载
 function theme_autoload()
 {
-    if (kratos_option('g_cdn', false)) {
-        $cdn_array = array(
-            'maocloud' => 'https://n3.cdn.vtrois.com/kratos/' . THEME_VERSION,
-            'jsdelivr' => 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION,
-        );
-        $dir = $cdn_array[kratos_option('g_cdn_n3', 'maocloud')];
-    } else {
-        $dir = get_template_directory_uri();
-    }
-
     if (!is_admin()) {
         // css
-        wp_enqueue_style('bootstrap', $dir . '/assets/css/bootstrap.min.css', array(), '4.4.1');
-        wp_enqueue_style('kicon', $dir . '/assets/css/iconfont.min.css', array(), THEME_VERSION);
-        wp_enqueue_style('layer', $dir . '/assets/css/layer.min.css', array(), '3.1.1');
+        wp_enqueue_style('bootstrap', ASSET_PATH . '/assets/css/bootstrap.min.css', array(), '4.4.1');
+        wp_enqueue_style('kicon', ASSET_PATH . '/assets/css/iconfont.min.css', array(), THEME_VERSION);
+        wp_enqueue_style('layer', ASSET_PATH . '/assets/css/layer.min.css', array(), '3.1.1');
         if (kratos_option('g_animate', false)) {
-            wp_enqueue_style('animate', $dir . '/assets/css/animate.min.css', array(), '3.7.2');
+            wp_enqueue_style('animate', ASSET_PATH . '/assets/css/animate.min.css', array(), '3.7.2');
         }
         if (kratos_option('g_fontawesome', false)) {
-            wp_enqueue_style('fontawesome', $dir . '/assets/css/fontawesome.min.css', array(), '5.13.0');
+            wp_enqueue_style('fontawesome', ASSET_PATH . '/assets/css/fontawesome.min.css', array(), '5.13.0');
         }
-        wp_enqueue_style('kratos', $dir . '/assets/css/kratos.min.css', array(), THEME_VERSION);
+        wp_enqueue_style('kratos', ASSET_PATH . '/assets/css/kratos.min.css', array(), THEME_VERSION);
         wp_enqueue_style('custom', get_template_directory_uri() . '/custom/custom.css', array(), THEME_VERSION);
         // js
         wp_deregister_script('jquery');
-        wp_enqueue_script('jquery', $dir . '/assets/js/jquery.min.js', array(), '3.4.1', false);
-        wp_enqueue_script('bootstrap', $dir . '/assets/js/bootstrap.min.js', array(), '4.4.1', true);
-        wp_enqueue_script('layer', $dir . '/assets/js/layer.min.js', array(), '3.1.1', true);
-        wp_enqueue_script('kratos', $dir . '/assets/js/kratos.min.js', array(), THEME_VERSION, true);
+        wp_enqueue_script('jquery', ASSET_PATH . '/assets/js/jquery.min.js', array(), '3.4.1', false);
+        wp_enqueue_script('bootstrap', ASSET_PATH . '/assets/js/bootstrap.min.js', array(), '4.4.1', true);
+        wp_enqueue_script('layer', ASSET_PATH . '/assets/js/layer.min.js', array(), '3.1.1', true);
+        wp_enqueue_script('kratos', ASSET_PATH . '/assets/js/kratos.min.js', array(), THEME_VERSION, true);
         wp_enqueue_script('custom', get_template_directory_uri() . '/custom/custom.js', array(), THEME_VERSION, true);
 
         $data = array(
             'site' => home_url(),
             'directory' => get_stylesheet_directory_uri(),
-            'alipay' => kratos_option('g_donate_alipay', get_template_directory_uri() . '/assets/img/donate.png'),
-            'wechat' => kratos_option('g_donate_wechat', get_template_directory_uri() . '/assets/img/donate.png'),
+            'alipay' => kratos_option('g_donate_alipay', ASSET_PATH . '/assets/img/donate.png'),
+            'wechat' => kratos_option('g_donate_wechat', ASSET_PATH . '/assets/img/donate.png'),
             'repeat' => __('您已经赞过了', 'kratos'),
             'thanks' => __('感谢您的支持', 'kratos'),
             'donate' => __('打赏作者', 'kratos'),

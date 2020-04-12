@@ -3,7 +3,7 @@
  * 文章短代码
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.14
+ * @version 2020.04.12
  */
 
 function h2title($atts, $content = null, $code = "")
@@ -223,22 +223,22 @@ function register_button($buttons)
 
 function add_plugin($plugin_array)
 {
-    $plugin_array['h2title'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['kbd'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['mark'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['striped'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['bdbtn'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['music'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['vqq'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['youtube'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['bilibili'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['success'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['info'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['warning'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['danger'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['successbox'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['infoboxs'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['warningbox'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
-    $plugin_array['dangerbox'] = get_bloginfo('template_url') . '/assets/js/buttons/more.js';
+    $plugin_array['h2title'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['kbd'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['mark'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['striped'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['bdbtn'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['music'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['vqq'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['youtube'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['bilibili'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['success'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['info'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['warning'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['danger'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['successbox'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['infoboxs'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['warningbox'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['dangerbox'] = ASSET_PATH . '/assets/js/buttons/more.js';
     return $plugin_array;
 }

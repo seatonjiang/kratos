@@ -3,7 +3,7 @@
  * 文章相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.02.23
+ * @version 2020.04.12
  */
 
 // 文章链接添加 target 和 rel
@@ -124,9 +124,9 @@ function post_thumbnail()
             echo '<img src="' . $img_val . '" />';
         } else {
             if (!kratos_option('g_postthumbnail')) {
-                $img = get_template_directory_uri() . '/assets/img/default.jpg';
+                $img = ASSET_PATH . '/assets/img/default.jpg';
             } else {
-                $img = kratos_option('g_postthumbnail', get_template_directory_uri() . '/assets/img/default.jpg');
+                $img = kratos_option('g_postthumbnail', ASSET_PATH . '/assets/img/default.jpg');
             }
             echo '<img src="' . $img . '" />';
         }
@@ -200,7 +200,7 @@ function pagelist($range = 5)
 // 文章评论
 function comment_scripts()
 {
-    wp_enqueue_script('comment', get_template_directory_uri() . '/assets/js/comments.min.js', array(), THEME_VERSION);
+    wp_enqueue_script('comment', ASSET_PATH . '/assets/js/comments.min.js', array(), THEME_VERSION);
     wp_localize_script('comment', 'ajaxcomment', array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'order' => get_option('comment_order'),
@@ -305,7 +305,7 @@ $defaults = array('add_below' => 'comment', 'respond_id' => 'respond', 'reply_te
 // 文章评论表情
 function custom_smilies_src($img_src, $img, $siteurl)
 {
-    return get_bloginfo('template_directory') . '/assets/img/smilies/' . $img;
+    return ASSET_PATH . '/assets/img/smilies/' . $img;
 }
 add_filter('smilies_src', 'custom_smilies_src', 1, 10);
 
@@ -360,7 +360,7 @@ function get_wpsmiliestrans()
     global $output;
     $wpsmilies = array_unique($wpsmiliestrans);
     foreach ($wpsmilies as $alt => $src_path) {
-        $output .= '<a class="add-smily" data-smilies="' . $alt . '"><img class="wp-smiley" src="' . get_bloginfo('template_directory') . '/assets/img/smilies/' . rtrim($src_path, "png") . 'png" /></a>';
+        $output .= '<a class="add-smily" data-smilies="' . $alt . '"><img class="wp-smiley" src="' . ASSET_PATH . '/assets/img/smilies/' . rtrim($src_path, "png") . 'png" /></a>';
     }
     return $output;
 }

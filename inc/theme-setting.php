@@ -3,7 +3,7 @@
  * 站点相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.18
+ * @version 2020.04.12
  */
 
 // 标题配置
@@ -119,7 +119,7 @@ function share_thumbnail_url()
         if (!empty($strResult[1])) {
             $img = $strResult[1][0];
         } else {
-            $img = kratos_option('seo_shareimg', get_template_directory_uri() . '/assets/img/default.jpg');
+            $img = kratos_option('seo_shareimg', ASSET_PATH . '/assets/img/default.jpg');
         }
     }
     return $img;

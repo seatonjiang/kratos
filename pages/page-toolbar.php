@@ -3,12 +3,12 @@
  * 文章工具栏
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.14
+ * @version 2020.04.12
  */
 ?>
 <div class="toolbar clearfix">
     <div class="meta float-md-left">
-		<img src="<?php echo kratos_option('a_gravatar', get_template_directory_uri() . '/assets/img/gravatar.png'); ?>">
+		<img src="<?php echo kratos_option('a_gravatar', ASSET_PATH . '/assets/img/gravatar.png'); ?>">
 		<p class="name"><?php echo kratos_option('a_nickname','Kratos'); ?></p>
 		<p class="motto mb-0"><?php echo kratos_option('a_about', __('保持饥渴的专注，追求最佳的品质', 'kratos')); ?></p>
 	</div>

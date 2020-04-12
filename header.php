@@ -3,7 +3,7 @@
  * 主题页眉
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.14
+ * @version 2020.04.12
  */
 ?>
 <!DOCTYPE html>
@@ -59,9 +59,9 @@
         <div class="overlay"></div>
         <div class="content text-center" style="background-image: url(<?php 
             if(!kratos_option('top_img')){
-                $img = get_template_directory_uri() . '/assets/img/background.png';
+                $img = ASSET_PATH . '/assets/img/background.png';
             } else {
-                $img = kratos_option('top_img', get_template_directory_uri() . '/assets/img/background.png');
+                $img = kratos_option('top_img', ASSET_PATH . '/assets/img/background.png');
             }
             echo $img; ?>);">
             <div class="introduce animated fadeInUp">
