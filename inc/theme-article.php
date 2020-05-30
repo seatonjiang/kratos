@@ -377,3 +377,20 @@ if (!kratos_option('g_gutenberg',false)) {
         wp_dequeue_style('wp-block-library');
     }
 }
+
+// 文章评论增强
+function comment_add_at($comment_text, $comment = '') {  
+    if( $comment->comment_parent > 0) {  
+        $comment_text = '<span>@' . get_comment_author( $comment->comment_parent ) . '</span> ' . $comment_text;
+    }  
+
+    return $comment_text;  
+}  
+add_filter('comment_text' , 'comment_add_at', 20, 2);
+
+function recover_comment_fields($comment_fields){
+    $comment = array_shift($comment_fields);
+    $comment_fields = array_merge($comment_fields ,array('comment' => $comment));
+    return $comment_fields;
+}
+add_filter('comment_form_fields','recover_comment_fields');
