@@ -203,8 +203,7 @@ function comment_scripts()
     wp_enqueue_script('comment', ASSET_PATH . '/assets/js/comments.min.js', array(), THEME_VERSION);
     wp_localize_script('comment', 'ajaxcomment', array(
         'ajax_url' => admin_url('admin-ajax.php'),
-        'order' => get_option('comment_order'),
-        'formpostion' => 'bottom',
+        'order' => get_option('comment_order')
     ));
 }
 add_action('wp_enqueue_scripts', 'comment_scripts');
@@ -232,20 +231,17 @@ function comment_callback()
     do_action('set_comment_cookies', $comment, $user);
     $GLOBALS['comment'] = $comment;
     ?>
-    <li class="comment cleanfix" id="comment-<?php comment_ID();?>">
+    <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
         <div class="avatar float-left d-inline-block mr-2">
             <?php if (function_exists('get_avatar') && get_option('show_avatars')) {echo get_avatar($comment, 50);}?>
         </div>
         <div class="info clearfix">
-            <div class="clearfix">
-                <cite class="author_name"><?php echo get_comment_author_link();?></cite>
-                <div class="content pb-2">
-                    <?php comment_text();?>
-                </div>
+            <cite class="author_name"><?php echo get_comment_author_link();?></cite>
+            <div class="content pb-2">
+                <?php comment_text();?>
             </div>
-            <div>
-                <div class="meta">
-                    <span class="date"><?php echo get_comment_date('Y年m月d日'); ?></span>
+            <div class="meta clearfix">
+                <div class="date d-inline-block float-left"><?php echo get_comment_date('Y年m月d日'); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
                 </div>
             </div>
         </div>
@@ -274,31 +270,26 @@ add_filter('comment_text', 'comment_display', '', 1);
 function comment_callbacks($comment, $args, $depth = 2)
 {
     $GLOBALS['comment'] = $comment;?>
-    <li class="comment cleanfix" id="comment-<?php comment_ID();?>">
-    <div class="avatar float-left d-inline-block mr-2">
-        <?php if (function_exists('get_avatar') && get_option('show_avatars')) {echo get_avatar($comment, 50);}?>
-    </div>
-    <div class="info clearfix">
-        <div class="clearfix">
-        <cite class="author_name"><?php echo get_comment_author_link();?></cite>
-        <div class="content pb-2">
-            <?php comment_text();?>
+    <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
+        <div class="avatar float-left d-inline-block mr-2">
+            <?php if (function_exists('get_avatar') && get_option('show_avatars')) {echo get_avatar($comment, 50);}?>
         </div>
-        </div>
-        <div class="clearfix">
-        <div class="meta clearfix">
-            <div class="date d-inline-block float-left"><?php echo get_comment_date('Y年m月d日'); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';
-        edit_comment_link(__('编辑', 'kratos'));
-        echo '</span>';}
-    ;?></div>
-            <div class="tool reply ml-2 d-inline-block float-right">
-            <?php
-$defaults = array('add_below' => 'comment', 'respond_id' => 'respond', 'reply_text' => '<i class="kicon i-reply"></i><span class="ml-1">' . __('回复', 'kratos') . '</span>');
-    comment_reply_link(array_merge($defaults, array('depth' => $depth, 'max_depth' => $args['max_depth'])));?>
+        <div class="info clearfix">
+            <cite class="author_name"><?php echo get_comment_author_link();?></cite>
+            <div class="content pb-2">
+                <?php comment_text();?>
+            </div>
+            <div class="meta clearfix">
+                <div class="date d-inline-block float-left"><?php echo get_comment_date('Y年m月d日'); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
+                </div>
+                <div class="tool reply ml-2 d-inline-block float-right">
+                <?php
+                    $defaults = array('add_below' => 'comment', 'respond_id' => 'respond', 'reply_text' => '<i class="kicon i-reply"></i><span class="ml-1">' . __('回复', 'kratos') . '</span>');
+                    comment_reply_link(array_merge($defaults, array('depth' => $depth, 'max_depth' => $args['max_depth'])));
+                ?>
+                </div>
             </div>
         </div>
-        </div>
-    </div>
     <?php
 }
 

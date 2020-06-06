@@ -1463,11 +1463,11 @@ button:focus {
 
 .k-main .details .comments .comment .info .author_name {
   display: inline-block;
-  margin-top: 3px;
-  color: #4a4a4a;
-  font-weight: 500;
-  font-style: normal;
+  color: #252525;
+  font-weight: 600;
   font-size: 14px;
+  margin-top: 3px;
+  font-style: normal;
   line-height: 1.375;
 }
 
@@ -1489,7 +1489,6 @@ button:focus {
 
 .k-main .details .comments .comment .info .content p span {
   color: #333;
-  font-weight: bold;
 }
 
 .k-main .details .comments .comment .info .meta,
