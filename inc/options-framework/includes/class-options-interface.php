@@ -242,8 +242,8 @@ class Options_Framework_Interface
 						<li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/vtrois/kratos/issues" target="_blank">https://github.com/vtrois/kratos/issues</a></li>
 						<li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/vtrois/kratos/releases" target="_blank">https://github.com/vtrois/kratos/releases</a></li>
 					</ul>
-					<h4>' . __('讨论交流', 'kratos') . '</h4>
-					<p>' . __('欢迎使用 Kratos 主题开始文章创作，诚邀您加入主题交流 QQ 群：<a href="https://shang.qq.com/wpa/qunwpa?idkey=18a1de727037e3e8b9b49bfc7a410139e5db736106ef07292f07a62ff5eef9a2" target="_blank">734508</a>', 'kratos') . '</p>
+                    <h4>' . __('讨论交流', 'kratos') . '</h4>
+                    <img src="' . ASSET_PATH . '/inc/options-framework/images/discuss.png">
 					<h4>' . __('版权声明', 'kratos') . '</h4>
 					<p>' . __('主题源码使用 <a href="https://github.com/Vtrois/Kratos/blob/master/LICENSE" target="_blank">MIT 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos') . '</p>
 					<h4>' . __('打赏支持', 'kratos') . '</h4>
