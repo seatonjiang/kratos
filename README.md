@@ -4,7 +4,7 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/php-%3E%3D7.0.0-blue">
-<img src="https://img.shields.io/badge/wordpress-v5.4.0%20tested-%234c1">
+<img src="https://img.shields.io/badge/wordpress-v5.4.1%20tested-%234c1">
 <a href="https://vtrois.crowdin.com/kratos" target="_blank"><img src="https://badges.crowdin.net/e/f1d1a7eaa6af337dba7aa4a39b28e67c/localized.svg"></a>
 <a href="https://www.jsdelivr.com/package/gh/vtrois/kratos" target="_blank"><img src="https://data.jsdelivr.com/v1/package/gh/vtrois/kratos/badge?style=rounded"></a>
 <img src="https://img.shields.io/github/license/Vtrois/Kratos?color=%234c1">
@@ -27,6 +27,7 @@ Kratos is a responsive WordPress theme focused on the user reading experience, j
 5. The theme can now be activated from the administrator. Select the `Appearance` tab, then open the theme catalog, find the theme, and click the `Activate link`.
 
 ## Structure
+
 Within the download you'll find the following directories and files. You'll see something like this 👇
 
 ```
@@ -60,6 +61,9 @@ Kratos
 │   │   ├── layer
 │   │   │   ├── icon-ext.png
 │   │   │   └── icon.png
+│   │   ├── options
+│   │   │   ├── col-8.png
+│   │   │   └── col-12.png
 │   │   ├── nothing.svg
 │   │   ├── payment
 │   │   │   ├── alipay.png
@@ -174,9 +178,11 @@ Kratos
 ```
 
 ## Changelog
+
 Detailed changes for each release are documented in the [release notes](https://github.com/Vtrois/Kratos/releases).
 
 ## Donation
+
 If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
