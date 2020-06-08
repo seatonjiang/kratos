@@ -6,11 +6,17 @@
  * @version 2020.03.16
  */
 
-get_header(); ?>
+get_header();
+$col_array = array(
+    'one_side' => 'col-lg-12',
+    'two_side' => 'col-lg-8'
+);
+$select_col = $col_array[kratos_option('g_article_wodgets', 'two_side')];
+?>
 <div class="k-main <?php echo kratos_option('top_select', 'banner'); ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 details">
+            <div class="<?php echo $select_col ?> details">
                 <?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
                     <div class="article">
                         <div class="breadcrumb-box">
@@ -128,9 +134,11 @@ get_header(); ?>
                 </nav>
                 <?php comments_template(); ?>
             </div>
+            <?php if (kratos_option('g_article_wodgets', 'two_side') == 'two_side'){ ?>
             <div class="col-lg-4 sidebar d-none d-lg-block">
                 <?php dynamic_sidebar('sidebar_tool'); ?>
             </div>
+            <?php } ?>
         </div>
     </div>
 </div>

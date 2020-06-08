@@ -24,6 +24,8 @@ function kratos_options()
 {
     $sitename = get_bloginfo('name');
 
+    $imagepath = get_template_directory_uri() . '/assets/img/options/';
+
     $seorobots = '<a href="' . home_url() . '/robots.txt" target="_blank">robots.txt</a>';
     $seoreading = '<a href="' . admin_url('options-reading.php') . '" target="_blank">' . __('设置-阅读-对搜索引擎的可见性', 'kratos') . '</a>';
 
@@ -343,6 +345,17 @@ function kratos_options()
         'class' => 'hidden',
         'type' => 'upload',
     );
+
+    $options[] = array(
+        'name' => __('页面布局', 'kratos'),
+        'desc' => __('是否显示侧边栏小工具（默认显示侧边栏），仅在文章页面生效', 'kratos'),
+        'id' => "g_article_wodgets",
+        'std' => "two_side",
+        'type' => "images",
+        'options' => array(
+            'one_side' => $imagepath . 'col-12.png',
+			'two_side' => $imagepath . 'col-8.png')
+		);
 
     $options[] = array(
         'name' => __('站长配置', 'kratos'),
