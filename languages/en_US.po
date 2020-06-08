@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-06-08 14:23+0800\n"
-"PO-Revision-Date: 2020-06-08 06:25\n"
+"PO-Revision-Date: 2020-06-08 07:25\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -57,15 +57,15 @@ msgstr "You need to <a href=\"%s\">sign in</a> to comment"
 
 #: comments.php:37
 msgid "昵称"
-msgstr ""
+msgstr "Nickname"
 
 #: comments.php:45
 msgid "邮箱"
-msgstr ""
+msgstr "Email"
 
 #: comments.php:53
 msgid "网址"
-msgstr ""
+msgstr "URL"
 
 #: comments.php:70
 msgid "取消回复"
@@ -188,7 +188,7 @@ msgstr "The development of the theme needs your support and encouragement. Pleas
 
 #: inc/options-framework/includes/class-options-interface.php:252
 msgid "赞助商"
-msgstr ""
+msgstr "Sponsor"
 
 #: inc/options-framework/includes/class-options-interface.php:258
 msgid "测试邮件"
@@ -290,11 +290,11 @@ msgstr "Color navigation"
 
 #: inc/theme-options.php:47
 msgid "猫云"
-msgstr ""
+msgstr "Maoyun"
 
 #: inc/theme-options.php:48
 msgid "jsDelivr"
-msgstr ""
+msgstr "jsDelivr"
 
 #: inc/theme-options.php:54
 msgid "全站配置"
@@ -334,11 +334,11 @@ msgstr "Turn on animate.css effect"
 
 #: inc/theme-options.php:89
 msgid "Font Awesome"
-msgstr ""
+msgstr "Font Awesome"
 
 #: inc/theme-options.php:90
 msgid "开启 Font Awesome 字体"
-msgstr ""
+msgstr "Open Font Awesome"
 
 #: inc/theme-options.php:97
 msgid "静态资源加速"
@@ -350,43 +350,43 @@ msgstr "Enable static resource acceleration(CSS,JS,Font)"
 
 #: inc/theme-options.php:105
 msgid "选择 CDN 加速节点"
-msgstr ""
+msgstr "Select CDN acceleration node"
 
 #: inc/theme-options.php:114
 msgid "禁止生成缩略图"
-msgstr ""
+msgstr "Disable thumbnail generation"
 
 #: inc/theme-options.php:115
 msgid "是否禁止生成多种尺寸图片资源"
-msgstr ""
+msgstr "Whether to prohibit the generation of image resources of multiple sizes"
 
 #: inc/theme-options.php:122
 msgid "媒体资源托管"
-msgstr ""
+msgstr "Media resource hosting"
 
 #: inc/theme-options.php:123
 msgid "是否将媒体资源托管到 DogeCloud 存储"
-msgstr ""
+msgstr "Whether to host media resources to DogeCloud storage"
 
 #: inc/theme-options.php:130
 msgid "存储空间名称"
-msgstr ""
+msgstr "Bucket"
 
 #: inc/theme-options.php:137
 msgid "加速域名"
-msgstr ""
+msgstr "Speed up the domain"
 
 #: inc/theme-options.php:139
 msgid "例如：https://cdn.xxx.com"
-msgstr ""
+msgstr "e.g. https://cdn.xxx.com"
 
 #: inc/theme-options.php:145
 msgid "AccessKey"
-msgstr ""
+msgstr "AccessKey"
 
 #: inc/theme-options.php:152
 msgid "SecretKey"
-msgstr ""
+msgstr "SecretKey"
 
 #: inc/theme-options.php:159
 msgid "Gutenberg 编辑器"
@@ -526,7 +526,7 @@ msgstr "creative commons license"
 
 #: inc/theme-options.php:303
 msgid "开启文章知识共享协议"
-msgstr ""
+msgstr "Open Article Knowledge Sharing Agreement"
 
 #: inc/theme-options.php:309
 msgid "选择文章的知识共享协议"
@@ -554,11 +554,11 @@ msgstr "Alipay QR code"
 
 #: inc/theme-options.php:350
 msgid "页面布局"
-msgstr ""
+msgstr "Page Layout"
 
 #: inc/theme-options.php:351
 msgid "是否显示侧边栏小工具（默认显示侧边栏），仅在文章页面生效"
-msgstr ""
+msgstr "Whether to display the sidebar gadget (the sidebar is displayed by default), only effective on the article page"
 
 #: inc/theme-options.php:361
 msgid "站长配置"
@@ -671,7 +671,7 @@ msgstr "Weibo"
 
 #: inc/theme-options.php:509
 msgid "例如：https://weibo.com/xxxxx"
-msgstr ""
+msgstr "e.g. https://weibo.com/xxxxx"
 
 #: inc/theme-options.php:515
 msgid "哔哩哔哩"
@@ -679,7 +679,7 @@ msgstr "bilibili"
 
 #: inc/theme-options.php:522
 msgid "例如：https://space.bilibili.com/xxxxx"
-msgstr ""
+msgstr "e.g. https://space.bilibili.com/xxxxx"
 
 #: inc/theme-options.php:528
 msgid "CODING"
@@ -687,7 +687,7 @@ msgstr "CODING"
 
 #: inc/theme-options.php:535
 msgid "例如：https://xxxxx.coding.net/u/xxxxx"
-msgstr ""
+msgstr "e.g. https://xxxxx.coding.net/u/xxxxx"
 
 #: inc/theme-options.php:541
 msgid "码云 Gitee"
@@ -695,7 +695,7 @@ msgstr "Gitee"
 
 #: inc/theme-options.php:548
 msgid "例如：https://gitee.com/xxxxx"
-msgstr ""
+msgstr "e.g. https://gitee.com/xxxxx"
 
 #: inc/theme-options.php:554
 msgid "海外平台"
@@ -707,7 +707,7 @@ msgstr "Twitter"
 
 #: inc/theme-options.php:566
 msgid "例如：https://twitter.com/xxxxx"
-msgstr ""
+msgstr "e.g. https://twitter.com/xxxxx"
 
 #: inc/theme-options.php:572
 msgid "Telegram"
@@ -715,7 +715,7 @@ msgstr "Telegram"
 
 #: inc/theme-options.php:579
 msgid "例如：https://t.me/xxxxx"
-msgstr ""
+msgstr "e.g. https://t.me/xxxxx"
 
 #: inc/theme-options.php:585
 msgid "LinkedIn"
@@ -723,7 +723,7 @@ msgstr "LinkedIn"
 
 #: inc/theme-options.php:592
 msgid "例如：https://www.linkedin.com/in/xxxxx"
-msgstr ""
+msgstr "e.g. https://www.linkedin.com/in/xxxxx"
 
 #: inc/theme-options.php:598
 msgid "YouTube"
@@ -731,7 +731,7 @@ msgstr "YouTube"
 
 #: inc/theme-options.php:605
 msgid "例如：https://www.youtube.com/channel/xxxxx"
-msgstr ""
+msgstr "e.g. https://www.youtube.com/channel/xxxxx"
 
 #: inc/theme-options.php:611
 msgid "Github"
@@ -739,7 +739,7 @@ msgstr "Github"
 
 #: inc/theme-options.php:618
 msgid "例如：https://github.com/xxxxx"
-msgstr ""
+msgstr "e.g. https://github.com/xxxxx"
 
 #: inc/theme-options.php:624
 msgid "Stack Overflow"
@@ -747,7 +747,7 @@ msgstr "Stack Overflow"
 
 #: inc/theme-options.php:631
 msgid "例如：https://stackoverflow.com/users/xxxxx"
-msgstr ""
+msgstr "e.g. https://stackoverflow.com/users/xxxxx"
 
 #: inc/theme-options.php:637
 msgid "其他"
@@ -759,7 +759,7 @@ msgstr "Email address"
 
 #: inc/theme-options.php:649
 msgid "例如：mailto:xxxxx@gmail.com"
-msgstr ""
+msgstr "e.g. mailto:xxxxx@gmail.com"
 
 #: inc/theme-options.php:655
 msgid "工信部备案信息"
@@ -767,7 +767,7 @@ msgstr "Filing the ICP information"
 
 #: inc/theme-options.php:657
 msgid "例如：京ICP证xxxxxx号"
-msgstr ""
+msgstr "e.g. 京ICP证xxxxxx号"
 
 #: inc/theme-options.php:662
 msgid "公安网备案信息"
@@ -775,7 +775,7 @@ msgstr "Public security network filing information"
 
 #: inc/theme-options.php:664
 msgid "例如：京公网安备 xxxxxxxxxxxx号"
-msgstr ""
+msgstr "e.g. 京公网安备 xxxxxxxxxxxx号"
 
 #: inc/theme-options.php:669
 msgid "公安网备案连接"
@@ -783,7 +783,7 @@ msgstr "Public security network record connection"
 
 #: inc/theme-options.php:671
 msgid "例如：http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
-msgstr ""
+msgstr "e.g. http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
 
 #: inc/theme-options.php:676
 msgid "版权信息"
@@ -1009,7 +1009,7 @@ msgstr "Sorry, nothing was found"
 
 #: page.php:27 single.php:75
 msgid "<span>上一页</span>"
-msgstr ""
+msgstr "<span>Previous</span>"
 
 #: page.php:46 single.php:94
 msgid "<span>下一页</span>"
