@@ -20,7 +20,6 @@ function widgets_init()
     // 去掉默认小工具
     $wp_widget = array(
         'WP_Widget_Pages',
-        'WP_Widget_Archives',
         'WP_Widget_Meta',
         'WP_Widget_Recent_Posts',
         'WP_Widget_Recent_Comments',
