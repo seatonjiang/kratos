@@ -3,7 +3,7 @@
  * 文章内容
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.16
+ * @version 2020.06.08
  */
 
 get_header();
@@ -27,6 +27,7 @@ $select_col = $col_array[kratos_option('g_article_wodgets', 'two_side')];
                                 <?php
                                 $cat_id = get_the_category()[0]->term_id;
                                 $if_parent = TRUE;
+                                $breadcrumb = "";
                                 while ($if_parent == TRUE) {
                                     $cat_object = get_category($cat_id);
                                     $cat = $cat_object->term_id;
