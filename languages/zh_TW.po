@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-06-08 14:23+0800\n"
-"PO-Revision-Date: 2020-06-08 06:25\n"
+"PO-Revision-Date: 2020-06-08 07:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -334,11 +334,11 @@ msgstr "開啟 animate.css 效果"
 
 #: inc/theme-options.php:89
 msgid "Font Awesome"
-msgstr ""
+msgstr "Font Awesome"
 
 #: inc/theme-options.php:90
 msgid "开启 Font Awesome 字体"
-msgstr ""
+msgstr "開啟 Font Awesome 字體"
 
 #: inc/theme-options.php:97
 msgid "静态资源加速"
@@ -354,27 +354,27 @@ msgstr "選擇 CDN 加速節點"
 
 #: inc/theme-options.php:114
 msgid "禁止生成缩略图"
-msgstr ""
+msgstr "禁止生成縮略圖"
 
 #: inc/theme-options.php:115
 msgid "是否禁止生成多种尺寸图片资源"
-msgstr ""
+msgstr "是否禁止生成多種尺寸圖片資源"
 
 #: inc/theme-options.php:122
 msgid "媒体资源托管"
-msgstr ""
+msgstr "媒體資源託管"
 
 #: inc/theme-options.php:123
 msgid "是否将媒体资源托管到 DogeCloud 存储"
-msgstr ""
+msgstr "是否將媒體資源託管到 DogeCloud 存儲"
 
 #: inc/theme-options.php:130
 msgid "存储空间名称"
-msgstr ""
+msgstr "存儲空間名稱"
 
 #: inc/theme-options.php:137
 msgid "加速域名"
-msgstr ""
+msgstr "加速域名"
 
 #: inc/theme-options.php:139
 msgid "例如：https://cdn.xxx.com"
@@ -382,11 +382,11 @@ msgstr "例如：https://cdn.xxx.com"
 
 #: inc/theme-options.php:145
 msgid "AccessKey"
-msgstr ""
+msgstr "AccessKey"
 
 #: inc/theme-options.php:152
 msgid "SecretKey"
-msgstr ""
+msgstr "SecretKey"
 
 #: inc/theme-options.php:159
 msgid "Gutenberg 编辑器"
@@ -554,11 +554,11 @@ msgstr "支付寶二維碼"
 
 #: inc/theme-options.php:350
 msgid "页面布局"
-msgstr ""
+msgstr "頁面佈局"
 
 #: inc/theme-options.php:351
 msgid "是否显示侧边栏小工具（默认显示侧边栏），仅在文章页面生效"
-msgstr ""
+msgstr "是否顯示側邊欄小工具（默認顯示側邊欄），僅在文章頁面生效"
 
 #: inc/theme-options.php:361
 msgid "站长配置"
