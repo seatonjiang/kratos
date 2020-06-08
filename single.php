@@ -24,12 +24,23 @@ $select_col = $col_array[kratos_option('g_article_wodgets', 'two_side')];
                                 <li class="breadcrumb-item">
                                     <a class="text-dark" href="<?php echo home_url(); ?>"> <?php _e('首页' , 'kratos'); ?></a>
                                 </li>
-                                <li class="breadcrumb-item">
                                 <?php
-                                    $category = get_the_category();
-                                    echo '<a class="text-dark" href="'.get_category_link($category[0]->cat_ID).'">' . $category[0]->cat_name . '</a>';
+                                $cat_id = get_the_category()[0]->term_id;
+                                $if_parent = TRUE;
+                                while ($if_parent == TRUE) {
+                                    $cat_object = get_category($cat_id);
+                                    $cat = $cat_object->term_id;
+                                    $categoryURL = get_category_link($cat);
+                                    $name = $cat_object->name;
+                                    $cat_id = $cat_object->parent;
+                                    $add_link = '<li class="breadcrumb-item"> <a class="text-dark" href="'.$categoryURL.'">'.$name.'</a></li>';
+                                    $breadcrumb = substr_replace($breadcrumb, $add_link, 0, 0);
+                                    if ($cat_id == 0) {
+                                        $if_parent = FALSE;
+                                    }
+                                }
+                                echo $breadcrumb;
                                 ?>
-                                </li>
                                 <li class="breadcrumb-item active" aria-current="page"> <?php _e('正文' , 'kratos'); ?></li>
                             </ol>
                         </div>

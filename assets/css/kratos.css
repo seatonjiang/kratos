@@ -798,6 +798,14 @@ button:focus {
   list-style: none;
 }
 
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.3rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-right: 0.2rem;
+}
+
 .k-main .details .article .breadcrumb-box .breadcrumb-item.active {
   cursor: default;
 }
