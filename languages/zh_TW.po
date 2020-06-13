@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-06-13 13:30+0800\n"
-"PO-Revision-Date: 2020-06-13 12:25\n"
+"PO-Revision-Date: 2020-06-13 13:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -368,11 +368,11 @@ msgstr "選擇 CDN 加速節點"
 
 #: inc/theme-options.php:114
 msgid "禁止生成缩略图"
-msgstr "禁止生成縮略圖"
+msgstr "禁止產生縮圖"
 
 #: inc/theme-options.php:115
 msgid "是否禁止生成多种尺寸图片资源"
-msgstr "是否禁止生成多種尺寸圖片資源"
+msgstr "是否禁止產生多種尺寸圖片資源"
 
 #: inc/theme-options.php:122
 msgid "媒体资源托管"
@@ -380,11 +380,11 @@ msgstr "媒體資源託管"
 
 #: inc/theme-options.php:123
 msgid "是否将媒体资源托管到 DogeCloud 存储"
-msgstr "是否將媒體資源託管到 DogeCloud 存儲"
+msgstr "是否將媒體資源託管到 DogeCloud 儲存"
 
 #: inc/theme-options.php:130
 msgid "存储空间名称"
-msgstr "存儲空間名稱"
+msgstr "儲存空間名稱"
 
 #: inc/theme-options.php:137
 msgid "加速域名"
@@ -568,7 +568,7 @@ msgstr "頁面佈局"
 
 #: inc/theme-options.php:351
 msgid "是否显示侧边栏小工具（默认显示侧边栏），仅在文章页面生效"
-msgstr "是否顯示側邊欄小工具（默認顯示側邊欄），僅在文章頁面生效"
+msgstr "是否顯示側欄小工具（預設顯示側欄），僅在文章頁面生效"
 
 #: inc/theme-options.php:361
 msgid "站长配置"
@@ -1080,11 +1080,11 @@ msgstr "最後更新："
 
 #: single.php:140
 msgid "< 上一篇"
-msgstr "< 前篇"
+msgstr "< 上一篇"
 
 #: single.php:144
 msgid "下一篇 >"
-msgstr "後篇 >"
+msgstr "下一篇 >"
 
 #. Theme Name of the plugin/theme
 msgid "Kratos"
