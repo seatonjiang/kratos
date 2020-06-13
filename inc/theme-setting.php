@@ -3,7 +3,7 @@
  * 站点相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.04.12
+ * @version 2020.06.13
  */
 
 // 标题配置
@@ -28,61 +28,54 @@ add_filter('wp_title', 'title', 10, 2);
 // Keywords 配置
 function keywords()
 {
-    if (is_home() || is_front_page()) {
-        echo kratos_option('seo_keywords');
-    } elseif (is_category()) {
-        echo kratos_option('seo_keywords') . ',';
-        single_cat_title();
+    global $post;
+    if (is_home()) {
+        $keywords = kratos_option('seo_keywords');
     } elseif (is_single()) {
-        echo trim(wp_title('', false)) . ',';
-        echo kratos_option('seo_keywords') . ',';
-        if (has_tag()) {
-            foreach (get_the_tags() as $tag) {
-                echo $tag->name . ',';
+        $keywords = get_post_meta($post->ID, "seo_keywords_value", true);
+        if($keywords == '') {
+            $tags = wp_get_post_tags($post->ID);    
+            foreach ($tags as $tag ) {        
+                $keywords = $keywords . $tag->name . ", ";    
             }
+            $keywords = rtrim($keywords, ', ');
         }
-        foreach (get_the_category() as $category) {
-            echo $category->cat_name . ',';
+    } elseif (is_page()) {
+        $keywords = get_post_meta($post->ID, "seo_keywords_value", true);
+        if($keywords == '') {
+            $keywords = kratos_option('seo_keywords');
         }
-    } elseif (is_search()) {
-        echo kratos_option('seo_keywords') . ',';
-        the_search_query();
     } else {
-        echo kratos_option('seo_keywords') . ',';
-        echo trim(wp_title('', false));
+        $keywords = single_tag_title('', false);
     }
+    return trim(strip_tags($keywords));
 }
 
 // Description 配置
 function description()
 {
-    if (is_home() || is_front_page()) {
-        echo trim(kratos_option('seo_description'));
-    } elseif (is_category()) {
-        $description = strip_tags(category_description());
-        echo trim($description);
+    global $post;
+    if (is_home()) {
+        $description = kratos_option('seo_description');
     } elseif (is_single()) {
-        if (get_the_excerpt()) {
-            echo get_the_excerpt();
-        } else {
-            global $post;
-            $description = trim(str_replace(array("\r\n", "\r", "\n", "　", " "), " ", str_replace("\"", "'", strip_tags($post->post_content))));
-            echo mb_substr($description, 0, 220, 'utf-8');
+        $description = get_post_meta($post->ID, "seo_description_value", true);
+        if ($description == '') {
+            $description = get_the_excerpt();
         }
-    } elseif (is_search()) {
-        echo '「';
-        the_search_query();
-        echo '」共找到 ';
-        global $wp_query;
-        echo $wp_query->found_posts;
-        echo ' 个记录';
+        if ($description == '') {
+            $description = str_replace("\n","",mb_strimwidth(strip_tags($post->post_content), 0, 200, "…", 'utf-8'));
+        }
+    } elseif (is_category()) {
+        $description = category_description();
     } elseif (is_tag()) {
-        $description = strip_tags(tag_description());
-        echo trim($description);
-    } else {
-        $description = strip_tags(term_description());
-        echo trim($description);
+        $description = tag_description();
+    } elseif (is_page()) {
+        $description = get_post_meta($post->ID, "seo_description_value", true);
+        if ($description == '') {
+            $description = kratos_option('seo_description');
+        }
     }
+    return trim(strip_tags($description));
 }
 
 // robots.txt 配置

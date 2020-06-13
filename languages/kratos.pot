@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos\n"
-"POT-Creation-Date: 2020-06-08 14:23+0800\n"
+"POT-Creation-Date: 2020-06-13 13:30+0800\n"
 "PO-Revision-Date: 2020-02-14 23:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -233,6 +233,18 @@ msgstr ""
 msgid "添加表情"
 msgstr ""
 
+#: inc/theme-article.php:392
+msgid "描述"
+msgstr ""
+
+#: inc/theme-article.php:397 inc/theme-options.php:218
+msgid "关键词"
+msgstr ""
+
+#: inc/theme-article.php:403
+msgid "SEO 设置"
+msgstr ""
+
 #: inc/theme-core.php:67
 msgid "您已经赞过了"
 msgstr ""
@@ -439,10 +451,6 @@ msgstr ""
 
 #: inc/theme-options.php:211
 msgid "搜索引擎或者社交工具分享首页时抓取的图片"
-msgstr ""
-
-#: inc/theme-options.php:218
-msgid "关键词"
 msgstr ""
 
 #: inc/theme-options.php:219

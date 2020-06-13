@@ -3,7 +3,7 @@
  * 主题页眉
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.04.12
+ * @version 2020.06.13
  */
 ?>
 <!DOCTYPE html>
@@ -14,8 +14,8 @@
     <title><?php wp_title( '-', true, 'right' ); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telphone=no, email=no">
-    <meta name="keywords" content="<?php keywords(); ?>">
-    <meta name="description" itemprop="description" content="<?php description(); ?>">
+    <meta name="keywords" content="<?php echo keywords(); ?>">
+    <meta name="description" itemprop="description" content="<?php echo description(); ?>">
     <meta name="theme-color" content="<?php echo kratos_option('g_chrome', '#282a2c'); ?>">
     <meta itemprop="image" content="<?php echo share_thumbnail_url(); ?>"/>
     <link rel="shortcut icon" href="<?php echo kratos_option('g_icon'); ?>">
