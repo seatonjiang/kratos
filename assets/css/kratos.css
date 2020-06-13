@@ -859,13 +859,14 @@ button:focus {
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 32px;
 }
 
 .k-main .details .article h1 {
   padding-bottom: 4.8px;
-  border-bottom: 1px solid #eaecef;
-  font-size: 29px;
+  /* border-bottom: 1px solid #eaecef; */
+  line-height: 38px;
+  font-size: 30px;
 }
 
 .k-main .details .article .content h2 {
@@ -882,19 +883,19 @@ button:focus {
 }
 
 .k-main .details .article .content h3 {
-  font-size: 20px;
-}
-
-.k-main .details .article .content h4 {
   font-size: 18px;
 }
 
+.k-main .details .article .content h4 {
+  font-size: 16px;
+}
+
 .k-main .details .article .content h5 {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .k-main .details .article .content h6 {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .k-main .details .article .content p {
