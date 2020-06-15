@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-06-13 13:30+0800\n"
-"PO-Revision-Date: 2020-06-13 05:35\n"
+"PO-Revision-Date: 2020-06-15 01:02\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -232,7 +232,7 @@ msgstr "Add Emoji"
 
 #: inc/theme-article.php:392
 msgid "描述"
-msgstr ""
+msgstr "Description"
 
 #: inc/theme-article.php:397 inc/theme-options.php:218
 msgid "关键词"
@@ -240,7 +240,7 @@ msgstr "Keywords"
 
 #: inc/theme-article.php:403
 msgid "SEO 设置"
-msgstr ""
+msgstr "SEO Setting"
 
 #: inc/theme-core.php:67
 msgid "您已经赞过了"
