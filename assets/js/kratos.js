@@ -123,11 +123,25 @@
 		})
 	}
 
+	var accordionConfig = function () {
+		$(document).on('click', '.acheader', function (event) {
+			var $this = $(this)
+			$this.closest('.accordion').find('.contents').slideToggle(300)
+			if ($this.closest('.accordion').hasClass('active')) {
+				$this.closest('.accordion').removeClass('active')
+			} else {
+				$this.closest('.accordion').addClass('active')
+			}
+			event.preventDefault()
+		})
+	}
+
 	var consoleConfig = function () {
 		console.log('\n Kratos v' + KRATOS_VERSION + '\n\n https://github.com/Vtrois/Kratos \n\n')
 	}
 
 	$(function () {
+		accordionConfig()
 		navbarConfig()
 		tooltipConfig()
 		gotopConfig()

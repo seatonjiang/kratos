@@ -223,6 +223,22 @@
     })
     tinymce.PluginManager.add('reply', tinymce.plugins.reply)
 
+    tinymce.create('tinymce.plugins.accordion', {
+        init: function (ed, url) {
+            ed.addButton('accordion', {
+                title: '展开收缩',
+                image: url + '/images/accordion.png',
+                onclick: function () {
+                    ed.selection.setContent('[accordion title="标题内容"]' + ed.selection.getContent() + '[/accordion]')
+                }
+            })
+        },
+        createControl: function (n, cm) {
+            return null
+        },
+    })
+    tinymce.PluginManager.add('accordion', tinymce.plugins.accordion)
+
     tinymce.create('tinymce.plugins.music', {
         init: function (ed, url) {
             ed.addButton('music', {

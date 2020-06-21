@@ -216,6 +216,17 @@ function reply($atts, $content = null)
 }
 add_shortcode('reply', 'reply');
 
+function accordion($atts, $content=null, $code=""){
+    extract(shortcode_atts(array("title"=>__('标题内容','kratos')),$atts));
+    $return = '<div class="accordion"><div class="acheader"><div class="icon"><i class="fa fa-plus"></i></div><span>';
+    $return .= $title;
+    $return .= '</span></div><div class="contents"><div class="inner">';
+    $return .= do_shortcode($content);
+    $return .= '</div></div></div>';
+    return $return;
+}
+add_shortcode('accordion','accordion');
+
 add_action('init', 'more_button');
 function more_button()
 {
@@ -245,6 +256,7 @@ function register_button($buttons)
     array_push($buttons, " ", "striped");
     array_push($buttons, " ", "bdbtn");
     array_push($buttons, " ", "reply");
+    array_push($buttons, " ", "accordion");
     array_push($buttons, " ", "music");
     array_push($buttons, " ", "vqq");
     array_push($buttons, " ", "youtube");
@@ -268,6 +280,7 @@ function add_plugin($plugin_array)
     $plugin_array['striped'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['bdbtn'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['reply'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['accordion'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['music'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['vqq'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['youtube'] = ASSET_PATH . '/assets/js/buttons/more.js';
