@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos\n"
-"POT-Creation-Date: 2020-06-13 13:30+0800\n"
+"POT-Creation-Date: 2020-06-21 11:42+0800\n"
 "PO-Revision-Date: 2020-02-14 23:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -835,6 +835,10 @@ msgstr ""
 #: inc/theme-shortcode.php:105 inc/theme-shortcode.php:117
 #: inc/theme-shortcode.php:129 inc/theme-shortcode.php:141
 msgid "标题内容"
+msgstr ""
+
+#: inc/theme-shortcode.php:183
+msgid "温馨提示：此处内容已隐藏，<a href=\"#comments\">回复</a>后刷新页面即可查看！"
 msgstr ""
 
 #: inc/theme-smtp.php:38

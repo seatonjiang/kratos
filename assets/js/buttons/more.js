@@ -207,6 +207,22 @@
     })
     tinymce.PluginManager.add('bdbtn', tinymce.plugins.bdbtn)
 
+    tinymce.create('tinymce.plugins.reply', {
+        init: function (ed, url) {
+            ed.addButton('reply', {
+                title: '回复可见',
+                image: url + '/images/reply.png',
+                onclick: function () {
+                    ed.selection.setContent('[reply]' + ed.selection.getContent() + '[/reply]')
+                }
+            })
+        },
+        createControl: function (n, cm) {
+            return null
+        },
+    })
+    tinymce.PluginManager.add('reply', tinymce.plugins.reply)
+
     tinymce.create('tinymce.plugins.music', {
         init: function (ed, url) {
             ed.addButton('music', {

@@ -3,7 +3,7 @@
  * 文章短代码
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.04.12
+ * @version 2020.06.21
  */
 
 function h2title($atts, $content = null, $code = "")
@@ -178,6 +178,44 @@ function bilibili($atts, $content = null, $code = "")
 }
 add_shortcode('bilibili', 'bilibili');
 
+function reply($atts, $content = null)
+{
+    extract(shortcode_atts(array("notice" => '<div class="alert alert-primary text-center" role="alert">'.__('温馨提示：此处内容已隐藏，<a href="#comments">回复</a>后刷新页面即可查看！', 'kratos').'</div>'), $atts));
+    $userEmail = null;
+    $user_ID = (int) wp_get_current_user()->ID;
+    if ($user_ID > 0) {
+        $userEmail = get_userdata($user_ID)->user_email;
+        $adminUsers = get_users('role=Administrator');
+        $adminEmails = array();
+        foreach ($adminUsers as $user) {
+            $adminEmails[] = $user->user_email;
+        }
+        $authorEmail = get_the_author_meta('user_email');
+        array_push($adminEmails, $authorEmail);
+        if (in_array($userEmail, $adminEmails)) {
+            return $content;
+        }
+    } else {
+        if (isset($_COOKIE['comment_author_email_' . COOKIEHASH])) {
+            $userEmail = str_replace('%40', '@', $_COOKIE['comment_author_email_' . COOKIEHASH]);
+        } else {
+            return $notice;
+        }
+    }
+    if (empty($userEmail)) {
+        return $notice;
+    }
+    global $wpdb;
+    $post_id = get_the_ID();
+    $query = "SELECT `comment_ID` FROM {$wpdb->comments} WHERE `comment_post_ID`={$post_id} and `comment_approved`='1' and `comment_author_email`='{$userEmail}' LIMIT 1";
+    if ($wpdb->get_results($query)) {
+        return do_shortcode($content);
+    } else {
+        return $notice;
+    }
+}
+add_shortcode('reply', 'reply');
+
 add_action('init', 'more_button');
 function more_button()
 {
@@ -206,6 +244,7 @@ function register_button($buttons)
     array_push($buttons, " ", "mark");
     array_push($buttons, " ", "striped");
     array_push($buttons, " ", "bdbtn");
+    array_push($buttons, " ", "reply");
     array_push($buttons, " ", "music");
     array_push($buttons, " ", "vqq");
     array_push($buttons, " ", "youtube");
@@ -228,6 +267,7 @@ function add_plugin($plugin_array)
     $plugin_array['mark'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['striped'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['bdbtn'] = ASSET_PATH . '/assets/js/buttons/more.js';
+    $plugin_array['reply'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['music'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['vqq'] = ASSET_PATH . '/assets/js/buttons/more.js';
     $plugin_array['youtube'] = ASSET_PATH . '/assets/js/buttons/more.js';
