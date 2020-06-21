@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
-"POT-Creation-Date: 2020-06-21 11:42+0800\n"
-"PO-Revision-Date: 2020-06-21 04:15\n"
+"POT-Creation-Date: 2020-06-21 21:24+0800\n"
+"PO-Revision-Date: 2020-06-21 13:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -830,6 +830,7 @@ msgstr "第 %s 頁"
 
 #: inc/theme-shortcode.php:105 inc/theme-shortcode.php:117
 #: inc/theme-shortcode.php:129 inc/theme-shortcode.php:141
+#: inc/theme-shortcode.php:220
 msgid "标题内容"
 msgstr "標題內容"
 
