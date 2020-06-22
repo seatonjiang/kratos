@@ -186,7 +186,7 @@ Detailed changes for each release are documented in the [release notes](https://
 If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
-<img width="650" src="https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/options-framework/images/donate.png">
+<img width="700" src="https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/options-framework/images/donate.png">
 </p>
 
 ## Sponsors
