@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-06-21 21:24+0800\n"
-"PO-Revision-Date: 2020-06-21 13:26\n"
+"PO-Revision-Date: 2020-06-22 07:07\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -836,7 +836,7 @@ msgstr "標題內容"
 
 #: inc/theme-shortcode.php:183
 msgid "温馨提示：此处内容已隐藏，<a href=\"#comments\">回复</a>后刷新页面即可查看！"
-msgstr ""
+msgstr "溫馨提醒：此處內容已隱藏，<a href=\"#comments\">回覆</a>後重新整理網頁即可查看！"
 
 #: inc/theme-smtp.php:38
 msgid "[通知]您的留言已经通过审核"
