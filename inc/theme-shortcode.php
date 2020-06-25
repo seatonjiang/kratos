@@ -3,7 +3,7 @@
  * 文章短代码
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.06.21
+ * @version 2020.06.25
  */
 
 function h2title($atts, $content = null, $code = "")
@@ -218,7 +218,7 @@ add_shortcode('reply', 'reply');
 
 function accordion($atts, $content=null, $code=""){
     extract(shortcode_atts(array("title"=>__('标题内容','kratos')),$atts));
-    $return = '<div class="accordion"><div class="acheader"><div class="icon"><i class="fa fa-plus"></i></div><span>';
+    $return = '<div class="accordion"><div class="acheader"><div class="icon"><i class="kicon i-plus"></i></div><span>';
     $return .= $title;
     $return .= '</span></div><div class="contents"><div class="inner">';
     $return .= do_shortcode($content);

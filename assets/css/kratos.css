@@ -1178,6 +1178,10 @@ button:focus {
   font-size: 17px;
 }
 
+.k-main .details .article .content .accordion .acheader .icon .kicon {
+  font-size: 17px;
+}
+
 .k-main .details .article .content .accordion.active .icon {
   -webkit-transition: 0.3s;
   transition: 0.3s;
