@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.04.12
+ * @version 2020.06.25
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -11,7 +11,7 @@ if (kratos_option('g_cdn', false)) {
         'maocloud' => 'https://n3.cdn.vtrois.com/kratos/' . THEME_VERSION,
         'jsdelivr' => 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION,
     );
-    $asset_path = $cdn_array[kratos_option('g_cdn_n3', 'maocloud')];
+    $asset_path = $cdn_array[kratos_option('g_cdn_n3', 'jsdelivr')];
 } else {
     $asset_path = get_template_directory_uri();
 }

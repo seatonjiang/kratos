@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.04.12
+ * @version 2020.06.25
  */
 
 function getrobots()
@@ -104,7 +104,7 @@ function kratos_options()
     $options[] = array(
         'desc' => __('选择 CDN 加速节点', 'kratos'),
         'id' => 'g_cdn_n3',
-        'std' => 'maocloud',
+        'std' => 'jsdelivr',
         'type' => 'select',
         'class' => 'hidden',
         'options' => $cdn_array,
