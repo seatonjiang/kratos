@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
-"POT-Creation-Date: 2020-06-21 21:24+0800\n"
-"PO-Revision-Date: 2020-06-22 18:04+0800\n"
+"POT-Creation-Date: 2020-06-28 23:15+0800\n"
+"PO-Revision-Date: 2020-06-28 15:16\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -15,14 +15,14 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Crowdin-Project: 87f769374581b4e7ec717067bc809033\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: zh-TW\n"
 "X-Crowdin-File: /master/languages/kratos.pot\n"
 "X-Crowdin-File-ID: 5\n"
 "Language: zh_TW\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: 404.php:24
 msgid "很抱歉，你访问的页面不存在"
@@ -177,22 +177,18 @@ msgid "版权声明"
 msgstr "版權聲明"
 
 #: inc/options-framework/includes/class-options-interface.php:248
-msgid "主题源码使用 <a href=\"https://github.com/Vtrois/Kratos/blob/master/LICENSE\" target=\"_blank\">MIT 协议</a> 进行许可，说明文档使用 <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> 进行许可。"
-msgstr "主題原始碼使用 <a href=\"https://github.com/Vtrois/Kratos/blob/master/LICENSE\" target=\"_blank\">MIT 授權條款</a> 進行授權，說明文件使用 <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> 進行授權。"
+msgid "主题源码使用 <a href=\"https://github.com/vtrois/kratos/blob/master/LICENSE\" target=\"_blank\">MIT 协议</a> 进行许可，说明文档使用 <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> 进行许可。"
+msgstr "主題原始碼使用 <a href=\"https://github.com/vtrois/kratos/blob/master/LICENSE\" target=\"_blank\">MIT 授權條款</a> 進行授權，說明文件使用 <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> 進行授權。"
 
 #: inc/options-framework/includes/class-options-interface.php:249
 msgid "打赏支持"
 msgstr "打賞支持"
 
 #: inc/options-framework/includes/class-options-interface.php:251
-msgid "项目的发展需要您的支持和鼓励，打赏时请确认作者姓名为<b>姜学栋</b>"
-msgstr "專案的發展需要您的支持和鼓勵，打賞時請確認作者姓名為<b>姜学栋</b>"
-
-#: inc/options-framework/includes/class-options-interface.php:252
 msgid "赞助商"
 msgstr "贊助商"
 
-#: inc/options-framework/includes/class-options-interface.php:258
+#: inc/options-framework/includes/class-options-interface.php:257
 msgid "测试邮件"
 msgstr "測試郵件"
 
@@ -1096,8 +1092,8 @@ msgid "Kratos"
 msgstr "Kratos"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/Vtrois/Kratos"
-msgstr "https://github.com/Vtrois/Kratos"
+msgid "https://github.com/vtrois/kratos"
+msgstr "https://github.com/vtrois/kratos"
 
 #. Description of the plugin/theme
 msgid "主题提供了多种针对自媒体博客需求的侧栏工具，删繁就简专注于用户的阅读体验，优化的邮件中心为你的网站留存加分添彩。"
@@ -1110,3 +1106,4 @@ msgstr "Seaton Jiang"
 #. Author URI of the plugin/theme
 msgid "https://www.vtrois.com/"
 msgstr "https://www.vtrois.com/"
+
