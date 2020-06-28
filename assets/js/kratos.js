@@ -137,7 +137,7 @@
 	}
 
 	var consoleConfig = function () {
-		console.log('\n Kratos v' + KRATOS_VERSION + '\n\n https://github.com/Vtrois/Kratos \n\n')
+		console.log('\n Kratos v' + KRATOS_VERSION + '\n\n https://github.com/vtrois/kratos \n\n')
 	}
 
 	$(function () {

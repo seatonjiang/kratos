@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos\n"
-"POT-Creation-Date: 2020-06-21 21:24+0800\n"
+"POT-Creation-Date: 2020-06-28 23:15+0800\n"
 "PO-Revision-Date: 2020-02-14 23:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: inc/options-framework/includes/class-options-interface.php:248
 msgid ""
-"主题源码使用 <a href=\"https://github.com/Vtrois/Kratos/blob/master/LICENSE"
+"主题源码使用 <a href=\"https://github.com/vtrois/kratos/blob/master/LICENSE"
 "\" target=\"_blank\">MIT 协议</a> 进行许可，说明文档使用 <a href=\"https://"
 "creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND "
 "4.0</a> 进行许可。"
@@ -188,14 +188,10 @@ msgid "打赏支持"
 msgstr ""
 
 #: inc/options-framework/includes/class-options-interface.php:251
-msgid "项目的发展需要您的支持和鼓励，打赏时请确认作者姓名为<b>姜学栋</b>"
-msgstr ""
-
-#: inc/options-framework/includes/class-options-interface.php:252
 msgid "赞助商"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:258
+#: inc/options-framework/includes/class-options-interface.php:257
 msgid "测试邮件"
 msgstr ""
 
@@ -839,7 +835,9 @@ msgid "标题内容"
 msgstr ""
 
 #: inc/theme-shortcode.php:183
-msgid "温馨提示：此处内容已隐藏，<a href=\"#comments\">回复</a>后刷新页面即可查看！"
+msgid ""
+"温馨提示：此处内容已隐藏，<a href=\"#comments\">回复</a>后刷新页面即可查"
+"看！"
 msgstr ""
 
 #: inc/theme-smtp.php:38
@@ -1100,7 +1098,7 @@ msgid "Kratos"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/Vtrois/Kratos"
+msgid "https://github.com/vtrois/kratos"
 msgstr ""
 
 #. Description of the plugin/theme

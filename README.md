@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/options-framework/images/about.png">
+<img src="https://raw.githubusercontent.com/vtrois/kratos/master/inc/options-framework/images/about.png">
 </p>
 
 <p align="center">
@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/badge/wordpress-v5.4.1%20tested-%234c1">
 <a href="https://vtrois.crowdin.com/kratos" target="_blank"><img src="https://badges.crowdin.net/e/f1d1a7eaa6af337dba7aa4a39b28e67c/localized.svg"></a>
 <a href="https://www.jsdelivr.com/package/gh/vtrois/kratos" target="_blank"><img src="https://data.jsdelivr.com/v1/package/gh/vtrois/kratos/badge?style=rounded"></a>
-<img src="https://img.shields.io/github/license/Vtrois/Kratos?color=%234c1">
+<img src="https://img.shields.io/github/license/vtrois/kratos?color=%234c1">
 </p>
 
 ## About
@@ -179,14 +179,14 @@ Kratos
 
 ## Changelog
 
-Detailed changes for each release are documented in the [release notes](https://github.com/Vtrois/Kratos/releases).
+Detailed changes for each release are documented in the [release notes](https://github.com/vtrois/kratos/releases).
 
 ## Donation
 
 If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
-<img width="700" src="https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/options-framework/images/donate.png">
+<img width="700" src="https://raw.githubusercontent.com/vtrois/kratos/master/inc/options-framework/images/donate.png">
 </p>
 
 ## Sponsors
@@ -194,11 +194,11 @@ If you find Kratos useful, you can buy us a cup of coffee
 Special thanks to the generous sponsorship by:
 
 <p>
-<a width="200" href="https://www.maoyuncloud.com/" target="_blank"><img src="https://raw.githubusercontent.com/Vtrois/Kratos/master/inc/options-framework/images/maocloud.png"></a>
+<a width="200" href="https://www.maoyuncloud.com/" target="_blank"><img src="https://raw.githubusercontent.com/vtrois/kratos/master/inc/options-framework/images/maocloud.png"></a>
 </p>
 
 ## License
 
-The code is available under the [MIT](https://github.com/Vtrois/Kratos/blob/master/LICENSE) license.
+The code is available under the [MIT](https://github.com/vtrois/kratos/blob/master/LICENSE) license.
 
 The document is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/).
