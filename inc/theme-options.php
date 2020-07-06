@@ -349,7 +349,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('页面布局', 'kratos'),
         'desc' => __('是否显示侧边栏小工具（默认显示侧边栏），仅在文章页面生效', 'kratos'),
-        'id' => "g_article_wodgets",
+        'id' => "g_article_widgets",
         'std' => "two_side",
         'type' => "images",
         'options' => array(

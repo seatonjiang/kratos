@@ -11,7 +11,7 @@ $col_array = array(
     'one_side' => 'col-lg-12',
     'two_side' => 'col-lg-8'
 );
-$select_col = $col_array[kratos_option('g_article_wodgets', 'two_side')];
+$select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
 ?>
 <div class="k-main <?php echo kratos_option('top_select', 'banner'); ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
     <div class="container">
@@ -146,7 +146,7 @@ $select_col = $col_array[kratos_option('g_article_wodgets', 'two_side')];
                 </nav>
                 <?php comments_template(); ?>
             </div>
-            <?php if (kratos_option('g_article_wodgets', 'two_side') == 'two_side'){ ?>
+            <?php if (kratos_option('g_article_widgets', 'two_side') == 'two_side'){ ?>
             <div class="col-lg-4 sidebar d-none d-lg-block">
                 <?php dynamic_sidebar('sidebar_tool'); ?>
             </div>
