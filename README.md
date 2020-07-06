@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/vtrois/kratos/master/inc/options-framework/images/about.png">
+<img src="https://raw.githubusercontent.com/vtrois/kratos/master/assets/img/options/about.png">
 </p>
 
 <p align="center">
@@ -186,7 +186,7 @@ Detailed changes for each release are documented in the [release notes](https://
 If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
-<img width="700" src="https://raw.githubusercontent.com/vtrois/kratos/master/inc/options-framework/images/donate.png">
+<img width="700" src="https://raw.githubusercontent.com/vtrois/kratos/master/assets/img/options/donate.png">
 </p>
 
 ## Sponsors
@@ -194,7 +194,7 @@ If you find Kratos useful, you can buy us a cup of coffee
 Special thanks to the generous sponsorship by:
 
 <p>
-<a width="200" href="https://www.maoyuncloud.com/" target="_blank"><img src="https://raw.githubusercontent.com/vtrois/kratos/master/inc/options-framework/images/maocloud.png"></a>
+<a width="200" href="https://www.maoyuncloud.com/" target="_blank"><img src="https://raw.githubusercontent.com/vtrois/kratos/master/assets/img/options/maocloud.png"></a>
 </p>
 
 ## License
