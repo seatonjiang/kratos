@@ -248,8 +248,6 @@ class Options_Framework_Interface
 					<p>' . __('主题源码使用 <a href="https://github.com/vtrois/kratos/blob/master/LICENSE" target="_blank">MIT 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos') . '</p>
 					<h4>' . __('打赏支持', 'kratos') . '</h4>
 					<img src="' . ASSET_PATH . '/assets/img/options/donate.png">
-                    <h4>' . __('赞助商', 'kratos') . '</h4>
-                    <a href="https://www.maoyuncloud.com/" target="_blank"><img class="maocloud" src="' . ASSET_PATH . '/assets/img/options/maocloud.png"></a>
 				    </div>';
                     break;
 

@@ -4,7 +4,7 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/php-%3E%3D7.0.0-blue">
-<img src="https://img.shields.io/badge/wordpress-v5.4.1%20tested-%234c1">
+<img src="https://img.shields.io/badge/wordpress-v5.4.2%20tested-%234c1">
 <a href="https://vtrois.crowdin.com/kratos" target="_blank"><img src="https://badges.crowdin.net/e/f1d1a7eaa6af337dba7aa4a39b28e67c/localized.svg"></a>
 <a href="https://www.jsdelivr.com/package/gh/vtrois/kratos" target="_blank"><img src="https://data.jsdelivr.com/v1/package/gh/vtrois/kratos/badge?style=rounded"></a>
 <img src="https://img.shields.io/github/license/vtrois/kratos?color=%234c1">
@@ -62,6 +62,9 @@ Kratos
 │   │   │   ├── icon-ext.png
 │   │   │   └── icon.png
 │   │   ├── options
+│   │   │   ├── about.png
+│   │   │   ├── discuss.png
+│   │   │   ├── donate.png
 │   │   │   ├── col-8.png
 │   │   │   └── col-12.png
 │   │   ├── nothing.svg
@@ -187,14 +190,6 @@ If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
 <img width="700" src="https://raw.githubusercontent.com/vtrois/kratos/master/assets/img/options/donate.png">
-</p>
-
-## Sponsors
-
-Special thanks to the generous sponsorship by:
-
-<p>
-<a width="200" href="https://www.maoyuncloud.com/" target="_blank"><img src="https://raw.githubusercontent.com/vtrois/kratos/master/assets/img/options/maocloud.png"></a>
 </p>
 
 ## License
