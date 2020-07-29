@@ -1741,12 +1741,22 @@ button:focus {
 }
 
 .k-main .sidebar .w-about .textwidget {
-  padding: 20px;
+  padding: 5px 20px 20px;
 }
 
 .k-main .sidebar .w-about .textwidget p {
   margin-bottom: 0;
   cursor: default;
+}
+
+.k-main .sidebar .w-about .textwidget .username {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.k-main .sidebar .w-about .textwidget .about {
+  font-size: 15px;
 }
 
 .k-main .sidebar .w-ad {

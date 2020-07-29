@@ -88,7 +88,7 @@ class widget_ad extends WP_Widget
 
         echo '<div class="widget w-ad">';
         echo '<a href="' . $url . '" target="_blank" rel="noreferrer"><img src="' . $image . '"><div class="prompt">' . $subtitle . '</div></a>';
-        echo '</div><!-- .w-ad -->';
+        echo '</div>';
     }
 
     public function update($new_instance, $old_instance)
@@ -152,6 +152,7 @@ class widget_about extends WP_Widget
     public function widget($args, $instance)
     {
         $introduce = kratos_option('a_about', __('保持饥渴的专注，追求最佳的品质', 'kratos'));
+        $username = kratos_option('a_nickname', __('Kratos', 'kratos'));
         $avatar = kratos_option('a_gravatar', ASSET_PATH . '/assets/img/gravatar.png');
         $background = !empty($instance['background']) ? $instance['background'] : ASSET_PATH . '/assets/img/about-background.png';
 
@@ -163,8 +164,8 @@ class widget_about extends WP_Widget
             echo '<a href="' . wp_login_url() . '">';
         }
         echo '<img src="' . $avatar . '"></a>';
-        echo '</div><div class="textwidget text-center"><p>' . $introduce . '</p></div>';
-        echo '</div><!-- .w-about -->';
+        echo '</div><div class="textwidget text-center"><p class="username">'. $username .'</p><p class="about">' . $introduce . '</p></div>';
+        echo '</div>';
     }
 
     public function update($new_instance, $old_instance)
@@ -221,7 +222,7 @@ class widget_tags extends WP_Widget
         echo '<div class="widget w-tags">';
         echo '<div class="title">' . __('标签聚合', 'kratos') . '</div>';
         echo '<div class="item">' . $tags . '</div>';
-        echo '</div><!-- .w-tags -->';
+        echo '</div>';
     }
 
     public function update($new_instance, $old_instance)
@@ -302,7 +303,7 @@ class widget_posts extends WP_Widget
             <?php endforeach;?>
             </div>
         </div>
-        <?php echo '</div><!-- .w-recommended -->';
+        <?php echo '</div>';
     }
 
     public function update($new_instance, $old_instance)
