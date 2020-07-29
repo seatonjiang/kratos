@@ -293,12 +293,6 @@ button:focus {
   transform: rotate(180deg);
 }
 
-@media screen and (max-width: 1200px) {
-  .nav-tabs .nav-link {
-    padding: 8px 22px;
-  }
-}
-
 @media only screen and (min-width: 992px) {
   .k-nav {
     border-bottom: 1px solid transparent;
@@ -1816,9 +1810,9 @@ button:focus {
 
 .k-main .sidebar .w-tags .item a {
   display: inline-block;
-  margin: 0 2px 4px 0;
+  margin: 0 1px 10px 0;
   padding: 2px 0;
-  width: 140px;
+  width: 165px;
   border: 1px solid #eeeeee;
   color: #333;
   list-style: none;
@@ -1828,9 +1822,9 @@ button:focus {
 
 .k-main .sidebar .widget_links ul li {
   display: inline-block;
-  margin: 0 2px 4px 0;
+  margin: 0 1px 10px 0;
   padding: 2px 0;
-  width: 140px;
+  width: 165px;
   color: #333;
   list-style: none;
   font-size: 15px;
@@ -1863,7 +1857,7 @@ button:focus {
 }
 
 .nav-tabs .nav-link {
-  padding: 8px 20px;
+  padding: 8px 28px;
   border: 0;
   border-bottom: 2px solid #f2f2f2;
 }
@@ -1944,9 +1938,9 @@ button:focus {
 .k-main .sidebar .widget_archive ul li {
   display: inline-block;
   overflow: hidden;
-  margin: 0 2px 4px 0;
+  margin: 0 1px 4px 0;
   padding: 4px 0;
-  width: 140px;
+  width: 165px;
   border: 1px solid #eeeeee;
   list-style: none;
   text-align: center;
@@ -1964,7 +1958,11 @@ button:focus {
   color: #333;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1310px) {
+  .nav-tabs .nav-link {
+    padding: 8px 22px;
+  }
+
   .k-main .sidebar .w-tags .item a,
   .k-main .sidebar .widget_links ul li {
     width: 110px;
