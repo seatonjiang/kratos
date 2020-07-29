@@ -399,7 +399,7 @@ function kratos_options()
 
     $options[] = array(
         'name' => __('授权方式', 'kratos'),
-        'desc' => __('填写登录鉴权的方式', 'kratos'),
+        'desc' => __('填写登录鉴权的方式，ssl 或 tls', 'kratos'),
         'id' => 'm_sec',
         'class' => 'hidden',
         'type' => 'text',
