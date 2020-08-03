@@ -1822,7 +1822,7 @@ button:focus {
   display: inline-block;
   margin: 0 1px 10px 0;
   padding: 2px 0;
-  width: 165px;
+  width: 164px;
   border: 1px solid #eeeeee;
   color: #333;
   list-style: none;
@@ -1834,7 +1834,7 @@ button:focus {
   display: inline-block;
   margin: 0 1px 10px 0;
   padding: 2px 0;
-  width: 165px;
+  width: 164px;
   color: #333;
   list-style: none;
   font-size: 15px;
@@ -1916,26 +1916,20 @@ button:focus {
   display: none;
 }
 
-.searchform input[type="text"] {
-  width: 205px;
+.btn-search {
+  background-color: #00a2ff;
+  border-color: #00a2ff;
 }
 
-.searchform input[type="submit"] {
-  padding: 0.375rem 0.75rem;
-  width: 80px;
-  border: none;
-  border-radius: 3px;
-  background-color: #00a2ff;
-  color: #fff;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.btn-search:not(:disabled):not(.disabled):active,
+.btn-search:hover,
+.btn-search:focus {
+  background-color: #0095ff;
+  border-color: #0095ff;
+}
+
+.btn-search:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
 }
 
 .k-main .sidebar .widget_categories ul,
@@ -1950,7 +1944,7 @@ button:focus {
   overflow: hidden;
   margin: 0 1px 4px 0;
   padding: 4px 0;
-  width: 165px;
+  width: 164px;
   border: 1px solid #eeeeee;
   list-style: none;
   text-align: center;
@@ -1968,6 +1962,17 @@ button:focus {
   color: #333;
 }
 
+.k-main .sidebar .w-search .form-control,
+.k-main .sidebar .w-search .btn {
+  font-size: 15px;
+  border-radius: 0;
+}
+
+.k-main .sidebar .w-search .btn {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 @media screen and (max-width: 1310px) {
   .nav-tabs .nav-link {
     padding: 8px 22px;
@@ -1976,14 +1981,6 @@ button:focus {
   .k-main .sidebar .w-tags .item a,
   .k-main .sidebar .widget_links ul li {
     width: 110px;
-  }
-
-  .searchform input[type="text"] {
-    width: 160px;
-  }
-
-  .searchform input[type="submit"] {
-    width: 65px;
   }
 
   .k-main .sidebar .widget_categories ul li,

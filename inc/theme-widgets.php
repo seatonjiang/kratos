@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.04.12
+ * @version 2020.08.03
  */
 
 // 添加小工具
@@ -24,6 +24,7 @@ function widgets_init()
         'WP_Widget_Recent_Posts',
         'WP_Widget_Recent_Comments',
         'WP_Widget_RSS',
+        'WP_Widget_Search',
         'WP_Widget_Tag_Cloud',
         'WP_Nav_Menu_Widget',
     );
@@ -56,6 +57,46 @@ function most_comm_posts($days = 30, $nums = 6)
         }
     }
     echo $output;
+}
+
+class widget_search extends WP_Widget {
+
+    public function __construct() {
+        $widget_ops = array(
+            'classname'                   => 'widget_search',
+            'description'                 => __( 'A search form for your site.' ),
+            'customize_selective_refresh' => true,
+        );
+        parent::__construct( 'search', _x( 'Search', 'Search widget' ), $widget_ops );
+    }
+
+    public function widget( $args, $instance ) {
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : '';
+        $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+
+        echo '<div class="widget w-search">';
+        if ( $title ) {
+            echo '<div class="title">'. $title .'</div>';
+        }
+        echo '<div class="item"> <form role="search" method="get" id="searchform" class="searchform" action="'. home_url('/') .'"> <div class="input-group mt-2 mb-2"> <input type="text" name="s" id="search" class="form-control" placeholder="'. __('搜点什么呢?', 'kratos') .'"> <div class="input-group-append"> <button class="btn btn-primary btn-search" type="submit" id="searchsubmit">'. __('搜索', 'kratos') .'</button> </div> </div> </form>';
+        echo '</div></div>';
+    }
+ 
+    public function form( $instance ) {
+        $instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
+        $title    = $instance['title'];
+        ?>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?> <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></label></p>
+        <?php
+    }
+ 
+    public function update( $new_instance, $old_instance ) {
+        $instance          = $old_instance;
+        $new_instance      = wp_parse_args( (array) $new_instance, array( 'title' => '' ) );
+        $instance['title'] = sanitize_text_field( $new_instance['title'] );
+        return $instance;
+    }
+ 
 }
 
 class widget_ad extends WP_Widget
@@ -340,6 +381,7 @@ function register_widgets()
     register_widget('widget_ad');
     register_widget('widget_about');
     register_widget('widget_tags');
+    register_widget('widget_search');
     register_widget('widget_posts');
 }
 add_action('widgets_init', 'register_widgets');
