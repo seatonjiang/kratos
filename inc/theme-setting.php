@@ -3,7 +3,7 @@
  * 站点相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.06.13
+ * @version 2020.08.04
  */
 
 // 标题配置
@@ -37,9 +37,9 @@ function keywords()
         if ($keywords == '') {
             $tags = wp_get_post_tags($post->ID);
             foreach ($tags as $tag) {
-                $keywords = $keywords . $tag->name . ", ";
+                $keywords = $keywords . $tag->name . ",";
             }
-            $keywords = rtrim($keywords, ', ');
+            $keywords = rtrim($keywords, ',');
         }
     } elseif (is_page()) {
         $keywords = get_post_meta($post->ID, "seo_keywords_value", true);
