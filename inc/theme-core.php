@@ -179,7 +179,7 @@ add_filter('get_avatar', 'get_https_avatar');
 
 // 主题更新检测
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/vtrois/kratos/',
+    'https://raw.githubusercontent.com/vtrois/kratos/master/inc/update-checker/update.json',
     get_template_directory() . '/functions.php',
     'Kratos'
 );
