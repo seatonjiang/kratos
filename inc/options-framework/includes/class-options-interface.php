@@ -240,6 +240,7 @@ class Options_Framework_Interface
 						<li>' . __('说明文档：', 'kratos') . '<a href="https://www.vtrois.com/" target="_blank">https://www.vtrois.com/</a></li>
 						<li>' . __('代码托管：', 'kratos') . '<a href="https://github.com/vtrois/kratos" target="_blank">https://github.com/vtrois/kratos</a></li>
 						<li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/vtrois/kratos/issues" target="_blank">https://github.com/vtrois/kratos/issues</a></li>
+						<li>' . __('常见问题：', 'kratos') . '<a href="https://github.com/vtrois/kratos/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank">https://github.com/vtrois/kratos/wiki</a></li>
 						<li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/vtrois/kratos/releases" target="_blank">https://github.com/vtrois/kratos/releases</a></li>
 					</ul>
                     <h4>' . __('讨论交流', 'kratos') . '</h4>
