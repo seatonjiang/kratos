@@ -29,20 +29,21 @@ add_filter('wp_title', 'title', 10, 2);
 function keywords()
 {
     global $post;
+    $keywords = '';
     if (is_home()) {
         $keywords = kratos_option('seo_keywords');
     } elseif (is_single()) {
         $keywords = get_post_meta($post->ID, "seo_keywords_value", true);
-        if($keywords == '') {
-            $tags = wp_get_post_tags($post->ID);    
-            foreach ($tags as $tag ) {        
-                $keywords = $keywords . $tag->name . ", ";    
+        if ($keywords == '') {
+            $tags = wp_get_post_tags($post->ID);
+            foreach ($tags as $tag) {
+                $keywords = $keywords . $tag->name . ", ";
             }
             $keywords = rtrim($keywords, ', ');
         }
     } elseif (is_page()) {
         $keywords = get_post_meta($post->ID, "seo_keywords_value", true);
-        if($keywords == '') {
+        if ($keywords == '') {
             $keywords = kratos_option('seo_keywords');
         }
     } else {
@@ -55,6 +56,7 @@ function keywords()
 function description()
 {
     global $post;
+    $description = '';
     if (is_home()) {
         $description = kratos_option('seo_description');
     } elseif (is_single()) {
@@ -63,7 +65,7 @@ function description()
             $description = get_the_excerpt();
         }
         if ($description == '') {
-            $description = str_replace("\n","",mb_strimwidth(strip_tags($post->post_content), 0, 200, "…", 'utf-8'));
+            $description = str_replace("\n", "", mb_strimwidth(strip_tags($post->post_content), 0, 200, "…", 'utf-8'));
         }
     } elseif (is_category()) {
         $description = category_description();
