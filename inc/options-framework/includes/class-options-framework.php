@@ -24,7 +24,7 @@ class Options_Framework {
 	 */
 	function get_option_name() {
 
-		$name = '';
+		$name = 'kratos';
 
 		// Gets option name as defined in the theme
 		if ( function_exists( 'optionsframework_option_name' ) ) {
