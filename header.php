@@ -42,6 +42,7 @@
                 <span class="line third-line"></span>
             </button>
             <?php }
+            if ( has_nav_menu('header_menu') ) {
                 wp_nav_menu( array(
                     'theme_location'  => 'header_menu',
                     'depth'           => 2,
@@ -51,6 +52,7 @@
                     'menu_class'      => 'navbar-nav ml-auto',
                     'walker'          => new WP_Bootstrap_Navwalker(),
                 ) );
+            }
             ?>
         </div>
     </nav>
