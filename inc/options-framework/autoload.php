@@ -71,18 +71,7 @@ if (!function_exists('kratos_option')):
     function kratos_option($name, $default = false)
 {
 
-        $option_name = '';
-
-        // Gets option name as defined in the theme
-        if (function_exists('optionsframework_option_name')) {
-            $option_name = optionsframework_option_name();
-        }
-
-        // Fallback option name
-        if ('' == $option_name) {
-            $option_name = get_option('stylesheet');
-            $option_name = preg_replace("/\W/", "_", strtolower($option_name));
-        }
+        $option_name = 'kratos';
 
         // Get option settings from database
         $options = get_option($option_name);

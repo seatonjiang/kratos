@@ -26,17 +26,6 @@ class Options_Framework {
 
 		$name = 'kratos';
 
-		// Gets option name as defined in the theme
-		if ( function_exists( 'optionsframework_option_name' ) ) {
-			$name = optionsframework_option_name();
-		}
-
-		// Fallback
-		if ( '' == $name ) {
-			$name = get_option( 'stylesheet' );
-			$name = preg_replace( "/\W/", "_", strtolower( $name ) );
-		}
-
 		return apply_filters( 'options_framework_option_name', $name );
 
 	}
