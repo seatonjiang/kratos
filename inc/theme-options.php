@@ -73,6 +73,14 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('前台管理员导航', 'kratos'),
+        'desc' => __('开启前台管理员导航', 'kratos'),
+        'std' => '1',
+        'id' => 'g_adminbar',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
         'name' => __('CSS 动画库', 'kratos'),
         'desc' => __('开启 animate.css 效果', 'kratos'),
         'std' => '0',

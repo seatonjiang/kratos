@@ -46,20 +46,22 @@ function theme_autoload()
             wp_enqueue_style('fontawesome', ASSET_PATH . '/assets/css/fontawesome.min.css', array(), '5.13.0');
         }
         wp_enqueue_style('kratos', ASSET_PATH . '/assets/css/kratos.min.css', array(), THEME_VERSION);
-        $admin_bar_css = "
-        @media screen and (max-width: 782px) {
-            .k-nav{
-                padding-top: 46px;
+        if (kratos_option('g_adminbar', true)) {
+            $admin_bar_css = "
+            @media screen and (max-width: 782px) {
+                .k-nav{
+                    padding-top: 46px;
+                }
             }
-        }
-        @media screen and (min-width: 782px) {
-            .k-nav{
-                padding-top: 32px;
+            @media screen and (min-width: 782px) {
+                .k-nav{
+                    padding-top: 32px;
+                }
             }
-        }
-        ";
-        if (current_user_can('level_10')) {
-            wp_add_inline_style('kratos', $admin_bar_css);
+            ";
+            if (current_user_can('level_10')) {
+                wp_add_inline_style('kratos', $admin_bar_css);
+            }
         }
         wp_enqueue_style('custom', get_template_directory_uri() . '/custom/custom.css', array(), THEME_VERSION);
         // js
@@ -85,8 +87,10 @@ function theme_autoload()
 }
 add_action('wp_enqueue_scripts', 'theme_autoload');
 
-// 禁用 Admin Bar
-// add_filter('show_admin_bar', '__return_false');
+// Admin Bar
+if (! kratos_option('g_adminbar', true)) {
+    add_filter('show_admin_bar', '__return_false');
+}
 
 // 移除自动保存、修订版本
 remove_action('post_updated', 'wp_save_post_revision');
