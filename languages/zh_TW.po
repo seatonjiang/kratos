@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-08-10 15:23+0800\n"
-"PO-Revision-Date: 2020-08-22 07:08\n"
+"PO-Revision-Date: 2020-08-22 08:08\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -328,11 +328,11 @@ msgstr "全站頁面的背景顏色，需填寫十六進位顏色碼"
 
 #: inc/theme-options.php:76
 msgid "前台管理员导航"
-msgstr ""
+msgstr "前台管理員導覽列"
 
 #: inc/theme-options.php:77
 msgid "开启前台管理员导航"
-msgstr ""
+msgstr "開啟前台管理員導覽列"
 
 #: inc/theme-options.php:84
 msgid "CSS 动画库"
@@ -617,7 +617,7 @@ msgstr "授權方式"
 
 #: inc/theme-options.php:410
 msgid "填写登录鉴权的方式，ssl 或 tls"
-msgstr ""
+msgstr "填寫登入驗證的方式，SSL 或 TLS"
 
 #: inc/theme-options.php:417
 msgid "邮箱帐号"
@@ -884,20 +884,20 @@ msgstr "小工具"
 
 #: inc/theme-widgets.php:67
 msgid "A search form for your site."
-msgstr ""
+msgstr "A search form for your site."
 
 #: inc/theme-widgets.php:70
 msgctxt "Search widget"
 msgid "Search"
-msgstr ""
+msgstr "Search"
 
 #: inc/theme-widgets.php:81
 msgid "搜索"
-msgstr ""
+msgstr "搜尋"
 
 #: inc/theme-widgets.php:89
 msgid "Title:"
-msgstr ""
+msgstr "Title:"
 
 #: inc/theme-widgets.php:109
 msgid "图片广告"
