@@ -26,9 +26,6 @@
     <div class="a-meta">
         <span class="float-left d-none d-md-block">
             <span class="mr-2"><i class="kicon i-calendar"></i><?php echo get_the_date('Y年m月d日'); ?></span>
-            <?php if(kratos_option('multiusers',false)){ ?>
-            <span class="mr-2"><i class="kicon i-user"></i><?php echo get_the_author_meta('display_name'); ?></span>
-            <?php } ?>
             <span class="mr-2"><i class="kicon i-comments"></i><?php comments_number('0', '1', '%'); _e('条评论', 'kratos'); ?></span>
         </span>
         <span class="float-left d-block">

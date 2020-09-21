@@ -71,14 +71,7 @@ function kratos_options()
         'std' => '#f5f5f5',
         'type' => 'color',
     );
-
-    $options[] = array(
-        'name' => __('多人模式', 'kratos'),
-        'desc' => __('在文章列表显示当前文章作者，在文章页面页脚显示当前作者介绍', 'kratos'),
-        'id' => 'multiusers',
-        'type' => 'checkbox',
-    );
-
+    
     $options[] = array(
         'name' => __('前台管理员导航', 'kratos'),
         'desc' => __('开启前台管理员导航', 'kratos'),
