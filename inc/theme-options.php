@@ -196,6 +196,13 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('多人创作', 'kratos'),
+        'desc' => __('在文章列表显示文章作者，在文章页面页脚显示作者介绍', 'kratos'),
+        'id' => 'multiusers',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
         'name' => __('收录配置', 'kratos'),
         'type' => 'heading',
     );
