@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos\n"
-"POT-Creation-Date: 2020-08-10 15:23+0800\n"
+"POT-Creation-Date: 2020-09-21 11:38+0800\n"
 "PO-Revision-Date: 2020-02-14 23:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "搜点什么呢?"
 msgstr ""
 
-#: header.php:76 inc/theme-options.php:478
+#: header.php:76 inc/theme-options.php:485
 msgid "一款专注于用户阅读体验的响应式博客主题"
 msgstr ""
 
@@ -233,7 +233,7 @@ msgstr ""
 msgid "描述"
 msgstr ""
 
-#: inc/theme-article.php:397 inc/theme-options.php:212
+#: inc/theme-article.php:397 inc/theme-options.php:219
 msgid "关键词"
 msgstr ""
 
@@ -293,11 +293,11 @@ msgstr ""
 msgid "知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议"
 msgstr ""
 
-#: inc/theme-options.php:42 inc/theme-options.php:461
+#: inc/theme-options.php:42 inc/theme-options.php:468
 msgid "图片导航"
 msgstr ""
 
-#: inc/theme-options.php:43 inc/theme-options.php:453
+#: inc/theme-options.php:43 inc/theme-options.php:460
 msgid "颜色导航"
 msgstr ""
 
@@ -330,492 +330,500 @@ msgid "全站页面的背景颜色，需填写十六进制颜色码"
 msgstr ""
 
 #: inc/theme-options.php:76
-msgid "前台管理员导航"
+msgid "多人模式"
 msgstr ""
 
 #: inc/theme-options.php:77
-msgid "开启前台管理员导航"
+msgid "在文章列表显示当前文章作者，在文章页面页脚显示当前作者介绍"
+msgstr ""
+
+#: inc/theme-options.php:83
+msgid "前台管理员导航"
 msgstr ""
 
 #: inc/theme-options.php:84
+msgid "开启前台管理员导航"
+msgstr ""
+
+#: inc/theme-options.php:91
 msgid "CSS 动画库"
 msgstr ""
 
-#: inc/theme-options.php:85
+#: inc/theme-options.php:92
 msgid "开启 animate.css 效果"
 msgstr ""
 
-#: inc/theme-options.php:92
+#: inc/theme-options.php:99
 msgid "Font Awesome"
 msgstr ""
 
-#: inc/theme-options.php:93
+#: inc/theme-options.php:100
 msgid "开启 Font Awesome 字体"
 msgstr ""
 
-#: inc/theme-options.php:100
+#: inc/theme-options.php:107
 msgid "静态资源加速"
 msgstr ""
 
-#: inc/theme-options.php:101
+#: inc/theme-options.php:108
 msgid "开启静态资源加速（CSS、JS、Font）"
 msgstr ""
 
-#: inc/theme-options.php:108
+#: inc/theme-options.php:115
 msgid "禁止生成缩略图"
 msgstr ""
 
-#: inc/theme-options.php:109
+#: inc/theme-options.php:116
 msgid "是否禁止生成多种尺寸图片资源"
 msgstr ""
 
-#: inc/theme-options.php:116
+#: inc/theme-options.php:123
 msgid "媒体资源托管"
 msgstr ""
 
-#: inc/theme-options.php:117
+#: inc/theme-options.php:124
 msgid "是否将媒体资源托管到 DogeCloud 存储"
 msgstr ""
 
-#: inc/theme-options.php:124
+#: inc/theme-options.php:131
 msgid "存储空间名称"
 msgstr ""
 
-#: inc/theme-options.php:131
+#: inc/theme-options.php:138
 msgid "加速域名"
 msgstr ""
 
-#: inc/theme-options.php:133
+#: inc/theme-options.php:140
 msgid "例如：https://cdn.xxx.com"
 msgstr ""
 
-#: inc/theme-options.php:139
+#: inc/theme-options.php:146
 msgid "AccessKey"
 msgstr ""
 
-#: inc/theme-options.php:146
+#: inc/theme-options.php:153
 msgid "SecretKey"
 msgstr ""
 
-#: inc/theme-options.php:153
+#: inc/theme-options.php:160
 msgid "Gutenberg 编辑器"
 msgstr ""
 
-#: inc/theme-options.php:154
+#: inc/theme-options.php:161
 msgid "开启 Gutenberg 编辑器"
 msgstr ""
 
-#: inc/theme-options.php:161
+#: inc/theme-options.php:168
 msgid "Gravatar 加速"
 msgstr ""
 
-#: inc/theme-options.php:162
+#: inc/theme-options.php:169
 msgid "开启 Gravatar 头像加速"
 msgstr ""
 
-#: inc/theme-options.php:169
+#: inc/theme-options.php:176
 msgid "Chrome 导航栏颜色"
 msgstr ""
 
-#: inc/theme-options.php:170
+#: inc/theme-options.php:177
 msgid "Chrome 移动端浏览器导航栏的颜色"
 msgstr ""
 
-#: inc/theme-options.php:177 inc/theme-options.php:335
+#: inc/theme-options.php:184 inc/theme-options.php:342
 msgid "微信二维码"
 msgstr ""
 
-#: inc/theme-options.php:178
+#: inc/theme-options.php:185
 msgid "开启页面右下角浮动微信二维码"
 msgstr ""
 
-#: inc/theme-options.php:192
+#: inc/theme-options.php:199
 msgid "404 页面图片"
 msgstr ""
 
-#: inc/theme-options.php:199
+#: inc/theme-options.php:206
 msgid "收录配置"
 msgstr ""
 
-#: inc/theme-options.php:204
+#: inc/theme-options.php:211
 msgid "分享图片"
 msgstr ""
 
-#: inc/theme-options.php:205
+#: inc/theme-options.php:212
 msgid "搜索引擎或者社交工具分享首页时抓取的图片"
 msgstr ""
 
-#: inc/theme-options.php:213
+#: inc/theme-options.php:220
 msgid "每个关键词之间需要用「英文逗号」分割"
 msgstr ""
 
-#: inc/theme-options.php:219
+#: inc/theme-options.php:226
 msgid "站点描述"
 msgstr ""
 
-#: inc/theme-options.php:225
+#: inc/theme-options.php:232
 msgid "统计代码"
 msgstr ""
 
-#: inc/theme-options.php:226
+#: inc/theme-options.php:233
 msgid "注意：输入 HTML/JS 代码时请注意辨别代码安全！"
 msgstr ""
 
-#: inc/theme-options.php:232
+#: inc/theme-options.php:239
 msgid "robots.txt 配置"
 msgstr ""
 
-#: inc/theme-options.php:233
+#: inc/theme-options.php:240
 msgid "- 需要 "
 msgstr ""
 
-#: inc/theme-options.php:233
+#: inc/theme-options.php:240
 msgid " 是开启的状态，下面的配置才会生效"
 msgstr ""
 
-#: inc/theme-options.php:238
+#: inc/theme-options.php:245
 msgid "- 如果网站根目录下已经有 robots.txt 文件，下面的配置不会生效"
 msgstr ""
 
-#: inc/theme-options.php:243
+#: inc/theme-options.php:250
 msgid "- 点击 "
 msgstr ""
 
-#: inc/theme-options.php:243
+#: inc/theme-options.php:250
 msgid " 查看配置是否生效，如果网站开启了 CDN，可能需要刷新缓存才会生效"
 msgstr ""
 
-#: inc/theme-options.php:254
+#: inc/theme-options.php:261
 msgid "首页配置"
 msgstr ""
 
-#: inc/theme-options.php:259
+#: inc/theme-options.php:266
 msgid "哀悼功能"
 msgstr ""
 
-#: inc/theme-options.php:260
+#: inc/theme-options.php:267
 msgid "开启站点首页黑白功能（用于R.I.P.）"
 msgstr ""
 
-#: inc/theme-options.php:266
+#: inc/theme-options.php:273
 msgid "特色图片"
 msgstr ""
 
-#: inc/theme-options.php:267
+#: inc/theme-options.php:274
 msgid "开启站点首页特色图片功能"
 msgstr ""
 
-#: inc/theme-options.php:274
+#: inc/theme-options.php:281
 msgid "默认特色图"
 msgstr ""
 
-#: inc/theme-options.php:275
+#: inc/theme-options.php:282
 msgid "当文章中没有图片并且没有设置特色图时在首页显示"
 msgstr ""
 
-#: inc/theme-options.php:283
+#: inc/theme-options.php:290
 msgid "无内容图片"
 msgstr ""
 
-#: inc/theme-options.php:284
+#: inc/theme-options.php:291
 msgid "当搜索不到文章或文章分类中没有文章时显示"
 msgstr ""
 
-#: inc/theme-options.php:291
+#: inc/theme-options.php:298
 msgid "文章配置"
 msgstr ""
 
-#: inc/theme-options.php:296
+#: inc/theme-options.php:303
 msgid "知识共享协议"
 msgstr ""
 
-#: inc/theme-options.php:297
+#: inc/theme-options.php:304
 msgid "开启文章知识共享协议"
 msgstr ""
 
-#: inc/theme-options.php:303
+#: inc/theme-options.php:310
 msgid "选择文章的知识共享协议"
 msgstr ""
 
-#: inc/theme-options.php:312
+#: inc/theme-options.php:319
 msgid "网易云音乐"
 msgstr ""
 
-#: inc/theme-options.php:313
+#: inc/theme-options.php:320
 msgid "开启网易云音乐自动播放"
 msgstr ""
 
-#: inc/theme-options.php:319
+#: inc/theme-options.php:326
 msgid "文章打赏"
 msgstr ""
 
-#: inc/theme-options.php:320
+#: inc/theme-options.php:327
 msgid "开启文章页面打赏功能"
 msgstr ""
 
-#: inc/theme-options.php:326
+#: inc/theme-options.php:333
 msgid "支付宝二维码"
 msgstr ""
 
-#: inc/theme-options.php:344
+#: inc/theme-options.php:351
 msgid "页面布局"
 msgstr ""
 
-#: inc/theme-options.php:345
+#: inc/theme-options.php:352
 msgid "是否显示侧边栏小工具（默认显示侧边栏），仅在文章页面生效"
 msgstr ""
 
-#: inc/theme-options.php:355
+#: inc/theme-options.php:362
 msgid "站长配置"
 msgstr ""
 
-#: inc/theme-options.php:360
+#: inc/theme-options.php:367
 msgid "个人头像"
 msgstr ""
 
-#: inc/theme-options.php:367
+#: inc/theme-options.php:374
 msgid "个人昵称"
 msgstr ""
 
-#: inc/theme-options.php:374 inc/theme-widgets.php:178
+#: inc/theme-options.php:381 inc/theme-widgets.php:178
 msgid "个人简介"
 msgstr ""
 
-#: inc/theme-options.php:375 inc/theme-widgets.php:195
-#: pages/page-toolbar.php:13
+#: inc/theme-options.php:382 inc/theme-widgets.php:195
+#: pages/page-toolbar.php:18
 msgid "保持饥渴的专注，追求最佳的品质"
 msgstr ""
 
-#: inc/theme-options.php:381
+#: inc/theme-options.php:388
 msgid "邮件配置"
 msgstr ""
 
-#: inc/theme-options.php:386
+#: inc/theme-options.php:393
 msgid "SMTP 服务"
 msgstr ""
 
-#: inc/theme-options.php:387
+#: inc/theme-options.php:394
 msgid "开启 SMTP 服务功能"
 msgstr ""
 
-#: inc/theme-options.php:393
+#: inc/theme-options.php:400
 msgid "邮件服务器"
 msgstr ""
 
-#: inc/theme-options.php:394
+#: inc/theme-options.php:401
 msgid "填写发件服务器地址"
 msgstr ""
 
-#: inc/theme-options.php:401
+#: inc/theme-options.php:408
 msgid "服务器端口"
 msgstr ""
 
-#: inc/theme-options.php:402
+#: inc/theme-options.php:409
 msgid "填写发件服务器端口"
 msgstr ""
 
-#: inc/theme-options.php:409
+#: inc/theme-options.php:416
 msgid "授权方式"
 msgstr ""
 
-#: inc/theme-options.php:410
+#: inc/theme-options.php:417
 msgid "填写登录鉴权的方式，ssl 或 tls"
 msgstr ""
 
-#: inc/theme-options.php:417
+#: inc/theme-options.php:424
 msgid "邮箱帐号"
 msgstr ""
 
-#: inc/theme-options.php:418
+#: inc/theme-options.php:425
 msgid "填写邮箱账号"
 msgstr ""
 
-#: inc/theme-options.php:425
+#: inc/theme-options.php:432
 msgid "邮箱密码"
 msgstr ""
 
-#: inc/theme-options.php:426
+#: inc/theme-options.php:433
 msgid "填写邮箱密码"
 msgstr ""
 
-#: inc/theme-options.php:439
+#: inc/theme-options.php:446
 msgid "顶部配置"
 msgstr ""
 
-#: inc/theme-options.php:444
+#: inc/theme-options.php:451
 msgid "顶部样式"
 msgstr ""
 
-#: inc/theme-options.php:445
+#: inc/theme-options.php:452
 msgid "请选择顶部样式（颜色导航或图片导航）"
 msgstr ""
 
-#: inc/theme-options.php:469
+#: inc/theme-options.php:476
 msgid "副标题"
 msgstr ""
 
-#: inc/theme-options.php:477
+#: inc/theme-options.php:484
 msgid "标题描述"
 msgstr ""
 
-#: inc/theme-options.php:485
+#: inc/theme-options.php:492
 msgid "页脚配置"
 msgstr ""
 
-#: inc/theme-options.php:490
+#: inc/theme-options.php:497
 msgid "选择需要开启的社交图标"
 msgstr ""
 
-#: inc/theme-options.php:491
+#: inc/theme-options.php:498
 msgid "国内平台"
 msgstr ""
 
-#: inc/theme-options.php:496
+#: inc/theme-options.php:503
 msgid "新浪微博"
 msgstr ""
 
-#: inc/theme-options.php:503
+#: inc/theme-options.php:510
 msgid "例如：https://weibo.com/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:509
+#: inc/theme-options.php:516
 msgid "哔哩哔哩"
 msgstr ""
 
-#: inc/theme-options.php:516
+#: inc/theme-options.php:523
 msgid "例如：https://space.bilibili.com/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:522
+#: inc/theme-options.php:529
 msgid "CODING"
 msgstr ""
 
-#: inc/theme-options.php:529
+#: inc/theme-options.php:536
 msgid "例如：https://xxxxx.coding.net/u/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:535
+#: inc/theme-options.php:542
 msgid "码云 Gitee"
 msgstr ""
 
-#: inc/theme-options.php:542
+#: inc/theme-options.php:549
 msgid "例如：https://gitee.com/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:548
+#: inc/theme-options.php:555
 msgid "海外平台"
 msgstr ""
 
-#: inc/theme-options.php:553
+#: inc/theme-options.php:560
 msgid "Twitter"
 msgstr ""
 
-#: inc/theme-options.php:560
+#: inc/theme-options.php:567
 msgid "例如：https://twitter.com/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:566
+#: inc/theme-options.php:573
 msgid "Telegram"
 msgstr ""
 
-#: inc/theme-options.php:573
+#: inc/theme-options.php:580
 msgid "例如：https://t.me/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:579
+#: inc/theme-options.php:586
 msgid "LinkedIn"
 msgstr ""
 
-#: inc/theme-options.php:586
+#: inc/theme-options.php:593
 msgid "例如：https://www.linkedin.com/in/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:592
+#: inc/theme-options.php:599
 msgid "YouTube"
 msgstr ""
 
-#: inc/theme-options.php:599
+#: inc/theme-options.php:606
 msgid "例如：https://www.youtube.com/channel/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:605
+#: inc/theme-options.php:612
 msgid "Github"
 msgstr ""
 
-#: inc/theme-options.php:612
+#: inc/theme-options.php:619
 msgid "例如：https://github.com/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:618
+#: inc/theme-options.php:625
 msgid "Stack Overflow"
 msgstr ""
 
-#: inc/theme-options.php:625
+#: inc/theme-options.php:632
 msgid "例如：https://stackoverflow.com/users/xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:631
+#: inc/theme-options.php:638
 msgid "其他"
 msgstr ""
 
-#: inc/theme-options.php:636
+#: inc/theme-options.php:643
 msgid "电子邮箱"
 msgstr ""
 
-#: inc/theme-options.php:643
+#: inc/theme-options.php:650
 msgid "例如：mailto:xxxxx@gmail.com"
 msgstr ""
 
-#: inc/theme-options.php:649
+#: inc/theme-options.php:656
 msgid "工信部备案信息"
 msgstr ""
 
-#: inc/theme-options.php:651
+#: inc/theme-options.php:658
 msgid "例如：京ICP证xxxxxx号"
 msgstr ""
 
-#: inc/theme-options.php:656
+#: inc/theme-options.php:663
 msgid "公安网备案信息"
 msgstr ""
 
-#: inc/theme-options.php:658
+#: inc/theme-options.php:665
 msgid "例如：京公网安备 xxxxxxxxxxxx号"
 msgstr ""
 
-#: inc/theme-options.php:663
+#: inc/theme-options.php:670
 msgid "公安网备案连接"
 msgstr ""
 
-#: inc/theme-options.php:665
+#: inc/theme-options.php:672
 msgid ""
 "例如：http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
 msgstr ""
 
-#: inc/theme-options.php:670
+#: inc/theme-options.php:677
 msgid "版权信息"
 msgstr ""
 
-#: inc/theme-options.php:677
+#: inc/theme-options.php:684
 msgid "广告配置"
 msgstr ""
 
-#: inc/theme-options.php:682
+#: inc/theme-options.php:689
 msgid "文章页面广告"
 msgstr ""
 
-#: inc/theme-options.php:683
+#: inc/theme-options.php:690
 msgid "开启顶部广告"
 msgstr ""
 
-#: inc/theme-options.php:696 inc/theme-options.php:716
+#: inc/theme-options.php:703 inc/theme-options.php:723
 msgid "选填广告连接，如果不填则只显示图片"
 msgstr ""
 
-#: inc/theme-options.php:703
+#: inc/theme-options.php:710
 msgid "开启底部广告"
 msgstr ""
 
-#: inc/theme-options.php:723
+#: inc/theme-options.php:730
 msgid "关于主题"
 msgstr ""
 
@@ -1062,15 +1070,15 @@ msgstr ""
 msgid "人点赞"
 msgstr ""
 
-#: pages/page-content.php:36
+#: pages/page-content.php:39
 msgid "阅读全文"
 msgstr ""
 
-#: pages/page-toolbar.php:17
+#: pages/page-toolbar.php:23
 msgid "打赏"
 msgstr ""
 
-#: pages/page-toolbar.php:19
+#: pages/page-toolbar.php:25
 msgid "点赞"
 msgstr ""
 
