@@ -3,19 +3,19 @@
  * 文章工具栏
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.04.12
+ * @version 2020.09.21
  */
 ?>
 <div class="toolbar clearfix">
     <div class="meta float-md-left">
 		<?php if(kratos_option('multiusers',false)){ ?>
-		<img src="<?php echo get_avatar_url(get_the_author_meta('user_email')); ?>">
-		<p class="name"><?php echo get_the_author_meta('display_name'); ?></p>
-		<p class="motto mb-0"><?php echo get_the_author_meta('description'); ?></p>
+			<img src="<?php echo get_avatar_url(get_the_author_meta('user_email')); ?>">
+			<p class="name"><?php echo get_the_author_meta('display_name'); ?></p>
+			<p class="motto mb-0"><?php echo get_the_author_meta('description'); ?></p>
 		<?php } else { ?>
-		<img src="<?php echo kratos_option('a_gravatar', ASSET_PATH . '/assets/img/gravatar.png'); ?>">
-		<p class="name"><?php echo kratos_option('a_nickname','Kratos'); ?></p>
-		<p class="motto mb-0"><?php echo kratos_option('a_about', __('保持饥渴的专注，追求最佳的品质', 'kratos')); ?></p>
+			<img src="<?php echo kratos_option('a_gravatar', ASSET_PATH . '/assets/img/gravatar.png'); ?>">
+			<p class="name"><?php echo kratos_option('a_nickname','Kratos'); ?></p>
+			<p class="motto mb-0"><?php echo kratos_option('a_about', __('保持饥渴的专注，追求最佳的品质', 'kratos')); ?></p>
 		<?php } ?>
 	</div>
 	<div class="share float-md-right text-center">
