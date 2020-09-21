@@ -80,6 +80,13 @@ function kratos_options()
         'type' => 'checkbox',
     );
 
+    $options[] = array(	
+        'name' => __('多人模式', 'kratos'),	
+        'desc' => __('在文章列表显示当前文章作者，在文章页面页脚显示当前作者介绍', 'kratos'),	
+        'id' => 'multiusers',	
+        'type' => 'checkbox',	
+    );
+
     $options[] = array(
         'name' => __('CSS 动画库', 'kratos'),
         'desc' => __('开启 animate.css 效果', 'kratos'),
@@ -193,13 +200,6 @@ function kratos_options()
         'id' => 'g_404',
         'std' => ASSET_PATH . '/assets/img/404.jpg',
         'type' => 'upload',
-    );
-
-    $options[] = array(
-        'name' => __('多人创作', 'kratos'),
-        'desc' => __('在文章列表显示文章作者，在文章页面页脚显示作者介绍', 'kratos'),
-        'id' => 'multiusers',
-        'type' => 'checkbox',
     );
 
     $options[] = array(
