@@ -423,7 +423,7 @@ function post_seo_callback( $post ) {
 function wpdocs_save_meta_box( $post_id ) {
     global $new_meta_boxes;
    
-    if ( !wp_verify_nonce( isset($_POST['metaboxes_nonce']), plugin_basename(__FILE__) ))
+    if ( !wp_verify_nonce( $_POST['metaboxes_nonce'], plugin_basename(__FILE__) ))
       return;
      
     if ( !current_user_can( 'edit_posts', $post_id ))
