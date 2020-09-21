@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos\n"
-"POT-Creation-Date: 2020-09-21 11:38+0800\n"
+"POT-Creation-Date: 2020-09-21 11:57+0800\n"
 "PO-Revision-Date: 2020-02-14 23:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -330,19 +330,19 @@ msgid "全站页面的背景颜色，需填写十六进制颜色码"
 msgstr ""
 
 #: inc/theme-options.php:76
-msgid "多人模式"
-msgstr ""
-
-#: inc/theme-options.php:77
-msgid "在文章列表显示当前文章作者，在文章页面页脚显示当前作者介绍"
-msgstr ""
-
-#: inc/theme-options.php:83
 msgid "前台管理员导航"
 msgstr ""
 
-#: inc/theme-options.php:84
+#: inc/theme-options.php:77
 msgid "开启前台管理员导航"
+msgstr ""
+
+#: inc/theme-options.php:84
+msgid "多人模式"
+msgstr ""
+
+#: inc/theme-options.php:85
+msgid "在文章列表显示当前文章作者，在文章页面页脚显示当前作者介绍"
 msgstr ""
 
 #: inc/theme-options.php:91
