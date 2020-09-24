@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-09-21 11:57+0800\n"
-"PO-Revision-Date: 2020-09-21 04:40\n"
+"PO-Revision-Date: 2020-09-24 12:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -336,11 +336,11 @@ msgstr "開啟前台管理員導覽列"
 
 #: inc/theme-options.php:84
 msgid "多人模式"
-msgstr ""
+msgstr "多人模式"
 
 #: inc/theme-options.php:85
 msgid "在文章列表显示当前文章作者，在文章页面页脚显示当前作者介绍"
-msgstr ""
+msgstr "在文章列表顯示目前文章作者，在文章頁面頁尾顯示目前作者介紹"
 
 #: inc/theme-options.php:91
 msgid "CSS 动画库"
