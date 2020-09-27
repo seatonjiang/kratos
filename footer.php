@@ -3,7 +3,7 @@
  * 主题页脚
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.04.12
+ * @version 2020.09.27
  */
 ?>
 <div class="k-footer">
@@ -24,7 +24,7 @@
         <div class="search">
             <span class="kicon i-find"></span>
             <form class="search-form" role="search" method="get" action="<?php echo home_url('/'); ?>">
-                <input type="text" name="s" id="search" placeholder="<?php _e('搜点什么呢?', 'kratos'); ?>" style="display:none"/>
+                <input type="text" name="s" id="search-footer" placeholder="<?php _e('搜点什么呢?', 'kratos'); ?>" style="display:none"/>
             </form>
         </div>
     </div>

@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.08.03
+ * @version 2020.09.27
  */
 
 // 添加小工具
@@ -78,7 +78,7 @@ class widget_search extends WP_Widget {
         if ( $title ) {
             echo '<div class="title">'. $title .'</div>';
         }
-        echo '<div class="item"> <form role="search" method="get" id="searchform" class="searchform" action="'. home_url('/') .'"> <div class="input-group mt-2 mb-2"> <input type="text" name="s" id="search" class="form-control" placeholder="'. __('搜点什么呢?', 'kratos') .'"> <div class="input-group-append"> <button class="btn btn-primary btn-search" type="submit" id="searchsubmit">'. __('搜索', 'kratos') .'</button> </div> </div> </form>';
+        echo '<div class="item"> <form role="search" method="get" id="searchform" class="searchform" action="'. home_url('/') .'"> <div class="input-group mt-2 mb-2"> <input type="text" name="s" id="search-widgets" class="form-control" placeholder="'. __('搜点什么呢?', 'kratos') .'"> <div class="input-group-append"> <button class="btn btn-primary btn-search" type="submit" id="searchsubmit">'. __('搜索', 'kratos') .'</button> </div> </div> </form>';
         echo '</div></div>';
     }
  
