@@ -3,7 +3,7 @@
  * 文章列表
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.09.21
+ * @version 2020.09.27
  */
 ?>
 <div class="article-panel">
@@ -16,7 +16,14 @@
     <?php }?>
     <div class="a-post <?php if (!kratos_option('g_thumbnail',true)) { echo 'a-none'; } ?>">
         <div class="header">
-            <?php $category = get_the_category(); echo '<a class="label" href="'. get_category_link($category[0]->term_id) . '">' . $category[0]->cat_name . '<i class="label-arrow"></i></a>'; ?>
+            <?php
+            $category = get_the_category();
+            if ($category) {
+                echo '<a class="label" href="'. get_category_link($category[0]->term_id) . '">' . $category[0]->cat_name . '<i class="label-arrow"></i></a>';
+            } else {
+                echo '<span class="label">'. __('页面','kratos') .'<i class="label-arrow"></i></span>';
+            }
+            ?>
             <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
         </div>
         <div class="content">

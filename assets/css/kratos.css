@@ -598,6 +598,10 @@ button:focus {
   line-height: 14px;
 }
 
+.k-main .board .article-panel .a-post .header span.label {
+  cursor: default;
+}
+
 .k-main .board .article-panel .a-post .header .label .label-arrow {
   position: absolute;
   top: 6px;

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos\n"
-"POT-Creation-Date: 2020-09-21 11:57+0800\n"
+"POT-Creation-Date: 2020-09-27 08:38+0800\n"
 "PO-Revision-Date: 2020-02-14 23:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -834,11 +834,11 @@ msgstr ""
 
 #: inc/theme-shortcode.php:105 inc/theme-shortcode.php:117
 #: inc/theme-shortcode.php:129 inc/theme-shortcode.php:141
-#: inc/theme-shortcode.php:220
+#: inc/theme-shortcode.php:217
 msgid "标题内容"
 msgstr ""
 
-#: inc/theme-shortcode.php:183
+#: inc/theme-shortcode.php:180
 msgid ""
 "温馨提示：此处内容已隐藏，<a href=\"#comments\">回复</a>后刷新页面即可查"
 "看！"
@@ -1058,19 +1058,23 @@ msgstr ""
 msgid "<span>下一页</span>"
 msgstr ""
 
-#: pages/page-content.php:29 single.php:54
+#: pages/page-content.php:24
+msgid "页面"
+msgstr ""
+
+#: pages/page-content.php:36 single.php:54
 msgid "条评论"
 msgstr ""
 
-#: pages/page-content.php:32 single.php:52
+#: pages/page-content.php:39 single.php:52
 msgid "点热度"
 msgstr ""
 
-#: pages/page-content.php:33 single.php:53
+#: pages/page-content.php:40 single.php:53
 msgid "人点赞"
 msgstr ""
 
-#: pages/page-content.php:39
+#: pages/page-content.php:46
 msgid "阅读全文"
 msgstr ""
 
