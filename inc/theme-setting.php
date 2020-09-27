@@ -3,7 +3,7 @@
  * 站点相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.08.04
+ * @version 2020.09.27
  */
 
 // 标题配置
@@ -104,6 +104,8 @@ function mourning()
 function share_thumbnail_url()
 {
     global $post;
+    if(!is_object($post)) 
+        return;
     if (has_post_thumbnail($post->ID)) {
         $post_thumbnail_id = get_post_thumbnail_id($post);
         $img = wp_get_attachment_image_src($post_thumbnail_id, 'full');
