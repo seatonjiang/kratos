@@ -3,7 +3,7 @@
  * 主题页眉
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.06.21
+ * @version 2020.09.27
  */
 ?>
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
     <meta name="description" itemprop="description" content="<?php echo description(); ?>">
     <meta name="theme-color" content="<?php echo kratos_option('g_chrome', '#282a2c'); ?>">
     <meta itemprop="image" content="<?php echo share_thumbnail_url(); ?>"/>
-    <link rel="shortcut icon" href="<?php echo kratos_option('g_icon'); ?>">
+    <?php if (kratos_option('g_icon')) echo '<link rel="shortcut icon" href="' . kratos_option("g_icon") .'">' ?>
     <?php wp_head(); wp_print_scripts('jquery'); mourning(); ?>
 </head>
 <?php flush(); ?>
