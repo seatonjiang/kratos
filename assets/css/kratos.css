@@ -532,6 +532,16 @@ button:focus {
 5. 文章列表
 --------------------------------------------------------------*/
 
+.k-main .board .article-carousel {
+  margin: 0 0 23px;
+}
+
+.k-main .board .article-carousel li {
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
 .k-main .board .article-panel {
   margin: 0 0 23px;
   border-radius: 0;

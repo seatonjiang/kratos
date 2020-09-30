@@ -11,7 +11,9 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 board">
-                <?php if(is_search()){ ?>
+                <?php if(is_home() && kratos_option('g_carousel', false)){
+                  kratos_carousel();
+                } if(is_search()){ ?>
                     <div class="article-panel">
                         <div class="search-title"><?php _e('搜索内容：', 'kratos');the_search_query(); ?></div>
                     </div>

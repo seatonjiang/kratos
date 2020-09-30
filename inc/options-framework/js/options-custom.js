@@ -16,6 +16,21 @@ jQuery(document).ready(function ($) {
 		$('#section-' + id + '_links').show()
 	}
 
+	jQuery('#g_carousel').click(function () {
+		for (let i = 1; i < 6; i++) {
+			jQuery('#section-c_i_' + [i]).fadeToggle(400)
+			jQuery('#section-c_u_' + [i]).fadeToggle(400)
+		}
+	})
+
+	if (jQuery('#g_carousel:checked').val() !== undefined) {
+		for (let i = 1; i < 6; i++) {
+			console.log('#c_i_' + [i])
+			jQuery('#section-c_i_' + [i]).show()
+			jQuery('#section-c_u_' + [i]).show()
+		}
+	}
+
 	jQuery('#g_cos').click(function () {
 		jQuery('#section-g_cos_bucketname').fadeToggle(400)
 		jQuery('#section-g_cos_url').fadeToggle(400)

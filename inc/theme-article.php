@@ -439,3 +439,52 @@ function wpdocs_save_meta_box( $post_id ) {
      }
 }
 add_action( 'save_post', 'wpdocs_save_meta_box' );
+
+// 主页轮播
+function kratos_carousel(){
+    $output = '';
+    $carousel_img= null;
+    $carousel_url= null;
+    if(kratos_option('g_carousel', false)){
+        for($i=1; $i<6; $i++){
+            $carousel_img_{$i} = kratos_option("c_i_{$i}") ? kratos_option("c_i_{$i}") : "";
+            $carousel_url_{$i} = kratos_option("c_u_{$i}") ? kratos_option("c_u_{$i}") : "";
+            if($carousel_img_{$i} ){
+                $carousel_img[] = $carousel_img_{$i};
+                $carousel_url[] = $carousel_url_{$i};
+            }
+        }
+        if(is_array($carousel_img)){
+            $count = count($carousel_img);
+        } else {
+            $count = '0';
+        }
+
+        $output = '<div class="carousel article-carousel slide" id="carouselControls" data-ride="carousel"><ol class="carousel-indicators">';
+
+        for($i=0; $i<$count; $i++){
+            $output .= '<li data-target="#carouselControls" data-slide-to="'.$i.'"';
+            if($i==0) $output .= 'class="active"';
+            $output .= '></li>';
+        };
+        $output .='</ol><div class="carousel-inner">';
+
+        for($i=0;$i<$count;$i++){
+            $output .= '<div class="carousel-item';
+            if($i==0) $output .= ' active';
+            $output .= '">';
+            if(!empty($carousel_url[$i])){
+                $output .= '<a href="'.$carousel_url[$i].'" target="_blank"><img src="'.$carousel_img[$i].'" class="d-block w-100"></a>';
+            }else{
+                $output .= '<img src="'.$carousel_img[$i].'" class="d-block w-100">';
+            }
+            $output .= "</div>";
+        };
+
+        $output .= '</div><a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>';
+        $output .= '<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a></div>';
+    }
+    if(is_array($carousel_img)){
+        echo $output;
+    }
+}

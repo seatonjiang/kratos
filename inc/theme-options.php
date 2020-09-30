@@ -192,7 +192,6 @@ function kratos_options()
         'std' => ASSET_PATH . '/assets/img/wechat.png',
         'type' => 'upload',
         'class' => 'hidden',
-        'type' => 'upload',
     );
 
     $options[] = array(
@@ -295,6 +294,83 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('首页轮播', 'kratos'),
+        'desc' => __('开启站点首页轮播功能', 'kratos'),
+        'id' => 'g_carousel',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'name' => __('轮播一（图片）', 'kratos'),
+        'id' => 'c_i_1',
+        'class' => 'hidden',
+        'type' => 'upload',
+    );
+
+    $options[] = array(
+        'name' => __('轮播一（网址）', 'kratos'),
+        'id' => 'c_u_1',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('轮播二（图片）', 'kratos'),
+        'id' => 'c_i_2',
+        'class' => 'hidden',
+        'type' => 'upload',
+    );
+
+    $options[] = array(
+        'name' => __('轮播二（网址）', 'kratos'),
+        'id' => 'c_u_2',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('轮播三（图片）', 'kratos'),
+        'id' => 'c_i_3',
+        'class' => 'hidden',
+        'type' => 'upload',
+    );
+
+    $options[] = array(
+        'name' => __('轮播三（网址）', 'kratos'),
+        'id' => 'c_u_3',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('轮播四（图片）', 'kratos'),
+        'id' => 'c_i_4',
+        'class' => 'hidden',
+        'type' => 'upload',
+    );
+
+    $options[] = array(
+        'name' => __('轮播四（网址）', 'kratos'),
+        'id' => 'c_u_4',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('轮播五（图片）', 'kratos'),
+        'id' => 'c_i_5',
+        'class' => 'hidden',
+        'type' => 'upload',
+    );
+
+    $options[] = array(
+        'name' => __('轮播五（网址）', 'kratos'),
+        'id' => 'c_u_5',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
         'name' => __('文章配置', 'kratos'),
         'type' => 'heading',
     );
@@ -335,7 +411,6 @@ function kratos_options()
         'std' => ASSET_PATH . '/assets/img/donate.png',
         'type' => 'upload',
         'class' => 'hidden',
-        'type' => 'upload',
     );
 
     $options[] = array(
@@ -344,7 +419,6 @@ function kratos_options()
         'std' => ASSET_PATH . '/assets/img/donate.png',
         'type' => 'upload',
         'class' => 'hidden',
-        'type' => 'upload',
     );
 
     $options[] = array(
