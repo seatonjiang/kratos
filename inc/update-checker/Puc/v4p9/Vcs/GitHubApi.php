@@ -164,7 +164,7 @@ if ( !class_exists('Puc_v4p9_Vcs_GitHubApi', false) ):
 		 * @param string $ref Reference name (e.g. branch or tag).
 		 * @return StdClass|null
 		 */
-		public function getLatestCommit($filename, $ref = 'master') {
+		public function getLatestCommit($filename, $ref = 'main') {
 			$commits = $this->api(
 				'/repos/:user/:repo/commits',
 				array(
@@ -264,7 +264,7 @@ if ( !class_exists('Puc_v4p9_Vcs_GitHubApi', false) ):
 		 * @param string $ref
 		 * @return null|string Either the contents of the file, or null if the file doesn't exist or there's an error.
 		 */
-		public function getRemoteFile($path, $ref = 'master') {
+		public function getRemoteFile($path, $ref = 'main') {
 			$apiUrl = '/repos/:user/:repo/contents/' . $path;
 			$response = $this->api($apiUrl, array('ref' => $ref));
 
@@ -280,7 +280,7 @@ if ( !class_exists('Puc_v4p9_Vcs_GitHubApi', false) ):
 		 * @param string $ref
 		 * @return string
 		 */
-		public function buildArchiveDownloadUrl($ref = 'master') {
+		public function buildArchiveDownloadUrl($ref = 'main') {
 			$url = sprintf(
 				'https://api.github.com/repos/%1$s/%2$s/zipball/%3$s',
 				urlencode($this->userName),
@@ -319,7 +319,7 @@ if ( !class_exists('Puc_v4p9_Vcs_GitHubApi', false) ):
 		public function chooseReference($configBranch) {
 			$updateSource = null;
 
-			if ( $configBranch === 'master' ) {
+			if ( $configBranch === 'main' ) {
 				//Use the latest release.
 				$updateSource = $this->getLatestRelease();
 				if ( $updateSource === null ) {

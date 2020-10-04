@@ -3,7 +3,7 @@ if ( !interface_exists('Puc_v4p9_Vcs_BaseChecker', false) ):
 
 	interface Puc_v4p9_Vcs_BaseChecker {
 		/**
-		 * Set the repository branch to use for updates. Defaults to 'master'.
+		 * Set the repository branch to use for updates. Defaults to 'main'.
 		 *
 		 * @param string $branch
 		 * @return $this

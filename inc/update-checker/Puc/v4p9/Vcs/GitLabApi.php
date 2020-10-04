@@ -238,7 +238,7 @@ if ( !class_exists('Puc_v4p9_Vcs_GitLabApi', false) ):
 		 * @param string $ref
 		 * @return null|string Either the contents of the file, or null if the file doesn't exist or there's an error.
 		 */
-		public function getRemoteFile($path, $ref = 'master') {
+		public function getRemoteFile($path, $ref = 'main') {
 			$response = $this->api('/:id/repository/files/' . $path, array('ref' => $ref));
 			if ( is_wp_error($response) || !isset($response->content) || $response->encoding !== 'base64' ) {
 				return null;
@@ -253,7 +253,7 @@ if ( !class_exists('Puc_v4p9_Vcs_GitLabApi', false) ):
 		 * @param string $ref
 		 * @return string
 		 */
-		public function buildArchiveDownloadUrl($ref = 'master') {
+		public function buildArchiveDownloadUrl($ref = 'main') {
 			$url = sprintf(
 				'%1$s://%2$s/api/v4/projects/%3$s/repository/archive.zip',
 				$this->repositoryProtocol,
@@ -289,7 +289,7 @@ if ( !class_exists('Puc_v4p9_Vcs_GitLabApi', false) ):
 			$updateSource = null;
 
 			// GitLab doesn't handle releases the same as GitHub so just use the latest tag
-			if ( $configBranch === 'master' ) {
+			if ( $configBranch === 'main' ) {
 				$updateSource = $this->getLatestTag();
 			}
 

@@ -4,9 +4,9 @@ if ( !class_exists('Puc_v4p9_Vcs_ThemeUpdateChecker', false) ):
 
 	class Puc_v4p9_Vcs_ThemeUpdateChecker extends Puc_v4p9_Theme_UpdateChecker implements Puc_v4p9_Vcs_BaseChecker {
 		/**
-		 * @var string The branch where to look for updates. Defaults to "master".
+		 * @var string The branch where to look for updates. Defaults to "main".
 		 */
-		protected $branch = 'master';
+		protected $branch = 'main';
 
 		/**
 		 * @var Puc_v4p9_Vcs_Api Repository API client.

@@ -59,7 +59,7 @@ if ( !class_exists('Puc_v4p9_Vcs_Api') ):
 		 * @param string $ref Tag or branch name.
 		 * @return array Parsed readme.
 		 */
-		public function getRemoteReadme($ref = 'master') {
+		public function getRemoteReadme($ref = 'main') {
 			$fileContents = $this->getRemoteFile($this->getLocalReadmeName(), $ref);
 			if ( empty($fileContents) ) {
 				return array();
@@ -196,7 +196,7 @@ if ( !class_exists('Puc_v4p9_Vcs_Api') ):
 		 * @param string $ref
 		 * @return null|string Either the contents of the file, or null if the file doesn't exist or there's an error.
 		 */
-		abstract public function getRemoteFile($path, $ref = 'master');
+		abstract public function getRemoteFile($path, $ref = 'main');
 
 		/**
 		 * Get the timestamp of the latest commit that changed the specified branch or tag.

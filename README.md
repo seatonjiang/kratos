@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/vtrois/kratos/master/assets/img/options/about.png">
+<img src="https://raw.githubusercontent.com/vtrois/kratos/main/assets/img/options/about.png">
 </p>
 
 <p align="center">
@@ -189,11 +189,11 @@ Detailed changes for each release are documented in the [release notes](https://
 If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
-<img width="700" src="https://raw.githubusercontent.com/vtrois/kratos/master/assets/img/options/donate.png">
+<img width="700" src="https://raw.githubusercontent.com/vtrois/kratos/main/assets/img/options/donate.png">
 </p>
 
 ## License
 
-The code is available under the [MIT](https://github.com/vtrois/kratos/blob/master/LICENSE) license.
+The code is available under the [MIT](https://github.com/vtrois/kratos/blob/main/LICENSE) license.
 
 The document is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/).

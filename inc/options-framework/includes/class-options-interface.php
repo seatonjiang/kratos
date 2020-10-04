@@ -246,7 +246,7 @@ class Options_Framework_Interface
                     <h4>' . __('讨论交流', 'kratos') . '</h4>
                     <img src="' . ASSET_PATH . '/assets/img/options/discuss.png">
 					<h4>' . __('版权声明', 'kratos') . '</h4>
-					<p>' . __('主题源码使用 <a href="https://github.com/vtrois/kratos/blob/master/LICENSE" target="_blank">MIT 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos') . '</p>
+					<p>' . __('主题源码使用 <a href="https://github.com/vtrois/kratos/blob/main/LICENSE" target="_blank">MIT 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos') . '</p>
 					<h4>' . __('打赏支持', 'kratos') . '</h4>
 					<img src="' . ASSET_PATH . '/assets/img/options/donate.png">
 				    </div>';

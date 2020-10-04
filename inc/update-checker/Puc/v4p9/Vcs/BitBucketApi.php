@@ -42,7 +42,7 @@ if ( !class_exists('Puc_v4p9_Vcs_BitBucketApi', false) ):
 			$updateSource = $this->getStableTag($configBranch);
 
 			//Look for version-like tags.
-			if ( !$updateSource && ($configBranch === 'master') ) {
+			if ( !$updateSource && ($configBranch === 'main') ) {
 				$updateSource = $this->getLatestTag();
 			}
 			//If all else fails, use the specified branch itself.
@@ -156,7 +156,7 @@ if ( !class_exists('Puc_v4p9_Vcs_BitBucketApi', false) ):
 		 * @param string $ref
 		 * @return null|string Either the contents of the file, or null if the file doesn't exist or there's an error.
 		 */
-		public function getRemoteFile($path, $ref = 'master') {
+		public function getRemoteFile($path, $ref = 'main') {
 			$response = $this->api('src/' . $ref . '/' . ltrim($path));
 			if ( is_wp_error($response) || !is_string($response) ) {
 				return null;
