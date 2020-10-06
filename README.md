@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/vtrois/kratos/main/assets/img/options/about.png">
+<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.0/assets/img/options/about.png">
 </p>
 
 <p align="center">
@@ -37,18 +37,22 @@ Kratos
 ├── README.md
 ├── assets
 │   ├── css
+│   │   ├── animate.min.css
 │   │   ├── bootstrap.min.css
+│   │   ├── fontawesome.min.css
 │   │   ├── iconfont.min.css
 │   │   ├── kratos.css
 │   │   ├── kratos.min.css
 │   │   ├── layer.min.css
 │   │   └── widget.min.css
 │   ├── fonts
-│   │   ├── iconfont.eot
-│   │   ├── iconfont.svg
-│   │   ├── iconfont.ttf
-│   │   ├── iconfont.woff
-│   │   └── iconfont.woff2
+│   │   ├── iconfont
+│   │   │   ├── iconfont.eot
+│   │   │   ├── iconfont.svg
+│   │   │   ├── iconfont.ttf
+│   │   │   ├── iconfont.woff
+│   │   │   └── iconfont.woff2
+│   │   └── webfonts (has some iconfont fonts)
 │   ├── img
 │   │   ├── 404.jpg
 │   │   ├── 404.svg
@@ -61,23 +65,18 @@ Kratos
 │   │   ├── layer
 │   │   │   ├── icon-ext.png
 │   │   │   └── icon.png
-│   │   ├── options
-│   │   │   ├── about.png
-│   │   │   ├── discuss.png
-│   │   │   ├── donate.png
-│   │   │   ├── col-8.png
-│   │   │   └── col-12.png
 │   │   ├── nothing.svg
+│   │   ├── options (has some option pic)
 │   │   ├── payment
 │   │   │   ├── alipay.png
 │   │   │   └── wechat.png
 │   │   ├── police-ico.png
-│   │   ├── smilies(has some emoji pic)
+│   │   ├── smilies (has some smilie pic)
 │   │   └── wechat.png
 │   └── js
-│       ├── bootstrap.min.js
+│       ├── bootstrap.bundle.min.js
 │       ├── buttons
-│       │   ├── images(has some button pic)
+│       │   ├── images (has some button pic)
 │       │   └── more.js
 │       ├── comments.min.js
 │       ├── jquery.min.js
@@ -86,6 +85,7 @@ Kratos
 │       ├── layer.min.js
 │       └── widget.min.js
 ├── comments.php
+├── crowdin.yml
 ├── custom
 │   ├── custom.css
 │   ├── custom.js
@@ -94,82 +94,24 @@ Kratos
 ├── functions.php
 ├── header.php
 ├── inc
-│   ├── options-framework
-│   │   ├── autoload.php
-│   │   ├── css
-│   │   │   └── optionsframework.css
-│   │   ├── images(has some options pic)
-│   │   ├── includes
-│   │   │   ├── class-options-framework-admin.php
-│   │   │   ├── class-options-framework.php
-│   │   │   ├── class-options-interface.php
-│   │   │   ├── class-options-media-uploader.php
-│   │   │   └── class-options-sanitization.php
-│   │   └── js
-│   │       ├── media-uploader.js
-│   │       └── options-custom.js
 │   ├── theme-article.php
 │   ├── theme-core.php
+│   ├── theme-dogecloud.php
 │   ├── theme-navwalker.php
 │   ├── theme-options.php
 │   ├── theme-setting.php
 │   ├── theme-shortcode.php
 │   ├── theme-smtp.php
 │   ├── theme-widgets.php
+│   ├── options-framework
 │   └── update-checker
-│       ├── Puc
-│       │   ├── v4
-│       │   │   └── Factory.php
-│       │   └── v4p9
-│       │       ├── Autoloader.php
-│       │       ├── DebugBar
-│       │       │   ├── Extension.php
-│       │       │   ├── Panel.php
-│       │       │   ├── PluginExtension.php
-│       │       │   ├── PluginPanel.php
-│       │       │   └── ThemePanel.php
-│       │       ├── Factory.php
-│       │       ├── InstalledPackage.php
-│       │       ├── Metadata.php
-│       │       ├── OAuthSignature.php
-│       │       ├── Plugin
-│       │       │   ├── Info.php
-│       │       │   ├── Package.php
-│       │       │   ├── Ui.php
-│       │       │   ├── Update.php
-│       │       │   └── UpdateChecker.php
-│       │       ├── Scheduler.php
-│       │       ├── StateStore.php
-│       │       ├── Theme
-│       │       │   ├── Package.php
-│       │       │   ├── Update.php
-│       │       │   └── UpdateChecker.php
-│       │       ├── Update.php
-│       │       ├── UpdateChecker.php
-│       │       ├── UpgraderStatus.php
-│       │       ├── Utils.php
-│       │       └── Vcs
-│       │           ├── Api.php
-│       │           ├── BaseChecker.php
-│       │           ├── BitBucketApi.php
-│       │           ├── GitHubApi.php
-│       │           ├── GitLabApi.php
-│       │           ├── PluginUpdateChecker.php
-│       │           ├── Reference.php
-│       │           └── ThemeUpdateChecker.php
-│       ├── autoload.php
-│       ├── css
-│       │   └── puc-debug-bar.css
-│       ├── js
-│       │   └── debug-bar.js
-│       └── vendor
-│           ├── Parsedown.php
-│           ├── ParsedownLegacy.php
-│           ├── ParsedownModern.php
-│           └── PucReadmeParser.php
 ├── index.php
 ├── languages
-│   └── kratos.pot
+│   ├── en_US.mo
+│   ├── en_US.po
+│   ├── kratos.pot
+│   ├── zh_TW.mo
+│   └── zh_TW.po
 ├── page.php
 ├── pages
 │   ├── page-content.php
@@ -189,7 +131,7 @@ Detailed changes for each release are documented in the [release notes](https://
 If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
-<img width="700" src="https://raw.githubusercontent.com/vtrois/kratos/main/assets/img/options/donate.png">
+<img width="700" src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.0/assets/img/options/donate.png">
 </p>
 
 ## License
