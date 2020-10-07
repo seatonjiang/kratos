@@ -50,12 +50,12 @@ function theme_autoload()
             $admin_bar_css = "
             @media screen and (max-width: 782px) {
                 .k-nav{
-                    padding-top: 46px;
+                    padding-top: 54px;
                 }
             }
             @media screen and (min-width: 782px) {
                 .k-nav{
-                    padding-top: 32px;
+                    padding-top: 40px;
                 }
             }
             ";
