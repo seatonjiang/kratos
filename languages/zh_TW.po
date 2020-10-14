@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-10-04 12:12+0800\n"
-"PO-Revision-Date: 2020-10-04 04:49\n"
+"PO-Revision-Date: 2020-10-14 13:51\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -528,51 +528,51 @@ msgstr "當搜尋不到文章或文章分類中沒有文章時顯示"
 
 #: inc/theme-options.php:297
 msgid "首页轮播"
-msgstr ""
+msgstr "首頁輪播"
 
 #: inc/theme-options.php:298
 msgid "开启站点首页轮播功能"
-msgstr ""
+msgstr "開啟網站首頁輪播功能"
 
 #: inc/theme-options.php:304
 msgid "轮播一（图片）"
-msgstr ""
+msgstr "輪播一（圖片）"
 
 #: inc/theme-options.php:311
 msgid "轮播一（网址）"
-msgstr ""
+msgstr "輪播一（網址）"
 
 #: inc/theme-options.php:318
 msgid "轮播二（图片）"
-msgstr ""
+msgstr "輪播二（圖片）"
 
 #: inc/theme-options.php:325
 msgid "轮播二（网址）"
-msgstr ""
+msgstr "輪播二（網址）"
 
 #: inc/theme-options.php:332
 msgid "轮播三（图片）"
-msgstr ""
+msgstr "輪播三（圖片）"
 
 #: inc/theme-options.php:339
 msgid "轮播三（网址）"
-msgstr ""
+msgstr "輪播三（網址）"
 
 #: inc/theme-options.php:346
 msgid "轮播四（图片）"
-msgstr ""
+msgstr "輪播四（圖片）"
 
 #: inc/theme-options.php:353
 msgid "轮播四（网址）"
-msgstr ""
+msgstr "輪播四（網址）"
 
 #: inc/theme-options.php:360
 msgid "轮播五（图片）"
-msgstr ""
+msgstr "輪播五（圖片）"
 
 #: inc/theme-options.php:367
 msgid "轮播五（网址）"
-msgstr ""
+msgstr "輪播五（網址）"
 
 #: inc/theme-options.php:374
 msgid "文章配置"
@@ -1102,7 +1102,7 @@ msgstr "<span>下一頁</span>"
 
 #: pages/page-content.php:24
 msgid "页面"
-msgstr ""
+msgstr "頁面"
 
 #: pages/page-content.php:36 single.php:54
 msgid "条评论"
