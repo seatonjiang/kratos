@@ -3,7 +3,7 @@
  * 文章相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.06.13
+ * @version 2020.10.26
  */
 
 // 文章链接添加 target 和 rel
@@ -365,6 +365,9 @@ if (!kratos_option('g_gutenberg',false)) {
     {
         wp_dequeue_style('wp-block-library');
     }
+
+    // 禁用 Auto Embeds
+    remove_filter('the_content', array($GLOBALS['wp_embed'], 'autoembed'), 8);
 }
 
 // 文章评论增强
