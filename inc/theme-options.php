@@ -80,6 +80,14 @@ function kratos_options()
         'type' => 'checkbox',
     );
 
+    $options[] = array(
+        'name' => __('侧边栏后台入口', 'kratos'),
+        'desc' => __('开启小工具个人简介头像进入后台功能', 'kratos'),
+        'std' => '1',
+        'id' => 'g_login',
+        'type' => 'checkbox',
+    );
+
     $options[] = array(	
         'name' => __('多人模式', 'kratos'),	
         'desc' => __('在文章列表显示当前文章作者，在文章页面页脚显示当前作者介绍', 'kratos'),	

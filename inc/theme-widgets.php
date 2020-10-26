@@ -176,7 +176,7 @@ class widget_about extends WP_Widget
 
         $widget_ops = array(
             'name' => __('个人简介', 'kratos'),
-            'description' => __('可跳转后台的个人简介展示工具', 'kratos'),
+            'description' => __('站长个人简介的展示工具', 'kratos'),
         );
 
         parent::__construct(false, false, $widget_ops);
@@ -199,12 +199,17 @@ class widget_about extends WP_Widget
 
         echo '<div class="widget w-about">';
         echo '<div class="background" style="background:url(' . $background . ') no-repeat center center;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"></div><div class="wrapper text-center">';
-        if (current_user_can('manage_options')) {
-            echo '<a href="' . admin_url() . '">';
-        } else {
-            echo '<a href="' . wp_login_url() . '">';
+        if (kratos_option('g_login', true)) {
+            if (current_user_can('manage_options')) {
+                echo '<a href="' . admin_url() . '">';
+            } else {
+                echo '<a href="' . wp_login_url() . '">';
+            }
         }
-        echo '<img src="' . $avatar . '"></a>';
+        echo '<img src="' . $avatar . '">';
+        if (kratos_option('g_login', true)) {
+            echo '</a>';
+        }
         echo '</div><div class="textwidget text-center"><p class="username">'. $username .'</p><p class="about">' . $introduce . '</p></div>';
         echo '</div>';
     }
