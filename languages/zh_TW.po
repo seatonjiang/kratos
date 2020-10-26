@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2020-10-26 09:27+0800\n"
-"PO-Revision-Date: 2020-10-26 02:20\n"
+"PO-Revision-Date: 2020-10-26 03:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -336,11 +336,11 @@ msgstr "開啟前台管理員導覽列"
 
 #: inc/theme-options.php:84
 msgid "侧边栏后台入口"
-msgstr ""
+msgstr "側欄後台入口"
 
 #: inc/theme-options.php:85
 msgid "开启小工具个人简介头像进入后台功能"
-msgstr ""
+msgstr "開啟小工具個人簡介照片進入後台功能"
 
 #: inc/theme-options.php:92
 msgid "多人模式"
@@ -948,12 +948,12 @@ msgstr "小工具"
 
 #: inc/theme-widgets.php:67
 msgid "A search form for your site."
-msgstr "A search form for your site."
+msgstr "您網站中的搜尋表單。"
 
 #: inc/theme-widgets.php:70
 msgctxt "Search widget"
 msgid "Search"
-msgstr "Search"
+msgstr "搜尋"
 
 #: inc/theme-widgets.php:81
 msgid "搜索"
@@ -961,7 +961,7 @@ msgstr "搜尋"
 
 #: inc/theme-widgets.php:89
 msgid "Title:"
-msgstr "Title:"
+msgstr "標題:"
 
 #: inc/theme-widgets.php:109
 msgid "图片广告"
@@ -993,7 +993,7 @@ msgstr "選擇圖片"
 
 #: inc/theme-widgets.php:179
 msgid "站长个人简介的展示工具"
-msgstr ""
+msgstr "站長個人簡介的展示工具"
 
 #. Theme Name of the plugin/theme
 #: inc/theme-widgets.php:196
@@ -1080,22 +1080,22 @@ msgstr "%s 外掛已是最新版本。"
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
-msgstr "A new version of the %s plugin is available."
+msgstr "%s 外掛已有新版可供使用。"
 
 #: inc/update-checker/Puc/v4p10/Plugin/Ui.php:217
 #, php-format
 msgctxt "the plugin title"
 msgid "Could not determine if updates are available for %s."
-msgstr "Could not determine if updates are available for %s."
+msgstr "無法判斷 %s 是否可供更新。"
 
 #: inc/update-checker/Puc/v4p10/Plugin/Ui.php:223
 #, php-format
 msgid "Unknown update checker status \"%s\""
-msgstr "Unknown update checker status \"%s\""
+msgstr "未知的更新檢查狀態 \"%s\""
 
 #: inc/update-checker/Puc/v4p10/Vcs/PluginUpdateChecker.php:98
 msgid "There is no changelog available."
-msgstr "There is no changelog available."
+msgstr "沒有更新記錄。"
 
 #: index.php:18
 msgid "搜索内容："
