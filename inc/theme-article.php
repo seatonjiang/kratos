@@ -3,7 +3,7 @@
  * 文章相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.10.26
+ * @version 2020.12.02
  */
 
 // 文章链接添加 target 和 rel
@@ -450,11 +450,11 @@ function kratos_carousel(){
     $carousel_url= null;
     if(kratos_option('g_carousel', false)){
         for($i=1; $i<6; $i++){
-            $carousel_img_{$i} = kratos_option("c_i_{$i}") ? kratos_option("c_i_{$i}") : "";
-            $carousel_url_{$i} = kratos_option("c_u_{$i}") ? kratos_option("c_u_{$i}") : "";
-            if($carousel_img_{$i} ){
-                $carousel_img[] = $carousel_img_{$i};
-                $carousel_url[] = $carousel_url_{$i};
+            $carousel_img_[$i] = kratos_option("c_i_{$i}") ?: null;
+            $carousel_url_[$i] = kratos_option("c_u_{$i}") ?: null;
+            if($carousel_img_[$i] ){
+                $carousel_img[] = $carousel_img_[$i];
+                $carousel_url[] = $carousel_url_[$i];
             }
         }
         if(is_array($carousel_img)){
