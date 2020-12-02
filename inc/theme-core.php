@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.10.26
+ * @version 2020.12.02
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -40,7 +40,7 @@ function theme_autoload()
         wp_enqueue_style('kicon', ASSET_PATH . '/assets/css/iconfont.min.css', array(), THEME_VERSION);
         wp_enqueue_style('layer', ASSET_PATH . '/assets/css/layer.min.css', array(), '3.1.1');
         if (kratos_option('g_animate', false)) {
-            wp_enqueue_style('animate', ASSET_PATH . '/assets/css/animate.min.css', array(), '3.7.2');
+            wp_enqueue_style('animate', ASSET_PATH . '/assets/css/animate.min.css', array(), '4.1.1');
         }
         if (kratos_option('g_fontawesome', false)) {
             wp_enqueue_style('fontawesome', ASSET_PATH . '/assets/css/fontawesome.min.css', array(), '5.13.0');
