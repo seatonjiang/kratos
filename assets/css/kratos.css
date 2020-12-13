@@ -1969,6 +1969,7 @@ button:focus {
   transition: 0.3s;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  cursor: pointer;
 }
 
 .k-main .sidebar .widget_categories ul li a,
