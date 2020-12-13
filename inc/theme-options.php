@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.09.21
+ * @version 2020.12.14
  */
 
 function getrobots()
@@ -758,7 +758,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('版权信息', 'kratos'),
         'id' => 's_copyright',
-        'std' => 'COPYRIGHT © 2020 ' . $sitename . '. ALL RIGHTS RESERVED.',
+        'std' => 'COPYRIGHT © 2021 ' . $sitename . '. ALL RIGHTS RESERVED.',
         'type' => 'textarea',
     );
 
