@@ -312,6 +312,17 @@ button:focus {
     color: #fff;
   }
 
+  .k-nav .navbar-brand h1 {
+    display: inherit;
+    padding: inherit;
+    color: inherit;
+    margin: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
   .k-nav .navbar-brand:focus,
   .k-nav .navbar-brand:hover {
     color: rgba(255, 255, 255, 0.8);
