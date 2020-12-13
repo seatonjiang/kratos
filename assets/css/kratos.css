@@ -1866,7 +1866,7 @@ button:focus {
 .k-main .sidebar .widget_links ul li:hover,
 .k-main .sidebar .widget_categories ul li:hover,
 .k-main .sidebar .widget_archive ul li:hover {
-  background-color: #eeeeee;
+  background-color: #f7f6f6;
 }
 
 .nav-tabs .nav-item.show .nav-link,
@@ -1928,6 +1928,53 @@ button:focus {
 
 .k-main .sidebar .widget_search .screen-reader-text {
   display: none;
+}
+
+.k-main .sidebar .w-comments .comments a {
+  display: block;
+  padding: 13px 0;
+}
+
+.k-main .sidebar .w-comments .comments a:first-child {
+  padding: 0 0 13px;
+}
+
+.k-main .sidebar .w-comments .comments a:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.k-main .sidebar .w-comments .comments .message {
+  overflow: hidden;
+  color: #394a58;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  word-break: keep-all;
+}
+
+.k-main .sidebar .w-comments .comments .meta .avatar img {
+  float: left;
+  margin-right: 7px;
+  width: 50px;
+  height: 50px;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 1px solid #eaeaea;
+}
+
+.k-main .sidebar .w-comments .comments .meta .author {
+  color: #777;
+  font-size: 12px;
+}
+
+.k-main .sidebar .w-comments .comments .meta .profile {
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+.k-main .sidebar .w-comments .comments .meta .date {
+  color: #777;
+  font-size: 12px;
 }
 
 .btn-search {

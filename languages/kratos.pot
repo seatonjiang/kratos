@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos\n"
-"POT-Creation-Date: 2020-10-26 09:27+0800\n"
+"POT-Creation-Date: 2020-12-14 00:21+0800\n"
 "PO-Revision-Date: 2020-02-14 23:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -74,7 +74,7 @@ msgstr ""
 msgid "提交评论"
 msgstr ""
 
-#: footer.php:27 inc/theme-widgets.php:81
+#: footer.php:27 inc/theme-widgets.php:140
 msgid "搜点什么呢?"
 msgstr ""
 
@@ -641,11 +641,11 @@ msgstr ""
 msgid "个人昵称"
 msgstr ""
 
-#: inc/theme-options.php:463 inc/theme-widgets.php:178
+#: inc/theme-options.php:463 inc/theme-widgets.php:237
 msgid "个人简介"
 msgstr ""
 
-#: inc/theme-options.php:464 inc/theme-widgets.php:195
+#: inc/theme-options.php:464 inc/theme-widgets.php:254
 #: pages/page-toolbar.php:18
 msgid "保持饥渴的专注，追求最佳的品质"
 msgstr ""
@@ -952,115 +952,137 @@ msgstr ""
 msgid "侧边栏工具"
 msgstr ""
 
-#: inc/theme-widgets.php:67
+#: inc/theme-widgets.php:115
+msgid "发布于 "
+msgstr ""
+
+#: inc/theme-widgets.php:126
 msgid "A search form for your site."
 msgstr ""
 
-#: inc/theme-widgets.php:70
+#: inc/theme-widgets.php:129
 msgctxt "Search widget"
 msgid "Search"
 msgstr ""
 
-#: inc/theme-widgets.php:81
+#: inc/theme-widgets.php:140
 msgid "搜索"
 msgstr ""
 
-#: inc/theme-widgets.php:89
+#: inc/theme-widgets.php:148
 msgid "Title:"
 msgstr ""
 
-#: inc/theme-widgets.php:109
+#: inc/theme-widgets.php:168
 msgid "图片广告"
 msgstr ""
 
-#: inc/theme-widgets.php:110
+#: inc/theme-widgets.php:169
 msgid "显示自定义图片广告的工具"
 msgstr ""
 
-#: inc/theme-widgets.php:126 inc/theme-widgets.php:148
+#: inc/theme-widgets.php:185 inc/theme-widgets.php:207
 msgid "广告"
 msgstr ""
 
-#: inc/theme-widgets.php:154
+#: inc/theme-widgets.php:213
 msgid "副标题："
 msgstr ""
 
-#: inc/theme-widgets.php:158
+#: inc/theme-widgets.php:217
 msgid "链接地址："
 msgstr ""
 
-#: inc/theme-widgets.php:162
+#: inc/theme-widgets.php:221
 msgid "广告图片:"
 msgstr ""
 
-#: inc/theme-widgets.php:164 inc/theme-widgets.php:234
+#: inc/theme-widgets.php:223 inc/theme-widgets.php:293
 msgid "选择图片"
 msgstr ""
 
-#: inc/theme-widgets.php:179
+#: inc/theme-widgets.php:238
 msgid "站长个人简介的展示工具"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-#: inc/theme-widgets.php:196
+#: inc/theme-widgets.php:255
 msgid "Kratos"
 msgstr ""
 
-#: inc/theme-widgets.php:232
+#: inc/theme-widgets.php:291
 msgid "背景图片:"
 msgstr ""
 
-#: inc/theme-widgets.php:246 inc/theme-widgets.php:269
+#: inc/theme-widgets.php:305 inc/theme-widgets.php:328
 msgid "标签聚合"
 msgstr ""
 
-#: inc/theme-widgets.php:247
+#: inc/theme-widgets.php:306
 msgid "文章标签的展示工具"
 msgstr ""
 
-#: inc/theme-widgets.php:292
+#: inc/theme-widgets.php:351
 msgid "显示数量："
 msgstr ""
 
-#: inc/theme-widgets.php:296
+#: inc/theme-widgets.php:355
 msgid "显示排序："
 msgstr ""
 
-#: inc/theme-widgets.php:298
+#: inc/theme-widgets.php:357
 msgid "降序"
 msgstr ""
 
-#: inc/theme-widgets.php:299
+#: inc/theme-widgets.php:358
 msgid "升序"
 msgstr ""
 
-#: inc/theme-widgets.php:300 inc/theme-widgets.php:330
-#: inc/theme-widgets.php:335
+#: inc/theme-widgets.php:359 inc/theme-widgets.php:390
+#: inc/theme-widgets.php:395 inc/theme-widgets.php:446
 msgid "随机"
 msgstr ""
 
-#: inc/theme-widgets.php:313
+#: inc/theme-widgets.php:372
 msgid "文章聚合"
 msgstr ""
 
-#: inc/theme-widgets.php:314
+#: inc/theme-widgets.php:373
 msgid "展示最热、随机、最新文章的工具"
 msgstr ""
 
-#: inc/theme-widgets.php:328 inc/theme-widgets.php:333
+#: inc/theme-widgets.php:388 inc/theme-widgets.php:393
+#: inc/theme-widgets.php:444
 msgid "最新"
 msgstr ""
 
-#: inc/theme-widgets.php:329 inc/theme-widgets.php:334
+#: inc/theme-widgets.php:389 inc/theme-widgets.php:394
+#: inc/theme-widgets.php:445
 msgid "热点"
 msgstr ""
 
-#: inc/theme-widgets.php:372
+#: inc/theme-widgets.php:434 inc/theme-widgets.php:497
 msgid "展示数量："
 msgstr ""
 
-#: inc/theme-widgets.php:376
+#: inc/theme-widgets.php:438
 msgid "统计天数："
+msgstr ""
+
+#: inc/theme-widgets.php:442
+msgid "默认显示："
+msgstr ""
+
+#: inc/theme-widgets.php:459
+msgid "最近评论"
+msgstr ""
+
+#: inc/theme-widgets.php:460
+msgid "展示站点最近的评论"
+msgstr ""
+
+#: inc/theme-widgets.php:493
+msgid "栏目标题："
 msgstr ""
 
 #: inc/update-checker/Puc/v4p10/Plugin/Ui.php:54

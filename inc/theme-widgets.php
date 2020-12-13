@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.12.13
+ * @version 2020.12.14
  */
 
 // 添加小工具
@@ -62,7 +62,63 @@ function most_comm_posts($days = 30, $nums = 6)
     echo $output;
 }
 
-class widget_search extends WP_Widget {
+function timeago($ptime){
+    $ptime = strtotime($ptime);
+    $etime = time() - $ptime;
+    if($etime < 1)
+        return'刚刚';
+    $interval = array(
+        12*30*24*60*60 => ' 年前（'.date('m月d日',$ptime).'）',
+        30*24*60*60 => ' 个月前（'.date('m月d日',$ptime).'）',
+        7*24*60*60 => ' 周前（'.date('m月d日',$ptime).'）',
+        24*60*60 => ' 天前（'.date('m月d日',$ptime).'）',
+        60*60 => ' 小时前（'.date('m月d日',$ptime).'）',
+        60 => ' 分钟前（'.date('m月d日',$ptime).'）',
+        1 => ' 秒前（'.date('m月d日',$ptime).'）',
+    );
+    foreach($interval as$secs=>$str){
+        $d=$etime/$secs;
+        if($d>=1){
+            $r=round($d);
+            return$r.$str;
+        }
+    }
+}
+
+function string_cut($string, $sublen, $start = 0, $code = 'UTF-8') {
+    if($code == 'UTF-8') {
+        $pa = "/[\x01-\x7f]|[\xc2-\xdf][\x80-\xbf]|\xe0[\xa0-\xbf][\x80-\xbf]|[\xe1-\xef][\x80-\xbf][\x80-\xbf]|\xf0[\x90-\xbf][\x80-\xbf][\x80-\xbf]|[\xf1-\xf7][\x80-\xbf][\x80-\xbf][\x80-\xbf]/";
+        preg_match_all($pa, $string, $t_string);
+    if(count($t_string[0]) - $start > $sublen) return join('', array_slice($t_string[0], $start, $sublen)) . "...";
+        return join('', array_slice($t_string[0], $start, $sublen));
+    } else {
+        $start = $start * 2;
+        $sublen = $sublen * 2;
+        $strlen = strlen($string);
+        $tmpstr = '';
+        for($i = 0; $i < $strlen; $i++) {
+            if($i >= $start && $i < ($start + $sublen)) {
+                if(ord(substr($string, $i, 1)) > 129) $tmpstr .= substr($string, $i, 2);
+                else $tmpstr .= substr($string, $i, 1);
+            }
+            if(ord(substr($string, $i, 1)) > 129) $i++;
+        }
+    return $tmpstr;
+    }
+}
+
+function latest_comments($list_number=5, $cut_length=50)
+{
+    global $wpdb,$output;
+    $comments = $wpdb->get_results("SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type, comment_author_url, comment_author_email, comment_content AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND (comment_type = '' OR comment_type = 'comment') AND user_id != '1' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT $list_number");
+    foreach ($comments as $comment) {
+        $output .= ' <a href="'.get_the_permalink($comment->comment_post_ID) .'#commentform"> <div class="meta clearfix"> <div class="avatar float-left">'.get_avatar( $comment, 60 ).'</div> <div class="profile d-block"> <span class="date"> '.__( '发布于 ' , 'kratos').timeago($comment->comment_date_gmt).'</span> <span class="message d-block">'.convert_smilies(string_cut(strip_tags($comment->com_excerpt), $cut_length)).'</span> </div> </div> </a>';
+    }
+    return $output;
+}
+
+class widget_search extends WP_Widget
+{
 
     public function __construct() {
         $widget_ops = array(
@@ -395,6 +451,57 @@ class widget_posts extends WP_Widget
     }
 }
 
+class widget_comments extends WP_Widget
+{
+    public function __construct()
+    {
+        $widget_ops = array(
+            'name' => __('最近评论', 'kratos'),
+            'description' => __('展示站点最近的评论', 'kratos'),
+        );
+
+        parent::__construct(false, false, $widget_ops);
+    }
+
+    public function widget($args, $instance)
+    {
+        $number = !empty($instance['number']) ? $instance['number'] : '5';
+        $title = !empty($instance['title']) ? $instance['title'] : '最近评论';
+
+        echo '<div class="widget w-comments"><div class="title">'. $title .'</div><div class="comments">';
+        echo latest_comments($number, 50);
+        echo '</div></div>';
+    }
+
+    public function update($new_instance, $old_instance)
+    {
+        $instance = array();
+
+        $instance['number'] = (!empty($new_instance['number'])) ? $new_instance['number'] : '';
+        $instance['title'] = (!empty($new_instance['title'])) ? $new_instance['title'] : '';
+        
+        return $instance;
+    }
+    public function form($instance)
+    {
+        global $wpdb;
+        $number = !empty($instance['number']) ? $instance['number'] : '5';
+        $title = !empty($instance['title']) ? $instance['title'] : '最近评论';
+        ?>
+        <div class="media-widget-control">
+            <p>
+                <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('栏目标题：', 'kratos');?></label>
+                <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+            </p>
+            <p>
+                <label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('展示数量：', 'kratos');?></label>
+                <input class="widefat" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo esc_attr($number); ?>" />
+            </p>
+        </div>
+        <?php
+    }
+}
+
 function register_widgets()
 {
     register_widget('widget_ad');
@@ -402,5 +509,6 @@ function register_widgets()
     register_widget('widget_tags');
     register_widget('widget_search');
     register_widget('widget_posts');
+    register_widget('widget_comments');
 }
 add_action('widgets_init', 'register_widgets');
