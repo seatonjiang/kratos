@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.09.27
+ * @version 2020.12.13
  */
 
 // 添加小工具
@@ -321,18 +321,19 @@ class widget_posts extends WP_Widget
     {
         $number = !empty($instance['number']) ? $instance['number'] : '6';
         $days = !empty($instance['days']) ? $instance['days'] : '30';
+        $order = !empty($instance['order']) ? $instance['order'] : 'hot';
 
         echo '<div class="widget w-recommended">';
-        ?>
+        ?>    
         <div class="nav nav-tabs d-none d-xl-flex" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link" id="nav-new-tab" data-toggle="tab" href="#nav-new" role="tab" aria-controls="nav-new" aria-selected="false"><i class="kicon i-tabnew"></i><?php _e('最新', 'kratos');?></a>
-            <a class="nav-item nav-link active" id="nav-hot-tab" data-toggle="tab" href="#nav-hot" role="tab" aria-controls="nav-hot" aria-selected="true"><i class="kicon i-tabhot"></i><?php _e('热点', 'kratos');?></a>
-            <a class="nav-item nav-link" id="nav-random-tab" data-toggle="tab" href="#nav-random" role="tab" aria-controls="nav-random" aria-selected="false"><i class="kicon i-tabrandom"></i><?php _e('随机', 'kratos');?></a>
+            <a class="nav-item nav-link <?php echo $active = ($order == 'new') ? 'active' : null; ?>" id="nav-new-tab" data-toggle="tab" href="#nav-new" role="tab" aria-controls="nav-new" aria-selected="<?php echo $selected = ($order == 'new') ? 'true' : 'false'; ?>"><i class="kicon i-tabnew"></i><?php _e('最新', 'kratos');?></a>
+            <a class="nav-item nav-link <?php echo $active = ($order == 'hot') ? 'active' : null; ?>" id="nav-hot-tab" data-toggle="tab" href="#nav-hot" role="tab" aria-controls="nav-hot" aria-selected="<?php echo $selected = ($order == 'hot') ? 'true' : 'false'; ?>"><i class="kicon i-tabhot"></i><?php _e('热点', 'kratos');?></a>
+            <a class="nav-item nav-link <?php echo $active = ($order == 'random') ? 'active' : null; ?>" id="nav-random-tab" data-toggle="tab" href="#nav-random" role="tab" aria-controls="nav-random" aria-selected="<?php echo $selected = ($order == 'random') ? 'true' : 'false'; ?>"><i class="kicon i-tabrandom"></i><?php _e('随机', 'kratos');?></a>
         </div>
         <div class="nav nav-tabs d-xl-none" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link" id="nav-new-tab" data-toggle="tab" href="#nav-new" role="tab" aria-controls="nav-new" aria-selected="false"><?php _e('最新', 'kratos');?></a>
-            <a class="nav-item nav-link active" id="nav-hot-tab" data-toggle="tab" href="#nav-hot" role="tab" aria-controls="nav-hot" aria-selected="true"><?php _e('热点', 'kratos');?></a>
-            <a class="nav-item nav-link" id="nav-random-tab" data-toggle="tab" href="#nav-random" role="tab" aria-controls="nav-random" aria-selected="false"><?php _e('随机', 'kratos');?></a>
+            <a class="nav-item nav-link <?php echo $active = ($order == 'new') ? 'active' : null; ?>" id="nav-new-tab" data-toggle="tab" href="#nav-new" role="tab" aria-controls="nav-new" aria-selected="<?php echo $selected = ($order == 'new') ? 'true' : 'false'; ?>"><?php _e('最新', 'kratos');?></a>
+            <a class="nav-item nav-link <?php echo $active = ($order == 'hot') ? 'active' : null; ?>" id="nav-hot-tab" data-toggle="tab" href="#nav-hot" role="tab" aria-controls="nav-hot" aria-selected="<?php echo $selected = ($order == 'hot') ? 'true' : 'false'; ?>"><?php _e('热点', 'kratos');?></a>
+            <a class="nav-item nav-link <?php echo $active = ($order == 'random') ? 'active' : null; ?>" id="nav-random-tab" data-toggle="tab" href="#nav-random" role="tab" aria-controls="nav-random" aria-selected="<?php echo $selected = ($order == 'random') ? 'true' : 'false'; ?>"><?php _e('随机', 'kratos');?></a>
         </div>
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade" id="nav-new" role="tabpanel" aria-labelledby="nav-new-tab">
@@ -358,7 +359,8 @@ class widget_posts extends WP_Widget
 
         $instance['number'] = (!empty($new_instance['number'])) ? $new_instance['number'] : '';
         $instance['days'] = (!empty($new_instance['days'])) ? $new_instance['days'] : '';
-
+        $instance['order'] = (!empty($new_instance['order'])) ? $new_instance['order'] : '';
+        
         return $instance;
     }
     public function form($instance)
@@ -366,6 +368,7 @@ class widget_posts extends WP_Widget
         global $wpdb;
         $number = !empty($instance['number']) ? $instance['number'] : '6';
         $days = !empty($instance['days']) ? $instance['days'] : '30';
+        $order = !empty($instance['order']) ? $instance['order'] : 'hot';
         ?>
         <div class="media-widget-control">
             <p>
@@ -375,6 +378,14 @@ class widget_posts extends WP_Widget
             <p>
                 <label for="<?php echo $this->get_field_id('days'); ?>"><?php _e('统计天数：', 'kratos');?></label>
                 <input class="widefat" id="<?php echo $this->get_field_id('days'); ?>" name="<?php echo $this->get_field_name('days'); ?>" type="text" value="<?php echo esc_attr($days); ?>" />
+            </p>
+            <p>
+                <label for="<?php echo $this->get_field_id('order'); ?>"><?php _e('默认显示：', 'kratos');?></label>
+                <select name="<?php echo $this->get_field_name("order"); ?>" id='<?php echo $this->get_field_id("order"); ?>'>
+                    <option value="new" <?php echo ($order == 'new') ? 'selected' : ''; ?>><?php _e('最新', 'kratos');?></option>
+                    <option value="hot" <?php echo ($order == 'hot') ? 'selected' : ''; ?>><?php _e('热点', 'kratos');?></option>
+                    <option value="random" <?php echo ($order == 'random') ? 'selected' : ''; ?>><?php _e('随机', 'kratos');?></option>
+                </select>
             </p>
         </div>
         <?php
