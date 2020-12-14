@@ -518,28 +518,34 @@ button:focus {
 }
 
 .k-main .details .article .content .paginations {
-  padding-top: 20px;
-  width: 100%;
   font-size: 14px;
 }
 
+.k-main .details .article .content .paginations span {
+  margin: 3px;
+  cursor: pointer;
+  display: inline-block;
+}
+
 .k-main .details .article .content .paginations a {
-  margin: 0 3px;
+  text-decoration: none;
 }
 
 .k-main .details .article .content .paginations a span {
-  padding: 7px 12px;
+  padding: 5px 12px;
   border: solid 1px #00a2ff;
   background-color: #f0f8ff;
   color: #00a2ff;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .k-main .details .article .content .paginations .current span,
 .k-main .details .article .content .paginations a span:hover {
-  padding: 7px 12px;
+  padding: 5px 12px;
   border: solid 1px #00a2ff;
   background: #00a2ff;
-  color: #ffffff;
+  color: #fff;
   font-weight: 400;
 }
 
