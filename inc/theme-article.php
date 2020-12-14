@@ -101,12 +101,15 @@ add_filter('excerpt_length', 'excerpt_length');
 // 开启特色图
 add_theme_support("post-thumbnails");
 
+// 生成适合特色图的比例图片
+add_image_size( 'kratos-thumbnail', 512, 288, true );
+
 // 文章特色图片
 function post_thumbnail()
 {
     global $post;
     $img_id = get_post_thumbnail_id();
-    $img_url = wp_get_attachment_image_src($img_id, array(720, 435));
+    $img_url = wp_get_attachment_image_src($img_id, 'kratos-thumbnail');
     if (is_array($img_url)) {
         $img_url = $img_url[0];
     }
