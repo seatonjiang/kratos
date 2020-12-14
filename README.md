@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.2/assets/img/options/about.png">
+<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.3/assets/img/options/about.png">
 </p>
 
 <p align="center">
@@ -131,7 +131,7 @@ Detailed changes for each release are documented in the [release notes](https://
 If you find Kratos useful, you can buy us a cup of coffee
 
 <p align="center">
-<img width="700" src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.2/assets/img/options/donate.png">
+<img width="700" src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.3/assets/img/options/donate.png">
 </p>
 
 ## License
