@@ -195,6 +195,17 @@ button:focus {
   width: 168px;
 }
 
+.k-nav .navbar-brand h1 {
+  display: inherit;
+  padding: inherit;
+  color: inherit;
+  margin: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
 .k-nav .navbar-toggler {
   padding: 13px;
   border-color: transparent;
@@ -312,17 +323,6 @@ button:focus {
     color: #fff;
   }
 
-  .k-nav .navbar-brand h1 {
-    display: inherit;
-    padding: inherit;
-    color: inherit;
-    margin: inherit;
-    color: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-  }
-
   .k-nav .navbar-brand:focus,
   .k-nav .navbar-brand:hover {
     color: rgba(255, 255, 255, 0.8);
@@ -436,7 +436,7 @@ button:focus {
   left: 0;
   z-index: 1;
   width: 100%;
-  background: rgba(66, 64, 64, 0.2);
+  background: rgba(66, 64, 64, 0.25);
 }
 
 .k-header .banner .content {
