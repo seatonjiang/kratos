@@ -192,7 +192,7 @@ button:focus {
 }
 
 .k-nav .navbar-brand img {
-  width: 100px;
+  width: 168px;
 }
 
 .k-nav .navbar-toggler {
@@ -400,6 +400,10 @@ button:focus {
 @media screen and (max-width: 768px) {
   .k-nav .navbar-brand {
     font-size: 19px;
+  }
+
+  .k-nav .navbar-brand img {
+    width: 130px;
   }
 
   .navbar-light .navbar-nav .nav-link {
