@@ -494,3 +494,23 @@ function kratos_carousel(){
         echo $output;
     }
 }
+
+// 获取文章评论数量
+function findSinglecomments($postid=0,$which=0){
+    $comments = get_comments('status=approve&type=comment&post_id='.$postid);
+    if ($comments) {
+        $i=0; $j=0; $commentusers=array();
+        foreach ($comments as $comment) {
+            ++$i;
+            if ($i==1) { $commentusers[] = $comment->comment_author_email; ++$j; }
+            if ( !in_array($comment->comment_author_email, $commentusers) ) {
+                $commentusers[] = $comment->comment_author_email;
+                ++$j;
+            }
+        }
+        $output = array($j,$i);
+        $which = ($which == 0) ? 0 : 1;
+        return $output[$which];
+    }
+    return 0;
+}

@@ -558,6 +558,7 @@ button:focus {
 }
 
 .k-main .board .article-panel {
+  position: relative;
   margin: 0 0 23px;
   border-radius: 0;
   background-color: #fff;
@@ -566,6 +567,22 @@ button:focus {
 
 .k-main .board .article-panel:last-of-type {
   margin: 0;
+}
+
+.k-main .board .article-panel .a-card {
+  position: absolute;
+  top: -16px;
+  right: -1px;
+}
+
+.k-main .board .article-panel .a-card .i-card-top {
+  color: #0092ee;
+  font-size: 40px;
+}
+
+.k-main .board .article-panel .a-card .i-card-hot {
+  color: #dc3545;
+  font-size: 40px;
 }
 
 .k-main .board .article-panel .a-thumb {

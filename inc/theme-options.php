@@ -430,6 +430,22 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('HOT 标签 - 评论数', 'kratos'),
+        'desc' => __('填写显示 HOT 标签需要的评论数', 'kratos'),
+        'std' => "20",
+        'id' => 'g_article_comment',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('HOT 标签 - 点赞数', 'kratos'),
+        'desc' => __('填写显示 HOT 标签需要的点赞数', 'kratos'),
+        'std' => "200",
+        'id' => 'g_article_love',
+        'type' => 'text',
+    );
+
+    $options[] = array(
         'name' => __('页面布局', 'kratos'),
         'desc' => __('是否显示侧边栏小工具（默认显示侧边栏），仅在文章页面生效', 'kratos'),
         'id' => "g_article_widgets",

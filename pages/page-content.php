@@ -3,10 +3,17 @@
  * 文章列表
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.09.27
+ * @version 2020.12.14
  */
 ?>
 <div class="article-panel">
+    <span class="a-card d-none d-md-block d-lg-block">
+        <?php $article_comment = kratos_option('g_article_comment', '20'); $article_love = kratos_option('g_article_love', '200'); if (is_sticky()) { ?>
+        <i class="kicon i-card-top"></i>
+		<?php } elseif (findSinglecomments($post->ID) >= $article_comment || get_post_meta($post->ID, 'love', true) >= $article_love) { ?>
+		<i class="kicon i-card-hot"></i>
+		<?php } ?>
+	</span>
     <?php if (kratos_option('g_thumbnail',true)) { ?>
     <div class="a-thumb">
         <a href="<?php the_permalink(); ?>">
