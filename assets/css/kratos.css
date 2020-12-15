@@ -1163,6 +1163,10 @@ button:focus {
   margin-bottom: 0;
 }
 
+.k-main .details .article .content .wp-caption {
+  width: 100% !important;
+}
+
 .k-main .details .article .copyright {
   padding: 0 16px 16px;
 }
