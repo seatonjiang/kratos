@@ -157,23 +157,31 @@ button:focus {
   background-color: #f7f7f7;
 }
 
-.k-main {
-  padding: 23px 0;
+.k-main.color {
+  margin-top: 90px;
 }
 
-.k-main.color {
-  padding-top: 103px;
+.k-main.banner {
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 992px) {
+  .k-header {
+    height: 60px;
+  }
+
   .k-main.color {
-    padding-top: 92px;
+    margin-top: 20px;
+  }
+
+  .k-main.banner {
+    margin-top: 260px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .k-main.color {
-    padding-top: 83px;
+  .k-main.banner {
+    margin-top: 255px;
   }
 }
 
@@ -187,12 +195,14 @@ button:focus {
 }
 
 .k-nav .navbar-brand {
+  padding: 0;
   color: #ffffff;
   font-size: 24px;
 }
 
 .k-nav .navbar-brand img {
-  width: 168px;
+  max-width: 168px;
+  max-height: 27px;
 }
 
 .k-nav .navbar-brand h1 {
@@ -306,6 +316,7 @@ button:focus {
 
 @media only screen and (min-width: 992px) {
   .k-nav {
+    height: 70px;
     border-bottom: 1px solid transparent;
     background: transparent;
     -webkit-transition: background-color 0.2s;
@@ -319,7 +330,7 @@ button:focus {
   }
 
   .k-nav .navbar-brand {
-    padding: 6px 0;
+    padding: 3px 0;
     color: #fff;
   }
 
@@ -403,7 +414,8 @@ button:focus {
   }
 
   .k-nav .navbar-brand img {
-    width: 130px;
+    max-width: 140px;
+    max-height: 20px;
   }
 
   .navbar-light .navbar-nav .nav-link {
@@ -2226,6 +2238,7 @@ button:focus {
 --------------------------------------------------------------*/
 
 .k-footer {
+  margin-top: 20px;
   padding: 40px 0;
   background: #23282d;
 }

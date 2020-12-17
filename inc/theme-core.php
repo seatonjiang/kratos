@@ -48,17 +48,21 @@ function theme_autoload()
         wp_enqueue_style('kratos', ASSET_PATH . '/assets/css/kratos.min.css', array(), THEME_VERSION);
         if (kratos_option('g_adminbar', true)) {
             $admin_bar_css = "
-            @media screen and (max-width: 782px) {
-                .k-nav{
-                    padding-top: 54px;
-                }
-            }
             @media screen and (min-width: 782px) {
-                .k-nav{
+                .k-nav {
                     padding-top: 40px;
                 }
             }
-            ";
+            @media screen and (max-width: 782px) {
+                .k-nav {
+                    padding-top: 54px;
+                }
+            }
+            @media screen and (min-width: 992px) {
+                .k-nav {
+                    height: 102px;
+                }
+            }";
             if (current_user_can('level_10')) {
                 wp_add_inline_style('kratos', $admin_bar_css);
             }
