@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.12.02
+ * @version 2020.12.17
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -193,7 +193,13 @@ if (kratos_option('g_removeimgsize', false)) {
         unset($sizes['medium']);
         unset($sizes['large']);
         unset($sizes['medium_large']);
+        unset($sizes['1536x1536']);
+        unset($sizes['2048x2048']);
         return $sizes;
     }
     add_filter('intermediate_image_sizes_advanced', 'remove_default_images');
+    // add_filter('big_image_size_threshold', '__return_false');
+
+    remove_image_size('1536x1536');
+    remove_image_size('2048x2048');
 }
