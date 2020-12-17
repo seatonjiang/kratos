@@ -197,12 +197,12 @@ button:focus {
 
 .k-nav .navbar-brand h1 {
   display: inherit;
+  margin: inherit;
   padding: inherit;
   color: inherit;
-  margin: inherit;
   color: inherit;
-  font-size: inherit;
   font-weight: inherit;
+  font-size: inherit;
   line-height: inherit;
 }
 
@@ -522,9 +522,9 @@ button:focus {
 }
 
 .k-main .details .article .content .paginations span {
+  display: inline-block;
   margin: 3px;
   cursor: pointer;
-  display: inline-block;
 }
 
 .k-main .details .article .content .paginations a {
@@ -536,8 +536,8 @@ button:focus {
   border: solid 1px #00a2ff;
   background-color: #f0f8ff;
   color: #00a2ff;
-  font-weight: normal;
   text-decoration: none;
+  font-weight: normal;
 }
 
 .k-main .details .article .content .paginations .current span,
@@ -1806,9 +1806,9 @@ button:focus {
 }
 
 .k-main .sidebar .w-about .textwidget .username {
-  font-size: 17px;
-  font-weight: 500;
   margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 17px;
 }
 
 .k-main .sidebar .w-about .textwidget .about {
@@ -2000,8 +2000,8 @@ button:focus {
   width: 50px;
   height: 50px;
   max-width: 100%;
-  border-radius: 50%;
   border: 1px solid #eaeaea;
+  border-radius: 50%;
 }
 
 .k-main .sidebar .w-comments .comments .meta .author {
@@ -2020,15 +2020,15 @@ button:focus {
 }
 
 .btn-search {
-  background-color: #00a2ff;
   border-color: #00a2ff;
+  background-color: #00a2ff;
 }
 
 .btn-search:not(:disabled):not(.disabled):active,
 .btn-search:hover,
 .btn-search:focus {
-  background-color: #0095ff;
   border-color: #0095ff;
+  background-color: #0095ff;
 }
 
 .btn-search:not(:disabled):not(.disabled):active:focus {
@@ -2053,12 +2053,12 @@ button:focus {
   text-align: center;
   text-overflow: ellipsis;
   font-size: 14px;
+  cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  cursor: pointer;
 }
 
 .k-main .sidebar .widget_categories ul li a,
@@ -2068,13 +2068,13 @@ button:focus {
 
 .k-main .sidebar .w-search .form-control,
 .k-main .sidebar .w-search .btn {
-  font-size: 15px;
   border-radius: 0;
+  font-size: 15px;
 }
 
 .k-main .sidebar .w-search .btn {
-  padding-left: 25px;
   padding-right: 25px;
+  padding-left: 25px;
 }
 
 @media screen and (max-width: 1310px) {
