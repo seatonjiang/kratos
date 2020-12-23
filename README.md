@@ -10,6 +10,8 @@
 <img src="https://img.shields.io/github/license/vtrois/kratos?color=%234c1">
 </p>
 
+English | [简体中文](README.zh-CN.md)
+
 ## About
 
 Kratos is a responsive WordPress theme focused on the user reading experience, just for fun 🎉
@@ -125,14 +127,6 @@ Kratos
 ## Changelog
 
 Detailed changes for each release are documented in the [release notes](https://github.com/vtrois/kratos/releases).
-
-## Donation
-
-If you find Kratos useful, you can buy us a cup of coffee
-
-<p align="center">
-<img width="700" src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.3/assets/img/options/donate.png">
-</p>
 
 ## License
 
