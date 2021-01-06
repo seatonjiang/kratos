@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2021-01-06 10:03+0800\n"
-"PO-Revision-Date: 2021-01-06 02:08\n"
+"PO-Revision-Date: 2021-01-06 02:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -216,11 +216,11 @@ msgstr "瀏覽檔案"
 
 #: inc/theme-article.php:210
 msgid "评论正在提交中"
-msgstr ""
+msgstr "評論正在提交中"
 
 #: inc/theme-article.php:211
 msgid "评论提交成功"
-msgstr ""
+msgstr "評論提交成功"
 
 #: inc/theme-article.php:249 inc/theme-article.php:288
 msgid "编辑"
@@ -628,19 +628,19 @@ msgstr "支付寶二維碼"
 
 #: inc/theme-options.php:433
 msgid "HOT 标签 - 评论数"
-msgstr ""
+msgstr "HOT 標籤 - 評論數"
 
 #: inc/theme-options.php:434
 msgid "填写显示 HOT 标签需要的评论数"
-msgstr ""
+msgstr "填寫顯示 HOT 標籤需要的評論數"
 
 #: inc/theme-options.php:441
 msgid "HOT 标签 - 点赞数"
-msgstr ""
+msgstr "HOT 標籤 - 點贊數"
 
 #: inc/theme-options.php:442
 msgid "填写显示 HOT 标签需要的点赞数"
-msgstr ""
+msgstr "填寫顯示 HOT 標籤需要的點贊數"
 
 #: inc/theme-options.php:449
 msgid "页面布局"
@@ -972,41 +972,41 @@ msgstr "小工具"
 
 #: inc/theme-widgets.php:71
 msgid " 年前"
-msgstr ""
+msgstr " 年前"
 
 #: inc/theme-widgets.php:71 inc/theme-widgets.php:72 inc/theme-widgets.php:73
 #: inc/theme-widgets.php:74 inc/theme-widgets.php:75 inc/theme-widgets.php:76
 #: inc/theme-widgets.php:77
 msgid "m月d日"
-msgstr ""
+msgstr "m月d日"
 
 #: inc/theme-widgets.php:72
 msgid " 个月前"
-msgstr ""
+msgstr " 個月前"
 
 #: inc/theme-widgets.php:73
 msgid " 周前"
-msgstr ""
+msgstr " 週前"
 
 #: inc/theme-widgets.php:74
 msgid " 天前"
-msgstr ""
+msgstr " 天前"
 
 #: inc/theme-widgets.php:75
 msgid " 小时前"
-msgstr ""
+msgstr " 小時前"
 
 #: inc/theme-widgets.php:76
 msgid " 分钟前"
-msgstr ""
+msgstr " 分鐘前"
 
 #: inc/theme-widgets.php:77
 msgid " 秒前"
-msgstr ""
+msgstr " 秒前"
 
 #: inc/theme-widgets.php:115
 msgid "发布于 "
-msgstr ""
+msgstr "發佈於 "
 
 #: inc/theme-widgets.php:126
 msgid "A search form for your site."
@@ -1123,20 +1123,20 @@ msgstr "統計天數："
 
 #: inc/theme-widgets.php:442
 msgid "默认显示："
-msgstr ""
+msgstr "默認顯示："
 
 #: inc/theme-widgets.php:459 inc/theme-widgets.php:469
 #: inc/theme-widgets.php:489
 msgid "最近评论"
-msgstr ""
+msgstr "最近評論"
 
 #: inc/theme-widgets.php:460
 msgid "展示站点最近的评论"
-msgstr ""
+msgstr "展示站點最近的評論"
 
 #: inc/theme-widgets.php:493
 msgid "栏目标题："
-msgstr ""
+msgstr "欄目標題："
 
 #: inc/update-checker/Puc/v4p10/Plugin/Ui.php:54
 msgid "View details"
