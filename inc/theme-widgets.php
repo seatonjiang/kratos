@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.12.14
+ * @version 2020.12.17
  */
 
 // 添加小工具
@@ -66,15 +66,15 @@ function timeago($ptime){
     $ptime = strtotime($ptime);
     $etime = time() - $ptime;
     if($etime < 1)
-        return'刚刚';
+        return '刚刚';
     $interval = array(
-        12*30*24*60*60 => ' 年前（'.date('m月d日',$ptime).'）',
-        30*24*60*60 => ' 个月前（'.date('m月d日',$ptime).'）',
-        7*24*60*60 => ' 周前（'.date('m月d日',$ptime).'）',
-        24*60*60 => ' 天前（'.date('m月d日',$ptime).'）',
-        60*60 => ' 小时前（'.date('m月d日',$ptime).'）',
-        60 => ' 分钟前（'.date('m月d日',$ptime).'）',
-        1 => ' 秒前（'.date('m月d日',$ptime).'）',
+        12*30*24*60*60 => __(' 年前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
+        30*24*60*60 => __(' 个月前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
+        7*24*60*60 => __(' 周前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
+        24*60*60 => __(' 天前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
+        60*60 => __(' 小时前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
+        60 => __(' 分钟前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
+        1 => __(' 秒前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
     );
     foreach($interval as$secs=>$str){
         $d=$etime/$secs;
@@ -466,7 +466,7 @@ class widget_comments extends WP_Widget
     public function widget($args, $instance)
     {
         $number = !empty($instance['number']) ? $instance['number'] : '5';
-        $title = !empty($instance['title']) ? $instance['title'] : '最近评论';
+        $title = !empty($instance['title']) ? $instance['title'] : __('最近评论', 'kratos');
 
         echo '<div class="widget w-comments"><div class="title">'. $title .'</div><div class="comments">';
         echo latest_comments($number, 50);
@@ -486,7 +486,7 @@ class widget_comments extends WP_Widget
     {
         global $wpdb;
         $number = !empty($instance['number']) ? $instance['number'] : '5';
-        $title = !empty($instance['title']) ? $instance['title'] : '最近评论';
+        $title = !empty($instance['title']) ? $instance['title'] : __('最近评论', 'kratos');
         ?>
         <div class="media-widget-control">
             <p>

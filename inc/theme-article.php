@@ -3,7 +3,7 @@
  * 文章相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.12.02
+ * @version 2021.01.06
  */
 
 // 文章链接添加 target 和 rel
@@ -206,7 +206,9 @@ function comment_scripts()
     wp_enqueue_script('comment', ASSET_PATH . '/assets/js/comments.min.js', array(), THEME_VERSION);
     wp_localize_script('comment', 'ajaxcomment', array(
         'ajax_url' => admin_url('admin-ajax.php'),
-        'order' => get_option('comment_order')
+        'order' => get_option('comment_order'),
+        'compost' => __('评论正在提交中','kratos'),
+        'comsucc' => __('评论提交成功','kratos'),
     ));
 }
 add_action('wp_enqueue_scripts', 'comment_scripts');
@@ -244,7 +246,7 @@ function comment_callback()
                 <?php comment_text();?>
             </div>
             <div class="meta clearfix">
-                <div class="date d-inline-block float-left"><?php echo get_comment_date('Y年m月d日'); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
+                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
                 </div>
             </div>
         </div>
@@ -283,7 +285,7 @@ function comment_callbacks($comment, $args, $depth = 2)
                 <?php comment_text();?>
             </div>
             <div class="meta clearfix">
-                <div class="date d-inline-block float-left"><?php echo get_comment_date('Y年m月d日'); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
+                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
                 </div>
                 <div class="tool reply ml-2 d-inline-block float-right">
                 <?php
