@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.12.02
+ * @version 2020.12.17
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -48,17 +48,21 @@ function theme_autoload()
         wp_enqueue_style('kratos', ASSET_PATH . '/assets/css/kratos.min.css', array(), THEME_VERSION);
         if (kratos_option('g_adminbar', true)) {
             $admin_bar_css = "
-            @media screen and (max-width: 782px) {
-                .k-nav{
-                    padding-top: 54px;
-                }
-            }
             @media screen and (min-width: 782px) {
-                .k-nav{
+                .k-nav {
                     padding-top: 40px;
                 }
             }
-            ";
+            @media screen and (max-width: 782px) {
+                .k-nav {
+                    padding-top: 54px;
+                }
+            }
+            @media screen and (min-width: 992px) {
+                .k-nav {
+                    height: 102px;
+                }
+            }";
             if (current_user_can('level_10')) {
                 wp_add_inline_style('kratos', $admin_bar_css);
             }
@@ -193,7 +197,13 @@ if (kratos_option('g_removeimgsize', false)) {
         unset($sizes['medium']);
         unset($sizes['large']);
         unset($sizes['medium_large']);
+        unset($sizes['1536x1536']);
+        unset($sizes['2048x2048']);
         return $sizes;
     }
     add_filter('intermediate_image_sizes_advanced', 'remove_default_images');
+    // add_filter('big_image_size_threshold', '__return_false');
+
+    remove_image_size('1536x1536');
+    remove_image_size('2048x2048');
 }

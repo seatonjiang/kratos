@@ -157,23 +157,31 @@ button:focus {
   background-color: #f7f7f7;
 }
 
-.k-main {
-  padding: 23px 0;
+.k-main.color {
+  margin-top: 90px;
 }
 
-.k-main.color {
-  padding-top: 103px;
+.k-main.banner {
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 992px) {
+  .k-header {
+    height: 60px;
+  }
+
   .k-main.color {
-    padding-top: 92px;
+    margin-top: 20px;
+  }
+
+  .k-main.banner {
+    margin-top: 260px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .k-main.color {
-    padding-top: 83px;
+  .k-main.banner {
+    margin-top: 255px;
   }
 }
 
@@ -187,12 +195,25 @@ button:focus {
 }
 
 .k-nav .navbar-brand {
+  padding: 0;
   color: #ffffff;
   font-size: 24px;
 }
 
 .k-nav .navbar-brand img {
-  width: 100px;
+  max-width: 168px;
+  max-height: 27px;
+}
+
+.k-nav .navbar-brand h1 {
+  display: inherit;
+  margin: inherit;
+  padding: inherit;
+  color: inherit;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .k-nav .navbar-toggler {
@@ -295,6 +316,7 @@ button:focus {
 
 @media only screen and (min-width: 992px) {
   .k-nav {
+    height: 70px;
     border-bottom: 1px solid transparent;
     background: transparent;
     -webkit-transition: background-color 0.2s;
@@ -308,7 +330,7 @@ button:focus {
   }
 
   .k-nav .navbar-brand {
-    padding: 6px 0;
+    padding: 3px 0;
     color: #fff;
   }
 
@@ -391,6 +413,11 @@ button:focus {
     font-size: 19px;
   }
 
+  .k-nav .navbar-brand img {
+    max-width: 140px;
+    max-height: 20px;
+  }
+
   .navbar-light .navbar-nav .nav-link {
     font-size: 16px;
   }
@@ -421,7 +448,7 @@ button:focus {
   left: 0;
   z-index: 1;
   width: 100%;
-  background: rgba(66, 64, 64, 0.2);
+  background: rgba(66, 64, 64, 0.25);
 }
 
 .k-header .banner .content {
@@ -503,28 +530,34 @@ button:focus {
 }
 
 .k-main .details .article .content .paginations {
-  padding-top: 20px;
-  width: 100%;
   font-size: 14px;
 }
 
+.k-main .details .article .content .paginations span {
+  display: inline-block;
+  margin: 3px;
+  cursor: pointer;
+}
+
 .k-main .details .article .content .paginations a {
-  margin: 0 3px;
+  text-decoration: none;
 }
 
 .k-main .details .article .content .paginations a span {
-  padding: 7px 12px;
+  padding: 5px 12px;
   border: solid 1px #00a2ff;
   background-color: #f0f8ff;
   color: #00a2ff;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 .k-main .details .article .content .paginations .current span,
 .k-main .details .article .content .paginations a span:hover {
-  padding: 7px 12px;
+  padding: 5px 12px;
   border: solid 1px #00a2ff;
   background: #00a2ff;
-  color: #ffffff;
+  color: #fff;
   font-weight: 400;
 }
 
@@ -543,6 +576,7 @@ button:focus {
 }
 
 .k-main .board .article-panel {
+  position: relative;
   margin: 0 0 23px;
   border-radius: 0;
   background-color: #fff;
@@ -553,13 +587,29 @@ button:focus {
   margin: 0;
 }
 
+.k-main .board .article-panel .a-card {
+  position: absolute;
+  top: -16px;
+  right: -1px;
+}
+
+.k-main .board .article-panel .a-card .i-card-top {
+  color: #0092ee;
+  font-size: 40px;
+}
+
+.k-main .board .article-panel .a-card .i-card-hot {
+  color: #dc3545;
+  font-size: 40px;
+}
+
 .k-main .board .article-panel .a-thumb {
   position: relative;
   float: left;
   overflow: hidden;
   margin: 20px;
-  width: 240px;
-  height: 145px;
+  width: 256px;
+  height: 144px;
 }
 
 .k-main .board .article-panel .a-thumb img {
@@ -848,7 +898,7 @@ button:focus {
   padding: 0 16px 16px;
   word-wrap: break-word;
   line-height: 1.8;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .k-main .details .article .content::after,
@@ -1050,7 +1100,7 @@ button:focus {
   overflow: auto;
   width: 100%;
   table-layout: fixed;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .k-main .details .article .content table th,
@@ -1123,6 +1173,10 @@ button:focus {
 
 .k-main .details .article .content > :last-child {
   margin-bottom: 0;
+}
+
+.k-main .details .article .content .wp-caption {
+  width: 100% !important;
 }
 
 .k-main .details .article .copyright {
@@ -1764,9 +1818,9 @@ button:focus {
 }
 
 .k-main .sidebar .w-about .textwidget .username {
-  font-size: 17px;
-  font-weight: 500;
   margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 17px;
 }
 
 .k-main .sidebar .w-about .textwidget .about {
@@ -1958,8 +2012,8 @@ button:focus {
   width: 50px;
   height: 50px;
   max-width: 100%;
-  border-radius: 50%;
   border: 1px solid #eaeaea;
+  border-radius: 50%;
 }
 
 .k-main .sidebar .w-comments .comments .meta .author {
@@ -1978,15 +2032,15 @@ button:focus {
 }
 
 .btn-search {
-  background-color: #00a2ff;
   border-color: #00a2ff;
+  background-color: #00a2ff;
 }
 
 .btn-search:not(:disabled):not(.disabled):active,
 .btn-search:hover,
 .btn-search:focus {
-  background-color: #0095ff;
   border-color: #0095ff;
+  background-color: #0095ff;
 }
 
 .btn-search:not(:disabled):not(.disabled):active:focus {
@@ -2011,12 +2065,12 @@ button:focus {
   text-align: center;
   text-overflow: ellipsis;
   font-size: 14px;
+  cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  cursor: pointer;
 }
 
 .k-main .sidebar .widget_categories ul li a,
@@ -2026,13 +2080,13 @@ button:focus {
 
 .k-main .sidebar .w-search .form-control,
 .k-main .sidebar .w-search .btn {
-  font-size: 15px;
   border-radius: 0;
+  font-size: 15px;
 }
 
 .k-main .sidebar .w-search .btn {
-  padding-left: 25px;
   padding-right: 25px;
+  padding-left: 25px;
 }
 
 @media screen and (max-width: 1310px) {
@@ -2184,6 +2238,7 @@ button:focus {
 --------------------------------------------------------------*/
 
 .k-footer {
+  margin-top: 20px;
   padding: 40px 0;
   background: #23282d;
 }
