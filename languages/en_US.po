@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
-"POT-Creation-Date: 2020-12-14 15:09+0800\n"
-"PO-Revision-Date: 2020-12-14 08:08\n"
+"POT-Creation-Date: 2021-01-06 10:03+0800\n"
+"PO-Revision-Date: 2021-01-06 02:08\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -214,43 +214,51 @@ msgstr "Upgrade WordPress version for full media support"
 msgid "浏览文件"
 msgstr "Browse files"
 
-#: inc/theme-article.php:247 inc/theme-article.php:286
+#: inc/theme-article.php:210
+msgid "评论正在提交中"
+msgstr ""
+
+#: inc/theme-article.php:211
+msgid "评论提交成功"
+msgstr ""
+
+#: inc/theme-article.php:249 inc/theme-article.php:288
 msgid "编辑"
 msgstr "Edit"
 
-#: inc/theme-article.php:290 inc/theme-smtp.php:102
+#: inc/theme-article.php:292 inc/theme-smtp.php:102
 msgid "回复"
 msgstr "Reply"
 
-#: inc/theme-article.php:345
+#: inc/theme-article.php:347
 msgid "添加表情"
 msgstr "Add Emoji"
 
-#: inc/theme-article.php:398
+#: inc/theme-article.php:400
 msgid "描述"
 msgstr "Description"
 
-#: inc/theme-article.php:403 inc/theme-options.php:226
+#: inc/theme-article.php:405 inc/theme-options.php:226
 msgid "关键词"
 msgstr "Keywords"
 
-#: inc/theme-article.php:409
+#: inc/theme-article.php:411
 msgid "SEO 设置"
 msgstr "SEO Setting"
 
-#: inc/theme-core.php:80
+#: inc/theme-core.php:84
 msgid "您已经赞过了"
 msgstr "You already support"
 
-#: inc/theme-core.php:81
+#: inc/theme-core.php:85
 msgid "感谢您的支持"
 msgstr "Thanks for your support"
 
-#: inc/theme-core.php:82
+#: inc/theme-core.php:86
 msgid "打赏作者"
 msgstr "Reward the author"
 
-#: inc/theme-core.php:83
+#: inc/theme-core.php:87
 msgid "扫码支付"
 msgstr "Scan code payment"
 
@@ -962,6 +970,40 @@ msgstr "View Reply"
 msgid "侧边栏工具"
 msgstr "Sidebar tools"
 
+#: inc/theme-widgets.php:71
+msgid " 年前"
+msgstr ""
+
+#: inc/theme-widgets.php:71 inc/theme-widgets.php:72 inc/theme-widgets.php:73
+#: inc/theme-widgets.php:74 inc/theme-widgets.php:75 inc/theme-widgets.php:76
+#: inc/theme-widgets.php:77
+msgid "m月d日"
+msgstr ""
+
+#: inc/theme-widgets.php:72
+msgid " 个月前"
+msgstr ""
+
+#: inc/theme-widgets.php:73
+msgid " 周前"
+msgstr ""
+
+#: inc/theme-widgets.php:74
+msgid " 天前"
+msgstr ""
+
+#: inc/theme-widgets.php:75
+msgid " 小时前"
+msgstr ""
+
+#: inc/theme-widgets.php:76
+msgid " 分钟前"
+msgstr ""
+
+#: inc/theme-widgets.php:77
+msgid " 秒前"
+msgstr ""
+
 #: inc/theme-widgets.php:115
 msgid "发布于 "
 msgstr ""
@@ -1083,7 +1125,8 @@ msgstr "Statistical days:"
 msgid "默认显示："
 msgstr ""
 
-#: inc/theme-widgets.php:459
+#: inc/theme-widgets.php:459 inc/theme-widgets.php:469
+#: inc/theme-widgets.php:489
 msgid "最近评论"
 msgstr ""
 
