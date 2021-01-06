@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2021-01-06 10:03+0800\n"
-"PO-Revision-Date: 2021-01-06 02:25\n"
+"PO-Revision-Date: 2021-01-06 10:59+0800\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -216,11 +216,11 @@ msgstr "Browse files"
 
 #: inc/theme-article.php:210
 msgid "评论正在提交中"
-msgstr "Comments being submitted"
+msgstr "Submitting"
 
 #: inc/theme-article.php:211
 msgid "评论提交成功"
-msgstr "Comment submitted success"
+msgstr "Success"
 
 #: inc/theme-article.php:249 inc/theme-article.php:288
 msgid "编辑"
@@ -508,7 +508,7 @@ msgstr " Check whether the configuration is effective. If the website has CDN en
 
 #: inc/theme-options.php:268
 msgid "首页配置"
-msgstr "Home Config"
+msgstr "Home page Config"
 
 #: inc/theme-options.php:273
 msgid "哀悼功能"
@@ -592,7 +592,7 @@ msgstr "Rotation 5(URL)"
 
 #: inc/theme-options.php:382
 msgid "文章配置"
-msgstr "Article Configurations"
+msgstr "Article Config"
 
 #: inc/theme-options.php:387
 msgid "知识共享协议"
@@ -652,7 +652,7 @@ msgstr "Whether to display the sidebar gadget (the sidebar is displayed by defau
 
 #: inc/theme-options.php:460
 msgid "站长配置"
-msgstr "webmaster's configuration"
+msgstr "Author Config"
 
 #: inc/theme-options.php:465
 msgid "个人头像"
@@ -673,7 +673,7 @@ msgstr "stay absorbed stay excellent"
 
 #: inc/theme-options.php:486
 msgid "邮件配置"
-msgstr "Fetchmail Configuration"
+msgstr "SMTP Config"
 
 #: inc/theme-options.php:491
 msgid "SMTP 服务"
@@ -745,7 +745,7 @@ msgstr "title discription"
 
 #: inc/theme-options.php:590
 msgid "页脚配置"
-msgstr "footer configuration"
+msgstr "Footer Config"
 
 #: inc/theme-options.php:595
 msgid "选择需要开启的社交图标"
@@ -1192,7 +1192,7 @@ msgstr "<span>Previous</span>"
 
 #: page.php:46 single.php:94
 msgid "<span>下一页</span>"
-msgstr "next page"
+msgstr "<span>Next</span>"
 
 #: pages/page-content.php:31
 msgid "页面"
