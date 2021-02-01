@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2021-01-06 10:03+0800\n"
-"PO-Revision-Date: 2021-01-24 08:28\n"
+"PO-Revision-Date: 2021-02-01 15:42\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -26,11 +26,11 @@ msgstr ""
 
 #: 404.php:24
 msgid "很抱歉，你访问的页面不存在"
-msgstr ""
+msgstr "申し訳ありませんが、このページは存在しません。"
 
 #: 404.php:25
 msgid "可能是输入地址有误或该地址已被删除"
-msgstr ""
+msgstr "入力したURLが正しくないか、削除されています。"
 
 #: 404.php:27
 msgid "返回上页"
