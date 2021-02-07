@@ -242,6 +242,8 @@ class Options_Framework_Interface
 						<li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/vtrois/kratos/issues" target="_blank">https://github.com/vtrois/kratos/issues</a></li>
 						<li>' . __('常见问题：', 'kratos') . '<a href="https://github.com/vtrois/kratos/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank">https://github.com/vtrois/kratos/wiki</a></li>
 						<li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/vtrois/kratos/releases" target="_blank">https://github.com/vtrois/kratos/releases</a></li>
+						<li>' . __('需求统计：', 'kratos') . '<a href="https://docs.qq.com/sheet/DV0l4UkxBS0NJcm9z" target="_blank">https://docs.qq.com/sheet/DV0l4UkxBS0NJcm9z</a></li>
+						<li>' . __('捐赠记录：', 'kratos') . '<a href="https://docs.qq.com/sheet/DV0NwVnNoYWxGUmlD" target="_blank">https://docs.qq.com/sheet/DV0NwVnNoYWxGUmlD</a></li>
 					</ul>
                     <h4>' . __('讨论交流', 'kratos') . '</h4>
                     <img src="' . ASSET_PATH . '/assets/img/options/discuss.png">
