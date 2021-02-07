@@ -3,7 +3,7 @@
  * 文章相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.10.26
+ * @version 2021.01.06
  */
 
 // 文章链接添加 target 和 rel
@@ -101,12 +101,15 @@ add_filter('excerpt_length', 'excerpt_length');
 // 开启特色图
 add_theme_support("post-thumbnails");
 
+// 生成适合特色图的比例图片
+add_image_size( 'kratos-thumbnail', 512, 288, true );
+
 // 文章特色图片
 function post_thumbnail()
 {
     global $post;
     $img_id = get_post_thumbnail_id();
-    $img_url = wp_get_attachment_image_src($img_id, array(720, 435));
+    $img_url = wp_get_attachment_image_src($img_id, 'kratos-thumbnail');
     if (is_array($img_url)) {
         $img_url = $img_url[0];
     }
@@ -203,7 +206,9 @@ function comment_scripts()
     wp_enqueue_script('comment', ASSET_PATH . '/assets/js/comments.min.js', array(), THEME_VERSION);
     wp_localize_script('comment', 'ajaxcomment', array(
         'ajax_url' => admin_url('admin-ajax.php'),
-        'order' => get_option('comment_order')
+        'order' => get_option('comment_order'),
+        'compost' => __('评论正在提交中','kratos'),
+        'comsucc' => __('评论提交成功','kratos'),
     ));
 }
 add_action('wp_enqueue_scripts', 'comment_scripts');
@@ -241,7 +246,7 @@ function comment_callback()
                 <?php comment_text();?>
             </div>
             <div class="meta clearfix">
-                <div class="date d-inline-block float-left"><?php echo get_comment_date('Y年m月d日'); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
+                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
                 </div>
             </div>
         </div>
@@ -280,7 +285,7 @@ function comment_callbacks($comment, $args, $depth = 2)
                 <?php comment_text();?>
             </div>
             <div class="meta clearfix">
-                <div class="date d-inline-block float-left"><?php echo get_comment_date('Y年m月d日'); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
+                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
                 </div>
                 <div class="tool reply ml-2 d-inline-block float-right">
                 <?php
@@ -426,7 +431,7 @@ function post_seo_callback( $post ) {
 function wpdocs_save_meta_box( $post_id ) {
     global $new_meta_boxes;
    
-    if ( !wp_verify_nonce( $_POST['metaboxes_nonce'], plugin_basename(__FILE__) ))
+    if ( !wp_verify_nonce( isset($_POST['metaboxes_nonce']) ? $_POST['metaboxes_nonce'] : null , plugin_basename(__FILE__) ))
       return;
      
     if ( !current_user_can( 'edit_posts', $post_id ))
@@ -450,11 +455,11 @@ function kratos_carousel(){
     $carousel_url= null;
     if(kratos_option('g_carousel', false)){
         for($i=1; $i<6; $i++){
-            $carousel_img_{$i} = kratos_option("c_i_{$i}") ? kratos_option("c_i_{$i}") : "";
-            $carousel_url_{$i} = kratos_option("c_u_{$i}") ? kratos_option("c_u_{$i}") : "";
-            if($carousel_img_{$i} ){
-                $carousel_img[] = $carousel_img_{$i};
-                $carousel_url[] = $carousel_url_{$i};
+            $carousel_img_[$i] = kratos_option("c_i_{$i}") ?: null;
+            $carousel_url_[$i] = kratos_option("c_u_{$i}") ?: null;
+            if($carousel_img_[$i] ){
+                $carousel_img[] = $carousel_img_[$i];
+                $carousel_url[] = $carousel_url_[$i];
             }
         }
         if(is_array($carousel_img)){
@@ -490,4 +495,24 @@ function kratos_carousel(){
     if(is_array($carousel_img)){
         echo $output;
     }
+}
+
+// 获取文章评论数量
+function findSinglecomments($postid=0,$which=0){
+    $comments = get_comments('status=approve&type=comment&post_id='.$postid);
+    if ($comments) {
+        $i=0; $j=0; $commentusers=array();
+        foreach ($comments as $comment) {
+            ++$i;
+            if ($i==1) { $commentusers[] = $comment->comment_author_email; ++$j; }
+            if ( !in_array($comment->comment_author_email, $commentusers) ) {
+                $commentusers[] = $comment->comment_author_email;
+                ++$j;
+            }
+        }
+        $output = array($j,$i);
+        $which = ($which == 0) ? 0 : 1;
+        return $output[$which];
+    }
+    return 0;
 }

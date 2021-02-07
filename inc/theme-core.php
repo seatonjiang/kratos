@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.10.26
+ * @version 2021.01.17
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -40,7 +40,7 @@ function theme_autoload()
         wp_enqueue_style('kicon', ASSET_PATH . '/assets/css/iconfont.min.css', array(), THEME_VERSION);
         wp_enqueue_style('layer', ASSET_PATH . '/assets/css/layer.min.css', array(), '3.1.1');
         if (kratos_option('g_animate', false)) {
-            wp_enqueue_style('animate', ASSET_PATH . '/assets/css/animate.min.css', array(), '3.7.2');
+            wp_enqueue_style('animate', ASSET_PATH . '/assets/css/animate.min.css', array(), '4.1.1');
         }
         if (kratos_option('g_fontawesome', false)) {
             wp_enqueue_style('fontawesome', ASSET_PATH . '/assets/css/fontawesome.min.css', array(), '5.13.0');
@@ -48,17 +48,21 @@ function theme_autoload()
         wp_enqueue_style('kratos', ASSET_PATH . '/assets/css/kratos.min.css', array(), THEME_VERSION);
         if (kratos_option('g_adminbar', true)) {
             $admin_bar_css = "
-            @media screen and (max-width: 782px) {
-                .k-nav{
-                    padding-top: 54px;
-                }
-            }
             @media screen and (min-width: 782px) {
-                .k-nav{
+                .k-nav {
                     padding-top: 40px;
                 }
             }
-            ";
+            @media screen and (max-width: 782px) {
+                .k-nav {
+                    padding-top: 54px;
+                }
+            }
+            @media screen and (min-width: 992px) {
+                .k-nav {
+                    height: 102px;
+                }
+            }";
             if (current_user_can('level_10')) {
                 wp_add_inline_style('kratos', $admin_bar_css);
             }
@@ -193,7 +197,23 @@ if (kratos_option('g_removeimgsize', false)) {
         unset($sizes['medium']);
         unset($sizes['large']);
         unset($sizes['medium_large']);
+        unset($sizes['1536x1536']);
+        unset($sizes['2048x2048']);
         return $sizes;
     }
     add_filter('intermediate_image_sizes_advanced', 'remove_default_images');
+    // add_filter('big_image_size_threshold', '__return_false');
+
+    remove_image_size('1536x1536');
+    remove_image_size('2048x2048');
 }
+
+// 管理员通知
+function admin_notice() {
+    ?>
+    <div class="notice notice-info">
+        <p>感谢您在 2021 年继续使用 Kratos 主题，现已开启对 Kratos 第 4 代的产品需求征集，期待您的声音！需求统计表：<a href="https://docs.qq.com/sheet/DV0l4UkxBS0NJcm9z">点击进入</a>，捐赠记录表：<a href="https://docs.qq.com/sheet/DV0NwVnNoYWxGUmlD">点击进入</a>。</p>
+    </div>
+    <?php
+}
+add_action( 'admin_notices', 'admin_notice' );

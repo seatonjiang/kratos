@@ -1,14 +1,16 @@
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.1/assets/img/options/about.png">
+<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.5/assets/img/options/about.png">
 </p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/php-%3E%3D7.0.0-blue">
-<img src="https://img.shields.io/badge/wordpress-v5.5%20tested-%234c1">
+<img src="https://img.shields.io/badge/wordpress-v5.7%20tested-%234c1">
 <a href="https://vtrois.crowdin.com/kratos" target="_blank"><img src="https://badges.crowdin.net/e/f1d1a7eaa6af337dba7aa4a39b28e67c/localized.svg"></a>
 <a href="https://www.jsdelivr.com/package/gh/vtrois/kratos" target="_blank"><img src="https://data.jsdelivr.com/v1/package/gh/vtrois/kratos/badge?style=rounded"></a>
 <img src="https://img.shields.io/github/license/vtrois/kratos?color=%234c1">
 </p>
+
+English | [简体中文](README.zh-CN.md)
 
 ## About
 
@@ -125,14 +127,6 @@ Kratos
 ## Changelog
 
 Detailed changes for each release are documented in the [release notes](https://github.com/vtrois/kratos/releases).
-
-## Donation
-
-If you find Kratos useful, you can buy us a cup of coffee
-
-<p align="center">
-<img width="700" src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.2.1/assets/img/options/donate.png">
-</p>
 
 ## License
 

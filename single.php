@@ -3,7 +3,7 @@
  * 文章内容
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.06.08
+ * @version 2021.01.06
  */
 
 get_header();
@@ -48,7 +48,7 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                         <div class="header">
                             <h1 class="title"><?php the_title(); ?></h1>
                             <div class="meta">
-                            <span><?php echo get_the_date('Y年m月d日'); ?></span>
+                            <span><?php echo get_the_date(); ?></span>
                             <span ><?php echo get_post_views(); _e('点热度' , 'kratos'); ?></span>
                             <span><?php if (get_post_meta($post->ID, 'love', true)) { echo get_post_meta($post->ID, 'love', true); } else {echo '0'; } _e('人点赞', 'kratos'); ?></span>
                             <span><?php comments_number('0', '1', '%'); _e('条评论', 'kratos'); ?></span>
@@ -125,8 +125,8 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                                 <?php if ( get_the_tags() ) { the_tags('', ' ', ''); } else{ echo '<a>' . __( '暂无' , 'kratos') . '</a>';  }?>
                             </div>
                             <div class="tool float-right d-none d-lg-block">
-                                <div data-toggle="tooltip" data-html="true" data-original-title="<?php _e('最后更新：','kratos'); the_modified_date( 'Y-m-d H:i' ) ?>">
-                                    <span><?php _e('最后更新：','kratos'); ?><?php the_modified_date('Y年m月d日'); ?></span>
+                                <div data-toggle="tooltip" data-html="true" data-original-title="<?php _e('最后更新：','kratos'); the_modified_date() ?>">
+                                    <span><?php _e('最后更新：','kratos'); ?><?php the_modified_date(); ?></span>
                                 </div>
                             </div>
                         </div>
