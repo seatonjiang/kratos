@@ -207,13 +207,3 @@ if (kratos_option('g_removeimgsize', false)) {
     remove_image_size('1536x1536');
     remove_image_size('2048x2048');
 }
-
-// 管理员通知
-function admin_notice() {
-    ?>
-    <div class="notice notice-info">
-        <p>感谢您在 2021 年继续使用 Kratos 主题，现已开启对 Kratos 第 4 代的产品需求征集，期待您的声音！需求统计表：<a href="https://docs.qq.com/sheet/DV0l4UkxBS0NJcm9z">点击进入</a>，捐赠记录表：<a href="https://docs.qq.com/sheet/DV0NwVnNoYWxGUmlD">点击进入</a>。</p>
-    </div>
-    <?php
-}
-add_action( 'admin_notices', 'admin_notice' );
