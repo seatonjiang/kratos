@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.12.14
+ * @version 2021.02.18
  */
 
 function getrobots()
@@ -18,6 +18,29 @@ function getrobots()
     $robots .= "Disallow: $path/wp-content/themes/\n";
 
     return $robots;
+}
+
+function getdomain($url)
+{
+    $rs = parse_url($url);
+    if (!isset($rs['host'])) {
+        return null;
+    }
+
+    $main_url = $rs['host'];
+    if (!strcmp(long2ip(sprintf('%u', ip2long($main_url))), $main_url)) {
+        return $main_url;
+    } else {
+        $arr = explode('.', $main_url);
+        $count = count($arr);
+        $endArr = array('com', 'net', 'org');
+        if (in_array($arr[$count - 2], $endArr)) {
+            $domain = $arr[$count - 3] . '.' . $arr[$count - 2] . '.' . $arr[$count - 1];
+        } else {
+            $domain = $arr[$count - 2] . '.' . $arr[$count - 1];
+        }
+        return $domain;
+    }
 }
 
 function kratos_options()
@@ -118,6 +141,37 @@ function kratos_options()
         'id' => 'g_cdn',
         'type' => 'checkbox',
     );
+
+    $options[] = array(
+        'name' => __('自定义媒体文件名', 'kratos'),
+        'desc' => __('把图片类型的文件名改为 MD5 值命名', 'kratos'),
+        'id' => 'g_renameimg',
+        'std' => '0',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'desc' => __('把指定类型的文件名增加自定义前缀命名', 'kratos'),
+        'id' => 'g_renameother',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'desc' => __('请输入需要添加的前缀，前缀与文件名之间默认用 - 连接', 'kratos'),
+        'id' => 'g_renameother_prdfix',
+        'std' => getdomain(home_url()),
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'desc' => __('请输入需要修改的类型，每个类型之间用 | 隔开', 'kratos'),
+        'id' => 'g_renameother_mime',
+        'std' => 'tar|zip|gz|gzip|rar|7z',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
 
     $options[] = array(
         'name' => __('禁止生成缩略图', 'kratos'),
