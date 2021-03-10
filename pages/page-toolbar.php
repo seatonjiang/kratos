@@ -3,7 +3,7 @@
  * 文章工具栏
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.09.21
+ * @version 2021.03.10
  */
 ?>
 <div class="toolbar clearfix">
@@ -11,7 +11,7 @@
 		<?php if(kratos_option('multiusers',false)){ ?>
 			<img src="<?php echo get_avatar_url(get_the_author_meta('user_email')); ?>">
 			<p class="name"><?php echo get_the_author_meta('display_name'); ?></p>
-			<p class="motto mb-0"><?php echo get_the_author_meta('description'); ?></p>
+			<p class="motto mb-0"><?php echo $description=!empty(get_the_author_meta('description')) ? get_the_author_meta('description') : __('这个人很懒，什么都没留下', 'kratos'); ?></p>
 		<?php } else { ?>
 			<img src="<?php echo kratos_option('a_gravatar', ASSET_PATH . '/assets/img/gravatar.png'); ?>">
 			<p class="name"><?php echo kratos_option('a_nickname','Kratos'); ?></p>
