@@ -3,7 +3,7 @@
  * 评论模板
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.14
+ * @version 2021.03.10
  */
 
 if (isset($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) {
@@ -34,7 +34,7 @@ if (comments_open()) {?>
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="kicon i-user"></i></span>
 							</div>
-							<input class="form-control" id="author" placeholder="<?php _e('昵称', 'kratos'); ?>" name="author" type="text" value="<?php echo esc_attr($commenter['comment_author']); ?>" required="required">
+							<input class="form-control" id="author" placeholder="<?php _e('昵称', 'kratos'); ?>" name="author" type="text" value="<?php echo esc_attr($commenter['comment_author']); ?>">
 						</div>
 					</div>
 					<div class="col-md-6 mt-3 mt-md-0 comment-form-email">
@@ -42,7 +42,7 @@ if (comments_open()) {?>
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="kicon i-cemail"></i></span>
 							</div>
-							<input id="email" class="form-control" name="email" placeholder="<?php _e('邮箱', 'kratos'); ?>" type="email" value="<?php echo esc_attr($commenter['comment_author_email']); ?>" required="required">
+							<input id="email" class="form-control" name="email" placeholder="<?php _e('邮箱', 'kratos'); ?>" type="email" value="<?php echo esc_attr($commenter['comment_author_email']); ?>">
 						</div>
 					</div>
 					<div class="col-md-6 mt-3 comment-form-author">
