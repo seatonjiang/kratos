@@ -235,6 +235,28 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('腾讯云验证码', 'kratos'),
+        'desc' => __('开启后台登录页面验证码功能', 'kratos'),
+        'id' => 'g_007',
+        'std' => '0',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'name' => __('App ID', 'kratos'),
+        'id' => 'g_007_appid',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('App Secret Key', 'kratos'),
+        'id' => 'g_007_appsecretkey',
+        'class' => 'hidden',
+        'type' => 'password',
+    );
+
+    $options[] = array(
         'name' => __('Chrome 导航栏颜色', 'kratos'),
         'desc' => __('Chrome 移动端浏览器导航栏的颜色', 'kratos'),
         'id' => 'g_chrome',

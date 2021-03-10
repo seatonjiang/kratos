@@ -44,6 +44,16 @@ jQuery(document).ready(function ($) {
     jQuery("#section-g_cos_secretkey").show();
   }
 
+  jQuery("#g_007").click(function () {
+    jQuery("#section-g_007_appid").fadeToggle(400);
+    jQuery("#section-g_007_appsecretkey").fadeToggle(400);
+  });
+
+  if (jQuery("#g_007:checked").val() !== undefined) {
+    jQuery("#section-g_007_appid").show();
+    jQuery("#section-g_007_appsecretkey").show();
+  }
+
   jQuery("#g_cc_switch").click(function () {
     jQuery("#section-g_cc").fadeToggle(400);
   });
