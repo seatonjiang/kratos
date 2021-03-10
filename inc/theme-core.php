@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.02.18
+ * @version 2021.03.10
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -181,6 +181,7 @@ function get_https_avatar($avatar)
     return $avatar;
 }
 add_filter('get_avatar', 'get_https_avatar');
+add_filter('get_avatar_url', 'get_https_avatar');
 
 // 主题更新检测
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
