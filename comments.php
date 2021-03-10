@@ -74,6 +74,7 @@ if (comments_open()) {?>
 				</div>
 			</div>
 		    <?php comment_id_fields();?>
+		    <?php do_action('comment_form_after');?>
 		    <?php do_action('comment_form', $post->ID);?>
 		</form>
 		<?php endif;?>
