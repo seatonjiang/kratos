@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.02.18
+ * @version 2021.03.10
  */
 
 function getrobots()
@@ -509,32 +509,6 @@ function kratos_options()
             'one_side' => $imagepath . 'col-12.png',
 			'two_side' => $imagepath . 'col-8.png')
 		);
-
-    $options[] = array(
-        'name' => __('站长配置', 'kratos'),
-        'type' => 'heading',
-    );
-
-    $options[] = array(
-        'name' => __('个人头像', 'kratos'),
-        'id' => 'a_gravatar',
-        'std' => ASSET_PATH . '/assets/img/gravatar.png',
-        'type' => 'upload',
-    );
-
-    $options[] = array(
-        'name' => __('个人昵称', 'kratos'),
-        'id' => 'a_nickname',
-        'std' => 'Kratos',
-        'type' => 'text',
-    );
-
-    $options[] = array(
-        'name' => __('个人简介', 'kratos'),
-        'std' => __('保持饥渴的专注，追求最佳的品质', 'kratos'),
-        'id' => 'a_about',
-        'type' => 'textarea',
-    );
 
     $options[] = array(
         'name' => __('邮件配置', 'kratos'),

@@ -8,15 +8,9 @@
 ?>
 <div class="toolbar clearfix">
     <div class="meta float-md-left">
-		<?php if(kratos_option('multiusers',false)){ ?>
-			<img src="<?php echo get_avatar_url(get_the_author_meta('user_email')); ?>">
-			<p class="name"><?php echo get_the_author_meta('display_name'); ?></p>
-			<p class="motto mb-0"><?php echo $description=!empty(get_the_author_meta('description')) ? get_the_author_meta('description') : __('这个人很懒，什么都没留下', 'kratos'); ?></p>
-		<?php } else { ?>
-			<img src="<?php echo kratos_option('a_gravatar', ASSET_PATH . '/assets/img/gravatar.png'); ?>">
-			<p class="name"><?php echo kratos_option('a_nickname','Kratos'); ?></p>
-			<p class="motto mb-0"><?php echo kratos_option('a_about', __('保持饥渴的专注，追求最佳的品质', 'kratos')); ?></p>
-		<?php } ?>
+		<img src="<?php echo get_avatar_url(get_the_author_meta('user_email')); ?>">
+		<p class="name"><?php echo get_the_author_meta('display_name'); ?></p>
+		<p class="motto mb-0"><?php echo $description=!empty(get_the_author_meta('description')) ? get_the_author_meta('description') : __('这个人很懒，什么都没留下', 'kratos'); ?></p>
 	</div>
 	<div class="share float-md-right text-center">
         <?php if(kratos_option('g_donate',false)){ ?>
