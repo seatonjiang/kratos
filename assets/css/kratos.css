@@ -1494,6 +1494,7 @@ button:focus {
 
   .k-main .details .toolbar .motto {
     padding-bottom: 5px;
+    min-height: 30px;
   }
 
   .k-main .details .toolbar .share .btn {
