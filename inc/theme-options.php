@@ -112,9 +112,9 @@ function kratos_options()
     );
 
     $options[] = array(	
-        'name' => __('多人模式', 'kratos'),	
-        'desc' => __('在文章列表显示当前文章作者，在文章页面页脚显示当前作者介绍', 'kratos'),	
-        'id' => 'multiusers',	
+        'name' => __('搜索增强', 'kratos'),	
+        'desc' => __('仅查找文章标题，而不全文搜索（适用于文章数量较多的站点）', 'kratos'),	
+        'id' => 'g_search',	
         'type' => 'checkbox',	
     );
 
