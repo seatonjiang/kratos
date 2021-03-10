@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.12.17
+ * @version 2021.03.10
  */
 
 // 添加小工具
@@ -251,9 +251,9 @@ class widget_about extends WP_Widget
 
     public function widget($args, $instance)
     {
-        $introduce = kratos_option('a_about', __('保持饥渴的专注，追求最佳的品质', 'kratos'));
-        $username = kratos_option('a_nickname', __('Kratos', 'kratos'));
-        $avatar = kratos_option('a_gravatar', ASSET_PATH . '/assets/img/gravatar.png');
+        $introduce = !empty(get_the_author_meta('description', '1')) ? get_the_author_meta('description', '1') : __('这个人很懒，什么都没留下', 'kratos');
+        $username = get_the_author_meta('display_name', '1');
+        $avatar = get_avatar_url('1');
         $background = !empty($instance['background']) ? $instance['background'] : ASSET_PATH . '/assets/img/about-background.png';
 
         echo '<div class="widget w-about">';
