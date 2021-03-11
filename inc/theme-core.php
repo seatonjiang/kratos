@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.03.10
+ * @version 2021.03.11
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -91,13 +91,15 @@ function theme_autoload()
 }
 add_action('wp_enqueue_scripts', 'theme_autoload');
 
-// Admin Bar
+// 前台管理员导航
 if (! kratos_option('g_adminbar', true)) {
     add_filter('show_admin_bar', '__return_false');
 }
 
 // 移除自动保存、修订版本
-remove_action('post_updated', 'wp_save_post_revision');
+if (kratos_option('g_post_revision', true)) {
+    remove_action('post_updated', 'wp_save_post_revision');
+}
 
 // 添加友情链接
 add_filter('pre_option_link_manager_enabled', '__return_true');

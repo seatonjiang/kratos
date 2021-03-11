@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.03.10
+ * @version 2021.03.11
  */
 
 function getrobots()
@@ -229,7 +229,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('Gravatar 加速', 'kratos'),
         'desc' => __('开启 Gravatar 头像加速', 'kratos'),
-        'std' => '0',
+        'std' => '1',
         'id' => 'g_gravatar',
         'type' => 'checkbox',
     );
@@ -480,6 +480,14 @@ function kratos_options()
         'desc' => __('开启网易云音乐自动播放', 'kratos'),
         'id' => 'g_163mic',
         'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'name' => __('附加功能', 'kratos'),
+        'desc' => __('关闭文章自动保存、修订版本功能', 'kratos'),
+        'id' => 'g_post_revision',
+        'type' => 'checkbox',
+        'std' => '1',
     );
 
     $options[] = array(
