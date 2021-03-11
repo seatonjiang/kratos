@@ -210,6 +210,7 @@ if (kratos_option('g_removeimgsize', false)) {
 }
 
 // 媒体文件使用 md5 值重命名，指定文件前缀
+add_filter('wp_handle_sideload_prefilter', 'custom_upload_perfilter');
 add_filter('wp_handle_upload_prefilter', 'custom_upload_filter');
 
 function custom_upload_filter($file)
