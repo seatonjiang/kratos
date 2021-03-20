@@ -67,14 +67,12 @@ ol {
 ol > li {
   margin-bottom: 6px;
   padding-left: 2px;
-  list-style: decimal;
   line-height: 22px;
 }
 
 ul > li {
   margin-bottom: 6px;
   padding-left: 2px;
-  list-style: circle;
   line-height: 22px;
 }
 
@@ -85,7 +83,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 30px 0;
-  color: #333;
+  color: #111;
   font-weight: 400;
 }
 
@@ -529,6 +527,11 @@ button:focus {
   color: #444;
 }
 
+.k-main .details .article ul,
+ol {
+  padding-left: 32px;
+}
+
 .k-main .details .article .content .paginations {
   font-size: 14px;
 }
@@ -869,7 +872,8 @@ button:focus {
 }
 
 .k-main .details .article .header {
-  padding: 0 16px 16px;
+  padding: 0 20px 16px;
+  text-align: center;
 }
 
 .k-main .details .article .header .title {
@@ -895,7 +899,7 @@ button:focus {
 }
 
 .k-main .details .article .content {
-  padding: 0 16px 16px;
+  padding: 0 20px 16px;
   word-wrap: break-word;
   line-height: 1.8;
   word-break: break-word;
@@ -917,18 +921,18 @@ button:focus {
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 1.25;
 }
 
 .k-main .details .article h1 {
-  padding-bottom: 4.8px;
-  /* border-bottom: 1px solid #eaecef; */
-  font-size: 30px;
-  line-height: 38px;
+  font-size: 34px;
+  margin-bottom: 24px;
 }
 
-.k-main .details .article .content h2 {
-  font-size: 24px;
+.k-main .details .article .content h2:not(:first-child) {
+  font-size: 28px;
+  margin-top: 32px;
+  margin-bottom: 12px;
 }
 
 .k-main .details .article .content h2.title {
@@ -940,12 +944,16 @@ button:focus {
   line-height: 41px;
 }
 
-.k-main .details .article .content h3 {
-  font-size: 18px;
+.k-main .details .article .content h3:not(:first-child) {
+  font-size: 20px;
+  margin-top: 32px;
+  margin-bottom: 12px;
 }
 
-.k-main .details .article .content h4 {
+.k-main .details .article .content h4:not(:first-child) {
   font-size: 16px;
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
 
 .k-main .details .article .content h5 {
@@ -959,6 +967,10 @@ button:focus {
 .k-main .details .article .content p {
   color: #151515;
   line-height: 30px;
+}
+
+.k-main .details .article .content li p {
+  margin-bottom: 10px;
 }
 
 .k-main .details .article .content .progress {
@@ -979,6 +991,10 @@ button:focus {
 }
 
 .k-main .details .article .content blockquote p {
+  margin-bottom: 16px;
+}
+
+.k-main .details .article .content blockquote p:last-child {
   margin-bottom: -3px;
 }
 
