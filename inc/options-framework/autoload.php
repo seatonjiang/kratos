@@ -102,7 +102,7 @@ function custom_sanitize_textarea($input)
         "height" => array(),
         "width" => array(),
     );
-    $custom_allowedtags["script"] = array("type" => array(), "src" => array());
+    $custom_allowedtags["script"] = array("type" => array(), "src" => array(), "async" => array(),);
     $custom_allowedtags = array_merge($custom_allowedtags, $allowedposttags);
     $output = wp_kses($input, $custom_allowedtags);
     return $output;
