@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.03.10
+ * @version 2021.04.15
  */
 
 // 添加小工具
@@ -395,15 +395,15 @@ class widget_posts extends WP_Widget
             <a class="nav-item nav-link <?php echo $active = ($order == 'random') ? 'active' : null; ?>" id="nav-random-tab" data-toggle="tab" href="#nav-random" role="tab" aria-controls="nav-random" aria-selected="<?php echo $selected = ($order == 'random') ? 'true' : 'false'; ?>"><?php _e('随机', 'kratos');?></a>
         </div>
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade" id="nav-new" role="tabpanel" aria-labelledby="nav-new-tab">
+            <div class="tab-pane fade <?php echo $active = ($order == 'new') ? 'show active' : null; ?>" id="nav-new" role="tabpanel" aria-labelledby="nav-new-tab">
             <?php $myposts = get_posts('numberposts=' . $number . ' & offset=0');foreach ($myposts as $post): ?>
                 <a class="bookmark-item" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="kicon i-book"></i><?php echo strip_tags($post->post_title) ?></a>
             <?php endforeach;?>
             </div>
-            <div class="tab-pane fade show active" id="nav-hot" role="tabpanel" aria-labelledby="nav-hot-tab">
+            <div class="tab-pane fade <?php echo $active = ($order == 'hot') ? 'show active' : null; ?>" id="nav-hot" role="tabpanel" aria-labelledby="nav-hot-tab">
             <?php if (function_exists('most_comm_posts')) {most_comm_posts($days, $number);}?>
             </div>
-            <div class="tab-pane fade" id="nav-random" role="tabpanel" aria-labelledby="nav-random-tab">
+            <div class="tab-pane fade <?php echo $active = ($order == 'random') ? 'show active' : null; ?>" id="nav-random" role="tabpanel" aria-labelledby="nav-random-tab">
             <?php $myposts = get_posts('numberposts=' . $number . ' & offset=0 & orderby=rand');foreach ($myposts as $post): ?>
                 <a class="bookmark-item" title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->ID); ?>" rel="bookmark"><i class="kicon i-book"></i><?php echo strip_tags($post->post_title) ?></a>
             <?php endforeach;?>
