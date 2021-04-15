@@ -3,7 +3,7 @@
  * 主题页脚
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.12.14
+ * @version 2021.04.15
  */
 ?>
 <div class="k-footer">
@@ -33,7 +33,7 @@
             <div class="col-12 text-center">
                 <p class="social">
                 <?php
-                    $social = array('s_sina', 's_bilibili', 's_coding', 's_gitee', 's_twitter', 's_telegram', 's_linkedin', 's_youtube', 's_github', 's_stackflow', 's_email');
+                    $social = array('s_sina', 's_bilibili', 's_douban', 's_coding', 's_gitee', 's_twitter', 's_telegram', 's_linkedin', 's_youtube', 's_github', 's_stackflow', 's_email');
                     foreach ($social as $social) {
                         if (kratos_option($social)) {
                             echo '<a target="_blank" rel="nofollow" href="' . kratos_option($social . '_url') . '"><i class="kicon i-' . str_replace("s_", "", $social) . '"></i></a>';

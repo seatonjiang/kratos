@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.03.11
+ * @version 2021.04.15
  */
 
 function getrobots()
@@ -703,6 +703,19 @@ function kratos_options()
     $options[] = array(
         'id' => 's_gitee_url',
         'placeholder' => __('例如：https://gitee.com/xxxxx', 'kratos'),
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'desc' => __('豆瓣', 'kratos'),
+        'id' => 's_douban',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'id' => 's_douban_url',
+        'placeholder' => __('例如：https://www.douban.com/people/xxxxx', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
