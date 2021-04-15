@@ -174,7 +174,7 @@ class Options_Framework_Admin {
 
 	    <div id="optionsframework-metabox" class="metabox-holder">
 		    <div id="optionsframework" class="postbox">
-				<form action="options.php" method="post">
+				<form action="options.php" method="post" onkeydown="if(event.keyCode==13){return false;}">
 				<?php settings_fields( 'optionsframework' ); ?>
 				<?php Options_Framework_Interface::optionsframework_fields(); /* Settings */ ?>
 				<div id="optionsframework-submit">

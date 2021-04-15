@@ -255,7 +255,7 @@ class Options_Framework_Interface
                     break;
 
                 case "sendmail":
-                    $output .= '<input type="submit" name="sendmail" class="button-secondary" value="' . __('测试邮件', 'kratos') . '">';
+                    $output .= '<button name="sendmail" class="button-secondary">' . __('测试邮件', 'kratos') . '</button>';
                     break;
 
                 // Heading for Navigation
