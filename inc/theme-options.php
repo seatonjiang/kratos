@@ -361,6 +361,15 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('开启目录默认特色图片', 'kratos'),
+        'desc' => __('为每一个目录设置一个默认的特色图片', 'kratos'),
+        'std' => '1',
+        'class' => 'hidden',
+        'id' => 'essay_feature_img_usable',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
         'name' => __('默认特色图', 'kratos'),
         'desc' => __('当文章中没有图片并且没有设置特色图时在首页显示', 'kratos'),
         'id' => 'g_postthumbnail',
@@ -368,7 +377,25 @@ function kratos_options()
         'std' => ASSET_PATH . '/assets/img/default.jpg',
         'type' => 'upload',
     );
-
+        #在这里获取所有分类的名称和id 然后加入到设置中
+    if(kratos_option('essay_feature_img_usable',true)){
+        $args=array(
+            'orderby' => 'name',
+            'order' => 'ASC',
+            #设置获取没有文章的空类
+            'hide_empty' => false
+            );
+        $categories=get_categories($args);
+        foreach($categories as $category) {
+            $options[] = array(
+                'name' => __( $category->name.'分类默认特色图片', 'kratos'),
+                'desc' => __('没有设置默认图片时，按照文章分类默认给出', 'kratos'),
+                'id' => ('essay_feature_img_'.$category->term_id),
+                'std' => ASSET_PATH . '/assets/img/default.jpg',
+                'type' => 'upload',
+            );
+            }
+        }
     $options[] = array(
         'name' => __('无内容图片', 'kratos'),
         'desc' => __('当搜索不到文章或文章分类中没有文章时显示', 'kratos'),

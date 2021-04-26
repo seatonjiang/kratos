@@ -126,7 +126,13 @@ function post_thumbnail()
         if (!empty($img_val)) {
             echo '<img src="' . $img_val . '" />';
         } else {
-            if (!kratos_option('g_postthumbnail')) {
+            $category=get_the_category($post->ID);
+            $catid=$category[0]->term_id;
+            if(kratos_option('essay_feature_img_'.$catid) 
+            && kratos_option('essay_feature_img_usable',true))
+            {
+                $img = kratos_option('essay_feature_img_'.$catid);
+            }elseif(!kratos_option('g_postthumbnail')) {
                 $img = ASSET_PATH . '/assets/img/default.jpg';
             } else {
                 $img = kratos_option('g_postthumbnail', ASSET_PATH . '/assets/img/default.jpg');
