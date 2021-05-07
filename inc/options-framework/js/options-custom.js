@@ -92,10 +92,12 @@ jQuery(document).ready(function ($) {
 
   jQuery("#g_thumbnail").click(function () {
     jQuery("#section-g_postthumbnail").fadeToggle(400);
+    jQuery("#section-essay_feature_img_usable").fadeToggle(400);
   });
 
   if (jQuery("#g_thumbnail:checked").val() !== undefined) {
     jQuery("#section-g_postthumbnail").show();
+    jQuery("#section-essay_feature_img_usable").show();
   }
 
   jQuery("#top_select").change(function () {
