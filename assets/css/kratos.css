@@ -517,7 +517,7 @@ button:focus {
 }
 
 .k-main .board .paginations a {
-  padding: 8px 12px;
+  padding: 5px 12px;
   background: #fff;
   color: #444;
 }
@@ -530,7 +530,7 @@ button:focus {
 }
 
 .k-main .board .paginations .dots {
-  padding: 8px 12px;
+  padding: 5px 12px;
   background: #fff;
   color: #444;
 }
