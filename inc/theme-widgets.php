@@ -50,11 +50,11 @@ function most_comm_posts($days = 30, $nums = 6)
     if (!empty($result)) {
         foreach ($result as $topten) {
             $postid = $topten->ID;
-            $title = $topten->post_title;
+            $title = esc_attr(strip_tags($topten->post_title));
             $commentcount = $topten->comment_count;
             if ($commentcount >= 0) {
                 $output .= '<a class="bookmark-item" title="' . $title . '" href="' . get_permalink($postid) . '" rel="bookmark"><i class="kicon i-book"></i>';
-                $output .= esc_attr(strip_tags($title));
+                $output .= $title;
                 $output .= '</a>';
             }
         }
