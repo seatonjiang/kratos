@@ -109,10 +109,10 @@ function string_cut($string, $sublen, $start = 0, $code = 'UTF-8') {
 
 function latest_comments($list_number=5, $cut_length=50)
 {
-    global $wpdb,$output;
-    $comments = $wpdb->get_results("SELECT DISTINCT ID, post_title, post_password, comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_approved, comment_type, comment_author_url, comment_author_email, comment_content AS com_excerpt FROM $wpdb->comments LEFT OUTER JOIN $wpdb->posts ON ($wpdb->comments.comment_post_ID = $wpdb->posts.ID) WHERE comment_approved = '1' AND (comment_type = '' OR comment_type = 'comment') AND user_id != '1' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT $list_number");
+    global $wpdb, $output;
+    $comments = $wpdb->get_results("SELECT comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_content FROM {$wpdb->comments} LEFT OUTER JOIN {$wpdb->posts} ON {$wpdb->comments}.comment_post_ID = {$wpdb->posts}.ID WHERE comment_approved = '1' AND (comment_type = '' OR comment_type = 'comment') AND user_id != '1' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT {$list_number}");
     foreach ($comments as $comment) {
-        $output .= ' <a href="'.get_the_permalink($comment->comment_post_ID) .'#commentform"> <div class="meta clearfix"> <div class="avatar float-left">'.get_avatar( $comment, 60 ).'</div> <div class="profile d-block"> <span class="date"> '.__( '发布于 ' , 'kratos').timeago($comment->comment_date_gmt).'</span> <span class="message d-block">'.convert_smilies(esc_attr(string_cut(strip_tags($comment->com_excerpt), $cut_length))).'</span> </div> </div> </a>';
+        $output .= '<a href="' . get_the_permalink($comment->comment_post_ID) . '#commentform"> <div class="meta clearfix"> <div class="avatar float-left">' . get_avatar($comment, 60) . '</div> <div class="profile d-block"> <span class="date">' . esc_attr($comment->comment_author) . ' ' . __('发布于 ', 'kratos') . timeago($comment->comment_date_gmt) . '</span> <span class="message d-block">' . convert_smilies(esc_attr(string_cut(strip_tags($comment->comment_content), $cut_length))) . '</span> </div> </div> </a>';
     }
     return $output;
 }
