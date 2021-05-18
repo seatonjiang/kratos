@@ -49,7 +49,7 @@ function keywords()
     } else {
         $keywords = single_tag_title('', false);
     }
-    return trim(strip_tags($keywords));
+    return trim(esc_attr(strip_tags($keywords)));
 }
 
 // Description 配置
@@ -77,7 +77,7 @@ function description()
             $description = kratos_option('seo_description');
         }
     }
-    return trim(strip_tags($description));
+    return trim(esc_attr(strip_tags($description)));
 }
 
 // robots.txt 配置
