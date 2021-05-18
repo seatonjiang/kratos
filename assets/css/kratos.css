@@ -501,6 +501,14 @@ button:focus {
 4. 分页按钮
 --------------------------------------------------------------*/
 
+.k-main .board .paginations > * {
+    display: inline-block;
+}
+
+.k-main .board .paginations .kicon {
+    line-height: 25px;
+}
+
 .k-main .board .paginations {
   margin: 23px auto;
   width: 100%;
@@ -509,20 +517,21 @@ button:focus {
 }
 
 .k-main .board .paginations a {
-  padding: 8px 12px;
+  margin-top: 5px;
+  padding: 5px 12px;
   background: #fff;
   color: #444;
 }
 
 .k-main .board .paginations .current {
-  padding: 8px 12px;
+  padding: 5px 12px;
   background: #00a2ff;
   color: #fff;
   font-weight: 400;
 }
 
 .k-main .board .paginations .dots {
-  padding: 8px 12px;
+  padding: 5px 12px;
   background: #fff;
   color: #444;
 }
