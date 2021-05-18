@@ -168,6 +168,12 @@
     });
   };
 
+  var siderbarConfig = function () {
+    $(".sticky-sidebar").theiaStickySidebar({
+      additionalMarginTop: 25,
+    });
+  };
+
   var consoleConfig = function () {
     console.log(
       "\n Kratos v" +
@@ -187,6 +193,9 @@
     postlikeConfig();
     donateConfig();
     consoleConfig();
+    if (kratos.sticky) {
+      siderbarConfig();
+    }
   });
 })();
 

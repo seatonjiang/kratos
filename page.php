@@ -3,7 +3,7 @@
  * 页面模板
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.14
+ * @version 2021.05.18
  */
 
 get_header(); ?>
@@ -51,7 +51,7 @@ get_header(); ?>
                 <?php endif; ?>
                 <?php comments_template(); ?>
             </div>
-            <div class="col-lg-4 sidebar d-none d-lg-block">
+            <div class="col-lg-4 sidebar sticky-sidebar d-none d-lg-block">
                 <?php dynamic_sidebar('sidebar_tool'); ?>
             </div>
         </div>

@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.04.15
+ * @version 2021.05.18
  */
 
 function getrobots()
@@ -108,6 +108,14 @@ function kratos_options()
         'desc' => __('开启小工具个人简介头像进入后台功能', 'kratos'),
         'std' => '1',
         'id' => 'g_login',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'name' => __('侧边栏随动', 'kratos'),
+        'desc' => __('开启小工具侧边栏随动功能', 'kratos'),
+        'std' => '0',
+        'id' => 'g_sticky',
         'type' => 'checkbox',
     );
 

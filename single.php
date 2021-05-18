@@ -3,7 +3,7 @@
  * 文章内容
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.03.20
+ * @version 2021.05.18
  */
 
 get_header();
@@ -145,7 +145,7 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                 <?php comments_template(); ?>
             </div>
             <?php if (kratos_option('g_article_widgets', 'two_side') == 'two_side'){ ?>
-            <div class="col-lg-4 sidebar d-none d-lg-block">
+            <div class="col-lg-4 sidebar sticky-sidebar d-none d-lg-block">
                 <?php dynamic_sidebar('sidebar_tool'); ?>
             </div>
             <?php } ?>
