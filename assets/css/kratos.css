@@ -517,13 +517,14 @@ button:focus {
 }
 
 .k-main .board .paginations a {
+  margin-top: 5px;
   padding: 5px 12px;
   background: #fff;
   color: #444;
 }
 
 .k-main .board .paginations .current {
-  padding: 8px 12px;
+  padding: 5px 12px;
   background: #00a2ff;
   color: #fff;
   font-weight: 400;
