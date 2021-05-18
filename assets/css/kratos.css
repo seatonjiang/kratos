@@ -502,11 +502,11 @@ button:focus {
 --------------------------------------------------------------*/
 
 .k-main .board .paginations > * {
-    display: inline-block;
+  display: inline-block;
 }
 
 .k-main .board .paginations .kicon {
-    line-height: 25px;
+  line-height: 25px;
 }
 
 .k-main .board .paginations {
