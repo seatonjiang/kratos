@@ -3,7 +3,7 @@
  * 文章短代码
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.06.25
+ * @version 2021.05.20
  */
 
 function h2title($atts, $content = null, $code = "")
@@ -224,6 +224,93 @@ function accordion($atts, $content=null, $code=""){
 }
 add_shortcode('accordion','accordion');
 
+function dplayer($atts = array(), $content = ''){
+    static $instance = 0;
+    $instance++;
+
+    $atts = shortcode_atts(
+        array(
+            'autoplay'       => 'false',
+            'theme'          => '#b7daff',
+            'loop'           => 'false',
+            'preload'        => 'auto',
+            'src'            => '',
+            'poster'         => '',
+            'type'           => 'auto',
+            'mutex'          => 'true',
+            'iconsColor'     => '#ffffff'
+        ), $atts, 'dplayer');
+
+    $atts['autoplay']        = wp_validate_boolean( $atts['autoplay'] );
+    $atts['theme']           = esc_attr( $atts['theme'] );
+    $atts['loop']            = wp_validate_boolean( $atts['loop'] );
+    $atts['preload']         = esc_attr( $atts['preload'] );
+    $atts['src']             = esc_url_raw( $atts['src'] );
+    $atts['poster']          = esc_url_raw( $atts['poster'] );
+    $atts['type']            = strtolower( esc_attr( $atts['type'] ) );
+    $atts['mutex']           = wp_validate_boolean( $atts['mutex'] );
+    $atts['iconsColor']      = esc_attr( $atts['iconsColor'] );
+
+    if ( empty( $atts['src'] ) ) return;
+
+    $output = sprintf( '<script> const dp%u = new DPlayer({ container: document.getElementById("dplayer-%u"), autoplay: %b, theme: "%s", loop: %b, preload: "%s", video: { url: "%s", type: "%s", pic: "%s", }, mutex: %b, iconsColor: "%s" }); </script>',
+        $instance,
+        $instance,
+        $atts['autoplay'],
+        $atts['theme'],
+        $atts['loop'],
+        $atts['preload'],
+        $atts['src'],
+        $atts['type'],
+        $atts['poster'],
+        $atts['mutex'],
+        $atts['iconsColor']
+    );
+
+    $html = sprintf( '<p><div id="dplayer-%u"></div></p>',
+        $instance
+    );
+
+    add_action( 'wp_footer', function () use ( $output ) {
+        echo '		' . $output . "\n";
+    }, 99999 );
+
+    return $html;
+}
+add_shortcode('dplayer','dplayer');
+
+function override_wp_video_shortcode( $html = '', $atts = array() ) {
+    if ( empty( $atts['src'] ) ) {
+        if (!empty( $atts['mp4'] )) {
+            $atts['src']=$atts['mp4'];
+        }elseif(!empty( $atts['m4v'] )) {
+            $atts['src']=$atts['m4v'];
+        }elseif(!empty( $atts['webm'] )) {
+            $atts['src']=$atts['webm'];
+        }elseif(!empty( $atts['ogv'] )) {
+            $atts['src']=$atts['ogv'];
+        }elseif(!empty( $atts['wmv'] )) {
+            $atts['src']=$atts['wmv'];
+        }elseif(!empty( $atts['flv'] )) {
+            $atts['src']=$atts['flv'];
+        }
+    };
+
+    $video_attr_strings = array();
+    foreach ( $atts as $k => $v ) {
+        if ( $v == '' ) continue;
+        $video_attr_strings[] = $k . '="' . esc_attr( $v ) . '"';
+    }
+
+    $html .= sprintf( '[dplayer %s]', join( ' ', $video_attr_strings ) );
+
+    return do_shortcode( $html );
+}
+
+if ( ! is_admin() ){
+    add_filter( 'wp_video_shortcode_override' , 'override_wp_video_shortcode', 1, 2 );
+}
+
 add_action('init', 'more_button');
 function more_button()
 {
@@ -254,6 +341,7 @@ function register_button($buttons)
     array_push($buttons, " ", "bdbtn");
     array_push($buttons, " ", "reply");
     array_push($buttons, " ", "accordion");
+    array_push($buttons, " ", "dplayer");
     array_push($buttons, " ", "music");
     array_push($buttons, " ", "vqq");
     array_push($buttons, " ", "youtube");
