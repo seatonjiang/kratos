@@ -3,7 +3,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.05.18
+ * @version 2021.05.20
  */
 
 // 添加小工具
@@ -22,7 +22,6 @@ function widgets_init()
         'WP_Widget_Pages',
         'WP_Widget_Meta',
         'WP_Widget_Media_Image',
-        'WP_Widget_Archives',
         'WP_Widget_Calendar',
         'WP_Widget_Recent_Posts',
         'WP_Widget_Recent_Comments',
@@ -37,6 +36,22 @@ function widgets_init()
     }
 }
 add_action('widgets_init', 'widgets_init');
+
+// 分类目录计数
+function cat_count_span( $links ) {
+    $links = str_replace( '</a> (', '<span> / ', $links );
+    $links = str_replace( ')', __('篇', 'kratos') . '</span></a>', $links );
+    return $links;
+}
+add_filter( 'wp_list_categories', 'cat_count_span' );
+
+// 文章归档计数
+function archive_count_span( $links ) {
+    $links = str_replace( '</a>&nbsp;(', '<span> / ', $links );
+    $links = str_replace( ')', __('篇', 'kratos') . '</span></a>', $links );
+    return $links;
+}
+add_filter( 'get_archives_link', 'archive_count_span' );
 
 // 小工具文章聚合 - 热点文章
 function most_comm_posts($days = 30, $nums = 6)

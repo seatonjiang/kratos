@@ -2084,7 +2084,6 @@ ol {
   display: inline-block;
   overflow: hidden;
   margin: 0 1px 4px 0;
-  padding: 4px 0;
   width: 164px;
   border: 1px solid #eeeeee;
   list-style: none;
@@ -2101,6 +2100,8 @@ ol {
 
 .k-main .sidebar .widget_categories ul li a,
 .k-main .sidebar .widget_archive ul li a {
+  display: block;
+  padding: 4px 0;
   color: #333;
 }
 
