@@ -1805,6 +1805,10 @@ ol {
   height: auto;
 }
 
+.k-main .sidebar .wp-smiley {
+  width: auto;
+}
+
 .k-main .sidebar .widget {
   margin: 0 0 23px;
   padding: 15px 30px;
