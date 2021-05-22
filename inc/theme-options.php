@@ -530,6 +530,14 @@ function kratos_options()
     );
 
     $options[] = array(
+        'name' => __('文章目录', 'kratos'),
+        'desc' => __('开启文章页面目录功能，将自动识别到 h3 的标题，并在侧边栏生成文章目录', 'kratos'),
+        'id' => 'g_post_toc',
+        'type' => 'checkbox',
+        'std' => '1',
+    );
+
+    $options[] = array(
         'name' => __('文章打赏', 'kratos'),
         'desc' => __('开启文章页面打赏功能', 'kratos'),
         'id' => 'g_donate',
