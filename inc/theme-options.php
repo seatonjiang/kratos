@@ -3,19 +3,21 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.05.18
+ * @version 2021.05.22
  */
 
 function getrobots()
 {
     $site_url = parse_url(site_url());
+    $web_url = get_bloginfo('url');
     $path = (!empty($site_url['path'])) ? $site_url['path'] : '';
 
     $robots = "User-agent: *\n\n";
     $robots .= "Disallow: $path/wp-admin/\n";
     $robots .= "Disallow: $path/wp-includes/\n";
     $robots .= "Disallow: $path/wp-content/plugins/\n";
-    $robots .= "Disallow: $path/wp-content/themes/\n";
+    $robots .= "Disallow: $path/wp-content/themes/\n\n";
+    $robots .= "Sitemap: $web_url/wp-sitemap.xml\n";
 
     return $robots;
 }
