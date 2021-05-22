@@ -934,14 +934,14 @@ ol {
 }
 
 .k-main .details .article h1 {
-  font-size: 34px;
   margin-bottom: 24px;
+  font-size: 34px;
 }
 
 .k-main .details .article .content h2:not(:first-child) {
-  font-size: 28px;
   margin-top: 32px;
   margin-bottom: 12px;
+  font-size: 28px;
 }
 
 .k-main .details .article .content h2.title {
@@ -954,15 +954,15 @@ ol {
 }
 
 .k-main .details .article .content h3:not(:first-child) {
-  font-size: 20px;
   margin-top: 32px;
   margin-bottom: 12px;
+  font-size: 20px;
 }
 
 .k-main .details .article .content h4:not(:first-child) {
-  font-size: 16px;
   margin-top: 24px;
   margin-bottom: 8px;
+  font-size: 16px;
 }
 
 .k-main .details .article .content h5 {
@@ -2052,13 +2052,18 @@ ol {
 }
 
 .k-main .sidebar .w-comments .comments .meta .profile {
-  padding-top: 5px;
+  padding-top: 2px;
   font-size: 12px;
 }
 
 .k-main .sidebar .w-comments .comments .meta .date {
+  display: block;
+  overflow: hidden;
   color: #777;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 12px;
+  word-break: keep-all;
 }
 
 .btn-search {
