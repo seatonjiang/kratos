@@ -3,7 +3,7 @@
  * 文章相关函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.05.22
+ * @version 2021.05.24
  */
 
 // 文章链接添加 target 和 rel
@@ -582,7 +582,7 @@ function article_toc()
                     $index .= '</li>';
                 }
             }
-            $index .= '<li class="li-'.$toc_depth.'"><a href="#toc-' . $toc_item['count'] . '">' . $toc_item['text'] . '</a>';
+            $index .= '<li class="li-'.$toc_depth.'"><a href="#toc-' . $toc_item['count'] . '">' . str_replace(array('[h2title]', '[/h2title]'),array('', ''),$toc_item['text']) . '</a>';
             $prev_depth = $toc_item['depth'];
         }
         for ($i = 0; $i <= $to_depth; $i++) {
