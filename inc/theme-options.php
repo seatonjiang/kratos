@@ -63,6 +63,12 @@ function kratos_options()
         'six' => __('知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议', 'kratos'),
     );
 
+    $region_array = array(
+        'cn-north-1' => __('国内', 'kratos'),
+        'us-east-1' => __('美东', 'kratos'),
+        'ap-singapore-1' => __('新加坡', 'kratos')
+    );
+
 	$top_array = array(
 		'banner' => __( '图片导航', 'kratos' ),
 		'color' => __( '颜色导航', 'kratos' ),
@@ -218,12 +224,58 @@ function kratos_options()
         'name' => __('AccessKey', 'kratos'),
         'id' => 'g_cos_accesskey',
         'class' => 'hidden',
-        'type' => 'text',
+        'type' => 'password',
     );
 
     $options[] = array(
         'name' => __('SecretKey', 'kratos'),
         'id' => 'g_cos_secretkey',
+        'class' => 'hidden',
+        'type' => 'password',
+    );
+
+    $options[] = array(
+        'name' => __('火山引擎服务', 'kratos'),
+        'desc' => __('是否开启火山引擎 ImageX 图片服务', 'kratos'),
+        'id' => 'g_imgx',
+        'std' => '0',
+        'type' => 'checkbox',
+    );
+
+    $options[] = array(
+        'name' => __('加速地域', 'kratos'),
+        'id' => 'g_imgx_region',
+        'std' => 'cn-north-1',
+        'type' => 'select',
+        'class' => 'hidden',
+        'options' => $region_array,
+    );
+
+    $options[] = array(
+        'name' => __('服务ID', 'kratos'),
+        'id' => 'g_imgx_serviceid',
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('加速域名', 'kratos'),
+        'id' => 'g_imgx_url',
+        'placeholder' => __('例如：https://cdn.xxx.com', 'kratos'),
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('AccessKey', 'kratos'),
+        'id' => 'g_imgx_accesskey',
+        'class' => 'hidden',
+        'type' => 'password',
+    );
+
+    $options[] = array(
+        'name' => __('SecretKey', 'kratos'),
+        'id' => 'g_imgx_secretkey',
         'class' => 'hidden',
         'type' => 'password',
     );

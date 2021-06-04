@@ -1,0 +1,41 @@
+{
+    "name": "google/gax",
+    "type": "library",
+    "description": "Google API Core for PHP",
+    "keywords": ["google"],
+    "homepage": "https://github.com/googleapis/gax-php",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.5",
+        "google/auth": "^1.2.0",
+        "google/grpc-gcp": "^0.1.0",
+        "grpc/grpc": "^1.13",
+        "google/protobuf": "^3.12.2",
+        "guzzlehttp/promises": "^1.3",
+        "guzzlehttp/psr7": "^1.2",
+        "google/common-protos": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8.36",
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "conflict": {
+        "ext-protobuf": "<3.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Google\\ApiCore\\": "src",
+            "GPBMetadata\\ApiCore\\": "metadata/ApiCore"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Google\\ApiCore\\Dev\\": "dev/src",
+            "Google\\ApiCore\\": "tests",
+            "GPBMetadata\\Google\\": "metadata/Google"
+        }
+    },
+    "scripts": {
+        "regenerate-test-protos": "dev/sh/regenerate-test-protos.sh"
+    }
+}

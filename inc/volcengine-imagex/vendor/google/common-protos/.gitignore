@@ -1,0 +1,12 @@
+
+# Directories created when regenerating protos
+out/
+tmp_common_protos/
+
+# Composer related dirs
+composer.lock
+vendor/
+
+# Doc generation dirs
+tmp_gh-pages/
+cache/

@@ -1,0 +1,38 @@
+language: php
+sudo: required
+dist: trusty
+
+jobs:
+  include:
+    - php: '5.5.38'
+    - php: '5.6.25'
+    - php: '5.6.25'
+      env: PROTOBUF_C_EXT=true
+    - php: '7.0'
+    - php: '7.1'
+    - php: '7.2'
+    - php: '7.2'
+      env: PROTOBUF_C_EXT=true
+    - stage: 'deploy'
+      php: '7.2'
+      install:
+      - travis_retry composer install
+      script:
+      - ./dev/build-docs.sh
+      - ./dev/push-docs.sh
+      after_success: skip
+
+stages:
+  - test
+  - name: deploy
+    if: tag IS present
+
+install:
+  - travis_retry pecl install grpc
+  - if [[ $PROTOBUF_C_EXT =~ ^true ]]; then travis_retry pecl install protobuf-3.9.0; fi
+  - travis_retry composer install
+script:
+  - vendor/bin/phpunit
+  - if [[ $TRAVIS_PHP_VERSION =~ ^7 ]]; then ./dev/build-docs.sh master; fi
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

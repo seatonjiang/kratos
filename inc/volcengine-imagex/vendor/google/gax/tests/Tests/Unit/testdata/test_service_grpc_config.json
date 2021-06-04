@@ -1,0 +1,17 @@
+{
+  "channelPool": {
+    "maxSize": 10,
+    "maxConcurrentStreamsLowWatermark": 1
+  },
+  "method": [
+    {
+      "name": [
+        "/google.test.v1.Test/TestMethod"
+      ],
+      "affinity": {
+        "command": "BIND",
+        "affinityKey": "key"
+      }
+    }
+  ]
+}

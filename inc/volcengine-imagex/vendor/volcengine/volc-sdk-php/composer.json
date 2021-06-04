@@ -1,0 +1,25 @@
+{
+  "name": "volcengine/volc-sdk-php",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "bytedance"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "guzzlehttp/guzzle": "~6.2",
+    "ext-json": "*",
+    "google/protobuf": "v3.12.*",
+    "google/gax": "*",
+    "ext-openssl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Volc\\": "src/",
+      "Test\\": "tests/"
+    }
+  },
+  "description": ""
+}

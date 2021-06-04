@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.05.20
+ * @version 2021.06.05
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -202,17 +202,18 @@ if (kratos_option('g_removeimgsize', false)) {
         unset($sizes['thumbnail']);
         unset($sizes['medium']);
         unset($sizes['large']);
+        unset($sizes['full']);
         unset($sizes['medium_large']);
         unset($sizes['1536x1536']);
         unset($sizes['2048x2048']);
         return $sizes;
     }
     add_filter('intermediate_image_sizes_advanced', 'remove_default_images');
-    // add_filter('big_image_size_threshold', '__return_false');
-
+    
     remove_image_size('1536x1536');
     remove_image_size('2048x2048');
 }
+add_filter('big_image_size_threshold', '__return_false');
 
 // 媒体文件使用 md5 值重命名，指定文件前缀
 add_filter('wp_handle_sideload_prefilter', 'custom_upload_perfilter');

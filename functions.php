@@ -3,7 +3,7 @@
  * 模板函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2020.03.17
+ * @version 2020.06.05
  */
 
 define('THEME_VERSION', wp_get_theme()->get('Version'));
@@ -34,6 +34,9 @@ require get_template_directory() . '/inc/theme-navwalker.php';
 
 // 对象存储配置
 require get_template_directory() . '/inc/theme-dogecloud.php';
+
+// ImageX 图片服务
+require get_template_directory() . '/inc/theme-volcengine.php';
 
 // SMTP 配置
 require get_template_directory() . '/inc/theme-smtp.php';

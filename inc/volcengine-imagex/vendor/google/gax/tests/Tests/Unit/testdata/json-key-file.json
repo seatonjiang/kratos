@@ -1,0 +1,7 @@
+{
+  "type": "authorized_user",
+  "client_id": "example@example.com",
+  "client_secret": "example",
+  "refresh_token": "abc",
+  "project_id": "example_project"
+}
