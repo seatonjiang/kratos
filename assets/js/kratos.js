@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var KRATOS_VERSION = "3.3.0";
+  var KRATOS_VERSION = "3.3.1";
 
   var navbarConfig = function () {
     $("#navbutton").on("click", function () {
