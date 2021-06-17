@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.05.22
+ * @version 2021.06.17
  */
 
 function getrobots()
@@ -54,6 +54,10 @@ function kratos_options()
     $seorobots = '<a href="' . home_url() . '/robots.txt" target="_blank">robots.txt</a>';
     $seoreading = '<a href="' . admin_url('options-reading.php') . '" target="_blank">' . __('设置-阅读-对搜索引擎的可见性', 'kratos') . '</a>';
 
+    $imgxconsole = '<a href="https://console.volcengine.com/iam/keymanage/" target="_blank">火山引擎控制台</a>';
+    $imgxtmp = '<a href="https://console.volcengine.com/imagex/image_template/" target="_blank">图片处理配置</a>';
+    $imgxsid = '<a href="https://console.volcengine.com/imagex/service_manage/" target="_blank">图片服务管理</a>';
+    
     $cc_array = array(
         'one' => __('知识共享署名 4.0 国际许可协议', 'kratos'),
         'two' => __('知识共享署名-非商业性使用 4.0 国际许可协议', 'kratos'),
@@ -254,6 +258,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('服务ID', 'kratos'),
         'id' => 'g_imgx_serviceid',
+        'desc' => __('服务ID在控制台', 'kratos') . $imgxsid . __('中获取', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -261,7 +266,16 @@ function kratos_options()
     $options[] = array(
         'name' => __('加速域名', 'kratos'),
         'id' => 'g_imgx_url',
+        'desc' => __('最后不要添加 /', 'kratos'),
         'placeholder' => __('例如：https://cdn.xxx.com', 'kratos'),
+        'class' => 'hidden',
+        'type' => 'text',
+    );
+
+    $options[] = array(
+        'name' => __('图片处理模板', 'kratos'),
+        'id' => 'g_imgx_tmp',
+        'desc' => __('模板配置代码在控制台', 'kratos') . $imgxtmp . __('中获取', 'kratos'),
         'class' => 'hidden',
         'type' => 'text',
     );
@@ -269,6 +283,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('AccessKey', 'kratos'),
         'id' => 'g_imgx_accesskey',
+        'desc' => __('AccessKey 在', 'kratos') . $imgxconsole . __('中获取', 'kratos'),
         'class' => 'hidden',
         'type' => 'password',
     );
@@ -276,6 +291,7 @@ function kratos_options()
     $options[] = array(
         'name' => __('SecretKey', 'kratos'),
         'id' => 'g_imgx_secretkey',
+        'desc' => __('SecretKey 在', 'kratos') . $imgxconsole . __('中获取', 'kratos'),
         'class' => 'hidden',
         'type' => 'password',
     );

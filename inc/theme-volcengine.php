@@ -3,7 +3,7 @@
  * ImageX 图片服务
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.06.05
+ * @version 2021.06.17
  */
 require_once 'volcengine-imagex/vendor/autoload.php';
 
@@ -128,4 +128,30 @@ if (kratos_option('g_imgx', false)) {
         return $uploads;
     }
     add_filter('upload_dir', 'custom_upload_dir');
+
+    function imagex_setting_content_ci($content)
+    {
+        preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $images);
+        if (!empty($images) && isset($images[1])) {
+            foreach ($images[1] as $item) {
+                $content = str_replace($item, $item . kratos_option('g_imgx_tmp'), $content);
+            }
+        }
+        return $content;
+    }
+    add_filter('the_content', 'imagex_setting_content_ci');
+    
+    function imagex_setting_post_thumbnail_ci($html, $post_id, $post_image_id)
+    {
+        if (has_post_thumbnail()) {
+            preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $html, $images);
+            if (!empty($images) && isset($images[1])) {
+                foreach ($images[1] as $item) {
+                    $html = str_replace($item, $item . kratos_option('g_imgx_tmp'), $html);
+                }
+            }
+        }
+        return $html;
+    }
+    add_filter('post_thumbnail_html', 'imagex_setting_post_thumbnail_ci', 10, 3);
 }
