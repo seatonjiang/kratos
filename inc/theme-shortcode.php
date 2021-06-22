@@ -204,8 +204,7 @@ function reply($atts, $content = null)
     }
     global $wpdb;
     $post_id = get_the_ID();
-    $query = "SELECT `comment_ID` FROM {$wpdb->comments} WHERE `comment_post_ID`={$post_id} and `comment_approved`='1' and `comment_author_email`='{$userEmail}' LIMIT 1";
-    if ($wpdb->get_results($query)) {
+    if ($wpdb->get_results($wpdb->prepare("SELECT comment_ID FROM {$wpdb->comments} WHERE comment_post_ID = %d AND comment_approved = '1' AND comment_author_email = %s LIMIT 1", $post_id, $userEmail))) {
         return do_shortcode($content);
     } else {
         return $notice;
