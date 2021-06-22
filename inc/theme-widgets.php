@@ -60,7 +60,7 @@ function most_comm_posts($days = 30, $nums = 6)
     date_default_timezone_set("PRC");
     $today = date("Y-m-d H:i:s");
     $daysago = date("Y-m-d H:i:s", strtotime($today) - ($days * 24 * 60 * 60));
-    $result = $wpdb->get_results("SELECT comment_count, ID, post_title, post_date FROM $wpdb->posts WHERE post_date BETWEEN '$daysago' AND '$today' and post_type='post' and post_status='publish' ORDER BY comment_count DESC LIMIT 0 , $nums");
+    $result = $wpdb->get_results($wpdb->prepare("SELECT comment_count, ID, post_title, post_date FROM $wpdb->posts WHERE post_date BETWEEN %s AND %s and post_type = 'post' AND post_status = 'publish' ORDER BY comment_count DESC LIMIT 0, %d", $daysago, $today, $nums));
     $output = '';
     if (!empty($result)) {
         foreach ($result as $topten) {
@@ -125,7 +125,7 @@ function string_cut($string, $sublen, $start = 0, $code = 'UTF-8') {
 function latest_comments($list_number=5, $cut_length=50)
 {
     global $wpdb, $output;
-    $comments = $wpdb->get_results("SELECT comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_content FROM {$wpdb->comments} LEFT OUTER JOIN {$wpdb->posts} ON {$wpdb->comments}.comment_post_ID = {$wpdb->posts}.ID WHERE comment_approved = '1' AND (comment_type = '' OR comment_type = 'comment') AND user_id != '1' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT {$list_number}");
+    $comments = $wpdb->get_results($wpdb->prepare("SELECT comment_ID, comment_post_ID, comment_author, comment_date_gmt, comment_content FROM {$wpdb->comments} LEFT OUTER JOIN {$wpdb->posts} ON {$wpdb->comments}.comment_post_ID = {$wpdb->posts}.ID WHERE comment_approved = '1' AND (comment_type = '' OR comment_type = 'comment') AND user_id != '1' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT %d", $list_number));
     foreach ($comments as $comment) {
         $nickname = esc_attr($comment->comment_author) ?: __('匿名', 'kratos');
         $output .= '<a href="' . get_the_permalink($comment->comment_post_ID) . '#commentform"> <div class="meta clearfix"> <div class="avatar float-left">' . get_avatar($comment, 60) . '</div> <div class="profile d-block"> <span class="date">' . $nickname . ' ' . __('发布于 ', 'kratos') . timeago($comment->comment_date_gmt) . '</span> <span class="message d-block">' . convert_smilies(esc_attr(string_cut(strip_tags($comment->comment_content), $cut_length))) . '</span> </div> </div> </a>';
