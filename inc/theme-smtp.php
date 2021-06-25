@@ -1,9 +1,9 @@
 <?php
 /**
  * SMTP 配置
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2020.02.15
+ * @version 2021.06.25
  */
 
 if (kratos_option('m_smtp', false)) {

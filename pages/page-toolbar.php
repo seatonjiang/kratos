@@ -1,9 +1,9 @@
 <?php
 /**
  * 文章工具栏
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.03.10
+ * @version 2021.06.25
  */
 ?>
 <div class="toolbar clearfix">

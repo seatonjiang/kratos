@@ -1,9 +1,9 @@
 <?php
 /**
  * 模板函数
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2020.06.25
+ * @version 2021.06.25
  */
 
 define('THEME_VERSION', '3.3.2');

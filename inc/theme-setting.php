@@ -1,9 +1,9 @@
 <?php
 /**
  * 站点相关函数
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2020.09.27
+ * @version 2021.06.25
  */
 
 // 标题配置

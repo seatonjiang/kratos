@@ -1,9 +1,9 @@
 <?php 
 /**
  * 404 模板
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2020.04.12
+ * @version 2021.06.25
  */
 
 get_header(); ?>

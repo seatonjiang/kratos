@@ -1,9 +1,9 @@
 <?php
 /**
  * 侧栏小工具
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.05.20
+ * @version 2021.06.25
  */
 
 // 添加小工具

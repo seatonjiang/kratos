@@ -1,9 +1,9 @@
 <?php
 /**
  * dogecloud 对象存储
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2020.03.17
+ * @version 2021.06.25
  */
 
 if (kratos_option('g_cos', false)) {

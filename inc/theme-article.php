@@ -1,9 +1,9 @@
 <?php
 /**
  * 文章相关函数
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.05.24
+ * @version 2021.06.25
  */
 
 // 文章链接添加 target 和 rel

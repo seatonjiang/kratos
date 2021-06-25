@@ -1,9 +1,9 @@
 <?php
 /**
  * 主题选项
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.17
+ * @version 2021.06.25
  */
 
 function getrobots()

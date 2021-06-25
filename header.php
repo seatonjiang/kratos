@@ -1,9 +1,9 @@
 <?php
 /**
  * 主题页眉
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2020.12.14
+ * @version 2021.06.25
  */
 ?>
 <!DOCTYPE html>

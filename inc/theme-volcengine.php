@@ -1,9 +1,9 @@
 <?php
 /**
  * ImageX 图片服务
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.17
+ * @version 2021.06.25
  */
 require_once 'volcengine-imagex/vendor/autoload.php';
 

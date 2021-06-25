@@ -1,9 +1,9 @@
 <?php
 /**
  * 文章内容
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.05.22
+ * @version 2021.06.25
  */
 
 get_header();

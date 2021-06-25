@@ -1,9 +1,9 @@
 <?php
 /**
  * 主题页脚
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.04.15
+ * @version 2021.06.25
  */
 ?>
 <div class="k-footer">

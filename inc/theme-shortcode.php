@@ -1,9 +1,9 @@
 <?php
 /**
  * 文章短代码
- * @author Seaton Jiang <seaton@vtrois.com>
+ * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.05.20
+ * @version 2021.06.25
  */
 
 function h2title($atts, $content = null, $code = "")
