@@ -16,11 +16,13 @@ if (comments_open()) {?>
 	<div class="list">
 		<?php wp_list_comments('type=comment&callback=comment_callbacks');?>
 	</div>
-	<div id="commentpage" class="nav text-center my-3">
-		<?php previous_comments_link(__('加载更多', 'kratos'));?>
+	<div id="commentpage" class="nav text-center my-2">
+		<?php previous_comments_link(__('<span>上一页</span>', 'kratos'));?>
+		<?php next_comments_link(__('<span>下一页</span>', 'kratos'));?>
 	</div>
 	<div id="respond" class="comment-respond mt-2">
-		<?php if (!comments_open()): elseif (get_option('comment_registration') && !is_user_logged_in()): ?>
+		<?php if (!comments_open()): // no-op
+		      elseif (get_option('comment_registration') && !is_user_logged_in()): ?>
 			<div class="error text-center">
 				<?php printf(__('您需要 <a href="%s">登录</a> 之后才可以评论', 'kratos'), wp_login_url(get_permalink()));?>
 			</div>
@@ -67,6 +69,7 @@ if (comments_open()) {?>
 							</div>
 						</div>
 						<div class="float-right">
+							<?php comment_form_title(''); ?>
 							<?php cancel_comment_reply_link(__('取消回复', 'kratos'));?>
 							<input name="submit" type="submit" id="submit" class="btn btn-primary" value="<?php _e('提交评论', 'kratos');?>">
 						</div>
