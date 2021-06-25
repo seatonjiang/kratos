@@ -1784,19 +1784,20 @@ ol {
 
 #commentpage a {
   display: inline-block;
-  width: 144px;
-  height: 37px;
-  border: none;
-  border-radius: 2px;
+  width: 100px;
+  height: 32px;
+  border-radius: 3px;
   background-color: #00a2ff;
   color: #fff;
-  font-size: 15px;
-  line-height: 2.4;
-  transition: all 0.15s ease-in-out;
+  font-size: 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+#commentpage a span {
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 768px) {
