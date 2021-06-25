@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seaton@vtrois.com>
  * @license MIT License
- * @version 2021.06.05
+ * @version 2021.06.25
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -45,7 +45,11 @@ function theme_autoload()
         if (kratos_option('g_fontawesome', false)) {
             wp_enqueue_style('fontawesome', ASSET_PATH . '/assets/css/fontawesome.min.css', array(), '5.15.2');
         }
-        wp_enqueue_style('kratos', ASSET_PATH . '/assets/css/kratos.min.css', array(), THEME_VERSION);
+        if (kratos_option('g_cdn', false) && !is_child_theme()) {
+            wp_enqueue_style('kratos', 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION . '/style.css' , array(), THEME_VERSION);
+        } else {
+            wp_enqueue_style('kratos', get_stylesheet_uri(), array(), THEME_VERSION);
+        }
         if (kratos_option('g_adminbar', true)) {
             $admin_bar_css = "
             @media screen and (min-width: 782px) {
@@ -67,7 +71,6 @@ function theme_autoload()
                 wp_add_inline_style('kratos', $admin_bar_css);
             }
         }
-        wp_enqueue_style('custom', get_template_directory_uri() . '/custom/custom.css', array(), THEME_VERSION);
         // js
         wp_deregister_script('jquery');
         wp_enqueue_script('jquery', ASSET_PATH . '/assets/js/jquery.min.js', array(), '3.4.1', false);
@@ -76,7 +79,6 @@ function theme_autoload()
         wp_enqueue_script('sticky', ASSET_PATH . '/assets/js/theia-sticky-sidebar.min.js', array(), '1.5.0', true);
         wp_enqueue_script('dplayer', ASSET_PATH . '/assets/js/DPlayer.min.js', array(), THEME_VERSION, true);
         wp_enqueue_script('kratos', ASSET_PATH . '/assets/js/kratos.min.js', array(), THEME_VERSION, true);
-        wp_enqueue_script('custom', get_template_directory_uri() . '/custom/custom.js', array(), THEME_VERSION, true);
 
         $data = array(
             'site' => home_url(),

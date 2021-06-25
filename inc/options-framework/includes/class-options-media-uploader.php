@@ -112,7 +112,7 @@ class Options_Framework_Media_Uploader {
 		if ( function_exists( 'wp_enqueue_media' ) )
 			wp_enqueue_media();
 
-		wp_register_script( 'of-media-uploader', get_stylesheet_directory_uri() . '/inc/options-framework/js/media-uploader.js', array( 'jquery' ), Options_Framework::VERSION );
+		wp_register_script( 'of-media-uploader', 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION . '/inc/options-framework/js/media-uploader.js', array( 'jquery' ), Options_Framework::VERSION );
 		wp_enqueue_script( 'of-media-uploader' );
 		wp_localize_script( 'of-media-uploader', 'optionsframework_l10n', array(
 			'upload' => __( '上传', 'kratos' ),
