@@ -45,11 +45,11 @@ function theme_autoload()
         if (kratos_option('g_fontawesome', false)) {
             wp_enqueue_style('fontawesome', ASSET_PATH . '/assets/css/fontawesome.min.css', array(), '5.15.2');
         }
-        if (kratos_option('g_cdn', false) && !is_child_theme()) {
-            wp_enqueue_style('kratos', 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION . '/style.css' , array(), THEME_VERSION);
-        } else {
-            wp_enqueue_style('kratos', get_stylesheet_uri(), array(), THEME_VERSION);
-        }
+        wp_enqueue_style('kratos', kratos_option('g_cdn', false)
+            ? 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION . '/style.css'
+            : get_parent_theme_file_uri('style.css'),
+            array(), THEME_VERSION);
+        wp_enqueue_style('kratos-child', get_stylesheet_uri(), array(), THEME_VERSION);
         if (kratos_option('g_adminbar', true)) {
             $admin_bar_css = "
             @media screen and (min-width: 782px) {
