@@ -1,6 +1,6 @@
 /*!
  * Kratos
- * Seaton Jiang <seaton@vtrois.com>
+ * Seaton Jiang <seatonjiang@vtrois.com>
  */
 (function () {
   "use strict";
@@ -168,12 +168,6 @@
     });
   };
 
-  var siderbarConfig = function () {
-    $(".sticky-sidebar").theiaStickySidebar({
-      additionalMarginTop: 25,
-    });
-  };
-
   var consoleConfig = function () {
     console.log(
       "\n Kratos v" +
@@ -193,9 +187,6 @@
     postlikeConfig();
     donateConfig();
     consoleConfig();
-    if (kratos.sticky) {
-      siderbarConfig();
-    }
   });
 })();
 
