@@ -75,7 +75,7 @@ function theme_autoload()
             wp_add_inline_style('kratos', '.sticky-sidebar {
                 position: sticky;
                 top: 8px;
-                height:100%;
+                height: 100%;
             }');
         }
         // js
