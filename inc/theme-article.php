@@ -368,6 +368,8 @@ function get_wpsmiliestrans()
 if (!kratos_option('g_gutenberg',false)) {
     // 禁用 Gutenberg 编辑器
     add_filter('use_block_editor_for_post', '__return_false');
+    add_filter('gutenberg_use_widgets_block_editor', '__return_false');
+    add_filter('use_widgets_block_editor', '__return_false');
     remove_action('wp_enqueue_scripts', 'wp_common_block_scripts_and_styles');
 
     // 删除前端的block library的css资源，
