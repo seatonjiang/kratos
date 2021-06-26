@@ -6,7 +6,7 @@
  * @version 2021.06.25
  */
 
-define('THEME_VERSION', '3.3.3');
+define('THEME_VERSION', '3.3.4');
 
 // 主题配置
 require get_template_directory() . '/inc/options-framework/autoload.php';
