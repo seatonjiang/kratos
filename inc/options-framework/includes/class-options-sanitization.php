@@ -81,10 +81,10 @@ add_filter( 'of_sanitize_checkbox', 'of_sanitize_checkbox' );
  */
 function of_sanitize_upload( $input ) {
 	$output = '';
-	$filetype = wp_check_filetype( $input );
-	if ( $filetype["ext"] ) {
+	// $filetype = wp_check_filetype( $input );
+	// if ( $filetype["ext"] ) {
 		$output = esc_url( $input );
-	}
+	// }
 	return $output;
 }
 add_filter( 'of_sanitize_upload', 'of_sanitize_upload' );
