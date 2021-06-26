@@ -3,15 +3,31 @@
  * 侧栏小工具
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.06.26
  */
 
 // 添加小工具
 function widgets_init()
 {
     register_sidebar(array(
-        'name' => __('侧边栏工具', 'kratos'),
-        'id' => 'sidebar_tool',
+        'name' => __('主页侧边栏', 'kratos'),
+        'id' => 'home_sidebar',
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="title">',
+        'after_title' => '</div>',
+    ));
+    register_sidebar(array(
+        'name' => __('文章侧边栏', 'kratos'),
+        'id' => 'single_sidebar',
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="title">',
+        'after_title' => '</div>',
+    ));
+    register_sidebar(array(
+        'name' => __('页面侧边栏', 'kratos'),
+        'id' => 'page_sidebar',
         'before_widget' => '<div class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<div class="title">',
@@ -19,6 +35,7 @@ function widgets_init()
     ));
     // 去掉默认小工具
     $wp_widget = array(
+        'WP_Widget_Block',
         'WP_Widget_Pages',
         'WP_Widget_Meta',
         'WP_Widget_Media_Image',
