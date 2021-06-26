@@ -47,7 +47,7 @@ function theme_autoload()
         }
         wp_enqueue_style('kratos', ASSET_PATH . '/style.css', array(), THEME_VERSION);
         if (is_child_theme()) {
-            wp_enqueue_style('kratos-child', get_stylesheet_uri(), array(), THEME_VERSION);
+            wp_enqueue_style('kratos-child', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
         }
         if (kratos_option('g_adminbar', true)) {
             $admin_bar_css = "
