@@ -3,7 +3,7 @@
  * 主题选项
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.06.26
  */
 
 function getrobots()
@@ -593,14 +593,6 @@ function kratos_options()
         'name' => __('附加功能', 'kratos'),
         'desc' => __('关闭文章自动保存、修订版本功能', 'kratos'),
         'id' => 'g_post_revision',
-        'type' => 'checkbox',
-        'std' => '1',
-    );
-
-    $options[] = array(
-        'name' => __('文章目录', 'kratos'),
-        'desc' => __('开启文章页面目录功能，将自动识别到 h3 的标题，并在侧边栏生成文章目录', 'kratos'),
-        'id' => 'g_post_toc',
         'type' => 'checkbox',
         'std' => '1',
     );

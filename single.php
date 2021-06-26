@@ -146,7 +146,7 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
             </div>
             <?php if (kratos_option('g_article_widgets', 'two_side') == 'two_side'){ ?>
             <div class="col-lg-4 sidebar sticky-sidebar d-none d-lg-block">
-                <?php dynamic_sidebar('single_sidebar'); if (kratos_option('g_post_toc', true)) echo article_toc(); ?>
+                <?php dynamic_sidebar('single_sidebar'); ?>
             </div>
             <?php } ?>
         </div>

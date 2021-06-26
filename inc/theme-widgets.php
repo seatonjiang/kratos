@@ -535,6 +535,71 @@ class widget_comments extends WP_Widget
     }
 }
 
+class widget_toc extends WP_Widget
+{
+    public function __construct()
+    {
+        add_action('admin_enqueue_scripts', array($this, 'scripts'));
+
+        $widget_ops = array(
+            'name' => __('文章目录', 'kratos'),
+            'description' => __('仅在有目录规则的文章中显示目录的工具', 'kratos'),
+        );
+
+        parent::__construct(false, false, $widget_ops);
+    }
+
+    public function scripts()
+    {
+        wp_enqueue_script('media-upload');
+        wp_enqueue_media();
+        wp_enqueue_script('widget_scripts', ASSET_PATH . '/assets/js/widget.min.js', array('jquery'));
+        wp_enqueue_style('widget_css', ASSET_PATH . '/assets/css/widget.min.css', array());
+    }
+
+    public function widget($args, $instance)
+    {
+        global $toc;
+
+        $index = wp_cache_get(get_the_ID(), 'toc');
+    
+        if ($index === false && $toc) {
+            $index = '<ul class="ul-toc">' . "\n";
+            $prev_depth = '';
+            $to_depth = 0;
+            foreach ($toc as $toc_item) {
+                $toc_depth = $toc_item['depth'];
+                if ($prev_depth) {
+                    if ($toc_depth == $prev_depth) {
+                        $index .= '</li>' . "\n";
+                    } elseif ($toc_depth > $prev_depth) {
+                        $to_depth++;
+                        $index .= '<ul class="ul-'.$toc_depth.'">' . "\n";
+                    } else {
+                        $to_depth2 = $to_depth > $prev_depth - $toc_depth ? $prev_depth - $toc_depth : $to_depth;
+                        if ($to_depth2) {
+                            for ($i = 0; $i < $to_depth2; $i++) {
+                                $index .= '</li>' . "\n" . '</ul>' . "\n";
+                                $to_depth--;
+                            }
+                        }
+                        $index .= '</li>';
+                    }
+                }
+                $index .= '<li class="li-'.$toc_depth.'"><a href="#toc-' . $toc_item['count'] . '">' . str_replace(array('[h2title]', '[/h2title]'),array('', ''),$toc_item['text']) . '</a>';
+                $prev_depth = $toc_item['depth'];
+            }
+            for ($i = 0; $i <= $to_depth; $i++) {
+                $index .= '</li>' . "\n" . '</ul>' . "\n";
+            }
+            wp_cache_set(get_the_ID(), $index, 'toc', 360000);
+            $index = '<div class="widget w-toc">' . "\n" . '<div class="title">文章目录</div>' . "\n" . '<div class="item">' . $index . '</div>' . "\n" . '</div>';
+        }
+    
+        echo $index;
+    }
+}
+
 function register_widgets()
 {
     register_widget('widget_ad');
@@ -543,5 +608,6 @@ function register_widgets()
     register_widget('widget_search');
     register_widget('widget_posts');
     register_widget('widget_comments');
+    register_widget('widget_toc');
 }
 add_action('widgets_init', 'register_widgets');
