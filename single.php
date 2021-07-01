@@ -3,7 +3,7 @@
  * 文章内容
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.26
+ * @version 2021.07.01
  */
 
 get_header();
@@ -55,7 +55,7 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                             <?php if (current_user_can('edit_posts')){ echo '<span>'; edit_post_link(__('编辑文章', 'kratos')); echo '</span>'; }; ?>
                             </div>
                         </div>
-                        <div class="content">
+                        <div class="content" id="lightgallery">
                             <?php
                             if(kratos_option('s_singletop',false)){
                                 if(kratos_option('s_singletop_links')){

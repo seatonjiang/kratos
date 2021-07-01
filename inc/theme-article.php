@@ -3,7 +3,7 @@
  * 文章相关函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.07.01
  */
 
 // 文章链接添加 target 和 rel
@@ -104,6 +104,11 @@ add_theme_support("post-thumbnails");
 // 生成适合特色图的比例图片
 add_image_size( 'kratos-thumbnail', 512, 288, true );
 
+// 强制图片链接到媒体文件
+add_action('after_setup_theme', 'default_attachment_display_settings');
+function default_attachment_display_settings() {
+	update_option('image_default_link_type', 'file');
+}
 // 文章特色图片
 function post_thumbnail()
 {

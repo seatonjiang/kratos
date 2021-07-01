@@ -176,6 +176,12 @@
     );
   };
 
+  var lightGalleryConfig = function () {
+    lightGallery(document.getElementById("lightgallery"), {
+      selector: "a",
+    });
+  };
+
   $(function () {
     accordionConfig();
     navbarConfig();
@@ -187,6 +193,7 @@
     postlikeConfig();
     donateConfig();
     consoleConfig();
+    lightGalleryConfig();
   });
 })();
 
