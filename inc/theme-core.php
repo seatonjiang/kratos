@@ -3,7 +3,7 @@
  * 核心函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.07.01
  */
 
 if (kratos_option('g_cdn', false)) {
@@ -84,7 +84,7 @@ function theme_autoload()
 
         $data = array(
             'site' => home_url(),
-            'directory' => get_stylesheet_directory_uri(),
+            'directory' => ASSET_PATH,
             'alipay' => kratos_option('g_donate_alipay', ASSET_PATH . '/assets/img/donate.png'),
             'wechat' => kratos_option('g_donate_wechat', ASSET_PATH . '/assets/img/donate.png'),
             'repeat' => __('您已经赞过了', 'kratos'),
