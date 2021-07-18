@@ -94,26 +94,22 @@ function most_comm_posts($days = 30, $nums = 6)
     echo $output;
 }
 
-function timeago($ptime){
-    $ptime = strtotime($ptime);
-    $etime = time() - $ptime;
-    if($etime < 1)
-        return '刚刚';
-    $interval = array(
-        12*30*24*60*60 => __(' 年前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
-        30*24*60*60 => __(' 个月前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
-        7*24*60*60 => __(' 周前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
-        24*60*60 => __(' 天前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
-        60*60 => __(' 小时前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
-        60 => __(' 分钟前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
-        1 => __(' 秒前','kratos').'（'.date(__('m月d日','kratos'),$ptime).'）',
-    );
-    foreach($interval as$secs=>$str){
-        $d=$etime/$secs;
-        if($d>=1){
-            $r=round($d);
-            return$r.$str;
-        }
+function timeago($time) {
+    $time = strtotime($time);
+    $dtime = time() - $time;
+    if ($dtime < 1) return __('刚刚', 'kratos');
+    $intervals = [
+        12 * 30 * 24 * 60 * 60 => __(' 年前', 'kratos'),
+        30 * 24 * 60 * 60 => __(' 个月前', 'kratos'),
+        7  * 24 * 60 * 60 => __(' 周前', 'kratos'),
+        24 * 60 * 60 => __(' 天前', 'kratos'),
+        60 * 60 => __(' 小时前', 'kratos'),
+        60 => __(' 分钟前', 'kratos'),
+        1 => __(' 秒前', 'kratos')
+    ];
+    foreach ($intervals as $sec => $str) {
+        $v = $dtime / $sec;
+        if ($v >= 1) return round($v) . $str;
     }
 }
 
@@ -145,7 +141,15 @@ function latest_comments($list_number=5, $cut_length=50)
     $comments = $wpdb->get_results($wpdb->prepare("SELECT comment_ID, comment_post_ID, comment_author, comment_author_email, comment_date_gmt, comment_content FROM {$wpdb->comments} LEFT OUTER JOIN {$wpdb->posts} ON {$wpdb->comments}.comment_post_ID = {$wpdb->posts}.ID WHERE comment_approved = '1' AND (comment_type = '' OR comment_type = 'comment') AND user_id != '1' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT %d", $list_number));
     foreach ($comments as $comment) {
         $nickname = esc_attr($comment->comment_author) ?: __('匿名', 'kratos');
-        $output .= '<a href="' . get_the_permalink($comment->comment_post_ID) . '#commentform"> <div class="meta clearfix"> <div class="avatar float-left">' . get_avatar($comment, 60) . '</div> <div class="profile d-block"> <span class="date">' . $nickname . ' ' . __('发布于 ', 'kratos') . timeago($comment->comment_date_gmt) . '</span> <span class="message d-block">' . convert_smilies(esc_attr(string_cut(strip_tags($comment->comment_content), $cut_length))) . '</span> </div> </div> </a>';
+        $output .= '<a href="' . get_the_permalink($comment->comment_post_ID) . '#commentform">
+            <div class="meta clearfix">
+                <div class="avatar float-left">' . get_avatar($comment, 60) . '</div>
+                <div class="profile d-block">
+                    <span class="date">' . $nickname . ' ' . __('发布于 ', 'kratos') . timeago($comment->comment_date) . '（' . date(__('m月d日', 'kratos'), strtotime($comment->comment_date)) . '）</span>
+                    <span class="message d-block">' . convert_smilies(esc_attr(string_cut(strip_tags($comment->comment_content), $cut_length))) . '</span>
+                </div>
+            </div>
+        </a>';
     }
     return $output;
 }
