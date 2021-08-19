@@ -1,9 +1,10 @@
 <?php
+
 /**
  * ImageX 图片服务
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.08.19
  */
 require_once 'volcengine-imagex/vendor/autoload.php';
 
@@ -20,7 +21,8 @@ if (kratos_option('g_imgx', false)) {
         return $imagex_client;
     }
 
-    function imagex_upload($object, $file){
+    function imagex_upload($object, $file)
+    {
         if (!@file_exists($file)) {
             return false;
         }
@@ -140,7 +142,7 @@ if (kratos_option('g_imgx', false)) {
         return $content;
     }
     add_filter('the_content', 'imagex_setting_content_ci');
-    
+
     function imagex_setting_post_thumbnail_ci($html, $post_id, $post_image_id)
     {
         if (has_post_thumbnail()) {

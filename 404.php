@@ -1,9 +1,10 @@
-<?php 
+<?php
+
 /**
  * 404 模板
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.08.19
  */
 
 get_header(); ?>
@@ -12,14 +13,14 @@ get_header(); ?>
         <div class="row">
             <div class="col-12 page404">
                 <div class="thumbnail" style="background-image: url(<?php
-                if(!kratos_option('g_404')){
-                    $img = ASSET_PATH . '/assets/img/404.jpg';
-                } else {
-                    $img = kratos_option('g_404', ASSET_PATH . '/assets/img/404.jpg');
-                }
-                echo $img; ?>">
-					<div class="overlay"></div>
-				</div>
+                                                                    if (!kratos_option('g_404')) {
+                                                                        $img = ASSET_PATH . '/assets/img/404.jpg';
+                                                                    } else {
+                                                                        $img = kratos_option('g_404', ASSET_PATH . '/assets/img/404.jpg');
+                                                                    }
+                                                                    echo $img; ?>">
+                    <div class="overlay"></div>
+                </div>
                 <div class="content text-center">
                     <div class="title pt-4"><?php _e('很抱歉，你访问的页面不存在', 'kratos'); ?></div>
                     <div class="subtitle pt-4"><?php _e('可能是输入地址有误或该地址已被删除', 'kratos'); ?></div>

@@ -1,9 +1,10 @@
 <?php
+
 /**
  * 表情图标
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.08.19
  */
 $smilies = '
 <a href="javascript:grin(\':razz:\')"><img src="' . ASSET_PATH . '/assets/img/smilies/razz.png" alt="" class="d-block"/></a>

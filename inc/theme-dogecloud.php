@@ -1,13 +1,15 @@
 <?php
+
 /**
  * dogecloud 对象存储
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.08.19
  */
 
 if (kratos_option('g_cos', false)) {
-    function dogcloud_upload($object, $file, $mime){
+    function dogcloud_upload($object, $file, $mime)
+    {
         if (!@file_exists($file)) {
             return false;
         }
@@ -120,7 +122,7 @@ if (kratos_option('g_cos', false)) {
 
         $request = new WP_Http;
         $result = $request->request($url, array('method' => 'POST', 'body' => $del_file_body, 'headers' => $headers));
- 
+
         return $file;
     }
     add_action('wp_delete_file', 'dogecloud_delete_remote_file', 100);

@@ -1,9 +1,10 @@
 <?php
+
 /**
  * 文章短代码
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.08.19
  */
 
 function h2title($atts, $content = null, $code = "")
@@ -177,7 +178,7 @@ add_shortcode('bilibili', 'bilibili');
 
 function reply($atts, $content = null)
 {
-    extract(shortcode_atts(array("notice" => '<div class="alert alert-primary text-center" role="alert">'.__('温馨提示：此处内容已隐藏，<a href="#comments">回复</a>后刷新页面即可查看！', 'kratos').'</div>'), $atts));
+    extract(shortcode_atts(array("notice" => '<div class="alert alert-primary text-center" role="alert">' . __('温馨提示：此处内容已隐藏，<a href="#comments">回复</a>后刷新页面即可查看！', 'kratos') . '</div>'), $atts));
     $userEmail = null;
     $user_ID = (int) wp_get_current_user()->ID;
     if ($user_ID > 0) {
@@ -212,8 +213,9 @@ function reply($atts, $content = null)
 }
 add_shortcode('reply', 'reply');
 
-function accordion($atts, $content=null, $code=""){
-    extract(shortcode_atts(array("title"=>__('标题内容','kratos')),$atts));
+function accordion($atts, $content = null, $code = "")
+{
+    extract(shortcode_atts(array("title" => __('标题内容', 'kratos')), $atts));
     $return = '<div class="accordion"><div class="acheader"><div class="icon"><i class="kicon i-plus"></i></div><span>';
     $return .= $title;
     $return .= '</span></div><div class="contents"><div class="inner">';
@@ -221,9 +223,10 @@ function accordion($atts, $content=null, $code=""){
     $return .= '</div></div></div>';
     return $return;
 }
-add_shortcode('accordion','accordion');
+add_shortcode('accordion', 'accordion');
 
-function dplayer($atts = array(), $content = ''){
+function dplayer($atts = array(), $content = '')
+{
     static $instance = 0;
     $instance++;
 
@@ -238,21 +241,25 @@ function dplayer($atts = array(), $content = ''){
             'type'           => 'auto',
             'mutex'          => 'true',
             'iconsColor'     => '#ffffff'
-        ), $atts, 'dplayer');
+        ),
+        $atts,
+        'dplayer'
+    );
 
-    $atts['autoplay']        = wp_validate_boolean( $atts['autoplay'] );
-    $atts['theme']           = esc_attr( $atts['theme'] );
-    $atts['loop']            = wp_validate_boolean( $atts['loop'] );
-    $atts['preload']         = esc_attr( $atts['preload'] );
-    $atts['src']             = esc_url_raw( $atts['src'] );
-    $atts['poster']          = esc_url_raw( $atts['poster'] );
-    $atts['type']            = strtolower( esc_attr( $atts['type'] ) );
-    $atts['mutex']           = wp_validate_boolean( $atts['mutex'] );
-    $atts['iconsColor']      = esc_attr( $atts['iconsColor'] );
+    $atts['autoplay']        = wp_validate_boolean($atts['autoplay']);
+    $atts['theme']           = esc_attr($atts['theme']);
+    $atts['loop']            = wp_validate_boolean($atts['loop']);
+    $atts['preload']         = esc_attr($atts['preload']);
+    $atts['src']             = esc_url_raw($atts['src']);
+    $atts['poster']          = esc_url_raw($atts['poster']);
+    $atts['type']            = strtolower(esc_attr($atts['type']));
+    $atts['mutex']           = wp_validate_boolean($atts['mutex']);
+    $atts['iconsColor']      = esc_attr($atts['iconsColor']);
 
-    if ( empty( $atts['src'] ) ) return;
+    if (empty($atts['src'])) return;
 
-    $output = sprintf( '<script> const dp%u = new DPlayer({ container: document.getElementById("dplayer-%u"), autoplay: %b, theme: "%s", loop: %b, preload: "%s", video: { url: "%s", type: "%s", pic: "%s", }, mutex: %b, iconsColor: "%s" }); </script>',
+    $output = sprintf(
+        '<script> const dp%u = new DPlayer({ container: document.getElementById("dplayer-%u"), autoplay: %b, theme: "%s", loop: %b, preload: "%s", video: { url: "%s", type: "%s", pic: "%s", }, mutex: %b, iconsColor: "%s" }); </script>',
         $instance,
         $instance,
         $atts['autoplay'],
@@ -266,48 +273,50 @@ function dplayer($atts = array(), $content = ''){
         $atts['iconsColor']
     );
 
-    $html = sprintf( '<p><div id="dplayer-%u"></div></p>',
+    $html = sprintf(
+        '<p><div id="dplayer-%u"></div></p>',
         $instance
     );
 
-    add_action( 'wp_footer', function () use ( $output ) {
+    add_action('wp_footer', function () use ($output) {
         echo '		' . $output . "\n";
-    }, 99999 );
+    }, 99999);
 
     return $html;
 }
-add_shortcode('dplayer','dplayer');
+add_shortcode('dplayer', 'dplayer');
 
-function override_wp_video_shortcode( $html = '', $atts = array() ) {
-    if ( empty( $atts['src'] ) ) {
-        if (!empty( $atts['mp4'] )) {
-            $atts['src']=$atts['mp4'];
-        }elseif(!empty( $atts['m4v'] )) {
-            $atts['src']=$atts['m4v'];
-        }elseif(!empty( $atts['webm'] )) {
-            $atts['src']=$atts['webm'];
-        }elseif(!empty( $atts['ogv'] )) {
-            $atts['src']=$atts['ogv'];
-        }elseif(!empty( $atts['wmv'] )) {
-            $atts['src']=$atts['wmv'];
-        }elseif(!empty( $atts['flv'] )) {
-            $atts['src']=$atts['flv'];
+function override_wp_video_shortcode($html = '', $atts = array())
+{
+    if (empty($atts['src'])) {
+        if (!empty($atts['mp4'])) {
+            $atts['src'] = $atts['mp4'];
+        } elseif (!empty($atts['m4v'])) {
+            $atts['src'] = $atts['m4v'];
+        } elseif (!empty($atts['webm'])) {
+            $atts['src'] = $atts['webm'];
+        } elseif (!empty($atts['ogv'])) {
+            $atts['src'] = $atts['ogv'];
+        } elseif (!empty($atts['wmv'])) {
+            $atts['src'] = $atts['wmv'];
+        } elseif (!empty($atts['flv'])) {
+            $atts['src'] = $atts['flv'];
         }
     };
 
     $video_attr_strings = array();
-    foreach ( $atts as $k => $v ) {
-        if ( $v == '' ) continue;
-        $video_attr_strings[] = $k . '="' . esc_attr( $v ) . '"';
+    foreach ($atts as $k => $v) {
+        if ($v == '') continue;
+        $video_attr_strings[] = $k . '="' . esc_attr($v) . '"';
     }
 
-    $html .= sprintf( '[dplayer %s]', join( ' ', $video_attr_strings ) );
+    $html .= sprintf('[dplayer %s]', join(' ', $video_attr_strings));
 
-    return do_shortcode( $html );
+    return do_shortcode($html);
 }
 
-if ( ! is_admin() ){
-    add_filter( 'wp_video_shortcode_override' , 'override_wp_video_shortcode', 1, 2 );
+if (!is_admin()) {
+    add_filter('wp_video_shortcode_override', 'override_wp_video_shortcode', 1, 2);
 }
 
 add_action('init', 'more_button');
@@ -322,12 +331,13 @@ function more_button()
     }
 }
 
-function add_more_buttons($buttons) {
+function add_more_buttons($buttons)
+{
     $buttons[] = 'hr';
     $buttons[] = 'wp_page';
     $buttons[] = 'fontsizeselect';
     $buttons[] = 'styleselect';
-return $buttons;
+    return $buttons;
 }
 add_filter("mce_buttons", "add_more_buttons");
 
