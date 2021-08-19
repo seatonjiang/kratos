@@ -1,9 +1,10 @@
 <?php
+
 /**
  * 文章相关函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.07.01
+ * @version 2021.08.19
  */
 
 // 文章链接添加 target 和 rel
@@ -102,13 +103,15 @@ add_filter('excerpt_length', 'excerpt_length');
 add_theme_support("post-thumbnails");
 
 // 生成适合特色图的比例图片
-add_image_size( 'kratos-thumbnail', 512, 288, true );
+add_image_size('kratos-thumbnail', 512, 288, true);
 
 // 强制图片链接到媒体文件
 add_action('after_setup_theme', 'default_attachment_display_settings');
-function default_attachment_display_settings() {
-	update_option('image_default_link_type', 'file');
+function default_attachment_display_settings()
+{
+    update_option('image_default_link_type', 'file');
 }
+
 // 文章特色图片
 function post_thumbnail()
 {
@@ -131,13 +134,7 @@ function post_thumbnail()
         if (!empty($img_val)) {
             echo '<img src="' . $img_val . '" />';
         } else {
-            $category=get_the_category($post->ID);
-            $catid=$category[0]->term_id;
-            if(kratos_option('essay_feature_img_'.$catid) 
-            && kratos_option('essay_feature_img_usable',true))
-            {
-                $img = kratos_option('essay_feature_img_'.$catid);
-            }elseif(!kratos_option('g_postthumbnail')) {
+            if (!kratos_option('g_postthumbnail')) {
                 $img = ASSET_PATH . '/assets/img/default.jpg';
             } else {
                 $img = kratos_option('g_postthumbnail', ASSET_PATH . '/assets/img/default.jpg');
@@ -151,8 +148,13 @@ function post_thumbnail()
 function pagelist($range = 5)
 {
     global $paged, $wp_query, $max_page;
-    if (!$max_page) {$max_page = $wp_query->max_num_pages;}
-    if ($max_page > 1) {if (!$paged) {$paged = 1;}
+    if (!$max_page) {
+        $max_page = $wp_query->max_num_pages;
+    }
+    if ($max_page > 1) {
+        if (!$paged) {
+            $paged = 1;
+        }
         echo "<div class='paginations'>";
         if ($paged > 1) {
             echo '<a href="' . get_pagenum_link($paged - 1) . '" class="prev" title="上一页"><i class="kicon i-larrows"></i></a>';
@@ -218,8 +220,8 @@ function comment_scripts()
     wp_localize_script('comment', 'ajaxcomment', array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'order' => get_option('comment_order'),
-        'compost' => __('评论正在提交中','kratos'),
-        'comsucc' => __('评论提交成功','kratos'),
+        'compost' => __('评论正在提交中', 'kratos'),
+        'comsucc' => __('评论提交成功', 'kratos'),
     ));
 }
 add_action('wp_enqueue_scripts', 'comment_scripts');
@@ -246,23 +248,29 @@ function comment_callback()
     $user = wp_get_current_user();
     do_action('set_comment_cookies', $comment, $user);
     $GLOBALS['comment'] = $comment;
-    ?>
+?>
     <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
         <div class="avatar float-left d-inline-block mr-2">
-            <?php if (function_exists('get_avatar') && get_option('show_avatars')) {echo get_avatar($comment, 50);}?>
+            <?php if (function_exists('get_avatar') && get_option('show_avatars')) {
+                echo get_avatar($comment, 50);
+            } ?>
         </div>
         <div class="info clearfix">
-            <cite class="author_name"><?php echo get_comment_author_link();?></cite>
+            <cite class="author_name"><?php echo get_comment_author_link(); ?></cite>
             <div class="content pb-2">
-                <?php comment_text();?>
+                <?php comment_text(); ?>
             </div>
             <div class="meta clearfix">
-                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
+                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {
+                                                                                                    echo '<span class="ml-2">';
+                                                                                                    edit_comment_link(__('编辑', 'kratos'));
+                                                                                                    echo '</span>';
+                                                                                                }; ?>
                 </div>
             </div>
         </div>
     </li>
-    <?php die();
+<?php die();
 }
 
 add_action('wp_ajax_nopriv_ajax_comment', 'comment_callback');
@@ -285,24 +293,30 @@ add_filter('comment_text', 'comment_display', '', 1);
 
 function comment_callbacks($comment, $args, $depth = 2)
 {
-    $GLOBALS['comment'] = $comment;?>
+    $GLOBALS['comment'] = $comment; ?>
     <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
         <div class="avatar float-left d-inline-block mr-2">
-            <?php if (function_exists('get_avatar') && get_option('show_avatars')) {echo get_avatar($comment, 50);}?>
+            <?php if (function_exists('get_avatar') && get_option('show_avatars')) {
+                echo get_avatar($comment, 50);
+            } ?>
         </div>
         <div class="info clearfix">
-            <cite class="author_name"><?php echo get_comment_author_link();?></cite>
+            <cite class="author_name"><?php echo get_comment_author_link(); ?></cite>
             <div class="content pb-2">
-                <?php comment_text();?>
+                <?php comment_text(); ?>
             </div>
             <div class="meta clearfix">
-                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {echo '<span class="ml-2">';edit_comment_link(__('编辑', 'kratos'));echo '</span>';};?>
+                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {
+                                                                                                    echo '<span class="ml-2">';
+                                                                                                    edit_comment_link(__('编辑', 'kratos'));
+                                                                                                    echo '</span>';
+                                                                                                }; ?>
                 </div>
                 <div class="tool reply ml-2 d-inline-block float-right">
-                <?php
+                    <?php
                     $defaults = array('add_below' => 'comment', 'respond_id' => 'respond', 'reply_text' => '<i class="kicon i-reply"></i><span class="ml-1">' . __('回复', 'kratos') . '</span>');
                     comment_reply_link(array_merge($defaults, array('depth' => $depth, 'max_depth' => $args['max_depth'])));
-                ?>
+                    ?>
                 </div>
             </div>
         </div>
@@ -370,7 +384,7 @@ function get_wpsmiliestrans()
     return $output;
 }
 
-if (!kratos_option('g_gutenberg',false)) {
+if (!kratos_option('g_gutenberg', false)) {
     // 禁用 Gutenberg 编辑器
     add_filter('use_block_editor_for_post', '__return_false');
     add_filter('gutenberg_use_widgets_block_editor', '__return_false');
@@ -389,93 +403,99 @@ if (!kratos_option('g_gutenberg',false)) {
 }
 
 // 文章评论增强
-function comment_add_at($comment_text, $comment = '') {  
-    if( $comment->comment_parent > 0) {  
-        $comment_text = '<span>@' . get_comment_author( $comment->comment_parent ) . '</span> ' . $comment_text;
-    }  
+function comment_add_at($comment_text, $comment = null)
+{
+    if ($comment->comment_parent > 0) {
+        $comment_text = '<span>@' . get_comment_author($comment->comment_parent) . '</span> ' . $comment_text;
+    }
 
-    return $comment_text;  
-}  
-add_filter('comment_text' , 'comment_add_at', 20, 2);
+    return $comment_text;
+}
+add_filter('comment_text', 'comment_add_at', 20, 2);
 
-function recover_comment_fields($comment_fields){
+function recover_comment_fields($comment_fields)
+{
     $comment = array_shift($comment_fields);
-    $comment_fields = array_merge($comment_fields ,array('comment' => $comment));
+    $comment_fields = array_merge($comment_fields, array('comment' => $comment));
     return $comment_fields;
 }
-add_filter('comment_form_fields','recover_comment_fields');
+add_filter('comment_form_fields', 'recover_comment_fields');
 
 $new_meta_boxes =
-array(
-  "description" => array(
-    "name" => "seo_description",
-    "std" => "",
-    "title" => __( '描述', 'kratos' )
-),
-  "keywords" => array(
-    "name" => "seo_keywords",
-    "std" => "",
-    "title" => __( '关键词', 'kratos' )
-)
-);
+    array(
+        "description" => array(
+            "name" => "seo_description",
+            "std" => "",
+            "title" => __('描述', 'kratos')
+        ),
+        "keywords" => array(
+            "name" => "seo_keywords",
+            "std" => "",
+            "title" => __('关键词', 'kratos')
+        )
+    );
 
-function seo_meta_boxes() {
+function seo_meta_boxes()
+{
     $post_types = get_post_types();
-    add_meta_box( 'meta-box-id', __( 'SEO 设置', 'kratos' ), 'post_seo_callback', $post_types );
+    add_meta_box('meta-box-id', __('SEO 设置', 'kratos'), 'post_seo_callback', $post_types);
 }
-add_action( 'add_meta_boxes', 'seo_meta_boxes' );
+add_action('add_meta_boxes', 'seo_meta_boxes');
 
-function post_seo_callback( $post ) {
+function post_seo_callback($post)
+{
     global $new_meta_boxes;
 
-    foreach($new_meta_boxes as $meta_box) {
-      $meta_box_value = get_post_meta($post->ID, $meta_box['name'].'_value', true);
-  
-      if($meta_box_value == "")
-        $meta_box_value = $meta_box['std'];
-  
-      echo '<h3 style="font-size: 14px; padding: 9px 0; margin: 0; line-height: 1.4;">'.$meta_box['title'].'</h3>';
-      echo '<textarea cols="60" rows="3" style="width:100%" name="'.$meta_box['name'].'_value">'.$meta_box_value.'</textarea><br/>';
+    foreach ($new_meta_boxes as $meta_box) {
+        $meta_box_value = get_post_meta($post->ID, $meta_box['name'] . '_value', true);
+
+        if ($meta_box_value == "")
+            $meta_box_value = $meta_box['std'];
+
+        echo '<h3 style="font-size: 14px; padding: 9px 0; margin: 0; line-height: 1.4;">' . $meta_box['title'] . '</h3>';
+        echo '<textarea cols="60" rows="3" style="width:100%" name="' . $meta_box['name'] . '_value">' . $meta_box_value . '</textarea><br/>';
     }
-    
-    echo '<input type="hidden" name="metaboxes_nonce" id="metaboxes_nonce" value="'.wp_create_nonce( plugin_basename(__FILE__) ).'" />';
+
+    echo '<input type="hidden" name="metaboxes_nonce" id="metaboxes_nonce" value="' . wp_create_nonce(plugin_basename(__FILE__)) . '" />';
 }
 
-function wpdocs_save_meta_box( $post_id ) {
+function wpdocs_save_meta_box($post_id)
+{
     global $new_meta_boxes;
-   
-    if ( !wp_verify_nonce( isset($_POST['metaboxes_nonce']) ? $_POST['metaboxes_nonce'] : null , plugin_basename(__FILE__) ))
-      return;
-     
-    if ( !current_user_can( 'edit_posts', $post_id ))
-      return;
-                 
-    foreach($new_meta_boxes as $meta_box) {
-      $data = $_POST[$meta_box['name'].'_value'];
-  
-      if($data == "")
-        delete_post_meta($post_id, $meta_box['name'].'_value', get_post_meta($post_id, $meta_box['name'].'_value', true));
-      else
-        update_post_meta($post_id, $meta_box['name'].'_value', $data);
-     }
+
+    if (!wp_verify_nonce(isset($_POST['metaboxes_nonce']) ? $_POST['metaboxes_nonce'] : null, plugin_basename(__FILE__)))
+        return;
+
+    if (!current_user_can('edit_posts', $post_id))
+        return;
+
+    foreach ($new_meta_boxes as $meta_box) {
+        $data = $_POST[$meta_box['name'] . '_value'];
+
+        if ($data == "")
+            delete_post_meta($post_id, $meta_box['name'] . '_value', get_post_meta($post_id, $meta_box['name'] . '_value', true));
+        else
+            update_post_meta($post_id, $meta_box['name'] . '_value', $data);
+    }
 }
-add_action( 'save_post', 'wpdocs_save_meta_box' );
+add_action('save_post', 'wpdocs_save_meta_box');
 
 // 主页轮播
-function kratos_carousel(){
+function kratos_carousel()
+{
     $output = '';
-    $carousel_img= null;
-    $carousel_url= null;
-    if(kratos_option('g_carousel', false)){
-        for($i=1; $i<6; $i++){
+    $carousel_img = null;
+    $carousel_url = null;
+    if (kratos_option('g_carousel', false)) {
+        for ($i = 1; $i < 6; $i++) {
             $carousel_img_[$i] = kratos_option("c_i_{$i}") ?: null;
             $carousel_url_[$i] = kratos_option("c_u_{$i}") ?: null;
-            if($carousel_img_[$i] ){
+            if ($carousel_img_[$i]) {
                 $carousel_img[] = $carousel_img_[$i];
                 $carousel_url[] = $carousel_url_[$i];
             }
         }
-        if(is_array($carousel_img)){
+        if (is_array($carousel_img)) {
             $count = count($carousel_img);
         } else {
             $count = '0';
@@ -483,21 +503,21 @@ function kratos_carousel(){
 
         $output = '<div class="carousel article-carousel slide" id="carouselControls" data-ride="carousel"><ol class="carousel-indicators">';
 
-        for($i=0; $i<$count; $i++){
-            $output .= '<li data-target="#carouselControls" data-slide-to="'.$i.'"';
-            if($i==0) $output .= 'class="active"';
+        for ($i = 0; $i < $count; $i++) {
+            $output .= '<li data-target="#carouselControls" data-slide-to="' . $i . '"';
+            if ($i == 0) $output .= 'class="active"';
             $output .= '></li>';
         };
-        $output .='</ol><div class="carousel-inner">';
+        $output .= '</ol><div class="carousel-inner">';
 
-        for($i=0;$i<$count;$i++){
+        for ($i = 0; $i < $count; $i++) {
             $output .= '<div class="carousel-item';
-            if($i==0) $output .= ' active';
+            if ($i == 0) $output .= ' active';
             $output .= '">';
-            if(!empty($carousel_url[$i])){
-                $output .= '<a href="'.$carousel_url[$i].'" target="_blank"><img src="'.$carousel_img[$i].'" class="d-block w-100"></a>';
-            }else{
-                $output .= '<img src="'.$carousel_img[$i].'" class="d-block w-100">';
+            if (!empty($carousel_url[$i])) {
+                $output .= '<a href="' . $carousel_url[$i] . '" target="_blank"><img src="' . $carousel_img[$i] . '" class="d-block w-100"></a>';
+            } else {
+                $output .= '<img src="' . $carousel_img[$i] . '" class="d-block w-100">';
             }
             $output .= "</div>";
         };
@@ -505,25 +525,31 @@ function kratos_carousel(){
         $output .= '</div><a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>';
         $output .= '<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a></div>';
     }
-    if(is_array($carousel_img)){
+    if (is_array($carousel_img)) {
         echo $output;
     }
 }
 
 // 获取文章评论数量
-function findSinglecomments($postid=0,$which=0){
-    $comments = get_comments('status=approve&type=comment&post_id='.$postid);
+function findSinglecomments($postid = 0, $which = 0)
+{
+    $comments = get_comments('status=approve&type=comment&post_id=' . $postid);
     if ($comments) {
-        $i=0; $j=0; $commentusers=array();
+        $i = 0;
+        $j = 0;
+        $commentusers = array();
         foreach ($comments as $comment) {
             ++$i;
-            if ($i==1) { $commentusers[] = $comment->comment_author_email; ++$j; }
-            if ( !in_array($comment->comment_author_email, $commentusers) ) {
+            if ($i == 1) {
+                $commentusers[] = $comment->comment_author_email;
+                ++$j;
+            }
+            if (!in_array($comment->comment_author_email, $commentusers)) {
                 $commentusers[] = $comment->comment_author_email;
                 ++$j;
             }
         }
-        $output = array($j,$i);
+        $output = array($j, $i);
         $which = ($which == 0) ? 0 : 1;
         return $output[$which];
     }
