@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-06-25 12:32:35+00:00\n"
-"PO-Revision-Date: 2021-08-19 11:30+0800\n"
+"PO-Revision-Date: 2021-08-19 12:18+0800\n"
 "Last-Translator: Seaton Jiang <seatonjiang@vtrois.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
