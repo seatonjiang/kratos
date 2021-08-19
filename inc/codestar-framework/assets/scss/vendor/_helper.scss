@@ -1,0 +1,152 @@
+/**
+ * 10. Helper
+ */
+.csf-subtitle-text{
+  margin-top: 6px;
+  font-weight: 400;
+  color: #999;
+}
+
+.csf-desc-text{
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 6px;
+  font-weight: 400;
+  color: #999;
+}
+
+.csf-error-text{
+  margin-top: 6px;
+  color: #d02c21;
+}
+
+.csf-before-text{
+  margin-bottom: 6px;
+}
+
+.csf-after-text{
+  margin-top: 6px;
+}
+
+.csf-metabox-hide{
+  display: none !important;
+}
+
+.csf-metabox-show{
+  display: block !important;
+}
+
+.csf-depend-hidden.csf-depend-on{
+  display: none;
+}
+
+.csf-depend-visible.csf-depend-on{
+  display: block;
+  opacity: 0.75;
+  filter: grayscale(1);
+  user-select: none;
+  border-top: 1px solid #eee;
+
+  .clear:before{
+    content: "";
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #eee;
+    opacity: 0.25;
+    z-index: 10;
+  }
+}
+
+.csf-warning-primary{
+  color: #fff !important;
+  border-color: #dc3545 !important;
+  background: #dc3545 !important;
+
+  &:hover,
+  &:focus{
+    border-color: #bd2130 !important;
+    background: #bd2130 !important;
+  }
+
+  &:focus{
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #bd2130 !important;
+  }
+
+  &:active{
+    border-color: #bd2130 !important;
+    background: #bd2130 !important;
+  }
+}
+
+.csf-form-result{
+  display: none;
+  float: left;
+  padding: 0 8px;
+  margin-right: 4px;
+  font-size: 11px;
+  line-height: 30px;
+  user-select: none;
+  border-radius: 2px;
+}
+
+.csf-form-show{
+  display: block;
+}
+
+.csf-form-success{
+  color: #fff;
+  background-color: #46b450;
+}
+
+.csf-form-warning{
+  color: #8a6d3b;
+  background-color: #faebcc;
+}
+
+.csf-label-error{
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px;
+  height: 10px;
+  width: 10px;
+  padding: 1px;
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #e10000;
+  border-radius: 2px;
+}
+
+.csf-no-option{
+  padding: 30px;
+}
+
+.csf-input-number{
+  -moz-appearance:textfield;
+}
+
+.csf-input-number::-webkit-inner-spin-button,
+.csf-input-number::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.csf-fa5-shims{
+
+  .csf{
+
+    .fas,
+    .far,
+    .fab{
+      font-family: "FontAwesome";
+      font-style: normal;
+    }
+  }
+}

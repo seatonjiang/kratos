@@ -1,0 +1,330 @@
+/**
+ * 09. Modal
+ */
+.csf-modal{
+  position: fixed;
+  z-index: 100101;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &.hidden{
+    display: none;
+  }
+}
+
+.csf-modal-icon{
+  z-index: 100102;
+}
+
+.csf-modal-table{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.csf-modal-table-cell{
+  display: table-cell;
+  vertical-align: middle;
+  margin: 100px 0;
+}
+
+.csf-modal-inner{
+  position: relative;
+  z-index: 10;
+  width: 760px;
+  height: 750px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.csf-modal-content{
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 595px;
+
+  .csf-shortcode-button{
+    display: none;
+  }
+
+  .csf-field{
+    padding: 15px 30px 15px 15px;
+  }
+
+  a{
+    &:active,
+    &:focus{
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  h4{
+    font-size: 13px;
+
+    small{
+      font-style: italic;
+      font-weight: 400;
+      color: #aaa;
+    }
+  }
+}
+
+.csf-modal-title{
+  position: relative;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #ddd;
+  height: 36px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0;
+  padding: 0 36px 0 16px;
+}
+
+.csf-modal-header{
+  width: 100%;
+  padding: 14px 0;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+
+  select{
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 1;
+    height: 30px;
+    min-height: 30px;
+    background-color: #fff;
+  }
+}
+
+.csf-modal-close{
+  color: #666;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:before{
+    font: normal 20px/36px dashicons;
+    content: "\f158";
+    vertical-align: top;
+    width: 36px;
+    height: 36px;
+  }
+
+  &:hover{
+    opacity: 0.5;
+  }
+}
+
+.csf-modal-insert-wrapper{
+  text-align: center;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+.csf-modal-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+/**
+ * 09. 01. Shortcode Modal
+ */
+.csf--repeatable{
+  padding: 15px 15px 0 15px;
+}
+
+.csf--repeat-button-block{
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.csf--repeat-shortcode{
+  position: relative;
+  margin-bottom: 15px;
+  border: 1px dashed #ddd;
+
+  &:first-child{
+
+    .csf-repeat-remove{
+      display: none;
+    }
+  }
+
+  .csf-repeat-remove{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #e14d43;
+    opacity: 0.5;
+
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+}
+
+.csf-shortcode-single{
+
+  .csf-modal-inner{
+    height: 750px;
+  }
+
+  .csf-modal-content{
+    height: 652px;
+  }
+}
+
+.elementor-editor-active{
+
+  .csf-shortcode-button{
+    margin-left: 5px;
+  }
+
+  .csf-modal .hidden{
+    display: none !important;
+  }
+}
+
+/**
+ * 09. 02. Gutenberg Modal
+ */
+.csf-shortcode-block{
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+  background-color: #f5f5f5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.csf-shortcode-block .components-button{
+  margin-bottom: 10px;
+}
+
+/**
+ * 09. 03. Icon Modal
+ */
+.csf-modal-icon{
+
+  .csf-icon-title{
+    padding: 15px 0;
+    margin: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #eee;
+    background-color: #f7f7f7;
+  }
+
+  .csf-modal-header{
+    text-align: center;
+  }
+
+  .csf-icon-search{
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  i{
+    cursor: pointer;
+    display: inline-block;
+    margin: 4px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    border-radius: 2px;
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.05);
+
+    &:hover {
+      color: #fff;
+      border-color: #222;
+      background-color: #222;
+    }
+  }
+
+  .csf-modal-content{
+    padding: 10px;
+    height: 618px;
+  }
+
+  .csf-error-text{
+    padding: 10px;
+  }
+}
+
+.csf-modal-loading{
+  display: none;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.csf-loading{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+
+  &:after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    content: "";
+    margin-top: -2px;
+    margin-left: -2px;
+    background-color: white;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: csfLoader;
+    border-radius: 4px;
+  }
+}
+
+@keyframes csfLoader {
+  0% {
+    transform: rotate(0deg) translateX(-6px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(-6px) rotate(-360deg);
+  }
+}

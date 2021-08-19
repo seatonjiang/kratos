@@ -1,0 +1,2317 @@
+/**
+ * 03. Fields
+ */
+.csf-field{
+  position: relative;
+  padding: 30px;
+
+  + .csf-field{
+    border-top: 1px solid #eee;
+  }
+
+  p:first-child{
+    margin-top: 0;
+  }
+
+  p:last-child{
+    margin-bottom: 0;
+  }
+
+  &:after,
+  &:before{
+    content: " ";
+    display: table;
+  }
+
+  &:after{
+    clear: both;
+  }
+
+  h4{
+    margin-top: 0;
+  }
+
+  .csf-title{
+    position: relative;
+    width: 20%;
+    float: left;
+
+    h4{
+      margin: 0;
+      color: #23282d;
+    }
+  }
+
+  .csf-fieldset{
+    float: right;
+    width: calc(80% - 20px);
+  }
+}
+
+.csf-pseudo-field{
+  padding: 0 5px 0 0 !important;
+  display: inline-block;
+
+  + .csf-pseudo-field{
+    border: 0;
+  }
+
+  pre{
+    display: none;
+  }
+}
+
+/**
+ * 03. 02. Field: accordion
+ */
+.csf-field-accordion{
+
+  .csf-accordion-item{
+    position: relative;
+    margin-bottom: 5px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    h4{
+      font-size: 1em;
+    }
+  }
+
+  .csf-accordion-title{
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    padding: 15px;
+    min-height: 0;
+    font-size: 100%;
+    user-select: none;
+    border: 1px solid #ccd0d4;
+    background-color: #fafafa;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    transition: border-color .15s;
+
+    &:active,
+    &:hover,
+    &:focus{
+      outline: none;
+      border-color: #999;
+    }
+
+    .csf--icon{
+      width: 20px;
+      text-align: center;
+      margin-right: 2px;
+    }
+  }
+
+  .csf-accordion-icon{
+    width: 16px;
+    text-align: center;
+  }
+
+  .csf-accordion-content{
+    display: none;
+    padding: 0;
+    border: 1px solid #ccd0d4;
+    border-top: none;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+
+    > .csf-field{
+      padding: 15px;
+    }
+  }
+
+  .csf-accordion-open{
+    display: block;
+  }
+}
+
+/**
+ * 03. 03. Field: background
+ */
+.csf-field-background{
+
+  .csf-field{
+    border: 0 !important;
+    padding: 0;
+    margin-bottom: 6px;
+    margin-right: 6px;
+  }
+
+  .csf--title{
+    color: #777;
+    font-size: 12px;
+  }
+
+  .csf--background-colors{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .csf--background-attributes{
+    display: flex;
+    flex-wrap: wrap;
+
+    select{
+      min-width: 100%;
+      margin: 0;
+    }
+
+    .csf-field{
+      flex: 1;
+    }
+  }
+
+  .csf--attributes-hidden{
+    display: none;
+  }
+}
+
+/**
+ * 03. 04. Field: backup
+ */
+.csf-field-backup{
+
+  textarea{
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 5px;
+  }
+
+  small{
+    display: inline-block;
+    margin: 5px;
+  }
+
+  hr{
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+/**
+ * 03. 05. Field: border, spacing, dimensions
+ */
+.csf-field-border,
+.csf-field-spacing,
+.csf-field-dimensions{
+
+  .csf--inputs{
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .csf--input{
+    display: flex;
+    padding-right: 6px;
+    padding-bottom: 4px;
+    box-sizing: border-box;
+
+    select{
+      margin: 0;
+    }
+
+    input{
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      width: 65px;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  .csf--color{
+    float: left;
+  }
+
+  .csf--label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    user-select: none;
+    min-width: 20px;
+    max-width: 100%;
+    padding: 0 4px;
+    font-size: 12px;
+    text-align: center;
+    color: #555;
+    border: 1px solid #7B776C;
+    background-color: #f5f5f5;
+  }
+
+  .csf--icon{
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .csf--icon + input{
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  .csf--unit{
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .csf--is-unit{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+}
+
+/**
+ * 03. 06. Field: button_set
+ */
+.csf-field-button_set{
+
+  .csf--buttons{
+    display: inline-block;
+  }
+
+  .csf--button{
+    position: relative;
+    z-index: 1;
+    float: left;
+    cursor: pointer;
+    padding: 7px 14px;
+    min-width: 16px;
+    text-align: center;
+    color: #555;
+    border: 1px solid #cccccc;
+    background-color: #f7f7f7;
+    user-select: none;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+
+    &:first-child{
+      border-radius: 4px 0 0 4px;
+    }
+
+    &:last-child{
+      border-radius: 0 4px 4px 0;
+    }
+
+    &:not(:first-child){
+      margin-left: -1px;
+    }
+
+    &:hover{
+      background-color: #eee;
+    }
+  }
+
+  .csf--active:hover,
+  .csf--active{
+    z-index: 2;
+    color: #fff;
+    border-color: #006799;
+    background-color: #0085ba;
+  }
+
+  input{
+    display: none;
+  }
+}
+
+/**
+ * 03. 07. Field: checkbox, radio
+ */
+.csf-field-checkbox,
+.csf-field-radio{
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow-y: auto;
+    max-height: 305px;
+
+    li{
+      margin-bottom: 6px;
+    }
+
+    ul{
+      max-height: none;
+
+      li{
+        margin-left: 8px;
+
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  input{
+    margin: 0 1px;
+  }
+
+  .csf--inline-list li{
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .csf--text{
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+
+  .csf-checker{
+    cursor: pointer;
+  }
+}
+
+/**
+ * 03. 08. Field: code_editor
+ */
+.csf-field-code_editor{
+
+  .CodeMirror{
+    width: 100%;
+    height: 400px;
+  }
+
+  .cm-s-default{
+    border: 1px solid #ccd0d4;
+  }
+
+  textarea{
+    width: 100%;
+    height: 400px;
+  }
+}
+
+/**
+ * 03. 09. Field: color
+ */
+.csf-field-color{
+
+  > input{
+    opacity: 0.75;
+    width: 115px;
+    max-width: 100%;
+  }
+
+  .button.wp-picker-clear{
+    padding: 0 8px;
+    margin-left: 6px;
+    line-height: 2.54545455;
+    min-height: 30px;
+  }
+}
+
+/**
+ * 03. 10. Field: color_group
+ */
+.csf-field-color_group{
+
+  .csf--left{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+  .csf--title{
+    color: #999;
+    margin-bottom: 5px;
+  }
+}
+
+/**
+ * 03. 11. Field: fieldset
+ */
+.csf-field-fieldset{
+
+  .csf-fieldset-content{
+    border: 1px solid #ccd0d4;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+
+    > .csf-field{
+      padding: 15px;
+    }
+  }
+
+  .csf-field-subheading{
+    font-size: 13px;
+  }
+}
+
+/**
+ * 03. 12. Field: date
+ */
+.csf-field-date{
+
+  input{
+    margin: 0;
+  }
+
+  .csf--to{
+    margin-left: 7px;
+  }
+}
+
+.csf-datepicker-wrapper{
+  margin-top: 5px;
+  width: auto;
+  background-color: #fff;
+  z-index: 9999999 !important;
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);
+
+  *{
+    float: none;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .ui-widget-header,
+  .ui-datepicker-header{
+    color: #fff;
+    background: #00a0d2;
+  }
+
+  .ui-datepicker-header .ui-state-hover{
+    cursor: pointer;
+  }
+
+  .ui-datepicker-title{
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next{
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "FontAwesome";
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    width: 41px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background-color: rgba(white, 0.1);
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .ui-datepicker-next span,
+  .ui-datepicker-prev span{
+    display: none;
+  }
+
+  .ui-datepicker-prev{
+    float: left;
+  }
+
+  .ui-datepicker-next{
+    float: right;
+  }
+
+  .ui-datepicker-prev:before{
+    content: '\f053';
+  }
+
+  .ui-datepicker-next:before{
+    content: '\f054';
+  }
+
+  .ui-datepicker-prev-hover,
+  .ui-datepicker-next-hover{
+    opacity: 0.75;
+  }
+
+  tbody .ui-datepicker-week-col{
+    background-color: #f7f7f7;
+  }
+
+  .ui-datepicker-buttonpane{
+    padding: 10px;
+    text-align: center;
+    background-color: #f7f7f7;
+  }
+
+  .ui-datepicker-buttonpane button{
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 7px 14px;
+    border: 1px solid #eee;
+    background-color: #fff;
+  }
+
+  select{
+    margin: 0 4px;
+  }
+
+  select option{
+    color: #555;
+  }
+
+  table{
+    font-size: 13px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  thead{
+    color: #fff;
+    background: #32373c;
+  }
+
+  th{
+    text-align: center;
+    padding: 7px;
+    border: 1px solid #444;
+  }
+
+  td{
+    text-align: center;
+    border: 1px solid #f4f4f4;
+  }
+
+  td.ui-datepicker-other-month{
+    border: transparent;
+  }
+
+  td .ui-state-default{
+    color: #555;
+    width: auto;
+    display: block;
+    padding: 6px 12px;
+  }
+
+  td .ui-state-active,
+  td .ui-state-hover{
+    color: #fff;
+    background-color: #0073aa;
+  }
+
+  td.ui-state-disabled .ui-state-default{
+    opacity: 0.5;
+  }
+}
+
+/**
+ * 03. 13. Field: gallery
+ */
+.csf-field-gallery{
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li{
+      display: inline-block;
+      position: relative;
+      padding: 4px;
+      margin: 0 5px 10px 0;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      border-radius: 2px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+
+      img{
+        max-height: 60px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .button{
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+/**
+ * 03. 14. Field: group
+ */
+.csf-field-group{
+
+  .csf-cloneable-hidden{
+    display: none !important;
+  }
+
+  .csf-cloneable-wrapper{
+    position: relative;
+  }
+
+  .csf-cloneable-item{
+    display: none;
+    position: relative;
+    margin-bottom: 5px;
+
+    h4{
+      font-size: 1em;
+    }
+  }
+
+  .ui-accordion .csf-cloneable-item{
+    display: block;
+  }
+
+  .csf-cloneable-content{
+    border: 1px solid #ccd0d4;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+
+    > .csf-field{
+      padding: 15px;
+    }
+  }
+
+  .csf-cloneable-title{
+    display: block;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    margin: 0;
+    padding: 15px 65px 15px 10px;
+    min-height: 0;
+    font-size: 100%;
+    border: 1px solid #ccd0d4;
+    background-color: #fafafa;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    transition: border-color .15s;
+
+    &:active,
+    &:hover,
+    &:focus{
+      border-color: #999;
+      outline: none;
+    }
+  }
+
+  .csf-cloneable-helper{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    z-index: 1;
+    font-size: 14px;
+    line-height: 1em;
+
+    i{
+      display: inline-block;
+      cursor: pointer;
+      padding: 5px;
+      color: #999;
+
+      &:hover{
+        color: #555;
+      }
+    }
+  }
+
+  .csf-cloneable-content{
+    padding: 0;
+    border-top: 0;
+  }
+
+  .csf-cloneable-title-prefix,
+  .csf-cloneable-title-number{
+    margin-right: 5px;
+  }
+
+  .csf-cloneable-alert{
+    display: none;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+    background-color: #f2dede;
+  }
+
+  .widget-placeholder{
+    margin-bottom: 10px;
+    border: 1px dashed #f1c40f;
+    background-color: #fffae4;
+  }
+
+  .csf-cloneable-header-icon{
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    width: 17px;
+    text-indent: 0;
+    vertical-align: text-top;
+  }
+
+  .csf-cloneable-placeholder{
+    background-color: #ddd;
+    margin-top: 4px;
+    width: 100px;
+    height: 10px;
+    font-size: 10px;
+    line-height: 10px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 2px;
+  }
+}
+
+/**
+ * 03. 15. Field: icon
+ */
+.csf-field-icon{
+
+  .button{
+    margin-right: 5px;
+  }
+
+  .csf-icon-select{
+    display: flex;
+  }
+
+  .csf-icon-preview:not(.hidden){
+    display: flex;
+  }
+
+  .csf-icon-preview{
+
+    i{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      font-size: 14px;
+      margin-right: 5px;
+      text-align: center;
+      vertical-align: top;
+      color: #555;
+      border: 1px solid #ccc;
+      background-color: #f7f7f7;
+      border-radius: 3px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+    }
+  }
+}
+
+/**
+ * 03. 16. Field: image_select
+ */
+.csf-field-image_select{
+
+  .csf--image{
+    display: inline-block;
+    margin: 0 5px 5px 0;
+  }
+
+  .csf--inline-list .csf--image{
+    display: block;
+  }
+
+  figure{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    margin: 0;
+    vertical-align: bottom;
+    border: 2px solid transparent;
+    background-color: #fff;
+    user-select: none;
+    transition: all .2s;
+
+    &:before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      font-size: 10px;
+      font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "FontAwesome";
+      font-weight: 900;
+      content: "\f00c";
+      width: 16px;
+      height: 16px;
+      line-height: 14px;
+      opacity: 0;
+      color: #fff;
+      background-color: #222;
+      transition: opacity .2s;
+    }
+  }
+
+  .csf--active figure{
+    border-color: #222;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+    &:before{
+      opacity: 1;
+    }
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+
+  input{
+    display: none;
+  }
+}
+
+/**
+ * 03. 17. Field: link_color
+ */
+.csf-field-link_color{
+
+  .csf--left{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+  .csf--title{
+    color: #777;
+    margin-bottom: 5px;
+  }
+}
+
+/**
+ * 03. 18. Field: map
+ */
+.csf-field-map{
+
+  input{
+    width: 100%;
+  }
+
+  input[type="text"].ui-autocomplete-loading{
+    background-position-x: calc(100% - 5px);
+  }
+
+  .csf--map-search + .csf--map-osm-wrap{
+    margin-top: 10px;
+  }
+
+  .csf--map-osm-wrap{
+    position: relative;
+    padding: 5px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  }
+
+  .csf--map-osm{
+    position: relative;
+    z-index: 1;
+    min-height: 250px;
+  }
+
+  .csf--map-inputs{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .csf--map-input{
+    flex: 1;
+
+    &:last-child{
+      padding-left: 10px;
+    }
+  }
+
+  label{
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin: 0 0 2px 0;
+  }
+}
+
+.csf-map-ui-autocomplate{
+  z-index: 999999;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+
+/**
+ * 03. 19. Field: media
+ */
+.csf-field-media{
+
+  .csf--placeholder{
+    display: flex;
+    align-items: flex-start;
+
+    input{
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .button{
+    margin-left: 5px;
+  }
+
+  .hidden + .button{
+    margin-left: 0;
+  }
+
+  .csf--preview{
+    position: relative;
+  }
+}
+
+/**
+ * 03. 20. Field: palette
+ */
+.csf-field-palette{
+
+  .csf--palette{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: all .2s;
+
+    span{
+      vertical-align: middle;
+      display: inline-block;
+      width: 22px;
+      height: 60px;
+      line-height: 60px;
+      overflow: hidden;
+      text-indent: -999px;
+    }
+
+    &:before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      font-size: 10px;
+      font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "FontAwesome";
+      font-weight: 900;
+      content: "\f00c";
+      width: 16px;
+      height: 16px;
+      line-height: 14px;
+      opacity: 0;
+      color: #fff;
+      background-color: #222;
+      transition: opacity .2s;
+    }
+  }
+
+  .csf--active{
+    border-color: #222;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+    &:before{
+      opacity: 1;
+    }
+  }
+
+  input{
+    display: none;
+  }
+}
+
+/**
+ * 03. 21. Field: repeater
+ */
+.csf-field-repeater{
+
+  .csf-field-text input{
+    width: 100%;
+  }
+
+  .csf-repeater-hidden{
+    display: none !important;
+  }
+
+  .csf-repeater-wrapper{
+
+    .csf-repeater-item{
+      display: table;
+      width: 100%;
+      margin-bottom: 5px;
+      border: 1px solid #eee;
+
+      h4{
+        font-size: 1em;
+      }
+    }
+  }
+
+  .csf-repeater-content{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #fff;
+
+    > .csf-field{
+      padding: 15px;
+    }
+  }
+
+  .csf-repeater-helper{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1em;
+    border-left: 1px solid #eee;
+    background-color: #f7f7f7;
+
+    i{
+      display: inline-block;
+      cursor: pointer;
+      color: #999;
+      padding: 5px;
+
+      &:hover{
+        color: #555;
+      }
+    }
+  }
+
+  .csf-repeater-helper-inner{
+    width: 75px;
+  }
+
+  .csf-repeater-alert{
+    display: none;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+    background-color: #f2dede;
+  }
+
+  .widget-placeholder{
+    height: 50px;
+    margin-bottom: 3px;
+    border: 1px dashed #f1c40f;
+    background-color: #fffae4;
+  }
+
+  .ui-sortable-helper{
+    height: 50px !important;
+    overflow: hidden !important;
+    border-color: #ccc !important;
+    background-color: #eee !important;
+    opacity: 0.5;
+
+    .csf-repeater-helper,
+    .csf-repeater-content{
+      display: none;
+    }
+  }
+}
+
+/**
+ * 03. 22. Field: select
+ */
+.csf-field-select{
+
+  .csf-fieldset{
+    min-height: 30px;
+  }
+
+  .csf-chosen{
+    display: none;
+  }
+
+  select{
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .csf-hide-select{
+    display: none !important;
+  }
+}
+
+/**
+ * 03. 23. Field: slider
+ */
+.csf-field-slider{
+
+  .csf--wrap{
+    display: flex;
+    align-items: center;
+  }
+
+  .csf--input{
+    display: flex;
+  }
+
+  .csf--unit{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    user-select: none;
+    padding: 0 6px;
+    font-size: 11px;
+    line-height: 1;
+    border-radius: 0 4px 4px 0;
+    color: #555;
+    border: 1px solid #7e8993;
+    border-left: 0;
+    background-color: #f5f5f5;
+  }
+
+  .csf-slider-ui{
+    margin-right: 15px;
+  }
+
+  input[type=number]{
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    width: 50px;
+    text-align: center;
+  }
+
+  .csf--is-unit{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .ui-slider{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    border: none;
+    background: #ddd;
+    border-radius: 2px;
+  }
+
+  .ui-slider-range{
+    height: 3px;
+    border: none;
+    background: #333;
+    border-radius: 2px;
+  }
+
+  .ui-slider-handle{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -7px;
+    margin-left: -8px;
+    border: none;
+    background: #333;
+    border-radius: 2px;
+  }
+
+  .ui-state-active,
+  .ui-slider-handle:hover{
+    cursor: pointer;
+    background: #111;
+  }
+}
+
+/**
+ * 03. 24. Field: sortable
+ */
+.csf-field-sortable{
+
+  .csf-field-text{
+
+    input{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .csf-sortable{
+
+    .csf-sortable-item{
+      display: table;
+      width: 100%;
+      margin-bottom: 5px;
+      border: 1px solid #eee;
+
+      h4{
+        font-size: 1em;
+      }
+    }
+  }
+
+  .csf-sortable-content{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #fff;
+
+    > .csf-field{
+      padding: 15px;
+    }
+  }
+
+  .csf-sortable-helper{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1em;
+    border-left: 1px solid #eee;
+    background-color: #f7f7f7;
+
+    i{
+      display: inline-block;
+      cursor: pointer;
+      width: 50px;
+      color: #555;
+
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .widget-placeholder{
+    height: 50px;
+    margin-bottom: 3px;
+    border: 1px dashed #f1c40f;
+    background-color: #fffae4;
+  }
+
+  .ui-sortable-helper{
+    height: 50px !important;
+    overflow: hidden !important;
+    border-color: #ccc !important;
+    background-color: #eee !important;
+    opacity: 0.5;
+
+    .csf-sortable-helper,
+    .csf-sortable-content{
+      display: none;
+    }
+  }
+}
+
+/**
+ * 03. 25. Field: sorter
+ */
+.csf-field-sorter{
+
+  .ui-sortable-placeholder{
+    height: 20px;
+    border: 1px dashed #f1c40f;
+    background-color: #fffae4;
+  }
+
+  .csf-modules{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+
+    &:first-child{
+      padding-right: 15px;
+    }
+
+    &:last-child{
+      padding-left: 15px;
+    }
+  }
+
+  .csf-disabled,
+  .csf-enabled{
+    padding: 5px 15px;
+    border: 1px dashed #ddd;
+    background-color: #fff;
+  }
+
+  .csf-disabled{
+    li{
+      opacity: 0.5;
+      transition: opacity .15s;
+    }
+
+    .ui-sortable-helper{
+      opacity: 1;
+    }
+  }
+
+  .csf-sorter-title{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+    border: 1px dashed #ddd;
+    border-bottom: none;
+    background-color: #f8f8f8;
+    text-transform: uppercase;
+  }
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    min-height: 62px;
+
+    li{
+      margin: 10px 0;
+      padding: 10px 15px;
+      cursor: move;
+      font-weight: bold;
+      text-align: center;
+      border: 1px solid #e5e5e5;
+      background-color: #fafafa;
+      transition: border-color .15s;
+
+      &:hover{
+        border-color: #bbb;
+      }
+    }
+  }
+}
+
+/**
+ * 03. 26. Field: spinner
+ */
+.csf-field-spinner{
+
+  .csf--spin{
+    display: flex;
+  }
+
+  .ui-spinner{
+    display: flex;
+  }
+
+  .ui-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-width: 20px;
+    padding: 0 4px;
+    color: #555;
+    border: 1px solid #7e8993;
+    background-color: #f5f5f5;
+  }
+
+  .ui-spinner-button{
+    cursor: pointer;
+
+    &:hover{
+      background-color: #e7e7e7;
+    }
+
+    &:active{
+      background-color: #ddd;
+    }
+
+    &:before{
+      font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "FontAwesome";
+      font-weight: 900;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  .ui-spinner-down{
+    order: 1;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+
+    &:before{
+      content: "\f0d9";
+    }
+  }
+
+  .ui-spinner-input{
+    order: 2;
+  }
+
+  .csf--unit{
+    order: 3;
+    border-left: 0;
+    user-select: none;
+  }
+
+  .ui-spinner-up{
+    order: 4;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+
+    &:before{
+      content: "\f0da";
+    }
+  }
+
+  input{
+    position: relative;
+    z-index: 1;
+    width: 50px;
+    text-align: center;
+    margin: 0;
+    padding: 0 8px;
+    border-radius: 0;
+  }
+
+  .ui-button-text,
+  .ui-button-icon,
+  .ui-button-icon-space{
+    display: none;
+  }
+}
+
+/**
+ * 03. 27. Field: switcher
+ */
+.csf-field-switcher{
+
+  .csf--switcher{
+    float: left;
+    cursor: pointer;
+    position: relative;
+    width: 60px;
+    height: 26px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #ed6f6f;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .csf--ball{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all .1s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+  }
+
+  .csf--on,
+  .csf--off{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 11px;
+    line-height: 26px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding-right: 28px;
+    opacity: 0;
+    transition: all .1s;
+  }
+
+  .csf--off{
+    padding-right: 0;
+    padding-left: 28px;
+    opacity: 1;
+  }
+
+  .csf--active{
+    background: #4fb845;
+
+    .csf--on{
+      opacity: 1;
+    }
+
+    .csf--off{
+      opacity: 0;
+    }
+
+    .csf--ball{
+      left: 100%;
+      margin-left: -28px;
+    }
+  }
+
+  .csf--label{
+    float: left;
+    margin-top: 4px;
+    margin-left: 8px;
+    font-weight: 400;
+    color: #999;
+  }
+}
+
+/**
+ * 03. 28. Field: tabbed
+ */
+.csf-field-tabbed{
+
+  .csf-tabbed-content{
+    border: 1px solid #ccd0d4;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+
+    > .csf-field{
+      padding: 15px;
+    }
+  }
+
+  .csf-tabbed-nav{
+
+    .csf--icon{
+      padding-right: 5px;
+    }
+
+    a{
+      display: inline-block;
+      padding: 12px 15px;
+      margin-top: 1px;
+      margin-right: 5px;
+      margin-bottom: -1px;
+      position: relative;
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+      border: 1px solid #ccd0d4;
+      background-color: #f3f3f3;
+      transition: all .2s;
+
+      &:hover{
+        background-color: #f9f9f9;
+      }
+
+      &.csf-tabbed-active{
+        background-color: #fff;
+        border-bottom-color: #fff;
+      }
+
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+/**
+ * 03. 29. Field: text
+ */
+.csf-field-text{
+
+  input{
+    width: 50%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+/**
+ * 03. 30. Field: textarea
+ */
+.csf-field-textarea{
+
+  textarea{
+    width: 100%;
+    max-width: 100%;
+    min-height: 125px;
+  }
+
+  .csf-shortcode-button{
+    margin-bottom: 10px;
+    margin-right: 5px;
+  }
+}
+
+/**
+ * 03. 31. Field: typography
+ */
+.csf-field-typography{
+
+  textarea,
+  select{
+    margin: 0;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .csf--title{
+    color: #777;
+    margin: 0 0 2px 0;
+    font-size: 12px;
+
+    small{
+      vertical-align: top;
+    }
+  }
+
+  .csf--blocks{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .csf--block{
+    flex: 1;
+    max-width: 100%;
+    padding-right: 6px;
+    padding-bottom: 6px;
+  }
+
+  .csf--input{
+    margin: 0;
+    min-width: 100%;
+  }
+
+  .csf--input-wrap{
+    position: relative;
+  }
+
+  .csf--unit{
+    position: absolute;
+    z-index: 1;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    padding: 2px 6px;
+    color: #666;
+    font-size: 11px;
+    line-height: 1;
+    border-radius: 2px;
+    background: #eee;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .csf--preview{
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px;
+    color: #222;
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 2.5px;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: background-color .2s, border-color .2s;
+  }
+
+  .csf--block-preview{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  .csf--black-background{
+    border-color: #000;
+    background-color: #000;
+  }
+
+  .csf--toggle{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #999;
+  }
+
+  .csf--block-extra-styles{
+    margin-top: 5px;
+  }
+}
+
+/**
+ * 03. 32. Field: upload
+ */
+.csf-field-upload{
+
+  input{
+    width: 100%;
+    margin: 0;
+  }
+
+  .csf--wrap{
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .button{
+    margin-left: 5px;
+  }
+
+  .csf--preview{
+    position: relative;
+  }
+}
+
+/**
+ * 03. 33. Field: wp_editor
+ */
+.csf-field-wp_editor{
+
+  .csf-wp-editor{
+    float: left;
+    width: 100%;
+  }
+
+  .mce-toolbar-grp{
+    border: none;
+  }
+
+  .mce-btn.mce-active button,
+  .mce-btn.mce-active:hover button,
+  .mce-btn.mce-active i,
+  .mce-btn.mce-active:hover i{
+    color: #23282d;
+  }
+
+  .wp-media-buttons{
+    position: relative;
+    z-index: 2;
+  }
+
+
+  .wp-editor-tabs{
+    position: relative;
+    z-index: 1;
+  }
+
+  .csf-no-tinymce{
+    border: 1px solid #e5e5e5;
+  }
+
+  .csf-no-quicktags{
+
+    .wp-media-buttons{
+      float: none;
+      display: block;
+    }
+
+    .mce-tinymce{
+      box-shadow: none;
+      border: 1px solid #e5e5e5;
+    }
+  }
+
+  textarea{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+/**
+ * 03. 34. Field: heading
+ */
+.csf-field-heading{
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #23282d;
+  background-color: #f5f5f5;
+}
+
+/**
+ * 03. 35. Field: subheading
+ */
+.csf-field-subheading{
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  color: #23282d;
+  background-color: #f7f7f7;
+}
+
+/**
+ * 03. 36. Field: submessage
+ */
+.csf-field-submessage{
+  padding: 0 !important;
+  border: 0 !important;
+
+  + .csf-field{
+    border-top: 0 !important;
+  }
+}
+
+.csf-submessage{
+  font-size: 12px;
+  padding: 17px 30px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.csf-submessage-success{
+  color: #3c763d;
+  border-color: #d6e9c6;
+  background-color: #dff0d8;
+}
+
+.csf-submessage-info{
+  color: #31708f;
+  border-color: #bce8f1;
+  background-color: #d9edf7;
+}
+
+.csf-submessage-warning{
+  color: #8a6d3b;
+  border-color: #faebcc;
+  background-color: #fcf8e3;
+}
+
+.csf-submessage-danger{
+  color: #a94442;
+  border-color: #ebccd1;
+  background-color: #f2dede;
+}
+
+.csf-submessage-normal{
+  color: #23282d;
+  border-color: #eee;
+  background-color: #f7f7f7;
+}
+
+/**
+ * 03. 37. Field: notice
+ */
+.csf-field-notice{
+  background-color: #f7f7f7;
+}
+
+.csf-notice{
+  padding: 12px;
+  background-color: #fff;
+  border-left-style: solid;
+  border-left-width: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.csf-notice-success{
+  border-color: #46b450;
+}
+
+.csf-notice-info{
+  border-color: #339fd4;
+}
+
+.csf-notice-warning{
+  border-color: #ffbc00;
+}
+
+.csf-notice-danger{
+  border-color: #dc3232;
+}
+
+.csf-notice-normal{
+  border-color: #222;
+}
+
+/**
+ * 03. 38. Field: number
+ */
+.csf-field-number{
+
+  input{
+    width: 100%;
+    margin: 0;
+  }
+
+  .csf--wrap{
+    position: relative;
+    float: left;
+    width: 100px;
+  }
+
+  .csf--unit{
+    position: absolute;
+    z-index: 1;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    padding: 2px 6px;
+    color: #666;
+    font-size: 11px;
+    line-height: 1;
+    border-radius: 2px;
+    background: #eee;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+/**
+ * 03. 39. Field: link
+ */
+.csf-field-link{
+
+  .csf--result{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 7px 10px;
+    margin-bottom: 7px;
+    color: #777;
+    border: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    world-break: break-word;
+  }
+
+  .csf--wrap{
+    position: relative;
+    float: left;
+    width: 100px;
+  }
+
+  .csf--unit{
+    position: absolute;
+    z-index: 1;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    padding: 2px 6px;
+    color: #666;
+    font-size: 11px;
+    line-height: 1;
+    border-radius: 2px;
+    background: #eee;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+/**
+ * 03. 40. others
+ */
+.csf-help{
+  cursor: help;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 13px;
+  color: #aaa;
+
+  .csf-help-text{
+    display: none;
+  }
+}
+
+.csf--preview{
+  max-width: 100%;
+}
+
+.csf-image-preview{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 6px;
+  max-width: 120px;
+  max-height: 120px;
+  min-width: 40px;
+  min-height: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+
+  i{
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    right: 4px;
+    top: 4px;
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #dd3333;
+    opacity: 0.75;
+    border-radius: 2px;
+    transition: all .2s;
+
+    &:hover{
+      opacity: 1;
+    }
+
+    &:focus{
+      box-shadow: none;
+    }
+  }
+
+  span{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.csf-field-custom{
+
+  .csf-field{
+    padding: 0;
+  }
+}
+
+.csf-field{
+
+  .chosen-container-single .chosen-single{
+    height: 28px;
+    line-height: 26px;
+  }
+
+  .chosen-container-single .chosen-single abbr{
+    top: 0;
+    right: 20px;
+    font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "FontAwesome";
+    font-weight: 900;
+    font-size: 12px;
+    height: 100%;
+    width: 18px;
+    color: #aaa;
+    text-align: center;
+    background: none;
+
+    &:before{
+      content: "\f00d";
+    }
+
+    &:hover{
+      color: #555;
+    }
+  }
+
+  .chosen-container-multi .chosen-choices li.search-choice .search-choice-close{
+    font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "FontAwesome";
+    font-weight: 900;
+    font-size: 12px;
+    height: 100%;
+    width: 18px;
+    color: #aaa;
+    text-align: center;
+    background: none;
+
+    &:before{
+      content: "\f00d";
+      display: inline-block;
+      padding-top: 3px;
+    }
+
+    &:hover{
+      color: #555;
+    }
+  }
+
+  .chosen-container-single .chosen-single div b{
+    font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "FontAwesome";
+    font-weight: 900;
+    font-size: 14px;
+    color: #aaa;
+    background: none;
+
+    &:before{
+      content: "\f107";
+    }
+
+    &:hover{
+      color: #555;
+    }
+  }
+
+  .chosen-container-multi .chosen-choices li.search-choice-placeholder {
+    border: 1px dashed #aaa;
+    margin: 3px 5px 3px 0;
+  }
+
+  .chosen-container-multi .ui-sortable li.search-choice span {
+    cursor: move;
+  }
+
+  .chosen-container-active.chosen-with-drop .chosen-single div b{
+
+    &:before{
+      content: "\f106";
+    }
+  }
+
+  .chosen-container-single .chosen-single-with-deselect span{
+    margin-right: 40px;
+  }
+
+  .chosen-container-single .chosen-search input[type="text"]{
+    background: none;
+  }
+
+  .chosen-container-single .chosen-search{
+
+    &:before{
+      font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "FontAwesome";
+      font-weight: 900;
+      font-size: 11px;
+      content: "\f002";
+      position: absolute;
+      right: 12px;
+      top: 10px;
+      color: #aaa;
+    }
+  }
+
+  .wp-picker-container{
+    display: inline-block;
+
+    .wp-color-result.button{
+      margin-bottom: 0;
+    }
+  }
+
+  .csf--transparent-wrap{
+    display: none;
+    position: relative;
+    top: -1px;
+    width: 235px;
+    padding: 9px 10px;
+    border: 1px solid #dfdfdf;
+    border-top: none;
+    background-color: #fff;
+  }
+
+  .wp-picker-active .csf--transparent-wrap{
+    display: block;
+  }
+
+  .csf--transparent-slider{
+    position: absolute;
+    width: 190px;
+    margin-left: 2px;
+    height: 18px;
+
+    .ui-slider-handle{
+      position: absolute;
+      top: -3px;
+      bottom: -3px;
+      z-index: 5;
+      border-color: #aaa;
+      border-style: solid;
+      border-width: 4px 3px;
+      width: 10px;
+      height: 16px;
+      margin: 0 -5px;
+      background: none;
+      cursor: ew-resize;
+      opacity: 0.9;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+      &:before{
+        content: " ";
+        position: absolute;
+        left: -2px;
+        right: -2px;
+        top: -3px;
+        bottom: -3px;
+        border: 2px solid #fff;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .csf--transparent-offset{
+    height: 18px;
+    width: 200px;
+    background: url(../images/checkerboard.png) repeat-y center left scroll #fff;
+    border-radius: 2px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.4);
+  }
+
+  .csf--transparent-text{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 30px;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #999;
+  }
+
+  .csf--transparent-button{
+    cursor: pointer;
+    user-select: none;
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 2px;
+    padding: 3px 7px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.2px;
+    color: #777;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    transition: background-color .2s, border-color .2s, color .2s;
+  }
+
+  .csf--transparent-active{
+
+    .wp-color-result{
+      background-image: url(../images/checkerboard.png);
+      background-size: 135px;
+      background-position: center left;
+      background-color: transparent !important;
+    }
+
+    .csf--transparent-button{
+      color: #fff;
+      border-color: #3ea032;
+      background-color: #4fb845;
+    }
+
+    .fa:before{
+      content: "\f205";
+    }
+  }
+}
