@@ -1,15 +1,16 @@
 <?php
+
 /**
  * 模板函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.06.25
+ * @version 2021.08.19
  */
 
 define('THEME_VERSION', '3.3.4');
 
 // 主题配置
-require get_template_directory() . '/inc/options-framework/autoload.php';
+require get_template_directory() . '/inc/codestar-framework/autoload.php';
 
 // 更新配置
 require get_template_directory() . '/inc/update-checker/autoload.php';

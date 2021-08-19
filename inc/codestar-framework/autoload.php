@@ -20,3 +20,4 @@
  *
  */
 require_once plugin_dir_path(__FILE__) . 'classes/setup.class.php';
+require get_template_directory() . '/inc/theme-options.php';
