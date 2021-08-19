@@ -3,8 +3,8 @@
 /**
  * 模板函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
- * @license MIT License
- * @version 2021.08.19
+ * @license GPL-3.0 License
+ * @version 2021.08.20
  */
 
 define('THEME_VERSION', '3.3.4');

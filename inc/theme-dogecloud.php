@@ -3,8 +3,8 @@
 /**
  * dogecloud 对象存储
  * @author Seaton Jiang <seatonjiang@vtrois.com>
- * @license MIT License
- * @version 2021.08.19
+ * @license GPL-3.0 License
+ * @version 2021.08.20
  */
 
 if (kratos_option('g_cos', false)) {
