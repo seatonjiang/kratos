@@ -1145,7 +1145,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => __('主题源码使用 <a href="https://github.com/vtrois/kratos/blob/main/LICENSE" target="_blank">MIT 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos'),
+            'content' => __('主题源码使用 <a href="https://github.com/vtrois/kratos/blob/main/LICENSE" target="_blank">GPL 3.0 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos'),
         ),
         array(
             'type' => 'subheading',

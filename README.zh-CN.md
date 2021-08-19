@@ -34,7 +34,6 @@ Kratos 是一款专注于用户阅读体验的响应式 WordPress 主题，整�
 <img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.3.4/assets/img/options/discuss.png">
 </p>
 
-
 ## 打赏捐赠
 
 <p align="center">
@@ -43,4 +42,4 @@ Kratos 是一款专注于用户阅读体验的响应式 WordPress 主题，整�
 
 ## 版权说明
 
-该仓库代码文件使用 [MIT](https://github.com/vtrois/kratos/blob/main/LICENSE) 协议进行授权，文档文件使用 [署名-非商业性使用-禁止演绎 4.0 国际](http://creativecommons.org/licenses/by-nc-nd/4.0/) 协议进行授权。
+该仓库代码文件使用 [GPL 3.0](https://github.com/vtrois/kratos/blob/main/LICENSE) 协议进行授权，文档文件使用 [署名-非商业性使用-禁止演绎 4.0 国际](http://creativecommons.org/licenses/by-nc-nd/4.0/) 协议进行授权。
