@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.08.19
+ * @version 2021.08.20
  */
 
 defined('ABSPATH') || exit;
@@ -151,7 +151,7 @@ CSF::createSection($prefix, array(
         array(
             'id' => 'g_renameimg',
             'type' => 'switcher',
-            'title' => __('自定义媒体文件名', 'kratos'),
+            'title' => __('自定义图片类型的文件名', 'kratos'),
             'subtitle' => __('启用/禁用 图片类型的文件名改为 MD5 值', 'kratos'),
             'default' => false,
         ),

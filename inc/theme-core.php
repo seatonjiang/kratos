@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license MIT License
- * @version 2021.08.19
+ * @version 2021.08.20
  */
 
 // CDN 资源地址
@@ -234,7 +234,7 @@ function custom_upload_filter($file)
 
     $prdfix = kratos_option('g_renameother_prdfix', '') . '-';
 
-    $img_mimes = array('jpg', 'jpeg', 'jpe', 'gif', 'png', 'bmp', 'webp', 'svg');
+    $img_mimes = array('jpg', 'JPG', 'jpeg', 'JPEG', 'gif', 'GIF', 'png', 'PNG', 'bmp', 'BMP', 'webp', 'WEBP', 'svg', 'SVG');
 
     $str = kratos_option('g_renameother_mime', '');
     $arr = explode("|", $str);
