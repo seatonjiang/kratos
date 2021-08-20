@@ -86,8 +86,8 @@ add_filter('robots_txt', function ($output, $public) {
     if ('0' == $public) {
         return "User-agent: *\nDisallow: /\n";
     } else {
-        if (!empty(kratos_option('seo_robots'))) {
-            $output = esc_attr(strip_tags(kratos_option('seo_robots')));
+        if (!empty(kratos_option('seo_robots', getrobots(), 'seo_robots_fieldset'))) {
+            $output = esc_attr(strip_tags(kratos_option('seo_robots', getrobots(), 'seo_robots_fieldset')));
         }
         return $output;
     }
