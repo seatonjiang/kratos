@@ -232,11 +232,11 @@ function custom_upload_filter($file)
 
     $ext = '.' . $info['extension'];
 
-    $prdfix = kratos_option('g_renameother_prdfix', getdomain(home_url()), 'g_renameother') . '-';
+    $prdfix = kratos_option('g_renameother_prdfix', getdomain(home_url()), 'g_renameother_fieldset') . '-';
 
     $img_mimes = array('jpg', 'JPG', 'jpeg', 'JPEG', 'gif', 'GIF', 'png', 'PNG', 'bmp', 'BMP', 'webp', 'WEBP', 'svg', 'SVG');
 
-    $str = kratos_option('g_renameother_mime', 'tar|zip|gz|gzip|rar|7z', 'g_renameother');
+    $str = kratos_option('g_renameother_mime', 'tar|zip|gz|gzip|rar|7z', 'g_renameother_fieldset');
     $arr = explode("|", $str);
     $arr = array_filter($arr);
 
@@ -255,7 +255,7 @@ function custom_upload_filter($file)
         }
     }
 
-    if (kratos_option('g_renameother', false, 'g_renameother')) {
+    if (kratos_option('g_renameother', false, 'g_renameother_fieldset')) {
         foreach ($compressed_mimes as $compressed_mime) {
             if ($info['extension'] == $compressed_mime) {
                 $file['name'] = $prdfix . $file['name'];

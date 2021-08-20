@@ -17,7 +17,7 @@ if (!function_exists('kratos_option')) {
         $options = get_option('kratos_options');
 
         if (!empty($fieldset)) {
-            $results = $options[$fieldset . "_fieldset"][$option];
+            $results = $options[$fieldset][$option];
         } else {
             $results = $options[$option];
         }
