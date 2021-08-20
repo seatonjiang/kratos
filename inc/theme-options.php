@@ -455,6 +455,10 @@ CSF::createSection($prefix, array(
             ),
             'default' => array(
                 'g_cos' => false,
+                'g_cos_bucketname' => '',
+                'g_cos_url' => '',
+                'g_cos_accesskey' => '',
+                'g_cos_secretkey' => '',
             ),
         ),
         array(
@@ -531,7 +535,12 @@ CSF::createSection($prefix, array(
             ),
             'default' => array(
                 'g_imgx' => false,
-                'g_imgx_region' => 'cn-north-1'
+                'g_imgx_region' => 'cn-north-1',
+                "g_imgx_serviceid" => "",
+                "g_imgx_url" => "",
+                "g_imgx_tmp" => "",
+                "g_imgx_accesskey" => "",
+                "g_imgx_secretkey" => "",
             ),
         ),
     ),
@@ -946,6 +955,20 @@ CSF::createSection($prefix, array(
                     'title' => __('电子邮箱', 'kratos'),
                     'placeholder' => __('mailto:xxxxx@example.com', 'kratos'),
                 ),
+            ),
+            'default' => array(
+                "s_sina_url" => "",
+                "s_bilibili_url" => "",
+                "s_coding_url" => "",
+                "s_gitee_url" => "",
+                "s_douban_url" => "",
+                "s_twitter_url" => "",
+                "s_telegram_url" => "",
+                "s_linkedin_url" => "",
+                "s_youtube_url" => "",
+                "s_github_url" => "",
+                "s_stackflow_url" => "",
+                "s_email_url" => ""
             ),
         ),
     ),
