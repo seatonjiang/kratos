@@ -1,9 +1,10 @@
 <?php
+
 /**
  * 站点相关函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
- * @license MIT License
- * @version 2021.06.25
+ * @license GPL-3.0 License
+ * @version 2021.08.20
  */
 
 // 标题配置
@@ -85,8 +86,8 @@ add_filter('robots_txt', function ($output, $public) {
     if ('0' == $public) {
         return "User-agent: *\nDisallow: /\n";
     } else {
-        if (!empty(kratos_option('seo_robots'))) {
-            $output = esc_attr(strip_tags(kratos_option('seo_robots')));
+        if (!empty(kratos_option('seo_robots', getrobots(), 'seo_robots_fieldset'))) {
+            $output = esc_attr(strip_tags(kratos_option('seo_robots', getrobots(), 'seo_robots_fieldset')));
         }
         return $output;
     }
@@ -104,7 +105,7 @@ function mourning()
 function share_thumbnail_url()
 {
     global $post;
-    if(!is_object($post)) 
+    if (!is_object($post))
         return;
     if (has_post_thumbnail($post->ID)) {
         $post_thumbnail_id = get_post_thumbnail_id($post);

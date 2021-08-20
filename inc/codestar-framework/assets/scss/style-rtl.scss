@@ -1,0 +1,728 @@
+/**
+ *
+ * ---------------------------------------------------------
+ * CODESTAR FRAMEWORK RTL CSS MAP
+ * ---------------------------------------------------------
+ *
+ * 01. Base
+ *     01. 01. Header
+ *     01. 02. Header Buttons
+ *     01. 03. Navigation
+ *     01. 04. Content
+ *     01. 05. Section
+ *     01. 06. Show All Settings
+ *     01. 07. Search Input
+ *     01. 08. Copyright
+ *     01. 09. Metabox
+ * 02. Fields
+ *     02. 01. Field: typography
+ *     02. 02. Field: checkbox, radio
+ *     02. 03. Field: switcher
+ *     02. 04. Field: upload
+ *     02. 05. Field: group
+ *     02. 06. Field: repeater
+ *     02. 07. Field: help
+ *     02. 08. Field: icon
+ *     02. 09. Field: gallery
+ *     02. 10. Field: sorter
+ *     02. 11. Field: tabbed
+ *     02. 12. Field: media
+ *     02. 13. Field: notice
+ *     02. 14. Field: border, spacing, dimensions
+ *     02. 15. Field: background
+ *     02. 16. Field: spinner
+ *     02. 17. Field: slider
+ *     02. 18. Field: button_set
+ *     02. 19. Field: link_color
+ *     02. 20. Field: color_group
+ *     02. 21. Field: palette
+ *     02. 22. Field: accordion
+ *     02. 23. Field: date
+ *     02. 24. Field: map
+ *     02. 25. Field: sortable
+ *     02. 26. Field: number
+ * 03. Taxonomy
+ * 04. Profile
+ * 05. Nav Menu
+ * 06. Modal
+ * 07. Customizer
+ * 08. Responsive
+ * 09. Others
+ *
+ * ---------------------------------------------------------
+ *
+ */
+
+/**
+ * 01. Base
+ */
+.csf-options{
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+/**
+ * 01. 01. Header
+ */
+.csf-header{
+  h1{
+    float: right;
+  }
+
+  fieldset{
+    float: left;
+  }
+}
+
+/**
+ * 01. 02. Header Buttons
+ */
+.csf-buttons{
+  float: left;
+  direction: ltr;
+}
+
+.csf-header-left{
+  float: right;
+}
+
+.csf-header-right{
+  float: left;
+}
+
+/**
+ * 01. 03. Navigation
+ */
+.csf-nav{
+  float: right;
+
+  ul{
+    clear: right;
+
+    li{
+      .csf-active:after{
+        right: auto;
+        left: 0;
+        border-left-color: #fff;
+        border-right-color: transparent;
+      }
+
+      .csf-arrow:after{
+        content: "\f053";
+        right: auto;
+        left: 10px;
+      }
+
+      &.csf-tab-expanded .csf-arrow:after{
+        transform: rotate(-90deg);
+      }
+    }
+
+    ul{
+      li{
+        a{
+          padding-right: 25px;
+          padding-left: 15px;
+        }
+      }
+
+      &:before{
+        left: auto;
+        right: 15px;
+      }
+    }
+  }
+
+  .csf-tab-icon{
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
+
+.csf-nav-background{
+  left: auto;
+  right: 0;
+}
+
+/**
+ * 01. 04. Content
+ */
+.csf-content{
+  margin-left: 0;
+  margin-right: 225px;
+}
+
+/**
+ * 01. 05. Section
+ */
+.csf-sections{
+  float: right;
+}
+
+/**
+ * 01. 06. Show all options
+ */
+.csf-show-all .csf-content{
+  margin-right: 0;
+  overflow: hidden;
+}
+
+.csf-expand-all{
+  float: right;
+  right: auto;
+  left: 40px;
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+/**
+ * 01. 07. Search Input
+ */
+.csf-search{
+  float: right;
+
+  input{
+    margin: 0 0 0 5px;
+  }
+}
+
+/**
+ * 01. 08. Copyright
+ */
+.csf-copyright{
+  float: right;
+}
+
+/**
+ * 01. 09. Metabox
+ */
+.csf-metabox{
+  margin: -6px -12px -12px -12px;
+
+  .csf-section-title{
+    padding: 20px;
+  }
+}
+
+.csf-section-title{
+
+  .csf-section-icon{
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
+
+/**
+ * 02. Fields
+ */
+.csf-field{
+
+  .csf-title{
+    float: right;
+  }
+
+  .csf-fieldset{
+    float: left;
+  }
+}
+
+.csf-pseudo-field{
+  padding: 0 0 0 5px !important;
+}
+
+/**
+ * 02. 01. Field: typography
+ */
+.csf-field-typography{
+
+  select{
+    margin: 0;
+    width: 100%;
+  }
+
+  .csf--blocks-inputs{
+    .csf--blocks{
+      flex-direction: row-reverse;
+    }
+  }
+
+  .csf--unit{
+    left: 4px;
+    right: auto;
+  }
+}
+
+/**
+ * 02. 02. Field: checkbox, radio
+ */
+.csf-field-checkbox,
+.csf-field-radio{
+
+  ul ul li{
+    margin-left: 0;
+    margin-right: 8px;
+
+    &:first-child{
+      margin-right: 0;
+    }
+  }
+
+  .csf--inline-list li{
+    margin-right: 0;
+    margin-left: 15px;
+  }
+
+  .csf--text{
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+/**
+ * 02. 03. Field: switcher
+ */
+.csf-field-switcher{
+
+  .csf--switcher{
+    float: right;
+  }
+
+  .csf--label{
+    float: right;
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+/**
+ * 02. 04. Field: upload
+ */
+.csf-field-upload{
+
+  .csf--remove,
+  .csf--button{
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+/**
+ * 02. 05. Field: group
+ */
+.csf-field-group{
+
+  .csf-cloneable-title{
+    padding: 15px 10px 15px 65px;
+  }
+
+  .csf-cloneable-helper{
+    right: auto;
+    left: 10px;
+  }
+}
+
+/**
+ * 02. 06. Field: repeater
+ */
+.csf-field-repeater{
+
+  .csf-repeater-helper{
+    border-left: 0;
+    border-right: 1px solid #eee;
+  }
+}
+
+/**
+ * 02. 07. Field: help
+ */
+.csf-help{
+  right: auto;
+  left: 5px;
+}
+
+/**
+ * 02. 08. Field: icon
+ */
+.csf-field-icon{
+
+  .button{
+    margin-right: 0;
+    margin-left: 5px;
+  }
+
+  .csf-icon-preview i{
+    margin-right: 0;
+    margin-left: 5px;
+  }
+}
+
+/**
+ * 02. 09. Field: gallery
+ */
+.csf-field-gallery{
+
+  ul li{
+    margin-right: 0;
+    margin-left: 5px;
+  }
+
+  .button{
+    margin-right: 0;
+    margin-left: 5px;
+  }
+}
+
+/**
+ * 02. 11. Field: tabbed
+ */
+.csf-field-tabbed{
+
+  .csf-tabbed-nav{
+
+    .csf--icon{
+      padding-right: 0;
+      padding-left: 5px;
+    }
+
+    a{
+      margin-right: 0;
+      margin-left: 5px;
+    }
+  }
+}
+
+/**
+ * 02. 12. Field: media
+ */
+.csf-field-media{
+
+  .button{
+    margin-left: 0;
+    margin-right: 7px;
+  }
+
+  .hidden + .button{
+    margin-right: 0;
+  }
+}
+
+/**
+ * 02. 13. Field: notice
+ */
+.csf-notice{
+  border-left: none;
+  border-right-style: solid;
+  border-right-width: 4px;
+}
+
+/**
+ * 02. 14. Field: border, spacing, dimensions
+ */
+.csf-field-dimensions,
+.csf-field-spacing,
+.csf-field-border{
+
+  .csf--input,
+  .csf-fieldset{
+    direction: ltr;
+  }
+
+  .csf--inputs,
+  .csf--color{
+    float: right;
+  }
+
+  .csf--color{
+    margin-right: 4px;
+    direction: rtl;
+  }
+}
+
+/**
+ * 02. 15. Field: background
+ */
+.csf-field-background{
+
+  .csf--block{
+    float: right;
+  }
+
+  .csf--select,
+  .csf--media{
+    padding-right: 0;
+  }
+
+  .csf--title{
+    margin-right: 0;
+    margin-left: 5px;
+  }
+}
+
+/**
+ * 02. 16. Field: spinner
+ */
+.csf-field-spinner{
+
+  .csf--spin{
+    float: right;
+    direction: ltr;
+  }
+}
+
+/**
+ * 02. 17. Field: slider
+ */
+.csf-field-slider{
+
+  .csf-slider-ui{
+    direction: ltr;
+    margin-right: 0;
+    margin-left: 15px;
+  }
+
+  .csf--input{
+    direction: ltr;
+  }
+}
+
+/**
+ * 02. 18. Field: button_set
+ */
+.csf-field-button_set{
+
+  .csf--button-group{
+    float: right;
+  }
+}
+
+/**
+ * 02. 19. Field: link_color
+ */
+.csf-field-link_color{
+
+  .csf--left{
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+/**
+ * 02. 20. Field: color_group
+ */
+.csf-field-color_group{
+
+  .csf--left{
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+/**
+ * 02. 21. Field: palette
+ */
+.csf-field-palette{
+
+  .csf--palette{
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+/**
+ * 02. 22. Field: accordion
+ */
+.csf-field-accordion{
+
+  .csf--icon{
+    margin-right: 0;
+    margin-left: 2px;
+  }
+}
+
+/**
+ * 02. 23. Field: date
+ */
+.csf-field-date{
+
+  .csf--to {
+    margin-left: 0;
+    margin-right: 7px;
+  }
+}
+
+/**
+ * 02. 24. Field: map
+ */
+.csf-field-map{
+
+  .csf--map-input:last-child {
+    padding-left: 0;
+    padding-right: 10px;
+  }
+}
+
+/**
+ * 02. 25. Field: sortable
+ */
+.csf-field-sortable{
+
+  .csf-sortable-helper{
+    border-left: none;
+    border-right: 1px solid #eee;
+  }
+}
+
+/**
+ * 02. 26. Field: number
+ */
+.csf-field-number{
+
+  .csf--wrap{
+    float: right;
+  }
+
+  .csf--unit{
+    left: 4px;
+    right: auto;
+  }
+}
+
+/**
+ * 03. Taxonomy
+ */
+.csf-taxonomy-add-fields{
+  margin-right: 0;
+  margin-left: 30px;
+
+  .csf-field > .csf-fieldset > .csf-help{
+    left: -5px;
+    right: auto;
+  }
+}
+
+.csf-taxonomy-edit-fields{
+  margin-right: 0;
+  margin-left: 35px;
+
+  .csf-field > .csf-fieldset > .csf-help{
+    right: auto;
+    left: -5px;
+  }
+}
+
+/**
+ * 04. Profile
+ */
+.csf-profile-options{
+
+  > h2 > .fa{
+    padding-right: 0;
+    padding-left: 7px;
+  }
+
+  > .csf-field{
+
+    > .csf-fieldset{
+
+      > .csf-help{
+        left: -5px;
+        right: auto;
+      }
+    }
+  }
+}
+
+/**
+ * 05. Nav Menu
+ */
+.csf-nav-menu-options{
+
+  > .csf-fields{
+    margin-left: 0;
+    margin-right: -10px;
+  }
+}
+
+.csf-nav-menu-title {
+  padding-left: 14px;
+  padding-right: 12px;
+}
+
+.csf-nav-menu-icon{
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+/**
+ * 06. Modal
+ */
+.csf-modal-content{
+
+  .csf-field{
+    padding: 15px 15px 15px 30px;
+  }
+}
+
+.csf-modal-title{
+  padding: 0 16px 0 36px;
+}
+
+.csf-modal-close{
+  right: auto;
+  left: 0;
+}
+
+/**
+ * 07. Customizer
+ */
+.control-section{
+
+  .csf-field{
+
+    .csf-fieldset{
+      margin-right: 0;
+    }
+  }
+}
+
+/**
+ * 08. Responsive
+ */
+@media only screen and (max-width:1200px){
+  .csf-metabox .csf-field .csf-fieldset{
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width:782px){
+  .csf .csf-fieldset,
+  .csf .csf-content{
+    margin-right: 0;
+  }
+}
+
+/**
+ * 09. Others
+ */
+.csf-field{
+
+  .csf--transparent-slider{
+    margin-left: 0;
+    margin-right: 2px;
+
+    .ui-slider-handle{
+      margin: 0 -11px;
+    }
+  }
+
+  .csf--transparent-offset{
+    background-position: center right;
+  }
+
+  .csf--transparent-text{
+    right: auto;
+    left: 10px;
+  }
+}

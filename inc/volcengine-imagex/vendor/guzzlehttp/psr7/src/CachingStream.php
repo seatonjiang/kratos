@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace GuzzleHttp\Psr7;
 
 use Psr\Http\Message\StreamInterface;
@@ -7,10 +9,8 @@ use Psr\Http\Message\StreamInterface;
 /**
  * Stream decorator that can cache previously read bytes from a sequentially
  * read stream.
- *
- * @final
  */
-class CachingStream implements StreamInterface
+final class CachingStream implements StreamInterface
 {
     use StreamDecoratorTrait;
 
@@ -34,23 +34,23 @@ class CachingStream implements StreamInterface
         $this->stream = $target ?: new Stream(Utils::tryFopen('php://temp', 'r+'));
     }
 
-    public function getSize()
+    public function getSize(): ?int
     {
         return max($this->stream->getSize(), $this->remoteStream->getSize());
     }
 
-    public function rewind()
+    public function rewind(): void
     {
         $this->seek(0);
     }
 
-    public function seek($offset, $whence = SEEK_SET)
+    public function seek($offset, $whence = SEEK_SET): void
     {
-        if ($whence == SEEK_SET) {
+        if ($whence === SEEK_SET) {
             $byte = $offset;
-        } elseif ($whence == SEEK_CUR) {
+        } elseif ($whence === SEEK_CUR) {
             $byte = $offset + $this->tell();
-        } elseif ($whence == SEEK_END) {
+        } elseif ($whence === SEEK_END) {
             $size = $this->remoteStream->getSize();
             if ($size === null) {
                 $size = $this->cacheEntireStream();
@@ -75,7 +75,7 @@ class CachingStream implements StreamInterface
         }
     }
 
-    public function read($length)
+    public function read($length): string
     {
         // Perform a regular read on any previously read data from the buffer
         $data = $this->stream->read($length);
@@ -104,7 +104,7 @@ class CachingStream implements StreamInterface
         return $data;
     }
 
-    public function write($string)
+    public function write($string): int
     {
         // When appending to the end of the currently read stream, you'll want
         // to skip bytes from being read from the remote stream to emulate
@@ -118,7 +118,7 @@ class CachingStream implements StreamInterface
         return $this->stream->write($string);
     }
 
-    public function eof()
+    public function eof(): bool
     {
         return $this->stream->eof() && $this->remoteStream->eof();
     }
@@ -126,12 +126,13 @@ class CachingStream implements StreamInterface
     /**
      * Close both the remote stream and buffer stream
      */
-    public function close()
+    public function close(): void
     {
-        $this->remoteStream->close() && $this->stream->close();
+        $this->remoteStream->close();
+        $this->stream->close();
     }
 
-    private function cacheEntireStream()
+    private function cacheEntireStream(): int
     {
         $target = new FnStream(['write' => 'strlen']);
         Utils::copyToStream($this, $target);

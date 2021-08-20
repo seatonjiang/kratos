@@ -1,19 +1,38 @@
 # Change Log
 
-
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
-## 1.8.2 - 2021-04-26
+## 2.0.0 - 2021-06-30
+
+Identical to the RC release.
+
+## 2.0.0@RC-1 - 2021-04-29
 
 ### Fixed
 
 - Handle possibly unset `url` in `stream_get_meta_data`
+
+## 2.0.0@beta-1 - 2021-03-21
+
+### Added
+
+- PSR-17 factories
+- Made classes final
+- PHP7 type hints
+
+### Changed
+
+- When building a query string, booleans are represented as 1 and 0.
+
+### Removed
+
+- PHP < 7.2 support
+- All functions in the Guzzle\Psr7 namespace
 
 ## 1.8.1 - 2021-03-21
 

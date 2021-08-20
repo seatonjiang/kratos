@@ -1,0 +1,67 @@
+/**
+ * 06. Profile
+ */
+.csf-profile-options{
+
+  > h2 > .fa {
+    padding-right: 7px;
+  }
+
+  > .csf-field{
+    max-width: 750px;
+    padding: 15px 0;
+    border-top: none !important;
+
+    > .csf-title{
+      width: 200px;
+
+      h4{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.3;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    > .csf-fieldset{
+      width: calc(100% - 220px);
+
+      > .csf-help{
+        top: -15px;
+        right: -5px;
+      }
+    }
+  }
+
+  > .csf-field-heading{
+    font-size: 1.1em;
+  }
+
+  > .csf-field-subheading{
+    font-size: 12px;
+  }
+
+  > .csf-field-subheading,
+  > .csf-field-heading{
+    margin: 10px 0;
+    padding: 15px !important;
+    border: 1px solid #ddd;
+  }
+
+  > .csf-field-submessage{
+    margin: 20px 0;
+
+    .csf-submessage{
+      padding: 10px;
+      border-left-width: 1px;
+      border-left-style: solid;
+      border-right-width: 1px;
+      border-right-style: solid;
+    }
+  }
+
+  > .csf-field-notice{
+    background-color: transparent;
+  }
+}

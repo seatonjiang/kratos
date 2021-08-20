@@ -1,0 +1,179 @@
+/**
+ * 05. Widget
+ */
+.control-section{
+
+  .csf-field{
+    padding: 0;
+
+    .csf-title{
+      float: none;
+      width: 100%;
+      margin-bottom: 6px;
+
+      h4{
+        display: block;
+        font-size: 13px;
+        line-height: 1;
+        font-weight: 600;
+        color: inherit;
+      }
+    }
+
+    .csf-fieldset{
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .csf-help{
+    top: -5px;
+    right: -5px;
+  }
+
+  .csf-field-select select{
+    width: 100%;
+  }
+
+  .csf-field-heading{
+    color: inherit;
+    font-size: 14px;
+    line-height: 1em;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 15px;
+  }
+
+  .csf-field-subheading{
+    color: inherit;
+    font-size: 11px;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 10px 15px;
+  }
+
+  .csf-subtitle-text{
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .csf-field-submessage .csf-submessage{
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 15px;
+  }
+
+  .csf-fieldset{
+
+    .csf-field-submessage .csf-submessage,
+    .csf-field-heading,
+    .csf-field-subheading{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .csf-field-date{
+
+    .csf--to{
+      margin-left: 0;
+    }
+  }
+
+  .csf-field-sorter{
+
+    ul li{
+      padding: 5px;
+    }
+
+    .csf-modules{
+      float: none;
+      width: 100%;
+    }
+
+    .csf-modules:first-child{
+      padding-right: 0;
+      padding-bottom: 15px;
+    }
+  }
+
+  .csf-field-background{
+
+    .csf--background-attributes{
+      flex-direction: column;
+    }
+  }
+
+  .csf-field-spacing{
+    input{
+      width: 90px;
+    }
+  }
+
+  .csf-field-border{
+
+    .csf--input{
+      flex: 1 50%;
+    }
+
+    input,
+    select{
+      width: 100%;
+    }
+  }
+
+  .csf-field-spinner{
+    input{
+      width: 50px;
+    }
+  }
+
+  .csf-field-number{
+
+    .csf--wrap{
+      width: 100%;
+    }
+  }
+
+  .csf-field-backup{
+
+    .csf-export-data{
+      display: none;
+    }
+  }
+
+  .csf-field-fieldset{
+
+    .csf-fieldset-content{
+      border-color: #e5e5e5;
+    }
+  }
+
+  .csf-tabbed-content,
+  .csf-sortable-content,
+  .csf-repeater-content,
+  .csf-fieldset-content,
+  .csf-cloneable-content,
+  .csf-accordion-content{
+
+    > .csf-field{
+      padding: 10px;
+
+      .csf-title{
+        margin-bottom: 5px;
+      }
+
+      h4{
+        font-size: 12px;
+      }
+    }
+  }
+
+  .csf-depend-hidden.csf-depend-on{
+    display: none !important;
+  }
+
+  .csf-depend-visible.csf-depend-on{
+    border-top: 0 !important;
+  }
+}

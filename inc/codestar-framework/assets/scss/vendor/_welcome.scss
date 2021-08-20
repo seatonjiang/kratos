@@ -1,0 +1,346 @@
+/**
+ * 11. Welcome Page
+ */
+.csf-welcome-wrap{
+  position: relative;
+  margin: 25px 40px 0 20px;
+  font-size: 15px;
+  max-width: 1200px;
+
+  p{
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  h1{
+    margin: 0.2em 200px 0 0;
+    padding: 0;
+    color: #32373c;
+    line-height: 1.2em;
+    font-size: 2.8em;
+    font-weight: 400;
+  }
+
+  .csf-logo{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    height: 160px;
+    width: 140px;
+    background-image: linear-gradient( 45deg, #2d67cb, #ad19f3);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25), inset 0 0 0 4px rgba(0,0,0,0.25);
+
+    .csf--effects i{
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      background-color: rgba(0,0,0,0.15);
+      transform: rotate(-45deg);
+    }
+
+    .csf--effects i:nth-child(1){
+      bottom: -20px;
+      right: -70px;
+    }
+
+    .csf--effects i:nth-child(2){
+      bottom: -35px;
+      right: -80px;
+    }
+
+    .csf--effects i:nth-child(3){
+      bottom: -50px;
+      right: -90px;
+    }
+
+    .csf--effects i:nth-child(4){
+      bottom: -65px;
+      right: -100px;
+    }
+
+    .csf--wp-logos{
+      position: relative;
+      padding-top: 25px;
+      text-align: center;
+    }
+
+    .csf--wp-logo{
+      position: absolute;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../images/wp-logo.svg);
+    }
+
+    .csf--wp-plugin-logo{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 3px solid #fff;
+      background-size: 40px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../images/wp-plugin-logo.svg);
+      border-radius: 100%;
+      vertical-align: middle;
+    }
+
+    .csf--text{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 90px;
+      color: #fff;
+      font-size: 13px;
+      line-height: 1.2em;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+    }
+
+    .csf--version{
+      top: auto;
+      left: auto;
+      right: 8px;
+      bottom: 4px;
+      font-size: 11px;
+      text-transform: lowercase;
+    }
+  }
+
+  .csf-about-text{
+    font-weight: 400;
+    line-height: 1.6em;
+    font-size: 19px;
+    margin: 1em 200px 1em 0;
+    color: #555d66;
+  }
+
+  .csf-demo-button{
+    margin: 1em 200px 2em 0;
+  }
+
+  .nav-tab-wrapper{
+    margin-bottom: 20px;
+  }
+
+  ul{
+    list-style-type: disc;
+    padding-left: 15px;
+  }
+
+  .csf--col{
+    float: left;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .csf--col-2{
+    width: 50%;
+  }
+
+  .csf--col-3{
+    width: 33.333%;
+  }
+
+  .csf--col-4{
+    width: 25%;
+  }
+
+  .csf--col-5{
+    width: 20%;
+  }
+
+  .csf--col-last{
+    padding-right: 0;
+  }
+
+  .csf--col-upgrade{
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+  }
+}
+
+.csf--table-compare{
+
+  thead,
+  tfoot{
+    td{
+      text-align: center;
+    }
+  }
+
+  td{
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+  }
+
+  td:first-child{
+    text-align: left;
+  }
+
+  tfoot{
+    td{
+      padding: 15px 0;
+    }
+  }
+
+  .fa{
+    font-size: 18px;
+  }
+
+  .fa-check-circle{
+    color: #46b450;
+  }
+
+  .fa-times-circle{
+    color: #dc3232;
+  }
+}
+
+.csf-welcome-cols{
+  clear: both;
+  margin: 20px 0;
+  background-color: #fff;
+  padding: 0 0;
+  border-radius: 2px;
+  border: 1px solid #e5e5e5;
+
+  .csf--col{
+    width: 33.333%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 200px;
+    border-right: 1px solid #e5e5e5;
+  }
+
+  .csf--left,
+  .csf--block{
+    float: left;
+    width: 20%;
+    padding: 0 30px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .csf--block{
+    width: 80%;
+  }
+
+  .csf--col-first{
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .csf--last{
+    border-right: none;
+  }
+
+  .csf--space{
+    height: 20px;
+  }
+
+  .csf--icon{
+    display: inline-block;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #555;
+    border-radius: 30px;
+  }
+
+  .csf--active{
+    background-color: #5cb85c;
+  }
+
+  .csf--deactive{
+    background-color: #e14d43;
+  }
+
+  .csf--title{
+    font-weight: bold;
+    display: block;
+  }
+
+  p:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.csf-features-cols{
+
+  .csf--key-features{
+    width: 30%;
+  }
+  .csf--available-fields{
+    width: 70%;
+  }
+}
+
+.csf-code-block{
+  margin: 20px 0;
+  padding: 5px 20px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+
+  pre{
+    font-size: 13px;
+    color: #0073aa;
+
+    span{
+      color: #999;
+    }
+  }
+}
+
+.csf--table-fields{
+  td{
+    font-size: 14px;
+  }
+}
+
+.csf--upgrade a{
+  color: #5cb85c;
+  font-weight: bold;
+
+  &:focus,
+  &:hover{
+    color: #4aa14a;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width:782px){
+
+  .csf-welcome-cols{
+    .csf--col{
+      width: 100%;
+      min-height: auto;
+      border-right: none;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+
+  .csf-features-cols{
+    .csf--key-features{
+      width: 100%;
+    }
+    .csf--available-fields{
+      width: 100%;
+    }
+  }
+}

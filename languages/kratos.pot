@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos\n"
-"POT-Creation-Date: 2021-03-10 21:53+0800\n"
+"POT-Creation-Date: 2021-08-20 16:18+0800\n"
 "PO-Revision-Date: 2020-02-14 23:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -21,260 +21,808 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: 404.php:24
+#: 404.php:29
 msgid "很抱歉，你访问的页面不存在"
 msgstr ""
 
-#: 404.php:25
+#: 404.php:30
 msgid "可能是输入地址有误或该地址已被删除"
 msgstr ""
 
-#: 404.php:27
+#: 404.php:32
 msgid "返回上页"
 msgstr ""
 
-#: 404.php:28
+#: 404.php:33
 msgid "返回主页"
 msgstr ""
 
-#: comments.php:15
+#: comments.php:17
 msgid "文章评论"
 msgstr ""
 
-#: comments.php:15
+#: comments.php:19
 msgid "评论内容"
 msgstr ""
 
-#: comments.php:20
+#: comments.php:25
 msgid "加载更多"
 msgstr ""
 
-#: comments.php:25
+#: comments.php:30
 #, php-format
 msgid "您需要 <a href=\"%s\">登录</a> 之后才可以评论"
 msgstr ""
 
-#: comments.php:37
+#: comments.php:42
 msgid "昵称"
 msgstr ""
 
-#: comments.php:45
+#: comments.php:50
 msgid "邮箱"
 msgstr ""
 
-#: comments.php:53
+#: comments.php:58
 msgid "网址"
 msgstr ""
 
-#: comments.php:70
+#: comments.php:75
 msgid "取消回复"
 msgstr ""
 
-#: comments.php:71
+#: comments.php:76
 msgid "提交评论"
 msgstr ""
 
-#: footer.php:27 inc/theme-widgets.php:140
+#: footer.php:30 inc/theme-widgets.php:184
 msgid "搜点什么呢?"
 msgstr ""
 
-#: header.php:76 inc/theme-options.php:633
+#: header.php:83 inc/theme-options.php:828
 msgid "一款专注于用户阅读体验的响应式博客主题"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-framework-admin.php:71
-#: inc/options-framework/includes/class-options-framework-admin.php:72
-#: inc/options-framework/includes/class-options-framework-admin.php:85
-#: inc/options-framework/includes/class-options-framework-admin.php:86
-msgid "主题设置"
+#: inc/codestar-framework/classes/admin-options.class.php:233
+msgid "Error while saving the changes."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-framework-admin.php:181
-msgid "保存配置"
+#: inc/codestar-framework/classes/admin-options.class.php:293
+msgid "Settings successfully imported."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-framework-admin.php:182
-msgid "恢复默认"
+#: inc/codestar-framework/classes/admin-options.class.php:304
+#: inc/codestar-framework/classes/admin-options.class.php:318
+msgid "Default settings restored."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-framework-admin.php:182
-msgid "单击「确定」进行恢复，但所有的配置都将丢失！"
+#: inc/codestar-framework/classes/admin-options.class.php:378
+msgid "Settings saved."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-framework-admin.php:213
-msgid "恢复完成"
+#: inc/codestar-framework/classes/admin-options.class.php:554
+msgid "You have unsaved changes, save your changes!"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-framework-admin.php:257
-msgid "[测试]邮件服务配置成功"
+#: inc/codestar-framework/classes/admin-options.class.php:556
+msgid "show all settings"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-framework-admin.php:257
-msgid "恭喜您 SMTP 邮件服务配置成功！"
+#: inc/codestar-framework/classes/admin-options.class.php:558
+#: inc/codestar-framework/fields/icon/icon.php:63
+#: inc/codestar-framework/fields/map/map.php:28
+msgid "Search..."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-framework-admin.php:270
-msgid "保存成功"
+#: inc/codestar-framework/classes/admin-options.class.php:561
+#: inc/codestar-framework/classes/admin-options.class.php:675
+msgid "Save"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-framework-admin.php:274
-msgid "发送完成，请留意邮箱："
+#: inc/codestar-framework/classes/admin-options.class.php:561
+#: inc/codestar-framework/classes/admin-options.class.php:675
+msgid "Saving..."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:230
-msgid "基础信息"
+#: inc/codestar-framework/classes/admin-options.class.php:562
+#: inc/codestar-framework/classes/admin-options.class.php:676
+msgid "Reset Section"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:232
-msgid "PHP 版本："
+#: inc/codestar-framework/classes/admin-options.class.php:562
+#: inc/codestar-framework/classes/admin-options.class.php:676
+msgid "Are you sure to reset this section options?"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:233
-msgid "Kratos 版本："
+#: inc/codestar-framework/classes/admin-options.class.php:563
+#: inc/codestar-framework/classes/admin-options.class.php:677
+msgid "Reset All"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:234
-msgid "WordPress 版本："
+#: inc/codestar-framework/classes/admin-options.class.php:563
+#: inc/codestar-framework/classes/admin-options.class.php:677
+#: inc/codestar-framework/classes/comment-options.class.php:215
+#: inc/codestar-framework/classes/metabox-options.class.php:290
+#: inc/codestar-framework/fields/backup/backup.php:36
+msgid "Reset"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:235
-msgid "User Agent 信息："
+#: inc/codestar-framework/classes/admin-options.class.php:563
+#: inc/codestar-framework/classes/admin-options.class.php:677
+msgid "Are you sure you want to reset all settings to default values?"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:237
-msgid ""
-"提示：在提交主题相关问题反馈时，请将上面「基础信息」中的内容复制到环境信息"
-"中。"
+#: inc/codestar-framework/classes/admin-options.class.php:654
+#: inc/codestar-framework/classes/comment-options.class.php:200
+#: inc/codestar-framework/classes/metabox-options.class.php:275
+#: inc/codestar-framework/fields/button_set/button_set.php:59
+#: inc/codestar-framework/fields/checkbox/checkbox.php:77
+#: inc/codestar-framework/fields/radio/radio.php:76
+#: inc/codestar-framework/fields/select/select.php:114
+#: inc/codestar-framework/functions/actions.php:42
+msgid "No data available."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:238
-msgid "资料文档"
+#: inc/codestar-framework/classes/comment-options.class.php:216
+#: inc/codestar-framework/classes/metabox-options.class.php:291
+msgid "update post"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:240
-msgid "说明文档："
+#: inc/codestar-framework/classes/comment-options.class.php:216
+#: inc/codestar-framework/classes/metabox-options.class.php:291
+msgid "Cancel"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:241
-msgid "代码托管："
+#: inc/codestar-framework/classes/setup.class.php:593
+msgid "Are you sure?"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:242
-msgid "问题反馈："
+#: inc/codestar-framework/classes/setup.class.php:594
+#, php-format
+msgid "Please enter %s or more characters"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:243
-msgid "常见问题："
+#: inc/codestar-framework/classes/setup.class.php:595
+msgid "Searching..."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:244
-msgid "更新日志："
+#: inc/codestar-framework/classes/setup.class.php:596
+msgid "No results found."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:245
-msgid "需求统计："
+#: inc/codestar-framework/classes/setup.class.php:694
+msgid "Oops! Not allowed."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:246
-msgid "捐赠记录："
+#: inc/codestar-framework/classes/setup.class.php:764
+#: inc/codestar-framework/classes/setup.class.php:767
+msgid "Field not found!"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:248
-msgid "讨论交流"
+#: inc/codestar-framework/classes/shortcode-options.class.php:258
+#: inc/codestar-framework/fields/group/group.php:28
+msgid "Add New"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:250
-msgid "版权声明"
+#: inc/codestar-framework/classes/shortcode-options.class.php:293
+#: inc/codestar-framework/functions/actions.php:19
+#: inc/codestar-framework/functions/actions.php:68
+#: inc/codestar-framework/functions/actions.php:106
+#: inc/codestar-framework/functions/actions.php:141
+#: inc/codestar-framework/functions/actions.php:170
+msgid "Error: Invalid nonce verification."
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:251
-msgid ""
-"主题源码使用 <a href=\"https://github.com/vtrois/kratos/blob/main/LICENSE"
-"\" target=\"_blank\">MIT 协议</a> 进行许可，说明文档使用 <a href=\"https://"
-"creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND "
-"4.0</a> 进行许可。"
+#: inc/codestar-framework/fields/background/background.php:41
+#: inc/codestar-framework/fields/media/media.php:63
+msgid "Not selected"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:252
-msgid "打赏支持"
+#: inc/codestar-framework/fields/background/background.php:77
+#: inc/codestar-framework/fields/date/date.php:36
+msgid "From"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-interface.php:258
-msgid "测试邮件"
+#: inc/codestar-framework/fields/background/background.php:94
+#: inc/codestar-framework/fields/date/date.php:37
+msgid "To"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-media-uploader.php:62
-msgid "没有选择任何文件"
+#: inc/codestar-framework/fields/background/background.php:111
+msgid "Direction"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-media-uploader.php:65
-#: inc/options-framework/includes/class-options-media-uploader.php:118
-msgid "上传"
+#: inc/codestar-framework/fields/background/background.php:117
+msgid "Gradient Direction"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-media-uploader.php:67
-#: inc/options-framework/includes/class-options-media-uploader.php:119
-msgid "删除"
+#: inc/codestar-framework/fields/background/background.php:118
+msgid "&#8659; top to bottom"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-media-uploader.php:70
-msgid "升级 WordPress 版本获得完整的媒体支持"
+#: inc/codestar-framework/fields/background/background.php:119
+msgid "&#8658; left to right"
 msgstr ""
 
-#: inc/options-framework/includes/class-options-media-uploader.php:94
-msgid "浏览文件"
+#: inc/codestar-framework/fields/background/background.php:120
+msgid "&#8664; corner top to right"
 msgstr ""
 
-#: inc/theme-article.php:210
+#: inc/codestar-framework/fields/background/background.php:121
+msgid "&#8665; corner top to left"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:162
+msgid "Background Position"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:163
+msgid "Left Top"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:164
+msgid "Left Center"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:165
+msgid "Left Bottom"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:166
+msgid "Center Top"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:167
+msgid "Center Center"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:168
+msgid "Center Bottom"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:169
+msgid "Right Top"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:170
+msgid "Right Center"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:171
+msgid "Right Bottom"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:184
+msgid "Background Repeat"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:185
+msgid "Repeat"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:186
+msgid "No Repeat"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:187
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:188
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:201
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:202
+msgid "Scroll"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:203
+msgid "Fixed"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:216
+msgid "Background Size"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:217
+msgid "Cover"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:218
+msgid "Contain"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:219
+msgid "Auto"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:232
+msgid "Background Origin"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:233
+#: inc/codestar-framework/fields/background/background.php:250
+msgid "Padding Box"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:234
+#: inc/codestar-framework/fields/background/background.php:249
+msgid "Border Box"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:235
+#: inc/codestar-framework/fields/background/background.php:251
+msgid "Content Box"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:248
+msgid "Background Clip"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:264
+msgid "Background Blend Mode"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:265
+#: inc/codestar-framework/fields/link_color/link_color.php:41
+#: inc/codestar-framework/fields/typography/typography.php:190
+msgid "Normal"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:266
+msgid "Multiply"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:267
+msgid "Screen"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:268
+msgid "Overlay"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:269
+msgid "Darken"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:270
+msgid "Lighten"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:271
+msgid "Color Dodge"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:272
+msgid "Saturation"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:273
+msgid "Color"
+msgstr ""
+
+#: inc/codestar-framework/fields/background/background.php:274
+msgid "Luminosity"
+msgstr ""
+
+#: inc/codestar-framework/fields/backup/backup.php:31
+msgid "Import"
+msgstr ""
+
+#: inc/codestar-framework/fields/backup/backup.php:34
+msgid "Export & Download"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:30
+#: inc/codestar-framework/fields/spacing/spacing.php:30
+msgid "top"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:31
+#: inc/codestar-framework/fields/spacing/spacing.php:31
+msgid "right"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:32
+#: inc/codestar-framework/fields/spacing/spacing.php:32
+msgid "bottom"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:33
+#: inc/codestar-framework/fields/spacing/spacing.php:33
+msgid "left"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:34
+#: inc/codestar-framework/fields/spacing/spacing.php:34
+msgid "all"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:56
+#: inc/codestar-framework/fields/typography/typography.php:218
+msgid "Solid"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:57
+#: inc/codestar-framework/fields/typography/typography.php:221
+msgid "Dashed"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:58
+#: inc/codestar-framework/fields/typography/typography.php:220
+msgid "Dotted"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:59
+#: inc/codestar-framework/fields/typography/typography.php:219
+msgid "Double"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:60
+msgid "Inset"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:61
+msgid "Outset"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:62
+msgid "Groove"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:63
+msgid "ridge"
+msgstr ""
+
+#: inc/codestar-framework/fields/border/border.php:64
+#: inc/codestar-framework/fields/typography/typography.php:203
+#: inc/codestar-framework/fields/typography/typography.php:217
+msgid "None"
+msgstr ""
+
+#: inc/codestar-framework/fields/dimensions/dimensions.php:27
+msgid "width"
+msgstr ""
+
+#: inc/codestar-framework/fields/dimensions/dimensions.php:28
+msgid "height"
+msgstr ""
+
+#: inc/codestar-framework/fields/gallery/gallery.php:25
+msgid "Add Gallery"
+msgstr ""
+
+#: inc/codestar-framework/fields/gallery/gallery.php:26
+msgid "Edit Gallery"
+msgstr ""
+
+#: inc/codestar-framework/fields/gallery/gallery.php:27
+msgid "Clear"
+msgstr ""
+
+#: inc/codestar-framework/fields/group/group.php:40
+#: inc/codestar-framework/fields/repeater/repeater.php:32
+msgid "Error: Field ID conflict."
+msgstr ""
+
+#: inc/codestar-framework/fields/group/group.php:50
+#: inc/codestar-framework/fields/group/group.php:90
+#: inc/codestar-framework/fields/repeater/repeater.php:51
+#: inc/codestar-framework/fields/repeater/repeater.php:78
+msgid "Are you sure to delete this item?"
+msgstr ""
+
+#: inc/codestar-framework/fields/group/group.php:121
+#: inc/codestar-framework/fields/repeater/repeater.php:89
+msgid "You cannot add more."
+msgstr ""
+
+#: inc/codestar-framework/fields/group/group.php:122
+#: inc/codestar-framework/fields/repeater/repeater.php:90
+msgid "You cannot remove more."
+msgstr ""
+
+#: inc/codestar-framework/fields/icon/icon.php:25
+#: inc/codestar-framework/fields/icon/icon.php:59
+msgid "Add Icon"
+msgstr ""
+
+#: inc/codestar-framework/fields/icon/icon.php:26
+msgid "Remove Icon"
+msgstr ""
+
+#: inc/codestar-framework/fields/link/link.php:25
+msgid "Add Link"
+msgstr ""
+
+#: inc/codestar-framework/fields/link/link.php:26
+msgid "Edit Link"
+msgstr ""
+
+#: inc/codestar-framework/fields/link/link.php:27
+msgid "Remove Link"
+msgstr ""
+
+#: inc/codestar-framework/fields/link_color/link_color.php:42
+msgid "Hover"
+msgstr ""
+
+#: inc/codestar-framework/fields/link_color/link_color.php:43
+msgid "Active"
+msgstr ""
+
+#: inc/codestar-framework/fields/link_color/link_color.php:44
+msgid "Visited"
+msgstr ""
+
+#: inc/codestar-framework/fields/link_color/link_color.php:45
+msgid "Focus"
+msgstr ""
+
+#: inc/codestar-framework/fields/map/map.php:29
+msgid "Latitude"
+msgstr ""
+
+#: inc/codestar-framework/fields/map/map.php:30
+msgid "Longitude"
+msgstr ""
+
+#: inc/codestar-framework/fields/media/media.php:30
+#: inc/codestar-framework/fields/upload/upload.php:29
+msgid "Upload"
+msgstr ""
+
+#: inc/codestar-framework/fields/media/media.php:31
+#: inc/codestar-framework/fields/upload/upload.php:30
+msgid "Remove"
+msgstr ""
+
+#: inc/codestar-framework/fields/sorter/sorter.php:26
+msgid "Enabled"
+msgstr ""
+
+#: inc/codestar-framework/fields/sorter/sorter.php:27
+msgid "Disabled"
+msgstr ""
+
+#: inc/codestar-framework/fields/switcher/switcher.php:25
+msgid "On"
+msgstr ""
+
+#: inc/codestar-framework/fields/switcher/switcher.php:26
+msgid "Off"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:101
+msgid "Font Family"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:102
+msgid "Select a font"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:110
+msgid "Backup Font Family"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:124
+#: inc/codestar-framework/fields/typography/typography.php:137
+#: inc/codestar-framework/fields/typography/typography.php:150
+#: inc/codestar-framework/fields/typography/typography.php:164
+#: inc/codestar-framework/fields/typography/typography.php:180
+#: inc/codestar-framework/fields/typography/typography.php:193
+#: inc/codestar-framework/fields/typography/typography.php:207
+#: inc/codestar-framework/fields/typography/typography.php:225
+msgid "Default"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:135
+msgid "Font Style"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:149
+#: inc/codestar-framework/fields/typography/typography.php:150
+msgid "Load Extra Styles"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:162
+msgid "Subset"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:172
+msgid "Text Align"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:174
+msgid "Inherit"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:175
+msgid "Left"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:176
+msgid "Center"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:177
+msgid "Right"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:178
+msgid "Justify"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:179
+msgid "Initial"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:188
+msgid "Font Variant"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:191
+msgid "Small Caps"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:192
+msgid "All Small Caps"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:201
+msgid "Text Transform"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:204
+msgid "Capitalize"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:205
+msgid "Uppercase"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:206
+msgid "Lowercase"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:215
+msgid "Text Decoration"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:222
+msgid "Wavy"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:223
+msgid "Overline"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:224
+msgid "Line-through"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:237
+msgid "Font Size"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:249
+msgid "Line Height"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:261
+msgid "Letter Spacing"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:273
+msgid "Word Spacing"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:288
+msgid "Font Color"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:299
+msgid "Custom Style"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:366
+msgid "Custom Web Fonts"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:372
+msgid "Safe Web Fonts"
+msgstr ""
+
+#: inc/codestar-framework/fields/typography/typography.php:395
+msgid "Google Web Fonts"
+msgstr ""
+
+#: inc/codestar-framework/functions/actions.php:72
+#: inc/codestar-framework/functions/actions.php:110
+msgid "Error: Invalid key."
+msgstr ""
+
+#: inc/codestar-framework/functions/actions.php:114
+msgid "Error: The response is not a valid JSON response."
+msgstr ""
+
+#: inc/codestar-framework/functions/actions.php:174
+msgid "Error: Invalid term ID."
+msgstr ""
+
+#: inc/codestar-framework/functions/actions.php:180
+msgid "Error: You do not have permission to do that."
+msgstr ""
+
+#: inc/codestar-framework/functions/validate.php:17
+#: inc/codestar-framework/functions/validate.php:89
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: inc/codestar-framework/functions/validate.php:35
+#: inc/codestar-framework/functions/validate.php:109
+msgid "Please enter a valid number."
+msgstr ""
+
+#: inc/codestar-framework/functions/validate.php:53
+#: inc/codestar-framework/functions/validate.php:129
+msgid "This field is required."
+msgstr ""
+
+#: inc/codestar-framework/functions/validate.php:71
+#: inc/codestar-framework/functions/validate.php:149
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: inc/theme-article.php:223
 msgid "评论正在提交中"
 msgstr ""
 
-#: inc/theme-article.php:211
+#: inc/theme-article.php:224
 msgid "评论提交成功"
 msgstr ""
 
-#: inc/theme-article.php:249 inc/theme-article.php:288
+#: inc/theme-article.php:266 inc/theme-article.php:311
 msgid "编辑"
 msgstr ""
 
-#: inc/theme-article.php:292 inc/theme-smtp.php:102
+#: inc/theme-article.php:317 inc/theme-smtp.php:103
 msgid "回复"
 msgstr ""
 
-#: inc/theme-article.php:347
+#: inc/theme-article.php:372
 msgid "添加表情"
 msgstr ""
 
-#: inc/theme-article.php:400
+#: inc/theme-article.php:429
 msgid "描述"
 msgstr ""
 
-#: inc/theme-article.php:405 inc/theme-options.php:302
+#: inc/theme-article.php:434 inc/theme-options.php:565
 msgid "关键词"
 msgstr ""
 
-#: inc/theme-article.php:411
+#: inc/theme-article.php:441
 msgid "SEO 设置"
 msgstr ""
 
-#: inc/theme-core.php:84
+#: inc/theme-core.php:94
 msgid "您已经赞过了"
 msgstr ""
 
-#: inc/theme-core.php:85
+#: inc/theme-core.php:95
 msgid "感谢您的支持"
 msgstr ""
 
-#: inc/theme-core.php:86
+#: inc/theme-core.php:96
 msgid "打赏作者"
 msgstr ""
 
-#: inc/theme-core.php:87
+#: inc/theme-core.php:97
 msgid "扫码支付"
-msgstr ""
-
-#: inc/theme-core.php:324
-msgid "错误：请进行真人验证"
 msgstr ""
 
 #: inc/theme-navwalker.php:22
@@ -285,898 +833,1237 @@ msgstr ""
 msgid "添加导航"
 msgstr ""
 
-#: inc/theme-options.php:53
-msgid "设置-阅读-对搜索引擎的可见性"
+#: inc/theme-options.php:69
+msgid "主题设置"
 msgstr ""
 
-#: inc/theme-options.php:56 single.php:110
-msgid "知识共享署名 4.0 国际许可协议"
-msgstr ""
-
-#: inc/theme-options.php:57 single.php:111
-msgid "知识共享署名-非商业性使用 4.0 国际许可协议"
-msgstr ""
-
-#: inc/theme-options.php:58 single.php:112
-msgid "知识共享署名-禁止演绎 4.0 国际许可协议"
-msgstr ""
-
-#: inc/theme-options.php:59 single.php:113
-msgid "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
-msgstr ""
-
-#: inc/theme-options.php:60 single.php:114
-msgid "知识共享署名-相同方式共享 4.0 国际许可协议"
-msgstr ""
-
-#: inc/theme-options.php:61 single.php:115
-msgid "知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议"
-msgstr ""
-
-#: inc/theme-options.php:65 inc/theme-options.php:616
-msgid "图片导航"
-msgstr ""
-
-#: inc/theme-options.php:66 inc/theme-options.php:608
-msgid "颜色导航"
-msgstr ""
-
-#: inc/theme-options.php:72
+#: inc/theme-options.php:79
 msgid "全站配置"
 msgstr ""
 
-#: inc/theme-options.php:77
-msgid "图片 Logo"
-msgstr ""
-
-#: inc/theme-options.php:78
-msgid "不选择图片则显示文字标题"
-msgstr ""
-
-#: inc/theme-options.php:84
-msgid "Favicon 图片"
-msgstr ""
-
 #: inc/theme-options.php:85
-msgid "浏览器收藏夹和地址栏中显示的图标"
+msgid "功能配置"
 msgstr ""
 
 #: inc/theme-options.php:91
-msgid "背景颜色"
-msgstr ""
-
-#: inc/theme-options.php:92
-msgid "全站页面的背景颜色，需填写十六进制颜色码"
-msgstr ""
-
-#: inc/theme-options.php:99
 msgid "前台管理员导航"
 msgstr ""
 
-#: inc/theme-options.php:100
-msgid "开启前台管理员导航"
+#: inc/theme-options.php:92
+msgid "启用/禁用前台管理员导航"
 msgstr ""
 
-#: inc/theme-options.php:107
+#: inc/theme-options.php:98
 msgid "侧边栏后台入口"
 msgstr ""
 
-#: inc/theme-options.php:108
-msgid "开启小工具个人简介头像进入后台功能"
+#: inc/theme-options.php:99
+msgid "启用/禁用个人简介头像进入后台功能"
 msgstr ""
 
-#: inc/theme-options.php:115
+#: inc/theme-options.php:105
+msgid "侧边栏随动"
+msgstr ""
+
+#: inc/theme-options.php:106
+msgid "启用/禁用小工具侧边栏随动功能"
+msgstr ""
+
+#: inc/theme-options.php:112
 msgid "搜索增强"
 msgstr ""
 
-#: inc/theme-options.php:116
-msgid "仅查找文章标题，而不全文搜索（适用于文章数量较多的站点）"
+#: inc/theme-options.php:113
+msgid "启用/禁用仅搜索文章标题"
 msgstr ""
 
-#: inc/theme-options.php:122
-msgid "CSS 动画库"
-msgstr ""
-
-#: inc/theme-options.php:123
-msgid "开启 animate.css 效果"
-msgstr ""
-
-#: inc/theme-options.php:130
-msgid "Font Awesome"
-msgstr ""
-
-#: inc/theme-options.php:131
-msgid "开启 Font Awesome 字体"
-msgstr ""
-
-#: inc/theme-options.php:138
-msgid "静态资源加速"
-msgstr ""
-
-#: inc/theme-options.php:139
-msgid "开启静态资源加速（CSS、JS、Font）"
-msgstr ""
-
-#: inc/theme-options.php:146
-msgid "自定义媒体文件名"
-msgstr ""
-
-#: inc/theme-options.php:147
-msgid "把图片类型的文件名改为 MD5 值命名"
-msgstr ""
-
-#: inc/theme-options.php:154
-msgid "把指定类型的文件名增加自定义前缀命名"
-msgstr ""
-
-#: inc/theme-options.php:160
-msgid "请输入需要添加的前缀，前缀与文件名之间默认用 - 连接"
-msgstr ""
-
-#: inc/theme-options.php:168
-msgid "请输入需要修改的类型，每个类型之间用 | 隔开"
-msgstr ""
-
-#: inc/theme-options.php:177
-msgid "禁止生成缩略图"
-msgstr ""
-
-#: inc/theme-options.php:178
-msgid "是否禁止生成多种尺寸图片资源"
-msgstr ""
-
-#: inc/theme-options.php:185
-msgid "媒体资源托管"
-msgstr ""
-
-#: inc/theme-options.php:186
-msgid "是否将媒体资源托管到 DogeCloud 存储"
-msgstr ""
-
-#: inc/theme-options.php:193
-msgid "存储空间名称"
-msgstr ""
-
-#: inc/theme-options.php:200
-msgid "加速域名"
-msgstr ""
-
-#: inc/theme-options.php:202
-msgid "例如：https://cdn.xxx.com"
-msgstr ""
-
-#: inc/theme-options.php:208
-msgid "AccessKey"
-msgstr ""
-
-#: inc/theme-options.php:215
-msgid "SecretKey"
-msgstr ""
-
-#: inc/theme-options.php:222
-msgid "Gutenberg 编辑器"
-msgstr ""
-
-#: inc/theme-options.php:223
-msgid "开启 Gutenberg 编辑器"
-msgstr ""
-
-#: inc/theme-options.php:230
-msgid "Gravatar 加速"
-msgstr ""
-
-#: inc/theme-options.php:231
-msgid "开启 Gravatar 头像加速"
-msgstr ""
-
-#: inc/theme-options.php:238
-msgid "腾讯云验证码"
-msgstr ""
-
-#: inc/theme-options.php:239
-msgid "开启后台登录页面验证码功能"
-msgstr ""
-
-#: inc/theme-options.php:246
-msgid "App ID"
-msgstr ""
-
-#: inc/theme-options.php:253
-msgid "App Secret Key"
-msgstr ""
-
-#: inc/theme-options.php:260
-msgid "Chrome 导航栏颜色"
-msgstr ""
-
-#: inc/theme-options.php:261
-msgid "Chrome 移动端浏览器导航栏的颜色"
-msgstr ""
-
-#: inc/theme-options.php:268 inc/theme-options.php:501
-msgid "微信二维码"
-msgstr ""
-
-#: inc/theme-options.php:269
-msgid "开启页面右下角浮动微信二维码"
-msgstr ""
-
-#: inc/theme-options.php:282
-msgid "404 页面图片"
-msgstr ""
-
-#: inc/theme-options.php:289
-msgid "收录配置"
-msgstr ""
-
-#: inc/theme-options.php:294
-msgid "分享图片"
-msgstr ""
-
-#: inc/theme-options.php:295
-msgid "搜索引擎或者社交工具分享首页时抓取的图片"
-msgstr ""
-
-#: inc/theme-options.php:303
-msgid "每个关键词之间需要用「英文逗号」分割"
-msgstr ""
-
-#: inc/theme-options.php:309
-msgid "站点描述"
-msgstr ""
-
-#: inc/theme-options.php:315
-msgid "统计代码"
-msgstr ""
-
-#: inc/theme-options.php:316
-msgid "注意：输入 HTML/JS 代码时请注意辨别代码安全！"
-msgstr ""
-
-#: inc/theme-options.php:322
-msgid "robots.txt 配置"
-msgstr ""
-
-#: inc/theme-options.php:323
-msgid "- 需要 "
-msgstr ""
-
-#: inc/theme-options.php:323
-msgid " 是开启的状态，下面的配置才会生效"
-msgstr ""
-
-#: inc/theme-options.php:328
-msgid "- 如果网站根目录下已经有 robots.txt 文件，下面的配置不会生效"
-msgstr ""
-
-#: inc/theme-options.php:333
-msgid "- 点击 "
-msgstr ""
-
-#: inc/theme-options.php:333
-msgid " 查看配置是否生效，如果网站开启了 CDN，可能需要刷新缓存才会生效"
-msgstr ""
-
-#: inc/theme-options.php:344
-msgid "首页配置"
-msgstr ""
-
-#: inc/theme-options.php:349
-msgid "哀悼功能"
-msgstr ""
-
-#: inc/theme-options.php:350
-msgid "开启站点首页黑白功能（用于R.I.P.）"
-msgstr ""
-
-#: inc/theme-options.php:356
+#: inc/theme-options.php:119
 msgid "特色图片"
 msgstr ""
 
-#: inc/theme-options.php:357
-msgid "开启站点首页特色图片功能"
+#: inc/theme-options.php:120
+msgid "启用/禁用文章特色图片"
 msgstr ""
 
-#: inc/theme-options.php:364
-msgid "默认特色图"
+#: inc/theme-options.php:126
+msgid "哀悼功能"
 msgstr ""
 
-#: inc/theme-options.php:365
-msgid "当文章中没有图片并且没有设置特色图时在首页显示"
+#: inc/theme-options.php:127
+msgid "启用/禁用站点首页黑白功能"
 msgstr ""
 
-#: inc/theme-options.php:373
+#: inc/theme-options.php:133
+msgid "CSS 动画库"
+msgstr ""
+
+#: inc/theme-options.php:134
+msgid "启用/禁用 animate.css 效果"
+msgstr ""
+
+#: inc/theme-options.php:140
+msgid "Font Awesome"
+msgstr ""
+
+#: inc/theme-options.php:141
+msgid "启用/禁用 Font Awesome Free 字体"
+msgstr ""
+
+#: inc/theme-options.php:147
+msgid "静态资源加速"
+msgstr ""
+
+#: inc/theme-options.php:148
+msgid "启用/禁用静态资源加速"
+msgstr ""
+
+#: inc/theme-options.php:154
+msgid "Gravatar 加速"
+msgstr ""
+
+#: inc/theme-options.php:155
+msgid "启用/禁用 Gravatar 头像加速"
+msgstr ""
+
+#: inc/theme-options.php:161
+msgid "自定义图片类型的文件名"
+msgstr ""
+
+#: inc/theme-options.php:162
+msgid "启用/禁用 图片类型的文件名改为 MD5 值"
+msgstr ""
+
+#: inc/theme-options.php:168
+msgid "禁止生成缩略图"
+msgstr ""
+
+#: inc/theme-options.php:169
+msgid "启用/禁用生成多种尺寸图片资源"
+msgstr ""
+
+#: inc/theme-options.php:175
+msgid "Gutenberg 编辑器"
+msgstr ""
+
+#: inc/theme-options.php:176
+msgid "启用/禁用 Gutenberg 编辑器"
+msgstr ""
+
+#: inc/theme-options.php:182
+msgid "文章简介缩略"
+msgstr ""
+
+#: inc/theme-options.php:183
+msgid "文章简介显示的字符数量"
+msgstr ""
+
+#: inc/theme-options.php:192
+msgid "附件重命名"
+msgstr ""
+
+#: inc/theme-options.php:197 inc/theme-options.php:232
+#: inc/theme-options.php:335 inc/theme-options.php:419
+#: inc/theme-options.php:480 inc/theme-options.php:650
+#: inc/theme-options.php:712 inc/theme-options.php:1062
+#: inc/theme-options.php:1101
+msgid "功能开关"
+msgstr ""
+
+#: inc/theme-options.php:198
+msgid "开启/关闭附件重命名"
+msgstr ""
+
+#: inc/theme-options.php:199 inc/theme-options.php:234
+#: inc/theme-options.php:337 inc/theme-options.php:421
+#: inc/theme-options.php:482 inc/theme-options.php:652
+#: inc/theme-options.php:714 inc/theme-options.php:1064
+#: inc/theme-options.php:1103
+msgid "开启"
+msgstr ""
+
+#: inc/theme-options.php:200 inc/theme-options.php:235
+#: inc/theme-options.php:338 inc/theme-options.php:422
+#: inc/theme-options.php:483 inc/theme-options.php:653
+#: inc/theme-options.php:715 inc/theme-options.php:1065
+#: inc/theme-options.php:1104
+msgid "关闭"
+msgstr ""
+
+#: inc/theme-options.php:205
+msgid "文件前缀"
+msgstr ""
+
+#: inc/theme-options.php:206
+msgid "前缀与文件名之间会用 - 连接"
+msgstr ""
+
+#: inc/theme-options.php:211
+msgid "文件类型"
+msgstr ""
+
+#: inc/theme-options.php:212
+msgid "每个类型之间用 | 隔开"
+msgstr ""
+
+#: inc/theme-options.php:227 inc/theme-options.php:720
+msgid "微信二维码"
+msgstr ""
+
+#: inc/theme-options.php:233
+msgid "开启/关闭微信二维码"
+msgstr ""
+
+#: inc/theme-options.php:240
+msgid "二维码图片"
+msgstr ""
+
+#: inc/theme-options.php:243
+msgid "浮动显示在页面右下角"
+msgstr ""
+
+#: inc/theme-options.php:256
+msgid "颜色配置"
+msgstr ""
+
+#: inc/theme-options.php:263
+msgid "全站背景颜色"
+msgstr ""
+
+#: inc/theme-options.php:264
+msgid "全站页面的背景颜色"
+msgstr ""
+
+#: inc/theme-options.php:270
+msgid "Chrome 导航栏颜色"
+msgstr ""
+
+#: inc/theme-options.php:271
+msgid "移动端 Chrome 浏览器导航栏颜色"
+msgstr ""
+
+#: inc/theme-options.php:278
+msgid "图片配置"
+msgstr ""
+
+#: inc/theme-options.php:284
+msgid "站点 Logo"
+msgstr ""
+
+#: inc/theme-options.php:287
+msgid "不上传图片则显示站点标题"
+msgstr ""
+
+#: inc/theme-options.php:292
+msgid "Favicon 图标"
+msgstr ""
+
+#: inc/theme-options.php:295
+msgid "浏览器收藏夹和地址栏中显示的图标"
+msgstr ""
+
+#: inc/theme-options.php:300
+msgid "404 页面图片"
+msgstr ""
+
+#: inc/theme-options.php:304
+msgid "图片显示出来是 404 的形状"
+msgstr ""
+
+#: inc/theme-options.php:309
 msgid "无内容图片"
 msgstr ""
 
-#: inc/theme-options.php:374
-msgid "当搜索不到文章或文章分类中没有文章时显示"
+#: inc/theme-options.php:313
+msgid "当搜索不到文章或分类没有文章时显示"
 msgstr ""
 
-#: inc/theme-options.php:381
+#: inc/theme-options.php:318
+msgid "默认特色图"
+msgstr ""
+
+#: inc/theme-options.php:322
+msgid "当文章中没有图片且没有特色图时显示"
+msgstr ""
+
+#: inc/theme-options.php:329
 msgid "首页轮播"
 msgstr ""
 
-#: inc/theme-options.php:382
-msgid "开启站点首页轮播功能"
+#: inc/theme-options.php:336
+msgid "开启/关闭首页轮播功能"
 msgstr ""
 
-#: inc/theme-options.php:388
-msgid "轮播一（图片）"
+#: inc/theme-options.php:352 inc/theme-options.php:1042
+#: inc/theme-options.php:1081
+msgid "唯一标识"
+msgstr ""
+
+#: inc/theme-options.php:353
+msgid "仅用于轮播标识，可以作为备注使用"
+msgstr ""
+
+#: inc/theme-options.php:358 inc/theme-options.php:1048
+#: inc/theme-options.php:1087
+msgid "轮播图片"
+msgstr ""
+
+#: inc/theme-options.php:359 inc/theme-options.php:1049
+#: inc/theme-options.php:1088
+msgid "可以直接填写图片链接，也可以上传图片"
+msgstr ""
+
+#: inc/theme-options.php:366 inc/theme-options.php:1056
+#: inc/theme-options.php:1095
+msgid "网址链接"
+msgstr ""
+
+#: inc/theme-options.php:367 inc/theme-options.php:1057
+#: inc/theme-options.php:1096
+msgid "需要填写完整的链接地址，包含协议头"
+msgstr ""
+
+#: inc/theme-options.php:372
+msgid "轮播标题"
+msgstr ""
+
+#: inc/theme-options.php:373 inc/theme-options.php:379
+msgid "选填项目，如果不填则不显示"
+msgstr ""
+
+#: inc/theme-options.php:378
+msgid "轮播简介"
+msgstr ""
+
+#: inc/theme-options.php:385
+msgid "文字颜色"
+msgstr ""
+
+#: inc/theme-options.php:386
+msgid "轮播标题和简介的颜色"
 msgstr ""
 
 #: inc/theme-options.php:395
-msgid "轮播一（网址）"
-msgstr ""
-
-#: inc/theme-options.php:402
-msgid "轮播二（图片）"
+msgid "第三方配置"
 msgstr ""
 
 #: inc/theme-options.php:409
-msgid "轮播二（网址）"
+msgid "DogeCloud 云存储"
 msgstr ""
 
-#: inc/theme-options.php:416
-msgid "轮播三（图片）"
+#: inc/theme-options.php:420
+msgid "开启/关闭 DogeCloud 云存储"
 msgstr ""
 
-#: inc/theme-options.php:423
-msgid "轮播三（网址）"
+#: inc/theme-options.php:427
+msgid "空间名称"
 msgstr ""
 
-#: inc/theme-options.php:430
-msgid "轮播四（图片）"
+#: inc/theme-options.php:428
+msgid "空间名称可在空间基本信息中查看"
 msgstr ""
 
-#: inc/theme-options.php:437
-msgid "轮播四（网址）"
+#: inc/theme-options.php:429
+msgid ""
+"<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">点击这"
+"里</a>查询空间名称"
 msgstr ""
 
-#: inc/theme-options.php:444
-msgid "轮播五（图片）"
+#: inc/theme-options.php:434 inc/theme-options.php:507
+msgid "加速域名"
 msgstr ""
 
-#: inc/theme-options.php:451
-msgid "轮播五（网址）"
+#: inc/theme-options.php:435 inc/theme-options.php:508
+msgid "域名结尾不要添加 /"
 msgstr ""
 
-#: inc/theme-options.php:458
-msgid "文章配置"
+#: inc/theme-options.php:436
+msgid ""
+"<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">点击这"
+"里</a>查询加速域名"
 msgstr ""
 
-#: inc/theme-options.php:463
-msgid "知识共享协议"
+#: inc/theme-options.php:441 inc/theme-options.php:521
+msgid "AccessKey"
 msgstr ""
 
-#: inc/theme-options.php:464
-msgid "开启文章知识共享协议"
+#: inc/theme-options.php:442 inc/theme-options.php:452
+#: inc/theme-options.php:522 inc/theme-options.php:532
+msgid "出于安全考虑，建议周期性地更换密钥"
+msgstr ""
+
+#: inc/theme-options.php:443
+msgid ""
+"<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">点击"
+"这里</a>查询 AccessKey"
+msgstr ""
+
+#: inc/theme-options.php:451 inc/theme-options.php:531
+msgid "SecretKey"
+msgstr ""
+
+#: inc/theme-options.php:453
+msgid ""
+"<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">点击"
+"这里</a>查询 SecretKey"
 msgstr ""
 
 #: inc/theme-options.php:470
-msgid "选择文章的知识共享协议"
+msgid "火山引擎 ImageX"
 msgstr ""
 
-#: inc/theme-options.php:479
-msgid "网易云音乐"
+#: inc/theme-options.php:481
+msgid "开启/关闭 火山引擎 ImageX"
 msgstr ""
 
-#: inc/theme-options.php:480
-msgid "开启网易云音乐自动播放"
+#: inc/theme-options.php:488
+msgid "加速地域"
 msgstr ""
 
-#: inc/theme-options.php:486
-msgid "文章打赏"
+#: inc/theme-options.php:489
+msgid "加速地域在创建服务的时候进行选择"
 msgstr ""
 
-#: inc/theme-options.php:487
-msgid "开启文章页面打赏功能"
+#: inc/theme-options.php:490
+msgid ""
+"<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/"
+"service_manage/\">点击这里</a>查询加速地域"
+msgstr ""
+
+#: inc/theme-options.php:492
+msgid "国内"
 msgstr ""
 
 #: inc/theme-options.php:493
-msgid "支付宝二维码"
+msgid "美东"
+msgstr ""
+
+#: inc/theme-options.php:494
+msgid "新加坡"
+msgstr ""
+
+#: inc/theme-options.php:500
+msgid "服务 ID"
+msgstr ""
+
+#: inc/theme-options.php:501
+msgid "服务 ID 可在图片服务管理中查看"
+msgstr ""
+
+#: inc/theme-options.php:502
+msgid ""
+"<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/"
+"service_manage/\">点击这里</a>查询服务 ID"
 msgstr ""
 
 #: inc/theme-options.php:509
-msgid "HOT 标签 - 评论数"
+msgid ""
+"<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/"
+"service_manage/\">点击这里</a>查询加速域名"
 msgstr ""
 
-#: inc/theme-options.php:510
-msgid "填写显示 HOT 标签需要的评论数"
+#: inc/theme-options.php:514
+msgid "处理模板"
 msgstr ""
 
-#: inc/theme-options.php:517
-msgid "HOT 标签 - 点赞数"
+#: inc/theme-options.php:515
+msgid "处理模板可在图片处理配置中查看"
 msgstr ""
 
-#: inc/theme-options.php:518
-msgid "填写显示 HOT 标签需要的点赞数"
+#: inc/theme-options.php:516
+msgid ""
+"<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/"
+"image_template/\">点击这里</a>查询处理模板"
 msgstr ""
 
-#: inc/theme-options.php:525
-msgid "页面布局"
+#: inc/theme-options.php:523
+msgid ""
+"<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/"
+"\">点击这里</a>查询 AccessKey"
 msgstr ""
 
-#: inc/theme-options.php:526
-msgid "是否显示侧边栏小工具（默认显示侧边栏），仅在文章页面生效"
+#: inc/theme-options.php:533
+msgid ""
+"<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/"
+"\">点击这里</a>查询 SecretKey"
 msgstr ""
 
-#: inc/theme-options.php:536
-msgid "邮件配置"
-msgstr ""
-
-#: inc/theme-options.php:541
-msgid "SMTP 服务"
-msgstr ""
-
-#: inc/theme-options.php:542
-msgid "开启 SMTP 服务功能"
-msgstr ""
-
-#: inc/theme-options.php:548
-msgid "邮件服务器"
-msgstr ""
-
-#: inc/theme-options.php:549
-msgid "填写发件服务器地址"
+#: inc/theme-options.php:550
+msgid "收录配置"
 msgstr ""
 
 #: inc/theme-options.php:556
-msgid "服务器端口"
+msgid "分享图片"
 msgstr ""
 
-#: inc/theme-options.php:557
-msgid "填写发件服务器端口"
+#: inc/theme-options.php:560
+msgid "用于搜索引擎或社交工具抓取时使用"
 msgstr ""
 
-#: inc/theme-options.php:564
-msgid "授权方式"
+#: inc/theme-options.php:566
+msgid "每个关键词之间需要用 , 分割"
 msgstr ""
 
-#: inc/theme-options.php:565
-msgid "填写登录鉴权的方式，ssl 或 tls"
+#: inc/theme-options.php:571
+msgid "站点描述"
 msgstr ""
 
 #: inc/theme-options.php:572
-msgid "邮箱帐号"
+msgid "网站首页的描述信息"
 msgstr ""
 
-#: inc/theme-options.php:573
-msgid "填写邮箱账号"
+#: inc/theme-options.php:576
+msgid "统计代码"
 msgstr ""
 
-#: inc/theme-options.php:580
-msgid "邮箱密码"
+#: inc/theme-options.php:577
+msgid "<span style=\"color:red\">输入代码时请注意辨别代码安全性</span>"
 msgstr ""
 
-#: inc/theme-options.php:581
-msgid "填写邮箱密码"
+#: inc/theme-options.php:592
+msgid "robots.txt 配置"
 msgstr ""
 
-#: inc/theme-options.php:594
-msgid "顶部配置"
+#: inc/theme-options.php:596
+msgid "- 需要 "
 msgstr ""
 
-#: inc/theme-options.php:599
-msgid "顶部样式"
+#: inc/theme-options.php:596
+msgid "设置-阅读-对搜索引擎的可见性"
 msgstr ""
 
-#: inc/theme-options.php:600
-msgid "请选择顶部样式（颜色导航或图片导航）"
+#: inc/theme-options.php:596
+msgid " 是开启的状态，以下配置才会生效"
+msgstr ""
+
+#: inc/theme-options.php:596
+msgid "- 如果网站根目录下已经有 robots.txt 文件，下面的配置不会生效"
+msgstr ""
+
+#: inc/theme-options.php:596
+msgid "- 点击 "
+msgstr ""
+
+#: inc/theme-options.php:596
+msgid " 查看配置是否生效，如果网站开启了 CDN，可能需要刷新缓存才会生效"
+msgstr ""
+
+#: inc/theme-options.php:611
+msgid "文章配置"
+msgstr ""
+
+#: inc/theme-options.php:617
+msgid "网易云音乐"
+msgstr ""
+
+#: inc/theme-options.php:618
+msgid "启用/禁用网易云音乐自动播放功能"
 msgstr ""
 
 #: inc/theme-options.php:624
-msgid "副标题"
+msgid "附加功能"
+msgstr ""
+
+#: inc/theme-options.php:625
+msgid "启用/禁用文章自动保存、修订版本功能"
+msgstr ""
+
+#: inc/theme-options.php:631
+msgid "页面布局"
 msgstr ""
 
 #: inc/theme-options.php:632
-msgid "标题描述"
-msgstr ""
-
-#: inc/theme-options.php:640
-msgid "页脚配置"
+msgid "差异在于侧边栏小工具，仅在文章页面生效"
 msgstr ""
 
 #: inc/theme-options.php:645
-msgid "选择需要开启的社交图标"
-msgstr ""
-
-#: inc/theme-options.php:646
-msgid "国内平台"
+msgid "知识共享协议"
 msgstr ""
 
 #: inc/theme-options.php:651
-msgid "新浪微博"
+msgid "开启/关闭 知识共享协议"
 msgstr ""
 
 #: inc/theme-options.php:658
-msgid "例如：https://weibo.com/xxxxx"
+msgid "协议名称"
 msgstr ""
 
-#: inc/theme-options.php:664
-msgid "哔哩哔哩"
+#: inc/theme-options.php:659
+msgid "选择文章的知识共享协议"
 msgstr ""
 
-#: inc/theme-options.php:671
-msgid "例如：https://space.bilibili.com/xxxxx"
+#: inc/theme-options.php:661 single.php:123
+msgid "知识共享署名 4.0 国际许可协议"
 msgstr ""
 
-#: inc/theme-options.php:677
-msgid "CODING"
+#: inc/theme-options.php:662 single.php:124
+msgid "知识共享署名-非商业性使用 4.0 国际许可协议"
 msgstr ""
 
-#: inc/theme-options.php:684
-msgid "例如：https://xxxxx.coding.net/u/xxxxx"
+#: inc/theme-options.php:663 single.php:125
+msgid "知识共享署名-禁止演绎 4.0 国际许可协议"
 msgstr ""
 
-#: inc/theme-options.php:690
-msgid "码云 Gitee"
+#: inc/theme-options.php:664 single.php:126
+msgid "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
 msgstr ""
 
-#: inc/theme-options.php:697
-msgid "例如：https://gitee.com/xxxxx"
+#: inc/theme-options.php:665 single.php:127
+msgid "知识共享署名-相同方式共享 4.0 国际许可协议"
 msgstr ""
 
-#: inc/theme-options.php:703
-msgid "海外平台"
+#: inc/theme-options.php:666 single.php:128
+msgid "知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议"
 msgstr ""
 
-#: inc/theme-options.php:708
-msgid "Twitter"
+#: inc/theme-options.php:681
+msgid "文章 HOT 标签"
 msgstr ""
 
-#: inc/theme-options.php:715
-msgid "例如：https://twitter.com/xxxxx"
+#: inc/theme-options.php:686
+msgid "评论数"
 msgstr ""
 
-#: inc/theme-options.php:721
-msgid "Telegram"
+#: inc/theme-options.php:687
+msgid "填写显示 HOT 标签需要的评论数"
 msgstr ""
 
-#: inc/theme-options.php:728
-msgid "例如：https://t.me/xxxxx"
+#: inc/theme-options.php:692
+msgid "点赞数"
 msgstr ""
 
-#: inc/theme-options.php:734
-msgid "LinkedIn"
+#: inc/theme-options.php:693
+msgid "填写显示 HOT 标签需要的点赞数"
 msgstr ""
 
-#: inc/theme-options.php:741
-msgid "例如：https://www.linkedin.com/in/xxxxx"
+#: inc/theme-options.php:707
+msgid "文章打赏"
 msgstr ""
 
-#: inc/theme-options.php:747
-msgid "YouTube"
+#: inc/theme-options.php:713
+msgid "开启/关闭 文章打赏"
 msgstr ""
 
-#: inc/theme-options.php:754
-msgid "例如：https://www.youtube.com/channel/xxxxx"
+#: inc/theme-options.php:727
+msgid "支付宝二维码"
 msgstr ""
 
-#: inc/theme-options.php:760
-msgid "Github"
+#: inc/theme-options.php:742
+msgid "邮件配置"
 msgstr ""
 
-#: inc/theme-options.php:767
-msgid "例如：https://github.com/xxxxx"
+#: inc/theme-options.php:748
+msgid "SMTP 服务"
 msgstr ""
 
-#: inc/theme-options.php:773
-msgid "Stack Overflow"
+#: inc/theme-options.php:749
+msgid "启用/禁用 SMTP 服务"
 msgstr ""
 
-#: inc/theme-options.php:780
-msgid "例如：https://stackoverflow.com/users/xxxxx"
+#: inc/theme-options.php:755
+msgid "邮件服务器"
 msgstr ""
 
-#: inc/theme-options.php:786
-msgid "其他"
+#: inc/theme-options.php:756
+msgid "填写发件服务器地址"
 msgstr ""
 
-#: inc/theme-options.php:791
-msgid "电子邮箱"
+#: inc/theme-options.php:757
+msgid "smtp.example.com"
 msgstr ""
 
-#: inc/theme-options.php:798
-msgid "例如：mailto:xxxxx@gmail.com"
+#: inc/theme-options.php:762
+msgid "服务器端口"
 msgstr ""
 
-#: inc/theme-options.php:804
-msgid "工信部备案信息"
+#: inc/theme-options.php:763
+msgid "填写发件服务器端口"
 msgstr ""
 
-#: inc/theme-options.php:806
-msgid "例如：京ICP证xxxxxx号"
+#: inc/theme-options.php:764
+msgid "465"
 msgstr ""
 
-#: inc/theme-options.php:811
-msgid "公安网备案信息"
+#: inc/theme-options.php:769
+msgid "授权方式"
+msgstr ""
+
+#: inc/theme-options.php:770
+msgid "填写登录鉴权的方式"
+msgstr ""
+
+#: inc/theme-options.php:771
+msgid "ssl"
+msgstr ""
+
+#: inc/theme-options.php:776
+msgid "邮箱帐号"
+msgstr ""
+
+#: inc/theme-options.php:777
+msgid "填写邮箱账号"
+msgstr ""
+
+#: inc/theme-options.php:778
+msgid "user@example.com"
+msgstr ""
+
+#: inc/theme-options.php:783
+msgid "邮箱密码"
+msgstr ""
+
+#: inc/theme-options.php:784
+msgid "填写邮箱密码"
+msgstr ""
+
+#: inc/theme-options.php:794
+msgid "顶部配置"
+msgstr ""
+
+#: inc/theme-options.php:800 inc/theme-options.php:806
+msgid "图片导航"
+msgstr ""
+
+#: inc/theme-options.php:807
+msgid "启用/禁用 图片导航"
 msgstr ""
 
 #: inc/theme-options.php:813
-msgid "例如：京公网安备 xxxxxxxxxxxx号"
+msgid "顶部图片"
 msgstr ""
 
-#: inc/theme-options.php:818
-msgid "公安网备案连接"
+#: inc/theme-options.php:821
+msgid "图片标题"
 msgstr ""
 
-#: inc/theme-options.php:820
+#. Theme Name of the plugin/theme
+#: inc/theme-options.php:822
+msgid "Kratos"
+msgstr ""
+
+#: inc/theme-options.php:827
+msgid "标题描述"
+msgstr ""
+
+#: inc/theme-options.php:835 inc/theme-options.php:842
+msgid "颜色导航"
+msgstr ""
+
+#: inc/theme-options.php:849
+msgid "页脚配置"
+msgstr ""
+
+#: inc/theme-options.php:855
+msgid "社交图标"
+msgstr ""
+
+#: inc/theme-options.php:864
+msgid "国内平台"
+msgstr ""
+
+#: inc/theme-options.php:869
+msgid "新浪微博"
+msgstr ""
+
+#: inc/theme-options.php:870
+msgid "https://weibo.com/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:875
+msgid "哔哩哔哩"
+msgstr ""
+
+#: inc/theme-options.php:876
+msgid "https://space.bilibili.com/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:881
+msgid "CODING"
+msgstr ""
+
+#: inc/theme-options.php:882
+msgid "https://xxxxx.coding.net/u/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:887
+msgid "码云"
+msgstr ""
+
+#: inc/theme-options.php:888
+msgid "https://gitee.com/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:893
+msgid "豆瓣"
+msgstr ""
+
+#: inc/theme-options.php:894
+msgid "https://www.douban.com/people/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:904
+msgid "海外平台"
+msgstr ""
+
+#: inc/theme-options.php:909
+msgid "Twitter"
+msgstr ""
+
+#: inc/theme-options.php:910
+msgid "https://twitter.com/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:915
+msgid "Telegram"
+msgstr ""
+
+#: inc/theme-options.php:916
+msgid "https://t.me/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:921
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/theme-options.php:922
+msgid "https://www.linkedin.com/in/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:927
+msgid "YouTube"
+msgstr ""
+
+#: inc/theme-options.php:928
+msgid "https://www.youtube.com/channel/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:933
+msgid "Github"
+msgstr ""
+
+#: inc/theme-options.php:934
+msgid "https://github.com/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:939
+msgid "Stack Overflow"
+msgstr ""
+
+#: inc/theme-options.php:940
+msgid "https://stackoverflow.com/users/xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:950
+msgid "其他"
+msgstr ""
+
+#: inc/theme-options.php:955
+msgid "电子邮箱"
+msgstr ""
+
+#: inc/theme-options.php:956
+msgid "mailto:xxxxx@example.com"
+msgstr ""
+
+#: inc/theme-options.php:979
+msgid "备案信息"
+msgstr ""
+
+#: inc/theme-options.php:985
+msgid "工信部备案信息"
+msgstr ""
+
+#: inc/theme-options.php:986
 msgid ""
-"例如：http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
+"由<a target=\"_blank\" href=\"https://beian.miit.gov.cn/\">工业和信息化部政"
+"务服务平台</a>提供"
 msgstr ""
 
-#: inc/theme-options.php:825
+#: inc/theme-options.php:987
+msgid "冀ICP证XXXXXX号"
+msgstr ""
+
+#: inc/theme-options.php:992
+msgid "公安备案信息"
+msgstr ""
+
+#: inc/theme-options.php:993 inc/theme-options.php:1000
+msgid ""
+"由<a target=\"_blank\" href=\"http://www.beian.gov.cn/\">全国互联网安全管理"
+"服务平台</a>提供"
+msgstr ""
+
+#: inc/theme-options.php:994
+msgid "冀公网安备 XXXXXXXXXXXXX 号"
+msgstr ""
+
+#: inc/theme-options.php:999
+msgid "公安备案链接"
+msgstr ""
+
+#: inc/theme-options.php:1001
+msgid "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
+msgstr ""
+
+#: inc/theme-options.php:1008 inc/theme-options.php:1014
 msgid "版权信息"
 msgstr ""
 
-#: inc/theme-options.php:832
+#: inc/theme-options.php:1022
 msgid "广告配置"
 msgstr ""
 
-#: inc/theme-options.php:837
-msgid "文章页面广告"
+#: inc/theme-options.php:1028
+msgid "文章广告"
 msgstr ""
 
-#: inc/theme-options.php:838
-msgid "开启顶部广告"
+#: inc/theme-options.php:1043 inc/theme-options.php:1082
+msgid "仅用于识别广告内容，可以作为备注使用"
 msgstr ""
 
-#: inc/theme-options.php:851 inc/theme-options.php:871
-msgid "选填广告连接，如果不填则只显示图片"
+#: inc/theme-options.php:1063 inc/theme-options.php:1102
+msgid "开启/关闭此条广告"
 msgstr ""
 
-#: inc/theme-options.php:858
-msgid "开启底部广告"
+#: inc/theme-options.php:1113
+msgid "备份恢复"
 msgstr ""
 
-#: inc/theme-options.php:878
+#: inc/theme-options.php:1123
 msgid "关于主题"
 msgstr ""
 
-#: inc/theme-setting.php:22
+#: inc/theme-options.php:1128
+msgid "基础信息"
+msgstr ""
+
+#: inc/theme-options.php:1133
+msgid "提示：在反馈主题相关的问题时，请同时复制并提交下面的内容。"
+msgstr ""
+
+#: inc/theme-options.php:1137
+msgid "PHP 版本："
+msgstr ""
+
+#: inc/theme-options.php:1137
+msgid "Kratos 版本："
+msgstr ""
+
+#: inc/theme-options.php:1137
+msgid "WordPress 版本："
+msgstr ""
+
+#: inc/theme-options.php:1137
+msgid "User Agent 信息："
+msgstr ""
+
+#: inc/theme-options.php:1142
+msgid "资料文档"
+msgstr ""
+
+#: inc/theme-options.php:1146
+msgid "说明文档："
+msgstr ""
+
+#: inc/theme-options.php:1146
+msgid "问题反馈："
+msgstr ""
+
+#: inc/theme-options.php:1146
+msgid "常见问题："
+msgstr ""
+
+#: inc/theme-options.php:1146
+msgid "更新日志："
+msgstr ""
+
+#: inc/theme-options.php:1146
+msgid "捐赠记录："
+msgstr ""
+
+#: inc/theme-options.php:1150
+msgid "版权声明"
+msgstr ""
+
+#: inc/theme-options.php:1154
+msgid ""
+"主题源码使用 <a href=\"https://github.com/vtrois/kratos/blob/main/LICENSE"
+"\" target=\"_blank\">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href="
+"\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank"
+"\">CC BY-NC-ND 4.0</a> 进行许可。"
+msgstr ""
+
+#: inc/theme-options.php:1158
+msgid "讨论交流"
+msgstr ""
+
+#: inc/theme-options.php:1166
+msgid "打赏支持"
+msgstr ""
+
+#: inc/theme-setting.php:23
 #, php-format
 msgid "第 %s 页"
 msgstr ""
 
-#: inc/theme-shortcode.php:105 inc/theme-shortcode.php:117
-#: inc/theme-shortcode.php:129 inc/theme-shortcode.php:141
-#: inc/theme-shortcode.php:217
+#: inc/theme-shortcode.php:106 inc/theme-shortcode.php:118
+#: inc/theme-shortcode.php:130 inc/theme-shortcode.php:142
+#: inc/theme-shortcode.php:218
 msgid "标题内容"
 msgstr ""
 
-#: inc/theme-shortcode.php:180
+#: inc/theme-shortcode.php:181
 msgid ""
 "温馨提示：此处内容已隐藏，<a href=\"#comments\">回复</a>后刷新页面即可查"
 "看！"
 msgstr ""
 
-#: inc/theme-smtp.php:38
+#: inc/theme-smtp.php:39
 msgid "[通知]您的留言已经通过审核"
 msgstr ""
 
-#: inc/theme-smtp.php:46 inc/theme-smtp.php:96
+#: inc/theme-smtp.php:47 inc/theme-smtp.php:97
 msgid "您好，"
 msgstr ""
 
-#: inc/theme-smtp.php:47
+#: inc/theme-smtp.php:48
 msgid "您的留言已经通过了管理员的审核，摘要信息如下："
 msgstr ""
 
-#: inc/theme-smtp.php:51
+#: inc/theme-smtp.php:52
 msgid "文章"
 msgstr ""
 
-#: inc/theme-smtp.php:52
+#: inc/theme-smtp.php:53
 msgid "内容"
 msgstr ""
 
-#: inc/theme-smtp.php:53 inc/theme-smtp.php:104
+#: inc/theme-smtp.php:54 inc/theme-smtp.php:105
 msgid "操作"
 msgstr ""
 
-#: inc/theme-smtp.php:65 inc/theme-smtp.php:117
+#: inc/theme-smtp.php:66 inc/theme-smtp.php:118
 msgid "该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。"
 msgstr ""
 
-#: inc/theme-smtp.php:88
+#: inc/theme-smtp.php:89
 msgid "[通知]您的留言有了新的回复"
 msgstr ""
 
-#: inc/theme-smtp.php:97
+#: inc/theme-smtp.php:98
 msgid "您的留言有了新的回复，摘要信息如下："
 msgstr ""
 
-#: inc/theme-smtp.php:101
+#: inc/theme-smtp.php:102
 msgid "原文"
 msgstr ""
 
-#: inc/theme-smtp.php:103
+#: inc/theme-smtp.php:104
 msgid "作者"
 msgstr ""
 
-#: inc/theme-smtp.php:112
+#: inc/theme-smtp.php:113
 msgid "查看回复"
 msgstr ""
 
-#: inc/theme-widgets.php:13
-msgid "侧边栏工具"
+#: inc/theme-widgets.php:14
+msgid "主页侧边栏"
 msgstr ""
 
-#: inc/theme-widgets.php:71
+#: inc/theme-widgets.php:22
+msgid "文章侧边栏"
+msgstr ""
+
+#: inc/theme-widgets.php:30
+msgid "页面侧边栏"
+msgstr ""
+
+#: inc/theme-widgets.php:62 inc/theme-widgets.php:71
+msgid "篇"
+msgstr ""
+
+#: inc/theme-widgets.php:104
+msgid "刚刚"
+msgstr ""
+
+#: inc/theme-widgets.php:106
 msgid " 年前"
 msgstr ""
 
-#: inc/theme-widgets.php:71 inc/theme-widgets.php:72 inc/theme-widgets.php:73
-#: inc/theme-widgets.php:74 inc/theme-widgets.php:75 inc/theme-widgets.php:76
-#: inc/theme-widgets.php:77
-msgid "m月d日"
-msgstr ""
-
-#: inc/theme-widgets.php:72
+#: inc/theme-widgets.php:107
 msgid " 个月前"
 msgstr ""
 
-#: inc/theme-widgets.php:73
+#: inc/theme-widgets.php:108
 msgid " 周前"
 msgstr ""
 
-#: inc/theme-widgets.php:74
+#: inc/theme-widgets.php:109
 msgid " 天前"
 msgstr ""
 
-#: inc/theme-widgets.php:75
+#: inc/theme-widgets.php:110
 msgid " 小时前"
 msgstr ""
 
-#: inc/theme-widgets.php:76
+#: inc/theme-widgets.php:111
 msgid " 分钟前"
 msgstr ""
 
-#: inc/theme-widgets.php:77
+#: inc/theme-widgets.php:112
 msgid " 秒前"
 msgstr ""
 
-#: inc/theme-widgets.php:115
+#: inc/theme-widgets.php:148
+msgid "匿名"
+msgstr ""
+
+#: inc/theme-widgets.php:153
 msgid "发布于 "
 msgstr ""
 
-#: inc/theme-widgets.php:126
+#: inc/theme-widgets.php:153
+msgid "m月d日"
+msgstr ""
+
+#: inc/theme-widgets.php:169
 msgid "A search form for your site."
 msgstr ""
 
-#: inc/theme-widgets.php:129
+#: inc/theme-widgets.php:172
 msgctxt "Search widget"
 msgid "Search"
 msgstr ""
 
-#: inc/theme-widgets.php:140
+#: inc/theme-widgets.php:184
 msgid "搜索"
 msgstr ""
 
-#: inc/theme-widgets.php:148
+#: inc/theme-widgets.php:193
 msgid "Title:"
 msgstr ""
 
-#: inc/theme-widgets.php:168
+#: inc/theme-widgets.php:213
 msgid "图片广告"
 msgstr ""
 
-#: inc/theme-widgets.php:169
+#: inc/theme-widgets.php:214
 msgid "显示自定义图片广告的工具"
 msgstr ""
 
-#: inc/theme-widgets.php:185 inc/theme-widgets.php:207
+#: inc/theme-widgets.php:230 inc/theme-widgets.php:252
 msgid "广告"
 msgstr ""
 
-#: inc/theme-widgets.php:213
+#: inc/theme-widgets.php:258
 msgid "副标题："
 msgstr ""
 
-#: inc/theme-widgets.php:217
+#: inc/theme-widgets.php:262
 msgid "链接地址："
 msgstr ""
 
-#: inc/theme-widgets.php:221
+#: inc/theme-widgets.php:266
 msgid "广告图片:"
 msgstr ""
 
-#: inc/theme-widgets.php:223 inc/theme-widgets.php:293
+#: inc/theme-widgets.php:268 inc/theme-widgets.php:338
 msgid "选择图片"
 msgstr ""
 
-#: inc/theme-widgets.php:237
+#: inc/theme-widgets.php:282
 msgid "个人简介"
 msgstr ""
 
-#: inc/theme-widgets.php:238
+#: inc/theme-widgets.php:283
 msgid "站长个人简介的展示工具"
 msgstr ""
 
-#: inc/theme-widgets.php:254
-msgid "保持饥渴的专注，追求最佳的品质"
+#: inc/theme-widgets.php:299 pages/page-toolbar.php:14
+msgid "这个人很懒，什么都没留下"
 msgstr ""
 
-#. Theme Name of the plugin/theme
-#: inc/theme-widgets.php:255
-msgid "Kratos"
-msgstr ""
-
-#: inc/theme-widgets.php:291
+#: inc/theme-widgets.php:336
 msgid "背景图片:"
 msgstr ""
 
-#: inc/theme-widgets.php:305 inc/theme-widgets.php:328
+#: inc/theme-widgets.php:350 inc/theme-widgets.php:374
 msgid "标签聚合"
 msgstr ""
 
-#: inc/theme-widgets.php:306
+#: inc/theme-widgets.php:351
 msgid "文章标签的展示工具"
 msgstr ""
 
-#: inc/theme-widgets.php:351
+#: inc/theme-widgets.php:397
 msgid "显示数量："
 msgstr ""
 
-#: inc/theme-widgets.php:355
+#: inc/theme-widgets.php:401
 msgid "显示排序："
 msgstr ""
 
-#: inc/theme-widgets.php:357
+#: inc/theme-widgets.php:403
 msgid "降序"
 msgstr ""
 
-#: inc/theme-widgets.php:358
+#: inc/theme-widgets.php:404
 msgid "升序"
 msgstr ""
 
-#: inc/theme-widgets.php:359 inc/theme-widgets.php:390
-#: inc/theme-widgets.php:395 inc/theme-widgets.php:446
+#: inc/theme-widgets.php:405 inc/theme-widgets.php:436
+#: inc/theme-widgets.php:441 inc/theme-widgets.php:496
 msgid "随机"
 msgstr ""
 
-#: inc/theme-widgets.php:372
+#: inc/theme-widgets.php:418
 msgid "文章聚合"
 msgstr ""
 
-#: inc/theme-widgets.php:373
+#: inc/theme-widgets.php:419
 msgid "展示最热、随机、最新文章的工具"
 msgstr ""
 
-#: inc/theme-widgets.php:388 inc/theme-widgets.php:393
-#: inc/theme-widgets.php:444
+#: inc/theme-widgets.php:434 inc/theme-widgets.php:439
+#: inc/theme-widgets.php:494
 msgid "最新"
 msgstr ""
 
-#: inc/theme-widgets.php:389 inc/theme-widgets.php:394
-#: inc/theme-widgets.php:445
+#: inc/theme-widgets.php:435 inc/theme-widgets.php:440
+#: inc/theme-widgets.php:495
 msgid "热点"
 msgstr ""
 
-#: inc/theme-widgets.php:434 inc/theme-widgets.php:497
+#: inc/theme-widgets.php:484 inc/theme-widgets.php:547
 msgid "展示数量："
 msgstr ""
 
-#: inc/theme-widgets.php:438
+#: inc/theme-widgets.php:488
 msgid "统计天数："
 msgstr ""
 
-#: inc/theme-widgets.php:442
+#: inc/theme-widgets.php:492
 msgid "默认显示："
 msgstr ""
 
-#: inc/theme-widgets.php:459 inc/theme-widgets.php:469
-#: inc/theme-widgets.php:489
+#: inc/theme-widgets.php:509 inc/theme-widgets.php:519
+#: inc/theme-widgets.php:539
 msgid "最近评论"
 msgstr ""
 
-#: inc/theme-widgets.php:460
+#: inc/theme-widgets.php:510
 msgid "展示站点最近的评论"
 msgstr ""
 
-#: inc/theme-widgets.php:493
+#: inc/theme-widgets.php:543
 msgid "栏目标题："
+msgstr ""
+
+#: inc/theme-widgets.php:562
+msgid "文章目录"
+msgstr ""
+
+#: inc/theme-widgets.php:563
+msgid "仅在有目录规则的文章中显示目录的工具"
 msgstr ""
 
 #: inc/update-checker/Puc/v4p10/Plugin/Ui.php:54
@@ -1219,88 +2106,84 @@ msgstr ""
 msgid "There is no changelog available."
 msgstr ""
 
-#: index.php:18
+#: index.php:23
 msgid "搜索内容："
 msgstr ""
 
-#: index.php:36
+#: index.php:42
 msgid "很抱歉，没有找到任何内容"
 msgstr ""
 
-#: page.php:27 single.php:75
+#: page.php:33 single.php:90
 msgid "<span>上一页</span>"
 msgstr ""
 
-#: page.php:46 single.php:94
+#: page.php:52 single.php:109
 msgid "<span>下一页</span>"
 msgstr ""
 
-#: pages/page-content.php:31
+#: pages/page-content.php:36
 msgid "页面"
 msgstr ""
 
-#: pages/page-content.php:43 single.php:54
+#: pages/page-content.php:49 single.php:67
 msgid "条评论"
 msgstr ""
 
-#: pages/page-content.php:46 single.php:52
+#: pages/page-content.php:53 single.php:59
 msgid "点热度"
 msgstr ""
 
-#: pages/page-content.php:47 single.php:53
+#: pages/page-content.php:59 single.php:65
 msgid "人点赞"
 msgstr ""
 
-#: pages/page-content.php:51
+#: pages/page-content.php:63
 msgid "阅读全文"
 msgstr ""
 
-#: pages/page-toolbar.php:13
-msgid "这个人很懒，什么都没留下"
-msgstr ""
-
-#: pages/page-toolbar.php:17
+#: pages/page-toolbar.php:18
 msgid "打赏"
 msgstr ""
 
-#: pages/page-toolbar.php:19
+#: pages/page-toolbar.php:20
 msgid "点赞"
 msgstr ""
 
-#: single.php:25
+#: single.php:31
 msgid "首页"
 msgstr ""
 
-#: single.php:45
+#: single.php:51
 msgid "正文"
 msgstr ""
 
-#: single.php:55
+#: single.php:70
 msgid "编辑文章"
 msgstr ""
 
-#: single.php:119
+#: single.php:132
 #, php-format
 msgid "本作品采用 %s 进行许可"
 msgstr ""
 
-#: single.php:124
+#: single.php:137
 msgid "标签："
 msgstr ""
 
-#: single.php:125
+#: single.php:141
 msgid "暂无"
 msgstr ""
 
-#: single.php:128 single.php:129
+#: single.php:145
 msgid "最后更新："
 msgstr ""
 
-#: single.php:140
+#: single.php:155
 msgid "< 上一篇"
 msgstr ""
 
-#: single.php:144
+#: single.php:159
 msgid "下一篇 >"
 msgstr ""
 

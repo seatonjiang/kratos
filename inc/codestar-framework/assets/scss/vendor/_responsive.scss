@@ -1,0 +1,166 @@
+/**
+ * 12. Responsive
+ */
+@media only screen and (max-width:1200px){
+
+  .csf-metabox{
+
+    .csf-field{
+
+      .csf-title{
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .csf-fieldset{
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:782px){
+
+  .csf-header-inner{
+    text-align: center;
+
+    h1{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .csf-form-result{
+    float: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .csf-search,
+  .csf-header-right,
+  .csf-header-left{
+    width: 100%;
+  }
+
+  .csf-search{
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .csf-footer{
+    text-align: center;
+  }
+
+  .csf-buttons{
+    float: none;
+  }
+
+  .csf-copyright{
+    float: none;
+    margin-top: 10px;
+  }
+
+  .csf-nav,
+  .csf-expand-all,
+  .csf-reset-section,
+  .csf-nav-background{
+    display: none !important;
+  }
+
+  .csf-nav-normal + .csf-content{
+    margin-left: 0;
+  }
+
+  .csf-section-title,
+  .csf-section{
+    display: block !important;
+  }
+
+  .csf-field{
+
+    .csf-title{
+      float: none;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .csf-fieldset{
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .csf-field-color{
+
+    .button.wp-picker-clear{
+      padding: 0 8px;
+      line-height: 2.14285714;
+      min-height: 32px;
+    }
+  }
+
+  .csf-modal-inner{
+    width: 350px;
+    height: 400px;
+  }
+
+  .csf-modal-content{
+    height: 237px;
+  }
+
+  .csf-icon-dialog{
+
+    .csf-modal-inner{
+      width: 305px;
+      height: 380px;
+    }
+
+    .csf-modal-content{
+      height: 267px;
+    }
+  }
+
+  .csf-modal-icon{
+
+    .csf-modal-inner{
+      width: 330px;
+      height: 385px;
+    }
+
+    .csf-modal-content{
+      height: 252px;
+    }
+  }
+
+  .csf-profile-options,
+  .csf-taxonomy-edit-fields{
+
+    > .csf-field{
+
+      > .csf-title{
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      > .csf-fieldset{
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+
+  .csf-nav-menu-options{
+
+    > .csf-fields{
+      margin-left: -10px;
+      margin-right: -10px;
+
+      > .csf-field{
+        padding: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,303 @@
+/**
+ * 02. Themes
+ */
+
+/**
+ * 02. 01. Theme Dark
+ */
+.csf-theme-dark{
+
+  .csf-header-inner{
+    background-color: #050505;
+
+    h1{
+      color: #fff;
+
+      small{
+        color: #555;
+      }
+    }
+  }
+
+  .csf-expand-all{
+    color: #999;
+    background-color: #222;
+
+    &:hover{
+      color: #fff;
+      background-color: #333;
+    }
+  }
+
+  .csf-search{
+
+    input{
+      color: #fff;
+      background-color: #222;
+    }
+
+    &:focus{
+      background-color: #444;
+    }
+
+    &::-webkit-input-placeholder{
+      color: #666;
+    }
+  }
+
+  .csf-nav{
+
+    ul{
+
+      li{
+
+        a{
+          color: #999;
+          border-color: #2f2f2f;
+          background-color: #222;
+
+          &:hover{
+            color: #fff;
+          }
+        }
+
+        .csf-active{
+          color: #fff;
+          background-color: #111;
+        }
+      }
+
+      ul{
+
+        li{
+
+          a{
+            border-color: #2f2f2f;
+            background-color: #191919;
+          }
+
+          .csf-active{
+            background-color: #101010;
+          }
+        }
+
+        &:before{
+          background-color: rgba(#222, 0.75);
+        }
+      }
+    }
+
+    > ul > li:last-child > a{
+      border: none;
+    }
+  }
+
+  .csf-nav-normal{
+
+    ul{
+
+      li{
+
+        a{
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+        }
+
+        .csf-active:after{
+          content: " ";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          height: 0;
+          width: 0;
+          pointer-events: none;
+          border: solid transparent;
+          border-right-color: #fff;
+          border-width: 4px;
+          margin-top: -4px;
+        }
+      }
+    }
+  }
+
+  .csf-nav-inline{
+    background-color: #222;
+
+    ul{
+
+      li{
+
+        a{
+          text-align: center;
+          border-right-width: 1px;
+          border-right-style: solid;
+        }
+
+        .csf-active:after{
+          content: " ";
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          height: 0;
+          width: 0;
+          pointer-events: none;
+          border: solid transparent;
+          border-bottom-color: #fff;
+          border-width: 4px;
+          margin-left: -4px;
+        }
+      }
+    }
+  }
+
+  .csf-nav-background{
+    background-color: #222;
+  }
+
+  .csf-footer{
+    color: #555;
+    background-color: #050505;
+  }
+}
+
+/**
+ * 02. 02. Theme Light
+ */
+.csf-theme-light{
+
+  .csf-container{
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 0 15 rgba(0,0,0,0.04);
+  }
+
+  .csf-header-inner{
+    border-bottom: 1px solid #ccd0d4;
+    background-color: #f5f5f5;
+    background: linear-gradient(#fefefe, #f5f5f5);
+
+    h1{
+
+      small{
+        color: #999;
+      }
+    }
+  }
+
+  .csf-expand-all{
+    color: #999;
+    background-color: #eee;
+
+    &:hover{
+      color: #555;
+    }
+  }
+
+  .csf-search{
+
+    input{
+      color: #555;
+      background-color: #eee;
+
+      &::-webkit-input-placeholder{
+        color: #999;
+      }
+    }
+  }
+
+  .csf-nav{
+
+    ul{
+
+      li{
+
+        a{
+          font-weight: 500;
+          color: #444;
+          background-color: #f5f5f5;
+
+          &:hover{
+            color: #111;
+            background-color: #fff;
+          }
+        }
+
+        .csf-active{
+          color: #111;
+          background-color: #fff;
+        }
+      }
+
+      ul{
+
+        li{
+
+          a{
+            background-color: #eee;
+          }
+        }
+      }
+    }
+  }
+
+  .csf-nav-normal{
+
+    > ul{
+      margin-right: -1px;
+      margin-bottom: -1px;
+
+      li{
+
+        a{
+          border-bottom: 1px solid #ccd0d4;
+          border-right: 1px solid #ccd0d4;
+        }
+
+        .csf-active{
+          border-right-color: #fff;
+        }
+      }
+    }
+  }
+
+  .csf-nav-inline{
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccd0d4;
+
+    > ul{
+      margin-bottom: -1px;
+
+      li{
+
+        a{
+          text-align: center;
+          border-right: 1px solid #ccd0d4;
+          border-bottom: 1px solid #ccd0d4;
+        }
+
+        .csf-active{
+          border-bottom-color: #fff;
+        }
+      }
+
+      ul{
+        display: none !important
+      }
+    }
+
+    .csf-arrow:after{
+      display: none;
+    }
+  }
+
+  .csf-nav-background{
+    background-color: #f5f5f5;
+    border-right: 1px solid #ccd0d4;
+  }
+
+  .csf-footer{
+    color: #555;
+    border-top: 1px solid #ccd0d4;
+    background-color: #f5f5f5;
+    background: linear-gradient(#fafafa, #f5f5f5);
+  }
+}

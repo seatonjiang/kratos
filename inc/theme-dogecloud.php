@@ -1,20 +1,22 @@
 <?php
+
 /**
  * dogecloud 对象存储
  * @author Seaton Jiang <seatonjiang@vtrois.com>
- * @license MIT License
- * @version 2021.06.25
+ * @license GPL-3.0 License
+ * @version 2021.08.20
  */
 
-if (kratos_option('g_cos', false)) {
-    function dogcloud_upload($object, $file, $mime){
+if (kratos_option('g_cos', false, 'g_cos_fieldset')) {
+    function dogcloud_upload($object, $file, $mime)
+    {
         if (!@file_exists($file)) {
             return false;
         }
         if (@file_exists($file)) {
-            $accessKey = kratos_option('g_cos_accesskey');
-            $secretKey = kratos_option('g_cos_secretkey');
-            $bucket = kratos_option('g_cos_bucketname');
+            $accessKey = kratos_option('g_cos_accesskey', '', 'g_cos_fieldset');
+            $secretKey = kratos_option('g_cos_secretkey', '', 'g_cos_fieldset');
+            $bucket = kratos_option('g_cos_bucketname', '', 'g_cos_fieldset');
 
             $filesize = fileSize($file);
             $file = fopen($file, 'rb');
@@ -102,9 +104,9 @@ if (kratos_option('g_cos', false)) {
     // 删除文件
     function dogecloud_delete_remote_file($file)
     {
-        $accessKey = kratos_option('g_cos_accesskey');
-        $secretKey = kratos_option('g_cos_secretkey');
-        $bucket = kratos_option('g_cos_bucketname');
+        $accessKey = kratos_option('g_cos_accesskey', '', 'g_cos_fieldset');
+        $secretKey = kratos_option('g_cos_secretkey', '', 'g_cos_fieldset');
+        $bucket = kratos_option('g_cos_bucketname', '', 'g_cos_fieldset');
 
         $file = str_replace("\\", '/', $file);
         $file = str_replace(get_home_path(), '', $file);
@@ -120,7 +122,7 @@ if (kratos_option('g_cos', false)) {
 
         $request = new WP_Http;
         $result = $request->request($url, array('method' => 'POST', 'body' => $del_file_body, 'headers' => $headers));
- 
+
         return $file;
     }
     add_action('wp_delete_file', 'dogecloud_delete_remote_file', 100);
@@ -129,7 +131,7 @@ if (kratos_option('g_cos', false)) {
     function custom_upload_dir($uploads)
     {
         $upload_path = '';
-        $upload_url_path = kratos_option('g_cos_url');
+        $upload_url_path = kratos_option('g_cos_url', '', 'g_cos_fieldset');
 
         if (empty($upload_path) || 'wp-content/uploads' == $upload_path) {
             $uploads['basedir'] = WP_CONTENT_DIR . '/uploads';
