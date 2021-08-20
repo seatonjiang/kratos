@@ -1,1 +1,6 @@
 .DS_Store
+vendor/
+composer.lock
+composer.phar
+package.tar
+/packages.json
