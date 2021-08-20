@@ -74,13 +74,11 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                         </div>
                         <div class="content" id="lightgallery">
                             <?php
-                            if (kratos_option('s_singletop', false)) {
-                                if (kratos_option('s_singletop_url')) {
-                                    echo '<a href="' . kratos_option('s_singletop_url') . '" target="_blank" rel="noreferrer">';
-                                }
-                                echo '<img src="' . kratos_option('s_singletop_img') . '">';
-                                if (kratos_option('s_singletop_url')) {
-                                    echo '</a>';
+                            if (!empty(kratos_option('single_ad_top_group'))) {
+                                foreach (kratos_option('single_ad_top_group') as $group_item) {
+                                    if ($group_item['ad_switcher']) {
+                                        echo '<div style="margin-bottom:5px"><a href="' . $group_item['ad_url'] . '" target="_blank" rel="noreferrer"><img src="' . $group_item['ad_img'] . '"></a></div>';
+                                    }
                                 }
                             }
                             the_content();
@@ -111,13 +109,11 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                                     'nextpagelink' => __('<span>下一页</span>', 'kratos')
                                 )
                             );
-                            if (kratos_option('s_singledown', false)) {
-                                if (kratos_option('s_singledown_url')) {
-                                    echo '<a href="' . kratos_option('s_singledown_url') . '" target="_blank" rel="noreferrer">';
-                                }
-                                echo '<img src="' . kratos_option('s_singledown_img') . '">';
-                                if (kratos_option('s_singledown_url')) {
-                                    echo '</a>';
+                            if (!empty(kratos_option('single_ad_bottom_group'))) {
+                                foreach (kratos_option('single_ad_bottom_group') as $group_item) {
+                                    if ($group_item['ad_switcher']) {
+                                        echo '<div style="margin-bottom:5px"><a href="' . $group_item['ad_url'] . '" target="_blank" rel="noreferrer"><img src="' . $group_item['ad_img'] . '"></a></div>';
+                                    }
                                 }
                             }
                             ?>
