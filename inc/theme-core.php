@@ -89,8 +89,8 @@ function theme_autoload()
         $data = array(
             'site' => home_url(),
             'directory' => ASSET_PATH,
-            'alipay' => kratos_option('g_donate_alipay', ASSET_PATH . '/assets/img/200.png'),
-            'wechat' => kratos_option('g_donate_wechat', ASSET_PATH . '/assets/img/200.png'),
+            'alipay' => kratos_option('g_donate_alipay', ASSET_PATH . '/assets/img/200.png', 'g_donate_fieldset'),
+            'wechat' => kratos_option('g_donate_wechat', ASSET_PATH . '/assets/img/200.png', 'g_donate_fieldset'),
             'repeat' => __('您已经赞过了', 'kratos'),
             'thanks' => __('感谢您的支持', 'kratos'),
             'donate' => __('打赏作者', 'kratos'),
