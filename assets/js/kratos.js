@@ -22,18 +22,15 @@
   var gotopConfig = function () {
     $(window).on("load", function () {
       var $win = $(window);
-      if ($win.scrollTop() > 200) {
-        $(".gotop").addClass("active");
-      } else {
-        $(".gotop").removeClass("active");
-      }
-      $win.scroll(function () {
+      var setShowOrHide = function(){
         if ($win.scrollTop() > 200) {
           $(".gotop").addClass("active");
         } else {
           $(".gotop").removeClass("active");
         }
-      });
+      }
+      setShowOrHide();
+      $win.scroll(setShowOrHide);
     });
     $(".gotop").on("click", function (event) {
       event.preventDefault();
