@@ -9,8 +9,8 @@
 ?>
 <div class="article-panel">
     <span class="a-card d-none d-md-block d-lg-block">
-        <?php $article_comment = kratos_option('g_article_comment', '20');
-        $article_love = kratos_option('g_article_love', '200');
+        <?php $article_comment = kratos_option('g_article_comment', '20', 'g_article_fieldset');
+        $article_love = kratos_option('g_article_love', '200', 'g_article_fieldset');
         if (is_sticky()) { ?>
             <i class="kicon i-card-top"></i>
         <?php } elseif (findSinglecomments($post->ID) >= $article_comment || get_post_meta($post->ID, 'love', true) >= $article_love) { ?>
