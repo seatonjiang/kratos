@@ -617,7 +617,7 @@ CSF::createSection($prefix, array(
             'default' => false,
         ),
         array(
-            'id' => 'opt-image-select',
+            'id' => 'g_article_widgets',
             'type' => 'image_select',
             'title' => __('页面布局', 'kratos'),
             'subtitle' => __('差异在于侧边栏小工具，仅在文章页面生效', 'kratos'),
