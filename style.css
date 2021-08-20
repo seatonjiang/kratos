@@ -169,20 +169,20 @@ button:focus {
 }
 
 .k-main.color {
-    margin-top: 90px;
+    padding: 90px 0 20px;
 }
 
 .k-main.banner {
-    padding-top: 20px;
+    padding: 20px 0;
 }
 
 @media only screen and (max-width: 992px) {
     .k-header {
-        height: 60px;
+        height: 59px;
     }
 
     .k-main.color {
-        margin-top: 20px;
+        padding-top: 20px;
     }
 
     .k-main.banner {
@@ -191,6 +191,10 @@ button:focus {
 }
 
 @media only screen and (max-width: 768px) {
+    .k-header {
+        height: 50px;
+    }
+
     .k-main.banner {
         padding-top: 255px;
     }
@@ -545,10 +549,14 @@ button:focus {
 }
 
 .k-main .board .paginations {
-    margin: 23px auto;
+    margin: 10px auto;
     width: 100%;
     text-align: center;
     font-size: 14px;
+}
+
+.k-main.color .board .paginations {
+    margin: 23px auto;
 }
 
 .k-main .board .paginations a {
@@ -2363,7 +2371,6 @@ ol {
 --------------------------------------------------------------*/
 
 .k-footer {
-    margin-top: 20px;
     padding: 40px 0;
     background: #23282d;
 }

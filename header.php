@@ -29,7 +29,7 @@
 
 <body>
     <div class="k-header">
-        <nav class="k-nav navbar navbar-expand-lg navbar-light fixed-top" <?php if (kratos_option('top_select', 'banner') !== 'banner') {
+        <nav class="k-nav navbar navbar-expand-lg navbar-light fixed-top" <?php if (kratos_option('top_img_switch', true) == false) {
                                                                                 echo 'style="background:' . kratos_option('top_color', '#24292e') . '"';
                                                                             } ?>>
             <div class="container">
@@ -63,7 +63,7 @@
                 ?>
             </div>
         </nav>
-        <?php if (kratos_option('top_select', 'banner') == 'banner') { ?>
+        <?php if (kratos_option('top_img_switch', true)) { ?>
             <div class="banner">
                 <div class="overlay"></div>
                 <div class="content text-center" style="background-image: url(<?php

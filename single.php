@@ -14,7 +14,11 @@ $col_array = array(
 );
 $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
 ?>
-<div class="k-main <?php echo kratos_option('top_select', 'banner'); ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
+<div class="k-main<?php if (kratos_option('top_img_switch', true)) {
+                        echo ' banner';
+                    } else {
+                        echo ' color';
+                    } ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
     <div class="container">
         <div class="row">
             <div class="<?php echo $select_col ?> details">
