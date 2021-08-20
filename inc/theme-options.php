@@ -614,7 +614,7 @@ CSF::createSection($prefix, array(
             'type' => 'switcher',
             'title' => __('附加功能', 'kratos'),
             'subtitle' => __('启用/禁用文章自动保存、修订版本功能', 'kratos'),
-            'default' => false,
+            'default' => true,
         ),
         array(
             'id' => 'g_article_widgets',

@@ -118,7 +118,7 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                             }
                             ?>
                         </div>
-                        <?php if (kratos_option('g_cc_switch', false)) {
+                        <?php if (kratos_option('g_cc_switch', false, 'g_cc_fieldset')) {
                             $cc_array = array(
                                 'one' => __('知识共享署名 4.0 国际许可协议', 'kratos'),
                                 'two' => __('知识共享署名-非商业性使用 4.0 国际许可协议', 'kratos'),
@@ -127,7 +127,7 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                                 'five' => __('知识共享署名-相同方式共享 4.0 国际许可协议', 'kratos'),
                                 'six' => __('知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议', 'kratos'),
                             );
-                            $select_cc = $cc_array[kratos_option('g_cc', 'one')];
+                            $select_cc = $cc_array[kratos_option('g_cc', 'one', 'g_cc_fieldset')];
                             echo '<div class="copyright"><span class="text-center">';
                             printf(__('本作品采用 %s 进行许可', 'kratos'), $select_cc);
                             echo '</span></div>';
