@@ -177,6 +177,13 @@ CSF::createSection($prefix, array(
             'default' => false,
         ),
         array(
+            'id' => 'g_excerpt_length',
+            'type' => 'text',
+            'title' => __('文章简介缩略', 'kratos'),
+            'subtitle' => __('文章简介显示的字符数量', 'kratos'),
+            'default' => '260',
+        ),
+        array(
             'id' => 'g_renameother_fieldset',
             'type' => 'fieldset',
             'fields' => array(

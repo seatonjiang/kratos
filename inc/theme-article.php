@@ -93,11 +93,11 @@ function get_post_views($echo = 1)
 }
 
 // 文章列表简介内容
-function excerpt_length($length)
+function custom_excerpt_length($length)
 {
-    return 260;
+    return kratos_option('g_excerpt_length', '260');
 }
-add_filter('excerpt_length', 'excerpt_length');
+add_filter('excerpt_length', 'custom_excerpt_length');
 
 // 开启特色图
 add_theme_support("post-thumbnails");
