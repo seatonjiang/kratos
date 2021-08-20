@@ -847,7 +847,7 @@ CSF::createSection($prefix, array(
     'icon' => 'fas fa-arrow-right',
     'fields' => array(
         array(
-            'id' => 's_social_domestic_fieldset',
+            'id' => 's_social_fieldset',
             'type' => 'fieldset',
             'fields' => array(
                 array(
@@ -887,7 +887,7 @@ CSF::createSection($prefix, array(
             ),
         ),
         array(
-            'id' => 's_social_overseas_fieldset',
+            'id' => 's_social_fieldset',
             'type' => 'fieldset',
             'fields' => array(
                 array(
@@ -933,7 +933,7 @@ CSF::createSection($prefix, array(
             ),
         ),
         array(
-            'id' => 's_social_domestic_fieldset',
+            'id' => 's_social_fieldset',
             'type' => 'fieldset',
             'fields' => array(
                 array(

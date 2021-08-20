@@ -36,10 +36,10 @@
             <div class="col-12 text-center">
                 <p class="social">
                     <?php
-                    $social = array('s_sina', 's_bilibili', 's_douban', 's_coding', 's_gitee', 's_twitter', 's_telegram', 's_linkedin', 's_youtube', 's_github', 's_stackflow', 's_email');
-                    foreach ($social as $social) {
-                        if (kratos_option($social)) {
-                            echo '<a target="_blank" rel="nofollow" href="' . kratos_option($social . '_url') . '"><i class="kicon i-' . str_replace("s_", "", $social) . '"></i></a>';
+                    $socials = array('s_sina_url', 's_bilibili_url', 's_douban_url', 's_coding_url', 's_gitee_url', 's_twitter_url', 's_telegram_url', 's_linkedin_url', 's_youtube_url', 's_github_url', 's_stackflow_url', 's_email_url');
+                    foreach ($socials as $value) {
+                        if (kratos_option($value, '', 's_social_fieldset')) {
+                            echo '<a target="_blank" rel="nofollow" href="' . kratos_option($value, '', 's_social_fieldset') . '"><i class="kicon i-' . str_replace(array("s_", "_url"), array('', ''), $value) . '"></i></a>';
                         }
                     }
                     ?>
