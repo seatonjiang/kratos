@@ -1,5 +1,0 @@
-{
-    "require": {
-        "volcengine/volc-sdk-php": "^1.0"
-    }
-}

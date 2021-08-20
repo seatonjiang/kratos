@@ -389,6 +389,11 @@ CSF::createSection($prefix, array(
     'icon' => 'fas fa-arrow-right',
     'fields' => array(
         array(
+            'type' => 'notice',
+            'style' => 'info',
+            'content' => '提示：<strong>DogeCloud 云存储</strong> 与 <strong>火山引擎 ImageX</strong>请勿同时开启！',
+        ),
+        array(
             'id' => 'g_cos_fieldset',
             'type' => 'fieldset',
             'fields' => array(
