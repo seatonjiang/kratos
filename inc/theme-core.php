@@ -20,7 +20,7 @@ function init_theme()
 {
     global $pagenow;
     if ('themes.php' == $pagenow && isset($_GET['activated'])) {
-        wp_redirect(admin_url('admin.php?page=kratos_options'));
+        wp_redirect(admin_url('admin.php?page=kratos-options'));
         exit;
     }
 }
