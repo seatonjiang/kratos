@@ -172,7 +172,7 @@ button:focus {
 }
 
 .k-main.banner {
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -185,13 +185,13 @@ button:focus {
     }
 
     .k-main.banner {
-        margin-top: 260px;
+        padding-top: 260px;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .k-main.banner {
-        margin-top: 255px;
+        padding-top: 255px;
     }
 }
 
