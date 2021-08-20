@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@3.3.4/assets/img/options/about.png">
+<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.0/assets/img/options/about.png">
 </p>
 
 <p align="center">
