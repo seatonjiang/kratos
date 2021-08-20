@@ -66,13 +66,7 @@
         <?php if (kratos_option('top_img_switch', true)) { ?>
             <div class="banner">
                 <div class="overlay"></div>
-                <div class="content text-center" style="background-image: url(<?php
-                                                                                if (!kratos_option('top_img')) {
-                                                                                    $img = ASSET_PATH . '/assets/img/background.png';
-                                                                                } else {
-                                                                                    $img = kratos_option('top_img', ASSET_PATH . '/assets/img/background.png');
-                                                                                }
-                                                                                echo $img; ?>);">
+                <div class="content text-center" style="background-image: url(<?php echo kratos_option('top_img', ASSET_PATH . '/assets/img/background.jpg'); ?>);">
                     <div class="introduce animate__animated animate__fadeInUp">
                         <?php
                         if (is_category() || is_tag()) {

@@ -813,7 +813,7 @@ CSF::createSection($prefix, array(
             'title' =>  __('顶部图片', 'kratos'),
             'library' => 'image',
             'preview' => true,
-            'default' => get_template_directory_uri() . '/assets/img/background.png',
+            'default' => get_template_directory_uri() . '/assets/img/background.jpg',
         ),
         array(
             'id' => 'top_title',
