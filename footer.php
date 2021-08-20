@@ -20,7 +20,7 @@
             <div class="wechat">
                 <span class="kicon i-wechat"></span>
                 <div class="wechat-pic">
-                    <img src="<?php echo kratos_option('g_wechat_url', ASSET_PATH . '/assets/img/wechat.png', 'g_wechat_fieldset'); ?>">
+                    <img src="<?php echo kratos_option('g_wechat_url', ASSET_PATH . '/assets/img/200.png', 'g_wechat_fieldset'); ?>">
                 </div>
             </div>
         <?php } ?>
