@@ -9,18 +9,18 @@
 ?>
 <div class="k-footer">
     <div class="f-toolbox">
-        <div class="gotop <?php if (kratos_option('g_wechat', false)) {
+        <div class="gotop <?php if (kratos_option('g_wechat', false, 'g_wechat')) {
                                 echo 'gotop-haswechat';
                             } ?>">
             <div class="gotop-btn">
                 <span class="kicon i-up"></span>
             </div>
         </div>
-        <?php if (kratos_option('g_wechat', false)) { ?>
+        <?php if (kratos_option('g_wechat', false, 'g_wechat')) { ?>
             <div class="wechat">
                 <span class="kicon i-wechat"></span>
                 <div class="wechat-pic">
-                    <img src="<?php echo kratos_option('g_wechat_url', ASSET_PATH . '/assets/img/wechat.png'); ?>">
+                    <img src="<?php echo kratos_option('g_wechat_url', ASSET_PATH . '/assets/img/wechat.png', 'g_wechat'); ?>">
                 </div>
             </div>
         <?php } ?>
