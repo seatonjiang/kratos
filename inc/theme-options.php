@@ -12,10 +12,17 @@ defined('ABSPATH') || exit;
 $prefix = 'kratos_options';
 
 if (!function_exists('kratos_option')) {
-    function kratos_option($option = '', $default = null)
+    function kratos_option($option = '', $default = null, $fieldset = '')
     {
         $options = get_option('kratos_options');
-        return (isset($options[$option])) ? $options[$option] : $default;
+
+        if (!empty($fieldset)) {
+            $results = $options[$fieldset . "_fieldset"][$option];
+        } else {
+            $results = $options[$option];
+        }
+
+        return (isset($results)) ? $results : $default;
     }
 }
 
@@ -200,7 +207,7 @@ CSF::createSection($prefix, array(
             ),
             'default' => array(
                 'g_renameother' => false,
-                'g_renameother_prdfix' => '[' . getdomain(home_url()) . ']',
+                'g_renameother_prdfix' => getdomain(home_url()),
                 'g_renameother_mime' => 'tar|zip|gz|gzip|rar|7z',
             ),
         ),
