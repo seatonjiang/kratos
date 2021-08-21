@@ -24,7 +24,7 @@
             </a>
         </div>
     <?php } ?>
-    <div class="a-post <?php echo kratos_option('g_thumbnail', true) ?? 'a-none'; ?>">
+    <div class="a-post <?php echo kratos_option('g_thumbnail', true) ?: 'a-none'; ?>">
         <div class="header">
             <?php
             $category = get_the_category();
