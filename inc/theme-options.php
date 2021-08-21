@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 
 defined('ABSPATH') || exit;
@@ -67,7 +67,10 @@ function getrobots()
 CSF::createOptions($prefix, array(
     'menu_title' => __('主题设置', 'kratos'),
     'menu_slug' => 'kratos-options',
-    'show_bar_menu' => false,
+    'show_search' => false,
+    'show_all_options' => false,
+    'sticky_header' => false,
+    'admin_bar_menu_icon' => 'dashicons-admin-generic',
     'framework_title' => '主题设置<small style="margin-left:10px">Kratos v' . THEME_VERSION . '</small>',
     'theme' => 'light',
     'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/vtrois/kratos">Kratos</a> 主题开始创作，欢迎加入交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=jHy4nvMcnurowkL602BTDZzverAqfTpI&jump_from=webapi">734508</a>',
