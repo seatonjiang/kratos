@@ -4,7 +4,7 @@
  * 文章相关函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 
 // 文章链接添加 target 和 rel
@@ -134,12 +134,7 @@ function post_thumbnail()
         if (!empty($img_val)) {
             echo '<img src="' . $img_val . '" />';
         } else {
-            if (!kratos_option('g_postthumbnail')) {
-                $img = ASSET_PATH . '/assets/img/default.jpg';
-            } else {
-                $img = kratos_option('g_postthumbnail', ASSET_PATH . '/assets/img/default.jpg');
-            }
-            echo '<img src="' . $img . '" />';
+            echo '<img src="' . kratos_option('g_postthumbnail', ASSET_PATH . '/assets/img/default.jpg') . '" />';
         }
     }
 }

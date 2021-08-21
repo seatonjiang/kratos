@@ -4,7 +4,7 @@
  * 站点相关函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 
 // 标题配置
@@ -86,8 +86,8 @@ add_filter('robots_txt', function ($output, $public) {
     if ('0' == $public) {
         return "User-agent: *\nDisallow: /\n";
     } else {
-        if (!empty(kratos_option('seo_robots', getrobots(), 'seo_robots_fieldset'))) {
-            $output = esc_attr(strip_tags(kratos_option('seo_robots', getrobots(), 'seo_robots_fieldset')));
+        if (!empty(kratos_option('seo_robots_fieldset')['seo_robots'])) {
+            $output = esc_attr(strip_tags(kratos_option('seo_robots_fieldset')['seo_robots']));
         }
         return $output;
     }

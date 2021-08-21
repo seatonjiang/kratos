@@ -4,13 +4,13 @@
  * 文章列表
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 ?>
 <div class="article-panel">
     <span class="a-card d-none d-md-block d-lg-block">
-        <?php $article_comment = kratos_option('g_article_comment', '20', 'g_article_fieldset');
-        $article_love = kratos_option('g_article_love', '200', 'g_article_fieldset');
+        <?php $article_comment = kratos_option('g_article_fieldset')['g_article_comment'] ?? '20';
+        $article_love = kratos_option('g_article_fieldset')['g_article_love'] ?? '200';
         if (is_sticky()) { ?>
             <i class="kicon i-card-top"></i>
         <?php } elseif (findSinglecomments($post->ID) >= $article_comment || get_post_meta($post->ID, 'love', true) >= $article_love) { ?>
@@ -24,9 +24,7 @@
             </a>
         </div>
     <?php } ?>
-    <div class="a-post <?php if (!kratos_option('g_thumbnail', true)) {
-                            echo 'a-none';
-                        } ?>">
+    <div class="a-post <?php echo kratos_option('g_thumbnail', true) ?? 'a-none'; ?>">
         <div class="header">
             <?php
             $category = get_the_category();

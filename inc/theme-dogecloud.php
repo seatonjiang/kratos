@@ -4,19 +4,19 @@
  * dogecloud 对象存储
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 
-if (kratos_option('g_cos', false, 'g_cos_fieldset')) {
+if (!empty(kratos_option('g_cos_fieldset')['g_cos'])) {
     function dogcloud_upload($object, $file, $mime)
     {
         if (!@file_exists($file)) {
             return false;
         }
         if (@file_exists($file)) {
-            $accessKey = kratos_option('g_cos_accesskey', '', 'g_cos_fieldset');
-            $secretKey = kratos_option('g_cos_secretkey', '', 'g_cos_fieldset');
-            $bucket = kratos_option('g_cos_bucketname', '', 'g_cos_fieldset');
+            $accessKey = kratos_option('g_cos_fieldset')['g_cos_accesskey'];
+            $secretKey = kratos_option('g_cos_fieldset')['g_cos_secretkey'];
+            $bucket = kratos_option('g_cos_fieldset')['g_cos_bucketname'];
 
             $filesize = fileSize($file);
             $file = fopen($file, 'rb');
@@ -104,9 +104,9 @@ if (kratos_option('g_cos', false, 'g_cos_fieldset')) {
     // 删除文件
     function dogecloud_delete_remote_file($file)
     {
-        $accessKey = kratos_option('g_cos_accesskey', '', 'g_cos_fieldset');
-        $secretKey = kratos_option('g_cos_secretkey', '', 'g_cos_fieldset');
-        $bucket = kratos_option('g_cos_bucketname', '', 'g_cos_fieldset');
+        $accessKey = kratos_option('g_cos_fieldset')['g_cos_accesskey'];
+        $secretKey = kratos_option('g_cos_fieldset')['g_cos_secretkey'];
+        $bucket = kratos_option('g_cos_fieldset')['g_cos_bucketname'];
 
         $file = str_replace("\\", '/', $file);
         $file = str_replace(get_home_path(), '', $file);
@@ -131,7 +131,7 @@ if (kratos_option('g_cos', false, 'g_cos_fieldset')) {
     function custom_upload_dir($uploads)
     {
         $upload_path = '';
-        $upload_url_path = kratos_option('g_cos_url', '', 'g_cos_fieldset');
+        $upload_url_path = kratos_option('g_cos_fieldset')['g_cos_url'];
 
         if (empty($upload_path) || 'wp-content/uploads' == $upload_path) {
             $uploads['basedir'] = WP_CONTENT_DIR . '/uploads';

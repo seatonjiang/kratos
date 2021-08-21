@@ -4,7 +4,7 @@
  * 主题页眉
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 ?>
 <!DOCTYPE html>
@@ -21,17 +21,15 @@
     <meta name="theme-color" content="<?php echo kratos_option('g_chrome', '#282a2c'); ?>">
     <meta itemprop="image" content="<?php echo share_thumbnail_url(); ?>" />
     <?php if (kratos_option('g_icon')) echo '<link rel="shortcut icon" href="' . kratos_option("g_icon") . '">' ?>
-    <?php wp_head();
-    wp_print_scripts('jquery');
-    mourning(); ?>
+    <?php wp_head(); ?>
+    <?php wp_print_scripts('jquery'); ?>
+    <?php mourning(); ?>
 </head>
 <?php flush(); ?>
 
 <body>
     <div class="k-header">
-        <nav class="k-nav navbar navbar-expand-lg navbar-light fixed-top" <?php if (kratos_option('top_img_switch', true) == false) {
-                                                                                echo 'style="background:' . kratos_option('top_color', '#24292e') . '"';
-                                                                            } ?>>
+        <nav class="k-nav navbar navbar-expand-lg navbar-light fixed-top" <?php echo kratos_option('top_img_switch', true) ? '' : 'style="background:' . kratos_option('top_color', '#24292e') . '"'; ?>>
             <div class="container">
                 <a class="navbar-brand" href="<?php echo get_option('home'); ?>">
                     <?php

@@ -4,7 +4,7 @@
  * 文章内容
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 
 get_header();
@@ -12,16 +12,11 @@ $col_array = array(
     'one_side' => 'col-lg-12',
     'two_side' => 'col-lg-8'
 );
-$select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
 ?>
-<div class="k-main<?php if (kratos_option('top_img_switch', true)) {
-                        echo ' banner';
-                    } else {
-                        echo ' color';
-                    } ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
+<div class="k-main <?php echo kratos_option('top_img_switch', true) ? 'banner' : 'color' ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
     <div class="container">
         <div class="row">
-            <div class="<?php echo $select_col ?> details">
+            <div class="<?php echo $col_array[kratos_option('g_article_widgets', 'two_side')] ?> details">
                 <?php if (have_posts()) : the_post();
                     update_post_caches($posts); ?>
                     <div class="article">
@@ -118,7 +113,7 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                             }
                             ?>
                         </div>
-                        <?php if (kratos_option('g_cc_switch', false, 'g_cc_fieldset')) {
+                        <?php if (kratos_option('g_cc_fieldset')['g_cc_switch']) {
                             $cc_array = array(
                                 'one' => __('知识共享署名 4.0 国际许可协议', 'kratos'),
                                 'two' => __('知识共享署名-非商业性使用 4.0 国际许可协议', 'kratos'),
@@ -127,9 +122,8 @@ $select_col = $col_array[kratos_option('g_article_widgets', 'two_side')];
                                 'five' => __('知识共享署名-相同方式共享 4.0 国际许可协议', 'kratos'),
                                 'six' => __('知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议', 'kratos'),
                             );
-                            $select_cc = $cc_array[kratos_option('g_cc', 'one', 'g_cc_fieldset')];
                             echo '<div class="copyright"><span class="text-center">';
-                            printf(__('本作品采用 %s 进行许可', 'kratos'), $select_cc);
+                            printf(__('本作品采用 %s 进行许可', 'kratos'), $cc_array[kratos_option('g_cc_fieldset')['g_cc']]);
                             echo '</span></div>';
                         } ?>
                         <div class="footer clearfix">

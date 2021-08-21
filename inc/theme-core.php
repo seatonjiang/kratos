@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 
 // CDN 资源地址
@@ -89,8 +89,8 @@ function theme_autoload()
         $data = array(
             'site' => home_url(),
             'directory' => ASSET_PATH,
-            'alipay' => kratos_option('g_donate_alipay', ASSET_PATH . '/assets/img/200.png', 'g_donate_fieldset'),
-            'wechat' => kratos_option('g_donate_wechat', ASSET_PATH . '/assets/img/200.png', 'g_donate_fieldset'),
+            'alipay' => kratos_option('g_donate_fieldset')['g_donate_alipay'],
+            'wechat' => kratos_option('g_donate_fieldset')['g_donate_wechat'],
             'repeat' => __('您已经赞过了', 'kratos'),
             'thanks' => __('感谢您的支持', 'kratos'),
             'donate' => __('打赏作者', 'kratos'),
@@ -182,8 +182,8 @@ add_filter('style_loader_src', function ($href) {
 // 替换国内 Gravatar 源
 function get_https_avatar($avatar)
 {
-    if (kratos_option('g_gravatar', false)) {
-        $cdn = "gravatar.loli.net";
+    if (kratos_option('g_gravatar', true)) {
+        $cdn = "dn-qiniu-avatar.qbox.me";
     } else {
         $cdn = "cn.gravatar.com";
     }
@@ -232,11 +232,11 @@ function custom_upload_filter($file)
 
     $ext = '.' . $info['extension'];
 
-    $prdfix = kratos_option('g_renameother_prdfix', getdomain(home_url()), 'g_renameother_fieldset') . '-';
+    $prdfix = kratos_option('g_renameother_fieldset')['g_renameother_prdfix'] . '-';
 
     $img_mimes = array('jpg', 'JPG', 'jpeg', 'JPEG', 'gif', 'GIF', 'png', 'PNG', 'bmp', 'BMP', 'webp', 'WEBP', 'svg', 'SVG');
 
-    $str = kratos_option('g_renameother_mime', 'tar|zip|gz|gzip|rar|7z', 'g_renameother_fieldset');
+    $str = kratos_option('g_renameother_fieldset')['g_renameother_mime'];
     $arr = explode("|", $str);
     $arr = array_filter($arr);
 
@@ -255,7 +255,7 @@ function custom_upload_filter($file)
         }
     }
 
-    if (kratos_option('g_renameother', false, 'g_renameother_fieldset')) {
+    if (kratos_option('g_renameother_fieldset')['g_renameother']) {
         foreach ($compressed_mimes as $compressed_mime) {
             if ($info['extension'] == $compressed_mime) {
                 $file['name'] = $prdfix . $file['name'];

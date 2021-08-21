@@ -4,15 +4,11 @@
  * 页面模板
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 
 get_header(); ?>
-<div class="k-main<?php if (kratos_option('top_img_switch', true)) {
-                        echo ' banner';
-                    } else {
-                        echo ' color';
-                    }  ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
+<div class="k-main <?php echo kratos_option('top_img_switch', true) ? 'banner' : 'color' ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 details">

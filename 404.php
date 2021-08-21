@@ -4,25 +4,15 @@
  * 404 模板
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 
 get_header(); ?>
-<div class="k-main<?php if (kratos_option('top_img_switch', true)) {
-                        echo ' banner';
-                    } else {
-                        echo ' color';
-                    }  ?>" style="background:#ffffff">
+<div class="k-main <?php echo kratos_option('top_img_switch', true) ? 'banner' : 'color' ?>" style="background:#ffffff">
     <div class="container">
         <div class="row">
             <div class="col-12 page404">
-                <div class="thumbnail" style="background-image: url(<?php
-                                                                    if (!kratos_option('g_404')) {
-                                                                        $img = ASSET_PATH . '/assets/img/404.jpg';
-                                                                    } else {
-                                                                        $img = kratos_option('g_404', ASSET_PATH . '/assets/img/404.jpg');
-                                                                    }
-                                                                    echo $img; ?>">
+                <div class="thumbnail" style="background-image: url(<?php echo kratos_option('g_404', ASSET_PATH . '/assets/img/404.jpg'); ?>">
                     <div class="overlay"></div>
                 </div>
                 <div class="content text-center">

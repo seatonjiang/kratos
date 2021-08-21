@@ -4,19 +4,19 @@
  * ImageX 图片服务
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2021.08.21
  */
 require_once 'volcengine-imagex/vendor/autoload.php';
 
 use Volc\Service\ImageX;
 
-if (kratos_option('g_imgx', false, 'g_imgx_fieldset')) {
+if (!empty(kratos_option('g_imgx_fieldset')['g_imgx'])) {
 
     function imagex_get_client()
     {
-        $imagex_client = ImageX::getInstance($region = kratos_option('g_imgx_region', '', 'g_imgx_fieldset'));
-        $imagex_client->setAccessKey(kratos_option('g_imgx_accesskey', '', 'g_imgx_fieldset'));
-        $imagex_client->setSecretKey(kratos_option('g_imgx_secretkey', '', 'g_imgx_fieldset'));
+        $imagex_client = ImageX::getInstance($region = kratos_option('g_imgx_fieldset')['g_imgx_region']);
+        $imagex_client->setAccessKey(kratos_option('g_imgx_fieldset')['g_imgx_accesskey']);
+        $imagex_client->setSecretKey(kratos_option('g_imgx_fieldset')['g_imgx_secretkey']);
 
         return $imagex_client;
     }
@@ -29,7 +29,7 @@ if (kratos_option('g_imgx', false, 'g_imgx_fieldset')) {
         if (@file_exists($file)) {
             $client = imagex_get_client();
             $params = array();
-            $params["ServiceId"] = kratos_option('g_imgx_serviceid', '', 'g_imgx_fieldset');
+            $params["ServiceId"] = kratos_option('g_imgx_fieldset')['g_imgx_serviceid'];
             $params['UploadNum'] = 1;
             $params['StoreKeys'] = array($object);
             $response = $client->uploadImages($params, array($file));
@@ -96,7 +96,7 @@ if (kratos_option('g_imgx', false, 'g_imgx_fieldset')) {
         $file = str_replace(get_home_path(), '', $file);
         $del_file_path = str_replace("wp-content/uploads/", '', $file);
 
-        $client->deleteImages(kratos_option('g_imgx_serviceid', '', 'g_imgx_fieldset'), array($del_file_path));
+        $client->deleteImages(kratos_option('g_imgx_fieldset')['g_imgx_serviceid'], array($del_file_path));
 
         return $file;
     }
@@ -106,7 +106,7 @@ if (kratos_option('g_imgx', false, 'g_imgx_fieldset')) {
     function custom_upload_dir($uploads)
     {
         $upload_path = '';
-        $upload_url_path = kratos_option('g_imgx_url', '', 'g_imgx_fieldset');
+        $upload_url_path = kratos_option('g_imgx_fieldset')['g_imgx_url'];
 
         if (empty($upload_path) || 'wp-content/uploads' == $upload_path) {
             $uploads['basedir'] = WP_CONTENT_DIR . '/uploads';
@@ -136,7 +136,7 @@ if (kratos_option('g_imgx', false, 'g_imgx_fieldset')) {
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $images);
         if (!empty($images) && isset($images[1])) {
             foreach ($images[1] as $item) {
-                $content = str_replace($item, $item . kratos_option('g_imgx_tmp', '', 'g_imgx_fieldset'), $content);
+                $content = str_replace($item, $item . kratos_option('g_imgx_fieldset')['g_imgx_tmp'], $content);
             }
         }
         return $content;
@@ -149,7 +149,7 @@ if (kratos_option('g_imgx', false, 'g_imgx_fieldset')) {
             preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $html, $images);
             if (!empty($images) && isset($images[1])) {
                 foreach ($images[1] as $item) {
-                    $html = str_replace($item, $item . kratos_option('g_imgx_tmp', '', 'g_imgx_fieldset'), $html);
+                    $html = str_replace($item, $item . kratos_option('g_imgx_fieldset')['g_imgx_tmp'], $html);
                 }
             }
         }

@@ -12,17 +12,16 @@ defined('ABSPATH') || exit;
 $prefix = 'kratos_options';
 
 if (!function_exists('kratos_option')) {
-    function kratos_option($option = '', $default = null, $fieldset = '')
+    function kratos_option($name, $default = false)
     {
+
         $options = get_option('kratos_options');
 
-        if (!empty($fieldset)) {
-            $results = $options[$fieldset][$option];
-        } else {
-            $results = $options[$option];
+        if (isset($options[$name])) {
+            return $options[$name];
         }
 
-        return (isset($results)) ? $results : $default;
+        return $default;
     }
 }
 
@@ -235,7 +234,7 @@ CSF::createSection($prefix, array(
                     'text_off' => __('关闭', 'kratos'),
                 ),
                 array(
-                    'id' => 'g_wechat_url',
+                    'id' => 'g_wechat_img',
                     'type' => 'upload',
                     'title' =>  __('二维码图片', 'kratos'),
                     'library' => 'image',
@@ -245,7 +244,7 @@ CSF::createSection($prefix, array(
             ),
             'default' => array(
                 'g_wechat' => false,
-                'g_wechat_url' => get_template_directory_uri() . '/assets/img/200.png',
+                'g_wechat_img' => get_template_directory_uri() . '/assets/img/200.png',
             ),
         ),
     ),
