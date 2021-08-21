@@ -27,7 +27,7 @@ License URI: https://github.com/vtrois/kratos/blob/main/LICENSE
 	7.  文章正文
 	8.  内容工具区
 	9.  文章评论
-	10.  小工具
+	10. 小工具
 	11. 404
 	12. 页脚
 
@@ -1316,6 +1316,10 @@ ol {
 
 .k-main .details .article .content .accordion .contents .inner {
     padding: 5px 15px;
+}
+
+.lg-outer {
+    z-index: 999999;
 }
 
 @media screen and (max-width: 768px) {
