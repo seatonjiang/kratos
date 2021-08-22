@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/php-%3E%3D7.0-blue">
+<img src="https://img.shields.io/badge/php-%3E7.2.5-blue">
 <img src="https://img.shields.io/badge/wordpress-v5.9%20alpha%20tested-%234c1">
 <a href="https://vtrois.crowdin.com/kratos" target="_blank"><img src="https://badges.crowdin.net/e/f1d1a7eaa6af337dba7aa4a39b28e67c/localized.svg"></a>
 <a href="https://www.jsdelivr.com/package/gh/vtrois/kratos" target="_blank"><img src="https://data.jsdelivr.com/v1/package/gh/vtrois/kratos/badge?style=rounded"></a>
