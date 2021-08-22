@@ -2,263 +2,136 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
-"POT-Creation-Date: 2021-01-06 10:03+0800\n"
-"PO-Revision-Date: 2021-02-07 09:26+0800\n"
+"POT-Creation-Date: 2021-08-22 15:27+0800\n"
+"PO-Revision-Date: 2021-08-22 07:42\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: inc/codestar-framework\n"
+"X-Poedit-SearchPathExcluded-1: inc/update-checker\n"
+"X-Poedit-SearchPathExcluded-2: inc/volcengine-imagex\n"
 "X-Crowdin-Project: 87f769374581b4e7ec717067bc809033\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: /main/languages/kratos.pot\n"
 "X-Crowdin-File-ID: 10\n"
 "Language: ja_JP\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: 404.php:24
+#: 404.php:19
 msgid "很抱歉，你访问的页面不存在"
 msgstr "申し訳ありませんが、あなたが訪れたページは存在しません"
 
-#: 404.php:25
+#: 404.php:20
 msgid "可能是输入地址有误或该地址已被删除"
 msgstr "アドレスが間違って入力されたか、アドレスが削除されている可能性があります"
 
-#: 404.php:27
+#: 404.php:22
 msgid "返回上页"
 msgstr "前のページへ戻る"
 
-#: 404.php:28
+#: 404.php:23
 msgid "返回主页"
 msgstr "メインページへ戻る"
 
-#: comments.php:15
+#: comments.php:17
 msgid "文章评论"
 msgstr "記事コメント"
 
-#: comments.php:15
+#: comments.php:19
 msgid "评论内容"
 msgstr "コメント"
 
-#: comments.php:20
+#: comments.php:25
 msgid "加载更多"
 msgstr "もっと読み込む"
 
-#: comments.php:25
+#: comments.php:30
 #, php-format
 msgid "您需要 <a href=\"%s\">登录</a> 之后才可以评论"
 msgstr "コメントするには <a href=\"%s\">ログイン</a> が必要です"
 
-#: comments.php:37
+#: comments.php:42
 msgid "昵称"
 msgstr "ニックネーム"
 
-#: comments.php:45
+#: comments.php:50
 msgid "邮箱"
 msgstr "メール"
 
-#: comments.php:53
+#: comments.php:58
 msgid "网址"
 msgstr "ウェブサイト"
 
-#: comments.php:70
+#: comments.php:75
 msgid "取消回复"
 msgstr "返答をキャンセルする"
 
-#: comments.php:71
+#: comments.php:76
 msgid "提交评论"
 msgstr "コメントの投稿"
 
-#: footer.php:27 inc/theme-widgets.php:140
+#: footer.php:28 inc/theme-widgets.php:184
 msgid "搜点什么呢?"
 msgstr "何を探せばいいのか？"
 
-#: header.php:76 inc/theme-options.php:583
+#: header.php:75 inc/theme-options.php:830
 msgid "一款专注于用户阅读体验的响应式博客主题"
 msgstr "ユーザーの読書体験を重視したレスポンシブブログテーマ"
 
-#: inc/options-framework/includes/class-options-framework-admin.php:71
-#: inc/options-framework/includes/class-options-framework-admin.php:72
-#: inc/options-framework/includes/class-options-framework-admin.php:85
-#: inc/options-framework/includes/class-options-framework-admin.php:86
-msgid "主题设置"
-msgstr "テーマ設定"
-
-#: inc/options-framework/includes/class-options-framework-admin.php:181
-msgid "保存配置"
-msgstr "設定の保存"
-
-#: inc/options-framework/includes/class-options-framework-admin.php:182
-msgid "恢复默认"
-msgstr "デフォルトに戻す"
-
-#: inc/options-framework/includes/class-options-framework-admin.php:182
-msgid "单击「确定」进行恢复，但所有的配置都将丢失！"
-msgstr "OKをクリックして復元しますが、すべての設定が失われます！"
-
-#: inc/options-framework/includes/class-options-framework-admin.php:213
-msgid "恢复完成"
-msgstr "リカバリー完了"
-
-#: inc/options-framework/includes/class-options-framework-admin.php:257
-msgid "[测试]邮件服务配置成功"
-msgstr "テスト】メールサービスの設定に成功"
-
-#: inc/options-framework/includes/class-options-framework-admin.php:257
-msgid "恭喜您 SMTP 邮件服务配置成功！"
-msgstr "SMTPメールサービスの設定成功、おめでとうございます！"
-
-#: inc/options-framework/includes/class-options-framework-admin.php:270
-msgid "保存成功"
-msgstr "正常に保存されました"
-
-#: inc/options-framework/includes/class-options-framework-admin.php:274
-msgid "发送完成，请留意邮箱："
-msgstr "送信が完了したら、メールを見てください："
-
-#: inc/options-framework/includes/class-options-interface.php:230
-msgid "基础信息"
-msgstr "基本情報"
-
-#: inc/options-framework/includes/class-options-interface.php:232
-msgid "PHP 版本："
-msgstr "PHPのバージョン："
-
-#: inc/options-framework/includes/class-options-interface.php:233
-msgid "Kratos 版本："
-msgstr "クレイトス編："
-
-#: inc/options-framework/includes/class-options-interface.php:234
-msgid "WordPress 版本："
-msgstr "WordPressのバージョン："
-
-#: inc/options-framework/includes/class-options-interface.php:235
-msgid "User Agent 信息："
-msgstr "ユーザーエージェント情報です："
-
-#: inc/options-framework/includes/class-options-interface.php:237
-msgid "提示：在提交主题相关问题反馈时，请将上面「基础信息」中的内容复制到环境信息中。"
-msgstr "ヒント：トピック関連の課題についてフィードバックを提出する場合は、上記の「基本情報」の内容を「環境情報」にコピーしてください。"
-
-#: inc/options-framework/includes/class-options-interface.php:238
-msgid "资料文档"
-msgstr "情報文書"
-
-#: inc/options-framework/includes/class-options-interface.php:240
-msgid "说明文档："
-msgstr "指示書："
-
-#: inc/options-framework/includes/class-options-interface.php:241
-msgid "代码托管："
-msgstr "コードホスティング："
-
-#: inc/options-framework/includes/class-options-interface.php:242
-msgid "问题反馈："
-msgstr "質問のフィードバック："
-
-#: inc/options-framework/includes/class-options-interface.php:243
-msgid "常见问题："
-msgstr "よくある質問："
-
-#: inc/options-framework/includes/class-options-interface.php:244
-msgid "更新日志："
-msgstr "ログを更新します："
-
-#: inc/options-framework/includes/class-options-interface.php:246
-msgid "讨论交流"
-msgstr "議論と交流"
-
-#: inc/options-framework/includes/class-options-interface.php:248
-msgid "版权声明"
-msgstr "著作権について"
-
-#: inc/options-framework/includes/class-options-interface.php:249
-msgid "主题源码使用 <a href=\"https://github.com/vtrois/kratos/blob/main/LICENSE\" target=\"_blank\">MIT 协议</a> 进行许可，说明文档使用 <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> 进行许可。"
-msgstr "テーマのソースコードは <a href=\"https://github.com/vtrois/kratos/blob/main/LICENSE\" target=\"_blank\">MITプロトコルの</a> 下でライセンスされ、ドキュメントは <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> の下でライセンスされています。"
-
-#: inc/options-framework/includes/class-options-interface.php:250
-msgid "打赏支持"
-msgstr "報酬サポート"
-
-#: inc/options-framework/includes/class-options-interface.php:256
-msgid "测试邮件"
-msgstr "テストメール"
-
-#: inc/options-framework/includes/class-options-media-uploader.php:62
-msgid "没有选择任何文件"
-msgstr "選定された書類はありませんでした"
-
-#: inc/options-framework/includes/class-options-media-uploader.php:65
-#: inc/options-framework/includes/class-options-media-uploader.php:118
-msgid "上传"
-msgstr "アップロードする"
-
-#: inc/options-framework/includes/class-options-media-uploader.php:67
-#: inc/options-framework/includes/class-options-media-uploader.php:119
-msgid "删除"
-msgstr "デリート"
-
-#: inc/options-framework/includes/class-options-media-uploader.php:70
-msgid "升级 WordPress 版本获得完整的媒体支持"
-msgstr "WordPressのバージョンをアップグレードしてメディアをフルサポート"
-
-#: inc/options-framework/includes/class-options-media-uploader.php:94
-msgid "浏览文件"
-msgstr "ドキュメントの閲覧"
-
-#: inc/theme-article.php:210
+#: inc/theme-article.php:218
 msgid "评论正在提交中"
 msgstr "コメント投稿中"
 
-#: inc/theme-article.php:211
+#: inc/theme-article.php:219
 msgid "评论提交成功"
 msgstr "コメントが正常に送信されました"
 
-#: inc/theme-article.php:249 inc/theme-article.php:288
+#: inc/theme-article.php:261 inc/theme-article.php:306
 msgid "编辑"
 msgstr "編集"
 
-#: inc/theme-article.php:292 inc/theme-smtp.php:102
+#: inc/theme-article.php:312 inc/theme-smtp.php:103
 msgid "回复"
 msgstr "返信する"
 
-#: inc/theme-article.php:347
+#: inc/theme-article.php:367
 msgid "添加表情"
 msgstr "絵文字を追加"
 
-#: inc/theme-article.php:400
+#: inc/theme-article.php:424
 msgid "描述"
 msgstr "叙述"
 
-#: inc/theme-article.php:405 inc/theme-options.php:226
+#: inc/theme-article.php:429 inc/theme-options.php:567
 msgid "关键词"
 msgstr "キーワード"
 
-#: inc/theme-article.php:411
+#: inc/theme-article.php:436
 msgid "SEO 设置"
 msgstr "SEO設定"
 
-#: inc/theme-core.php:84
+#: inc/theme-core.php:94
 msgid "您已经赞过了"
 msgstr "もう好きになってしまったんですね"
 
-#: inc/theme-core.php:85
+#: inc/theme-core.php:95
 msgid "感谢您的支持"
 msgstr "ご支援ありがとうございました"
 
-#: inc/theme-core.php:86
+#: inc/theme-core.php:96
 msgid "打赏作者"
 msgstr "著者への報酬"
 
-#: inc/theme-core.php:87
+#: inc/theme-core.php:97
 msgid "扫码支付"
 msgstr "掃引払い"
 
@@ -270,992 +143,1287 @@ msgstr "トップメニュー"
 msgid "添加导航"
 msgstr "ナビゲーションを追加"
 
-#: inc/theme-options.php:30
-msgid "设置-阅读-对搜索引擎的可见性"
-msgstr "設定 - 読み取り - 検索エンジンへの表示"
+#: inc/theme-options.php:68
+msgid "主题设置"
+msgstr "テーマ設定"
 
-#: inc/theme-options.php:33 single.php:110
-msgid "知识共享署名 4.0 国际许可协议"
-msgstr "クリエイティブ・コモンズ 表示 4.0 国際ライセンス"
-
-#: inc/theme-options.php:34 single.php:111
-msgid "知识共享署名-非商业性使用 4.0 国际许可协议"
-msgstr "クリエイティブ・コモンズ 表示-非商用利用 4.0 国際ライセンス"
-
-#: inc/theme-options.php:35 single.php:112
-msgid "知识共享署名-禁止演绎 4.0 国际许可协议"
-msgstr "クリエイティブ・コモンズ 表示なし 4.0 国際ライセンス"
-
-#: inc/theme-options.php:36 single.php:113
-msgid "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
-msgstr "クリエイティブ・コモンズ 表示-非商用利用-無差別4.0国際ライセンス"
-
-#: inc/theme-options.php:37 single.php:114
-msgid "知识共享署名-相同方式共享 4.0 国际许可协议"
-msgstr "クリエイティブ・コモンズ 表示-継承 4.0 国際ライセンス"
-
-#: inc/theme-options.php:38 single.php:115
-msgid "知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议"
-msgstr "クリエイティブ・コモンズ 表示-非商用利用-シェアライク 4.0 国際ライセンス"
-
-#: inc/theme-options.php:42 inc/theme-options.php:566
-msgid "图片导航"
-msgstr "イメージナビゲーション"
-
-#: inc/theme-options.php:43 inc/theme-options.php:558
-msgid "颜色导航"
-msgstr "カラーナビゲーション"
-
-#: inc/theme-options.php:49
+#: inc/theme-options.php:81
 msgid "全站配置"
 msgstr "フルステーション構成"
 
-#: inc/theme-options.php:54
-msgid "图片 Logo"
-msgstr "イメージロゴ"
+#: inc/theme-options.php:87
+msgid "功能配置"
+msgstr "機能構成"
 
-#: inc/theme-options.php:55
-msgid "不选择图片则显示文字标题"
-msgstr "画像が選択されていない場合、テキストキャプションを表示する"
-
-#: inc/theme-options.php:61
-msgid "Favicon 图片"
-msgstr "ファビコンの写真"
-
-#: inc/theme-options.php:62
-msgid "浏览器收藏夹和地址栏中显示的图标"
-msgstr "ブラウザのお気に入りやアドレスバーに表示されるアイコン"
-
-#: inc/theme-options.php:68
-msgid "背景颜色"
-msgstr "背景色"
-
-#: inc/theme-options.php:69
-msgid "全站页面的背景颜色，需填写十六进制颜色码"
-msgstr "全体のサイトのページの背景色は、16進数のカラーコードを記入する必要があります"
-
-#: inc/theme-options.php:76
+#: inc/theme-options.php:93
 msgid "前台管理员导航"
 msgstr "フロント管理者ナビ"
 
-#: inc/theme-options.php:77
-msgid "开启前台管理员导航"
-msgstr "フロントデスク管理者ナビゲーションを有効にする"
+#: inc/theme-options.php:94
+msgid "启用/禁用前台管理员导航"
+msgstr "フォアグラウンド管理者ナビゲーションを有効または無効にします"
 
-#: inc/theme-options.php:84
+#: inc/theme-options.php:100
 msgid "侧边栏后台入口"
 msgstr "サイドバーバックエンドエントリー"
 
-#: inc/theme-options.php:85
-msgid "开启小工具个人简介头像进入后台功能"
-msgstr "バックエンド機能にアクセスするには、ガジェットの個人プロフィールアバターをオンにします"
-
-#: inc/theme-options.php:92
-msgid "多人模式"
-msgstr "マルチプレイモード"
-
-#: inc/theme-options.php:93
-msgid "在文章列表显示当前文章作者，在文章页面页脚显示当前作者介绍"
-msgstr "記事一覧に現在の記事作成者を表示し、記事ページのフッターに現在の記事作成者の紹介文を表示する"
-
-#: inc/theme-options.php:99
-msgid "CSS 动画库"
-msgstr "CSS アニメーションライブラリ"
-
-#: inc/theme-options.php:100
-msgid "开启 animate.css 效果"
-msgstr "animate.css効果をオンにする"
+#: inc/theme-options.php:101
+msgid "启用/禁用个人简介头像进入后台功能"
+msgstr "プロフィールアバターをバックグラウンド機能に有効/無効にします"
 
 #: inc/theme-options.php:107
-msgid "Font Awesome"
-msgstr "フォントオーサム"
+msgid "侧边栏随动"
+msgstr "サイドバーが追従します"
 
 #: inc/theme-options.php:108
-msgid "开启 Font Awesome 字体"
-msgstr "フォントAwesomeフォントをオンにする"
+msgid "启用/禁用小工具侧边栏随动功能"
+msgstr "ガジェットサイドバーの追従機能を有効または無効にします"
+
+#: inc/theme-options.php:114
+msgid "搜索增强"
+msgstr "検索の機能強化"
 
 #: inc/theme-options.php:115
-msgid "静态资源加速"
-msgstr "静的リソースアクセラレーション"
+msgid "启用/禁用仅搜索文章标题"
+msgstr "記事のタイトルのみを検索する場合は、有効/無効にします"
 
-#: inc/theme-options.php:116
-msgid "开启静态资源加速（CSS、JS、Font）"
-msgstr "静的リソースアクセラレーション（CSS、JS、フォント）をオンにする"
-
-#: inc/theme-options.php:123
-msgid "禁止生成缩略图"
-msgstr "サムネイルの生成を無効にする"
-
-#: inc/theme-options.php:124
-msgid "是否禁止生成多种尺寸图片资源"
-msgstr "マルチサイズ画像リソースの生成を無効にするかどうか"
-
-#: inc/theme-options.php:131
-msgid "媒体资源托管"
-msgstr "メディアリソース ホスティング"
-
-#: inc/theme-options.php:132
-msgid "是否将媒体资源托管到 DogeCloud 存储"
-msgstr "メディアリソースをDogeCloudストレージにホストするかどうか"
-
-#: inc/theme-options.php:139
-msgid "存储空间名称"
-msgstr "ストレージスペース名"
-
-#: inc/theme-options.php:146
-msgid "加速域名"
-msgstr "加速されたドメイン名"
-
-#: inc/theme-options.php:148
-msgid "例如：https://cdn.xxx.com"
-msgstr "例： https://cdn.xxx.com"
-
-#: inc/theme-options.php:154
-msgid "AccessKey"
-msgstr "アクセスキー"
-
-#: inc/theme-options.php:161
-msgid "SecretKey"
-msgstr "シークレットキー"
-
-#: inc/theme-options.php:168
-msgid "Gutenberg 编辑器"
-msgstr "グーテンベルクエディタ"
-
-#: inc/theme-options.php:169
-msgid "开启 Gutenberg 编辑器"
-msgstr "Gutenbergエディタを開く"
-
-#: inc/theme-options.php:176
-msgid "Gravatar 加速"
-msgstr "グラバターの加速"
-
-#: inc/theme-options.php:177
-msgid "开启 Gravatar 头像加速"
-msgstr "Gravatar アバターの加速をオンにする"
-
-#: inc/theme-options.php:184
-msgid "Chrome 导航栏颜色"
-msgstr "クロームナビゲーションバーの色"
-
-#: inc/theme-options.php:185
-msgid "Chrome 移动端浏览器导航栏的颜色"
-msgstr "Chromeモバイルブラウザのナビゲーションバーの色"
-
-#: inc/theme-options.php:192 inc/theme-options.php:425
-msgid "微信二维码"
-msgstr "WeChatの二次元コード"
-
-#: inc/theme-options.php:193
-msgid "开启页面右下角浮动微信二维码"
-msgstr "ページ右下の浮遊するWeChatのQRコードを開く"
-
-#: inc/theme-options.php:206
-msgid "404 页面图片"
-msgstr "404ページの画像"
-
-#: inc/theme-options.php:213
-msgid "收录配置"
-msgstr "コレクション構成"
-
-#: inc/theme-options.php:218
-msgid "分享图片"
-msgstr "画像を共有する"
-
-#: inc/theme-options.php:219
-msgid "搜索引擎或者社交工具分享首页时抓取的图片"
-msgstr "ホームページ共有時に検索エンジンやソーシャルツールで掴んだ画像"
-
-#: inc/theme-options.php:227
-msgid "每个关键词之间需要用「英文逗号」分割"
-msgstr "各キーワードは「英語のカンマ」で区切る必要があります"
-
-#: inc/theme-options.php:233
-msgid "站点描述"
-msgstr "サイトの説明"
-
-#: inc/theme-options.php:239
-msgid "统计代码"
-msgstr "統計コード"
-
-#: inc/theme-options.php:240
-msgid "注意：输入 HTML/JS 代码时请注意辨别代码安全！"
-msgstr "注意：HTML/JSコードを入力する際には、コードセキュリティを識別するために注意してください！"
-
-#: inc/theme-options.php:246
-msgid "robots.txt 配置"
-msgstr "ロボッツテキスト設定"
-
-#: inc/theme-options.php:247
-msgid "- 需要 "
-msgstr "- ひつよう "
-
-#: inc/theme-options.php:247
-msgid " 是开启的状态，下面的配置才会生效"
-msgstr " をオンにすると、以下の設定が有効になります"
-
-#: inc/theme-options.php:252
-msgid "- 如果网站根目录下已经有 robots.txt 文件，下面的配置不会生效"
-msgstr "- サイトのルートにすでに robots.txt ファイルがある場合、以下の設定は有効になりません"
-
-#: inc/theme-options.php:257
-msgid "- 点击 "
-msgstr "- 戞戞 "
-
-#: inc/theme-options.php:257
-msgid " 查看配置是否生效，如果网站开启了 CDN，可能需要刷新缓存才会生效"
-msgstr " サイトがCDNを有効にしている場合、設定が有効になる前にキャッシュを更新する必要があるかもしれません"
-
-#: inc/theme-options.php:268
-msgid "首页配置"
-msgstr "ホーム構成"
-
-#: inc/theme-options.php:273
-msgid "哀悼功能"
-msgstr "喪服機能"
-
-#: inc/theme-options.php:274
-msgid "开启站点首页黑白功能（用于R.I.P.）"
-msgstr "サイトオンホーム白黒（R.I.P.用"
-
-#: inc/theme-options.php:280
+#: inc/theme-options.php:121
 msgid "特色图片"
 msgstr "注目の画像"
 
-#: inc/theme-options.php:281
-msgid "开启站点首页特色图片功能"
-msgstr "サイトのホームページで特集画像機能を有効にする"
+#: inc/theme-options.php:122
+msgid "启用/禁用文章特色图片"
+msgstr "記事のおすすめ画像を有効または無効にします"
 
-#: inc/theme-options.php:288
-msgid "默认特色图"
-msgstr "デフォルトのフィーチャーマップ"
+#: inc/theme-options.php:128
+msgid "哀悼功能"
+msgstr "喪服機能"
+
+#: inc/theme-options.php:129
+msgid "启用/禁用站点首页黑白功能"
+msgstr "サイトのフロント ページの白黒機能を有効または無効にします"
+
+#: inc/theme-options.php:135
+msgid "CSS 动画库"
+msgstr "CSS アニメーションライブラリ"
+
+#: inc/theme-options.php:136
+msgid "启用/禁用 animate.css 效果"
+msgstr "animate.css効果を有効/無効にします"
+
+#: inc/theme-options.php:142
+msgid "Font Awesome"
+msgstr "フォントオーサム"
+
+#: inc/theme-options.php:143
+msgid "启用/禁用 Font Awesome Free 字体"
+msgstr "Font Awesome Free フォントを有効または無効にします"
+
+#: inc/theme-options.php:149
+msgid "静态资源加速"
+msgstr "静的リソースアクセラレーション"
+
+#: inc/theme-options.php:150
+msgid "启用/禁用静态资源加速"
+msgstr "静的リソース アクセラレーションを有効または無効にします"
+
+#: inc/theme-options.php:156
+msgid "Gravatar 加速"
+msgstr "グラバターの加速"
+
+#: inc/theme-options.php:157
+msgid "启用/禁用 Gravatar 头像加速"
+msgstr "Gravatarアバターアクセラレーションを有効/無効にします"
+
+#: inc/theme-options.php:163
+msgid "自定义图片类型的文件名"
+msgstr "カスタム ピクチャ タイプのファイル名"
+
+#: inc/theme-options.php:164
+msgid "启用/禁用 图片类型的文件名改为 MD5 值"
+msgstr "有効/無効 画像タイプのファイル名を MD5 値に変更します"
+
+#: inc/theme-options.php:170
+msgid "禁止生成缩略图"
+msgstr "サムネイルの生成を無効にする"
+
+#: inc/theme-options.php:171
+msgid "启用/禁用生成多种尺寸图片资源"
+msgstr "複数のサイズの画像アセットの生成を有効/無効にします"
+
+#: inc/theme-options.php:177
+msgid "Gutenberg 编辑器"
+msgstr "グーテンベルクエディタ"
+
+#: inc/theme-options.php:178
+msgid "启用/禁用 Gutenberg 编辑器"
+msgstr "Gutenberg エディタを有効または無効にします"
+
+#: inc/theme-options.php:184
+msgid "文章简介缩略"
+msgstr "記事の概要を簡単に説明します"
+
+#: inc/theme-options.php:185
+msgid "文章简介显示的字符数量"
+msgstr "記事の概要に表示される文字数"
+
+#: inc/theme-options.php:194
+msgid "附件重命名"
+msgstr "添付ファイルの名前を変更します"
+
+#: inc/theme-options.php:199 inc/theme-options.php:234
+#: inc/theme-options.php:337 inc/theme-options.php:421
+#: inc/theme-options.php:482 inc/theme-options.php:652
+#: inc/theme-options.php:714 inc/theme-options.php:1064
+#: inc/theme-options.php:1103
+msgid "功能开关"
+msgstr "機能スイッチ"
+
+#: inc/theme-options.php:200
+msgid "开启/关闭附件重命名"
+msgstr "添付ファイルの名前変更のオン/オフを切り替える"
+
+#: inc/theme-options.php:201 inc/theme-options.php:236
+#: inc/theme-options.php:339 inc/theme-options.php:423
+#: inc/theme-options.php:484 inc/theme-options.php:654
+#: inc/theme-options.php:716 inc/theme-options.php:1066
+#: inc/theme-options.php:1105
+msgid "开启"
+msgstr "開く"
+
+#: inc/theme-options.php:202 inc/theme-options.php:237
+#: inc/theme-options.php:340 inc/theme-options.php:424
+#: inc/theme-options.php:485 inc/theme-options.php:655
+#: inc/theme-options.php:717 inc/theme-options.php:1067
+#: inc/theme-options.php:1106
+msgid "关闭"
+msgstr "シャットオフ"
+
+#: inc/theme-options.php:207
+msgid "文件前缀"
+msgstr "ファイル接頭辞"
+
+#: inc/theme-options.php:208
+msgid "前缀与文件名之间会用 - 连接"
+msgstr "プレフィックスとファイル名の間には - 接続が使用されます"
+
+#: inc/theme-options.php:213
+msgid "文件类型"
+msgstr "ファイルの種類"
+
+#: inc/theme-options.php:214
+msgid "每个类型之间用 | 隔开"
+msgstr "各型間で | 分離"
+
+#: inc/theme-options.php:229 inc/theme-options.php:722
+msgid "微信二维码"
+msgstr "WeChatの二次元コード"
+
+#: inc/theme-options.php:235
+msgid "开启/关闭微信二维码"
+msgstr "WeChat QR コードのオン/オフを切り替える"
+
+#: inc/theme-options.php:242
+msgid "二维码图片"
+msgstr "QR コードの画像"
+
+#: inc/theme-options.php:245
+msgid "浮动显示在页面右下角"
+msgstr "ページの右下隅にフローティングが表示されます"
+
+#: inc/theme-options.php:258
+msgid "颜色配置"
+msgstr "色の構成"
+
+#: inc/theme-options.php:265
+msgid "全站背景颜色"
+msgstr "駅全体の背景色"
+
+#: inc/theme-options.php:266
+msgid "全站页面的背景颜色"
+msgstr "フル ステーション ページの背景色"
+
+#: inc/theme-options.php:272
+msgid "Chrome 导航栏颜色"
+msgstr "クロームナビゲーションバーの色"
+
+#: inc/theme-options.php:273
+msgid "移动端 Chrome 浏览器导航栏颜色"
+msgstr "モバイル Chrome ブラウザのナビゲーション バーの色"
+
+#: inc/theme-options.php:280
+msgid "图片配置"
+msgstr "画像構成"
+
+#: inc/theme-options.php:286
+msgid "站点 Logo"
+msgstr "サイトロゴ"
 
 #: inc/theme-options.php:289
-msgid "当文章中没有图片并且没有设置特色图时在首页显示"
-msgstr "記事内に画像がなく、特集画像が設定されていない場合にフロントページに表示する"
+msgid "不上传图片则显示站点标题"
+msgstr "画像をアップロードしないと、サイトのタイトルが表示されます"
+
+#: inc/theme-options.php:294
+msgid "Favicon 图标"
+msgstr "Favicon アイコン"
 
 #: inc/theme-options.php:297
+msgid "浏览器收藏夹和地址栏中显示的图标"
+msgstr "ブラウザのお気に入りやアドレスバーに表示されるアイコン"
+
+#: inc/theme-options.php:302
+msgid "404 页面图片"
+msgstr "404ページの画像"
+
+#: inc/theme-options.php:306
+msgid "图片显示出来是 404 的形状"
+msgstr "写真は404の形状を示しています"
+
+#: inc/theme-options.php:311
 msgid "无内容图片"
 msgstr "コンテンツ画像なし"
 
-#: inc/theme-options.php:298
-msgid "当搜索不到文章或文章分类中没有文章时显示"
-msgstr "記事が検索されていない場合や、記事カテゴリの記事がない場合に表示する"
+#: inc/theme-options.php:315
+msgid "当搜索不到文章或分类没有文章时显示"
+msgstr "記事が検索されない場合、またはカテゴリに記事がない場合に表示されます"
 
-#: inc/theme-options.php:305
+#: inc/theme-options.php:320
+msgid "默认特色图"
+msgstr "デフォルトのフィーチャーマップ"
+
+#: inc/theme-options.php:324
+msgid "当文章中没有图片且没有特色图时显示"
+msgstr "記事に画像がなく、注目の画像がない場合に表示されます"
+
+#: inc/theme-options.php:331
 msgid "首页轮播"
 msgstr "ホームローテーション"
 
-#: inc/theme-options.php:306
-msgid "开启站点首页轮播功能"
-msgstr "サイトのホームページの回転をオンにする"
+#: inc/theme-options.php:338
+msgid "开启/关闭首页轮播功能"
+msgstr "トップページカルーセル機能のオン/オフを切り替えます"
 
-#: inc/theme-options.php:312
-msgid "轮播一（图片）"
-msgstr "回転I（画像"
+#: inc/theme-options.php:354 inc/theme-options.php:1044
+#: inc/theme-options.php:1083
+msgid "唯一标识"
+msgstr "一意の ID"
 
-#: inc/theme-options.php:319
-msgid "轮播一（网址）"
-msgstr "ローテーションI（ホームページ"
+#: inc/theme-options.php:355
+msgid "仅用于轮播标识，可以作为备注使用"
+msgstr "カルーセル ID にのみ使用され、メモとして使用できます"
 
-#: inc/theme-options.php:326
-msgid "轮播二（图片）"
-msgstr "ローテーションII（画像"
+#: inc/theme-options.php:360 inc/theme-options.php:1050
+#: inc/theme-options.php:1089
+msgid "轮播图片"
+msgstr "画像をカルーセルします"
 
-#: inc/theme-options.php:333
-msgid "轮播二（网址）"
-msgstr "ローテーションⅡ（ホームページ"
+#: inc/theme-options.php:361 inc/theme-options.php:1051
+#: inc/theme-options.php:1090
+msgid "可以直接填写图片链接，也可以上传图片"
+msgstr "画像リンクを直接入力することも、画像をアップロードすることもできます"
 
-#: inc/theme-options.php:340
-msgid "轮播三（图片）"
-msgstr "回転III（画像"
+#: inc/theme-options.php:368 inc/theme-options.php:1058
+#: inc/theme-options.php:1097
+msgid "网址链接"
+msgstr "URL リンク"
 
-#: inc/theme-options.php:347
-msgid "轮播三（网址）"
-msgstr "ローテーションⅢ（ホームページ"
+#: inc/theme-options.php:369 inc/theme-options.php:1059
+#: inc/theme-options.php:1098
+msgid "需要填写完整的链接地址，包含协议头"
+msgstr "プロトコル ヘッダーを含む完全なリンク アドレスを入力する必要があります"
 
-#: inc/theme-options.php:354
-msgid "轮播四（图片）"
-msgstr "回転IV（画像"
+#: inc/theme-options.php:374
+msgid "轮播标题"
+msgstr "タイトルをカルーセルします"
 
-#: inc/theme-options.php:361
-msgid "轮播四（网址）"
-msgstr "ローテーションIV（ホームページ"
+#: inc/theme-options.php:375 inc/theme-options.php:381
+msgid "选填项目，如果不填则不显示"
+msgstr "項目を選択し、入力しない場合は表示しません"
 
-#: inc/theme-options.php:368
-msgid "轮播五（图片）"
-msgstr "回転Ｖ（画像"
+#: inc/theme-options.php:380
+msgid "轮播简介"
+msgstr "カルーセルの概要"
 
-#: inc/theme-options.php:375
-msgid "轮播五（网址）"
-msgstr "ローテーションV（ホームページ"
+#: inc/theme-options.php:387
+msgid "文字颜色"
+msgstr "テキストの色"
 
-#: inc/theme-options.php:382
+#: inc/theme-options.php:388
+msgid "轮播标题和简介的颜色"
+msgstr "カルーセルのタイトルとイントロの色"
+
+#: inc/theme-options.php:397
+msgid "第三方配置"
+msgstr "サード パーティの構成"
+
+#: inc/theme-options.php:411
+msgid "DogeCloud 云存储"
+msgstr "DogeCloud クラウド ストレージ"
+
+#: inc/theme-options.php:422
+msgid "开启/关闭 DogeCloud 云存储"
+msgstr "DogeCloud ストレージのオン/オフを切り替える"
+
+#: inc/theme-options.php:429
+msgid "空间名称"
+msgstr "スペース名"
+
+#: inc/theme-options.php:430
+msgid "空间名称可在空间基本信息中查看"
+msgstr "スペース名は、スペースの基本情報で表示できます"
+
+#: inc/theme-options.php:431
+msgid "<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">点击这里</a>查询空间名称"
+msgstr "<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">ここをクリックして</a>スペース名を照会します"
+
+#: inc/theme-options.php:436 inc/theme-options.php:509
+msgid "加速域名"
+msgstr "加速されたドメイン名"
+
+#: inc/theme-options.php:437 inc/theme-options.php:510
+msgid "域名结尾不要添加 /"
+msgstr "ドメイン名の末尾に追加しないでください /"
+
+#: inc/theme-options.php:438
+msgid "<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">点击这里</a>查询加速域名"
+msgstr "アクセラレーション ドメイン名については<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">、ここをクリックしてください</a>"
+
+#: inc/theme-options.php:443 inc/theme-options.php:523
+msgid "AccessKey"
+msgstr "アクセスキー"
+
+#: inc/theme-options.php:444 inc/theme-options.php:454
+#: inc/theme-options.php:524 inc/theme-options.php:534
+msgid "出于安全考虑，建议周期性地更换密钥"
+msgstr "セキュリティ上の理由から、キーを定期的に交換することをお勧めします"
+
+#: inc/theme-options.php:445
+msgid "<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">点击这里</a>查询 AccessKey"
+msgstr "<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">AccessKey を照会するには、ここをクリックしてください</a>"
+
+#: inc/theme-options.php:453 inc/theme-options.php:533
+msgid "SecretKey"
+msgstr "シークレットキー"
+
+#: inc/theme-options.php:455
+msgid "<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">点击这里</a>查询 SecretKey"
+msgstr "SecretKey については<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">、ここをクリックしてください</a>"
+
+#: inc/theme-options.php:472
+msgid "火山引擎 ImageX"
+msgstr "火山エンジンImageX"
+
+#: inc/theme-options.php:483
+msgid "开启/关闭 火山引擎 ImageX"
+msgstr "火山エンジンImageXのオン/オフを切り替える"
+
+#: inc/theme-options.php:490
+msgid "加速地域"
+msgstr "エリアを高速化"
+
+#: inc/theme-options.php:491
+msgid "加速地域在创建服务的时候进行选择"
+msgstr "サービスの作成時に地域の選択を高速化します"
+
+#: inc/theme-options.php:492
+msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">点击这里</a>查询加速地域"
+msgstr "アクセラレーション ドメインについては<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">、ここをクリックしてください</a>"
+
+#: inc/theme-options.php:494
+msgid "国内"
+msgstr "中国"
+
+#: inc/theme-options.php:495
+msgid "美东"
+msgstr "メドン"
+
+#: inc/theme-options.php:496
+msgid "新加坡"
+msgstr "シンガポール"
+
+#: inc/theme-options.php:502
+msgid "服务 ID"
+msgstr "サービス ID"
+
+#: inc/theme-options.php:503
+msgid "服务 ID 可在图片服务管理中查看"
+msgstr "サービス ID は、ピクチャ サービス管理で確認できます"
+
+#: inc/theme-options.php:504
+msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">点击这里</a>查询服务 ID"
+msgstr "サービス ID<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">については、ここをクリックしてください</a>"
+
+#: inc/theme-options.php:511
+msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">点击这里</a>查询加速域名"
+msgstr "アクセラレーション ドメイン名については<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">、ここをクリックしてください</a>"
+
+#: inc/theme-options.php:516
+msgid "处理模板"
+msgstr "テンプレートを処理します"
+
+#: inc/theme-options.php:517
+msgid "处理模板可在图片处理配置中查看"
+msgstr "処理テンプレートは、画像処理構成で表示できます"
+
+#: inc/theme-options.php:518
+msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/image_template/\">点击这里</a>查询处理模板"
+msgstr "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/image_template/\">ここをクリックして</a>処理テンプレートを照会します"
+
+#: inc/theme-options.php:525
+msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/\">点击这里</a>查询 AccessKey"
+msgstr "<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/\">AccessKey を照会するには、ここをクリックしてください</a>"
+
+#: inc/theme-options.php:535
+msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/\">点击这里</a>查询 SecretKey"
+msgstr "SecretKey については<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/\">、ここをクリックしてください</a>"
+
+#: inc/theme-options.php:552
+msgid "收录配置"
+msgstr "コレクション構成"
+
+#: inc/theme-options.php:558
+msgid "分享图片"
+msgstr "画像を共有する"
+
+#: inc/theme-options.php:562
+msgid "用于搜索引擎或社交工具抓取时使用"
+msgstr "検索エンジンやソーシャルツールのクロールに使用されます"
+
+#: inc/theme-options.php:568
+msgid "每个关键词之间需要用 , 分割"
+msgstr "各キーワードは、分割する必要があります"
+
+#: inc/theme-options.php:573
+msgid "站点描述"
+msgstr "サイトの説明"
+
+#: inc/theme-options.php:574
+msgid "网站首页的描述信息"
+msgstr "サイトのフロント ページの説明情報"
+
+#: inc/theme-options.php:578
+msgid "统计代码"
+msgstr "統計コード"
+
+#: inc/theme-options.php:579
+msgid "<span style=\"color:red\">输入代码时请注意辨别代码安全性</span>"
+msgstr "<span style=\"color:red\">コードを入力するときは、コードのセキュリティを識別することに注意してください</span>"
+
+#: inc/theme-options.php:594
+msgid "robots.txt 配置"
+msgstr "ロボッツテキスト設定"
+
+#: inc/theme-options.php:598
+msgid "- 需要 "
+msgstr "- ひつよう "
+
+#: inc/theme-options.php:598
+msgid "设置-阅读-对搜索引擎的可见性"
+msgstr "設定 - 読み取り - 検索エンジンへの表示"
+
+#: inc/theme-options.php:598
+msgid " 是开启的状态，以下配置才会生效"
+msgstr " 次の構成が有効になるまで有効になりません"
+
+#: inc/theme-options.php:598
+msgid "- 如果网站根目录下已经有 robots.txt 文件，下面的配置不会生效"
+msgstr "- サイトのルートにすでに robots.txt ファイルがある場合、以下の設定は有効になりません"
+
+#: inc/theme-options.php:598
+msgid "- 点击 "
+msgstr "- 戞戞 "
+
+#: inc/theme-options.php:598
+msgid " 查看配置是否生效，如果网站开启了 CDN，可能需要刷新缓存才会生效"
+msgstr " サイトがCDNを有効にしている場合、設定が有効になる前にキャッシュを更新する必要があるかもしれません"
+
+#: inc/theme-options.php:613
 msgid "文章配置"
 msgstr "記事の構成"
 
-#: inc/theme-options.php:387
-msgid "知识共享协议"
-msgstr "ナレッジシェアリングアグリーメント"
-
-#: inc/theme-options.php:388
-msgid "开启文章知识共享协议"
-msgstr "記事の知識共有プロトコルをオンにする"
-
-#: inc/theme-options.php:394
-msgid "选择文章的知识共享协议"
-msgstr "記事のクリエイティブ・コモンズプロトコルを選択"
-
-#: inc/theme-options.php:403
+#: inc/theme-options.php:619
 msgid "网易云音乐"
 msgstr "NetEase.comまたはNetEase Cloud Music、ウェブベースの音楽サービス"
 
-#: inc/theme-options.php:404
-msgid "开启网易云音乐自动播放"
-msgstr "Netflixの自動再生をオンにする"
+#: inc/theme-options.php:620
+msgid "启用/禁用网易云音乐自动播放功能"
+msgstr "NetEase Cloud ミュージックの自動再生を有効または無効にします"
 
-#: inc/theme-options.php:410
-msgid "文章打赏"
-msgstr "記事の報酬"
+#: inc/theme-options.php:626
+msgid "附加功能"
+msgstr "追加機能"
 
-#: inc/theme-options.php:411
-msgid "开启文章页面打赏功能"
-msgstr "記事ページの報酬機能をオンにする"
+#: inc/theme-options.php:627
+msgid "启用/禁用文章自动保存、修订版本功能"
+msgstr "記事の自動保存、リビジョン機能を有効または無効にします"
 
-#: inc/theme-options.php:417
-msgid "支付宝二维码"
-msgstr "アリペイQRコード"
-
-#: inc/theme-options.php:433
-msgid "HOT 标签 - 评论数"
-msgstr "HOTタグ - コメント数"
-
-#: inc/theme-options.php:434
-msgid "填写显示 HOT 标签需要的评论数"
-msgstr "HOTタグを表示するために必要なコメント数を記入する"
-
-#: inc/theme-options.php:441
-msgid "HOT 标签 - 点赞数"
-msgstr "ホットタグ - 好き"
-
-#: inc/theme-options.php:442
-msgid "填写显示 HOT 标签需要的点赞数"
-msgstr "HOTタグを表示するために必要な「いいね！」の数を入力します"
-
-#: inc/theme-options.php:449
+#: inc/theme-options.php:633
 msgid "页面布局"
 msgstr "ページレイアウト"
 
-#: inc/theme-options.php:450
-msgid "是否显示侧边栏小工具（默认显示侧边栏），仅在文章页面生效"
-msgstr "サイドバーウィジェットを表示するかどうか（サイドバーはデフォルトで表示される）、記事ページでのみ有効"
+#: inc/theme-options.php:634
+msgid "差异在于侧边栏小工具，仅在文章页面生效"
+msgstr "違いは、サイドバーガジェットは、記事のページでのみ有効です"
 
-#: inc/theme-options.php:460
-msgid "站长配置"
-msgstr "ウェブマスターの設定"
+#: inc/theme-options.php:647
+msgid "知识共享协议"
+msgstr "ナレッジシェアリングアグリーメント"
 
-#: inc/theme-options.php:465
-msgid "个人头像"
-msgstr "パーソナルアバター"
+#: inc/theme-options.php:653
+msgid "开启/关闭 知识共享协议"
+msgstr "クリエイティブ・コモンズ・アグリーメントのオン/オフを切り替えます"
 
-#: inc/theme-options.php:472
-msgid "个人昵称"
-msgstr "個人的なニックネーム"
+#: inc/theme-options.php:660
+msgid "协议名称"
+msgstr "プロトコル名"
 
-#: inc/theme-options.php:479 inc/theme-widgets.php:237
-msgid "个人简介"
-msgstr "じこじょうほうじん"
+#: inc/theme-options.php:661
+msgid "选择文章的知识共享协议"
+msgstr "記事のクリエイティブ・コモンズプロトコルを選択"
 
-#: inc/theme-options.php:480 inc/theme-widgets.php:254
-#: pages/page-toolbar.php:18
-msgid "保持饥渴的专注，追求最佳的品质"
-msgstr "最高の品質のために空腹と集中力を維持する"
+#: inc/theme-options.php:663 single.php:118
+msgid "知识共享署名 4.0 国际许可协议"
+msgstr "クリエイティブ・コモンズ 表示 4.0 国際ライセンス"
 
-#: inc/theme-options.php:486
+#: inc/theme-options.php:664 single.php:119
+msgid "知识共享署名-非商业性使用 4.0 国际许可协议"
+msgstr "クリエイティブ・コモンズ 表示-非商用利用 4.0 国際ライセンス"
+
+#: inc/theme-options.php:665 single.php:120
+msgid "知识共享署名-禁止演绎 4.0 国际许可协议"
+msgstr "クリエイティブ・コモンズ 表示なし 4.0 国際ライセンス"
+
+#: inc/theme-options.php:666 single.php:121
+msgid "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
+msgstr "クリエイティブ・コモンズ 表示-非商用利用-無差別4.0国際ライセンス"
+
+#: inc/theme-options.php:667 single.php:122
+msgid "知识共享署名-相同方式共享 4.0 国际许可协议"
+msgstr "クリエイティブ・コモンズ 表示-継承 4.0 国際ライセンス"
+
+#: inc/theme-options.php:668 single.php:123
+msgid "知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议"
+msgstr "クリエイティブ・コモンズ 表示-非商用利用-シェアライク 4.0 国際ライセンス"
+
+#: inc/theme-options.php:683
+msgid "文章 HOT 标签"
+msgstr "記事 HOT ラベル"
+
+#: inc/theme-options.php:688
+msgid "评论数"
+msgstr "コメントの数"
+
+#: inc/theme-options.php:689
+msgid "填写显示 HOT 标签需要的评论数"
+msgstr "HOTタグを表示するために必要なコメント数を記入する"
+
+#: inc/theme-options.php:694
+msgid "点赞数"
+msgstr "いいね!"
+
+#: inc/theme-options.php:695
+msgid "填写显示 HOT 标签需要的点赞数"
+msgstr "HOTタグを表示するために必要な「いいね！」の数を入力します"
+
+#: inc/theme-options.php:709
+msgid "文章打赏"
+msgstr "記事の報酬"
+
+#: inc/theme-options.php:715
+msgid "开启/关闭 文章打赏"
+msgstr "記事の報酬をオン/オフします"
+
+#: inc/theme-options.php:729
+msgid "支付宝二维码"
+msgstr "アリペイQRコード"
+
+#: inc/theme-options.php:744
 msgid "邮件配置"
 msgstr "メールの設定"
 
-#: inc/theme-options.php:491
+#: inc/theme-options.php:750
 msgid "SMTP 服务"
 msgstr "ＳＭＴＰサービス"
 
-#: inc/theme-options.php:492
-msgid "开启 SMTP 服务功能"
-msgstr "SMTPサービス機能を有効にする"
+#: inc/theme-options.php:751
+msgid "启用/禁用 SMTP 服务"
+msgstr "SMTP サービスを有効または無効にします"
 
-#: inc/theme-options.php:498
+#: inc/theme-options.php:757
 msgid "邮件服务器"
 msgstr "メールサーバー"
 
-#: inc/theme-options.php:499
+#: inc/theme-options.php:758
 msgid "填写发件服务器地址"
 msgstr "送信サーバーのアドレスを入力します"
 
-#: inc/theme-options.php:506
+#: inc/theme-options.php:759
+msgid "smtp.example.com"
+msgstr "smtp.example.com"
+
+#: inc/theme-options.php:764
 msgid "服务器端口"
 msgstr "サーバーポート"
 
-#: inc/theme-options.php:507
+#: inc/theme-options.php:765
 msgid "填写发件服务器端口"
 msgstr "送信サーバーのポートを入力します"
 
-#: inc/theme-options.php:514
+#: inc/theme-options.php:766
+msgid "465"
+msgstr "465"
+
+#: inc/theme-options.php:771
 msgid "授权方式"
 msgstr "認証方法"
 
-#: inc/theme-options.php:515
-msgid "填写登录鉴权的方式，ssl 或 tls"
-msgstr "ログイン認証方法を入力します"
+#: inc/theme-options.php:772
+msgid "填写登录鉴权的方式"
+msgstr "ログインの認証方法を入力します"
 
-#: inc/theme-options.php:522
+#: inc/theme-options.php:773
+msgid "ssl"
+msgstr "ssl"
+
+#: inc/theme-options.php:778
 msgid "邮箱帐号"
 msgstr "メールアカウント"
 
-#: inc/theme-options.php:523
+#: inc/theme-options.php:779
 msgid "填写邮箱账号"
 msgstr "メールアカウントを記入"
 
-#: inc/theme-options.php:530
+#: inc/theme-options.php:780
+msgid "user@example.com"
+msgstr "user@example.com"
+
+#: inc/theme-options.php:785
 msgid "邮箱密码"
 msgstr "メールボックスのパスワード"
 
-#: inc/theme-options.php:531
+#: inc/theme-options.php:786
 msgid "填写邮箱密码"
 msgstr "メールのパスワードを入力してください"
 
-#: inc/theme-options.php:544
+#: inc/theme-options.php:796
 msgid "顶部配置"
 msgstr "トップ構成"
 
-#: inc/theme-options.php:549
-msgid "顶部样式"
-msgstr "トップスタイル"
+#: inc/theme-options.php:802 inc/theme-options.php:808
+msgid "图片导航"
+msgstr "イメージナビゲーション"
 
-#: inc/theme-options.php:550
-msgid "请选择顶部样式（颜色导航或图片导航）"
-msgstr "トップスタイル（カラーナビゲーションまたは画像ナビゲーション）を選択してください。"
+#: inc/theme-options.php:809
+msgid "启用/禁用 图片导航"
+msgstr "画像ナビゲーションを有効/無効にします"
 
-#: inc/theme-options.php:574
-msgid "副标题"
-msgstr "副見出し"
+#: inc/theme-options.php:815
+msgid "顶部图片"
+msgstr "トップ画像"
 
-#: inc/theme-options.php:582
+#: inc/theme-options.php:823
+msgid "图片标题"
+msgstr "画像のタイトル"
+
+#. Theme Name of the plugin/theme
+#: inc/theme-options.php:824
+msgid "Kratos"
+msgstr "クレイトス"
+
+#: inc/theme-options.php:829
 msgid "标题描述"
 msgstr "タイトルの説明"
 
-#: inc/theme-options.php:590
+#: inc/theme-options.php:837 inc/theme-options.php:844
+msgid "颜色导航"
+msgstr "カラーナビゲーション"
+
+#: inc/theme-options.php:851
 msgid "页脚配置"
 msgstr "フッターの構成"
 
-#: inc/theme-options.php:595
-msgid "选择需要开启的社交图标"
-msgstr "オンにするソーシャルアイコンを選択します"
+#: inc/theme-options.php:857
+msgid "社交图标"
+msgstr "ソーシャル アイコン"
 
-#: inc/theme-options.php:596
+#: inc/theme-options.php:866
 msgid "国内平台"
 msgstr "国内プラットフォーム"
 
-#: inc/theme-options.php:601
+#: inc/theme-options.php:871
 msgid "新浪微博"
 msgstr "新浪微博"
 
-#: inc/theme-options.php:608
-msgid "例如：https://weibo.com/xxxxx"
-msgstr "例： https://weibo.com/xxxxx"
+#: inc/theme-options.php:872
+msgid "https://weibo.com/xxxxx"
+msgstr "https://weibo.com/xxxxx"
 
-#: inc/theme-options.php:614
+#: inc/theme-options.php:877
 msgid "哔哩哔哩"
 msgstr "ベージュベージュ"
 
-#: inc/theme-options.php:621
-msgid "例如：https://space.bilibili.com/xxxxx"
-msgstr "例： https://space.bilibili.com/xxxxx"
+#: inc/theme-options.php:878
+msgid "https://space.bilibili.com/xxxxx"
+msgstr "https://space.bilibili.com/xxxxx"
 
-#: inc/theme-options.php:627
+#: inc/theme-options.php:883
 msgid "CODING"
 msgstr "コーディング"
 
-#: inc/theme-options.php:634
-msgid "例如：https://xxxxx.coding.net/u/xxxxx"
-msgstr "例：https://xxxxx.coding.net/u/xxxxx"
+#: inc/theme-options.php:884
+msgid "https://xxxxx.coding.net/u/xxxxx"
+msgstr "https://xxxxx.coding.net/u/xxxxx"
 
-#: inc/theme-options.php:640
-msgid "码云 Gitee"
-msgstr "コードクラウドGitee"
+#: inc/theme-options.php:889
+msgid "码云"
+msgstr "ヤードクラウド"
 
-#: inc/theme-options.php:647
-msgid "例如：https://gitee.com/xxxxx"
-msgstr "例： https://gitee.com/xxxxx"
+#: inc/theme-options.php:890
+msgid "https://gitee.com/xxxxx"
+msgstr "https://gitee.com/xxxxx"
 
-#: inc/theme-options.php:653
+#: inc/theme-options.php:895
+msgid "豆瓣"
+msgstr "ポッド"
+
+#: inc/theme-options.php:896
+msgid "https://www.douban.com/people/xxxxx"
+msgstr "https://www.douban.com/people/xxxxx"
+
+#: inc/theme-options.php:906
 msgid "海外平台"
 msgstr "海外プラットフォーム"
 
-#: inc/theme-options.php:658
+#: inc/theme-options.php:911
 msgid "Twitter"
 msgstr "ツイッター"
 
-#: inc/theme-options.php:665
-msgid "例如：https://twitter.com/xxxxx"
-msgstr "例： https://twitter.com/xxxxx"
+#: inc/theme-options.php:912
+msgid "https://twitter.com/xxxxx"
+msgstr "https://twitter.com/xxxxx"
 
-#: inc/theme-options.php:671
+#: inc/theme-options.php:917
 msgid "Telegram"
 msgstr "電報"
 
-#: inc/theme-options.php:678
-msgid "例如：https://t.me/xxxxx"
-msgstr "例：https://t.me/xxxxx"
+#: inc/theme-options.php:918
+msgid "https://t.me/xxxxx"
+msgstr "https://t.me/xxxxx"
 
-#: inc/theme-options.php:684
+#: inc/theme-options.php:923
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: inc/theme-options.php:691
-msgid "例如：https://www.linkedin.com/in/xxxxx"
-msgstr "例： https://www.linkedin.com/in/xxxxx"
+#: inc/theme-options.php:924
+msgid "https://www.linkedin.com/in/xxxxx"
+msgstr "https://www.linkedin.com/in/xxxxx"
 
-#: inc/theme-options.php:697
+#: inc/theme-options.php:929
 msgid "YouTube"
 msgstr "ユーチューブ"
 
-#: inc/theme-options.php:704
-msgid "例如：https://www.youtube.com/channel/xxxxx"
-msgstr "例： https://www.youtube.com/channel/xxxxx"
+#: inc/theme-options.php:930
+msgid "https://www.youtube.com/channel/xxxxx"
+msgstr "https://www.youtube.com/channel/xxxxx"
 
-#: inc/theme-options.php:710
+#: inc/theme-options.php:935
 msgid "Github"
 msgstr "Github"
 
-#: inc/theme-options.php:717
-msgid "例如：https://github.com/xxxxx"
-msgstr "例： https://github.com/xxxxx"
+#: inc/theme-options.php:936
+msgid "https://github.com/xxxxx"
+msgstr "https://github.com/xxxxx"
 
-#: inc/theme-options.php:723
+#: inc/theme-options.php:941
 msgid "Stack Overflow"
 msgstr "スタックオーバーフロー"
 
-#: inc/theme-options.php:730
-msgid "例如：https://stackoverflow.com/users/xxxxx"
-msgstr "例： https://stackoverflow.com/users/xxxxx"
+#: inc/theme-options.php:942
+msgid "https://stackoverflow.com/users/xxxxx"
+msgstr "https://stackoverflow.com/users/xxxxx"
 
-#: inc/theme-options.php:736
+#: inc/theme-options.php:952
 msgid "其他"
 msgstr "その他"
 
-#: inc/theme-options.php:741
+#: inc/theme-options.php:957
 msgid "电子邮箱"
 msgstr "メールアドレス"
 
-#: inc/theme-options.php:748
-msgid "例如：mailto:xxxxx@gmail.com"
-msgstr "例： mailto:xxxxx@gmail.com"
+#: inc/theme-options.php:958
+msgid "mailto:xxxxx@example.com"
+msgstr "mailto:xxxxx@example.com"
 
-#: inc/theme-options.php:754
+#: inc/theme-options.php:981
+msgid "备案信息"
+msgstr "ファイリング情報"
+
+#: inc/theme-options.php:987
 msgid "工信部备案信息"
 msgstr "MIITファイリング情報"
 
-#: inc/theme-options.php:756
-msgid "例如：京ICP证xxxxxx号"
-msgstr "例：京ICP备xxxxxx号"
+#: inc/theme-options.php:988
+msgid "由<a target=\"_blank\" href=\"https://beian.miit.gov.cn/\">工业和信息化部政务服务平台</a>提供"
+msgstr "<a target=\"_blank\" href=\"https://beian.miit.gov.cn/\">産業情報技術省の政府サービスプラットフォーム</a>によって提供されます"
 
-#: inc/theme-options.php:761
-msgid "公安网备案信息"
-msgstr "公安ネットワークのファイリング情報"
+#: inc/theme-options.php:989
+msgid "冀ICP证XXXXXX号"
+msgstr "YIP証明書XXXXXX番号"
 
-#: inc/theme-options.php:763
-msgid "例如：京公网安备 xxxxxxxxxxxx号"
-msgstr "例：京公网安备 xxxxxxxxxxxx号"
+#: inc/theme-options.php:994
+msgid "公安备案信息"
+msgstr "公安記録情報"
 
-#: inc/theme-options.php:768
-msgid "公安网备案连接"
-msgstr "公安ネットワークファイリング接続"
+#: inc/theme-options.php:995 inc/theme-options.php:1002
+msgid "由<a target=\"_blank\" href=\"http://www.beian.gov.cn/\">全国互联网安全管理服务平台</a>提供"
+msgstr "<a target=\"_blank\" href=\"http://www.beian.gov.cn/\">全国インターネットセキュリティ管理サービスプラットフォーム</a>によって提供されます"
 
-#: inc/theme-options.php:770
-msgid "例如：http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
-msgstr "例： http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
+#: inc/theme-options.php:996
+msgid "冀公网安备 XXXXXXXXXXXXX 号"
+msgstr "XXXXXXXXXXXXX 番号は、パブリック ネットワークにセキュリティで保護されています"
 
-#: inc/theme-options.php:775
+#: inc/theme-options.php:1001
+msgid "公安备案链接"
+msgstr "公安ファイリングリンク"
+
+#: inc/theme-options.php:1003
+msgid "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
+msgstr "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
+
+#: inc/theme-options.php:1010 inc/theme-options.php:1016
 msgid "版权信息"
 msgstr "著作権情報"
 
-#: inc/theme-options.php:782
+#: inc/theme-options.php:1024
 msgid "广告配置"
 msgstr "広告構成"
 
-#: inc/theme-options.php:787
-msgid "文章页面广告"
-msgstr "記事ページ広告"
+#: inc/theme-options.php:1030
+msgid "文章广告"
+msgstr "記事の広告"
 
-#: inc/theme-options.php:788
-msgid "开启顶部广告"
-msgstr "トップ広告をオンにする"
+#: inc/theme-options.php:1045 inc/theme-options.php:1084
+msgid "仅用于识别广告内容，可以作为备注使用"
+msgstr "広告コンテンツの識別のみを目的としており、メモとして使用できます"
 
-#: inc/theme-options.php:801 inc/theme-options.php:821
-msgid "选填广告连接，如果不填则只显示图片"
-msgstr "広告リンクを確認し、確認しない場合は画像のみが表示されます"
+#: inc/theme-options.php:1065 inc/theme-options.php:1104
+msgid "开启/关闭此条广告"
+msgstr "この広告のオン/オフを切り替える"
 
-#: inc/theme-options.php:808
-msgid "开启底部广告"
-msgstr "下部の広告をオンにする"
+#: inc/theme-options.php:1115
+msgid "备份恢复"
+msgstr "バックアップの復元"
 
-#: inc/theme-options.php:828
+#: inc/theme-options.php:1125
 msgid "关于主题"
 msgstr "テーマについて"
 
-#: inc/theme-setting.php:22
+#: inc/theme-options.php:1130
+msgid "基础信息"
+msgstr "基本情報"
+
+#: inc/theme-options.php:1135
+msgid "提示：在反馈主题相关的问题时，请同时复制并提交下面的内容。"
+msgstr "ヒント: トピックに関連する質問をフィードバックする場合は、以下の内容もコピーして送信してください。"
+
+#: inc/theme-options.php:1139
+msgid "PHP 版本："
+msgstr "PHPのバージョン："
+
+#: inc/theme-options.php:1139
+msgid "Kratos 版本："
+msgstr "クレイトス編："
+
+#: inc/theme-options.php:1139
+msgid "WordPress 版本："
+msgstr "WordPressのバージョン："
+
+#: inc/theme-options.php:1139
+msgid "User Agent 信息："
+msgstr "ユーザーエージェント情報です："
+
+#: inc/theme-options.php:1144
+msgid "资料文档"
+msgstr "情報文書"
+
+#: inc/theme-options.php:1148
+msgid "说明文档："
+msgstr "指示書："
+
+#: inc/theme-options.php:1148
+msgid "讨论反馈："
+msgstr "ディスカッションフィードバック:"
+
+#: inc/theme-options.php:1148
+msgid "常见问题："
+msgstr "よくある質問："
+
+#: inc/theme-options.php:1148
+msgid "更新日志："
+msgstr "ログを更新します："
+
+#: inc/theme-options.php:1148
+msgid "捐赠记录："
+msgstr "寄付記録:"
+
+#: inc/theme-options.php:1152
+msgid "版权声明"
+msgstr "著作権について"
+
+#: inc/theme-options.php:1156
+msgid "主题源码使用 <a href=\"https://github.com/vtrois/kratos/blob/main/LICENSE\" target=\"_blank\">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> 进行许可。"
+msgstr "トピック ソースは <a href=\"https://github.com/vtrois/kratos/blob/main/LICENSE\" target=\"_blank\">GPL-3.0 プロトコル</a> を使用してライセンスされ、ドキュメントは <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> でライセンスされています。"
+
+#: inc/theme-options.php:1160
+msgid "讨论交流"
+msgstr "議論と交流"
+
+#: inc/theme-options.php:1168
+msgid "打赏支持"
+msgstr "報酬サポート"
+
+#: inc/theme-setting.php:23
 #, php-format
 msgid "第 %s 页"
 msgstr "ページ%s"
 
-#: inc/theme-shortcode.php:105 inc/theme-shortcode.php:117
-#: inc/theme-shortcode.php:129 inc/theme-shortcode.php:141
-#: inc/theme-shortcode.php:217
+#: inc/theme-shortcode.php:106 inc/theme-shortcode.php:118
+#: inc/theme-shortcode.php:130 inc/theme-shortcode.php:142
+#: inc/theme-shortcode.php:218
 msgid "标题内容"
 msgstr "タイトル内容"
 
-#: inc/theme-shortcode.php:180
+#: inc/theme-shortcode.php:181
 msgid "温馨提示：此处内容已隐藏，<a href=\"#comments\">回复</a>后刷新页面即可查看！"
 msgstr "暖かいヒント：ここのコンテンツは隠されています、<a href=\"#comments\">返信して</a>ページを更新すると表示されます！"
 
-#: inc/theme-smtp.php:38
+#: inc/theme-smtp.php:39
 msgid "[通知]您的留言已经通过审核"
 msgstr "お知らせ】あなたのメッセージは承認されました"
 
-#: inc/theme-smtp.php:46 inc/theme-smtp.php:96
+#: inc/theme-smtp.php:47 inc/theme-smtp.php:97
 msgid "您好，"
 msgstr "こんにちは，"
 
-#: inc/theme-smtp.php:47
+#: inc/theme-smtp.php:48
 msgid "您的留言已经通过了管理员的审核，摘要信息如下："
 msgstr "あなたのメッセージは管理者によってレビューされ、要約メッセージは以下の通りです："
 
-#: inc/theme-smtp.php:51
+#: inc/theme-smtp.php:52
 msgid "文章"
 msgstr "ブログ"
 
-#: inc/theme-smtp.php:52
+#: inc/theme-smtp.php:53
 msgid "内容"
 msgstr "コンテンツ"
 
-#: inc/theme-smtp.php:53 inc/theme-smtp.php:104
+#: inc/theme-smtp.php:54 inc/theme-smtp.php:105
 msgid "操作"
 msgstr "操作"
 
-#: inc/theme-smtp.php:65 inc/theme-smtp.php:117
+#: inc/theme-smtp.php:66 inc/theme-smtp.php:118
 msgid "该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。"
 msgstr "このメールはシステムから自動送信されますので、作業をしている方以外は無視してください。"
 
-#: inc/theme-smtp.php:88
+#: inc/theme-smtp.php:89
 msgid "[通知]您的留言有了新的回复"
 msgstr "お知らせ] あなたのメッセージには新しい応答があります"
 
-#: inc/theme-smtp.php:97
+#: inc/theme-smtp.php:98
 msgid "您的留言有了新的回复，摘要信息如下："
 msgstr "あなたのメッセージには新たな返信があり、概要情報は以下の通りです："
 
-#: inc/theme-smtp.php:101
+#: inc/theme-smtp.php:102
 msgid "原文"
 msgstr "げんぶん"
 
-#: inc/theme-smtp.php:103
+#: inc/theme-smtp.php:104
 msgid "作者"
 msgstr "著作者"
 
-#: inc/theme-smtp.php:112
+#: inc/theme-smtp.php:113
 msgid "查看回复"
 msgstr "返信を見る"
 
-#: inc/theme-widgets.php:13
-msgid "侧边栏工具"
-msgstr "サイドバーツール"
+#: inc/theme-widgets.php:14
+msgid "主页侧边栏"
+msgstr "ホームサイドバー"
 
-#: inc/theme-widgets.php:71
+#: inc/theme-widgets.php:22
+msgid "文章侧边栏"
+msgstr "記事のサイドバー"
+
+#: inc/theme-widgets.php:30
+msgid "页面侧边栏"
+msgstr "ページサイドバー"
+
+#: inc/theme-widgets.php:62 inc/theme-widgets.php:71
+msgid "篇"
+msgstr "編"
+
+#: inc/theme-widgets.php:104
+msgid "刚刚"
+msgstr "たった今"
+
+#: inc/theme-widgets.php:106
 msgid " 年前"
 msgstr " 年前"
 
-#: inc/theme-widgets.php:71 inc/theme-widgets.php:72 inc/theme-widgets.php:73
-#: inc/theme-widgets.php:74 inc/theme-widgets.php:75 inc/theme-widgets.php:76
-#: inc/theme-widgets.php:77
-msgid "m月d日"
-msgstr "エムディー"
-
-#: inc/theme-widgets.php:72
+#: inc/theme-widgets.php:107
 msgid " 个月前"
 msgstr " ひと月前"
 
-#: inc/theme-widgets.php:73
+#: inc/theme-widgets.php:108
 msgid " 周前"
 msgstr " 週間前"
 
-#: inc/theme-widgets.php:74
+#: inc/theme-widgets.php:109
 msgid " 天前"
 msgstr " 日前"
 
-#: inc/theme-widgets.php:75
+#: inc/theme-widgets.php:110
 msgid " 小时前"
 msgstr " 時前"
 
-#: inc/theme-widgets.php:76
+#: inc/theme-widgets.php:111
 msgid " 分钟前"
 msgstr " 分前"
 
-#: inc/theme-widgets.php:77
+#: inc/theme-widgets.php:112
 msgid " 秒前"
 msgstr " さきほど"
 
-#: inc/theme-widgets.php:115
+#: inc/theme-widgets.php:148
+msgid "匿名"
+msgstr "匿名"
+
+#: inc/theme-widgets.php:153
 msgid "发布于 "
 msgstr "掲示されています "
 
-#: inc/theme-widgets.php:126
+#: inc/theme-widgets.php:153
+msgid "m月d日"
+msgstr "エムディー"
+
+#: inc/theme-widgets.php:169
 msgid "A search form for your site."
 msgstr "あなたのサイトの検索フォームです。"
 
-#: inc/theme-widgets.php:129
+#: inc/theme-widgets.php:172
 msgctxt "Search widget"
 msgid "Search"
 msgstr "検索"
 
-#: inc/theme-widgets.php:140
+#: inc/theme-widgets.php:184
 msgid "搜索"
 msgstr "検索"
 
-#: inc/theme-widgets.php:148
+#: inc/theme-widgets.php:193
 msgid "Title:"
 msgstr "タイトルです："
 
-#: inc/theme-widgets.php:168
+#: inc/theme-widgets.php:213
 msgid "图片广告"
 msgstr "写真広告"
 
-#: inc/theme-widgets.php:169
+#: inc/theme-widgets.php:214
 msgid "显示自定义图片广告的工具"
 msgstr "カスタム画像広告を表示するためのツール"
 
-#: inc/theme-widgets.php:185 inc/theme-widgets.php:207
+#: inc/theme-widgets.php:230 inc/theme-widgets.php:252
 msgid "广告"
 msgstr "宣伝"
 
-#: inc/theme-widgets.php:213
+#: inc/theme-widgets.php:258
 msgid "副标题："
 msgstr "字幕です："
 
-#: inc/theme-widgets.php:217
+#: inc/theme-widgets.php:262
 msgid "链接地址："
 msgstr "リンクアドレスです："
 
-#: inc/theme-widgets.php:221
+#: inc/theme-widgets.php:266
 msgid "广告图片:"
 msgstr "広告のイメージ:"
 
-#: inc/theme-widgets.php:223 inc/theme-widgets.php:293
+#: inc/theme-widgets.php:268 inc/theme-widgets.php:338
 msgid "选择图片"
 msgstr "画像を選択"
 
-#: inc/theme-widgets.php:238
+#: inc/theme-widgets.php:282
+msgid "个人简介"
+msgstr "じこじょうほうじん"
+
+#: inc/theme-widgets.php:283
 msgid "站长个人简介的展示工具"
 msgstr "ウェブマスタープロフィール表示ツール"
 
-#. Theme Name of the plugin/theme
-#: inc/theme-widgets.php:255
-msgid "Kratos"
-msgstr "クレイトス"
+#: inc/theme-widgets.php:299 pages/page-toolbar.php:14
+msgid "这个人很懒，什么都没留下"
+msgstr "その男は怠け者で何も残っていない"
 
-#: inc/theme-widgets.php:291
+#: inc/theme-widgets.php:336
 msgid "背景图片:"
 msgstr "背景画像："
 
-#: inc/theme-widgets.php:305 inc/theme-widgets.php:328
+#: inc/theme-widgets.php:350 inc/theme-widgets.php:374
 msgid "标签聚合"
 msgstr "タグアグリゲーション"
 
-#: inc/theme-widgets.php:306
+#: inc/theme-widgets.php:351
 msgid "文章标签的展示工具"
 msgstr "記事タグの表示ツール"
 
-#: inc/theme-widgets.php:351
+#: inc/theme-widgets.php:397
 msgid "显示数量："
 msgstr "表示件数："
 
-#: inc/theme-widgets.php:355
+#: inc/theme-widgets.php:401
 msgid "显示排序："
 msgstr "並べ替えを表示します："
 
-#: inc/theme-widgets.php:357
+#: inc/theme-widgets.php:403
 msgid "降序"
 msgstr "降順"
 
-#: inc/theme-widgets.php:358
+#: inc/theme-widgets.php:404
 msgid "升序"
 msgstr "昇順"
 
-#: inc/theme-widgets.php:359 inc/theme-widgets.php:390
-#: inc/theme-widgets.php:395 inc/theme-widgets.php:446
+#: inc/theme-widgets.php:405 inc/theme-widgets.php:436
+#: inc/theme-widgets.php:441 inc/theme-widgets.php:496
 msgid "随机"
 msgstr "ランダム"
 
-#: inc/theme-widgets.php:372
+#: inc/theme-widgets.php:418
 msgid "文章聚合"
 msgstr "記事のシンジケーション"
 
-#: inc/theme-widgets.php:373
+#: inc/theme-widgets.php:419
 msgid "展示最热、随机、最新文章的工具"
 msgstr "話題の記事、ランダムな記事、最新の記事を紹介するツール"
 
-#: inc/theme-widgets.php:388 inc/theme-widgets.php:393
-#: inc/theme-widgets.php:444
+#: inc/theme-widgets.php:434 inc/theme-widgets.php:439
+#: inc/theme-widgets.php:494
 msgid "最新"
 msgstr "最新"
 
-#: inc/theme-widgets.php:389 inc/theme-widgets.php:394
-#: inc/theme-widgets.php:445
+#: inc/theme-widgets.php:435 inc/theme-widgets.php:440
+#: inc/theme-widgets.php:495
 msgid "热点"
 msgstr "ホットスポット"
 
-#: inc/theme-widgets.php:434 inc/theme-widgets.php:497
+#: inc/theme-widgets.php:484 inc/theme-widgets.php:547
 msgid "展示数量："
 msgstr "表示件数："
 
-#: inc/theme-widgets.php:438
+#: inc/theme-widgets.php:488
 msgid "统计天数："
 msgstr "カウントした日数："
 
-#: inc/theme-widgets.php:442
+#: inc/theme-widgets.php:492
 msgid "默认显示："
 msgstr "デフォルトの表示："
 
-#: inc/theme-widgets.php:459 inc/theme-widgets.php:469
-#: inc/theme-widgets.php:489
+#: inc/theme-widgets.php:509 inc/theme-widgets.php:519
+#: inc/theme-widgets.php:539
 msgid "最近评论"
 msgstr "最近のコメント"
 
-#: inc/theme-widgets.php:460
+#: inc/theme-widgets.php:510
 msgid "展示站点最近的评论"
 msgstr "サイトの最近のレビューを表示する"
 
-#: inc/theme-widgets.php:493
+#: inc/theme-widgets.php:543
 msgid "栏目标题："
 msgstr "コラムのタイトルです："
 
-#: inc/update-checker/Puc/v4p10/Plugin/Ui.php:54
-msgid "View details"
-msgstr "詳細を見る"
+#: inc/theme-widgets.php:562
+msgid "文章目录"
+msgstr "記事のディレクトリ"
 
-#: inc/update-checker/Puc/v4p10/Plugin/Ui.php:77
-#, php-format
-msgid "More information about %s"
-msgstr "%s の詳細情報"
+#: inc/theme-widgets.php:563
+msgid "仅在有目录规则的文章中显示目录的工具"
+msgstr "カタログ ルールのある記事にのみ目次を表示するツール"
 
-#: inc/update-checker/Puc/v4p10/Plugin/Ui.php:128
-msgid "Check for updates"
-msgstr "更新情報の確認"
-
-#: inc/update-checker/Puc/v4p10/Plugin/Ui.php:213
-#, php-format
-msgctxt "the plugin title"
-msgid "The %s plugin is up to date."
-msgstr "%s プラグインは最新のものを使用しています。"
-
-#: inc/update-checker/Puc/v4p10/Plugin/Ui.php:215
-#, php-format
-msgctxt "the plugin title"
-msgid "A new version of the %s plugin is available."
-msgstr "新しいバージョンの%sプラグインが利用可能になりました。"
-
-#: inc/update-checker/Puc/v4p10/Plugin/Ui.php:217
-#, php-format
-msgctxt "the plugin title"
-msgid "Could not determine if updates are available for %s."
-msgstr "%s でアップデートが利用可能かどうか判断できませんでした。"
-
-#: inc/update-checker/Puc/v4p10/Plugin/Ui.php:223
-#, php-format
-msgid "Unknown update checker status \"%s\""
-msgstr "不明な更新チェッカーステータス\"%s\""
-
-#: inc/update-checker/Puc/v4p10/Vcs/PluginUpdateChecker.php:98
-msgid "There is no changelog available."
-msgstr "変更履歴はありません。"
-
-#: index.php:18
+#: index.php:19
 msgid "搜索内容："
 msgstr "検索してみてください："
 
-#: index.php:36
+#: index.php:32
 msgid "很抱歉，没有找到任何内容"
 msgstr "すみません、何も見つかりませんでした"
 
-#: page.php:27 single.php:75
+#: page.php:29 single.php:85
 msgid "<span>上一页</span>"
 msgstr "<span>ぜんページ</span>"
 
-#: page.php:46 single.php:94
+#: page.php:48 single.php:104
 msgid "<span>下一页</span>"
 msgstr "<span>次のページ</span>"
 
-#: pages/page-content.php:31
+#: pages/page-content.php:34
 msgid "页面"
 msgstr "ページ"
 
-#: pages/page-content.php:43 single.php:54
+#: pages/page-content.php:47 single.php:62
 msgid "条评论"
 msgstr "記事コメント"
 
-#: pages/page-content.php:46 single.php:52
+#: pages/page-content.php:51 single.php:54
 msgid "点热度"
 msgstr "ねつてん"
 
-#: pages/page-content.php:47 single.php:53
+#: pages/page-content.php:57 single.php:60
 msgid "人点赞"
 msgstr "お気に召す"
 
-#: pages/page-content.php:53
+#: pages/page-content.php:61
 msgid "阅读全文"
 msgstr "続きを読む"
 
-#: pages/page-toolbar.php:23
+#: pages/page-toolbar.php:18
 msgid "打赏"
 msgstr "お礼"
 
-#: pages/page-toolbar.php:25
+#: pages/page-toolbar.php:20
 msgid "点赞"
 msgstr "褒め称える"
 
-#: single.php:25
+#: single.php:26
 msgid "首页"
 msgstr "ホーム"
 
-#: single.php:45
+#: single.php:46
 msgid "正文"
 msgstr "主文"
 
-#: single.php:55
+#: single.php:65
 msgid "编辑文章"
 msgstr "記事の編集"
 
-#: single.php:119
+#: single.php:126
 #, php-format
 msgid "本作品采用 %s 进行许可"
 msgstr "この作品は%sの下でライセンスされています"
 
-#: single.php:124
+#: single.php:131
 msgid "标签："
 msgstr "タグ："
 
-#: single.php:125
+#: single.php:135
 msgid "暂无"
 msgstr "使用不可"
 
-#: single.php:128 single.php:129
+#: single.php:139
 msgid "最后更新："
 msgstr "最終更新日："
 
-#: single.php:140
+#: single.php:149
 msgid "< 上一篇"
 msgstr "< 前へ"
 
-#: single.php:144
+#: single.php:153
 msgid "下一篇 >"
 msgstr "次のページ"
 
@@ -1274,3 +1442,4 @@ msgstr "蒋シートン"
 #. Author URI of the plugin/theme
 msgid "https://www.vtrois.com/"
 msgstr "https://www.vtrois.com/"
+
