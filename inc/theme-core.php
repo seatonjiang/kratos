@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.21
+ * @version 2021.09.10
  */
 
 // CDN 资源地址
@@ -182,13 +182,7 @@ add_filter('style_loader_src', function ($href) {
 // 替换国内 Gravatar 源
 function get_https_avatar($avatar)
 {
-    if (kratos_option('g_gravatar', true)) {
-        $cdn = "dn-qiniu-avatar.qbox.me";
-    } else {
-        $cdn = "cn.gravatar.com";
-    }
-
-    $avatar = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com", "3.gravatar.com", "secure.gravatar.com"), $cdn, $avatar);
+    $avatar = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com", "3.gravatar.com", "secure.gravatar.com"), kratos_option('g_gravatar', 'sdn.geekzu.org') ?: "secure.gravatar.com", $avatar);
     $avatar = str_replace("http://", "https://", $avatar);
     return $avatar;
 }

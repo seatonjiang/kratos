@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.21
+ * @version 2021.09.10
  */
 
 defined('ABSPATH') || exit;
@@ -151,13 +151,6 @@ CSF::createSection($prefix, array(
             'default' => true,
         ),
         array(
-            'id' => 'g_gravatar',
-            'type' => 'switcher',
-            'title' => __('Gravatar 加速', 'kratos'),
-            'subtitle' => __('启用/禁用 Gravatar 头像加速', 'kratos'),
-            'default' => true,
-        ),
-        array(
             'id' => 'g_renameimg',
             'type' => 'switcher',
             'title' => __('自定义图片类型的文件名', 'kratos'),
@@ -184,6 +177,13 @@ CSF::createSection($prefix, array(
             'title' => __('文章简介缩略', 'kratos'),
             'subtitle' => __('文章简介显示的字符数量', 'kratos'),
             'default' => '260',
+        ),
+        array(
+            'id' => 'g_gravatar',
+            'type' => 'text',
+            'title' => __('Gravatar 加速', 'kratos'),
+            'subtitle' => __('自定义 Gravatar 头像加速地址', 'kratos'),
+            'default' => 'sdn.geekzu.org',
         ),
         array(
             'id' => 'g_renameother_fieldset',
