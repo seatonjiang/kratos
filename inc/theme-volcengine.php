@@ -4,17 +4,16 @@
  * ImageX 图片服务
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.08.21
+ * @version 2021.09.10
  */
-require_once 'volcengine-imagex/vendor/autoload.php';
-
-use Volc\Service\ImageX;
 
 if (!empty(kratos_option('g_imgx_fieldset')['g_imgx'])) {
 
+    require_once 'volcengine-imagex/vendor/autoload.php';
+
     function imagex_get_client()
     {
-        $imagex_client = ImageX::getInstance($region = kratos_option('g_imgx_fieldset')['g_imgx_region']);
+        $imagex_client = Volc\Service\ImageX::getInstance($region = kratos_option('g_imgx_fieldset')['g_imgx_region']);
         $imagex_client->setAccessKey(kratos_option('g_imgx_fieldset')['g_imgx_accesskey']);
         $imagex_client->setSecretKey(kratos_option('g_imgx_fieldset')['g_imgx_secretkey']);
 
