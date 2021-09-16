@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.2/assets/img/options/about.png">
+<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.3/assets/img/options/about.png">
 </p>
 
 <p align="center">
@@ -31,13 +31,13 @@ Kratos 是一款专注于用户阅读体验的响应式 WordPress 主题，整�
 ## 讨论交流
 
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.2/assets/img/options/discuss.png">
+<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.3/assets/img/options/discuss.png">
 </p>
 
 ## 打赏捐赠
 
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.2/assets/img/options/donate.png">
+<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.3/assets/img/options/donate.png">
 </p>
 
 ## 版权说明
