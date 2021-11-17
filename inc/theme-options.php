@@ -1073,7 +1073,7 @@ CSF::createSection($prefix, array(
             'id' => 'single_ad_bottom_group',
             'type' => 'group',
             'title' => '文章底部广告',
-            'subtitle' => '点击添加广告，最多添加 3 个顶部广告',
+            'subtitle' => '点击添加广告，最多添加 3 个底部广告',
             'min' => 1,
             'max' => 3,
             'fields' => array(
