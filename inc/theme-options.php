@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <seatonjiang@vtrois.com>
  * @license GPL-3.0 License
- * @version 2021.09.10
+ * @version 2022.01.26
  */
 
 defined('ABSPATH') || exit;
@@ -22,29 +22,6 @@ if (!function_exists('kratos_option')) {
         }
 
         return $default;
-    }
-}
-
-function getdomain($url)
-{
-    $rs = parse_url($url);
-    if (!isset($rs['host'])) {
-        return null;
-    }
-
-    $main_url = $rs['host'];
-    if (!strcmp(long2ip(sprintf('%u', ip2long($main_url))), $main_url)) {
-        return $main_url;
-    } else {
-        $arr = explode('.', $main_url);
-        $count = count($arr);
-        $endArr = array('com', 'net', 'org');
-        if (in_array($arr[$count - 2], $endArr)) {
-            $domain = $arr[$count - 3] . '.' . $arr[$count - 2] . '.' . $arr[$count - 1];
-        } else {
-            $domain = $arr[$count - 2] . '.' . $arr[$count - 1];
-        }
-        return $domain;
     }
 }
 
@@ -216,7 +193,7 @@ CSF::createSection($prefix, array(
             ),
             'default' => array(
                 'g_renameother' => false,
-                'g_renameother_prdfix' => getdomain(home_url()),
+                'g_renameother_prdfix' => 'kratos',
                 'g_renameother_mime' => 'tar|zip|gz|gzip|rar|7z',
             ),
         ),
@@ -1014,7 +991,7 @@ CSF::createSection($prefix, array(
             'id' => 's_copyright',
             'type' => 'textarea',
             'title' => __('版权信息', 'kratos'),
-            'default' => 'COPYRIGHT © ' . date('Y') . ' ' . getdomain(home_url()) . '. ALL RIGHTS RESERVED.',
+            'default' => 'COPYRIGHT © ' . date('Y') . ' ' . get_bloginfo('name') . '. ALL RIGHTS RESERVED.',
         ),
     ),
 ));
