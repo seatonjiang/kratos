@@ -1,6 +1,6 @@
 /*!
  * Kratos
- * Seaton Jiang <seatonjiang@vtrois.com>
+ * Seaton Jiang <hi@seatonjiang.com>
  */
 ;(function () {
     'use strict'

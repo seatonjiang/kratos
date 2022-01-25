@@ -2,9 +2,9 @@
 
 /**
  * 表情图标
- * @author Seaton Jiang <seatonjiang@vtrois.com>
+ * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2021.08.20
+ * @version 2022.01.26
  */
 $smilies = '
 <a href="javascript:grin(\':razz:\')"><img src="' . ASSET_PATH . '/assets/img/smilies/razz.png" alt="" class="d-block"/></a>

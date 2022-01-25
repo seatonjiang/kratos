@@ -2,7 +2,7 @@
 
 /**
  * 主题选项
- * @author Seaton Jiang <seatonjiang@vtrois.com>
+ * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
  * @version 2022.01.26
  */

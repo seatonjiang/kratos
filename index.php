@@ -2,9 +2,9 @@
 
 /**
  * 首页模板
- * @author Seaton Jiang <seatonjiang@vtrois.com>
+ * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2021.08.21
+ * @version 2022.01.26
  */
 get_header(); ?>
 <div class="k-main <?php echo kratos_option('top_img_switch', true) ? 'banner' : 'color' ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">

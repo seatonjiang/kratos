@@ -2,9 +2,9 @@
 
 /**
  * ImageX 图片服务
- * @author Seaton Jiang <seatonjiang@vtrois.com>
+ * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2021.09.10
+ * @version 2022.01.26
  */
 
 if (!empty(kratos_option('g_imgx_fieldset')['g_imgx'])) {

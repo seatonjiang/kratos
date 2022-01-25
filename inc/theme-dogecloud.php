@@ -2,9 +2,9 @@
 
 /**
  * dogecloud 对象存储
- * @author Seaton Jiang <seatonjiang@vtrois.com>
+ * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2021.08.21
+ * @version 2022.01.26
  */
 
 if (!empty(kratos_option('g_cos_fieldset')['g_cos'])) {
