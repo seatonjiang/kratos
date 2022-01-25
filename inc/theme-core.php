@@ -9,7 +9,7 @@
 
 // CDN 资源地址
 if (kratos_option('g_cdn', false)) {
-    $asset_path = 'https://cdn.jsdelivr.net/gh/vtrois/kratos@' . THEME_VERSION;
+    $asset_path = 'https://cdn.jsdelivr.net/gh/seatonjiang/kratos@' . THEME_VERSION;
 } else {
     $asset_path = get_template_directory_uri();
 }
@@ -191,7 +191,7 @@ add_filter('get_avatar_url', 'get_https_avatar');
 
 // 主题更新检测
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://cdn.jsdelivr.net/gh/vtrois/kratos/inc/update-checker/update.json',
+    'https://cdn.jsdelivr.net/gh/seatonjiang/kratos/inc/update-checker/update.json',
     get_template_directory() . '/functions.php',
     'Kratos'
 );

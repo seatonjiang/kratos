@@ -50,7 +50,7 @@ CSF::createOptions($prefix, array(
     'admin_bar_menu_icon' => 'dashicons-admin-generic',
     'framework_title' => '主题设置<small style="margin-left:10px">Kratos v' . THEME_VERSION . '</small>',
     'theme' => 'light',
-    'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/vtrois/kratos">Kratos</a> 主题开始创作，欢迎加入交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=jHy4nvMcnurowkL602BTDZzverAqfTpI&jump_from=webapi">734508</a>',
+    'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/seatonjiang/kratos">Kratos</a> 主题开始创作，欢迎加入交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=jHy4nvMcnurowkL602BTDZzverAqfTpI&jump_from=webapi">734508</a>',
 ));
 
 CSF::createSection($prefix, array(
@@ -1122,7 +1122,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<ul style="margin: 0 auto;"> <li>' . __('说明文档：', 'kratos') . '<a href="https://www.vtrois.com/" target="_blank">https://www.vtrois.com/</a></li> <li>' . __('讨论反馈：', 'kratos') . '<a href="https://github.com/vtrois/kratos/discussions" target="_blank">https://github.com/vtrois/kratos/discussions</a></li> <li>' . __('常见问题：', 'kratos') . '<a href="https://github.com/vtrois/kratos/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank">https://github.com/vtrois/kratos/wiki</a></li> <li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/vtrois/kratos/releases" target="_blank">https://github.com/vtrois/kratos/releases</a></li> <li>' . __('捐赠记录：', 'kratos') . '<a href="https://docs.qq.com/sheet/DV0NwVnNoYWxGUmlD" target="_blank">https://docs.qq.com/sheet/DV0NwVnNoYWxGUmlD</a></li> </ul>',
+            'content' => '<ul style="margin: 0 auto;"> <li>' . __('说明文档：', 'kratos') . '<a href="https://seatonjiang.com/" target="_blank">https://seatonjiang.com/</a></li> <li>' . __('讨论反馈：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/discussions" target="_blank">https://github.com/seatonjiang/kratos/discussions</a></li> <li>' . __('常见问题：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/wiki" target="_blank">https://github.com/seatonjiang/kratos/wiki</a></li> <li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/releases" target="_blank">https://github.com/seatonjiang/kratos/releases</a></li> <li>' . __('捐赠记录：', 'kratos') . '<a href="https://docs.qq.com/sheet/DV2p4Rkt5U1N1bXhG" target="_blank">https://docs.qq.com/sheet/DV2p4Rkt5U1N1bXhG</a></li> </ul>',
         ),
         array(
             'type' => 'subheading',
@@ -1130,7 +1130,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => __('主题源码使用 <a href="https://github.com/vtrois/kratos/blob/main/LICENSE" target="_blank">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos'),
+            'content' => __('主题源码使用 <a href="https://github.com/seatonjiang/kratos/blob/main/LICENSE" target="_blank">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos'),
         ),
         array(
             'type' => 'subheading',
@@ -1138,7 +1138,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="' . get_template_directory_uri() . '/assets/img/options/discuss.png"></div>',
+            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/discuss.png"></div>',
         ),
         array(
             'type' => 'subheading',
@@ -1146,7 +1146,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="' . get_template_directory_uri() . '/assets/img/options/donate.png"></div>',
+            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/donate.png"></div>',
         ),
     ),
 ));

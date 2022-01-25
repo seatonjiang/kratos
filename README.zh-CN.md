@@ -1,13 +1,13 @@
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.3/assets/img/options/about.png">
+<img src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/about.png">
 </p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/php-%3E7.2.5-blue">
 <img src="https://img.shields.io/badge/wordpress-v5.9%20alpha%20tested-%234c1">
-<a href="https://vtrois.crowdin.com/kratos" target="_blank"><img src="https://badges.crowdin.net/e/f1d1a7eaa6af337dba7aa4a39b28e67c/localized.svg"></a>
-<a href="https://www.jsdelivr.com/package/gh/vtrois/kratos" target="_blank"><img src="https://data.jsdelivr.com/v1/package/gh/vtrois/kratos/badge?style=rounded"></a>
-<img src="https://img.shields.io/github/license/vtrois/kratos?color=%234c1">
+<a title="Crowdin" target="_blank" href="https://crowdin.com/project/kratos"><img src="https://badges.crowdin.net/kratos/localized.svg"></a>
+<a href="https://www.jsdelivr.com/package/gh/seatonjiang/kratos" target="_blank"><img src="https://data.jsdelivr.com/v1/package/gh/seatonjiang/kratos/badge?style=rounded"></a>
+<img src="https://img.shields.io/github/license/seatonjiang/kratos?color=%234c1">
 </p>
 
 [English](README.md) | 简体中文
@@ -31,15 +31,15 @@ Kratos 是一款专注于用户阅读体验的响应式 WordPress 主题，整�
 ## 讨论交流
 
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.3/assets/img/options/discuss.png">
+<img src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/discuss.png">
 </p>
 
 ## 打赏捐赠
 
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/vtrois/kratos@4.0.3/assets/img/options/donate.png">
+<img src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/donate.png">
 </p>
 
 ## 版权说明
 
-该仓库代码文件使用 [GPL-3.0](https://github.com/vtrois/kratos/blob/main/LICENSE) 协议进行授权，文档文件使用 [署名-非商业性使用-禁止演绎 4.0 国际](http://creativecommons.org/licenses/by-nc-nd/4.0/) 协议进行授权。
+该仓库代码文件使用 [GPL-3.0](https://github.com/seatonjiang/kratos/blob/main/LICENSE) 协议进行授权，文档文件使用 [署名-非商业性使用-禁止演绎 4.0 国际](http://creativecommons.org/licenses/by-nc-nd/4.0/) 协议进行授权。
