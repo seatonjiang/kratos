@@ -9,7 +9,7 @@
 
 // CDN 资源地址
 if (kratos_option('g_cdn', false)) {
-    $asset_path = 'https://cdn.seatonjiang.com/kratos@' . THEME_VERSION;
+    $asset_path = 'https://cdn.seatonjiang.com/kratos/' . THEME_VERSION;
 } else {
     $asset_path = get_template_directory_uri();
 }

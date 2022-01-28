@@ -1,7 +1,7 @@
 [English](README.md) | 简体中文
 
 <p align="center">
-    <img src="https://cdn.seatonjiang.com/kratos@4.1.0/assets/img/options/about.png">
+    <img src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/about.png">
 </p>
 
 <p align="center">
@@ -41,13 +41,13 @@
 ## 💬 讨论交流
 
 <p align="center">
-<img src="https://cdn.seatonjiang.com/kratos@4.1.0/assets/img/options/discuss.png">
+<img src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/discuss.png">
 </p>
 
 ## 🧧 打赏捐赠
 
 <p align="center">
-<img src="https://cdn.seatonjiang.com/kratos@4.1.0/assets/img/options/donate.png">
+<img src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/donate.png">
 </p>
 
 ## 🤝 参与共建

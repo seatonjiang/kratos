@@ -1,7 +1,7 @@
 English | [简体中文](README.zh-CN.md)
 
 <p align="center">
-    <img src="https://cdn.seatonjiang.com/kratos@4.1.0/assets/img/options/about.png">
+    <img src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/about.png">
 </p>
 
 <p align="center">
