@@ -1122,7 +1122,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<ul style="margin: 0 auto;"> <li>' . __('说明文档：', 'kratos') . '<a href="https://seatonjiang.com/" target="_blank">https://seatonjiang.com/</a></li> <li>' . __('讨论反馈：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/discussions" target="_blank">https://github.com/seatonjiang/kratos/discussions</a></li> <li>' . __('常见问题：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/wiki" target="_blank">https://github.com/seatonjiang/kratos/wiki</a></li> <li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/releases" target="_blank">https://github.com/seatonjiang/kratos/releases</a></li> <li>' . __('捐赠记录：', 'kratos') . '<a href="https://docs.qq.com/sheet/DV2p4Rkt5U1N1bXhG" target="_blank">https://docs.qq.com/sheet/DV2p4Rkt5U1N1bXhG</a></li> </ul>',
+            'content' => '<ul style="margin: 0 auto;"><li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/issues" target="_blank">https://github.com/seatonjiang/kratos/issues</a></li> <li>' . __('使用说明：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/wiki" target="_blank">https://github.com/seatonjiang/kratos/wiki</a></li> <li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/releases" target="_blank">https://github.com/seatonjiang/kratos/releases</a></li> <li>' . __('捐赠记录：', 'kratos') . '<a href="https://docs.qq.com/sheet/DV2p4Rkt5U1N1bXhG" target="_blank">https://docs.qq.com/sheet/DV2p4Rkt5U1N1bXhG</a></li> </ul>',
         ),
         array(
             'type' => 'subheading',
@@ -1138,7 +1138,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/discuss.png"></div>',
+            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.seatonjiang.com/kratos@4.1.0/assets/img/options/discuss.png"></div>',
         ),
         array(
             'type' => 'subheading',
@@ -1146,7 +1146,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/donate.png"></div>',
+            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.seatonjiang.com/kratos@4.1.0/assets/img/options/donate.png"></div>',
         ),
     ),
 ));

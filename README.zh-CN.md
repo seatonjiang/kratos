@@ -1,22 +1,32 @@
-<p align="center">
-<img src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/about.png">
-</p>
-
-<p align="center">
-<img src="https://img.shields.io/badge/php-%3E7.2.5-blue">
-<img src="https://img.shields.io/badge/wordpress-v5.9%20alpha%20tested-%234c1">
-<a title="Crowdin" target="_blank" href="https://crowdin.com/project/kratos"><img src="https://badges.crowdin.net/kratos/localized.svg"></a>
-<a href="https://www.jsdelivr.com/package/gh/seatonjiang/kratos" target="_blank"><img src="https://data.jsdelivr.com/v1/package/gh/seatonjiang/kratos/badge?style=rounded"></a>
-<img src="https://img.shields.io/github/license/seatonjiang/kratos?color=%234c1">
-</p>
-
 [English](README.md) | 简体中文
 
-## 关于主题
+<p align="center">
+    <img src="https://cdn.seatonjiang.com/kratos@4.1.0/assets/img/options/about.png">
+</p>
 
-Kratos 是一款专注于用户阅读体验的响应式 WordPress 主题，整体布局简洁大方，针对资源加载进行了优化。
+<p align="center">
+    <img src="https://img.shields.io/badge/PHP-%3E7.4-777BB4?style=flat-square&logo=php&logoColor=#777BB4">
+    <img src="https://img.shields.io/badge/WordPress-v6.0%20alpha%20tested-21759B?style=flat-square&logo=wordpress">
+    <a href="https://github.com/seatonjiang/kratos/issues">
+        <img src="https://img.shields.io/github/issues/seatonjiang/kratos?style=flat-square&color=blue">
+    </a>
+    <a href="https://github.com/seatonjiang/kratos/pulls">
+        <img src="https://img.shields.io/github/issues-pr/seatonjiang/kratos?style=flat-square&color=brightgreen">
+    </a>
+    <a href="https://github.com/seatonjiang/kratos/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/seatonjiang/kratos?&style=flat-square">
+    </a>
+</p>
 
-## 安装方法
+<p align="center">
+    <a href="https://github.com/seatonjiang/kratos/issues">报告问题</a>
+    ·
+    <a href="https://github.com/seatonjiang/kratos/issues">功能需求</a>
+</p>
+
+<p align="center">Kratos 是一款专注于用户阅读体验的响应式 WordPress 主题</p>
+
+## 🚀 使用说明
 
 1. 下载最新发行版本的 .zip 格式安装包；
 
@@ -28,18 +38,18 @@ Kratos 是一款专注于用户阅读体验的响应式 WordPress 主题，整�
 
 5. 进入 `外观` > `主题` 页面，找到 Kratos 主题，然后点击 `启用` 即可。
 
-## 讨论交流
+## 💬 讨论交流
 
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/discuss.png">
+<img src="https://cdn.seatonjiang.com/kratos@4.1.0/assets/img/options/discuss.png">
 </p>
 
-## 打赏捐赠
+## 🧧 打赏捐赠
 
 <p align="center">
-<img src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/donate.png">
+<img src="https://cdn.seatonjiang.com/kratos@4.1.0/assets/img/options/donate.png">
 </p>
 
-## 版权说明
+## 🤝 参与共建
 
-该仓库代码文件使用 [GPL-3.0](https://github.com/seatonjiang/kratos/blob/main/LICENSE) 协议进行授权，文档文件使用 [署名-非商业性使用-禁止演绎 4.0 国际](http://creativecommons.org/licenses/by-nc-nd/4.0/) 协议进行授权。
+我们欢迎所有的贡献，你可以将任何想法作为 pull requests 或 GitHub issues 提交，顺颂商祺 :)
