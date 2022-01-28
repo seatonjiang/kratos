@@ -1143,6 +1143,10 @@ ol {
     margin-left: auto;
 }
 
+.k-main .details .article .content .aligncenter figcaption{
+    text-align: center;
+}
+
 .k-main .details .article .content .alignright {
     float: right;
     margin-left: 16px;
