@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Kratos\n"
-"POT-Creation-Date: 2022-01-26 01:07+0800\n"
+"POT-Creation-Date: 2022-01-29 11:36+0800\n"
 "PO-Revision-Date: 2022-01-26 01:05+0800\n"
 "Last-Translator: Seaton Jiang <hi@seatonjiang.com>\n"
 "Language-Team: Seaton Jiang <hi@seatonjiang.com>\n"
@@ -1069,15 +1069,11 @@ msgid "资料文档"
 msgstr ""
 
 #: inc/theme-options.php:1125
-msgid "说明文档："
+msgid "问题反馈："
 msgstr ""
 
 #: inc/theme-options.php:1125
-msgid "讨论反馈："
-msgstr ""
-
-#: inc/theme-options.php:1125
-msgid "常见问题："
+msgid "使用说明："
 msgstr ""
 
 #: inc/theme-options.php:1125
