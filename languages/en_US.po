@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Project-Id-Version: kratos\n"
+"Project-Id-Version: 87f769374581b4e7ec717067bc809033\n"
 "POT-Creation-Date: 2022-01-29 11:36+0800\n"
-"PO-Revision-Date: 2022-01-29 03:49\n"
+"PO-Revision-Date: 2022-01-31 08:57\n"
 "Last-Translator: Seaton Jiang <hi@seatonjiang.com>\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -20,257 +20,257 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: inc/codestar-framework\n"
 "X-Poedit-SearchPathExcluded-2: inc/update-checker\n"
 "X-Poedit-SearchPathExcluded-3: inc/volcengine-imagex\n"
-"X-Crowdin-Project: kratos\n"
-"X-Crowdin-Project-ID: 496513\n"
+"X-Crowdin-Project: 87f769374581b4e7ec717067bc809033\n"
+"X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: en\n"
 "X-Crowdin-File: /main/languages/kratos.pot\n"
-"X-Crowdin-File-ID: 5\n"
+"X-Crowdin-File-ID: 10\n"
 "Language: en_US\n"
 
 #: 404.php:19
 msgid "很抱歉，你访问的页面不存在"
-msgstr ""
+msgstr "Sorry, that page you visited does not exist"
 
 #: 404.php:20
 msgid "可能是输入地址有误或该地址已被删除"
-msgstr ""
+msgstr "It may be the incorrect input address or the address has been deleted"
 
 #: 404.php:22
 msgid "返回上页"
-msgstr ""
+msgstr "Return"
 
 #: 404.php:23
 msgid "返回主页"
-msgstr ""
+msgstr "Homepage"
 
 #: comments.php:17
 msgid "文章评论"
-msgstr ""
+msgstr "Comments"
 
 #: comments.php:19
 msgid "评论内容"
-msgstr ""
+msgstr "Comments"
 
 #: comments.php:25
 msgid "加载更多"
-msgstr ""
+msgstr "Load more"
 
 #: comments.php:30
 #, php-format
 msgid "您需要 <a href=\"%s\">登录</a> 之后才可以评论"
-msgstr ""
+msgstr "You need to <a href=\"%s\">sign in</a> to comment"
 
 #: comments.php:42
 msgid "昵称"
-msgstr ""
+msgstr "Nickname"
 
 #: comments.php:50
 msgid "邮箱"
-msgstr ""
+msgstr "Email"
 
 #: comments.php:58
 msgid "网址"
-msgstr ""
+msgstr "URL"
 
 #: comments.php:75
 msgid "取消回复"
-msgstr ""
+msgstr "Cancel reply"
 
 #: comments.php:76
 msgid "提交评论"
-msgstr ""
+msgstr "Submit"
 
 #: footer.php:28 inc/theme-widgets.php:184
 msgid "搜点什么呢?"
-msgstr ""
+msgstr "What are you looking for?"
 
 #: header.php:75 inc/theme-options.php:807
 msgid "一款专注于用户阅读体验的响应式博客主题"
-msgstr ""
+msgstr "A responsive blog theme focused om user reading experience"
 
 #: inc/theme-article.php:218
 msgid "评论正在提交中"
-msgstr ""
+msgstr "Comments being submitted"
 
 #: inc/theme-article.php:219
 msgid "评论提交成功"
-msgstr ""
+msgstr "Comment submitted success"
 
 #: inc/theme-article.php:261 inc/theme-article.php:306
 msgid "编辑"
-msgstr ""
+msgstr "Edit"
 
 #: inc/theme-article.php:312 inc/theme-smtp.php:103
 msgid "回复"
-msgstr ""
+msgstr "Reply"
 
 #: inc/theme-article.php:367
 msgid "添加表情"
-msgstr ""
+msgstr "Add Emoji"
 
 #: inc/theme-article.php:424
 msgid "描述"
-msgstr ""
+msgstr "Description"
 
 #: inc/theme-article.php:429 inc/theme-options.php:544
 msgid "关键词"
-msgstr ""
+msgstr "Keywords"
 
 #: inc/theme-article.php:436
 msgid "SEO 设置"
-msgstr ""
+msgstr "SEO Setting"
 
 #: inc/theme-core.php:94
 msgid "您已经赞过了"
-msgstr ""
+msgstr "You already support"
 
 #: inc/theme-core.php:95
 msgid "感谢您的支持"
-msgstr ""
+msgstr "Thanks for your support"
 
 #: inc/theme-core.php:96
 msgid "打赏作者"
-msgstr ""
+msgstr "Reward the author"
 
 #: inc/theme-core.php:97
 msgid "扫码支付"
-msgstr ""
+msgstr "Scan code payment"
 
 #: inc/theme-navwalker.php:22
 msgid "顶部菜单"
-msgstr ""
+msgstr "Top Menu"
 
 #: inc/theme-navwalker.php:388
 msgid "添加导航"
-msgstr ""
+msgstr "Add navigation"
 
 #: inc/theme-options.php:45
 msgid "主题设置"
-msgstr ""
+msgstr "Theme Settings"
 
 #: inc/theme-options.php:58
 msgid "全站配置"
-msgstr ""
+msgstr "Website Config"
 
 #: inc/theme-options.php:64
 msgid "功能配置"
-msgstr ""
+msgstr "Feature configuration"
 
 #: inc/theme-options.php:70
 msgid "前台管理员导航"
-msgstr ""
+msgstr "Front Desk Administrator Navigation"
 
 #: inc/theme-options.php:71
 msgid "启用/禁用前台管理员导航"
-msgstr ""
+msgstr "Enable/disable foreground administrator navigation"
 
 #: inc/theme-options.php:77
 msgid "侧边栏后台入口"
-msgstr ""
+msgstr "Sidebar Backstage Entrance"
 
 #: inc/theme-options.php:78
 msgid "启用/禁用个人简介头像进入后台功能"
-msgstr ""
+msgstr "Enable/disable profile avatar access to the background feature"
 
 #: inc/theme-options.php:84
 msgid "侧边栏随动"
-msgstr ""
+msgstr "Sidebar follows"
 
 #: inc/theme-options.php:85
 msgid "启用/禁用小工具侧边栏随动功能"
-msgstr ""
+msgstr "Enable/disable the gadget sidebar follow-up feature"
 
 #: inc/theme-options.php:91
 msgid "搜索增强"
-msgstr ""
+msgstr "Search enhancements"
 
 #: inc/theme-options.php:92
 msgid "启用/禁用仅搜索文章标题"
-msgstr ""
+msgstr "Enable/disable searching only for article titles"
 
 #: inc/theme-options.php:98
 msgid "特色图片"
-msgstr ""
+msgstr "Featured image"
 
 #: inc/theme-options.php:99
 msgid "启用/禁用文章特色图片"
-msgstr ""
+msgstr "Enable/disable article featured pictures"
 
 #: inc/theme-options.php:105
 msgid "哀悼功能"
-msgstr ""
+msgstr "Mourning"
 
 #: inc/theme-options.php:106
 msgid "启用/禁用站点首页黑白功能"
-msgstr ""
+msgstr "Enable/disable the site home page black and white feature"
 
 #: inc/theme-options.php:112
 msgid "CSS 动画库"
-msgstr ""
+msgstr "CSS animation library"
 
 #: inc/theme-options.php:113
 msgid "启用/禁用 animate.css 效果"
-msgstr ""
+msgstr "Enable/disable the animate .css effect"
 
 #: inc/theme-options.php:119
 msgid "Font Awesome"
-msgstr ""
+msgstr "Font Awesome"
 
 #: inc/theme-options.php:120
 msgid "启用/禁用 Font Awesome Free 字体"
-msgstr ""
+msgstr "Enable/disable Font Awesome Free fonts"
 
 #: inc/theme-options.php:126
 msgid "静态资源加速"
-msgstr ""
+msgstr "Static Resource Optimize"
 
 #: inc/theme-options.php:127
 msgid "启用/禁用静态资源加速"
-msgstr ""
+msgstr "Enable/disable static resource acceleration"
 
 #: inc/theme-options.php:133
 msgid "自定义图片类型的文件名"
-msgstr ""
+msgstr "The file name of the custom picture type"
 
 #: inc/theme-options.php:134
 msgid "启用/禁用 图片类型的文件名改为 MD5 值"
-msgstr ""
+msgstr "Enable/disable the file name of the picture type to change to the MD5 value"
 
 #: inc/theme-options.php:140
 msgid "禁止生成缩略图"
-msgstr ""
+msgstr "Disable thumbnail generation"
 
 #: inc/theme-options.php:141
 msgid "启用/禁用生成多种尺寸图片资源"
-msgstr ""
+msgstr "Enable/disable the generation of multi-size picture resources"
 
 #: inc/theme-options.php:147
 msgid "Gutenberg 编辑器"
-msgstr ""
+msgstr "Gutenberg editor"
 
 #: inc/theme-options.php:148
 msgid "启用/禁用 Gutenberg 编辑器"
-msgstr ""
+msgstr "Enable/disable the Gutenberg editor"
 
 #: inc/theme-options.php:154
 msgid "文章简介缩略"
-msgstr ""
+msgstr "An introduction to the article"
 
 #: inc/theme-options.php:155
 msgid "文章简介显示的字符数量"
-msgstr ""
+msgstr "The number of characters displayed in the article introduction"
 
 #: inc/theme-options.php:161
 msgid "Gravatar 加速"
-msgstr ""
+msgstr "Speed up Gravatar"
 
 #: inc/theme-options.php:162
 msgid "自定义 Gravatar 头像加速地址"
-msgstr ""
+msgstr "Custom Gravatar Acceleration Address"
 
 #: inc/theme-options.php:171
 msgid "附件重命名"
-msgstr ""
+msgstr "The attachment is renamed"
 
 #: inc/theme-options.php:176 inc/theme-options.php:211
 #: inc/theme-options.php:314 inc/theme-options.php:398
@@ -278,11 +278,11 @@ msgstr ""
 #: inc/theme-options.php:691 inc/theme-options.php:1041
 #: inc/theme-options.php:1080
 msgid "功能开关"
-msgstr ""
+msgstr "Function switch"
 
 #: inc/theme-options.php:177
 msgid "开启/关闭附件重命名"
-msgstr ""
+msgstr "Turn attachment renames on/off"
 
 #: inc/theme-options.php:178 inc/theme-options.php:213
 #: inc/theme-options.php:316 inc/theme-options.php:400
@@ -290,7 +290,7 @@ msgstr ""
 #: inc/theme-options.php:693 inc/theme-options.php:1043
 #: inc/theme-options.php:1082
 msgid "开启"
-msgstr ""
+msgstr "Enable"
 
 #: inc/theme-options.php:179 inc/theme-options.php:214
 #: inc/theme-options.php:317 inc/theme-options.php:401
@@ -298,758 +298,758 @@ msgstr ""
 #: inc/theme-options.php:694 inc/theme-options.php:1044
 #: inc/theme-options.php:1083
 msgid "关闭"
-msgstr ""
+msgstr "Close"
 
 #: inc/theme-options.php:184
 msgid "文件前缀"
-msgstr ""
+msgstr "The file prefix"
 
 #: inc/theme-options.php:185
 msgid "前缀与文件名之间会用 - 连接"
-msgstr ""
+msgstr "The prefix is used - connected to the file name"
 
 #: inc/theme-options.php:190
 msgid "文件类型"
-msgstr ""
+msgstr "File type"
 
 #: inc/theme-options.php:191
 msgid "每个类型之间用 | 隔开"
-msgstr ""
+msgstr "Use | between each type Separated"
 
 #: inc/theme-options.php:206 inc/theme-options.php:699
 msgid "微信二维码"
-msgstr ""
+msgstr "WeChat QR Code"
 
 #: inc/theme-options.php:212
 msgid "开启/关闭微信二维码"
-msgstr ""
+msgstr "Turn WeChat QR code on/off"
 
 #: inc/theme-options.php:219
 msgid "二维码图片"
-msgstr ""
+msgstr "QR code picture"
 
 #: inc/theme-options.php:222
 msgid "浮动显示在页面右下角"
-msgstr ""
+msgstr "Floats appear in the lower right corner of the page"
 
 #: inc/theme-options.php:235
 msgid "颜色配置"
-msgstr ""
+msgstr "Color configuration"
 
 #: inc/theme-options.php:242
 msgid "全站背景颜色"
-msgstr ""
+msgstr "The background color of the whole station"
 
 #: inc/theme-options.php:243
 msgid "全站页面的背景颜色"
-msgstr ""
+msgstr "The background color of the full station page"
 
 #: inc/theme-options.php:249
 msgid "Chrome 导航栏颜色"
-msgstr ""
+msgstr "Chrome navigation bar color"
 
 #: inc/theme-options.php:250
 msgid "移动端 Chrome 浏览器导航栏颜色"
-msgstr ""
+msgstr "Mobile Chrome navigation bar color"
 
 #: inc/theme-options.php:257
 msgid "图片配置"
-msgstr ""
+msgstr "Picture configuration"
 
 #: inc/theme-options.php:263
 msgid "站点 Logo"
-msgstr ""
+msgstr "Site Logo"
 
 #: inc/theme-options.php:266
 msgid "不上传图片则显示站点标题"
-msgstr ""
+msgstr "The site title is displayed without uploading the image"
 
 #: inc/theme-options.php:271
 msgid "Favicon 图标"
-msgstr ""
+msgstr "The Favicon icon"
 
 #: inc/theme-options.php:274
 msgid "浏览器收藏夹和地址栏中显示的图标"
-msgstr ""
+msgstr "Icons displayed in browser favorites and address bar"
 
 #: inc/theme-options.php:279
 msgid "404 页面图片"
-msgstr ""
+msgstr "404 Page Pictures"
 
 #: inc/theme-options.php:283
 msgid "图片显示出来是 404 的形状"
-msgstr ""
+msgstr "The picture shows the shape of 404"
 
 #: inc/theme-options.php:288
 msgid "无内容图片"
-msgstr ""
+msgstr "Picture displayed when information is not found"
 
 #: inc/theme-options.php:292
 msgid "当搜索不到文章或分类没有文章时显示"
-msgstr ""
+msgstr "Displays when no articles are searched or no articles are classified"
 
 #: inc/theme-options.php:297
 msgid "默认特色图"
-msgstr ""
+msgstr "Default featured image"
 
 #: inc/theme-options.php:301
 msgid "当文章中没有图片且没有特色图时显示"
-msgstr ""
+msgstr "Displays when there are no pictures and no features in the article"
 
 #: inc/theme-options.php:308
 msgid "首页轮播"
-msgstr ""
+msgstr "Home Rotation"
 
 #: inc/theme-options.php:315
 msgid "开启/关闭首页轮播功能"
-msgstr ""
+msgstr "Turn home page autocast on/off"
 
 #: inc/theme-options.php:331 inc/theme-options.php:1021
 #: inc/theme-options.php:1060
 msgid "唯一标识"
-msgstr ""
+msgstr "Unique identity"
 
 #: inc/theme-options.php:332
 msgid "仅用于轮播标识，可以作为备注使用"
-msgstr ""
+msgstr "Used only for carousel identification and can be used as a note"
 
 #: inc/theme-options.php:337 inc/theme-options.php:1027
 #: inc/theme-options.php:1066
 msgid "轮播图片"
-msgstr ""
+msgstr "A picture of the rotation"
 
 #: inc/theme-options.php:338 inc/theme-options.php:1028
 #: inc/theme-options.php:1067
 msgid "可以直接填写图片链接，也可以上传图片"
-msgstr ""
+msgstr "You can fill in the image link directly or upload the picture"
 
 #: inc/theme-options.php:345 inc/theme-options.php:1035
 #: inc/theme-options.php:1074
 msgid "网址链接"
-msgstr ""
+msgstr "RELATED LINKS http://www.scots"
 
 #: inc/theme-options.php:346 inc/theme-options.php:1036
 #: inc/theme-options.php:1075
 msgid "需要填写完整的链接地址，包含协议头"
-msgstr ""
+msgstr "A complete link address with the agreement header is required"
 
 #: inc/theme-options.php:351
 msgid "轮播标题"
-msgstr ""
+msgstr "The title of the rotation"
 
 #: inc/theme-options.php:352 inc/theme-options.php:358
 msgid "选填项目，如果不填则不显示"
-msgstr ""
+msgstr "Optional items are not displayed if they are not filled in"
 
 #: inc/theme-options.php:357
 msgid "轮播简介"
-msgstr ""
+msgstr "Introduction to the rotation"
 
 #: inc/theme-options.php:364
 msgid "文字颜色"
-msgstr ""
+msgstr "The color of the text"
 
 #: inc/theme-options.php:365
 msgid "轮播标题和简介的颜色"
-msgstr ""
+msgstr "The color of the rotation title and introduction"
 
 #: inc/theme-options.php:374
 msgid "第三方配置"
-msgstr ""
+msgstr "Third-party configuration"
 
 #: inc/theme-options.php:388
 msgid "DogeCloud 云存储"
-msgstr ""
+msgstr "DogeCloud cloud storage"
 
 #: inc/theme-options.php:399
 msgid "开启/关闭 DogeCloud 云存储"
-msgstr ""
+msgstr "Turn DogeCloud cloud storage on/off"
 
 #: inc/theme-options.php:406
 msgid "空间名称"
-msgstr ""
+msgstr "The space name"
 
 #: inc/theme-options.php:407
 msgid "空间名称可在空间基本信息中查看"
-msgstr ""
+msgstr "Space names can be viewed in the space basic information"
 
 #: inc/theme-options.php:408
 msgid "<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">点击这里</a>查询空间名称"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">Click here to</a> find the space name"
 
 #: inc/theme-options.php:413 inc/theme-options.php:486
 msgid "加速域名"
-msgstr ""
+msgstr "Speed up the domain"
 
 #: inc/theme-options.php:414 inc/theme-options.php:487
 msgid "域名结尾不要添加 /"
-msgstr ""
+msgstr "Don't add / at the end of the domain name"
 
 #: inc/theme-options.php:415
 msgid "<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">点击这里</a>查询加速域名"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.dogecloud.com/oss/list\">Click here to</a> find an accelerated domain name"
 
 #: inc/theme-options.php:420 inc/theme-options.php:500
 msgid "AccessKey"
-msgstr ""
+msgstr "AccessKey"
 
 #: inc/theme-options.php:421 inc/theme-options.php:431
 #: inc/theme-options.php:501 inc/theme-options.php:511
 msgid "出于安全考虑，建议周期性地更换密钥"
-msgstr ""
+msgstr "For security reasons, it is recommended to replace the key periodically"
 
 #: inc/theme-options.php:422
 msgid "<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">点击这里</a>查询 AccessKey"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">Click here to</a> find AccessKey"
 
 #: inc/theme-options.php:430 inc/theme-options.php:510
 msgid "SecretKey"
-msgstr ""
+msgstr "SecretKey"
 
 #: inc/theme-options.php:432
 msgid "<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">点击这里</a>查询 SecretKey"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.dogecloud.com/user/keys\">Click here to</a> find SecretKey"
 
 #: inc/theme-options.php:449
 msgid "火山引擎 ImageX"
-msgstr ""
+msgstr "Volcanic engine ImageX"
 
 #: inc/theme-options.php:460
 msgid "开启/关闭 火山引擎 ImageX"
-msgstr ""
+msgstr "Turn volcano engine ImageX on/off"
 
 #: inc/theme-options.php:467
 msgid "加速地域"
-msgstr ""
+msgstr "Speed up the region"
 
 #: inc/theme-options.php:468
 msgid "加速地域在创建服务的时候进行选择"
-msgstr ""
+msgstr "Speed up the selection of geographies when creating services"
 
 #: inc/theme-options.php:469
 msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">点击这里</a>查询加速地域"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">Click here to</a> find out what to speed up"
 
 #: inc/theme-options.php:471
 msgid "国内"
-msgstr ""
+msgstr "domestic"
 
 #: inc/theme-options.php:472
 msgid "美东"
-msgstr ""
+msgstr "Meeton"
 
 #: inc/theme-options.php:473
 msgid "新加坡"
-msgstr ""
+msgstr "Singapore"
 
 #: inc/theme-options.php:479
 msgid "服务 ID"
-msgstr ""
+msgstr "The service ID"
 
 #: inc/theme-options.php:480
 msgid "服务 ID 可在图片服务管理中查看"
-msgstr ""
+msgstr "The service ID can be viewed in Picture Service Management"
 
 #: inc/theme-options.php:481
 msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">点击这里</a>查询服务 ID"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">Click here to</a> find the service ID"
 
 #: inc/theme-options.php:488
 msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">点击这里</a>查询加速域名"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/service_manage/\">Click here to</a> find an accelerated domain name"
 
 #: inc/theme-options.php:493
 msgid "处理模板"
-msgstr ""
+msgstr "Work with templates"
 
 #: inc/theme-options.php:494
 msgid "处理模板可在图片处理配置中查看"
-msgstr ""
+msgstr "The processing template can be viewed in the picture processing configuration"
 
 #: inc/theme-options.php:495
 msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/image_template/\">点击这里</a>查询处理模板"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.volcengine.com/imagex/image_template/\">Click here to</a> query the processing template"
 
 #: inc/theme-options.php:502
 msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/\">点击这里</a>查询 AccessKey"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/\">Click here to</a> find AccessKey"
 
 #: inc/theme-options.php:512
 msgid "<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/\">点击这里</a>查询 SecretKey"
-msgstr ""
+msgstr "<a target=\"_blank\" href=\"https://console.volcengine.com/iam/keymanage/\">Click here to</a> find SecretKey"
 
 #: inc/theme-options.php:529
 msgid "收录配置"
-msgstr ""
+msgstr "SEO Config"
 
 #: inc/theme-options.php:535
 msgid "分享图片"
-msgstr ""
+msgstr "Share pictures"
 
 #: inc/theme-options.php:539
 msgid "用于搜索引擎或社交工具抓取时使用"
-msgstr ""
+msgstr "Used when crawling search engines or social tools"
 
 #: inc/theme-options.php:545
 msgid "每个关键词之间需要用 , 分割"
-msgstr ""
+msgstr "Each keyword needs to be split between"
 
 #: inc/theme-options.php:550
 msgid "站点描述"
-msgstr ""
+msgstr "Site description"
 
 #: inc/theme-options.php:551
 msgid "网站首页的描述信息"
-msgstr ""
+msgstr "Description of the home page of the website"
 
 #: inc/theme-options.php:555
 msgid "统计代码"
-msgstr ""
+msgstr "Statistical Code"
 
 #: inc/theme-options.php:556
 msgid "<span style=\"color:red\">输入代码时请注意辨别代码安全性</span>"
-msgstr ""
+msgstr "<span style=\"color:red\">Be careful to identify code security when entering code</span>"
 
 #: inc/theme-options.php:571
 msgid "robots.txt 配置"
-msgstr ""
+msgstr "robots.txt config"
 
 #: inc/theme-options.php:575
 msgid "- 需要 "
-msgstr ""
+msgstr "- Needed"
 
 #: inc/theme-options.php:575
 msgid "设置-阅读-对搜索引擎的可见性"
-msgstr ""
+msgstr "Set - read - visibility to search engines"
 
 #: inc/theme-options.php:575
 msgid " 是开启的状态，以下配置才会生效"
-msgstr ""
+msgstr " is on until the following configuration takes effect"
 
 #: inc/theme-options.php:575
 msgid "- 如果网站根目录下已经有 robots.txt 文件，下面的配置不会生效"
-msgstr ""
+msgstr "- if there has been a robots.txt file in the root direcotry,the following settings won't take effect."
 
 #: inc/theme-options.php:575
 msgid "- 点击 "
-msgstr ""
+msgstr "- Click"
 
 #: inc/theme-options.php:575
 msgid " 查看配置是否生效，如果网站开启了 CDN，可能需要刷新缓存才会生效"
-msgstr ""
+msgstr " Check whether the configuration is effective. If the website has CDN enabled, you may need to refresh the cache to take effect"
 
 #: inc/theme-options.php:590
 msgid "文章配置"
-msgstr ""
+msgstr "Article Configurations"
 
 #: inc/theme-options.php:596
 msgid "网易云音乐"
-msgstr ""
+msgstr "NetEase Music"
 
 #: inc/theme-options.php:597
 msgid "启用/禁用网易云音乐自动播放功能"
-msgstr ""
+msgstr "Enable/disable NetEase Cloud Music AutoPlay"
 
 #: inc/theme-options.php:603
 msgid "附加功能"
-msgstr ""
+msgstr "Additional features"
 
 #: inc/theme-options.php:604
 msgid "启用/禁用文章自动保存、修订版本功能"
-msgstr ""
+msgstr "Enable/disable the auto-save, revision features of articles"
 
 #: inc/theme-options.php:610
 msgid "页面布局"
-msgstr ""
+msgstr "Page Layout"
 
 #: inc/theme-options.php:611
 msgid "差异在于侧边栏小工具，仅在文章页面生效"
-msgstr ""
+msgstr "The difference is that the sidebar gadgets only take effect on the article page"
 
 #: inc/theme-options.php:624
 msgid "知识共享协议"
-msgstr ""
+msgstr "creative commons license"
 
 #: inc/theme-options.php:630
 msgid "开启/关闭 知识共享协议"
-msgstr ""
+msgstr "Turn the creative sharing protocol on/off"
 
 #: inc/theme-options.php:637
 msgid "协议名称"
-msgstr ""
+msgstr "The name of the agreement"
 
 #: inc/theme-options.php:638
 msgid "选择文章的知识共享协议"
-msgstr ""
+msgstr "Choose a knowledge sharing protocol for articles"
 
 #: inc/theme-options.php:640 single.php:118
 msgid "知识共享署名 4.0 国际许可协议"
-msgstr ""
+msgstr "Creative Commons Attribution 4.0 International License"
 
 #: inc/theme-options.php:641 single.php:119
 msgid "知识共享署名-非商业性使用 4.0 国际许可协议"
-msgstr ""
+msgstr "Creative Commons Attribution-NonCommercial 4.0 International License"
 
 #: inc/theme-options.php:642 single.php:120
 msgid "知识共享署名-禁止演绎 4.0 国际许可协议"
-msgstr ""
+msgstr "Creative Commons Attribution-NoDerivatives 4.0 International License"
 
 #: inc/theme-options.php:643 single.php:121
 msgid "知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议"
-msgstr ""
+msgstr "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License"
 
 #: inc/theme-options.php:644 single.php:122
 msgid "知识共享署名-相同方式共享 4.0 国际许可协议"
-msgstr ""
+msgstr "Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
 
 #: inc/theme-options.php:645 single.php:123
 msgid "知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议"
-msgstr ""
+msgstr "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
 
 #: inc/theme-options.php:660
 msgid "文章 HOT 标签"
-msgstr ""
+msgstr "Article HOT tag"
 
 #: inc/theme-options.php:665
 msgid "评论数"
-msgstr ""
+msgstr "Comments"
 
 #: inc/theme-options.php:666
 msgid "填写显示 HOT 标签需要的评论数"
-msgstr ""
+msgstr "Fill in the number of comments needed to display the HOT tag"
 
 #: inc/theme-options.php:671
 msgid "点赞数"
-msgstr ""
+msgstr "Likes"
 
 #: inc/theme-options.php:672
 msgid "填写显示 HOT 标签需要的点赞数"
-msgstr ""
+msgstr "Fill in the number of likes needed to display the HOT tag"
 
 #: inc/theme-options.php:686
 msgid "文章打赏"
-msgstr ""
+msgstr "Articles reward"
 
 #: inc/theme-options.php:692
 msgid "开启/关闭 文章打赏"
-msgstr ""
+msgstr "On/Off Article Rewards"
 
 #: inc/theme-options.php:706
 msgid "支付宝二维码"
-msgstr ""
+msgstr "Alipay QR code"
 
 #: inc/theme-options.php:721
 msgid "邮件配置"
-msgstr ""
+msgstr "Fetchmail Configuration"
 
 #: inc/theme-options.php:727
 msgid "SMTP 服务"
-msgstr ""
+msgstr "SMTP Service"
 
 #: inc/theme-options.php:728
 msgid "启用/禁用 SMTP 服务"
-msgstr ""
+msgstr "Enable/disable the SMTP service"
 
 #: inc/theme-options.php:734
 msgid "邮件服务器"
-msgstr ""
+msgstr "Mail Server"
 
 #: inc/theme-options.php:735
 msgid "填写发件服务器地址"
-msgstr ""
+msgstr "Mail Server Address"
 
 #: inc/theme-options.php:736
 msgid "smtp.example.com"
-msgstr ""
+msgstr "smtp.example.com"
 
 #: inc/theme-options.php:741
 msgid "服务器端口"
-msgstr ""
+msgstr "Port"
 
 #: inc/theme-options.php:742
 msgid "填写发件服务器端口"
-msgstr ""
+msgstr "Fill in the sending server port"
 
 #: inc/theme-options.php:743
 msgid "465"
-msgstr ""
+msgstr "26s"
 
 #: inc/theme-options.php:748
 msgid "授权方式"
-msgstr ""
+msgstr "Authorization Method"
 
 #: inc/theme-options.php:749
 msgid "填写登录鉴权的方式"
-msgstr ""
+msgstr "Fill in login authentication method"
 
 #: inc/theme-options.php:750
 msgid "ssl"
-msgstr ""
+msgstr "ssl"
 
 #: inc/theme-options.php:755
 msgid "邮箱帐号"
-msgstr ""
+msgstr "Email account"
 
 #: inc/theme-options.php:756
 msgid "填写邮箱账号"
-msgstr ""
+msgstr "fill the email password"
 
 #: inc/theme-options.php:757
 msgid "user@example.com"
-msgstr ""
+msgstr "user@example.com"
 
 #: inc/theme-options.php:762
 msgid "邮箱密码"
-msgstr ""
+msgstr "Email password"
 
 #: inc/theme-options.php:763
 msgid "填写邮箱密码"
-msgstr ""
+msgstr "Fill in email password"
 
 #: inc/theme-options.php:773
 msgid "顶部配置"
-msgstr ""
+msgstr "Top Config"
 
 #: inc/theme-options.php:779 inc/theme-options.php:785
 msgid "图片导航"
-msgstr ""
+msgstr "Image navigation"
 
 #: inc/theme-options.php:786
 msgid "启用/禁用 图片导航"
-msgstr ""
+msgstr "Enable/disable picture navigation"
 
 #: inc/theme-options.php:792
 msgid "顶部图片"
-msgstr ""
+msgstr "The top picture"
 
 #: inc/theme-options.php:800
 msgid "图片标题"
-msgstr ""
+msgstr "Image caption"
 
 #. Theme Name of the plugin/theme
 #: inc/theme-options.php:801
 msgid "Kratos"
-msgstr ""
+msgstr "Kratos"
 
 #: inc/theme-options.php:806
 msgid "标题描述"
-msgstr ""
+msgstr "title discription"
 
 #: inc/theme-options.php:814 inc/theme-options.php:821
 msgid "颜色导航"
-msgstr ""
+msgstr "Color navigation"
 
 #: inc/theme-options.php:828
 msgid "页脚配置"
-msgstr ""
+msgstr "footer configuration"
 
 #: inc/theme-options.php:834
 msgid "社交图标"
-msgstr ""
+msgstr "Social icon"
 
 #: inc/theme-options.php:843
 msgid "国内平台"
-msgstr ""
+msgstr "China platform"
 
 #: inc/theme-options.php:848
 msgid "新浪微博"
-msgstr ""
+msgstr "Weibo"
 
 #: inc/theme-options.php:849
 msgid "https://weibo.com/xxxxx"
-msgstr ""
+msgstr "https://weibo.com/xxxxx"
 
 #: inc/theme-options.php:854
 msgid "哔哩哔哩"
-msgstr ""
+msgstr "bilibili"
 
 #: inc/theme-options.php:855
 msgid "https://space.bilibili.com/xxxxx"
-msgstr ""
+msgstr "https://space.bilibili.com/xxxxx"
 
 #: inc/theme-options.php:860
 msgid "CODING"
-msgstr ""
+msgstr "CODING"
 
 #: inc/theme-options.php:861
 msgid "https://xxxxx.coding.net/u/xxxxx"
-msgstr ""
+msgstr "https://xxxxx.coding.net/u/xxxxx"
 
 #: inc/theme-options.php:866
 msgid "码云"
-msgstr ""
+msgstr "Code cloud"
 
 #: inc/theme-options.php:867
 msgid "https://gitee.com/xxxxx"
-msgstr ""
+msgstr "https://gitee.com/xxxxx"
 
 #: inc/theme-options.php:872
 msgid "豆瓣"
-msgstr ""
+msgstr "Bean petals"
 
 #: inc/theme-options.php:873
 msgid "https://www.douban.com/people/xxxxx"
-msgstr ""
+msgstr "https://www.douban.com/people/xxxxx"
 
 #: inc/theme-options.php:883
 msgid "海外平台"
-msgstr ""
+msgstr "Global platform"
 
 #: inc/theme-options.php:888
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: inc/theme-options.php:889
 msgid "https://twitter.com/xxxxx"
-msgstr ""
+msgstr "https://twitter.com/xxxxx"
 
 #: inc/theme-options.php:894
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: inc/theme-options.php:895
 msgid "https://t.me/xxxxx"
-msgstr ""
+msgstr "https://t.me/xxxxx"
 
 #: inc/theme-options.php:900
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: inc/theme-options.php:901
 msgid "https://www.linkedin.com/in/xxxxx"
-msgstr ""
+msgstr "https://www.linkedin.com/in/xxxxx"
 
 #: inc/theme-options.php:906
 msgid "YouTube"
-msgstr ""
+msgstr "YouTube"
 
 #: inc/theme-options.php:907
 msgid "https://www.youtube.com/channel/xxxxx"
-msgstr ""
+msgstr "https://www.youtube.com/channel/xxxxx"
 
 #: inc/theme-options.php:912
 msgid "Github"
-msgstr ""
+msgstr "Github"
 
 #: inc/theme-options.php:913
 msgid "https://github.com/xxxxx"
-msgstr ""
+msgstr "https://github.com/xxxxx"
 
 #: inc/theme-options.php:918
 msgid "Stack Overflow"
-msgstr ""
+msgstr "Stack Overflow"
 
 #: inc/theme-options.php:919
 msgid "https://stackoverflow.com/users/xxxxx"
-msgstr ""
+msgstr "https://stackoverflow.com/users/xxxxx"
 
 #: inc/theme-options.php:929
 msgid "其他"
-msgstr ""
+msgstr "Other"
 
 #: inc/theme-options.php:934
 msgid "电子邮箱"
-msgstr ""
+msgstr "Email address"
 
 #: inc/theme-options.php:935
 msgid "mailto:xxxxx@example.com"
-msgstr ""
+msgstr "mailto:xxxxx@example.com"
 
 #: inc/theme-options.php:958
 msgid "备案信息"
-msgstr ""
+msgstr "Record information"
 
 #: inc/theme-options.php:964
 msgid "工信部备案信息"
-msgstr ""
+msgstr "Filing the ICP information"
 
 #: inc/theme-options.php:965
 msgid "由<a target=\"_blank\" href=\"https://beian.miit.gov.cn/\">工业和信息化部政务服务平台</a>提供"
-msgstr ""
+msgstr "Provided by <a target=\"_blank\" href=\"https://beian.miit.gov.cn/\">the Ministry of Industry and Information Technology's Government Service Platform</a>"
 
 #: inc/theme-options.php:966
 msgid "冀ICP证XXXXXX号"
-msgstr ""
+msgstr "ICP card XXXXXX"
 
 #: inc/theme-options.php:971
 msgid "公安备案信息"
-msgstr ""
+msgstr "Public security record information"
 
 #: inc/theme-options.php:972 inc/theme-options.php:979
 msgid "由<a target=\"_blank\" href=\"http://www.beian.gov.cn/\">全国互联网安全管理服务平台</a>提供"
-msgstr ""
+msgstr "Provided by <a target=\"_blank\" href=\"http://www.beian.gov.cn/\">the National Internet Security Management Service Platform</a>"
 
 #: inc/theme-options.php:973
 msgid "冀公网安备 XXXXXXXXXXXXX 号"
-msgstr ""
+msgstr "Public network security XXXXXXXXXXXXX"
 
 #: inc/theme-options.php:978
 msgid "公安备案链接"
-msgstr ""
+msgstr "Links to public security filings"
 
 #: inc/theme-options.php:980
 msgid "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
-msgstr ""
+msgstr "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=xxxxx"
 
 #: inc/theme-options.php:987 inc/theme-options.php:993
 msgid "版权信息"
-msgstr ""
+msgstr "Copyright Info"
 
 #: inc/theme-options.php:1001
 msgid "广告配置"
-msgstr ""
+msgstr "Ad config"
 
 #: inc/theme-options.php:1007
 msgid "文章广告"
-msgstr ""
+msgstr "Article ads"
 
 #: inc/theme-options.php:1022 inc/theme-options.php:1061
 msgid "仅用于识别广告内容，可以作为备注使用"
-msgstr ""
+msgstr "Used only to identify ad content and can be used as a comment"
 
 #: inc/theme-options.php:1042 inc/theme-options.php:1081
 msgid "开启/关闭此条广告"
-msgstr ""
+msgstr "Turn this ad on/off"
 
 #: inc/theme-options.php:1092
 msgid "备份恢复"
-msgstr ""
+msgstr "Backup recovery"
 
 #: inc/theme-options.php:1102
 msgid "关于主题"
-msgstr ""
+msgstr "About Theme"
 
 #: inc/theme-options.php:1107
 msgid "基础信息"
-msgstr ""
+msgstr "Basic information"
 
 #: inc/theme-options.php:1112
 msgid "提示：在反馈主题相关的问题时，请同时复制并提交下面的内容。"
-msgstr ""
+msgstr "Tip: When you have questions about a feedback topic, copy and submit the following at the same time."
 
 #: inc/theme-options.php:1116
 msgid "PHP 版本："
-msgstr ""
+msgstr "PHP version:"
 
 #: inc/theme-options.php:1116
 msgid "Kratos 版本："
-msgstr ""
+msgstr "Kratos version:"
 
 #: inc/theme-options.php:1116
 msgid "WordPress 版本："
-msgstr ""
+msgstr "WordPress version:"
 
 #: inc/theme-options.php:1116
 msgid "User Agent 信息："
-msgstr ""
+msgstr "User agent information:"
 
 #: inc/theme-options.php:1121
 msgid "资料文档"
-msgstr ""
+msgstr "Data document"
 
 #: inc/theme-options.php:1125
 msgid "问题反馈："
-msgstr ""
+msgstr "Problem feedback:"
 
 #: inc/theme-options.php:1125
 msgid "使用说明："
@@ -1057,15 +1057,15 @@ msgstr ""
 
 #: inc/theme-options.php:1125
 msgid "更新日志："
-msgstr ""
+msgstr "Changelog:"
 
 #: inc/theme-options.php:1125
 msgid "捐赠记录："
-msgstr ""
+msgstr "Donation records:"
 
 #: inc/theme-options.php:1129
 msgid "版权声明"
-msgstr ""
+msgstr "Copyright notice"
 
 #: inc/theme-options.php:1133
 msgid "主题源码使用 <a href=\"https://github.com/seatonjiang/kratos/blob/main/LICENSE\" target=\"_blank\">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> 进行许可。"
@@ -1073,356 +1073,356 @@ msgstr ""
 
 #: inc/theme-options.php:1137
 msgid "讨论交流"
-msgstr ""
+msgstr "Discussion and communication"
 
 #: inc/theme-options.php:1145
 msgid "打赏支持"
-msgstr ""
+msgstr "Reward and support"
 
 #: inc/theme-setting.php:23
 #, php-format
 msgid "第 %s 页"
-msgstr ""
+msgstr "Page %s"
 
 #: inc/theme-shortcode.php:106 inc/theme-shortcode.php:118
 #: inc/theme-shortcode.php:130 inc/theme-shortcode.php:142
 #: inc/theme-shortcode.php:218
 msgid "标题内容"
-msgstr ""
+msgstr "Title Content"
 
 #: inc/theme-shortcode.php:181
 msgid "温馨提示：此处内容已隐藏，<a href=\"#comments\">回复</a>后刷新页面即可查看！"
-msgstr ""
+msgstr "Tips: The content here has been hidden, please refresh the page after <a href=\"#comments\">reply</a> to view!"
 
 #: inc/theme-smtp.php:39
 msgid "[通知]您的留言已经通过审核"
-msgstr ""
+msgstr "[notice] Your message has passed the review"
 
 #: inc/theme-smtp.php:47 inc/theme-smtp.php:97
 msgid "您好，"
-msgstr ""
+msgstr "Hello,"
 
 #: inc/theme-smtp.php:48
 msgid "您的留言已经通过了管理员的审核，摘要信息如下："
-msgstr ""
+msgstr "Your message has been approved by the administrator, and the summary information is as follows:"
 
 #: inc/theme-smtp.php:52
 msgid "文章"
-msgstr ""
+msgstr "Article"
 
 #: inc/theme-smtp.php:53
 msgid "内容"
-msgstr ""
+msgstr "Content"
 
 #: inc/theme-smtp.php:54 inc/theme-smtp.php:105
 msgid "操作"
-msgstr ""
+msgstr "Operation"
 
 #: inc/theme-smtp.php:66 inc/theme-smtp.php:118
 msgid "该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。"
-msgstr ""
+msgstr "This email is sent automatically, if this was you, just ignore this email."
 
 #: inc/theme-smtp.php:89
 msgid "[通知]您的留言有了新的回复"
-msgstr ""
+msgstr "[notice] Your message has a new reply"
 
 #: inc/theme-smtp.php:98
 msgid "您的留言有了新的回复，摘要信息如下："
-msgstr ""
+msgstr "Your message has a new reply. The summary information is as follows:"
 
 #: inc/theme-smtp.php:102
 msgid "原文"
-msgstr ""
+msgstr "Original"
 
 #: inc/theme-smtp.php:104
 msgid "作者"
-msgstr ""
+msgstr "Author"
 
 #: inc/theme-smtp.php:113
 msgid "查看回复"
-msgstr ""
+msgstr "View Reply"
 
 #: inc/theme-widgets.php:14
 msgid "主页侧边栏"
-msgstr ""
+msgstr "Home sidebar"
 
 #: inc/theme-widgets.php:22
 msgid "文章侧边栏"
-msgstr ""
+msgstr "Article sidebar"
 
 #: inc/theme-widgets.php:30
 msgid "页面侧边栏"
-msgstr ""
+msgstr "The sidebar of the page"
 
 #: inc/theme-widgets.php:62 inc/theme-widgets.php:71
 msgid "篇"
-msgstr ""
+msgstr "piece"
 
 #: inc/theme-widgets.php:104
 msgid "刚刚"
-msgstr ""
+msgstr "just"
 
 #: inc/theme-widgets.php:106
 msgid " 年前"
-msgstr ""
+msgstr " years ago"
 
 #: inc/theme-widgets.php:107
 msgid " 个月前"
-msgstr ""
+msgstr " months ago"
 
 #: inc/theme-widgets.php:108
 msgid " 周前"
-msgstr ""
+msgstr " weeks ago"
 
 #: inc/theme-widgets.php:109
 msgid " 天前"
-msgstr ""
+msgstr " days ago"
 
 #: inc/theme-widgets.php:110
 msgid " 小时前"
-msgstr ""
+msgstr " hours ago"
 
 #: inc/theme-widgets.php:111
 msgid " 分钟前"
-msgstr ""
+msgstr " minutes ago"
 
 #: inc/theme-widgets.php:112
 msgid " 秒前"
-msgstr ""
+msgstr " seconds ago"
 
 #: inc/theme-widgets.php:148
 msgid "匿名"
-msgstr ""
+msgstr "Anonymity"
 
 #: inc/theme-widgets.php:153
 msgid "发布于 "
-msgstr ""
+msgstr "Posted in "
 
 #: inc/theme-widgets.php:153
 msgid "m月d日"
-msgstr ""
+msgstr "m-d"
 
 #: inc/theme-widgets.php:169
 msgid "A search form for your site."
-msgstr ""
+msgstr "A search form for your site."
 
 #: inc/theme-widgets.php:172
 msgctxt "Search widget"
 msgid "Search"
-msgstr ""
+msgstr "Search"
 
 #: inc/theme-widgets.php:184
 msgid "搜索"
-msgstr ""
+msgstr "Search"
 
 #: inc/theme-widgets.php:193
 msgid "Title:"
-msgstr ""
+msgstr "Title:"
 
 #: inc/theme-widgets.php:213
 msgid "图片广告"
-msgstr ""
+msgstr " image advertisement"
 
 #: inc/theme-widgets.php:214
 msgid "显示自定义图片广告的工具"
-msgstr ""
+msgstr "Tools for displaying custom image ads"
 
 #: inc/theme-widgets.php:230 inc/theme-widgets.php:252
 msgid "广告"
-msgstr ""
+msgstr "Advertisement"
 
 #: inc/theme-widgets.php:258
 msgid "副标题："
-msgstr ""
+msgstr "Subtitle:"
 
 #: inc/theme-widgets.php:262
 msgid "链接地址："
-msgstr ""
+msgstr "Link URL:"
 
 #: inc/theme-widgets.php:266
 msgid "广告图片:"
-msgstr ""
+msgstr "Advertisement Images:"
 
 #: inc/theme-widgets.php:268 inc/theme-widgets.php:338
 msgid "选择图片"
-msgstr ""
+msgstr "Select Image"
 
 #: inc/theme-widgets.php:282
 msgid "个人简介"
-msgstr ""
+msgstr "Profile"
 
 #: inc/theme-widgets.php:283
 msgid "站长个人简介的展示工具"
-msgstr ""
+msgstr "Presentation tool for webmaster profiles"
 
 #: inc/theme-widgets.php:299 pages/page-toolbar.php:14
 msgid "这个人很懒，什么都没留下"
-msgstr ""
+msgstr "The man was lazy and left nothing behind"
 
 #: inc/theme-widgets.php:336
 msgid "背景图片:"
-msgstr ""
+msgstr "Background picture:"
 
 #: inc/theme-widgets.php:350 inc/theme-widgets.php:374
 msgid "标签聚合"
-msgstr ""
+msgstr "Tag aggregation"
 
 #: inc/theme-widgets.php:351
 msgid "文章标签的展示工具"
-msgstr ""
+msgstr "Article Tags Display Tool"
 
 #: inc/theme-widgets.php:397
 msgid "显示数量："
-msgstr ""
+msgstr "Display quantity:"
 
 #: inc/theme-widgets.php:401
 msgid "显示排序："
-msgstr ""
+msgstr "Display sort:"
 
 #: inc/theme-widgets.php:403
 msgid "降序"
-msgstr ""
+msgstr "Descending"
 
 #: inc/theme-widgets.php:404
 msgid "升序"
-msgstr ""
+msgstr "Ascending"
 
 #: inc/theme-widgets.php:405 inc/theme-widgets.php:436
 #: inc/theme-widgets.php:441 inc/theme-widgets.php:496
 msgid "随机"
-msgstr ""
+msgstr "Random"
 
 #: inc/theme-widgets.php:418
 msgid "文章聚合"
-msgstr ""
+msgstr "Article aggregation"
 
 #: inc/theme-widgets.php:419
 msgid "展示最热、随机、最新文章的工具"
-msgstr ""
+msgstr "Tools to show the hottest, random, latest articles"
 
 #: inc/theme-widgets.php:434 inc/theme-widgets.php:439
 #: inc/theme-widgets.php:494
 msgid "最新"
-msgstr ""
+msgstr "Newest"
 
 #: inc/theme-widgets.php:435 inc/theme-widgets.php:440
 #: inc/theme-widgets.php:495
 msgid "热点"
-msgstr ""
+msgstr "Hotspots"
 
 #: inc/theme-widgets.php:484 inc/theme-widgets.php:547
 msgid "展示数量："
-msgstr ""
+msgstr "display amount"
 
 #: inc/theme-widgets.php:488
 msgid "统计天数："
-msgstr ""
+msgstr "Statistical days:"
 
 #: inc/theme-widgets.php:492
 msgid "默认显示："
-msgstr ""
+msgstr "Default display:"
 
 #: inc/theme-widgets.php:509 inc/theme-widgets.php:519
 #: inc/theme-widgets.php:539
 msgid "最近评论"
-msgstr ""
+msgstr "Recent Comments"
 
 #: inc/theme-widgets.php:510
 msgid "展示站点最近的评论"
-msgstr ""
+msgstr "Show site recent comments"
 
 #: inc/theme-widgets.php:543
 msgid "栏目标题："
-msgstr ""
+msgstr "Title:"
 
 #: inc/theme-widgets.php:562
 msgid "文章目录"
-msgstr ""
+msgstr "The article catalog"
 
 #: inc/theme-widgets.php:563
 msgid "仅在有目录规则的文章中显示目录的工具"
-msgstr ""
+msgstr "Tools that display directories only in articles with directory rules"
 
 #: index.php:19
 msgid "搜索内容："
-msgstr ""
+msgstr "Search:"
 
 #: index.php:32
 msgid "很抱歉，没有找到任何内容"
-msgstr ""
+msgstr "Sorry, nothing was found"
 
 #: page.php:29 single.php:85
 msgid "<span>上一页</span>"
-msgstr ""
+msgstr "<span>Previous</span>"
 
 #: page.php:48 single.php:104
 msgid "<span>下一页</span>"
-msgstr ""
+msgstr "next page"
 
 #: pages/page-content.php:34
 msgid "页面"
-msgstr ""
+msgstr "Page"
 
 #: pages/page-content.php:47 single.php:62
 msgid "条评论"
-msgstr ""
+msgstr "Comments"
 
 #: pages/page-content.php:51 single.php:54
 msgid "点热度"
-msgstr ""
+msgstr "Browse"
 
 #: pages/page-content.php:57 single.php:60
 msgid "人点赞"
-msgstr ""
+msgstr "Like"
 
 #: pages/page-content.php:61
 msgid "阅读全文"
-msgstr ""
+msgstr "Read more"
 
 #: pages/page-toolbar.php:18
 msgid "打赏"
-msgstr ""
+msgstr "Reward"
 
 #: pages/page-toolbar.php:20
 msgid "点赞"
-msgstr ""
+msgstr "Like"
 
 #: single.php:26
 msgid "首页"
-msgstr ""
+msgstr "Home"
 
 #: single.php:46
 msgid "正文"
-msgstr ""
+msgstr "This article"
 
 #: single.php:65
 msgid "编辑文章"
-msgstr ""
+msgstr "Edit post"
 
 #: single.php:126
 #, php-format
 msgid "本作品采用 %s 进行许可"
-msgstr ""
+msgstr "This work is licensed under a %s"
 
 #: single.php:131
 msgid "标签："
-msgstr ""
+msgstr "Tags:"
 
 #: single.php:135
 msgid "暂无"
-msgstr ""
+msgstr "None"
 
 #: single.php:139
 msgid "最后更新："
-msgstr ""
+msgstr "Last updated:"
 
 #: single.php:149
 msgid "< 上一篇"
-msgstr ""
+msgstr "< Previous"
 
 #: single.php:153
 msgid "下一篇 >"
-msgstr ""
+msgstr "Next >"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/seatonjiang/kratos"
@@ -1430,11 +1430,11 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid "主题提供了多种针对自媒体博客需求的侧栏工具，删繁就简专注于用户的阅读体验，优化的邮件中心为你的网站留存加分添彩。"
-msgstr ""
+msgstr "Theme provides a variety of widgets to meet the needs of self-service media blogs. Focusing on a user-centric reading experience, an optimized email center adds extra points to your website retention."
 
 #. Author of the plugin/theme
 msgid "Seaton Jiang"
-msgstr ""
+msgstr "Seaton Jiang"
 
 #. Author URI of the plugin/theme
 msgid "https://seatonjiang.com"
