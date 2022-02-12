@@ -40,4 +40,8 @@ English | [简体中文](README.zh-CN.md)
 
 ## 🤝 Contributing
 
-We welcome all contributions. You can submit any ideas as pull requests or as GitHub issues, have a good time! :)
+We welcome all contributions. You can submit any ideas as pull requests or as issues, have a good time! :)
+
+## 📃 License
+
+The project is released under the GNU General Public License v3.0, see the [LICENCE](https://github.com/seatonjiang/kratos/blob/main/LICENSE) file for details.

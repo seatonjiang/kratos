@@ -52,4 +52,8 @@
 
 ## 🤝 参与共建
 
-我们欢迎所有的贡献，你可以将任何想法作为 pull requests 或 GitHub issues 提交，顺颂商祺 :)
+我们欢迎所有的贡献，你可以将任何想法作为 pull requests 或 issues 提交，顺颂商祺 :)
+
+## 📃 开源许可
+
+项目基于 GNU 通用公共许可证 v3.0 发布，详细说明请参阅 [LICENCE](https://github.com/seatonjiang/kratos/blob/main/LICENSE) 文件。
