@@ -24,7 +24,7 @@
     <a href="https://github.com/seatonjiang/kratos/issues">功能需求</a>
 </p>
 
-<p align="center">Kratos 是一款专注于用户阅读体验的响应式 WordPress 主题</p>
+<p align="center">专注于阅读体验的 WordPress 主题</p>
 
 ## 🚀 使用说明
 
@@ -37,18 +37,6 @@
 4. 点击 `选择文件`, 找到下载的 .zip 格式安装包，然后点击 `现在安装` 按钮；
 
 5. 进入 `外观` > `主题` 页面，找到 Kratos 主题，然后点击 `启用` 即可。
-
-## 💬 讨论交流
-
-<p align="center">
-<img src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/discuss.png">
-</p>
-
-## 🧧 打赏捐赠
-
-<p align="center">
-<img src="https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/assets/img/options/donate.png">
-</p>
 
 ## 🤝 参与共建
 

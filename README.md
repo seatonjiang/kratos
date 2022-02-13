@@ -24,7 +24,7 @@ English | [简体中文](README.zh-CN.md)
     <a href="https://github.com/seatonjiang/kratos/issues">Request Feature</a>
 </p>
 
-<p align="center">A responsive WordPress theme focused on user reading experience</p>
+<p align="center">WordPress themes that focus on reading experience</p>
 
 ## 🚀 Quick start
 
