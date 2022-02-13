@@ -24,7 +24,7 @@
     <a href="https://github.com/seatonjiang/kratos/issues">功能需求</a>
 </p>
 
-<p align="center">专注于阅读体验的 WordPress 主题</p>
+<p align="center">专注阅读体验的 WordPress 主题</p>
 
 ## 🚀 使用说明
 
