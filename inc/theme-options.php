@@ -640,6 +640,13 @@ CSF::createSection($prefix, array(
             'default' => true,
         ),
         array(
+            'id' => 'g_image_filter',
+            'type' => 'switcher',
+            'title' => __('按类型筛选媒体库功能', 'kratos'),
+            'subtitle' => __('启用/禁用按类型筛选媒体库功能功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
             'id' => 'g_article_widgets',
             'type' => 'image_select',
             'title' => __('页面布局', 'kratos'),
