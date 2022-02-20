@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.28
+ * @version 2022.02.20
  */
 
 // CDN 资源地址
@@ -73,6 +73,16 @@ function theme_autoload()
                 wp_add_inline_style('kratos', $admin_bar_css);
             }
         }
+        wp_add_inline_style('kratos', "
+        @media screen and (min-width: 992px) {
+            .k-nav .navbar-brand h1 {
+                color: ". kratos_option('g_nav', '#ffffff') .";
+            }
+            .k-nav .navbar-nav > li.nav-item > a {
+                color: ". kratos_option('g_nav', '#ffffff') .";
+            }
+        }
+        ");
         if (kratos_option('g_sticky', false)) {
             $sticky_css = ".sticky-sidebar{position: sticky;top: 25px;height:100%}";
             wp_add_inline_style('kratos', $sticky_css);

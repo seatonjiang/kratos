@@ -243,6 +243,13 @@ CSF::createSection($prefix, array(
             'subtitle' => __('全站页面的背景颜色', 'kratos'),
         ),
         array(
+            'id' => 'g_nav',
+            'type' => 'color',
+            'default' => '#ffffff',
+            'title' =>  __('导航栏文字颜色', 'kratos'),
+            'subtitle' => __('导航栏中站点标题以及一级导航的颜色', 'kratos'),
+        ),
+        array(
             'id' => 'g_chrome',
             'type' => 'color',
             'default' => '#282a2c',
