@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.26
+ * @version 2022.02.20
  */
 
 defined('ABSPATH') || exit;
@@ -596,6 +596,34 @@ CSF::createSection($prefix, array(
             'title' => __('网易云音乐', 'kratos'),
             'subtitle' => __('启用/禁用网易云音乐自动播放功能', 'kratos'),
             'default' => false,
+        ),
+        array(
+            'id' => 'g_post_comments',
+            'type' => 'switcher',
+            'title' => __('评论数量展示', 'kratos'),
+            'subtitle' => __('启用/禁用首页及文章页面展示阅读数量的功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
+            'id' => 'g_post_views',
+            'type' => 'switcher',
+            'title' => __('热度数量展示', 'kratos'),
+            'subtitle' => __('启用/禁用首页及文章页面展示热度数量的功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
+            'id' => 'g_post_loves',
+            'type' => 'switcher',
+            'title' => __('点赞数量展示', 'kratos'),
+            'subtitle' => __('启用/禁用首页及文章页面展示点赞数量的功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
+            'id' => 'g_post_author',
+            'type' => 'switcher',
+            'title' => __('作者名称展示', 'kratos'),
+            'subtitle' => __('启用/禁用首页展示作者名称的功能', 'kratos'),
+            'default' => true,
         ),
         array(
             'id' => 'g_post_revision',

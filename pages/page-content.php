@@ -4,7 +4,7 @@
  * 文章列表
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.26
+ * @version 2022.02.20
  */
 ?>
 <div class="article-panel">
@@ -43,19 +43,18 @@
     <div class="a-meta">
         <span class="float-left d-none d-md-block">
             <span class="mr-2"><i class="kicon i-calendar"></i><?php echo get_the_date(); ?></span>
-            <span class="mr-2"><i class="kicon i-comments"></i><?php comments_number('0', '1', '%');
-                                                                _e('条评论', 'kratos'); ?></span>
+            <?php if (kratos_option('g_post_comments', true)) { ?>
+                <span class="mr-2"><i class="kicon i-comments"></i><?php comments_number('0', '1', '%'); _e('条评论', 'kratos'); ?></span>
+            <?php } ?>
         </span>
         <span class="float-left d-block">
-            <span class="mr-2"><i class="kicon i-hot"></i><?php echo get_post_views();
-                                                            _e('点热度', 'kratos'); ?></span>
-            <span class="mr-2"><i class="kicon i-good"></i><?php if (get_post_meta($post->ID, 'love', true)) {
-                                                                echo get_post_meta($post->ID, 'love', true);
-                                                            } else {
-                                                                echo '0';
-                                                            }
-                                                            _e('人点赞', 'kratos'); ?></span>
-            <span class="mr-2"><i class="kicon i-author"></i><?php echo get_the_author_meta('display_name'); ?></span>
+            <?php if (kratos_option('g_post_views', true)) { ?>
+                <span class="mr-2"><i class="kicon i-hot"></i><?php echo get_post_views(); _e('点热度', 'kratos'); ?></span>
+            <?php } if (kratos_option('g_post_loves', true)) { ?>
+                <span class="mr-2"><i class="kicon i-good"></i><?php if (get_post_meta($post->ID, 'love', true)) { echo get_post_meta($post->ID, 'love', true); } else { echo '0'; } _e('人点赞', 'kratos'); ?></span>
+            <?php } if (kratos_option('g_post_author', true)) { ?>
+                <span class="mr-2"><i class="kicon i-author"></i><?php echo get_the_author_meta('display_name'); ?></span>
+            <?php } ?>
         </span>
         <span class="float-right">
             <a href="<?php the_permalink(); ?>"><?php _e('阅读全文', 'kratos'); ?><i class="kicon i-rightbutton"></i></a>
