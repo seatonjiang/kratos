@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: kratos\n"
 "POT-Creation-Date: 2022-02-20 23:25+0800\n"
-"PO-Revision-Date: 2022-02-21 06:30\n"
+"PO-Revision-Date: 2022-02-21 07:28\n"
 "Last-Translator: Seaton Jiang <hi@seatonjiang.com>\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -350,7 +350,7 @@ msgstr "Navbar font color"
 
 #: inc/theme-options.php:250
 msgid "导航栏中站点标题以及一级导航的颜色"
-msgstr ""
+msgstr "Navbar's color for site title and primary navigation"
 
 #: inc/theme-options.php:256
 msgid "Chrome 导航栏颜色"
@@ -660,35 +660,35 @@ msgstr "Enable/Disable autoplay on Netease music"
 
 #: inc/theme-options.php:610
 msgid "评论数量展示"
-msgstr ""
+msgstr "Display amount of comments"
 
 #: inc/theme-options.php:611
 msgid "启用/禁用首页及文章页面展示阅读数量的功能"
-msgstr ""
+msgstr "Enable/Disable the display of amount of reading at the main page or the article page"
 
 #: inc/theme-options.php:617
 msgid "热度数量展示"
-msgstr ""
+msgstr "Display amount of hotness"
 
 #: inc/theme-options.php:618
 msgid "启用/禁用首页及文章页面展示热度数量的功能"
-msgstr ""
+msgstr "Enable/Disable the display of amount of hotness at the main page or the article page"
 
 #: inc/theme-options.php:624
 msgid "点赞数量展示"
-msgstr ""
+msgstr "Display amount of likes"
 
 #: inc/theme-options.php:625
 msgid "启用/禁用首页及文章页面展示点赞数量的功能"
-msgstr ""
+msgstr "Enable/Disable the display of amount of likes at the main page or the article page"
 
 #: inc/theme-options.php:631
 msgid "作者名称展示"
-msgstr ""
+msgstr "Display author name"
 
 #: inc/theme-options.php:632
 msgid "启用/禁用首页展示作者名称的功能"
-msgstr ""
+msgstr "Enable/Disable the display of author name in the main page"
 
 #: inc/theme-options.php:638
 msgid "附加功能"
@@ -700,11 +700,11 @@ msgstr "Enable/Disable autosave and version control of articles"
 
 #: inc/theme-options.php:645
 msgid "按类型筛选媒体库功能"
-msgstr ""
+msgstr "Filter media by type"
 
 #: inc/theme-options.php:646
 msgid "启用/禁用按类型筛选媒体库功能功能"
-msgstr ""
+msgstr "Enable/Disable filtrating media files by type"
 
 #: inc/theme-options.php:652
 msgid "页面布局"
