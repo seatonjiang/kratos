@@ -2148,12 +2148,27 @@ ol {
 }
 
 .k-main .sidebar .w-toc .item {
-	margin-left: 10px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin-left: 15px;
+	padding-left: 5px;
+	max-height: 380px;
+}
+
+.k-main .sidebar .w-toc .item::-webkit-scrollbar {
+	width: 4px;
+}
+
+.k-main .sidebar .w-toc .item::-webkit-scrollbar-track {
+	border: 0;
+}
+
+.k-main .sidebar .w-toc .item::-webkit-scrollbar-thumb {
+	background-color: #dddddd;
 }
 
 .k-main .sidebar .w-toc .item .ul-toc {
 	position: relative;
-	margin: 10px 0;
 	padding: 20px 10px 20px 0;
 	border-left: 1px solid #eee;
 }
