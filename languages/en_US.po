@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: kratos\n"
 "POT-Creation-Date: 2022-02-20 23:25+0800\n"
-"PO-Revision-Date: 2022-02-20 15:49\n"
+"PO-Revision-Date: 2022-02-21 06:30\n"
 "Last-Translator: Seaton Jiang <hi@seatonjiang.com>\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -346,7 +346,7 @@ msgstr "Site's pages background color"
 
 #: inc/theme-options.php:249
 msgid "导航栏文字颜色"
-msgstr ""
+msgstr "Navbar font color"
 
 #: inc/theme-options.php:250
 msgid "导航栏中站点标题以及一级导航的颜色"
