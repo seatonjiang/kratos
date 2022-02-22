@@ -1,7 +1,7 @@
 [English](README.md) | 简体中文
 
 <p align="center">
-    <img src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/about.png">
+    <img src="assets/img/options/about.png">
 </p>
 
 <p align="center">
@@ -24,7 +24,7 @@
     <a href="https://github.com/seatonjiang/kratos/issues">功能需求</a>
 </p>
 
-<p align="center">Kratos 是一款专注于用户阅读体验的响应式 WordPress 主题</p>
+<p align="center">专注阅读体验的 WordPress 主题</p>
 
 ## 🚀 使用说明
 
@@ -38,18 +38,10 @@
 
 5. 进入 `外观` > `主题` 页面，找到 Kratos 主题，然后点击 `启用` 即可。
 
-## 💬 讨论交流
-
-<p align="center">
-<img src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/discuss.png">
-</p>
-
-## 🧧 打赏捐赠
-
-<p align="center">
-<img src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/donate.png">
-</p>
-
 ## 🤝 参与共建
 
-我们欢迎所有的贡献，你可以将任何想法作为 pull requests 或 GitHub issues 提交，顺颂商祺 :)
+我们欢迎所有的贡献，你可以将任何想法作为 pull requests 或 issues 提交，顺颂商祺 :)
+
+## 📃 开源许可
+
+项目基于 GNU 通用公共许可证 v3.0 发布，详细说明请参阅 [LICENCE](https://github.com/seatonjiang/kratos/blob/main/LICENSE) 文件。

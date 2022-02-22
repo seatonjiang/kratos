@@ -1,7 +1,7 @@
 English | [简体中文](README.zh-CN.md)
 
 <p align="center">
-    <img src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/about.png">
+    <img src="assets/img/options/about.png">
 </p>
 
 <p align="center">
@@ -24,7 +24,7 @@ English | [简体中文](README.zh-CN.md)
     <a href="https://github.com/seatonjiang/kratos/issues">Request Feature</a>
 </p>
 
-<p align="center">A responsive WordPress theme focused on user reading experience</p>
+<p align="center">WordPress theme that focus on reading experience</p>
 
 ## 🚀 Quick start
 
@@ -40,4 +40,8 @@ English | [简体中文](README.zh-CN.md)
 
 ## 🤝 Contributing
 
-We welcome all contributions. You can submit any ideas as pull requests or as GitHub issues, have a good time! :)
+We welcome all contributions. You can submit any ideas as pull requests or as issues, have a good time! :)
+
+## 📃 License
+
+The project is released under the GNU General Public License v3.0, see the [LICENCE](https://github.com/seatonjiang/kratos/blob/main/LICENSE) file for details.

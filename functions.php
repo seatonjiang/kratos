@@ -4,10 +4,10 @@
  * 模板函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.28
+ * @version 2022.02.20
  */
 
-define('THEME_VERSION', '4.1.0');
+define('THEME_VERSION', '4.1.1');
 
 // 主题配置
 require get_template_directory() . '/inc/codestar-framework/autoload.php';

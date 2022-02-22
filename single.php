@@ -4,7 +4,7 @@
  * 文章内容
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.26
+ * @version 2022.02.20
  */
 
 get_header();
@@ -50,16 +50,13 @@ $col_array = array(
                             <h1 class="title"><?php the_title(); ?></h1>
                             <div class="meta">
                                 <span><?php echo get_the_date(); ?></span>
-                                <span><?php echo get_post_views();
-                                        _e('点热度', 'kratos'); ?></span>
-                                <span><?php if (get_post_meta($post->ID, 'love', true)) {
-                                            echo get_post_meta($post->ID, 'love', true);
-                                        } else {
-                                            echo '0';
-                                        }
-                                        _e('人点赞', 'kratos'); ?></span>
-                                <span><?php comments_number('0', '1', '%');
-                                        _e('条评论', 'kratos'); ?></span>
+                                <?php if (kratos_option('g_post_views', true)) { ?>
+                                    <span><?php echo get_post_views(); _e('点热度', 'kratos'); ?></span>
+                                <?php } if (kratos_option('g_post_loves', true)) { ?>
+                                    <span><?php if (get_post_meta($post->ID, 'love', true)) { echo get_post_meta($post->ID, 'love', true); } else { echo '0'; } _e('人点赞', 'kratos'); ?></span>
+                                <?php } if (kratos_option('g_post_comments', true)) { ?>
+                                    <span><?php comments_number('0', '1', '%'); _e('条评论', 'kratos'); ?></span>
+                                <?php } ?>
                                 <?php if (current_user_can('edit_posts')) {
                                     echo '<span>';
                                     edit_post_link(__('编辑文章', 'kratos'));

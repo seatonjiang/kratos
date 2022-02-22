@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.26
+ * @version 2022.02.20
  */
 
 defined('ABSPATH') || exit;
@@ -241,6 +241,13 @@ CSF::createSection($prefix, array(
             'default' => '#f5f5f5',
             'title' =>  __('全站背景颜色', 'kratos'),
             'subtitle' => __('全站页面的背景颜色', 'kratos'),
+        ),
+        array(
+            'id' => 'g_nav',
+            'type' => 'color',
+            'default' => '#ffffff',
+            'title' =>  __('导航栏文字颜色', 'kratos'),
+            'subtitle' => __('导航栏中站点标题以及一级导航的颜色', 'kratos'),
         ),
         array(
             'id' => 'g_chrome',
@@ -598,10 +605,45 @@ CSF::createSection($prefix, array(
             'default' => false,
         ),
         array(
+            'id' => 'g_post_comments',
+            'type' => 'switcher',
+            'title' => __('评论数量展示', 'kratos'),
+            'subtitle' => __('启用/禁用首页及文章页面展示阅读数量的功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
+            'id' => 'g_post_views',
+            'type' => 'switcher',
+            'title' => __('热度数量展示', 'kratos'),
+            'subtitle' => __('启用/禁用首页及文章页面展示热度数量的功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
+            'id' => 'g_post_loves',
+            'type' => 'switcher',
+            'title' => __('点赞数量展示', 'kratos'),
+            'subtitle' => __('启用/禁用首页及文章页面展示点赞数量的功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
+            'id' => 'g_post_author',
+            'type' => 'switcher',
+            'title' => __('作者名称展示', 'kratos'),
+            'subtitle' => __('启用/禁用首页展示作者名称的功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
             'id' => 'g_post_revision',
             'type' => 'switcher',
             'title' => __('附加功能', 'kratos'),
             'subtitle' => __('启用/禁用文章自动保存、修订版本功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
+            'id' => 'g_image_filter',
+            'type' => 'switcher',
+            'title' => __('按类型筛选媒体库功能', 'kratos'),
+            'subtitle' => __('启用/禁用按类型筛选媒体库功能功能', 'kratos'),
             'default' => true,
         ),
         array(
@@ -1138,7 +1180,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/discuss.png"></div>',
+            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.seatonjiang.com/kratos/4.1.1/assets/img/options/discuss.png"></div>',
         ),
         array(
             'type' => 'subheading',
@@ -1146,7 +1188,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.seatonjiang.com/kratos/4.1.0/assets/img/options/donate.png"></div>',
+            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.seatonjiang.com/kratos/4.1.1/assets/img/options/donate.png"></div>',
         ),
     ),
 ));
