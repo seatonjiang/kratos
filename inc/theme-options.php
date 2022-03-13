@@ -1180,7 +1180,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.seatonjiang.com/kratos/4.1.1/assets/img/options/discuss.png"></div>',
+            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="' . get_template_directory_uri() . '/assets/img/options/discuss.png"></div>',
         ),
         array(
             'type' => 'subheading',
@@ -1188,7 +1188,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="https://cdn.seatonjiang.com/kratos/4.1.1/assets/img/options/donate.png"></div>',
+            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="' . get_template_directory_uri() . '/assets/img/options/donate.png"></div>',
         ),
     ),
 ));
