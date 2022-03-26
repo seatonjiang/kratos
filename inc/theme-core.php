@@ -84,8 +84,11 @@ function theme_autoload()
         }
         ");
         if (kratos_option('g_sticky', false)) {
-            $sticky_css = ".sticky-sidebar{position: sticky;top: 25px;height:100%}";
-            wp_add_inline_style('kratos', $sticky_css);
+            wp_add_inline_style('kratos', '.sticky-sidebar {
+                position: sticky;
+                top: 8px;
+                height: 100%;
+            }');
         }
         // js
         wp_deregister_script('jquery');
