@@ -83,7 +83,7 @@ function comment_notify($comment_id)
     $comment = get_comment($comment_id);
     $parent_id = $comment->comment_parent ? $comment->comment_parent : '';
     $spam_confirmed = $comment->comment_approved;
-    if (($parent_id != '') && ($spam_confirmed != 'spam')) {
+    if (($parent_id != '') && ($spam_confirmed == '1')) {
         $wp_email = kratos_option('m_username');
         $to = trim(get_comment($parent_id)->comment_author_email);
         $subject = __('[通知]您的留言有了新的回复', 'kratos');
@@ -129,3 +129,4 @@ function comment_notify($comment_id)
     }
 }
 add_action('comment_post', 'comment_notify');
+add_action('comment_unapproved_to_approved', 'comment_notify');
