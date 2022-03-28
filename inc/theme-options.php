@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.02.20
+ * @version 2022.03.28
  */
 
 defined('ABSPATH') || exit;
@@ -50,7 +50,7 @@ CSF::createOptions($prefix, array(
     'admin_bar_menu_icon' => 'dashicons-admin-generic',
     'framework_title' => '主题设置<small style="margin-left:10px">Kratos v' . THEME_VERSION . '</small>',
     'theme' => 'light',
-    'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/seatonjiang/kratos">Kratos</a> 主题开始创作，欢迎加入交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=jHy4nvMcnurowkL602BTDZzverAqfTpI&jump_from=webapi">734508</a>',
+    'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/seatonjiang/kratos">Kratos</a> 主题开始创作，欢迎加入交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=IG7qPkDLU2cyyp4xZiNfvr3V_4_UADkh&jump_from=webapi">51880737</a>',
 ));
 
 CSF::createSection($prefix, array(
