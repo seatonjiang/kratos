@@ -314,6 +314,7 @@ class widget_about extends WP_Widget
         if (kratos_option('g_login', true)) {
             echo '</a>';
         }
+        $introduce = str_replace("\n", '<br>', $introduce);
         echo '</div><div class="textwidget text-center"><p class="username">' . $username . '</p><p class="about">' . $introduce . '</p></div>';
         echo '</div>';
     }
