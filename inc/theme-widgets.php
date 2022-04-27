@@ -298,7 +298,7 @@ class widget_about extends WP_Widget
     {
         $introduce = !empty(get_the_author_meta('description', '1')) ? get_the_author_meta('description', '1') : __('这个人很懒，什么都没留下', 'kratos');
         $username = get_the_author_meta('display_name', '1');
-        $avatar = get_avatar_url('1');
+        $avatar = get_avatar_url('1', ['size' => '300']);
         $background = !empty($instance['background']) ? $instance['background'] : ASSET_PATH . '/assets/img/about-background.png';
 
         echo '<div class="widget w-about">';
@@ -314,6 +314,7 @@ class widget_about extends WP_Widget
         if (kratos_option('g_login', true)) {
             echo '</a>';
         }
+        $introduce = str_replace("\n", '<br>', $introduce);
         echo '</div><div class="textwidget text-center"><p class="username">' . $username . '</p><p class="about">' . $introduce . '</p></div>';
         echo '</div>';
     }
