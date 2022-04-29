@@ -4,7 +4,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.26
+ * @version 2022.04.29
  */
 
 // 添加小工具
@@ -77,11 +77,12 @@ add_filter('get_archives_link', 'archive_count_span');
 function most_comm_posts($days = 30, $nums = 6)
 {
     global $wpdb;
-    date_default_timezone_set("PRC");
-    $today = date("Y-m-d H:i:s");
-    $daysago = date("Y-m-d H:i:s", strtotime($today) - ($days * 24 * 60 * 60));
+
+    $today = wp_date("Y-m-d H:i:s");
+    $daysago = wp_date("Y-m-d H:i:s", strtotime($today) - ($days * 24 * 60 * 60));
     $result = $wpdb->get_results($wpdb->prepare("SELECT comment_count, ID, post_title, post_date FROM $wpdb->posts WHERE post_date BETWEEN %s AND %s and post_type = 'post' AND post_status = 'publish' ORDER BY comment_count DESC LIMIT 0, %d", $daysago, $today, $nums));
     $output = '';
+
     if (!empty($result)) {
         foreach ($result as $topten) {
             $postid = $topten->ID;
@@ -150,7 +151,7 @@ function latest_comments($list_number = 5, $cut_length = 50)
             <div class="meta clearfix">
                 <div class="avatar float-left">' . get_avatar($comment, 60) . '</div>
                 <div class="profile d-block">
-                    <span class="date">' . $nickname . ' ' . __('发布于 ', 'kratos') . timeago($comment->comment_date) . '（' . date(__('m月d日', 'kratos'), strtotime($comment->comment_date)) . '）</span>
+                    <span class="date">' . $nickname . ' ' . __('发布于 ', 'kratos') . timeago($comment->comment_date) . '（' . wp_date(__('m月d日', 'kratos'), strtotime($comment->comment_date)) . '）</span>
                     <span class="message d-block">' . convert_smilies(esc_attr(string_cut(strip_tags($comment->comment_content), $cut_length))) . '</span>
                 </div>
             </div>

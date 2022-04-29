@@ -4,7 +4,7 @@
  * 主题页脚
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.26
+ * @version 2022.04.29
  */
 ?>
 <div class="k-footer">
@@ -44,7 +44,7 @@
                     ?>
                 </p>
                 <?php
-                echo '<p>' . kratos_option('s_copyright', 'COPYRIGHT © ' . date('Y') . ' ' . get_bloginfo('name') . '. ALL RIGHTS RESERVED.') . '</p>';
+                echo '<p>' . kratos_option('s_copyright', 'COPYRIGHT © ' . wp_date('Y') . ' ' . get_bloginfo('name') . '. ALL RIGHTS RESERVED.') . '</p>';
                 echo '<p>Theme <a href="https://github.com/seatonjiang/kratos" target="_blank" rel="nofollow">Kratos</a> Made By <a href="https://seatonjiang.com" target="_blank" rel="nofollow">Seaton Jiang</a></p>';
                 if (kratos_option('s_icp')) {
                     echo '<p><a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">' . kratos_option('s_icp') . '</a></p>';

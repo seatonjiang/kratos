@@ -4,7 +4,7 @@
  * SMTP 配置
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.26
+ * @version 2022.04.29
  */
 
 if (kratos_option('m_smtp', false)) {
@@ -66,7 +66,7 @@ function comment_approved($comment)
                     <div style="font-size:13px;color:#a0a0a0;padding-top:10px">' . __('该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。', 'kratos') . '</div>
                     <div class="qmSysSign" style="padding-top:20px;font-size:12px;color:#a0a0a0;">
                         <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;">' . htmlspecialchars_decode(get_option('blogname'), ENT_QUOTES) . '</p>
-                        <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;"><span style="border-bottom:1px dashed #ccc;" t="5" times="">' . date("Y年m月d日", time()) . '</span></p>
+                        <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;"><span style="border-bottom:1px dashed #ccc;" t="5" times="">' . wp_date("Y年m月d日", time()) . '</span></p>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@ function comment_notify($comment_id)
                     <div style="font-size:13px;color:#a0a0a0;padding-top:10px">' . __('该邮件由系统自动发出，如果不是您本人操作，请忽略此邮件。', 'kratos') . '</div>
                     <div class="qmSysSign" style="padding-top:20px;font-size:12px;color:#a0a0a0;">
                         <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;">' . htmlspecialchars_decode(get_option('blogname'), ENT_QUOTES) . '</p>
-                        <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;"><span style="border-bottom:1px dashed #ccc;" t="5" times="">' . date("Y年m月d日", time()) . '</span></p>
+                        <p style="color:#a0a0a0;line-height:18px;font-size:12px;margin:5px 0;"><span style="border-bottom:1px dashed #ccc;" t="5" times="">' . wp_date("Y年m月d日", time()) . '</span></p>
                     </div>
                 </div>
             </div>

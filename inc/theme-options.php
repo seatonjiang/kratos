@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.03.28
+ * @version 2022.04.29
  */
 
 defined('ABSPATH') || exit;
@@ -1033,7 +1033,7 @@ CSF::createSection($prefix, array(
             'id' => 's_copyright',
             'type' => 'textarea',
             'title' => __('版权信息', 'kratos'),
-            'default' => 'COPYRIGHT © ' . date('Y') . ' ' . get_bloginfo('name') . '. ALL RIGHTS RESERVED.',
+            'default' => 'COPYRIGHT © ' . wp_date('Y') . ' ' . get_bloginfo('name') . '. ALL RIGHTS RESERVED.',
         ),
     ),
 ));
