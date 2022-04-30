@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.02.20
+ * @version 2022.04.30
  */
 
 // CDN 资源地址
@@ -192,15 +192,25 @@ add_filter('style_loader_src', function ($href) {
     return false;
 });
 
-// 替换国内 Gravatar 源
-function get_https_avatar($avatar)
-{
-    $avatar = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com", "3.gravatar.com", "secure.gravatar.com"), kratos_option('g_gravatar', 'sdn.geekzu.org') ?: "secure.gravatar.com", $avatar);
-    $avatar = str_replace("http://", "https://", $avatar);
-    return $avatar;
+// Gravatar 加速服务
+if (kratos_option('g_replace_gravatar_url_fieldset')['g_replace_gravatar_url'] ?? true) {
+    function replace_gravatar_url($avatar)
+    {
+        $gravatar_server_list = array(
+            'geekzu' => 'sdn.geekzu.org',
+            'loli' => 'gravatar.loli.net',
+            'other' => kratos_option('g_replace_gravatar_url_fieldset')['g_custom_gravatar_server'] ?? null,
+        );
+        $gravatar_server = $gravatar_server_list[kratos_option('g_replace_gravatar_url_fieldset')['g_select_gravatar_server']] ?: 'secure.gravatar.com';
+        $avatar = str_replace(array('www.gravatar.com', '0.gravatar.com', '1.gravatar.com', '2.gravatar.com', '3.gravatar.com', 'secure.gravatar.com'), $gravatar_server, $avatar);
+        $avatar = str_replace('http://', 'https://', $avatar);
+
+        return $avatar;
+    }
+
+    add_filter('get_avatar', 'replace_gravatar_url');
+    add_filter('get_avatar_url', 'replace_gravatar_url');
 }
-add_filter('get_avatar', 'get_https_avatar');
-add_filter('get_avatar_url', 'get_https_avatar');
 
 // 主题更新检测
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(

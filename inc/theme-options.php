@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.04.29
+ * @version 2022.04.30
  */
 
 defined('ABSPATH') || exit;
@@ -156,11 +156,46 @@ CSF::createSection($prefix, array(
             'default' => '260',
         ),
         array(
-            'id' => 'g_gravatar',
-            'type' => 'text',
-            'title' => __('Gravatar 加速', 'kratos'),
-            'subtitle' => __('自定义 Gravatar 头像加速地址', 'kratos'),
-            'default' => 'sdn.geekzu.org',
+            'id' => 'g_replace_gravatar_url_fieldset',
+            'type' => 'fieldset',
+            'fields' => array(
+                array(
+                    'type' => 'subheading',
+                    'content' => __('Gravatar 加速服务', 'kratos'),
+                ),
+                array(
+                    'id' => 'g_replace_gravatar_url',
+                    'type' => 'switcher',
+                    'title' => __('功能开关', 'kratos'),
+                    'subtitle' => __('开启/关闭 Gravatar 加速服务功能', 'kratos'),
+                ),
+                array(
+                    'id' => 'g_select_gravatar_server',
+                    'type' => 'select',
+                    'title' => __('Gravatar 加速服务地址', 'kratos'),
+                    'subtitle' => __('请选择 Gravatar 加速服务地址', 'kratos'),
+                    'options' => array(
+                        'loli' => __('Loli 加速服务', 'kratos'),
+                        'geekzu' => __('极客族加速服务', 'kratos'),
+                        'other' => __('自定义加速服务', 'kratos'),
+                    ),
+                    'desc' => __('国内用户推荐「极客族加速服务」，海外用户推荐「Loli 加速服务」。', 'kratos'),
+                    'dependency' => array('g_replace_gravatar_url', '==', 'true'),
+                ),
+                array(
+                    'id' => 'g_custom_gravatar_server',
+                    'type' => 'text',
+                    'title' => __('自定义 Gravatar 加速服务地址', 'kratos'),
+                    'subtitle' => __('请输入 Gravatar 加速服务地址', 'kratos'),
+                    'desc' => __('直接输入网址即可，不需要协议头和最后的斜杠。', 'kratos'),
+                    'placeholder' => 'secure.gravatar.com',
+                    'dependency' => array('g_replace_gravatar_url|g_select_gravatar_server', '==|==', 'true|other'),
+                ),
+            ),
+            'default' => array(
+                'g_replace_gravatar_url' => 1,
+                'g_select_gravatar_server' => 'geekzu',
+            )
         ),
         array(
             'id' => 'g_renameother_fieldset',
