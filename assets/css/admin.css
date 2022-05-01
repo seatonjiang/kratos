@@ -1,0 +1,11 @@
+.editor-styles-wrapper .wp-site-blocks,
+.editor-styles-wrapper>.is-root-container,
+.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper,
+.editor-styles-wrapper .wp-block-group.alignfull,
+.editor-styles-wrapper .wp-block-group.has-background,
+.editor-styles-wrapper .wp-block-cover.alignfull,
+.editor-styles-wrapper .is-root-container .wp-block[data-align="full"]>.wp-block-group,
+.editor-styles-wrapper .is-root-container .wp-block[data-align="full"]>.wp-block-cover {
+    padding-left: max(1.25rem, 5vw);
+    padding-right: max(1.25rem, 5vw);
+}

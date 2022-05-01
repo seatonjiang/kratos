@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.04.30
+ * @version 2022.05.01
  */
 
 // CDN 资源地址
@@ -76,10 +76,10 @@ function theme_autoload()
         wp_add_inline_style('kratos', "
         @media screen and (min-width: 992px) {
             .k-nav .navbar-brand h1 {
-                color: ". kratos_option('g_nav', '#ffffff') .";
+                color: " . kratos_option('g_nav', '#ffffff') . ";
             }
             .k-nav .navbar-nav > li.nav-item > a {
-                color: ". kratos_option('g_nav', '#ffffff') .";
+                color: " . kratos_option('g_nav', '#ffffff') . ";
             }
         }
         ");
@@ -113,6 +113,14 @@ function theme_autoload()
     }
 }
 add_action('wp_enqueue_scripts', 'theme_autoload');
+
+// 后台资源加载
+function kratos_admin_enqueue()
+{
+    wp_enqueue_style('admin-custom-css', get_template_directory_uri() . '/assets/css/admin.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/admin.css'));
+}
+
+add_action('admin_enqueue_scripts', 'kratos_admin_enqueue', 20);
 
 // 前台管理员导航
 if (!kratos_option('g_adminbar', true)) {

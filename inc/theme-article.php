@@ -4,7 +4,7 @@
  * 文章相关函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.02.20
+ * @version 2022.05.01
  */
 
 // 文章链接添加 target 和 rel
@@ -455,9 +455,10 @@ function post_seo_callback($post)
 }
 
 if (kratos_option('g_image_filter', true)) {
-    add_action( 'admin_footer-post-new.php', 'fanly_mediapanel_lock_uploaded' );
-    add_action( 'admin_footer-post.php', 'fanly_mediapanel_lock_uploaded' );
-    function fanly_mediapanel_lock_uploaded() {
+    add_action('admin_footer-post-new.php', 'fanly_mediapanel_lock_uploaded');
+    add_action('admin_footer-post.php', 'fanly_mediapanel_lock_uploaded');
+    function fanly_mediapanel_lock_uploaded()
+    {
         echo '<script type="text/javascript">var $i=0;jQuery(document).on("DOMNodeInserted", function(){if(jQuery("#media-attachment-filters").length>0&&$i==0){jQuery(\'select.attachment-filters [value="uploaded"]\').attr(\'selected\',true).parent().trigger(\'change\');$i++;}});</script>';
     }
 }
