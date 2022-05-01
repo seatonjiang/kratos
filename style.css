@@ -2,7 +2,7 @@
 /*
 Theme Name: Kratos
 Text Domain: kratos
-Version: 4.1.2
+Version: 4.1.3
 Requires PHP: 7.4
 Description: 主题提供了多种针对自媒体博客需求的侧栏工具，删繁就简专注于用户的阅读体验，优化的邮件中心为你的网站留存加分添彩。
 Tags: 博客, 双栏, 响应式, 自定义背景, 自定义颜色, 自定义图标, 自定义菜单, 特色图像, 收录优化, 邮件中心, 主题选项, 小工具, 文章置顶, 无障碍友好
@@ -77,13 +77,13 @@ ol {
 	padding-left: 16px;
 }
 
-ol > li {
+ol>li {
 	margin-bottom: 6px;
 	padding-left: 2px;
 	line-height: 22px;
 }
 
-ul > li {
+ul>li {
 	margin-bottom: 6px;
 	padding-left: 2px;
 	line-height: 22px;
@@ -115,7 +115,7 @@ button:focus {
 .btn-outline-primary:focus,
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
-.show > .btn-outline-primary.dropdown-toggle:focus,
+.show>.btn-outline-primary.dropdown-toggle:focus,
 .form-control:focus {
 	box-shadow: none;
 }
@@ -251,7 +251,7 @@ button:focus {
 	list-style: none;
 }
 
-.k-nav .navbar-nav > li.nav-item > a {
+.k-nav .navbar-nav>li.nav-item>a {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 400;
@@ -287,10 +287,10 @@ button:focus {
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link {
+.navbar-light .navbar-nav .show>.nav-link {
 	color: #ffffff;
 }
 
@@ -350,17 +350,17 @@ button:focus {
 	}
 
 	.k-nav .navbar-brand:focus,
-    .k-nav .navbar-brand:hover {
+	.k-nav .navbar-brand:hover {
 		color: rgba(255, 255, 255, 0.8);
 	}
 
-	.k-nav .navbar-nav > li.nav-item > a {
+	.k-nav .navbar-nav>li.nav-item>a {
 		padding: 10px;
 		color: #fff;
 	}
 
-	.k-nav .navbar-nav > li.nav-item > a:focus,
-    .k-nav .navbar-nav > li.nav-item > a:hover {
+	.k-nav .navbar-nav>li.nav-item>a:focus,
+	.k-nav .navbar-nav>li.nav-item>a:hover {
 		color: rgba(255, 255, 255, 0.8);
 	}
 
@@ -379,16 +379,16 @@ button:focus {
 	}
 
 	.k-nav.is-fixed .navbar-brand:focus,
-    .k-nav.is-fixed .navbar-brand:hover {
+	.k-nav.is-fixed .navbar-brand:hover {
 		color: #007bff;
 	}
 
-	.k-nav.is-fixed .navbar-nav > li.nav-item > a {
+	.k-nav.is-fixed .navbar-nav>li.nav-item>a {
 		color: #212529;
 	}
 
-	.k-nav.is-fixed .navbar-nav > li.nav-item > a:focus,
-    .k-nav.is-fixed .navbar-nav > li.nav-item > a:hover {
+	.k-nav.is-fixed .navbar-nav>li.nav-item>a:focus,
+	.k-nav.is-fixed .navbar-nav>li.nav-item>a:hover {
 		color: #007bff;
 	}
 
@@ -402,15 +402,16 @@ button:focus {
 }
 
 @media screen and (max-width: 992px) {
+
 	.navbar-light .navbar-nav .dropdown-menu,
-    .navbar-light .navbar-nav .dropdown-item.active,
-    .navbar-light .navbar-nav .dropdown-item:active,
-    .navbar-light .navbar-nav .dropdown-item:focus,
-    .navbar-light .navbar-nav .dropdown-item:hover {
+	.navbar-light .navbar-nav .dropdown-item.active,
+	.navbar-light .navbar-nav .dropdown-item:active,
+	.navbar-light .navbar-nav .dropdown-item:focus,
+	.navbar-light .navbar-nav .dropdown-item:hover {
 		background-color: transparent;
 	}
 
-	.k-nav .navbar-nav > li.nav-item > a {
+	.k-nav .navbar-nav>li.nav-item>a {
 		font-size: 16px;
 	}
 
@@ -441,7 +442,7 @@ button:focus {
 		color: rgba(255, 255, 255, 0.8);
 	}
 
-	.k-nav .navbar-nav > li.nav-item > a {
+	.k-nav .navbar-nav>li.nav-item>a {
 		font-size: 14px;
 	}
 }
@@ -540,7 +541,7 @@ button:focus {
 5. 分页按钮
 --------------------------------------------------------------*/
 
-.k-main .board .paginations > * {
+.k-main .board .paginations>* {
 	display: inline-block;
 }
 
@@ -766,20 +767,20 @@ ol {
 	cursor: default;
 }
 
-.k-main .board .article-panel .a-meta span > i {
+.k-main .board .article-panel .a-meta span>i {
 	margin-right: 3px;
 }
 
-.k-main .board .article-panel .a-meta span > a {
+.k-main .board .article-panel .a-meta span>a {
 	color: #333;
 }
 
-.k-main .board .article-panel .a-meta span > a:hover {
+.k-main .board .article-panel .a-meta span>a:hover {
 	color: #0097ee;
 	text-decoration: none;
 }
 
-.k-main .board .article-panel .a-meta span > a > i {
+.k-main .board .article-panel .a-meta span>a>i {
 	margin-left: 3px;
 }
 
@@ -880,11 +881,11 @@ ol {
 	border-bottom: 1px solid #f7f7f7;
 }
 
-.k-main .details .article > :first-child {
+.k-main .details .article> :first-child {
 	margin-top: 0;
 }
 
-.k-main .details .article > :last-child {
+.k-main .details .article> :last-child {
 	margin-bottom: 0;
 }
 
@@ -901,11 +902,11 @@ ol {
 	list-style: none;
 }
 
-.breadcrumb-item + .breadcrumb-item {
+.breadcrumb-item+.breadcrumb-item {
 	padding-left: 0.3rem;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
 	padding-right: 0.2rem;
 }
 
@@ -933,7 +934,7 @@ ol {
 	color: inherit;
 }
 
-.k-main .details .article .header .meta > span:not(:last-child):after {
+.k-main .details .article .header .meta>span:not(:last-child):after {
 	margin-right: 5px;
 	margin-left: 5px;
 	color: #71777c;
@@ -1130,8 +1131,8 @@ ol {
 	margin-right: 16px;
 }
 
-.k-main .details .article .content p > img,
-.k-main .details .article .content p a > img {
+.k-main .details .article .content p>img,
+.k-main .details .article .content p a>img {
 	display: block;
 }
 
@@ -1234,7 +1235,7 @@ ol {
 	height: 100%;
 }
 
-.k-main .details .article .content > :last-child {
+.k-main .details .article .content> :last-child {
 	margin-bottom: 0;
 }
 
@@ -1355,7 +1356,7 @@ ol {
 		margin-left: 5px;
 	}
 
-	.k-main .details .article .header .meta > span:not(:last-child):after {
+	.k-main .details .article .header .meta>span:not(:last-child):after {
 		content: none;
 	}
 
@@ -1489,7 +1490,7 @@ ol {
 	display: none;
 }
 
-.donate-box .choose-pay input:checked + label {
+.donate-box .choose-pay input:checked+label {
 	border-color: #0092ee;
 	color: #0092ee;
 }
@@ -1622,7 +1623,7 @@ ol {
 	list-style: none;
 }
 
-.k-main .details .comments .list > li {
+.k-main .details .comments .list>li {
 	border-bottom: 1px solid #f0f0f0;
 }
 
@@ -1844,7 +1845,7 @@ ol {
 	padding: 0;
 }
 
-.k-main .sidebar > div:last-child {
+.k-main .sidebar>div:last-child {
 	margin: 0;
 }
 
@@ -2256,12 +2257,12 @@ ol {
 	}
 
 	.k-main .sidebar .w-tags .item a,
-    .k-main .sidebar .widget_links ul li {
+	.k-main .sidebar .widget_links ul li {
 		width: 110px;
 	}
 
 	.k-main .sidebar .widget_categories ul li,
-    .k-main .sidebar .widget_archive ul li {
+	.k-main .sidebar .widget_archive ul li {
 		width: 110px;
 	}
 }
@@ -2426,7 +2427,7 @@ ol {
 	vertical-align: middle;
 }
 
-.k-footer .f-toolbox > div {
+.k-footer .f-toolbox>div {
 	position: fixed;
 	right: 20px;
 	z-index: 999;
