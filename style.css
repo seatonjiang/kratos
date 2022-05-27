@@ -966,15 +966,9 @@ ol {
 	line-height: 1.25;
 }
 
-.k-main .details .article h1 {
+.k-main .details .article .header h1 {
 	margin-bottom: 16px;
 	font-weight: 500;
-	line-height: 1.25;
-}
-
-.k-main .details .article h1 {
-	margin-bottom: 24px;
-	font-size: 34px;
 }
 
 .k-main .details .article .content h2:not(:first-child) {
@@ -1338,10 +1332,22 @@ ol {
 		padding: 0 16px 12px;
 	}
 
-	.k-main .details .article h1 {
-		margin-top: 14px;
+	.k-main .details .article .header h1 {
 		margin-bottom: 14px;
+		font-size: 24px;
+	}
+
+	.k-main .details .article .content h1 {
+		font-weight: 500;
 		font-size: 22px;
+	}
+
+	.k-main .details .article .content h2:not(:first-child) {
+		font-size: 20px;
+	}
+
+	.k-main .details .article .content h3:not(:first-child) {
+		font-size: 18px;
 	}
 
 	.k-main .details .article .header .meta {
