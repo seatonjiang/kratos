@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.05.01
+ * @version 2022.05.27
  */
 
 // CDN 资源地址
@@ -209,7 +209,7 @@ if (kratos_option('g_replace_gravatar_url_fieldset')['g_replace_gravatar_url'] ?
             'loli' => 'gravatar.loli.net',
             'other' => kratos_option('g_replace_gravatar_url_fieldset')['g_custom_gravatar_server'] ?? null,
         );
-        $gravatar_server = $gravatar_server_list[kratos_option('g_replace_gravatar_url_fieldset')['g_select_gravatar_server']] ?: 'secure.gravatar.com';
+        $gravatar_server = $gravatar_server_list[kratos_option('g_replace_gravatar_url_fieldset')['g_select_gravatar_server'] ?? 'geekzu'];
         $avatar = str_replace(array('www.gravatar.com', '0.gravatar.com', '1.gravatar.com', '2.gravatar.com', '3.gravatar.com', 'secure.gravatar.com'), $gravatar_server, $avatar);
         $avatar = str_replace('http://', 'https://', $avatar);
 
