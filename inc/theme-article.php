@@ -319,6 +319,10 @@ function comment_callbacks($comment, $args, $depth = 2)
 }
 
 // 文章评论表情
+if (empty(get_option('use_smilies'))) {
+    update_option('use_smilies', 1);
+}
+
 function custom_smilies_src($img_src, $img, $siteurl)
 {
     return ASSET_PATH . '/assets/img/smilies/' . $img;
@@ -329,12 +333,10 @@ function disable_emojis_tinymce($plugins)
 {
     return array_diff($plugins, array('wpemoji'));
 }
+
 function smilies_reset()
 {
-    global $wpsmiliestrans, $wp_smiliessearch, $wp_version;
-    if (!get_option('use_smilies') || $wp_version < 4.2) {
-        return;
-    }
+    global $wpsmiliestrans;
 
     $wpsmiliestrans = array(
         ':mrgreen:' => 'mrgreen.png',
@@ -364,7 +366,7 @@ smilies_reset();
 
 function smilies_custom_button()
 {
-    printf('<style>.smilies-wrap{background:#fff;border: 1px solid #ccc;box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.24);padding: 10px;position: absolute;top: 60px;width: 400px;display:none}.smilies-wrap img{height:24px;width:24px;cursor:pointer;margin-bottom:5px} .is-active.smilies-wrap{display:block}@media screen and (max-width: 782px){ #wp-content-media-buttons a { font-size: 14px; padding: 0 14px; }}</style><a id="insert-media-button" style="position:relative" class="button insert-smilies add_smilies" data-editor="content" href="javascript:;"><span class="dashicons dashicons-smiley" style="line-height: 26px;"></span>' . __('添加表情', 'kratos') . '</a><div class="smilies-wrap">' . get_wpsmiliestrans() . '</div><script>jQuery(document).ready(function(){jQuery(document).on("click", ".insert-smilies",function() { if(jQuery(".smilies-wrap").hasClass("is-active")){jQuery(".smilies-wrap").removeClass("is-active");}else{jQuery(".smilies-wrap").addClass("is-active");}});jQuery(document).on("click", ".add-smily",function() { send_to_editor(" " + jQuery(this).data("smilies") + " ");jQuery(".smilies-wrap").removeClass("is-active");return false;});});</script>');
+    printf('<style> .smilies-wrap { background: #fff !important; border: 1px solid #ccc !important; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.24) !important; padding: 10px !important; position: absolute !important; top: 60px !important; width: 400px !important; display: none !important; } .smilies-wrap img { height: 24px !important; width: 24px !important; cursor: pointer !important; margin-bottom: 5px !important; } .is-active.smilies-wrap { display: block !important; } @media screen and (max-width: 782px) { #wp-content-media-buttons a { font-size: 14px !important; padding: 0 14px !important; } } </style><a id="insert-media-button" style="position:relative" class="button insert-smilies add_smilies" data-editor="content" href="javascript:;"><span class="dashicons dashicons-smiley" style="line-height: 26px;"></span>' . __('添加表情', 'kratos') . '</a> <div class="smilies-wrap">' . get_wpsmiliestrans() . '</div> <script>jQuery(document).ready(function () { jQuery(document).on("click", ".insert-smilies", function () { if (jQuery(".smilies-wrap").hasClass("is-active")) { jQuery(".smilies-wrap").removeClass("is-active"); } else { jQuery(".smilies-wrap").addClass("is-active"); } }); jQuery(document).on("click", ".add-smily", function () { send_to_editor(" " + jQuery(this).data("smilies") + " "); jQuery(".smilies-wrap").removeClass("is-active"); return false; }); });</script>');
 }
 add_action('media_buttons', 'smilies_custom_button');
 
@@ -372,6 +374,7 @@ function get_wpsmiliestrans()
 {
     global $wpsmiliestrans;
     global $output;
+
     $wpsmilies = array_unique($wpsmiliestrans);
     foreach ($wpsmilies as $alt => $src_path) {
         $output .= '<a class="add-smily" data-smilies="' . $alt . '"><img class="wp-smiley" src="' . ASSET_PATH . '/assets/img/smilies/' . rtrim($src_path, "png") . 'png" /></a>';
