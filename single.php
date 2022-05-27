@@ -121,7 +121,7 @@ $col_array = array(
                             }
                             ?>
                         </div>
-                        <?php if (kratos_option('g_cc_fieldset')['g_cc_switch']) {
+                        <?php if (kratos_option('g_cc_fieldset')['g_cc_switch'] ?? false) {
                             $cc_array = array(
                                 'one' => __('知识共享署名 4.0 国际许可协议', 'kratos'),
                                 'two' => __('知识共享署名-非商业性使用 4.0 国际许可协议', 'kratos'),
