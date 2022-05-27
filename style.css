@@ -920,7 +920,7 @@ ol {
 }
 
 .k-main .details .article .header .title {
-	padding-bottom: 0;
+	padding: 24px 0 0;
 	border: none;
 }
 
@@ -955,13 +955,18 @@ ol {
 	content: '';
 }
 
-.k-main .details .article h1,
 .k-main .details .article .content h2,
 .k-main .details .article .content h3,
 .k-main .details .article .content h4,
 .k-main .details .article .content h5,
 .k-main .details .article .content h6 {
 	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+.k-main .details .article h1 {
 	margin-bottom: 16px;
 	font-weight: 500;
 	line-height: 1.25;

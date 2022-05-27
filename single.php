@@ -4,7 +4,7 @@
  * 文章内容
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.02.20
+ * @version 2022.05.27
  */
 
 get_header();
@@ -20,42 +20,53 @@ $col_array = array(
                 <?php if (have_posts()) : the_post();
                     update_post_caches($posts); ?>
                     <div class="article">
-                        <div class="breadcrumb-box">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    <a class="text-dark" href="<?php echo home_url(); ?>"> <?php _e('首页', 'kratos'); ?></a>
-                                </li>
-                                <?php
-                                $cat_id = get_the_category()[0]->term_id;
-                                $if_parent = TRUE;
-                                $breadcrumb = "";
-                                while ($if_parent == TRUE) {
-                                    $cat_object = get_category($cat_id);
-                                    $cat = $cat_object->term_id;
-                                    $categoryURL = get_category_link($cat);
-                                    $name = $cat_object->name;
-                                    $cat_id = $cat_object->parent;
-                                    $add_link = '<li class="breadcrumb-item"> <a class="text-dark" href="' . $categoryURL . '">' . $name . '</a></li>';
-                                    $breadcrumb = substr_replace($breadcrumb, $add_link, 0, 0);
-                                    if ($cat_id == 0) {
-                                        $if_parent = FALSE;
+                        <?php if (!is_attachment()) { ?>
+                            <div class="breadcrumb-box">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a class="text-dark" href="<?php echo home_url(); ?>"> <?php _e('首页', 'kratos'); ?></a>
+                                    </li>
+                                    <?php
+                                    $cat_id = get_the_category()[0]->term_id;
+                                    $if_parent = TRUE;
+                                    $breadcrumb = "";
+                                    while ($if_parent == TRUE) {
+                                        $cat_object = get_category($cat_id);
+                                        $cat = $cat_object->term_id;
+                                        $categoryURL = get_category_link($cat);
+                                        $name = $cat_object->name;
+                                        $cat_id = $cat_object->parent;
+                                        $add_link = '<li class="breadcrumb-item"> <a class="text-dark" href="' . $categoryURL . '">' . $name . '</a></li>';
+                                        $breadcrumb = substr_replace($breadcrumb, $add_link, 0, 0);
+                                        if ($cat_id == 0) {
+                                            $if_parent = FALSE;
+                                        }
                                     }
-                                }
-                                echo $breadcrumb;
-                                ?>
-                                <li class="breadcrumb-item active" aria-current="page"> <?php _e('正文', 'kratos'); ?></li>
-                            </ol>
-                        </div>
+                                    echo $breadcrumb;
+                                    ?>
+                                    <li class="breadcrumb-item active" aria-current="page"> <?php _e('正文', 'kratos'); ?></li>
+                                </ol>
+                            </div>
+                        <?php } ?>
                         <div class="header">
                             <h1 class="title"><?php the_title(); ?></h1>
                             <div class="meta">
                                 <span><?php echo get_the_date(); ?></span>
                                 <?php if (kratos_option('g_post_views', true)) { ?>
-                                    <span><?php echo get_post_views(); _e('点热度', 'kratos'); ?></span>
-                                <?php } if (kratos_option('g_post_loves', true)) { ?>
-                                    <span><?php if (get_post_meta($post->ID, 'love', true)) { echo get_post_meta($post->ID, 'love', true); } else { echo '0'; } _e('人点赞', 'kratos'); ?></span>
-                                <?php } if (kratos_option('g_post_comments', true)) { ?>
-                                    <span><?php comments_number('0', '1', '%'); _e('条评论', 'kratos'); ?></span>
+                                    <span><?php echo get_post_views();
+                                            _e('点热度', 'kratos'); ?></span>
+                                <?php }
+                                if (kratos_option('g_post_loves', true)) { ?>
+                                    <span><?php if (get_post_meta($post->ID, 'love', true)) {
+                                                echo get_post_meta($post->ID, 'love', true);
+                                            } else {
+                                                echo '0';
+                                            }
+                                            _e('人点赞', 'kratos'); ?></span>
+                                <?php }
+                                if (kratos_option('g_post_comments', true)) { ?>
+                                    <span><?php comments_number('0', '1', '%');
+                                            _e('条评论', 'kratos'); ?></span>
                                 <?php } ?>
                                 <?php if (current_user_can('edit_posts')) {
                                     echo '<span>';
