@@ -922,6 +922,7 @@ ol {
 .k-main .details .article .header .title {
 	padding: 24px 0 0;
 	border: none;
+	word-break: break-word;
 }
 
 .k-main .details .article .header .meta {
