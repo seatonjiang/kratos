@@ -4,7 +4,7 @@
  * 主题页脚
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.04.29
+ * @version 2022.05.27
  */
 ?>
 <div class="k-footer">
@@ -51,9 +51,6 @@
                 }
                 if (kratos_option('s_gov')) {
                     echo '<p><a href="' . kratos_option('s_gov_link') . '" target="_blank" rel="nofollow" ><i class="police-ico"></i>' . kratos_option('s_gov') . '</a></p>';
-                }
-                if (kratos_option('seo_statistical')) {
-                    echo kratos_option('seo_statistical');
                 }
                 ?>
             </div>

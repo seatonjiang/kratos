@@ -4,7 +4,7 @@
  * 主题页眉
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.26
+ * @version 2022.05.27
  */
 ?>
 <!DOCTYPE html>
@@ -20,10 +20,17 @@
     <meta name="description" itemprop="description" content="<?php echo description(); ?>">
     <meta name="theme-color" content="<?php echo kratos_option('g_chrome', '#282a2c'); ?>">
     <meta itemprop="image" content="<?php echo share_thumbnail_url(); ?>" />
-    <?php if (kratos_option('g_icon')) echo '<link rel="shortcut icon" href="' . kratos_option("g_icon") . '">' ?>
-    <?php wp_head(); ?>
-    <?php wp_print_scripts('jquery'); ?>
-    <?php mourning(); ?>
+    <?php
+    if (kratos_option('g_icon')) {
+        echo '<link rel="shortcut icon" href="' . kratos_option("g_icon") . '">';
+    }
+    wp_head();
+    wp_print_scripts('jquery');
+    mourning();
+    if (kratos_option('seo_statistical')) {
+        echo kratos_option('seo_statistical');
+    }
+    ?>
 </head>
 <?php flush(); ?>
 
