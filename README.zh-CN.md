@@ -6,7 +6,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/PHP-%3E7.4-777BB4?style=flat-square&logo=php&logoColor=#777BB4">
-    <img src="https://img.shields.io/badge/WordPress-v5.9%20tested-21759B?style=flat-square&logo=wordpress">
+    <img src="https://img.shields.io/badge/WordPress-v6.0%20tested-21759B?style=flat-square&logo=wordpress">
     <a href="https://github.com/seatonjiang/kratos/issues">
         <img src="https://img.shields.io/github/issues/seatonjiang/kratos?style=flat-square&color=blue">
     </a>

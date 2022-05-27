@@ -7,7 +7,7 @@
  * @version 2022.05.02
  */
 
-define('THEME_VERSION', '4.1.3');
+define('THEME_VERSION', '4.1.4');
 
 // 主题配置
 require get_template_directory() . '/inc/codestar-framework/autoload.php';

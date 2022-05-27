@@ -2,10 +2,10 @@
  * Kratos
  * Seaton Jiang <hi@seatonjiang.com>
  */
-;(function () {
+; (function () {
     'use strict'
 
-    var KRATOS_VERSION = '4.1.3'
+    var KRATOS_VERSION = '4.1.4'
 
     var navbarConfig = function () {
         $('#navbutton').on('click', function () {
@@ -92,7 +92,7 @@
     var postlikeConfig = function () {
         $.fn.postLike = function () {
             if ($(this).hasClass('done')) {
-                layer.msg(kratos.repeat, function () {})
+                layer.msg(kratos.repeat, function () { })
                 return false
             } else {
                 $(this).addClass('done')
@@ -104,7 +104,7 @@
                     um_id: id,
                     um_action: action
                 }
-                $.post(kratos.site + '/wp-admin/admin-ajax.php', ajax_data, function (data) {})
+                $.post(kratos.site + '/wp-admin/admin-ajax.php', ajax_data, function (data) { })
                 return false
             }
         }
