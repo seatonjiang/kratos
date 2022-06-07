@@ -171,7 +171,7 @@
         })
     }
 
-    $(function () {
+    window.initKratos = function () {
         accordionConfig()
         navbarConfig()
         tooltipConfig()
@@ -183,7 +183,8 @@
         donateConfig()
         consoleConfig()
         lightGalleryConfig()
-    })
+    };
+    $(window.initKratos);
 })()
 
 function grin(tag) {
