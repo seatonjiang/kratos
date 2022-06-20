@@ -144,14 +144,14 @@ function string_cut($string, $sublen, $start = 0, $code = 'UTF-8')
 function latest_comments($list_number = 5, $cut_length = 50)
 {
     global $wpdb, $output;
-    $comments = $wpdb->get_results($wpdb->prepare("SELECT comment_ID, comment_post_ID, comment_author, comment_author_email, comment_date, comment_content FROM {$wpdb->comments} LEFT OUTER JOIN {$wpdb->posts} ON {$wpdb->comments}.comment_post_ID = {$wpdb->posts}.ID WHERE comment_approved = '1' AND (comment_type = '' OR comment_type = 'comment') AND user_id != '1' AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT %d", $list_number));
+    $comments = $wpdb->get_results($wpdb->prepare("SELECT comment_ID, comment_post_ID, comment_author, comment_author_email, comment_date_gmt, comment_content FROM {$wpdb->comments} LEFT OUTER JOIN {$wpdb->posts} ON {$wpdb->comments}.comment_post_ID = {$wpdb->posts}.ID WHERE comment_approved = '1' AND (comment_type = '' OR comment_type = 'comment') AND post_password = '' ORDER BY comment_date_gmt DESC LIMIT %d", $list_number));
     foreach ($comments as $comment) {
         $nickname = esc_attr($comment->comment_author) ?: __('匿名', 'kratos');
         $output .= '<a href="' . get_the_permalink($comment->comment_post_ID) . '#commentform">
             <div class="meta clearfix">
                 <div class="avatar float-left">' . get_avatar($comment, 60) . '</div>
                 <div class="profile d-block">
-                    <span class="date">' . $nickname . ' ' . __('发布于 ', 'kratos') . timeago($comment->comment_date) . '（' . wp_date(__('m月d日', 'kratos'), strtotime($comment->comment_date)) . '）</span>
+                    <span class="date">' . $nickname . ' ' . __('发布于 ', 'kratos') . timeago($comment->comment_date_gmt) . '（' . wp_date(__('m月d日', 'kratos'), strtotime($comment->comment_date_gmt)) . '）</span>
                     <span class="message d-block">' . convert_smilies(esc_attr(string_cut(strip_tags($comment->comment_content), $cut_length))) . '</span>
                 </div>
             </div>
