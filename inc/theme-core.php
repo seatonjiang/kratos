@@ -117,7 +117,7 @@ add_action('wp_enqueue_scripts', 'theme_autoload');
 // 后台资源加载
 function kratos_admin_enqueue()
 {
-    wp_enqueue_style('admin-custom-css', get_template_directory_uri() . '/assets/css/admin.css', array(), filemtime(get_stylesheet_directory() . '/assets/css/admin.css'));
+    wp_enqueue_style('admin-custom-css', get_template_directory_uri() . '/assets/css/admin.css', array(), filemtime(get_template_directory() . '/assets/css/admin.css'));
 }
 
 add_action('admin_enqueue_scripts', 'kratos_admin_enqueue', 20);
