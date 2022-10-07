@@ -34,24 +34,6 @@ function widgets_init()
         'before_title' => '<div class="title">',
         'after_title' => '</div>',
     ));
-    // 去掉默认小工具
-    $wp_widget = array(
-        'WP_Widget_Block',
-        'WP_Widget_Pages',
-        'WP_Widget_Meta',
-        'WP_Widget_Media_Image',
-        'WP_Widget_Calendar',
-        'WP_Widget_Recent_Posts',
-        'WP_Widget_Recent_Comments',
-        'WP_Widget_RSS',
-        'WP_Widget_Search',
-        'WP_Widget_Tag_Cloud',
-        'WP_Nav_Menu_Widget',
-    );
-
-    foreach ($wp_widget as $wp_widget) {
-        unregister_widget($wp_widget);
-    }
 }
 add_action('widgets_init', 'widgets_init');
 
