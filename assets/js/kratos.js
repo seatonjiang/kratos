@@ -14,9 +14,7 @@
     }
 
     var tooltipConfig = function () {
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
+        $('[data-toggle="tooltip"]').tooltip()
     }
 
     var gotopConfig = function () {
@@ -34,33 +32,18 @@
         })
         $('.gotop').on('click', function (event) {
             event.preventDefault()
-            $('html, body').animate(
-                {
-                    scrollTop: $('html').offset().top
-                },
-                500
-            )
+            $('html, body').animate({ scrollTop: $('html').offset().top }, 500)
             return false
         })
     }
 
     var searchConfig = function () {
         $('.search').on('click', function (e) {
-            $('.search-form').animate(
-                {
-                    width: '200px'
-                },
-                200
-            ),
-                $('.search-form input').css('display', 'block')
+            $('.search-form').animate({ width: '200px' }, 200)
+            $('.search-form input').css('display', 'block')
             $(document).one('click', function () {
-                $('.search-form').animate(
-                    {
-                        width: '0'
-                    },
-                    100
-                ),
-                    $('.search-form input').hide()
+                $('.search-form').animate({ width: '0' }, 100)
+                $('.search-form input').hide()
             })
             e.stopPropagation()
         })
@@ -92,7 +75,7 @@
     var postlikeConfig = function () {
         $.fn.postLike = function () {
             if ($(this).hasClass('done')) {
-                layer.msg(kratos.repeat, function () { })
+                layer.msg(kratos.repeat, function () {})
                 return false
             } else {
                 $(this).addClass('done')
@@ -134,7 +117,7 @@
                     kratos.directory +
                     '/assets/img/payment/wechat.png"></label></div></div>'
             })
-            $(".choose-pay input[type='radio']").click(function () {
+            $('.choose-pay input[type="radio"]').click(function () {
                 var id = $(this).attr('id')
                 if (id == 'alipay') {
                     $('.qr-pay #alipay_qr').removeClass('d-none')
@@ -171,7 +154,7 @@
         })
     }
 
-    window.initKratos = function () {
+    document.addEventListener('DOMContentLoaded', function () {
         accordionConfig()
         navbarConfig()
         tooltipConfig()
@@ -183,8 +166,7 @@
         donateConfig()
         consoleConfig()
         lightGalleryConfig()
-    };
-    $(window.initKratos);
+    });
 })()
 
 function grin(tag) {
