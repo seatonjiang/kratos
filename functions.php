@@ -1,4 +1,7 @@
 <?php
+if (defined('WP_USE_THEMES') && WP_USE_THEMES === false) {
+    return;
+}
 
 /**
  * 模板函数
