@@ -6,10 +6,10 @@
  * @license GPL-3.0 License
  * @version 2022.01.26
  */
-$smilies = array_map(function ($s) {
+$smilies = join("\n", array_map(function ($s) {
     return '<a href="javascript:grin(\':' . $s . ':\')"><img src="'
-        . apply_filter('smilies_src', ASSET_PATH . "/assets/img/smilies/{$s}.png")
-        . '" alt="" class="d-block"/></a>';
+        . apply_filter('smilies_src', ASSET_PATH . "/assets/img/smilies/{$s}.png", "{$s}.png", site_url())
+        . '" alt="' . $s . '" class="d-block"/></a>';
 }, [
     'razz',
     'evil',
@@ -32,4 +32,4 @@ $smilies = array_map(function ($s) {
     'mrgreen',
     'drooling',
     'persevering'
-]);
+]));
