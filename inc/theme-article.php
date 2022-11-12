@@ -229,9 +229,11 @@ function comment_err($a)
     exit;
 }
 
+if (!function_exists('comment_callback')):
 function comment_callback()
 {
     $comment = wp_handle_comment_submission(wp_unslash($_POST));
+    $commenter = wp_get_current_commenter();
     if (is_wp_error($comment)) {
         $data = $comment->get_error_data();
         if (!empty($data)) {
@@ -243,6 +245,11 @@ function comment_callback()
     $user = wp_get_current_user();
     do_action('set_comment_cookies', $comment, $user);
     $GLOBALS['comment'] = $comment;
+    if ($commenter['comment_author_email']) {
+        $moderation_note = __('Your comment is awaiting moderation.');
+    } else {
+        $moderation_note = __('Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.');
+    }
 ?>
     <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
         <div class="avatar float-left d-inline-block mr-2">
@@ -252,6 +259,9 @@ function comment_callback()
         </div>
         <div class="info clearfix">
             <cite class="author_name"><?php echo get_comment_author_link(); ?></cite>
+            <?php if ('0' == $comment->comment_approved) : ?>
+                <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
+            <?php endif; ?>
             <div class="content pb-2">
                 <?php comment_text(); ?>
             </div>
@@ -267,6 +277,7 @@ function comment_callback()
     </li>
 <?php die();
 }
+endif;
 
 add_action('wp_ajax_nopriv_ajax_comment', 'comment_callback');
 add_action('wp_ajax_ajax_comment', 'comment_callback');
@@ -285,9 +296,15 @@ function comment_display($comment_to_display)
     return $comment_to_display;
 }
 add_filter('comment_text', 'comment_display', '', 1);
-
+if(!function_exists('comment_callbacks')):
 function comment_callbacks($comment, $args, $depth = 2)
 {
+    $commenter = wp_get_current_commenter();
+    if ($commenter['comment_author_email']) {
+        $moderation_note = __('Your comment is awaiting moderation.');
+    } else {
+        $moderation_note = __('Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.');
+    }
     $GLOBALS['comment'] = $comment; ?>
     <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
         <div class="avatar float-left d-inline-block mr-2">
@@ -297,6 +314,9 @@ function comment_callbacks($comment, $args, $depth = 2)
         </div>
         <div class="info clearfix">
             <cite class="author_name"><?php echo get_comment_author_link(); ?></cite>
+            <?php if ('0' == $comment->comment_approved) : ?>
+                <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
+            <?php endif; ?>
             <div class="content pb-2">
                 <?php comment_text(); ?>
             </div>
@@ -317,6 +337,7 @@ function comment_callbacks($comment, $args, $depth = 2)
         </div>
     <?php
 }
+endif;
 
 // 文章评论表情
 if (empty(get_option('use_smilies'))) {
