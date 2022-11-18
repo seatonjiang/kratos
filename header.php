@@ -27,9 +27,7 @@
     <meta property="og:title" content="<?php echo $title; ?>">
     <meta property="og:type" content="article">
     <?php
-        if (is_home()) {
-            echo "<meta property='og:article:tag' content='{$tag->name}'>";
-        } else {
+        if (!is_home()) {
             $tags = get_the_tags();
             if (is_array($tags)) {
                 foreach ($tags as $tag) { ?>
