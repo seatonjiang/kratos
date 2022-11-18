@@ -8,32 +8,57 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="zh-cn">
-
+<html lang="<?php bloginfo('language'); ?>">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php wp_title('-', true, 'right'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="format-detection" content="telphone=no, email=no">
-    <meta name="keywords" content="<?php echo keywords(); ?>">
-    <meta name="description" itemprop="description" content="<?php echo description(); ?>">
+    <meta name="format-detection" content="telphone=no, date=no, address=no, email=no">
     <meta name="theme-color" content="<?php echo kratos_option('g_chrome', '#282a2c'); ?>">
-    <meta itemprop="image" content="<?php echo share_thumbnail_url(); ?>" />
+
+    <meta name="keywords" itemprop="keywords" content="<?php echo keywords(); ?>">
+    <meta name="description" itemprop="description" content="<?php echo description(); ?>">
+    <?php $ogImageUrl = is_home() || !have_posts() ? kratos_option('seo_shareimg', ASSET_PATH . '/assets/img/default.jpg') : share_thumbnail_url(); ?>
+    <meta itemprop="image" content="<?php echo $ogImageUrl; ?>">
+
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
+    <meta property="og:url" content="<?php echo is_home() ? the_permalink() : get_site_url(); ?>">
+    <?php $title = is_home() ? get_the_title() : get_bloginfo('name'); ?>
+    <meta property="og:title" content="<?php echo $title; ?>">
+    <meta property="og:type" content="article">
     <?php
-    if (kratos_option('g_icon')) {
-        echo '<link rel="shortcut icon" href="' . kratos_option("g_icon") . '">';
-    }
-    wp_head();
-    wp_print_scripts('jquery');
-    mourning();
-    if (kratos_option('seo_statistical')) {
-        echo kratos_option('seo_statistical');
-    }
+        if (is_home()) {
+            echo "<meta property='og:article:tag' content='{$tag->name}'>";
+        } else {
+            $tags = get_the_tags();
+            if (is_array($tags)) {
+                foreach ($tags as $tag) { ?>
+                    <meta property="og:article:tag" content="<?php echo $tag->name; ?>">
+                <?php }
+            }
+        }
+    ?>
+    <meta property="og:image" content="<?php echo $ogImageUrl; ?>">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:locale" content="<?php bloginfo('language'); ?>">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo $title; ?>">
+    <meta name="twitter:creator" content="<?php echo the_author(); ?>">
+
+    <?php
+        if (kratos_option('g_icon')) {
+            echo '<link rel="shortcut icon" href="' . kratos_option("g_icon") . '">';
+        }
+        wp_head();
+        wp_print_scripts('jquery');
+        mourning();
+        if (kratos_option('seo_statistical')) {
+            echo kratos_option('seo_statistical');
+        }
     ?>
 </head>
 <?php flush(); ?>
-
 <body>
     <div class="k-header">
         <nav class="k-nav navbar navbar-expand-lg navbar-light fixed-top" <?php echo kratos_option('top_img_switch', true) ? '' : 'style="background:' . kratos_option('top_color', '#24292e') . '"'; ?>>
