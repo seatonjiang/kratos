@@ -9,7 +9,7 @@
 $smilies = join("\n", array_map(function ($s) {
     return '<a href="javascript:grin(\':' . $s . ':\')"><img class="d-block" src="'
         . apply_filters('smilies_src', ASSET_PATH . "/assets/img/smilies/{$s}.png", "{$s}.png", site_url())
-        . " alt='{$s}'></a>";
+        . "\" alt='{$s}'></a>";
 }, [
     'razz',
     'evil',
