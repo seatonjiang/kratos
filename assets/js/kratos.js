@@ -149,9 +149,11 @@
     }
 
     var lightGalleryConfig = function () {
-        lightGallery(document.getElementById('lightgallery'), {
-            selector: 'a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"], a[href$=".bmp"], a[href$=".webp"]'
-        })
+        if(kratos.lightgallery){
+            lightGallery(document.getElementById('lightgallery'), {
+                selector: 'a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"], a[href$=".bmp"], a[href$=".webp"]'
+            })
+        }
     }
 
     document.addEventListener('DOMContentLoaded', function () {

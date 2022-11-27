@@ -682,6 +682,13 @@ CSF::createSection($prefix, array(
             'default' => true,
         ),
         array(
+            'id' => 'g_lightgallery',
+            'type' => 'switcher',
+            'title' => __('文章图片灯箱', 'kratos'),
+            'subtitle' => __('启用/禁用文章图片灯箱功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
             'id' => 'g_article_widgets',
             'type' => 'image_select',
             'title' => __('页面布局', 'kratos'),
