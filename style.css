@@ -949,6 +949,10 @@ ol {
 	word-break: break-word;
 }
 
+.k-main .details .article .content video {
+	width: 100%;
+}
+
 .k-main .details .article .content::after,
 .k-main .details .article .content p::after {
 	clear: both;
