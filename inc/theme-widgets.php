@@ -39,7 +39,8 @@ add_action('widgets_init', 'widgets_init');
 
 // 关闭默认小工具
 function widget_unregister() {
-    unregister_widget('WP_Widget_Block');
+    // fix #502 #521
+    // unregister_widget('WP_Widget_Block');
     unregister_widget('WP_Widget_Pages');
     unregister_widget('WP_Widget_Meta');
     unregister_widget('WP_Widget_Media_Image');
