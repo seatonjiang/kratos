@@ -4,7 +4,7 @@
  * 文章相关函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.05.01
+ * @version 2022.11.27
  */
 
 // 文章链接添加 target 和 rel
@@ -12,7 +12,7 @@ function content_nofollow($content)
 {
     $regexp = "<a\s[^>]*href=['\"][^#]([^'\"]*?)\\1[^>]*>";
     if (preg_match_all("/$regexp/siU", $content, $matches, PREG_SET_ORDER)) {
-        if (!empty($matches)) {
+        if (!empty($matches) && !empty(get_option('siteurl'))) {
             $srcUrl = get_option('siteurl');
             for ($i = 0; $i < count($matches); $i++) {
                 $tag = $matches[$i][0];
