@@ -4,7 +4,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.04.29
+ * @version 2022.11.27
  */
 
 // 添加小工具
@@ -34,26 +34,24 @@ function widgets_init()
         'before_title' => '<div class="title">',
         'after_title' => '</div>',
     ));
-    // 去掉默认小工具
-    $wp_widget = array(
-        'WP_Widget_Block',
-        'WP_Widget_Pages',
-        'WP_Widget_Meta',
-        'WP_Widget_Media_Image',
-        'WP_Widget_Calendar',
-        'WP_Widget_Recent_Posts',
-        'WP_Widget_Recent_Comments',
-        'WP_Widget_RSS',
-        'WP_Widget_Search',
-        'WP_Widget_Tag_Cloud',
-        'WP_Nav_Menu_Widget',
-    );
-
-    foreach ($wp_widget as $wp_widget) {
-        unregister_widget($wp_widget);
-    }
 }
 add_action('widgets_init', 'widgets_init');
+
+// 关闭默认小工具
+function widget_unregister() {
+    unregister_widget('WP_Widget_Block');
+    unregister_widget('WP_Widget_Pages');
+    unregister_widget('WP_Widget_Meta');
+    unregister_widget('WP_Widget_Media_Image');
+    unregister_widget('WP_Widget_Calendar');
+    unregister_widget('WP_Widget_Recent_Posts');
+    unregister_widget('WP_Widget_Recent_Comments');
+    unregister_widget('WP_Widget_RSS');
+    unregister_widget('WP_Widget_Search');
+    unregister_widget('WP_Widget_Tag_Cloud');
+    unregister_widget('WP_Nav_Menu_Widget');
+}
+add_action('widgets_init', 'widget_unregister');
 
 // 分类目录计数
 function cat_count_span($links)
