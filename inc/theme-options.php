@@ -1206,7 +1206,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<ul style="margin: 0 auto;"><li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/issues" target="_blank">https://github.com/seatonjiang/kratos/issues</a></li> <li>' . __('使用说明：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/wiki" target="_blank">https://github.com/seatonjiang/kratos/wiki</a></li> <li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/releases" target="_blank">https://github.com/seatonjiang/kratos/releases</a></li> <li>' . __('捐赠记录：', 'kratos') . '<a href="https://docs.qq.com/sheet/DV2p4Rkt5U1N1bXhG" target="_blank">https://docs.qq.com/sheet/DV2p4Rkt5U1N1bXhG</a></li> </ul>',
+            'content' => '<ul style="margin: 0 auto;"><li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/issues" target="_blank">https://github.com/seatonjiang/kratos/issues</a></li> <li>' . __('使用说明：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/wiki" target="_blank">https://github.com/seatonjiang/kratos/wiki</a></li> <li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/releases" target="_blank">https://github.com/seatonjiang/kratos/releases</a></li> </ul>',
         ),
         array(
             'type' => 'subheading',
