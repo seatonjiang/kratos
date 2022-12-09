@@ -4,7 +4,7 @@
  * 主题页眉
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.05.27
+ * @version 2022.12.09
  */
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <title><?php wp_title('-', true, 'right'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="format-detection" content="telphone=no, date=no, address=no, email=no">
+    <meta name="format-detection" content="telphone=no,email=no">
     <meta name="theme-color" content="<?php echo kratos_option('g_chrome', '#282a2c'); ?>">
 
     <meta name="keywords" itemprop="keywords" content="<?php echo keywords(); ?>">
