@@ -4,7 +4,7 @@
  * 侧栏小工具
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.11.27
+ * @version 2023.01.14
  */
 
 // 添加小工具
@@ -38,7 +38,8 @@ function widgets_init()
 add_action('widgets_init', 'widgets_init');
 
 // 关闭默认小工具
-function widget_unregister() {
+function widget_unregister()
+{
     // fix #502 #521
     // unregister_widget('WP_Widget_Block');
     unregister_widget('WP_Widget_Pages');
@@ -610,8 +611,8 @@ class widget_toc extends WP_Widget
             for ($i = 0; $i <= $to_depth; $i++) {
                 $index .= '</li>' . "\n" . '</ul>' . "\n";
             }
-            wp_cache_set(get_the_ID(), $index, 'toc', 360000);
             $index = '<div class="widget w-toc">' . "\n" . '<div class="title">文章目录</div>' . "\n" . '<div class="item">' . $index . '</div>' . "\n" . '</div>';
+            wp_cache_set(get_the_ID(), $index, 'toc', 360000);
         }
 
         echo $index;
