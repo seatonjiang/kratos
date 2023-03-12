@@ -12,8 +12,8 @@
 <head>
     <meta charset="UTF-8">
     <title><?php wp_title('-', true, 'right'); ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="format-detection" content="telphone=no,email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telphone=no, date=no, address=no, email=no">
     <meta name="theme-color" content="<?php echo kratos_option('g_chrome', '#282a2c'); ?>">
 
     <meta name="keywords" itemprop="keywords" content="<?php echo keywords(); ?>">
@@ -21,13 +21,14 @@
     <?php $ogImageUrl = is_home() || !have_posts() ? kratos_option('seo_shareimg', ASSET_PATH . '/assets/img/default.jpg') : share_thumbnail_url(); ?>
     <meta itemprop="image" content="<?php echo $ogImageUrl; ?>">
 
+    <?php $isPostsIndexAsHome = is_home() && !is_front_page() ?>
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-    <meta property="og:url" content="<?php echo is_home() ? the_permalink() : get_site_url(); ?>">
-    <?php $title = is_home() ? get_the_title() : get_bloginfo('name'); ?>
+    <meta property="og:url" content="<?php echo $isPostsIndexAsHome ? get_site_url() : the_permalink(); ?>">
+    <?php $title = $isPostsIndexAsHome ? get_bloginfo('name') : get_the_title(); ?>
     <meta property="og:title" content="<?php echo $title; ?>">
     <meta property="og:type" content="article">
     <?php
-        if (!is_home()) {
+        if (!$isPostsIndexAsHome) {
             $tags = get_the_tags();
             if (is_array($tags)) {
                 foreach ($tags as $tag) { ?>
