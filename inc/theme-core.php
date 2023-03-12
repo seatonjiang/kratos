@@ -4,16 +4,10 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.11.27
+ * @version 2023.03.12
  */
 
-// CDN 资源地址
-if (kratos_option('g_cdn', false)) {
-    $asset_path = 'https://cdn.seatonjiang.com/kratos/' . THEME_VERSION;
-} else {
-    $asset_path = get_template_directory_uri();
-}
-define('ASSET_PATH', $asset_path);
+define('ASSET_PATH', get_template_directory_uri());
 
 // 自动跳转主题设置
 function init_theme()
@@ -106,7 +100,7 @@ function theme_autoload()
             'directory' => ASSET_PATH,
             'alipay' => kratos_option('g_donate_fieldset')['g_donate_alipay'] ?? '',
             'wechat' => kratos_option('g_donate_fieldset')['g_donate_wechat'] ?? '',
-            'lightgallery' => kratos_option('g_lightgallery',true),
+            'lightgallery' => kratos_option('g_lightgallery', true),
             'repeat' => __('您已经赞过了', 'kratos'),
             'thanks' => __('感谢您的支持', 'kratos'),
             'donate' => __('打赏作者', 'kratos'),
