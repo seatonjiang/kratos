@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.03.12
+ * @version 2023.03.28
  */
 
 define('ASSET_PATH', get_template_directory_uri());
@@ -219,7 +219,7 @@ if (kratos_option('g_replace_gravatar_url_fieldset')['g_replace_gravatar_url'] ?
 
 // 主题更新检测
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://cdn.seatonjiang.com/kratos/update.json',
+    'https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/inc/update-checker/update.json',
     get_template_directory() . '/functions.php',
     'Kratos'
 );
