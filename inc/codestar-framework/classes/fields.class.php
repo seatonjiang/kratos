@@ -13,6 +13,13 @@ if (!class_exists('CSF_Fields')) {
   abstract class CSF_Fields extends CSF_Abstract
   {
 
+    // PHP 8.2: Dynamic Properties are deprecated
+    public $field;
+    public $value;
+    public $unique;
+    public $where;
+    public $parent;
+
     public function __construct($field = array(), $value = '', $unique = '', $where = '', $parent = '')
     {
       $this->field  = $field;

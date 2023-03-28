@@ -12,6 +12,11 @@
 if (!class_exists('CSF_Abstract')) {
   abstract class CSF_Abstract
   {
+    // PHP 8.2: Dynamic Properties are deprecated
+    public $args;
+    public $unique;
+    public $pre_fields;
+    public $options;
 
     public $abstract   = '';
     public $output_css = '';
