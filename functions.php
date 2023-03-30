@@ -7,10 +7,10 @@ if (defined('WP_USE_THEMES') && WP_USE_THEMES === false) {
  * 模板函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.11.27
+ * @version 2023.03.30
  */
 
-define('THEME_VERSION', '4.1.7');
+define('THEME_VERSION', '4.2.0');
 
 // 主题配置
 require get_template_directory() . '/inc/codestar-framework/autoload.php';
