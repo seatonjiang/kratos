@@ -4,10 +4,16 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.03.28
+ * @version 2023.03.30
  */
 
-define('ASSET_PATH', get_template_directory_uri());
+// CDN 资源地址
+if (kratos_option('g_cdn', false)) {
+    $asset_path = 'https://cdn.jsdelivr.net/gh/seatonjiang/kratos@v' . THEME_VERSION;
+} else {
+    $asset_path = get_template_directory_uri();
+}
+define('ASSET_PATH', $asset_path);
 
 // 自动跳转主题设置
 function init_theme()

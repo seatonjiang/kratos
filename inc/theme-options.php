@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.03.12
+ * @version 2023.03.30
  */
 
 defined('ABSPATH') || exit;
@@ -119,6 +119,13 @@ CSF::createSection($prefix, array(
             'title' => __('Font Awesome', 'kratos'),
             'subtitle' => __('启用/禁用 Font Awesome Free 字体', 'kratos'),
             'default' => false,
+        ),
+        array(
+            'id' => 'g_cdn',
+            'type' => 'switcher',
+            'title' => __('静态资源加速', 'kratos'),
+            'subtitle' => __('启用/禁用静态资源加速（jsDelivr）', 'kratos'),
+            'default' => true,
         ),
         array(
             'id' => 'g_renameimg',
