@@ -888,7 +888,7 @@ CSF::createSection($prefix, array(
             'id' => 'top_describe',
             'type' => 'text',
             'title' => __('标题描述', 'kratos'),
-            'default' => __('一款专注于用户阅读体验的响应式博客主题', 'kratos'),
+            'default' => __('专注于用户阅读体验的响应式博客主题', 'kratos'),
         ),
     ),
 ));

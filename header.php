@@ -4,7 +4,7 @@
  * 主题页眉
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.03.28
+ * @version 2023.03.30
  */
 ?>
 <!DOCTYPE html>
@@ -99,7 +99,7 @@
                             echo '<div class="mate">' . strip_tags(category_description()) . '</div>';
                         } else {
                             echo '<div class="title">' . kratos_option('top_title', 'Kratos') . '</div>';
-                            echo '<div class="mate">' . kratos_option('top_describe', __('一款专注于用户阅读体验的响应式博客主题', 'kratos')) . '</div>';
+                            echo '<div class="mate">' . kratos_option('top_describe', __('专注于用户阅读体验的响应式博客主题', 'kratos')) . '</div>';
                         }
                         ?>
                     </div>
