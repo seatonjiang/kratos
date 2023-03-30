@@ -225,7 +225,7 @@ if (kratos_option('g_replace_gravatar_url_fieldset')['g_replace_gravatar_url'] ?
 
 // 主题更新检测
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://cdn.jsdelivr.net/gh/seatonjiang/kratos@main/inc/update-checker/update.json',
+    'https://cdn.jsdelivr.net/gh/seatonjiang/kratos/inc/update-checker/update.json',
     get_template_directory() . '/functions.php',
     'Kratos'
 );
