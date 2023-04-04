@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.03.30
+ * @version 2023.04.04
  */
 
 // CDN 资源地址
@@ -94,12 +94,10 @@ function theme_autoload()
             }');
         }
         // js
-        wp_deregister_script('jquery');
-        wp_enqueue_script('jquery', ASSET_PATH . '/assets/js/jquery.min.js', array(), '3.4.1', false);
-        wp_enqueue_script('bootstrap-bundle', ASSET_PATH . '/assets/js/bootstrap.bundle.min.js', array(), '4.5.0', true);
-        wp_enqueue_script('layer', ASSET_PATH . '/assets/js/layer.min.js', array(), '3.1.1', true);
+        wp_enqueue_script('bootstrap-bundle', ASSET_PATH . '/assets/js/bootstrap.bundle.min.js', array('jquery'), '4.5.0', true);
+        wp_enqueue_script('layer', ASSET_PATH . '/assets/js/layer.min.js', array('jquery'), '3.1.1', true);
         wp_enqueue_script('dplayer', ASSET_PATH . '/assets/js/DPlayer.min.js', array(), THEME_VERSION, true);
-        wp_enqueue_script('kratos', ASSET_PATH . '/assets/js/kratos.js', array(), THEME_VERSION, true);
+        wp_enqueue_script('kratos', ASSET_PATH . '/assets/js/kratos.js', array('jquery'), THEME_VERSION, true);
 
         $data = array(
             'site' => home_url(),

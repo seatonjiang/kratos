@@ -4,7 +4,7 @@
  * 文章相关函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.11.27
+ * @version 2023.04.04
  */
 
 // 文章链接添加 target 和 rel
@@ -211,7 +211,7 @@ function pagelist($range = 5)
 // 文章评论
 function comment_scripts()
 {
-    wp_enqueue_script('comment', ASSET_PATH . '/assets/js/comments.min.js', array(), THEME_VERSION);
+    wp_enqueue_script('comment', ASSET_PATH . '/assets/js/comments.min.js', array('jquery'), THEME_VERSION);
     wp_localize_script('comment', 'ajaxcomment', array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'order' => get_option('comment_order'),
@@ -229,54 +229,55 @@ function comment_err($a)
     exit;
 }
 
-if (!function_exists('comment_callback')):
-function comment_callback()
-{
-    $comment = wp_handle_comment_submission(wp_unslash($_POST));
-    $commenter = wp_get_current_commenter();
-    if (is_wp_error($comment)) {
-        $data = $comment->get_error_data();
-        if (!empty($data)) {
-            comment_err($comment->get_error_message());
-        } else {
-            exit;
+if (!function_exists('comment_callback')) :
+    function comment_callback()
+    {
+        $comment = wp_handle_comment_submission(wp_unslash($_POST));
+        $commenter = wp_get_current_commenter();
+        if (is_wp_error($comment)) {
+            $data = $comment->get_error_data();
+            if (!empty($data)) {
+                comment_err($comment->get_error_message());
+            } else {
+                exit;
+            }
         }
-    }
-    $user = wp_get_current_user();
-    do_action('set_comment_cookies', $comment, $user);
-    $GLOBALS['comment'] = $comment;
-    if ($commenter['comment_author_email']) {
-        $moderation_note = __('Your comment is awaiting moderation.');
-    } else {
-        $moderation_note = __('Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.');
-    }
+        $user = wp_get_current_user();
+        do_action('set_comment_cookies', $comment, $user);
+        $GLOBALS['comment'] = $comment;
+        if ($commenter['comment_author_email']) {
+            $moderation_note = __('Your comment is awaiting moderation.');
+        } else {
+            $moderation_note = __('Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.');
+        }
 ?>
-    <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
-        <div class="avatar float-left d-inline-block mr-2">
-            <?php if (function_exists('get_avatar') && get_option('show_avatars')) {
-                echo get_avatar($comment, 50);
-            } ?>
-        </div>
-        <div class="info clearfix">
-            <cite class="author_name"><?php echo get_comment_author_link(); ?></cite>
-            <?php if ('0' == $comment->comment_approved) : ?>
-                <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
-            <?php endif; ?>
-            <div class="content pb-2">
-                <?php comment_text(); ?>
+        <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
+            <div class="avatar float-left d-inline-block mr-2">
+                <?php if (function_exists('get_avatar') && get_option('show_avatars')) {
+                    echo get_avatar($comment, 50);
+                } ?>
             </div>
-            <div class="meta clearfix">
-                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {
-                                                                                                    echo '<span class="ml-2">';
-                                                                                                    edit_comment_link(__('编辑', 'kratos'));
-                                                                                                    echo '</span>';
-                                                                                                }; ?>
+            <div class="info clearfix">
+                <cite class="author_name"><?php echo get_comment_author_link(); ?></cite>
+                <?php if ('0' == $comment->comment_approved) : ?>
+                    <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
+                <?php endif; ?>
+                <div class="content pb-2">
+                    <?php comment_text(); ?>
+                </div>
+                <div class="meta clearfix">
+                    <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?>
+                        <?php if (current_user_can('edit_posts')) {
+                            echo '<span class="ml-2">';
+                            edit_comment_link(__('编辑', 'kratos'));
+                            echo '</span>';
+                        }; ?>
+                    </div>
                 </div>
             </div>
-        </div>
-    </li>
-<?php die();
-}
+        </li>
+    <?php die();
+    }
 endif;
 
 add_action('wp_ajax_nopriv_ajax_comment', 'comment_callback');
@@ -296,47 +297,48 @@ function comment_display($comment_to_display)
     return $comment_to_display;
 }
 add_filter('comment_text', 'comment_display', '', 1);
-if(!function_exists('comment_callbacks')):
-function comment_callbacks($comment, $args, $depth = 2)
-{
-    $commenter = wp_get_current_commenter();
-    if ($commenter['comment_author_email']) {
-        $moderation_note = __('Your comment is awaiting moderation.');
-    } else {
-        $moderation_note = __('Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.');
-    }
-    $GLOBALS['comment'] = $comment; ?>
-    <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
-        <div class="avatar float-left d-inline-block mr-2">
-            <?php if (function_exists('get_avatar') && get_option('show_avatars')) {
-                echo get_avatar($comment, 50);
-            } ?>
-        </div>
-        <div class="info clearfix">
-            <cite class="author_name"><?php echo get_comment_author_link(); ?></cite>
-            <?php if ('0' == $comment->comment_approved) : ?>
-                <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
-            <?php endif; ?>
-            <div class="content pb-2">
-                <?php comment_text(); ?>
+if (!function_exists('comment_callbacks')) :
+    function comment_callbacks($comment, $args, $depth = 2)
+    {
+        $commenter = wp_get_current_commenter();
+        if ($commenter['comment_author_email']) {
+            $moderation_note = __('Your comment is awaiting moderation.');
+        } else {
+            $moderation_note = __('Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.');
+        }
+        $GLOBALS['comment'] = $comment; ?>
+        <li class="comment cleanfix" id="comment-<?php echo esc_attr(comment_ID()); ?>">
+            <div class="avatar float-left d-inline-block mr-2">
+                <?php if (function_exists('get_avatar') && get_option('show_avatars')) {
+                    echo get_avatar($comment, 50);
+                } ?>
             </div>
-            <div class="meta clearfix">
-                <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?><?php if (current_user_can('edit_posts')) {
-                                                                                                    echo '<span class="ml-2">';
-                                                                                                    edit_comment_link(__('编辑', 'kratos'));
-                                                                                                    echo '</span>';
-                                                                                                }; ?>
+            <div class="info clearfix">
+                <cite class="author_name"><?php echo get_comment_author_link(); ?></cite>
+                <?php if ('0' == $comment->comment_approved) : ?>
+                    <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
+                <?php endif; ?>
+                <div class="content pb-2">
+                    <?php comment_text(); ?>
                 </div>
-                <div class="tool reply ml-2 d-inline-block float-right">
-                    <?php
-                    $defaults = array('add_below' => 'comment', 'respond_id' => 'respond', 'reply_text' => '<i class="kicon i-reply"></i><span class="ml-1">' . __('回复', 'kratos') . '</span>');
-                    comment_reply_link(array_merge($defaults, array('depth' => $depth, 'max_depth' => $args['max_depth'])));
-                    ?>
+                <div class="meta clearfix">
+                    <div class="date d-inline-block float-left"><?php echo get_comment_date(); ?>
+                        <?php if (current_user_can('edit_posts')) {
+                            echo '<span class="ml-2">';
+                            edit_comment_link(__('编辑', 'kratos'));
+                            echo '</span>';
+                        }; ?>
+                    </div>
+                    <div class="tool reply ml-2 d-inline-block float-right">
+                        <?php
+                        $defaults = array('add_below' => 'comment', 'respond_id' => 'respond', 'reply_text' => '<i class="kicon i-reply"></i><span class="ml-1">' . __('回复', 'kratos') . '</span>');
+                        comment_reply_link(array_merge($defaults, array('depth' => $depth, 'max_depth' => $args['max_depth'])));
+                        ?>
+                    </div>
                 </div>
             </div>
-        </div>
     <?php
-}
+    }
 endif;
 
 // 文章评论表情

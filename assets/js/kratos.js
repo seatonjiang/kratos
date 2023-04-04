@@ -2,7 +2,7 @@
  * Kratos
  * Seaton Jiang <hi@seatonjiang.com>
  */
-(function () {
+(function ($) {
   "use strict";
 
   var KRATOS_VERSION = "4.2.0";
@@ -136,7 +136,7 @@
   };
 
   var accordionConfig = function () {
-    $(document).on("click", ".acheader", function (event) {
+    $(".acheader").on("click", function (event) {
       var $this = $(this);
       $this.closest(".accordion").find(".contents").slideToggle(300);
       if ($this.closest(".accordion").hasClass("active")) {
@@ -178,7 +178,7 @@
     consoleConfig();
     lightGalleryConfig();
   });
-})();
+})(jQuery);
 
 function grin(tag) {
   var myField;
