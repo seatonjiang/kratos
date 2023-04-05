@@ -4,7 +4,7 @@
  * 站点相关函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.01.26
+ * @version 2023.04.05
  */
 
 // 标题配置
@@ -109,8 +109,9 @@ function share_thumbnail_url()
         return;
     if (has_post_thumbnail($post->ID)) {
         $post_thumbnail_id = get_post_thumbnail_id($post);
+        // Return array|false Array of image data, or boolean false if no image is available.
         $img = wp_get_attachment_image_src($post_thumbnail_id, 'full');
-        $img = $img[0];
+        $img && $img = $img[0];
     } else {
         $content = $post->post_content;
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?); ?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
