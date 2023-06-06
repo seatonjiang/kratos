@@ -125,7 +125,7 @@ CSF::createSection($prefix, array(
             'type' => 'switcher',
             'title' => __('静态资源加速', 'kratos'),
             'subtitle' => __('启用/禁用静态资源加速（jsDelivr）', 'kratos'),
-            'default' => true,
+            'default' => false,
         ),
         array(
             'id' => 'g_renameimg',
