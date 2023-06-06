@@ -1360,7 +1360,8 @@ ol {
     font-size: 12px;
   }
 
-  .k-main .details .article .content p {
+  .k-main .details .article .content p,
+  .k-main .details .article .content ul > li {
     font-size: 15px;
   }
 
