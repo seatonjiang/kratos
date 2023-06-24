@@ -14,7 +14,7 @@ if (!class_exists('CSF_Field_map')) {
   {
 
     public $version = '1.7.1';
-    public $cdn_url = 'https://cdn.jsdelivr.net/npm/leaflet@';
+    public $cdn_url = 'https://cdn.bootcdn.net/ajax/libs/leaflet/';
 
     public function __construct($field, $value = '', $unique = '', $where = '', $parent = '')
     {

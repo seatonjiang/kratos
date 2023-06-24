@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.06.06
+ * @version 2023.06.24
  */
 
 defined('ABSPATH') || exit;
@@ -599,7 +599,7 @@ CSF::createSection($prefix, array(
             'type' => 'code_editor',
             'settings' => array(
                 'theme' => 'default',
-                'mode' => 'html',
+                'mode' => 'htmlmixed',
             ),
             'sanitize' => false,
             'default' => '<script></script>',
