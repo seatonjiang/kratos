@@ -10,7 +10,7 @@ if (defined('WP_USE_THEMES') && WP_USE_THEMES === false) {
  * @version 2023.03.30
  */
 
-define('THEME_VERSION', '4.2.2');
+define('THEME_VERSION', '4.2.3');
 
 // 主题配置
 require get_template_directory() . '/inc/codestar-framework/autoload.php';
