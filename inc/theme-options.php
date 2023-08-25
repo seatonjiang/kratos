@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.06.24
+ * @version 2023.08.25
  */
 
 defined('ABSPATH') || exit;
@@ -1191,11 +1191,6 @@ CSF::createSection($prefix, array(
             'content' => __('基础信息', 'kratos'),
         ),
         array(
-            'type' => 'submessage',
-            'style' => 'info',
-            'content' => __('提示：在反馈主题相关的问题时，请同时复制并提交下面的内容。', 'kratos'),
-        ),
-        array(
             'type' => 'content',
             'content' => '<ul style="margin: 0 auto;"> <li>' . __('PHP 版本：', 'kratos') . PHP_VERSION . '</li> <li>' . __('Kratos 版本：', 'kratos') . THEME_VERSION . '</li> <li>' . __('WordPress 版本：', 'kratos') . $wp_version . '</li> <li>' . __('User Agent 信息：', 'kratos') . $_SERVER['HTTP_USER_AGENT'] . '</li> </ul>',
         ),
@@ -1222,7 +1217,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="' . get_template_directory_uri() . '/assets/img/options/discuss.png"></div>',
+            'content' => '<div style="max-width:800px;"><img style="width: 70%;height: auto;" src="' . get_template_directory_uri() . '/assets/img/options/discuss.png"></div>',
         ),
         array(
             'type' => 'subheading',
@@ -1230,7 +1225,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 100%;height: auto;" src="' . get_template_directory_uri() . '/assets/img/options/donate.png"></div>',
+            'content' => '如果您有用到我开发维护的项目，请考虑支持一下我的工作，让我可以持续的维护它们，您可在爱发电（<a href="https://afdian.net/a/seatonjiang" target="_blank">https://afdian.net/a/seatonjiang</a>）中进行打赏，谢谢！',
         ),
     ),
 ));
