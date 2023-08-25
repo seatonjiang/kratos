@@ -7,6 +7,8 @@
  * @version 2023.04.04
  */
 
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
 // CDN 资源地址
 if (kratos_option('g_cdn', false)) {
     $asset_path = 'https://cdn.jsdelivr.net/gh/seatonjiang/kratos@v' . THEME_VERSION;
@@ -222,7 +224,7 @@ if (kratos_option('g_replace_gravatar_url_fieldset')['g_replace_gravatar_url'] ?
 }
 
 // 主题更新检测
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+$myUpdateChecker = PucFactory::buildUpdateChecker(
     'https://cdn.jsdelivr.net/gh/seatonjiang/kratos/inc/update-checker/update.json',
     get_template_directory() . '/functions.php',
     'Kratos'

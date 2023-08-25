@@ -1,35 +1,39 @@
 <?php
+
 /**
- * Plugin Update Checker Library 4.10
+ * Plugin Update Checker Library 5.2
  * http://w-shadow.com/
  *
- * Copyright 2020 Janis Elsts
+ * Copyright 2022 Janis Elsts
  * Released under the MIT license. See license.txt for details.
  */
 
-require dirname(__FILE__) . '/Puc/v4p10/Autoloader.php';
-new Puc_v4p10_Autoloader();
+namespace YahnisElsts\PluginUpdateChecker\v5p2;
 
-require dirname(__FILE__) . '/Puc/v4p10/Factory.php';
-require dirname(__FILE__) . '/Puc/v4/Factory.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory as MajorFactory;
+use YahnisElsts\PluginUpdateChecker\v5p2\PucFactory as MinorFactory;
+
+require __DIR__ . '/Puc/v5p2/Autoloader.php';
+new Autoloader();
+
+require __DIR__ . '/Puc/v5p2/PucFactory.php';
+require __DIR__ . '/Puc/v5/PucFactory.php';
 
 //Register classes defined in this version with the factory.
-foreach (
-	array(
-		'Plugin_UpdateChecker' => 'Puc_v4p10_Plugin_UpdateChecker',
-		'Theme_UpdateChecker'  => 'Puc_v4p10_Theme_UpdateChecker',
+foreach (array(
+		'Plugin\\UpdateChecker' => Plugin\UpdateChecker::class,
+		'Theme\\UpdateChecker'  => Theme\UpdateChecker::class,
 
-		'Vcs_PluginUpdateChecker' => 'Puc_v4p10_Vcs_PluginUpdateChecker',
-		'Vcs_ThemeUpdateChecker'  => 'Puc_v4p10_Vcs_ThemeUpdateChecker',
+		'Vcs\\PluginUpdateChecker' => Vcs\PluginUpdateChecker::class,
+		'Vcs\\ThemeUpdateChecker'  => Vcs\ThemeUpdateChecker::class,
 
-		'GitHubApi'    => 'Puc_v4p10_Vcs_GitHubApi',
-		'BitBucketApi' => 'Puc_v4p10_Vcs_BitBucketApi',
-		'GitLabApi'    => 'Puc_v4p10_Vcs_GitLabApi',
+		'GitHubApi'    => Vcs\GitHubApi::class,
+		'BitBucketApi' => Vcs\BitBucketApi::class,
+		'GitLabApi'    => Vcs\GitLabApi::class,
 	)
-	as $pucGeneralClass => $pucVersionedClass
-) {
-	Puc_v4_Factory::addVersion($pucGeneralClass, $pucVersionedClass, '4.10');
+	as $pucGeneralClass => $pucVersionedClass) {
+	MajorFactory::addVersion($pucGeneralClass, $pucVersionedClass, '5.2');
 	//Also add it to the minor-version factory in case the major-version factory
 	//was already defined by another, older version of the update checker.
-	Puc_v4p10_Factory::addVersion($pucGeneralClass, $pucVersionedClass, '4.10');
+	MinorFactory::addVersion($pucGeneralClass, $pucVersionedClass, '5.2');
 }
