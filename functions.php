@@ -1,16 +1,17 @@
 <?php
-if (defined('WP_USE_THEMES') && WP_USE_THEMES === false) {
-    return;
-}
 
 /**
  * 模板函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.03.30
+ * @version 2023.08.25
  */
 
-define('THEME_VERSION', '4.2.3');
+define('THEME_VERSION', '4.2.4');
+
+if (defined('WP_USE_THEMES') && WP_USE_THEMES === false) {
+    return;
+}
 
 // 主题配置
 require get_template_directory() . '/inc/codestar-framework/autoload.php';
