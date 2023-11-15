@@ -7,21 +7,21 @@
 <p align="center">
     <img src="https://img.shields.io/badge/PHP-%3E7.4-777BB4?style=flat-square&logo=php&logoColor=#777BB4">
     <img src="https://img.shields.io/badge/WordPress-v6.4%20alpha%20tested-21759B?style=flat-square&logo=wordpress">
-    <a href="https://github.com/seatonjiang/kratos/issues">
-        <img src="https://img.shields.io/github/issues/seatonjiang/kratos?style=flat-square&color=blue">
+    <a href="https://github.com/devhaozi/kratos/issues">
+        <img src="https://img.shields.io/github/issues/devhaozi/kratos?style=flat-square&color=blue">
     </a>
-    <a href="https://github.com/seatonjiang/kratos/pulls">
-        <img src="https://img.shields.io/github/issues-pr/seatonjiang/kratos?style=flat-square&color=brightgreen">
+    <a href="https://github.com/devhaozi/kratos/pulls">
+        <img src="https://img.shields.io/github/issues-pr/devhaozi/kratos?style=flat-square&color=brightgreen">
     </a>
-    <a href="https://github.com/seatonjiang/kratos/blob/main/LICENSE">
-        <img src="https://img.shields.io/github/license/seatonjiang/kratos?&style=flat-square">
+    <a href="https://github.com/devhaozi/kratos/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/devhaozi/kratos?&style=flat-square">
     </a>
 </p>
 
 <p align="center">
-    <a href="https://github.com/seatonjiang/kratos/issues">报告问题</a>
+    <a href="https://github.com/devhaozi/kratos/issues">报告问题</a>
     ·
-    <a href="https://github.com/seatonjiang/kratos/issues">功能需求</a>
+    <a href="https://github.com/devhaozi/kratos/issues">功能需求</a>
 </p>
 
 <p align="center">专注阅读体验的 WordPress 主题</p>
@@ -44,4 +44,4 @@
 
 ## 📃 开源许可
 
-项目基于 GNU 通用公共许可证 v3.0 发布，详细说明请参阅 [LICENCE](https://github.com/seatonjiang/kratos/blob/main/LICENSE) 文件。
+项目基于 GNU 通用公共许可证 v3.0 发布，详细说明请参阅 [LICENCE](https://github.com/devhaozi/kratos/blob/main/LICENSE) 文件。

@@ -150,9 +150,9 @@
 
   var consoleConfig = function () {
     console.log(
-      "\n Kratos v" +
+      "\n Kratos Pjax Edition v" +
         KRATOS_VERSION +
-        "\n\n https://github.com/seatonjiang/kratos \n\n"
+        "\n\n https://github.com/devhaozi/kratos \n\n"
     );
   };
 

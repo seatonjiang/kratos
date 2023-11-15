@@ -11,7 +11,7 @@ use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 // CDN 资源地址
 if (kratos_option('g_cdn', false)) {
-    $asset_path = 'https://cdn.jsdelivr.net/gh/seatonjiang/kratos@v' . THEME_VERSION;
+    $asset_path = 'https://cdn.jsdelivr.net/gh/devhaozi/kratos@v' . THEME_VERSION;
 } else {
     $asset_path = get_template_directory_uri();
 }
@@ -54,6 +54,9 @@ function theme_autoload()
             wp_enqueue_style('fontawesome', ASSET_PATH . '/assets/css/fontawesome.min.css', array(), '5.15.2');
         }
         wp_enqueue_style('kratos', ASSET_PATH . '/style.css', array(), THEME_VERSION);
+	    if (kratos_option('g_pjax')) {
+		    wp_enqueue_style( 'loader', ASSET_PATH . '/assets/css/loader.css', array(), THEME_VERSION );
+	    }
         if (is_child_theme()) {
             wp_enqueue_style('kratos-child', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
         }
@@ -100,6 +103,9 @@ function theme_autoload()
         wp_enqueue_script('layer', ASSET_PATH . '/assets/js/layer.min.js', array('jquery'), '3.1.1', true);
         wp_enqueue_script('dplayer', ASSET_PATH . '/assets/js/DPlayer.min.js', array(), THEME_VERSION, true);
         wp_enqueue_script('kratos', ASSET_PATH . '/assets/js/kratos.js', array('jquery'), THEME_VERSION, true);
+	    if (kratos_option('g_pjax')) {
+            wp_enqueue_script('pjax', ASSET_PATH . '/assets/js/pjax.js', array('jquery'), THEME_VERSION, true);
+		}
 
         $data = array(
             'site' => home_url(),
@@ -208,11 +214,10 @@ if (kratos_option('g_replace_gravatar_url_fieldset')['g_replace_gravatar_url'] ?
     function replace_gravatar_url($avatar)
     {
         $gravatar_server_list = array(
-            'geekzu' => 'sdn.geekzu.org',
-            'loli' => 'gravatar.loli.net',
+            'weavatar' => 'weavatar.com',
             'other' => kratos_option('g_replace_gravatar_url_fieldset')['g_custom_gravatar_server'] ?? null,
         );
-        $gravatar_server = $gravatar_server_list[kratos_option('g_replace_gravatar_url_fieldset')['g_select_gravatar_server'] ?? 'geekzu'];
+        $gravatar_server = $gravatar_server_list[kratos_option('g_replace_gravatar_url_fieldset')['g_select_gravatar_server'] ?? 'weavatar'];
         $avatar = str_replace(array('www.gravatar.com', '0.gravatar.com', '1.gravatar.com', '2.gravatar.com', '3.gravatar.com', 'secure.gravatar.com'), $gravatar_server, $avatar);
         $avatar = str_replace('http://', 'https://', $avatar);
 
@@ -225,7 +230,7 @@ if (kratos_option('g_replace_gravatar_url_fieldset')['g_replace_gravatar_url'] ?
 
 // 主题更新检测
 $myUpdateChecker = PucFactory::buildUpdateChecker(
-    'https://cdn.jsdelivr.net/gh/seatonjiang/kratos/inc/update-checker/update.json',
+    'https://cdn.jsdelivr.net/gh/devhaozi/kratos/inc/update-checker/update.json',
     get_template_directory() . '/functions.php',
     'Kratos'
 );

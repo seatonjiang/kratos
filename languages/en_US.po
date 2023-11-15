@@ -1116,8 +1116,8 @@ msgid "版权声明"
 msgstr "Copyright claims"
 
 #: inc/theme-options.php:1175
-msgid "主题源码使用 <a href=\"https://github.com/seatonjiang/kratos/blob/main/LICENSE\" target=\"_blank\">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> 进行许可。"
-msgstr "The theme source code is licensed under the <a href=\"https：//github.com/seatonjiang/kratos/blob/main/LICENSE\" target=\"_blank\">GPL-3.0 agreement</a>, and the documentation uses <a href= \"https：//creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> for licensing。"
+msgid "主题源码使用 <a href=\"https://github.com/devhaozi/kratos/blob/main/LICENSE\" target=\"_blank\">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> 进行许可。"
+msgstr "The theme source code is licensed under the <a href=\"https：//github.com/devhaozi/kratos/blob/main/LICENSE\" target=\"_blank\">GPL-3.0 agreement</a>, and the documentation uses <a href= \"https：//creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a> for licensing。"
 
 #: inc/theme-options.php:1179
 msgid "讨论交流"
@@ -1473,8 +1473,8 @@ msgid "下一篇 >"
 msgstr "Next article >"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/seatonjiang/kratos"
-msgstr "https://github.com/seatonjiang/kratos"
+msgid "https://github.com/devhaozi/kratos"
+msgstr "https://github.com/devhaozi/kratos"
 
 #. Description of the plugin/theme
 msgid "主题提供了多种针对自媒体博客需求的侧栏工具，删繁就简专注于用户的阅读体验，优化的邮件中心为你的网站留存加分添彩。"

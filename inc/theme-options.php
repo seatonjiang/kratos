@@ -50,7 +50,7 @@ CSF::createOptions($prefix, array(
     'admin_bar_menu_icon' => 'dashicons-admin-generic',
     'framework_title' => '主题设置<small style="margin-left:10px">Kratos v' . THEME_VERSION . '</small>',
     'theme' => 'light',
-    'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/seatonjiang/kratos">Kratos</a> 主题开始创作，欢迎加入交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=_7pE5U4pbq4j2xeu_cyZqvasEd_i9wTf">618958939</a>、<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=8Okzvj3TP67642FTRvC1mKT7f8L4NOrk">839687348</a>、<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=b37-78PbXYvTdoUZq9rW-nEF6CEl4wBv">852844975</a>',
+    'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/devhaozi/kratos">Kratos Pjax Edition</a> 主题开始创作，欢迎加入交流群：<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=I1oJKSTH">12370907</a>',
 ));
 
 CSF::createSection($prefix, array(
@@ -128,6 +128,20 @@ CSF::createSection($prefix, array(
             'default' => false,
         ),
         array(
+            'id' => 'g_pjax',
+            'type' => 'switcher',
+            'title' => __('Pjax 加载', 'kratos'),
+            'subtitle' => __('启用/禁用 Pjax 加载', 'kratos'),
+            'default' => true,
+        ),
+        array(
+            'id' => 'g_performance',
+            'type' => 'switcher',
+            'title' => __('性能显示', 'kratos'),
+            'subtitle' => __('启用/禁用 页脚性能显示', 'kratos'),
+            'default' => false,
+        ),
+        array(
             'id' => 'g_renameimg',
             'type' => 'switcher',
             'title' => __('自定义图片类型的文件名', 'kratos'),
@@ -175,11 +189,10 @@ CSF::createSection($prefix, array(
                     'title' => __('Gravatar 加速服务地址', 'kratos'),
                     'subtitle' => __('请选择 Gravatar 加速服务地址', 'kratos'),
                     'options' => array(
-                        'loli' => __('Loli 加速服务', 'kratos'),
-                        'geekzu' => __('极客族加速服务', 'kratos'),
+                        'weavatar' => __('WeAvatar.com', 'kratos'),
                         'other' => __('自定义加速服务', 'kratos'),
                     ),
-                    'desc' => __('国内用户推荐「极客族加速服务」，海外用户推荐「Loli 加速服务」。', 'kratos'),
+                    'desc' => __('推荐「WeAvatar.com」', 'kratos'),
                     'dependency' => array('g_replace_gravatar_url', '==', 'true'),
                 ),
                 array(
@@ -194,7 +207,7 @@ CSF::createSection($prefix, array(
             ),
             'default' => array(
                 'g_replace_gravatar_url' => 1,
-                'g_select_gravatar_server' => 'geekzu',
+                'g_select_gravatar_server' => 'weavatar',
             )
         ),
         array(
@@ -419,7 +432,41 @@ CSF::createSection($prefix, array(
         array(
             'type' => 'notice',
             'style' => 'info',
-            'content' => '提示：<strong>DogeCloud 云存储</strong> 与 <strong>火山引擎 ImageX</strong>请勿同时开启！',
+            'content' => '提示：<strong>DogeCloud 云存储</strong> 与 <strong>火山引擎 ImageX</strong>请勿同时开启，开启播放器后建议同时开启 Pjax 加载！',
+        ),
+        array(
+            'id' => 'myhk_player_fieldset',
+            'type' => 'fieldset',
+            'fields' => array(
+                array(
+                    'type' => 'subheading',
+                    'content' => __('明月浩空音乐播放器', 'kratos'),
+                ),
+                array(
+                    'type' => 'submessage',
+                    'style' => 'info',
+                    'content' => '明月浩空音乐播放器提供<strong> 免费 </strong>的网站音乐播放器服务，如需购买付费版本，联系 QQ 826896000 购买价格更优！',
+                ),
+                array(
+                    'id' => 'myhk_player',
+                    'type' => 'switcher',
+                    'title' => __('功能开关', 'kratos'),
+                    'subtitle' => __('开启/关闭明月浩空音乐播放器', 'kratos'),
+                    'text_on' => __('开启', 'kratos'),
+                    'text_off' => __('关闭', 'kratos'),
+                ),
+                array(
+                    'id' => 'myhk_player_key',
+                    'type' => 'text',
+                    'title' => __('播放器 Key', 'kratos'),
+                    'subtitle' => __('播放器 Key 可在明月浩空音乐播放器后台查看', 'kratos'),
+                    'desc' => __('<a target="_blank" href="https://myhkw.cn/admin/">点击这里</a>查询播放器 Key', 'kratos'),
+                ),
+            ),
+            'default' => array(
+                'myhk_player' => false,
+                'myhk_player_key' => '',
+            ),
         ),
         array(
             'id' => 'g_cos_fieldset',
@@ -1201,7 +1248,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '<ul style="margin: 0 auto;"><li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/issues" target="_blank">https://github.com/seatonjiang/kratos/issues</a></li> <li>' . __('使用说明：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/wiki" target="_blank">https://github.com/seatonjiang/kratos/wiki</a></li> <li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/releases" target="_blank">https://github.com/seatonjiang/kratos/releases</a></li> </ul>',
+            'content' => '<ul style="margin: 0 auto;"><li>' . __('问题反馈：', 'kratos') . '<a href="https://github.com/devhaozi/kratos/issues" target="_blank">https://github.com/devhaozi/kratos/issues</a></li> <li>' . __('使用说明：', 'kratos') . '<a href="https://github.com/seatonjiang/kratos/wiki" target="_blank">https://github.com/seatonjiang/kratos/wiki</a></li> <li>' . __('更新日志：', 'kratos') . '<a href="https://github.com/devhaozi/kratos/releases" target="_blank">https://github.com/devhaozi/kratos/releases</a></li> </ul>',
         ),
         array(
             'type' => 'subheading',
@@ -1209,7 +1256,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => __('主题源码使用 <a href="https://github.com/seatonjiang/kratos/blob/main/LICENSE" target="_blank">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos'),
+            'content' => __('主题源码使用 <a href="https://github.com/devhaozi/kratos/blob/main/LICENSE" target="_blank">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos'),
         ),
         array(
             'type' => 'subheading',

@@ -1138,7 +1138,7 @@ msgstr ""
 
 #: inc/theme-options.php:1175
 msgid ""
-"主题源码使用 <a href=\"https://github.com/seatonjiang/kratos/blob/main/"
+"主题源码使用 <a href=\"https://github.com/devhaozi/kratos/blob/main/"
 "LICENSE\" target=\"_blank\">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href="
 "\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC "
 "BY-NC-ND 4.0</a> 进行许可。"
@@ -1499,7 +1499,7 @@ msgid "下一篇 >"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/seatonjiang/kratos"
+msgid "https://github.com/devhaozi/kratos"
 msgstr ""
 
 #. Description of the plugin/theme
