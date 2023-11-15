@@ -48,7 +48,7 @@ CSF::createOptions($prefix, array(
     'show_all_options' => false,
     'sticky_header' => false,
     'admin_bar_menu_icon' => 'dashicons-admin-generic',
-    'framework_title' => '主题设置<small style="margin-left:10px">Kratos v' . THEME_VERSION . '</small>',
+    'framework_title' => '主题设置<small style="margin-left:10px">Kratos Pjax Edition v' . THEME_VERSION . '</small>',
     'theme' => 'light',
     'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/devhaozi/kratos">Kratos Pjax Edition</a> 主题开始创作，欢迎加入交流群：<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=I1oJKSTH">12370907</a>',
 ));
