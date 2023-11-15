@@ -128,6 +128,13 @@ CSF::createSection($prefix, array(
             'default' => false,
         ),
         array(
+            'id' => 'g_l2d',
+            'type' => 'switcher',
+            'title' => __('Live2D 看板娘', 'kratos'),
+            'subtitle' => __('启用/禁用 Live2D 看板娘', 'kratos'),
+            'default' => false,
+        ),
+        array(
             'id' => 'g_pjax',
             'type' => 'switcher',
             'title' => __('Pjax 加载', 'kratos'),
