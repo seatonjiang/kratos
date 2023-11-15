@@ -9,7 +9,7 @@
 
 get_header(); ?>
 <div class="k-main <?php echo kratos_option('top_img_switch', true) ? 'banner' : 'color' ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
-    <div id="pjax" class="container">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 details">
                 <?php if (have_posts()) : the_post();

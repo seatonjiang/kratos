@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 <div class="k-main <?php echo kratos_option('top_img_switch', true) ? 'banner' : 'color' ?>" style="background:<?php echo kratos_option('g_background', '#f5f5f5'); ?>">
-    <div id="pjax" class="container">
+    <div class="container">
         <div class="row">
             <div class="col-lg-8 board">
                 <?php if (is_home() && kratos_option('g_carousel', false)) {

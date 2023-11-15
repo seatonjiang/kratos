@@ -9,7 +9,7 @@
 
 get_header(); ?>
 <div class="k-main <?php echo kratos_option('top_img_switch', true) ? 'banner' : 'color' ?>" style="background:#ffffff">
-    <div id="pjax" class="container">
+    <div class="container">
         <div class="row">
             <div class="col-12 page404">
                 <div class="thumbnail" style="background-image: url(<?php echo kratos_option('g_404', ASSET_PATH . '/assets/img/404.jpg'); ?>">
