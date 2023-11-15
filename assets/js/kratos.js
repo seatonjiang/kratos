@@ -3,7 +3,7 @@
  * Seaton Jiang <hi@seatonjiang.com>
  */
 
-var KRATOS_VERSION = "4.2.4.1";
+var KRATOS_VERSION = "4.2.4.2";
 
 var $ = jQuery.noConflict();
 
