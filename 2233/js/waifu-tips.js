@@ -218,10 +218,10 @@ if (!isMobileDevice()) {
         jQuery(document).on("mouseover", "#comment", function () {
             showMessage('要说点什么吗');
         });
-        jQuery(document).on("mouseover", ".action-rewards", function () {
+        jQuery(document).on("mouseover", "#donate", function () {
             showMessage('要打赏我嘛？好期待啊~');
         });
-        jQuery(document).on("mouseover", ".i-like", function () {
+        jQuery(document).on("mouseover", "#thumbs", function () {
             showMessage('我是不是棒棒哒~快给我点赞吧！');
         });
         jQuery(document).on("mouseover", "#sign-in", function () {
