@@ -5,20 +5,20 @@ function isMobileDevice() {
 
 if (!isMobileDevice()) {
     //初始位置，默认左上角，与下面的 目标位置 搭配修改
-    $(".waifu").css({'top': 0, 'left': 0});
+    jQuery(".waifu").css({'top': 0, 'left': 0});
 
     let waifu_display = localStorage.getItem('waifu-display');
     if (waifu_display == "none") {
-        $('.waifu').hide();
-        $('.waifu-btn').show();
+        jQuery('.waifu').hide();
+        jQuery('.waifu-btn').show();
     }
-    $('.waifu-btn').click(function () {
+    jQuery('.waifu-btn').click(function () {
         localStorage.removeItem('waifu-display');
-        $('.waifu').show();
-        $('.waifu-btn').hide();
+        jQuery('.waifu').show();
+        jQuery('.waifu-btn').hide();
         showMessage('你的小可爱突然出现~', 4000);
     });
-    $('.waifu-tool .home').click(function () {
+    jQuery('.waifu-tool .home').click(function () {
         try {
             if (typeof (ajax) === "function") {
                 ajax(window.location.protocol + '//' + window.location.hostname + '/', "pagelink");
@@ -28,57 +28,57 @@ if (!isMobileDevice()) {
         } catch (e) {
         }
     });
-    $('.waifu-tool .comments').click(function () {
+    jQuery('.waifu-tool .comments').click(function () {
         showHitokoto();
     });
-    $('.waifu-tool .info-circle').click(function () {
+    jQuery('.waifu-tool .info-circle').click(function () {
         window.open('https://moedog.org/946.html');
     });
-    $('.waifu-tool .camera').click(function () {
+    jQuery('.waifu-tool .camera').click(function () {
         showMessage('照好了嘛，是不是很可爱呢？', 5000);
         window.Live2D.captureName = model_p + '.png';
         window.Live2D.captureFrame = true;
     });
-    $('.waifu-tool .close').click(function () {
+    jQuery('.waifu-tool .close').click(function () {
         localStorage.setItem('waifu-display', 'none');
         showMessage('愿你有一天能与重要的人重逢', 2000);
         window.setTimeout(function () {
-            $('.waifu').hide();
-            $('.waifu-btn').show()
+            jQuery('.waifu').hide();
+            jQuery('.waifu-btn').show()
         }, 1000);
     });
     var model_p = 22, m22_id = 0, m33_id = 0;
-    $('.waifu-tool .drivers-license-o').click(function () {
+    jQuery('.waifu-tool .drivers-license-o').click(function () {
         if (model_p === 22) {
-            loadlive2d('live2d', $(".l2d_xb").attr("data-api") + '/model/api.php?p=22&id=' + m22_id);
+            loadlive2d('live2d', jQuery(".l2d_xb").attr("data-api") + '/model/api.php?p=22&id=' + m22_id);
             model_p = 33;
             showMessage('33援交有点累了，现在该我上场了', 4000);
         } else {
-            loadlive2d('live2d', $(".l2d_xb").attr("data-api") + '/model/api.php?p=33&id=' + m33_id);
+            loadlive2d('live2d', jQuery(".l2d_xb").attr("data-api") + '/model/api.php?p=33&id=' + m33_id);
             model_p = 22;
             showMessage('我又回来了！', 4000);
         }
     });
-    $('.waifu-tool .street-view').click(function () {
+    jQuery('.waifu-tool .street-view').click(function () {
         if (model_p === 22) {
             m33_id += 1;
-            loadlive2d('live2d', $(".l2d_xb").attr("data-api") + '/model/api.php?p=33&id=' + m33_id);
+            loadlive2d('live2d', jQuery(".l2d_xb").attr("data-api") + '/model/api.php?p=33&id=' + m33_id);
         } else {
             m22_id += 1;
-            loadlive2d('live2d', $(".l2d_xb").attr("data-api") + '/model/api.php?p=22&id=' + m22_id);
+            loadlive2d('live2d', jQuery(".l2d_xb").attr("data-api") + '/model/api.php?p=22&id=' + m22_id);
         }
         showMessage('我的新衣服好看嘛', 4000);
     });
-    loadlive2d('live2d', $(".l2d_xb").attr("data-api") + '/model/api.php?p=33');
-    $(document).on('copy', function () {
+    loadlive2d('live2d', jQuery(".l2d_xb").attr("data-api") + '/model/api.php?p=33');
+    jQuery(document).on('copy', function () {
         showMessage('你都复制了些什么呀，转载要记得加上出处哦', 8000);
     });
-    $(window).resize(function () {
-        $(".waifu").css('top', window.innerHeight - 250);
+    jQuery(window).resize(function () {
+        jQuery(".waifu").css('top', window.innerHeight - 250);
     });
 
     function showHitokoto() {
-        $.get("https://v1.hitokoto.cn/?encode=text", function (result) {
+        jQuery.get("https://v1.hitokoto.cn/?encode=text", function (result) {
             showMessage(result);
         });
     }
@@ -136,119 +136,119 @@ if (!isMobileDevice()) {
             }
         }
         //目标位置，默认左下角
-        $(".waifu").animate({top: $(window).height() - 250, left: $(window).width() - 250}, 800);
+        jQuery(".waifu").animate({top: jQuery(window).height() - 250, left: jQuery(window).width() - 250}, 800);
         showMessage(text, 8000);
     })();
-    $("#live2d").mouseover(function () {
+    jQuery("#live2d").mouseover(function () {
         msgs = ["你要干嘛呀？", "鼠…鼠标放错地方了！", "喵喵喵？", "萝莉控是什么呀？", "怕怕", "你看到我的小熊了吗"];
         var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
-    jQuery(document).ready(function ($) {
-        $('.waifu-tool .comments').mouseover(function () {
+    jQuery(document).ready(function (jQuery) {
+        jQuery('.waifu-tool .comments').mouseover(function () {
             showMessage('猜猜我要说些什么？');
         });
-        $('.waifu-tool .drivers-license-o').mouseover(function () {
+        jQuery('.waifu-tool .drivers-license-o').mouseover(function () {
             if (model_p === 22) {
                 showMessage('要见见我的姐姐嘛');
             } else {
                 showMessage('什么？我的服务不好，要33回来？');
             }
         });
-        $('.waifu-tool .street-view').mouseover(function () {
+        jQuery('.waifu-tool .street-view').mouseover(function () {
             showMessage('喜欢换装play吗？');
         });
-        $('.waifu-tool .camera').mouseover(function () {
+        jQuery('.waifu-tool .camera').mouseover(function () {
             showMessage('你要给我拍照呀？一二三～茄子～');
         });
-        $('.waifu-tool .info-circle').mouseover(function () {
+        jQuery('.waifu-tool .info-circle').mouseover(function () {
             showMessage('想知道更多关于我的事么？');
         });
-        $('.waifu-tool .close').mouseover(function () {
+        jQuery('.waifu-tool .close').mouseover(function () {
             showMessage('到了要说再见的时候了吗');
         });
-        $(document).on("mouseover", ".logo,.waifu-tool .home,.fa-home", function () {
+        jQuery(document).on("mouseover", ".logo,.waifu-tool .home,.fa-home", function () {
             showMessage('点它就可以回到首页啦！');
         });
-        $(document).on("mouseover", "li a i.fa-qq", function () {
+        jQuery(document).on("mouseover", "li a i.fa-qq", function () {
             showMessage('要加QQ吗?');
         });
-        $(document).on("mouseover", "li a i.fa-phone", function () {
+        jQuery(document).on("mouseover", "li a i.fa-phone", function () {
             showMessage('不要打骚扰电话哦！');
         });
-        $(document).on("mouseover", "li a i.fa-qrcode", function () {
+        jQuery(document).on("mouseover", "li a i.fa-qrcode", function () {
             showMessage('求关注！！！');
         });
-        $(document).on("mouseover", "li a i.fa-globe", function () {
+        jQuery(document).on("mouseover", "li a i.fa-globe", function () {
             showMessage('在线咨询走起！');
         });
-        $(document).on("mouseover", "li a i.fa-comments", function () {
+        jQuery(document).on("mouseover", "li a i.fa-comments", function () {
             showMessage('在网站上留下足迹！');
         });
-        $(document).on("mouseover", ".gotop", function () {
+        jQuery(document).on("mouseover", ".gotop", function () {
             showMessage('要回到开始的地方么？');
         });
-        $(document).on("mouseover", ".search", function () {
+        jQuery(document).on("mouseover", ".search", function () {
             showMessage('找不到想要的？试试搜索吧！');
         });
-        $(document).on("click", ".search-form", function () {
+        jQuery(document).on("click", ".search-form", function () {
             showMessage("输入关键词按下Enter键就可以了！");
         });
-        $(document).on("mouseover", "h3 a,.bookmark-item", function () {
-            showMessage('要看看<span style="color:#0099cc;">' + $(this).text() + '</span>么？');
+        jQuery(document).on("mouseover", "h3 a,.bookmark-item", function () {
+            showMessage('要看看<span style="color:#0099cc;">' + jQuery(this).text() + '</span>么？');
         });
-        $(document).on("mouseover", ".nav-previous", function () {
+        jQuery(document).on("mouseover", ".nav-previous", function () {
             showMessage('要翻到上一篇文章吗?');
         });
-        $(document).on("mouseover", ".nav-next", function () {
+        jQuery(document).on("mouseover", ".nav-next", function () {
             showMessage('要翻到下一篇文章吗?');
         });
-        $(document).on("mouseover", "#lightgallery a", function () {
-            showMessage('去 <span style="color:#0099cc;">' + $(this).text() + '</span> 逛逛吧');
+        jQuery(document).on("mouseover", "#lightgallery a", function () {
+            showMessage('去 <span style="color:#0099cc;">' + jQuery(this).text() + '</span> 逛逛吧');
         });
-        $(document).on("mouseover", "#submit", function () {
+        jQuery(document).on("mouseover", "#submit", function () {
             showMessage('呐 评论需要审核，请耐心等待哦~');
         });
-        $(document).on("mouseover","#addsmile",function(){
+        jQuery(document).on("mouseover","#addsmile",function(){
             showMessage('要来一发表情吗？')
         });
-        $(document).on("mouseover", ".i-up", function () {
+        jQuery(document).on("mouseover", ".i-up", function () {
             showMessage('点它可以回到顶部哦！');
         });
-        $(document).on("mouseover", ".comment-textarea", function () {
+        jQuery(document).on("mouseover", "#comment", function () {
             showMessage('要说点什么吗');
         });
-        $(document).on("mouseover", ".action-rewards", function () {
+        jQuery(document).on("mouseover", ".action-rewards", function () {
             showMessage('要打赏我嘛？好期待啊~');
         });
-        $(document).on("mouseover", ".i-like", function () {
+        jQuery(document).on("mouseover", ".i-like", function () {
             showMessage('我是不是棒棒哒~快给我点赞吧！');
         });
-        $(document).on("mouseover", "#sign-in", function () {
+        jQuery(document).on("mouseover", "#sign-in", function () {
             showMessage('登录才可以继续哦~');
         });
-        $(document).on("mouseover", ".action-share", function () {
+        jQuery(document).on("mouseover", ".action-share", function () {
             showMessage('好东西要让更多人知道才行哦');
         });
-        $(document).on("click", "#author", function () {
+        jQuery(document).on("click", "#author", function () {
             showMessage("留下你的尊姓大名！");
         });
-        $(document).on("click", "#email", function () {
+        jQuery(document).on("click", "#email", function () {
             showMessage("留下你的邮箱，不然就是无头像人士了！");
         });
-        $(document).on("click", "#url", function () {
+        jQuery(document).on("click", "#url", function () {
             showMessage("快快告诉我你的家在哪里，好让我去参观参观！");
         });
-        $(document).on("click", "#comment", function () {
+        jQuery(document).on("click", "#comment", function () {
             showMessage("一定要认真填写喵~");
         });
     });
-    jQuery(document).ready(function ($) {
+    jQuery(document).ready(function (jQuery) {
         window.setInterval(function () {
             showMessage(showHitokoto());
         }, 25000);
         var stat_click = 0;
-        $("#live2d").click(function () {
+        jQuery("#live2d").click(function () {
             if (!ismove) {
                 stat_click++;
                 if (stat_click > 6) {
@@ -261,7 +261,7 @@ if (!isMobileDevice()) {
                 s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, -0.1, -0.2, -0.3, -0.4, -0.5, -0.6, -0.7, -0.75];
                 var i1 = Math.floor(Math.random() * s.length);
                 var i2 = Math.floor(Math.random() * s.length);
-                $(".waifu").animate({
+                jQuery(".waifu").animate({
                         left: (document.body.offsetWidth - 210) / 2 * (1 + s[i1]),
                         top: (window.innerHeight - 240) - (window.innerHeight - 240) / 2 * (1 - s[i2])
                     },
@@ -275,8 +275,8 @@ if (!isMobileDevice()) {
         });
     });
     var ismove = false;
-    jQuery(document).ready(function ($) {
-        var box = $('.waifu')[0];
+    jQuery(document).ready(function (jQuery) {
+        var box = jQuery('.waifu')[0];
         var topCount = 20;
         box.onmousedown = function (e) {
             var Ocx = e.clientX;
@@ -309,5 +309,5 @@ if (!isMobileDevice()) {
         }
     });
 } else {
-    $(".l2d_xb").hide()
+    jQuery(".l2d_xb").hide()
 }

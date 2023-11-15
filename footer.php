@@ -105,43 +105,47 @@
 
 <?php if (kratos_option('g_pjax', true)): ?>
     <script>
-        let myhkTipsTime = null;
-        let myhkTips = {
-            show: function (a) {
-                clearTimeout(myhkTipsTime);
-                jQuery("#myhkTips")["text"](a)["addClass"]("show");
-                this["hide"]();
-            },
-            hide: function () {
-                myhkTipsTime = setTimeout(function () {
-                    jQuery("#myhkTips")["removeClass"]("show");
-                }, 3000);
-            }
-        };
+      let myhkTipsTime = null;
+      let myhkTips = {
+        show: function (a) {
+          clearTimeout(myhkTipsTime);
+          jQuery("#myhkTips")["text"](a)["addClass"]("show");
+          this["hide"]();
+        },
+        hide: function () {
+          myhkTipsTime = setTimeout(function () {
+            jQuery("#myhkTips")["removeClass"]("show");
+          }, 3000);
+        }
+      };
 
-        +(function ($) {
-            let pjax_container = '#pjax',
-                pjax_timeout = 15000
-            $(document).pjax('a[target!=_blank]', pjax_container, {
-                fragment: pjax_container,
-                timeout: pjax_timeout
-            })
-            $(document).on('submit', 'form.search-form', function (event) {
-                $.pjax.submit(event, pjax_container, {
-                    fragment: pjax_container,
-                    timeout: pjax_timeout
-                })
-            })
-            $(document).on('pjax:send', function () {
-                $(".loader").css("display", "block")
-            })
-            $(document).on('pjax:complete', function (xhr, textStatus, options) {
-                $(".loader").css("display", "none")
-                if ("undefined" != typeof myhkplayer) {
-                    myhkTips.show(document.title + " 加载完成")
-                }
-            })
-        })(jQuery);
+      +(function ($) {
+        let pjax_container = '#pjax',
+          pjax_timeout = 15000
+        $(document).pjax('a[target!=_blank]', pjax_container, {
+          fragment: pjax_container,
+          timeout: pjax_timeout
+        })
+        $(document).on('submit', 'form.search-form', function (event) {
+          $.pjax.submit(event, pjax_container, {
+            fragment: pjax_container,
+            timeout: pjax_timeout
+          })
+        })
+        $(document).on('pjax:send', function () {
+          $(".loader").css("display", "block")
+        })
+        $(document).on('pjax:complete', function (xhr, textStatus, options) {
+          console.clear()
+          $.getScript("<?php echo get_stylesheet_directory_uri() ?>/assets/js/kratos.js", function () {
+            afterPjax()
+          })
+          $(".loader").css("display", "none")
+          if ("undefined" != typeof myhkplayer) {
+            myhkTips.show(document.title + " 加载完成")
+          }
+        })
+      })(jQuery);
     </script>
 <?php endif; ?>
 

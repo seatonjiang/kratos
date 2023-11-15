@@ -4,7 +4,9 @@
 //默认模型 ID，0~19 数字，对应下面的模型列表
 $default_id = 10;
 //是否允许出现全裸模型
-$r18 = false;
+$r18 = true;
+//CDN域名
+$cdndomain = '/wp-content/themes/kratos/2233/model/';
 
 //----------------------------------------
 
@@ -46,14 +48,14 @@ $id = $id_ % $modelnum;
 $modelname = $modelname[$id];
 $live2dcfg = array(
 	"type" => "Live2D Model Setting",
-	"name" => $person."-".$modelname,
-	"label" => $person,
-	"model" => $person."/".$person.".v2.moc",
+	"name" => $cdndomain.$person."-".$modelname,
+	"label" => $cdndomain.$person,
+	"model" => $cdndomain.$person."/".$person.".v2.moc",
 	"textures" => array(
-		$person."/texture_00.png",
-		$person."/closet.".$modelname."/".getTexture($modellist,$modelname,0),
-		$person."/closet.".$modelname."/".getTexture($modellist,$modelname,1),
-		$person."/closet.".$modelname."/".getTexture($modellist,$modelname,2)
+		$cdndomain.$person."/texture_00.png",
+		$cdndomain.$person."/closet.".$modelname."/".getTexture($modellist,$modelname,0),
+		$cdndomain.$person."/closet.".$modelname."/".getTexture($modellist,$modelname,1),
+		$cdndomain.$person."/closet.".$modelname."/".getTexture($modellist,$modelname,2)
 	),
 	"hit_areas_custom" => array(
 		"head_x" => array(-0.35,0.6),
@@ -69,31 +71,31 @@ $live2dcfg = array(
 	"motions" => array(
 		"idle" => array(
 			array(
-				"file" => $person."/".$person.".v2.idle-01.mtn",
+				"file" => $cdndomain.$person."/".$person.".v2.idle-01.mtn",
 				"fade_in" => 2000,
 				"fade_out" => 2000
 			),
 			array(
-				"file" => $person."/".$person.".v2.idle-02.mtn",
+				"file" => $cdndomain.$person."/".$person.".v2.idle-02.mtn",
 				"fade_in" => 2000,
 				"fade_out" => 2000
 			),
 			array(
-				"file" => $person."/".$person.".v2.idle-03.mtn",
+				"file" => $cdndomain.$person."/".$person.".v2.idle-03.mtn",
 				"fade_in" => $person == "22" ? 100 : 2000,
 				"fade_out" => $person == "22" ? 100 : 2000
 			)
 		),
 		"tap_body" => array(
 			array(
-				"file" => $person."/".$person.".v2.touch.mtn",
+				"file" => $cdndomain.$person."/".$person.".v2.touch.mtn",
 				"fade_in" => $person == "22" ? 500 : 150,
 				"fade_out" => $person == "22" ? 200 : 100
 			)
 		),
 		"thanking" => array(
 			array(
-				"file" => $person."/".$person.".v2.thanking.mtn",
+				"file" => $cdndomain.$person."/".$person.".v2.thanking.mtn",
 				"fade_in" => 2000,
 				"fade_out" => 2000
 			)
