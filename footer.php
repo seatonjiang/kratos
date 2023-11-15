@@ -55,9 +55,6 @@
 					?>
                 </p>
 				<?php
-				if (kratos_option('s_icp')) {
-					echo '<p><a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">' . kratos_option('s_icp') . '</a></p>';
-				}
 				if (kratos_option('g_performance')) {
 					echo '<p>'. sprintf( '请求次数：%d 次，加载用时：%.3f 秒，内存占用：%.2f MB', get_num_queries(), timer_stop(), memory_get_peak_usage() / 1024 / 1024 ) . '</p>';
 				}
