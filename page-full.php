@@ -4,7 +4,7 @@
  * Template Name: 单页样式
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2022.11.27
+ * @version 2024.01.17
 */
 
 get_header(); ?>
@@ -18,7 +18,7 @@ get_header(); ?>
                         <div class="header text-center">
                             <h1 class="title m-0"><?php the_title(); ?></h1>
                         </div>
-                        <div class="content">
+                        <div class="content" id="lightgallery">
                             <?php
                             the_content();
                             wp_link_pages(

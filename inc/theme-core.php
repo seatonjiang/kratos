@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.04.04
+ * @version 2024.01.17
  */
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
@@ -43,7 +43,7 @@ function theme_autoload()
         wp_enqueue_style('bootstrap', ASSET_PATH . '/assets/css/bootstrap.min.css', array(), '4.5.0');
         wp_enqueue_style('kicon', ASSET_PATH . '/assets/css/iconfont.min.css', array(), THEME_VERSION);
         wp_enqueue_style('layer', ASSET_PATH . '/assets/css/layer.min.css', array(), '3.1.1');
-        if (kratos_option('g_lightgallery', true)) {
+        if ((kratos_option('g_article_lightgallery', true) && is_single()) || (kratos_option('g_page_lightgallery', true) && is_page())) {
             wp_enqueue_script('lightgallery', ASSET_PATH . '/assets/js/lightgallery.min.js', array(), '1.4.0', true);
             wp_enqueue_style('lightgallery', ASSET_PATH . '/assets/css/lightgallery.min.css', array(), '1.4.0');
         }
@@ -106,7 +106,6 @@ function theme_autoload()
             'directory' => ASSET_PATH,
             'alipay' => kratos_option('g_donate_fieldset')['g_donate_alipay'] ?? '',
             'wechat' => kratos_option('g_donate_fieldset')['g_donate_wechat'] ?? '',
-            'lightgallery' => kratos_option('g_lightgallery', true),
             'repeat' => __('您已经赞过了', 'kratos'),
             'thanks' => __('感谢您的支持', 'kratos'),
             'donate' => __('打赏作者', 'kratos'),

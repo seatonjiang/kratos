@@ -157,7 +157,7 @@
   };
 
   var lightGalleryConfig = function () {
-    if (kratos.lightgallery === "1" && window.lightGallery !== undefined) {
+    if (typeof lightGallery !== 'undefined') {
       lightGallery(document.getElementById("lightgallery"), {
         selector:
           'a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"], a[href$=".bmp"], a[href$=".webp"]',

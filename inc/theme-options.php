@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.08.25
+ * @version 2024.01.17
  */
 
 defined('ABSPATH') || exit;
@@ -147,6 +147,13 @@ CSF::createSection($prefix, array(
             'title' => __('Gutenberg 编辑器', 'kratos'),
             'subtitle' => __('启用/禁用 Gutenberg 编辑器', 'kratos'),
             'default' => false,
+        ),
+        array(
+            'id' => 'g_page_lightgallery',
+            'type' => 'switcher',
+            'title' => __('页面图片灯箱', 'kratos'),
+            'subtitle' => __('启用/禁用页面图片灯箱功能', 'kratos'),
+            'default' => true,
         ),
         array(
             'id' => 'g_excerpt_length',
@@ -682,7 +689,7 @@ CSF::createSection($prefix, array(
             'default' => true,
         ),
         array(
-            'id' => 'g_lightgallery',
+            'id' => 'g_article_lightgallery',
             'type' => 'switcher',
             'title' => __('文章图片灯箱', 'kratos'),
             'subtitle' => __('启用/禁用文章图片灯箱功能', 'kratos'),
