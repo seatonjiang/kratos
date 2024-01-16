@@ -1,12 +1,12 @@
-[English](README.md) | 简体中文
+[English](README.md) | **简体中文**
 
 <p align="center">
     <img src="assets/img/options/about.png">
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/PHP-%3E7.4-777BB4?style=flat-square&logo=php&logoColor=#777BB4">
-    <img src="https://img.shields.io/badge/WordPress-v6.4%20alpha%20tested-21759B?style=flat-square&logo=wordpress">
+    <img src="https://img.shields.io/badge/PHP-%3E8.0-777BB4?style=flat-square&logo=php&logoColor=#777BB4">
+    <img src="https://img.shields.io/badge/WordPress-v6.5%20tested-21759B?style=flat-square&logo=wordpress">
     <a href="https://github.com/seatonjiang/kratos/issues">
         <img src="https://img.shields.io/github/issues/seatonjiang/kratos?style=flat-square&color=blue">
     </a>
@@ -40,7 +40,7 @@
 
 ## 🤝 参与共建
 
-我们欢迎所有的贡献，你可以将任何想法作为 pull requests 或 issues 提交，顺颂商祺 :)
+我们欢迎所有的贡献，你可以将任何想法作为 Pull requests 或 Issues 提交，顺颂商祺！
 
 ## 📃 开源许可
 
