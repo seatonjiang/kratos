@@ -7,7 +7,7 @@
  * @version 2023.08.25
  */
 
-define('THEME_VERSION', '4.2.4');
+define('THEME_VERSION', '4.3.0');
 
 if (defined('WP_USE_THEMES') && WP_USE_THEMES === false) {
     return;
