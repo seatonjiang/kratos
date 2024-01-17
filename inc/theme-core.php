@@ -124,6 +124,16 @@ function kratos_admin_enqueue()
 
 add_action('admin_enqueue_scripts', 'kratos_admin_enqueue', 20);
 
+// 后台提示
+if (kratos_option('g_admin_notice', true)) {
+    function custom_admin_notice()
+    {
+        $message = __('感谢您使用 Kratos 主题进行创作，全新主题 Fraise 即将上线，欢迎加入 QQ 群讨论交流：618958939', 'kratos');
+        echo '<div class="notice notice-info "><p>' . $message . '</p></div>';
+    }
+    add_action('admin_notices', 'custom_admin_notice');
+}
+
 // 前台管理员导航
 if (!kratos_option('g_adminbar', true)) {
     add_filter('show_admin_bar', '__return_false');

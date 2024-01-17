@@ -156,6 +156,13 @@ CSF::createSection($prefix, array(
             'default' => true,
         ),
         array(
+            'id' => 'g_admin_notice',
+            'type' => 'switcher',
+            'title' => __('后台管理员通知', 'kratos'),
+            'subtitle' => __('启用/禁用后台管理员通知', 'kratos'),
+            'default' => true,
+        ),
+        array(
             'id' => 'g_excerpt_length',
             'type' => 'text',
             'title' => __('文章简介缩略', 'kratos'),
