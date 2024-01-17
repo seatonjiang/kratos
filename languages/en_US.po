@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kratos\n"
 "POT-Creation-Date: 2024-01-17 01:50+0800\n"
-"PO-Revision-Date: 2024-01-16 18:49\n"
+"PO-Revision-Date: 2024-01-17 01:11\n"
 "Last-Translator: Seaton Jiang <hi@seatonjiang.com>\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgstr "What do you want to search?"
 
 #: header.php:102 inc/theme-options.php:898
 msgid "专注于用户阅读体验的响应式博客主题"
-msgstr ""
+msgstr "Responsive blog themes focused on user reading experience"
 
 #: inc/theme-article.php:218
 msgid "评论正在提交中"
@@ -102,11 +102,11 @@ msgstr "Comment submitted"
 
 #: inc/theme-article.php:249 inc/theme-article.php:305
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Your comment is awaiting moderation."
 
 #: inc/theme-article.php:251 inc/theme-article.php:307
 msgid "Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved."
-msgstr ""
+msgstr "Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved."
 
 #: inc/theme-article.php:272 inc/theme-article.php:328
 msgid "编辑"
@@ -154,7 +154,7 @@ msgstr "Top menu"
 
 #: inc/theme-navwalker.php:387
 msgid "Add a menu"
-msgstr ""
+msgstr "Add a menu"
 
 #: inc/theme-options.php:45
 msgid "主题设置"
@@ -238,7 +238,7 @@ msgstr "Static resources boost"
 
 #: inc/theme-options.php:127
 msgid "启用/禁用静态资源加速（jsDelivr）"
-msgstr ""
+msgstr "Enable/disable static resources acceleration (jsDelivr)"
 
 #: inc/theme-options.php:133
 msgid "自定义图片类型的文件名"
@@ -298,7 +298,7 @@ msgstr ""
 
 #: inc/theme-options.php:182
 msgid "Gravatar 加速服务地址"
-msgstr ""
+msgstr "Gravatar boost"
 
 #: inc/theme-options.php:183
 msgid "请选择 Gravatar 加速服务地址"
