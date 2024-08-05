@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2024.01.17
+ * @version 2024.08.05
  */
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
@@ -128,7 +128,7 @@ add_action('admin_enqueue_scripts', 'kratos_admin_enqueue', 20);
 if (kratos_option('g_admin_notice', true)) {
     function custom_admin_notice()
     {
-        $message = __('感谢您使用 Kratos 主题进行创作，全新主题 Fraise 即将上线，欢迎加入 QQ 群讨论交流：618958939', 'kratos');
+        $message = __('感谢您使用 Kratos 主题进行创作，全新主题 Fraise 即将上线，欢迎加入 QQ 群讨论交流：618958939，可在「主题设置 - 全站配置 - 后台管理员通知」关闭此通知。', 'kratos');
         echo '<div class="notice notice-info "><p>' . $message . '</p></div>';
     }
     add_action('admin_notices', 'custom_admin_notice');
