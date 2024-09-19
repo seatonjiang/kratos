@@ -1,4 +1,5 @@
 <?php
+
 /**
  * WP Bootstrap Navwalker
  *
@@ -8,7 +9,7 @@
  * Plugin Name: WP Bootstrap Navwalker
  * Plugin URI:  https://github.com/wp-bootstrap/wp-bootstrap-navwalker
  * Description: A custom WordPress nav walker class to implement the Bootstrap 4 navigation style in a custom theme using the WordPress built in menu manager.
- * Author: Edward McIntyre - @twittem, WP Bootstrap, William Patton - @pattonwebz
+ * Author: Edward McIntyre - @twittem, WP Bootstrap, William Patton - @pattonwebz, IanDelMar - @IanDelMar
  * Version: 4.3.0
  * Author URI: https://github.com/wp-bootstrap
  * GitHub Plugin URI: https://github.com/wp-bootstrap/wp-bootstrap-navwalker
@@ -310,7 +311,6 @@ if (!class_exists('WP_Bootstrap_Navwalker')) {
 
             // END appending the internal item contents to the output.
             $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
-
         }
 
         /**
@@ -337,11 +337,13 @@ if (!class_exists('WP_Bootstrap_Navwalker')) {
         public function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output)
         {
             if (!$element) {
-                return;}
+                return;
+            }
             $id_field = $this->db_fields['id'];
             // Display this element.
             if (is_object($args[0])) {
-                $args[0]->has_children = !empty($children_elements[$element->$id_field]);}
+                $args[0]->has_children = !empty($children_elements[$element->$id_field]);
+            }
             parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
         }
 
@@ -381,9 +383,11 @@ if (!class_exists('WP_Bootstrap_Navwalker')) {
                 }
                 $fallback_output .= '<ul';
                 if ($menu_id) {
-                    $fallback_output .= ' id="' . esc_attr($menu_id) . '"';}
+                    $fallback_output .= ' id="' . esc_attr($menu_id) . '"';
+                }
                 if ($menu_class) {
-                    $fallback_output .= ' class="' . esc_attr($menu_class) . '"';}
+                    $fallback_output .= ' class="' . esc_attr($menu_class) . '"';
+                }
                 $fallback_output .= '>';
                 $fallback_output .= '<li class="nav-item"><a href="' . esc_url(admin_url('nav-menus.php')) . '" class="nav-link">' . esc_attr__('添加导航', 'kratos') . '</a></li>';
                 $fallback_output .= '</ul>';

@@ -4,7 +4,7 @@
  * 主题选项
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.08.25
+ * @version 2024.01.17
  */
 
 defined('ABSPATH') || exit;
@@ -171,6 +171,20 @@ CSF::createSection($prefix, array(
             'title' => __('Gutenberg 编辑器', 'kratos'),
             'subtitle' => __('启用/禁用 Gutenberg 编辑器', 'kratos'),
             'default' => false,
+        ),
+        array(
+            'id' => 'g_page_lightgallery',
+            'type' => 'switcher',
+            'title' => __('页面图片灯箱', 'kratos'),
+            'subtitle' => __('启用/禁用页面图片灯箱功能', 'kratos'),
+            'default' => true,
+        ),
+        array(
+            'id' => 'g_admin_notice',
+            'type' => 'switcher',
+            'title' => __('后台管理员通知', 'kratos'),
+            'subtitle' => __('启用/禁用后台管理员通知', 'kratos'),
+            'default' => true,
         ),
         array(
             'id' => 'g_excerpt_length',
@@ -739,7 +753,7 @@ CSF::createSection($prefix, array(
             'default' => true,
         ),
         array(
-            'id' => 'g_lightgallery',
+            'id' => 'g_article_lightgallery',
             'type' => 'switcher',
             'title' => __('文章图片灯箱', 'kratos'),
             'subtitle' => __('启用/禁用文章图片灯箱功能', 'kratos'),
@@ -1282,7 +1296,7 @@ CSF::createSection($prefix, array(
         ),
         array(
             'type' => 'content',
-            'content' => '如果您有用到我开发维护的项目，请考虑支持一下我的工作，让我可以持续的维护它们，您可在爱发电（<a href="https://afdian.net/a/seatonjiang" target="_blank">https://afdian.net/a/seatonjiang</a>）中进行打赏，谢谢！',
+            'content' => '如果您有用到我开发维护的项目，请考虑支持一下我的工作，让我可以持续的维护它们，您可在爱发电（<a href="https://afdian.com/a/seatonjiang" target="_blank">https://afdian.com/a/seatonjiang</a>）中进行打赏，谢谢！',
         ),
     ),
 ));

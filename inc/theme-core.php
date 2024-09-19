@@ -4,7 +4,7 @@
  * 核心函数
  * @author Seaton Jiang <hi@seatonjiang.com>
  * @license GPL-3.0 License
- * @version 2023.04.04
+ * @version 2024.08.05
  */
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
@@ -43,7 +43,7 @@ function theme_autoload()
         wp_enqueue_style('bootstrap', ASSET_PATH . '/assets/css/bootstrap.min.css', array(), '4.5.0');
         wp_enqueue_style('kicon', ASSET_PATH . '/assets/css/iconfont.min.css', array(), THEME_VERSION);
         wp_enqueue_style('layer', ASSET_PATH . '/assets/css/layer.min.css', array(), '3.1.1');
-        if (kratos_option('g_lightgallery', true)) {
+        if ((kratos_option('g_article_lightgallery', true) && is_single()) || (kratos_option('g_page_lightgallery', true) && is_page())) {
             wp_enqueue_script('lightgallery', ASSET_PATH . '/assets/js/lightgallery.min.js', array(), '1.4.0', true);
             wp_enqueue_style('lightgallery', ASSET_PATH . '/assets/css/lightgallery.min.css', array(), '1.4.0');
         }
@@ -112,7 +112,6 @@ function theme_autoload()
             'directory' => ASSET_PATH,
             'alipay' => kratos_option('g_donate_fieldset')['g_donate_alipay'] ?? '',
             'wechat' => kratos_option('g_donate_fieldset')['g_donate_wechat'] ?? '',
-            'lightgallery' => kratos_option('g_lightgallery', true),
             'repeat' => __('您已经赞过了', 'kratos'),
             'thanks' => __('感谢您的支持', 'kratos'),
             'donate' => __('打赏作者', 'kratos'),
@@ -130,6 +129,16 @@ function kratos_admin_enqueue()
 }
 
 add_action('admin_enqueue_scripts', 'kratos_admin_enqueue', 20);
+
+// 后台提示
+if (kratos_option('g_admin_notice', true)) {
+    function custom_admin_notice()
+    {
+        $message = __('感谢您使用 Kratos 主题进行创作，全新主题 Fraise 即将上线，欢迎加入 QQ 群讨论交流：618958939，可在「主题设置 - 全站配置 - 后台管理员通知」关闭此通知。', 'kratos');
+        echo '<div class="notice notice-info "><p>' . $message . '</p></div>';
+    }
+    add_action('admin_notices', 'custom_admin_notice');
+}
 
 // 前台管理员导航
 if (!kratos_option('g_adminbar', true)) {
