@@ -14,7 +14,7 @@ if (!class_exists('CSF_Field_map')) {
   {
 
     public $version = '1.7.1';
-    public $cdn_url = 'https://cdn.bootcdn.net/ajax/libs/leaflet/';
+    public $cdn_url = 'https://lf26-cdn-tos.bytecdntp.com/cdn/leaflet/';
 
     public function __construct($field, $value = '', $unique = '', $where = '', $parent = '')
     {
@@ -86,11 +86,11 @@ if (!class_exists('CSF_Field_map')) {
     {
 
       if (!wp_script_is('csf-leaflet')) {
-        wp_enqueue_script('csf-leaflet', esc_url($this->cdn_url . $this->version . '/dist/leaflet.js'), array('csf'), $this->version, true);
+        wp_enqueue_script('csf-leaflet', esc_url($this->cdn_url . $this->version . '/leaflet.js'), array('csf'), $this->version, true);
       }
 
       if (!wp_style_is('csf-leaflet')) {
-        wp_enqueue_style('csf-leaflet', esc_url($this->cdn_url . $this->version . '/dist/leaflet.css'), array(), $this->version);
+        wp_enqueue_style('csf-leaflet', esc_url($this->cdn_url . $this->version . '/leaflet.css'), array(), $this->version);
       }
 
       if (!wp_script_is('jquery-ui-autocomplete')) {

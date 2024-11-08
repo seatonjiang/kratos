@@ -12,9 +12,8 @@
 if (!class_exists('CSF_Field_code_editor')) {
   class CSF_Field_code_editor extends CSF_Fields
   {
-
     public $version = '5.62.2';
-    public $cdn_url = 'https://cdn.bootcdn.net/ajax/libs/codemirror/';
+    public $cdn_url = 'https://lf26-cdn-tos.bytecdntp.com/cdn/codemirror/';
 
     public function __construct($field, $value = '', $unique = '', $where = '', $parent = '')
     {
