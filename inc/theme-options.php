@@ -50,7 +50,7 @@ CSF::createOptions($prefix, array(
     'admin_bar_menu_icon' => 'dashicons-admin-generic',
     'framework_title' => '主题设置<small style="margin-left:10px">Kratos v' . THEME_VERSION . '</small>',
     'theme' => 'light',
-    'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/seatonjiang/kratos">Kratos</a> 主题开始创作，欢迎加入交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=_7pE5U4pbq4j2xeu_cyZqvasEd_i9wTf">618958939</a>、<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=8Okzvj3TP67642FTRvC1mKT7f8L4NOrk">839687348</a>、<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=b37-78PbXYvTdoUZq9rW-nEF6CEl4wBv">852844975</a>',
+    'footer_credit' => '感谢使用 <a target="_blank" href="https://github.com/seatonjiang/kratos">Kratos</a> 主题进行创作，欢迎加入主题交流群：<a target="_blank" href="https://qm.qq.com/q/yNBa2CSHd0">315990636</a>',
 ));
 
 CSF::createSection($prefix, array(
@@ -153,13 +153,6 @@ CSF::createSection($prefix, array(
             'type' => 'switcher',
             'title' => __('页面图片灯箱', 'kratos'),
             'subtitle' => __('启用/禁用页面图片灯箱功能', 'kratos'),
-            'default' => true,
-        ),
-        array(
-            'id' => 'g_admin_notice',
-            'type' => 'switcher',
-            'title' => __('后台管理员通知', 'kratos'),
-            'subtitle' => __('启用/禁用后台管理员通知', 'kratos'),
             'default' => true,
         ),
         array(
@@ -1224,14 +1217,6 @@ CSF::createSection($prefix, array(
         array(
             'type' => 'content',
             'content' => __('主题源码使用 <a href="https://github.com/seatonjiang/kratos/blob/main/LICENSE" target="_blank">GPL-3.0 协议</a> 进行许可，说明文档使用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 进行许可。', 'kratos'),
-        ),
-        array(
-            'type' => 'subheading',
-            'content' => __('讨论交流', 'kratos'),
-        ),
-        array(
-            'type' => 'content',
-            'content' => '<div style="max-width:800px;"><img style="width: 70%;height: auto;" src="' . get_template_directory_uri() . '/assets/img/options/discuss.png"></div>',
         ),
         array(
             'type' => 'subheading',

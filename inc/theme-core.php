@@ -124,16 +124,6 @@ function kratos_admin_enqueue()
 
 add_action('admin_enqueue_scripts', 'kratos_admin_enqueue', 20);
 
-// 后台提示
-if (kratos_option('g_admin_notice', true)) {
-    function custom_admin_notice()
-    {
-        $message = __('感谢您使用 Kratos 主题进行创作，全新主题 Fraise 即将上线，欢迎加入 QQ 群讨论交流：618958939，可在「主题设置 - 全站配置 - 后台管理员通知」关闭此通知。', 'kratos');
-        echo '<div class="notice notice-info "><p>' . $message . '</p></div>';
-    }
-    add_action('admin_notices', 'custom_admin_notice');
-}
-
 // 前台管理员导航
 if (!kratos_option('g_adminbar', true)) {
     add_filter('show_admin_bar', '__return_false');
@@ -234,7 +224,7 @@ if (kratos_option('g_replace_gravatar_url_fieldset')['g_replace_gravatar_url'] ?
 
 // 主题更新检测
 $myUpdateChecker = PucFactory::buildUpdateChecker(
-    'https://cdn.jsdelivr.net/gh/seatonjiang/kratos/inc/update-checker/update.json',
+    'https://gitee.com/seatonjiang/kratos/raw/main/inc/update-checker/update.json',
     get_template_directory() . '/functions.php',
     'Kratos'
 );
