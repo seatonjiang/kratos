@@ -211,7 +211,7 @@ class widget_ad extends WP_Widget
         add_action('admin_enqueue_scripts', array($this, 'scripts'));
 
         $widget_ops = array(
-            'name' => __('图片广告', 'kratos'),
+            'name' => __('Kratos - 图片广告', 'kratos'),
             'description' => __('显示自定义图片广告的工具', 'kratos'),
         );
 
@@ -280,7 +280,7 @@ class widget_about extends WP_Widget
         add_action('admin_enqueue_scripts', array($this, 'scripts'));
 
         $widget_ops = array(
-            'name' => __('个人简介', 'kratos'),
+            'name' => __('Kratos - 个人简介', 'kratos'),
             'description' => __('站长个人简介的展示工具', 'kratos'),
         );
 
@@ -349,7 +349,7 @@ class widget_tags extends WP_Widget
     public function __construct()
     {
         $widget_ops = array(
-            'name' => __('标签聚合', 'kratos'),
+            'name' => __('Kratos - 标签聚合', 'kratos'),
             'description' => __('文章标签的展示工具', 'kratos'),
         );
 
@@ -417,7 +417,7 @@ class widget_posts extends WP_Widget
     public function __construct()
     {
         $widget_ops = array(
-            'name' => __('文章聚合', 'kratos'),
+            'name' => __('Kratos - 文章聚合', 'kratos'),
             'description' => __('展示最热、随机、最新文章的工具', 'kratos'),
         );
 
@@ -508,7 +508,7 @@ class widget_comments extends WP_Widget
     public function __construct()
     {
         $widget_ops = array(
-            'name' => __('最近评论', 'kratos'),
+            'name' => __('Kratos - 最近评论', 'kratos'),
             'description' => __('展示站点最近的评论', 'kratos'),
         );
 
@@ -561,7 +561,7 @@ class widget_toc extends WP_Widget
         add_action('admin_enqueue_scripts', array($this, 'scripts'));
 
         $widget_ops = array(
-            'name' => __('文章目录', 'kratos'),
+            'name' => __('Kratos - 文章目录', 'kratos'),
             'description' => __('仅在有目录规则的文章中显示目录的工具', 'kratos'),
         );
 
